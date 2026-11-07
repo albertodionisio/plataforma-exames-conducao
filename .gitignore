@@ -1,0 +1,21 @@
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+
+# Dependências e builds
+node_modules/
+dist/
+build/
+android/app/build/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Dados do banco de perguntas (adicionar só quando o repositório for privado)
+dados-privados/
+
+# Sistema
+.DS_Store
+Thumbs.db
