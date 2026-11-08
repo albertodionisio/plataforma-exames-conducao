@@ -10,6 +10,9 @@ Versão de demonstração (só front-end, sem servidor):
 - Simulado 1 completo (25 perguntas reescritas) com cronómetro, correção imediata e resultado
 - Simulados 2 e 3 (grátis) em preparação
 
+## Fonte principal do projecto
+Este repositório GitHub é a referência principal do projecto. As alterações, decisões técnicas e funcionalidades concluídas devem ser registadas aqui para manter o trabalho consistente entre sessões e colaboradores.
+
 ## Estrutura
 - `index.html`, `styles.css`, `app.js`: interface e lógica
 - `config.js`: nome, regras e planos
