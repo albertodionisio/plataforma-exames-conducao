@@ -1,5 +1,5 @@
 (function () {
-  var A = window.APP, Q = window.PERGUNTAS_DEMO;
+  var A = window.APP, EX = window.EXAMES || {};
   var app = document.getElementById("app");
   var estado = null, timer = null;
 
@@ -27,14 +27,14 @@
     app.innerHTML = "<h1>" + esc(A.slogan) + "</h1>" +
       "<p>Pratica com " + A.totalSimulados + " simulados de " + A.perguntasPorSimulado + " perguntas, com explicação a cada resposta.</p>" +
       "<p><a class='btn' href='#/simulados'>Ver simulados</a> <a class='btn sec' href='#/planos'>Planos</a></p>" + ult +
-      "<div class='aviso'>Versão de demonstração: os simulados usam poucas perguntas de exemplo, ainda por validar.</div>";
+      "<div class='aviso'>Versão em construção: o Simulado 1 já está disponível.</div>";
   }
 
   function catalogo() {
     var html = "<h1>Simulados</h1><p>Os " + A.gratuitos + " primeiros são gratuitos. Os restantes precisam de assinatura.</p><div class='grelha'>";
     for (var n = 1; n <= A.totalSimulados; n++) {
-      var livre = n <= A.gratuitos;
-      html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='#/simulado/" + n + "'><b>Simulado " + n + "</b><small>" + (livre ? "Grátis" : "🔒 Assinatura") + "</small></a>";
+      var livre = n <= A.gratuitos, pronto = !!EX[n];
+      html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='#/simulado/" + n + "'><b>Simulado " + n + "</b><small>" + (livre ? (pronto ? "Grátis" : "Em breve") : "🔒 Assinatura") + "</small></a>";
     }
     app.innerHTML = html + "</div>";
   }
@@ -53,8 +53,13 @@
       app.innerHTML = "<h1>Simulado " + n + "</h1><div class='card'><p>🔒 Este simulado precisa de assinatura.</p><p><a class='btn' href='#/planos'>Ver planos</a> <a class='btn sec' href='#/simulados'>Voltar</a></p></div>";
       return;
     }
+    var Q = EX[n];
+    if (!Q) {
+      app.innerHTML = "<h1>Simulado " + n + "</h1><div class='card'><p>Este simulado está em preparação.</p><p><a class='btn sec' href='#/simulados'>Voltar</a></p></div>";
+      return;
+    }
     var agora = Date.now();
-    estado = { n: n, i: 0, fim: agora + A.minutos * 60000, resp: {}, conf: {} };
+    estado = { n: n, Q: Q, i: 0, fim: agora + A.minutos * 60000, resp: {}, conf: {} };
     questao();
     timer = setInterval(tick, 1000);
   }
@@ -67,10 +72,10 @@
   }
 
   function questao() {
-    var q = Q[estado.i], conf = estado.conf[estado.i], sel = estado.resp[estado.i];
+    var Q = estado.Q, q = Q[estado.i], conf = estado.conf[estado.i], sel = estado.resp[estado.i];
     var h = "<div class='estado'><span>Simulado " + estado.n + " · Pergunta " + (estado.i + 1) + " de " + Q.length + "</span><span class='tempo' id='tempo'>" + fmt(restante()) + "</span></div>";
     h += "<h2>" + esc(q.enunciado) + "</h2>";
-    if (q.imagem) h += "<img class='img' src='" + q.imagem + "' alt='Imagem da pergunta'>";
+    if (q.imagem) h += q.imagem.src ? "<img class='img' src='" + q.imagem.src + "' alt='Imagem da pergunta'>" : "<div class='img pend'>Imagem em preparação</div>";
     q.opcoes.forEach(function (o, k) {
       var cls = "op", marca = "";
       if (conf) {
@@ -93,7 +98,7 @@
 
   function terminar() {
     clearInterval(timer);
-    var certas = 0, resp = 0;
+    var Q = estado.Q, certas = 0, resp = 0;
     Q.forEach(function (q, i) { if (estado.conf[i]) { resp++; if (estado.resp[i] === q.correta) certas++; } });
     estado.res = { certas: certas, erradas: resp - certas, branco: Q.length - resp, total: Q.length, nota: certas * A.valorPorResposta, n: estado.n };
     guardar({ n: estado.n, certas: certas, total: Q.length, nota: estado.res.nota });

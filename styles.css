@@ -34,3 +34,5 @@ th{color:var(--azul)}
 .nota{font-size:2.4rem;color:var(--azul);font-weight:bold;margin:.1em 0}
 .rodape{text-align:center;color:var(--cinza);font-size:.8rem;padding:20px 16px}
 @media (prefers-reduced-motion:no-preference){.btn,.sim{transition:opacity .15s}}
+
+.img.pend{display:flex;align-items:center;justify-content:center;height:150px;border:2px dashed var(--linha);color:var(--cinza);font-size:.9rem}
