@@ -13,6 +13,9 @@ Versão de demonstração (só front-end, sem servidor):
 ## Fonte principal do projecto
 Este repositório GitHub é a referência principal do projecto. As alterações, decisões técnicas e funcionalidades concluídas devem ser registadas aqui para manter o trabalho consistente entre sessões e colaboradores.
 
+## Trabalho com várias sessões
+Leia `INSTRUCOES.md` primeiro. Tarefas em `PENDENTE.md` e `data/exames/PENDENTE.md`; o que já foi feito em `HISTORICO.md`; decisões do dono em `REGRAS.md`.
+
 ## Estrutura
 - `index.html`, `styles.css`, `app.js`: interface e lógica
 - `config.js`: nome, regras e planos
