@@ -20,7 +20,7 @@ Leia `INSTRUCOES.md` primeiro. Tarefas em `PENDENTE.md` e `data/exames/PENDENTE.
 - `index.html`, `styles.css`, `app.js`: interface e lógica
 - `config.js`: nome, regras e planos
 - `data/exames/exame1.js`: perguntas do exame 1 (um ficheiro por exame)
-- `public/sinais/`: sinais redesenhados em SVG
+- `public/sinais/`: sinais (A17 redesenhado em SVG; os outros recortados do PDF de sinais)
 - `manifest.webmanifest`, `icons/`: base para instalar como app (PWA/APK)
 
 ## Como ver

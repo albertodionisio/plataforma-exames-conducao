@@ -16,3 +16,11 @@ Use `exame1.js` como modelo do formato.
 - Onde mexer: `data/exames/exame3.js` (novo).
 - Pronto quando: igual a DADOS-001, para o simulado 3.
 - Cuidados: não repetir perguntas dos exames 1 e 2.
+
+## DADOS-004 — Imagens de cena do exame 1 (perguntas 2, 3, 7 e 15)
+- Estado: LIVRE
+- Pedido: criar as 4 imagens de cena que faltam no exame 1 (rua com ligeiros e um camião; estrada à noite; marcas brancas transversais no pavimento; braço de condutor à janela com a palma para baixo). A descrição de cada uma está em `imagem.descricao` no `data/exames/exame1.js`.
+- Onde mexer: `public/cenas/` (pasta nova) e o campo `imagem.src` das perguntas 2, 3, 7 e 15 em `data/exames/exame1.js`.
+- Pronto quando: as 4 perguntas mostram a imagem em vez de «Imagem em preparação», e cada imagem corresponde à pergunta e à resposta certa.
+- Cuidados: o dono gera as imagens (IA ou fotografia) e envia; não copiar as fotos do APK original. Em Moçambique circula-se pela esquerda. Pergunta 7: confirmar a resposta («lombas») com a imagem final.
+
