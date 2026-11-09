@@ -25,7 +25,8 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "Os automóveis classificam-se em:",
   "imagem": {
-   "descricao": "Rua da cidade com trânsito: vários automóveis ligeiros e um camião"
+   "descricao": "Rua da cidade com trânsito: vários automóveis ligeiros e um camião",
+   "src": "public/cenas/pergunta-02-rua-ligeiros-e-camiao.jpg"
   },
   "opcoes": [
    "Ligeiros e pesados.",
@@ -42,7 +43,8 @@ window.EXAMES[1] = [
   "dificuldade": "fácil",
   "enunciado": "Para evitar a fadiga numa viagem, é aconselhável viajar de noite?",
   "imagem": {
-   "descricao": "Estrada à noite, com pouca luz e poucos veículos"
+   "descricao": "Estrada à noite, com pouca luz e poucos veículos",
+   "src": "public/cenas/pergunta-03-estrada-de-noite.jpg"
   },
   "opcoes": [
    "Não, porque de noite o sono aparece mais facilmente.",
