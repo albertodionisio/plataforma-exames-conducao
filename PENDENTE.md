@@ -5,7 +5,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 ## Geral (GER-)
 
 ## GER-001 — Juntar os dois documentos do projecto num só
-- Estado: LIVRE
+- Estado: EM CURSO — Claude-1 — 2026-11-09 20:40 UTC — ficheiros: docs/, REGRAS.md — último sinal: 2026-11-09 20:40 UTC
 - Pedido: juntar "Modelo de Assinaturas e Monetização" e "Especificação Técnica Completa" (v3.0, 25 de Outubro de 2026) num só documento, com o modelo de assinaturas dentro da especificação técnica.
 - Onde mexer: `docs/` (pasta nova). Os PDFs originais são fornecidos pelo dono.
 - Pronto quando: existe um único documento em `docs/`, sem repetições, e o `REGRAS.md` aponta para ele.
