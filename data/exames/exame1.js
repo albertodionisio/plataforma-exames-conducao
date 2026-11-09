@@ -59,7 +59,8 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
-   "descricao": "Sinal azul com a letra R e o símbolo de um automóvel, junto a uma fila de carros estacionados"
+   "descricao": "Sinal azul com a letra R e o símbolo de um automóvel, junto a uma fila de carros estacionados",
+   "src": "public/sinais/G11-area-reservada-automoveis-ligeiros.png"
   },
   "opcoes": [
    "Área reservada para motociclos.",
@@ -153,7 +154,8 @@ window.EXAMES[1] = [
   "dificuldade": "fácil",
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
-   "descricao": "Círculo de borda vermelha e fundo branco, sem nenhum símbolo"
+   "descricao": "Círculo de borda vermelha e fundo branco, sem nenhum símbolo",
+   "src": "public/sinais/E1-transito-proibido.png"
   },
   "opcoes": [
    "Estacionamento proibido.",
@@ -215,7 +217,8 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
-   "descricao": "Círculo vermelho com a letra S cortada por uma barra, e por baixo um painel com o símbolo de um camião de substâncias perigosas"
+   "descricao": "Círculo vermelho com a letra S cortada por uma barra, e por baixo um painel com o símbolo de um camião de substâncias perigosas",
+   "src": "public/sinais/N5-paragem-proibida-substancias-perigosas.png"
   },
   "opcoes": [
    "Saída de veículos que transportam substâncias perigosas.",
@@ -249,7 +252,8 @@ window.EXAMES[1] = [
   "dificuldade": "fácil",
   "enunciado": "O que indica o sinal de perigo da imagem?",
   "imagem": {
-   "descricao": "Triângulo de borda vermelha com o desenho de uma ponte levadiça a levantar-se sobre a água"
+   "descricao": "Triângulo de borda vermelha com o desenho de uma ponte levadiça a levantar-se sobre a água",
+   "src": "public/sinais/D16-ponte-movel.png"
   },
   "opcoes": [
    "A presença de uma ponte móvel.",
@@ -266,7 +270,8 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
-   "descricao": "Painel azul com as indicações N2 e N4, uma seta de saída e a distância «2 Km»"
+   "descricao": "Painel azul com as indicações N2 e N4, uma seta de saída e a distância «2 Km»",
+   "src": "public/sinais/H4-pre-advertencia-direccao-de-saida.png"
   },
   "opcoes": [
    "Pré-aviso da direção de saída.",
@@ -328,7 +333,8 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
-   "descricao": "Círculo vermelho cortado por um X, com os símbolos de peão, ciclomotor/bicicleta, animal (vaca) e carroça"
+   "descricao": "Círculo vermelho cortado por um X, com os símbolos de peão, ciclomotor/bicicleta, animal (vaca) e carroça",
+   "src": "public/sinais/E47-transito-proibido-peoes-animais-veiculos-nao-automoveis.png"
   },
   "opcoes": [
    "Trânsito proibido a peões, animais e veículos automóveis.",
@@ -390,7 +396,8 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
-   "descricao": "Placa com um círculo azul-escuro com a letra T e, por baixo, a distância «300 m», à beira de uma estrada"
+   "descricao": "Placa com um círculo azul-escuro com a letra T e, por baixo, a distância «300 m», à beira de uma estrada",
+   "src": "public/sinais/N34-via-com-portagem.png"
   },
   "opcoes": [
    "Via rápida.",
