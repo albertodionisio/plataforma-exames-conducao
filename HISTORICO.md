@@ -10,3 +10,4 @@ Os IDs aqui nunca são reutilizados. O detalhe técnico fica no `git log`.
 - `.gitignore` e README com regras do repositório.
 
 ## Com ID
+- GER-002 — CONCLUÍDA — Claude-1: estados LIVRE / EM CURSO / CONCLUÍDA explícitos no `INSTRUCOES.md`, com campo `último sinal` e regra para sessões que param por limite (a tarefa fica protegida; reassumir só com autorização do dono).

@@ -21,19 +21,37 @@ e para que cada sessão saiba **o que já foi feito, o que está em curso e o qu
 
 Se surgir uma área nova (por exemplo, servidor), crie um `PENDENTE.md` na pasta certa, escolha um prefixo novo (BE-, etc.) e acrescente-o a esta tabela.
 
+## Estados de uma tarefa (marcar sempre)
+
+Cada tarefa tem sempre um destes três estados. A sessão que mexe numa tarefa é responsável por deixar o estado certo.
+
+| Estado | Significa | Como fica escrito |
+|---|---|---|
+| **LIVRE** | Ninguém pegou. Pode ser reservada. | `Estado: LIVRE` |
+| **EM CURSO** | Reservada por uma sessão. **Ninguém mais toca**, escolha outra tarefa. | `Estado: EM CURSO — <sessão> — <data e hora> — ficheiros: <lista> — último sinal: <data e hora>` |
+| **CONCLUÍDA** | Feita e testada. | Sai do `PENDENTE.md` e entra no `HISTORICO.md` com a palavra CONCLUÍDA, no mesmo commit |
+
+**Se uma sessão parar a meio (limite atingido, sem aviso):** a tarefa continua `EM CURSO` e fica protegida. As outras sessões **não a tocam e escolhem outra**. É o comportamento certo: evita duas pessoas a mexer no mesmo ficheiro.
+
+**Para a tarefa não ficar presa para sempre:**
+- A sessão que trabalha atualiza o `último sinal` em cada commit e push.
+- Se o `último sinal` tem mais de 24 horas, outra sessão **não assume sozinha**: avisa o dono (Borja) e pergunta. Só com a autorização dele assume.
+- Ao assumir: muda a linha para o seu nome e a hora, lê a linha `Parcial:` e o `git log` dos ficheiros listados, e continua de onde parou, sem refazer.
+- Se a sessão perceber que o limite está perto, deve fechar antes: commit e push do que está bom, escrever `Parcial:` (o que já foi feito e o que falta) e voltar o estado a `LIVRE`.
+
 ## Protocolo (a regra anti-duplicação)
 
 1. **Atualizar.** Antes de qualquer coisa: `git pull --rebase`. Leia este ficheiro, todos os `PENDENTE.md` (`find . -name PENDENTE.md -not -path "*/node_modules/*"`) e o fim do `HISTORICO.md`.
 2. **Identificar-se.** Use um nome de sessão curto: ferramenta + número (`Claude-1`, `Codex-1`, `ChatGPT-1`). Use sempre o mesmo durante a sessão.
 3. **Reservar antes de trabalhar.** Escolha uma tarefa com `Estado: LIVRE`. Mude a linha para
-   `Estado: EM CURSO — <sessão> — <data e hora> — ficheiros: <lista>`, faça commit (`claim: GER-001`) e `git push` **imediatamente, antes de mexer no código**.
+   `Estado: EM CURSO — <sessão> — <data e hora> — ficheiros: <lista> — último sinal: <data e hora>`, faça commit (`claim: GER-001`) e `git push` **imediatamente, antes de mexer no código**.
    - Se o push for recusado: `git pull --rebase`, releia. Se outra sessão já reservou essa tarefa, **escolha outra**. Nunca force o push.
    - Uma sessão trabalha **numa tarefa de cada vez**.
 4. **Ficheiros partilhados.** Duas tarefas `EM CURSO` não podem tocar no mesmo ficheiro. `app.js`, `styles.css`, `index.html` e `config.js` são partilhados: antes de reservar, confirme que nenhuma outra tarefa `EM CURSO` os lista. Se listar, escolha outra tarefa ou espere.
 5. **Nova tarefa.** Antes de a criar, pesquise a ideia nos `PENDENTE.md` e no `HISTORICO.md` (`grep -ri "palavra" *.md data/exames/*.md`). Se já existe ou já foi feita, **não crie**. Se não existe, use o **próximo número livre** da área. **Um ID nunca é reutilizado**, mesmo depois de concluído.
-6. **Concluir.** Quando a tarefa estiver feita e testada: no **mesmo commit** que a implementa, **apague-a do `PENDENTE.md`** e **acrescente uma linha ao `HISTORICO.md`** (ID, data, sessão, o que mudou). A mensagem do commit cita o ID (ex.: `DADOS-001: simulado 2 com 25 perguntas`). Faça push.
+6. **Concluir.** Quando a tarefa estiver feita e testada: no **mesmo commit** que a implementa, **apague-a do `PENDENTE.md`** e **acrescente uma linha ao `HISTORICO.md`** com a palavra CONCLUÍDA (ID, data, sessão, o que mudou). A mensagem do commit cita o ID (ex.: `DADOS-001: simulado 2 com 25 perguntas`). Faça push.
 7. **Parar a meio.** Se a sessão tiver de parar antes de concluir: volte o estado a `LIVRE`, acrescente uma linha `Parcial:` com o que já foi feito e o que falta, e faça push. Assim outra sessão continua sem repetir.
-8. **Reserva esquecida.** Uma tarefa `EM CURSO` há mais de 24 horas sem commit pode ser assumida por outra sessão, **depois de perguntar ao dono**.
+8. **Reserva parada.** Uma tarefa `EM CURSO` com o `último sinal` há mais de 24 horas pode ser assumida por outra sessão, **só depois de perguntar ao dono** (ver "Estados de uma tarefa").
 9. **Sessões sem permissão de escrita no GitHub** (por exemplo, Perplexity ou um chat sem Git): trabalham como pesquisa e rascunho. Não reservam tarefas. Entregam o resultado ao dono, que o passa a uma sessão com acesso para integrar usando este protocolo.
 10. **Testar.** Abrir `index.html` no navegador e confirmar que não há erros antes de cada push. Nunca publicar código quebrado.
 11. **Commits pequenos e descritivos**, sempre com o ID da tarefa. Antes de cada push: `git status`, branch certa, `git diff`, nenhum segredo.
