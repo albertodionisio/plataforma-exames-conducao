@@ -37,7 +37,16 @@ Cada tarefa tem sempre um destes três estados. A sessão que mexe numa tarefa �
 - A sessão que trabalha atualiza o `último sinal` em cada commit e push.
 - Se o `último sinal` tem mais de 24 horas, outra sessão **não assume sozinha**: avisa o dono (Borja) e pergunta. Só com a autorização dele assume.
 - Ao assumir: muda a linha para o seu nome e a hora, lê a linha `Parcial:` e o `git log` dos ficheiros listados, e continua de onde parou, sem refazer.
-- Se a sessão perceber que o limite está perto, deve fechar antes: commit e push do que está bom, escrever `Parcial:` (o que já foi feito e o que falta) e voltar o estado a `LIVRE`.
+- **Enviar por blocos.** Uma sessão não consegue ver quanto falta para o seu limite e pode parar sem aviso. Por isso, cada bloco pequeno que ficar pronto e testado é logo enviado (commit e push) e o `último sinal` é atualizado. O que não foi enviado perde-se se a sessão parar.
+
+## Conferir o texto com o histórico (git log)
+
+Os ficheiros `PENDENTE.md` e `HISTORICO.md` são a regra, mas o `git log` é a prova do que realmente aconteceu. Uma sessão não se fia só no que está escrito.
+
+- **No início de cada sessão:** `git pull --rebase`, depois `git log --oneline -20`. Confirme que o que o `HISTORICO.md` diz estar concluído aparece nos commits (o commit cita o ID), e que nenhuma tarefa do `PENDENTE.md` já foi feita num commit sem ter sido apagada.
+- **Antes de reservar uma tarefa:** `git log --oneline --all -- <ficheiros da tarefa>` e `grep` do ID nos commits. Se já há commits dessa tarefa, leia-os antes de decidir.
+- **Ao assumir uma tarefa `EM CURSO` parada** (com autorização do dono): veja no `git log` o que a sessão anterior chegou a enviar, compare com a linha `Parcial:` e continue só do que falta.
+- **Se o texto e os commits não coincidirem** (por exemplo, tarefa concluída nos commits mas ainda no `PENDENTE.md`, ou o contrário): não adivinhe. Diga ao dono o que encontrou, e só depois corrija os ficheiros.
 
 ## Protocolo (a regra anti-duplicação)
 

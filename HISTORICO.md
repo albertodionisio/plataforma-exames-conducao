@@ -11,3 +11,4 @@ Os IDs aqui nunca são reutilizados. O detalhe técnico fica no `git log`.
 
 ## Com ID
 - GER-002 — CONCLUÍDA — Claude-1: estados LIVRE / EM CURSO / CONCLUÍDA explícitos no `INSTRUCOES.md`, com campo `último sinal` e regra para sessões que param por limite (a tarefa fica protegida; reassumir só com autorização do dono).
+- GER-003 — CONCLUÍDA — Claude-1: regra "enviar por blocos" (a sessão não vê o seu limite) e secção "Conferir o texto com o histórico (git log)" no `INSTRUCOES.md`; removida a regra de "fechar antes do limite", que não se pode cumprir.
