@@ -237,7 +237,8 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O condutor da imagem estende o braço pela janela e move-o para cima e para baixo, com a palma da mão virada para baixo. O que comunica aos outros utentes?",
   "imagem": {
-   "descricao": "Braço de um condutor estendido pela janela de um carro branco, mão aberta com a palma para baixo, a mover-se para cima e para baixo"
+   "descricao": "Braço de um condutor estendido pela janela de um carro branco, mão aberta com a palma para baixo, a mover-se para cima e para baixo",
+   "src": "public/cenas/pergunta-15-braco-do-condutor.jpg"
   },
   "opcoes": [
    "Que vai parar de repente.",
