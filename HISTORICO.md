@@ -10,6 +10,7 @@ Os IDs aqui nunca são reutilizados. O detalhe técnico fica no `git log`.
 - `.gitignore` e README com regras do repositório.
 
 ## Com ID
+- GER-007 — CONCLUÍDA — Claude-GER007 (2026-11-10): validador `scripts/validar-exames.js` (sem dependências; `node scripts/validar-exames.js`). Verifica cada `data/exames/exameN.js`: 25 perguntas, 4 alternativas, índice de `correta` válido, explicação presente, números de pergunta repetidos, imagens existentes dentro do repositório, e que o ficheiro define `window.EXAMES[N]` com N igual ao nome. Código de saída 1 se houver falhas. Não altera ficheiros de exame; testado com o exame 1 (sem problemas) e com ficheiros deliberadamente errados.
 - GER-009 — CONCLUÍDA — ChatGPT-1 (2026-11-10): protocolo de coordenação entre sessões actualizado em `INSTRUCOES.md`; GitHub definido como fonte de verdade com consulta directa, confirmação pós-escrita e reserva concorrente de tarefas para impedir duplicação.
 - GER-002 — CONCLUÍDA — Claude-1: estados LIVRE / EM CURSO / CONCLUÍDA explícitos no `INSTRUCOES.md`, com campo `último sinal` e regra para sessões que param por limite (a tarefa fica protegida; reassumir só com autorização do dono).
 - GER-003 — CONCLUÍDA — Claude-1: regra "enviar por blocos" (a sessão não vê o seu limite) e secção "Conferir o texto com o histórico (git log)" no `INSTRUCOES.md`; removida a regra de "fechar antes do limite", que não se pode cumprir.
