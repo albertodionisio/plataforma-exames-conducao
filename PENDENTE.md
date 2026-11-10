@@ -19,7 +19,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Cuidados: não inventar nomes nem substituir designações por sinónimos; não redesenhar ou trocar imagens nesta tarefa; não alterar perguntas. Se o PDF e o aplicativo divergirem, registar a divergência sem escolher silenciosamente uma versão.
 
 ## GER-007 — Validador automático dos ficheiros de simulados
-- Estado: LIVRE
+- Estado: EM CURSO — Claude-GER007 — 2026-11-10 07:55 UTC — ficheiros: scripts/validar-exames.js — último sinal: 2026-11-10 07:55 UTC
 - Pedido: criar uma ferramenta simples, sem dependências externas, para detectar erros estruturais nos ficheiros de perguntas antes de serem publicados.
 - Onde mexer: criar `scripts/validar-exames.js`; ler os ficheiros existentes em `data/exames/`.
 - Pronto quando: o comando `node scripts/validar-exames.js` verifica todos os ficheiros de exame encontrados e reporta, por ficheiro e pergunta, problemas como número diferente de 25 perguntas, alternativas diferentes de quatro, índice de resposta correcta inválido, explicação em falta, números de pergunta repetidos e imagens referenciadas que não existem; termina com código de erro quando encontra falhas.
