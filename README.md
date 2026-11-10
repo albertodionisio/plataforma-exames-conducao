@@ -27,4 +27,4 @@ Leia `INSTRUCOES.md` primeiro. Tarefas em `PENDENTE.md` e `data/exames/PENDENTE.
 Abrir `index.html` no navegador.
 
 ## Regras do repositório
-Não guardar aqui o APK original, chaves, tokens nem ficheiros `.env`.
+Não guardar aqui chaves, tokens nem ficheiros `.env`. O APK original está em `original/`, só como referência de trabalho.

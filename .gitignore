@@ -8,7 +8,8 @@ node_modules/
 dist/
 build/
 android/app/build/
-*.apk
+android/**/*.apk
+!original/*.apk
 *.aab
 *.keystore
 *.jks
