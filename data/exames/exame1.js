@@ -107,9 +107,10 @@ window.EXAMES[1] = [
   "numero": 7,
   "tema": "Marcas rodoviárias",
   "dificuldade": "difícil",
-  "enunciado": "Observe a marca branca pintada na estrada. O que indica?",
+  "enunciado": "Observe as faixas pintadas na estrada. O que indicam?",
   "imagem": {
-   "descricao": "Estrada com marcas brancas transversais pintadas no pavimento, vista de frente, com um peão na berma"
+   "descricao": "Estrada com marcas brancas transversais pintadas no pavimento, vista de frente, com um peão na berma",
+   "src": "public/cenas/pergunta-07-lomba-com-faixas.jpg"
   },
   "opcoes": [
    "A proibição de estacionar.",
@@ -118,7 +119,7 @@ window.EXAMES[1] = [
    "A redução de filas de trânsito."
   ],
   "correta": 2,
-  "explicacao": "Esta marca branca no pavimento avisa o condutor de que há uma lomba mais à frente. É preciso reduzir a velocidade."
+  "explicacao": "As faixas pintadas na transversal sobre o pavimento marcam uma lomba, para o condutor a ver bem. É preciso reduzir a velocidade antes de a passar."
  },
  {
   "numero": 8,
