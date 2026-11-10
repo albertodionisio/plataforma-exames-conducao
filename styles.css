@@ -36,3 +36,86 @@ th{color:var(--azul)}
 @media (prefers-reduced-motion:no-preference){.btn,.sim{transition:opacity .15s}}
 
 .img.pend{display:flex;align-items:center;justify-content:center;height:150px;border:2px dashed var(--linha);color:var(--cinza);font-size:.9rem}
+
+/* Acessibilidade e adaptação a ecrãs pequenos — FE-001 */
+:focus-visible{
+  outline:3px solid var(--ouro);
+  outline-offset:3px;
+}
+button,a{-webkit-tap-highlight-color:transparent}
+.btn,.op,.sim,.topo nav a{
+  min-height:44px;
+}
+.btn,.op{
+  touch-action:manipulation;
+}
+.op{
+  line-height:1.4;
+  overflow-wrap:anywhere;
+}
+.img{
+  width:auto;
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.card{
+  min-width:0;
+}
+table{
+  min-width:560px;
+}
+.estado{
+  flex-wrap:wrap;
+  gap:6px 12px;
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .topo{
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:8px 12px;
+    padding:10px 12px;
+  }
+  .marca{font-size:1rem}
+  .topo nav{
+    display:flex;
+    flex:1 1 100%;
+    flex-wrap:wrap;
+    gap:4px 16px;
+  }
+  .topo nav a{
+    display:inline-flex;
+    align-items:center;
+    margin:0;
+    padding:4px 0;
+  }
+  main{
+    width:100%;
+    max-width:720px;
+    padding:16px 12px 32px;
+  }
+  h1{font-size:1.35rem}
+  .card{padding:12px}
+  .grelha{
+    grid-template-columns:repeat(auto-fill,minmax(min(100%,130px),1fr));
+    gap:8px;
+  }
+  .sim{padding:12px 10px}
+  .btn{
+    padding:10px 14px;
+    white-space:normal;
+  }
+  .estado{
+    align-items:flex-start;
+    font-size:.9rem;
+  }
+  .tempo{white-space:nowrap}
+  .nota{font-size:2rem}
+  .rodape{padding:18px 12px}
+}
+@media (max-width:360px){
+  .grelha{grid-template-columns:1fr}
+  .estado{flex-direction:column}
+}
+
