@@ -27,13 +27,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Pronto quando: cada sinal já utilizado nas perguntas tem código, designação exactamente como consta no PDF, página de referência e caminho da imagem correspondente; divergências ou imagens em falta ficam claramente assinaladas.
 - Cuidados: não inventar nomes nem substituir designações por sinónimos; não redesenhar ou trocar imagens nesta tarefa; não alterar perguntas. Se o PDF e o aplicativo divergirem, registar a divergência sem escolher silenciosamente uma versão.
 
-## GER-008 — Decisão técnica do backend na OCI
-- Estado: EM CURSO — Claude-GER008 — 2026-11-11 22:17 UTC+02 — ficheiros: docs/architecture/DECISAO_BACKEND_OCI.md — último sinal: 2026-11-11 22:17 UTC+02
-- Pedido: preparar uma proposta técnica concreta para a primeira versão do backend e da base de dados, considerando a preferência do dono por Oracle Cloud Infrastructure e recursos gratuitos.
-- Onde mexer: consultar `docs/ESTRADA_Especificacao_Tecnica.md` e documentação oficial actual da Oracle; criar `docs/architecture/DECISAO_BACKEND_OCI.md`.
-- Pronto quando: documento compara opções viáveis para API, base de dados, alojamento, autenticação, backups e implantação; apresenta custos/limites conhecidos, riscos, arquitectura recomendada e etapas de implementação; distingue claramente recursos gratuitos, limites e serviços que podem gerar custos.
-- Cuidados: não criar contas, não configurar serviços, não publicar credenciais, não alterar preços/planos e não implementar código backend nesta tarefa. A escolha final da stack continua dependente da aprovação do dono.
-
 ## Interface (FE-)
 
 ## FE-002 — Resultado final com semáforo e revisão pedagógica
