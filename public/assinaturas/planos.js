@@ -54,7 +54,7 @@
         selecionado = indice;
         grupo.querySelectorAll(".plano-cartao").forEach(function (item) { item.classList.remove("plano-escolhido"); });
         cartao.classList.add("plano-escolhido");
-        botao.textContent = "Continuar com " + plano.nome;
+        botao.textContent = "Aderir ao plano " + plano.nome;
         aviso.textContent = "";
       });
 
@@ -91,14 +91,16 @@
 
     formulario.appendChild(grupo);
     var acao = elemento("div", "assinaturas-acao");
-    var botao = elemento("button", "assinaturas-botao", "Continuar com " + planos[0].nome);
+    var botao = elemento("button", "assinaturas-botao", "Aderir ao plano " + planos[0].nome);
     botao.type = "button";
     var aviso = elemento("p", "assinaturas-aviso", "");
+    aviso.setAttribute("role", "status");
+    aviso.setAttribute("aria-live", "polite");
     botao.addEventListener("click", function () {
       var plano = planos[selecionado];
       aviso.textContent = plano.preco === "0 MT"
-        ? "O plano Free é gratuito. Os pagamentos dos planos pagos ainda não estão activos nesta versão."
-        : "O plano " + plano.nome + " está disponível para consulta. Os pagamentos ainda não estão activos nesta versão.";
+        ? "O plano Free é gratuito. A adesão aos planos pagos ainda não está disponível nesta versão."
+        : "O plano " + plano.nome + " foi seleccionado. A adesão e os pagamentos ainda não estão activos nesta versão.";
     });
     acao.appendChild(botao);
     acao.appendChild(aviso);
