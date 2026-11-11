@@ -25,6 +25,17 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 2 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta para a revisão após submissão; abre no ESTRADA com cronómetro de 60 minutos, sem feedback durante a realização, resultado final e revisão comentada; mapa completo; validação automática e teste no navegador sem erros.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Esta tarefa já está reservada: nenhuma outra sessão deve mexer nela sem autorização do dono.
 
+
+### ACTUALIZAÇÃO OBRIGATÓRIA — decisão do dono (11/11/2026)
+**Esta decisão substitui qualquer instrução anterior ou implementação baseada no modelo antigo de correcção imediata.** A sessão que já está a trabalhar no DADOS-001 deve actualizar o seu plano e executar o Simulado 2 segundo estas regras, sem esperar por uma nova tarefa:
+- Durante as 25 perguntas, o candidato apenas selecciona respostas. Não mostrar certo/errado, cores de correcção, resposta correcta ou explicação enquanto o exame decorre.
+- O exame só é corrigido quando o candidato submeter/terminar as 25 perguntas ou quando o tempo de 60 minutos acabar; neste último caso, submeter automaticamente e contar as perguntas em branco.
+- No ecrã final, mostrar um semáforo gráfico: luz verde acesa + «APROVADO» se a nota for >= 18/20; luz vermelha acesa + «REPROVADO» se for < 18/20. Mostrar sempre a nota em valores (0,8 por resposta certa), além de certas, erradas e não respondidas.
+- Incluir a acção «Rever exame». Na revisão, para cada pergunta, preservar a ordem apresentada e mostrar o enunciado, a imagem correcta, a resposta escolhida, a resposta certa e a explicação pedagógica. Mostrar explicação também nas respostas certas e identificar claramente as não respondidas.
+- Guardar as respostas escolhidas e a ordem efectivamente apresentada, para que a revisão não mude nem perca as escolhas do candidato.
+- Antes de continuar, reler a secção «Avaliação e revisão dos simulados» em `REGRAS.md`. Se já tiver sido implementado feedback imediato, removê-lo/substituí-lo para cumprir integralmente esta decisão. Não manter o comportamento antigo por compatibilidade.
+- Actualizar o registo de progresso desta tarefa para indicar que esta instrução foi recebida e que o plano foi alinhado. Não alterar tarefas ou ficheiros reservados a outras sessões.
+
 ## DADOS-002 — Simulado 3 (grátis)
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 3 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
