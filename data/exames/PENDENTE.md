@@ -232,10 +232,177 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 30 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 30 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## Planeamento futuro — Simulados 31 a 50 (não reserváveis ainda)
+## Programa de conteúdo original — Simulados 31 a 50
 
-- Estado do planeamento: AGUARDA DEFINIÇÃO DA FONTE PELO DONO
-- O APK original identificado em `original/LEIAME.md` contém 30 exames de referência, não 50. Por isso, não criar tarefas que afirmem existir no APK os Exames 31 a 50.
-- Antes de abrir tarefas individuais para os Simulados 31–50, o dono deve aprovar uma fonte verificável para as perguntas (por exemplo, outra aplicação/documentação oficial ou produção de conteúdo original validado). A origem, direitos de utilização, validação legal e método de prevenção de duplicações devem ficar definidos.
-- Depois dessa decisão, criar tarefas individuais com IDs DADOS novos, um ficheiro por exame, critérios de validação e mapa de rastreabilidade. Até lá, estes 20 simulados ficam no planeamento, não estão LIVRES nem podem ser reservados.
+- Estado do programa: APROVADO PELO DONO — tarefas individuais LIVRES
+- Âmbito: os Simulados 1–30 continuam a ser modelados a partir dos 30 exames do APK original. Os Simulados 31–50 são conteúdo novo, criado pela equipa ESTRADA; não afirmar que existem no APK.
+- Fonte normativa prioritária: versão vigente do Código da Estrada de Moçambique e legislação complementar publicada no Boletim da República / Imprensa Nacional; documentos oficiais do INATRO; catálogo oficial de sinais de trânsito; regulamentos e publicações oficiais de segurança rodoviária. Usar fontes oficiais e confirmar vigência, alterações e âmbito territorial.
+- Rastreabilidade obrigatória: cada pergunta deve ter no mapa a fonte exacta, artigo/número, diploma e ano, página ou secção e URL/referência documental quando disponível. Se a regra não puder ser confirmada numa fonte oficial acessível, não publicar a pergunta como validada; assinalar a lacuna para revisão do dono.
+- Originalidade: antes de escrever, comparar com os Simulados 1–30 concluídos e com os Simulados 31–50 já publicados/em curso. Não copiar perguntas do APK, não repetir enunciados nem testar a mesma situação de forma apenas cosmética. Variar competências e contextos sem sair da legislação.
+- Conteúdo: privilegiar regras de circulação, prioridades, manobras, velocidade, ultrapassagem, mudança de direcção, cruzamentos, peões, iluminação, paragem/estacionamento, sinalização vertical e horizontal, documentos/deveres do condutor, segurança e situações práticas. Só incluir temas que tenham fundamento normativo confirmado.
+- Estrutura por simulado: exactamente 25 perguntas, quatro alternativas plausíveis, uma resposta correcta, explicação curta e clara em português de Moçambique. A posição da resposta correcta deve ser equilibrada e imprevisível; não usar comprimento da alternativa como pista.
+- Imagens: usar apenas imagens oficiais ou recursos cuja correspondência com a pergunta esteja comprovada. Para sinais, confirmar código, desenho e designação no catálogo oficial. Para situações práticas, só usar imagem quando acrescentar valor e representar fielmente a situação. Não inventar sinais nem associar uma imagem genérica a uma pergunta específica.
+- Aplicação: seguir integralmente `REGRAS.md`: sem feedback durante o exame; submissão manual após 25 perguntas ou automática aos 60 minutos; 0,8 valores por resposta certa; aprovação a partir de 18/20; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão preservando ordem, imagem, resposta escolhida, resposta correcta e explicação.
+- Ficheiros exclusivos de cada tarefa: `data/exames/exameN.js` e `docs/referencias-exames/exameN-mapeamento.md`. Não alterar `app.js`, `index.html`, `styles.css` nem ficheiros partilhados sem verificar e coordenar reservas.
+- Validação: executar `node scripts/validar-exames.js`, conferir manualmente a rastreabilidade legal das 25 perguntas, verificar ausência de duplicações e testar abertura/revisão do simulado. O validador automático não substitui a revisão jurídica e pedagógica.
+- Não reservar várias tarefas de uma vez. Cada sessão escolhe apenas uma tarefa LIVRE, lê `INSTRUCOES.md`, confirma a reserva remota e trabalha exclusivamente nos ficheiros atribuídos.
 
+## DADOS-032 — Simulado 31 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Regras gerais de circulação e posição na via.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame31.js` (novo) e `docs/referencias-exames/exame31-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-033 — Simulado 32 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Prioridade de passagem e cedência de passagem.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame32.js` (novo) e `docs/referencias-exames/exame32-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-034 — Simulado 33 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Cruzamentos, entroncamentos e rotundas.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame33.js` (novo) e `docs/referencias-exames/exame33-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-035 — Simulado 34 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Ultrapassagem e cruzamento de veículos.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame34.js` (novo) e `docs/referencias-exames/exame34-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-036 — Simulado 35 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Mudança de direcção e mudança de via.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame35.js` (novo) e `docs/referencias-exames/exame35-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-037 — Simulado 36 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Velocidade, distância de segurança e travagem.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame36.js` (novo) e `docs/referencias-exames/exame36-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-038 — Simulado 37 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Paragem, estacionamento e imobilização.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame37.js` (novo) e `docs/referencias-exames/exame37-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-039 — Simulado 38 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Passagem de peões e convivência com utilizadores vulneráveis.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame38.js` (novo) e `docs/referencias-exames/exame38-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-040 — Simulado 39 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Sinalização vertical: perigo e cedência de passagem.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame39.js` (novo) e `docs/referencias-exames/exame39-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-041 — Simulado 40 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Sinalização vertical: proibição e obrigação.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame40.js` (novo) e `docs/referencias-exames/exame40-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-042 — Simulado 41 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Sinalização horizontal, marcas rodoviárias e inscrições.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame41.js` (novo) e `docs/referencias-exames/exame41-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-043 — Simulado 42 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Semáforos, sinais dos agentes e ordens de trânsito.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame42.js` (novo) e `docs/referencias-exames/exame42-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-044 — Simulado 43 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Iluminação, visibilidade e utilização dos dispositivos luminosos.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame43.js` (novo) e `docs/referencias-exames/exame43-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-045 — Simulado 44 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Condução em condições adversas e segurança rodoviária.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame44.js` (novo) e `docs/referencias-exames/exame44-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-046 — Simulado 45 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Deveres do condutor, documentos e condições do veículo.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame45.js` (novo) e `docs/referencias-exames/exame45-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-047 — Simulado 46 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Transporte de passageiros e carga.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame46.js` (novo) e `docs/referencias-exames/exame46-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-048 — Simulado 47 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Manobras, marcha-atrás e inversão do sentido de marcha.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame47.js` (novo) e `docs/referencias-exames/exame47-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-049 — Simulado 48 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Acidentes, dever de assistência e procedimentos do condutor.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame48.js` (novo) e `docs/referencias-exames/exame48-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-050 — Simulado 49 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Condução defensiva e prevenção de riscos em situações reais.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame49.js` (novo) e `docs/referencias-exames/exame49-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-051 — Simulado 50 (conteúdo original)
+- Estado: LIVRE
+- Foco temático prioritário: Simulado integrador: aplicação combinada das regras do Código da Estrada.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Onde mexer: `data/exames/exame50.js` (novo) e `docs/referencias-exames/exame50-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
