@@ -43,6 +43,13 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 3 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame deve respeitar integralmente o fluxo definido em `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1 e 2. Não usar correcção imediata. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
 
+## DADOS-005 — Simulado 4
+- Estado: EM CURSO — ChatGPT-DADOS005 — 2026-11-11 14:39 UTC+02 — ficheiros: data/exames/exame4.js, docs/referencias-exames/exame4-mapeamento.md — último sinal: 2026-11-11 14:41 UTC+02
+- Pedido: extrair as 25 perguntas do Exame 4 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
+- Onde mexer: `data/exames/exame4.js` (novo) e `docs/referencias-exames/exame4-mapeamento.md`.
+- Pronto quando: as 25 perguntas correspondem às 25 do Exame 4 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; abre no ESTRADA, cronómetro de 60 minutos, correcção imediata e resultado; mapa completo; validação automática e teste no navegador sem erros.
+- Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1, 2 e 3. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
+
 ## DADOS-006 — Simulado 5
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 5 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
@@ -364,10 +371,3 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Onde mexer: `data/exames/exame50.js` (novo) e `docs/referencias-exames/exame50-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 50 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 50 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
-
-## DADOS-005 — Simulado 4
-- Estado: EM CURSO — ChatGPT-DADOS005 — 2026-11-11 14:39 UTC+02 — ficheiros: data/exames/exame4.js, docs/referencias-exames/exame4-mapeamento.md — último sinal: 2026-11-11 14:41 UTC+02
-- Pedido: extrair as 25 perguntas do Exame 4 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
-- Onde mexer: `data/exames/exame4.js` (novo) e `docs/referencias-exames/exame4-mapeamento.md`.
-- Pronto quando: as 25 perguntas correspondem às 25 do Exame 4 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; abre no ESTRADA, cronómetro de 60 minutos, correcção imediata e resultado; mapa completo; validação automática e teste no navegador sem erros.
-- Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1, 2 e 3. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
