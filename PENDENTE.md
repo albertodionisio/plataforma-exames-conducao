@@ -61,7 +61,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Parcial: ajustes responsivos e de foco publicados em `styles.css`; relatório parcial em `docs/auditorias/interface-movel.md`. Falta validar visualmente no navegador nas larguras indicadas no relatório.
 
 ## FE-004 — Nova apresentação visual da área de assinaturas
-- Estado: EM CURSO — ChatGPT-ASSINATURAS — 2026-11-11 22:08 UTC+02 — ficheiros: public/assinaturas/planos.js, public/assinaturas/planos.css, docs/referencias/assinatura/preview.html — último sinal: 2026-11-11 22:08 UTC+02
+- Estado: EM CURSO — ChatGPT-ASSINATURAS — 2026-11-11 22:08 UTC+02 — ficheiros: public/assinaturas/planos.js, public/assinaturas/planos.css, docs/referencias/assinatura/preview.html — último sinal: 2026-11-11 22:14 UTC+02
 - Pedido: redesenhar a apresentação da área de assinaturas com base na referência visual guardada em docs/referencias/assinatura/referencia-assinatura-planos-claude.jpg, adaptando-a exclusivamente aos cinco planos reais do ESTRADA.
 - Fonte de verdade: config.js. Apresentar Free (0 MT), Semanal Básico (50 MT), Semanal Completo (80 MT), Mensal Básico (80 MT) e Mensal Completo (150 MT), com as respectivas validades e benefícios já definidos. Não alterar preços, nomes, benefícios ou regras comerciais.
 - Onde mexer nesta primeira fase: criar um componente visual isolado em public/assinaturas/planos.js e public/assinaturas/planos.css e uma demonstração verificável em docs/referencias/assinatura/preview.html. A integração na navegação existente só será feita quando app.js, index.html e styles.css estiverem livres de outras reservas.
