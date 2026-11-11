@@ -21,7 +21,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Cuidados: não copiar perguntas literalmente do APK; não alterar `exame1.js`; não inventar conteúdo que não tenha sido encontrado no aplicativo. Alterações às perguntas só depois da aprovação do dono.
 
 ## GER-006 — Catálogo de sinais com nomenclatura oficial
-- Estado: LIVRE
+- Estado: EM CURSO — Claude-GER006 — 2026-11-11 15:21 UTC+02 — ficheiros: docs/referencia-sinais.md — último sinal: 2026-11-11 15:21 UTC+02
 - Pedido: criar um catálogo de referência dos sinais utilizados no ESTRADA, conferindo cada código, imagem e designação com o PDF de sinais incluído nos documentos de referência do APK original.
 - Onde mexer: consultar `original/Codigo_e_Sinais_de_Transito_1_1.apk` e os ficheiros em `public/sinais/`; criar `docs/referencia-sinais.md`.
 - Pronto quando: cada sinal já utilizado nas perguntas tem código, designação exactamente como consta no PDF, página de referência e caminho da imagem correspondente; divergências ou imagens em falta ficam claramente assinaladas.
