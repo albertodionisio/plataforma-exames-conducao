@@ -14,7 +14,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 
 ## GER-005 — Auditoria comparativa do Simulado 1
-- Estado: LIVRE
+- Estado: EM CURSO — Claude-GER005 — 2026-11-11 22:30 UTC+02 — ficheiros: docs/auditorias/simulado-1.md — último sinal: 2026-11-11 22:30 UTC+02
 - Pedido: comparar as 25 perguntas do Simulado 1 do ESTRADA com o modelo de perguntas do aplicativo original guardado em `original/Codigo_e_Sinais_de_Transito_1_1.apk`. Identificar o objectivo de cada pergunta (identificação, interpretação, regra ou situação prática), verificar se o ESTRADA preserva esse objectivo e apontar melhorias necessárias.
 - Onde mexer: leitura de `original/Codigo_e_Sinais_de_Transito_1_1.apk` e `data/exames/exame1.js`; criar apenas o relatório `docs/auditorias/simulado-1.md`.
 - Pronto quando: relatório cobre as 25 perguntas, compara os tipos de pergunta com o aplicativo original, classifica cada uma como manter/melhorar/corrigir/substituir e justifica cada observação com evidência.
