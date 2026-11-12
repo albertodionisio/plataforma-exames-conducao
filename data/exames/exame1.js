@@ -61,7 +61,7 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
-   "descricao": "Sinal azul com a letra R e o símbolo de um automóvel, junto a uma fila de carros estacionados",
+   "descricao": "Sinal azul com a letra R branca e o símbolo de um automóvel branco, apresentado isolado",
    "src": "public/sinais/G11-area-reservada-automoveis-ligeiros.png"
   },
   "opcoes": [
@@ -221,7 +221,7 @@ window.EXAMES[1] = [
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
    "descricao": "Círculo vermelho com a letra S cortada por uma barra, e por baixo um painel com o símbolo de um camião de substâncias perigosas",
-   "src": "public/sinais/N5-paragem-proibida-substancias-perigosas.png"
+   "src": "public/sinais/N21-paragem-proibida-substancias-perigosas.png"
   },
   "opcoes": [
    "Saída de veículos que transportam substâncias perigosas.",

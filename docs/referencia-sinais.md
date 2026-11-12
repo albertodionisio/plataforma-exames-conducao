@@ -36,12 +36,12 @@
 | D16 | Ponte móvel | 21 | IV — Sinais de perigo | `public/sinais/D16-ponte-movel.png` | 16 | CONFIRMADO |
 | E1 | Trânsito proibido | 26 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E1-transito-proibido.png` | 10 | CONFIRMADO |
 | E47 | Trânsito proibido a peões, animais e veículos não automóveis | 28 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E47-transito-proibido-peoes-animais-veiculos-nao-automoveis.png` | 21 | CONFIRMADO |
-| G11 | Área reservada para automóveis ligeiros | 35 | VII — Sinais de indicação, Sinais de informação | `public/sinais/G11-area-reservada-automoveis-ligeiros.png` | 4 | CONFIRMADO COM NOTA (D3) |
+| G11 | Área reservada para automóveis ligeiros | 35 | VII — Sinais de indicação, Sinais de informação | `public/sinais/G11-area-reservada-automoveis-ligeiros.png` | 4 | CONFIRMADO (D3 corrigido) |
 | H4 | Pré-advertência da direcção de saída | 41 | VIII — Sinais de simples indicação (título na pág. 40); a pág. 41 tem o subtítulo «Sinais de direcção» | `public/sinais/H4-pre-advertencia-direccao-de-saida.png` | 17 | CONFIRMADO COM NOTA (D5) |
-| N34 | Via com portagem a....m | 56 | XIII — Sinais combinados | `public/sinais/N34-via-com-portagem.png` | 25 | DIVERGENTE (D2) |
-| N5 (nome do ficheiro) | Paragem proibida a veículos que transportam substâncias perigosas | 55 (como **N21**) e 57 (como **N’5**) | XIII — Sinais combinados (pág. 55); «Sinais com painéis adicionais» (pág. 57) | `public/sinais/N5-paragem-proibida-substancias-perigosas.png` | 14 | DIVERGENTE (D1) |
+| N34 | Via com portagem a....m | 56 | XIII — Sinais combinados | `public/sinais/N34-via-com-portagem.png` | 25 | CORRIGIDO (D2) |
+| N21 | Paragem proibida a veículos que transportam substâncias perigosas | 55 (como **N21**) e 57 (como **N’5**) | XIII — Sinais combinados (pág. 55); «Sinais com painéis adicionais» (pág. 57) | `public/sinais/N21-paragem-proibida-substancias-perigosas.png` | 14 | CORRIGIDO (D1) |
 
-Notas de leitura: em N34 os pontos de «a....m» são como estão impressos no PDF; o valor «400 m» no painel inferior é o exemplo desenhado. Na linha do N5, a coluna «Código» repete o nome do ficheiro, que não é o código que o PDF atribui a este sinal na pág. 55.
+Notas de leitura: em N34 os pontos de «a....m» são como estão impressos no PDF; o PDF mostra «400 m» no painel inferior como exemplo desenhado; o ficheiro do ESTRADA passou a «300 m», como no aplicativo original e no texto da pergunta 25 (DADOS-052). O ficheiro do sinal da pergunta 14 passou de N5 para N21, o código que o PDF lhe atribui na pág. 55 (DADOS-053).
 
 ### Perguntas do Simulado 1 que usam estes sinais
 
@@ -50,7 +50,7 @@ Notas de leitura: em N34 os pontos de «a....m» são como estão impressos no P
 | 1 | Sinais de perigo | A17 | Operação de controlo policial com luzes intermitentes |
 | 4 | Sinais de informação | G11 | Área reservada para automóveis ligeiros |
 | 10 | Sinais de proibição | E1 | Trânsito proibido |
-| 14 | Sinais de proibição | N5 / N21 (ver D1) | Paragem proibida a veículos que transportam substâncias perigosas |
+| 14 | Sinais de proibição | N21 | Paragem proibida a veículos que transportam substâncias perigosas |
 | 16 | Sinais de perigo | D16 | A presença de uma ponte móvel |
 | 17 | Sinais de informação | H4 | Pré-aviso da direção de saída |
 | 21 | Sinais de proibição | E47 | Trânsito proibido a peões, animais e veículos não automóveis |
@@ -68,28 +68,28 @@ Só o Simulado 1 tinha imagens de sinais à data desta leitura (2026-11-12; `dat
 | E47 | Círculo cortado por X com peão, ciclomotor, vaca e carroça | Igual | Igual |
 | G11 | Painel azul com automóvel e a letra R | Fotografia de rua com o painel R ao fundo | Painel isolado igual ao PDF |
 | H4 | Painel azul com N2, N4, seta de saída e «2 Km», letras brancas | Igual, mas com N2 e N4 a amarelo | Igual ao PDF (letras brancas) |
-| N34 | Placa com círculo azul e «T»; painel «400 m» | Fotografia de estrada com a placa «300 m» | Igual ao PDF («400 m») |
-| N5 / N21 | Círculo vermelho com «S» cortado; painel com camião de substâncias perigosas | Igual (sinal combinado) | Igual |
+| N34 | Placa com círculo azul e «T»; painel «400 m» | Fotografia de estrada com a placa «300 m» | Igual ao APK («300 m»); o PDF traz «400 m» como exemplo |
+| N21 | Círculo vermelho com «S» cortado; painel com camião de substâncias perigosas | Igual (sinal combinado) | Igual |
 
 ## 4. Divergências e pontos por confirmar
 
-**Seguimento (2026-11-12):** D2 está a ser corrigido por DADOS-052 (em curso; reservou `exame1.js` e a imagem do N34). D1 e D3 passam a ser a tarefa DADOS-053 (LIVRE), a começar só depois de DADOS-052 estar concluída, porque ambas editam `exame1.js`. Esta secção descreve o estado à data da leitura e deve ser actualizada quando as correcções forem aplicadas.
+**Seguimento (2026-11-12):** D2 foi corrigido por DADOS-052 e D1 e D3 por DADOS-053. D4 e D5 continuam por decidir pelo dono. O texto de cada divergência abaixo descreve o estado à data da leitura e termina com o que foi aplicado.
 
 **D1 — N5: o PDF usa o mesmo código para sinais diferentes e atribui outros códigos a este sinal.**
 - Pág. 53 (Quadro XIII): **N5** = «Travessia de peões» (triângulo com painel «PESSOAS IDOSAS»).
 - Pág. 55 (Quadro XIII): **N21** = «Paragem proibida a veículos que transportam substâncias perigosas».
 - Pág. 57 («Sinais com painéis adicionais»): **N’5** (com apóstrofo, como impresso) = «Paragem proibida a veículos que transportam substâncias perigosas». Nesta página os códigos são N’1 a N’6.
-- O sinal desenhado em `public/sinais/N5-paragem-proibida-substancias-perigosas.png` é o da paragem proibida com substâncias perigosas. Está certo quanto à designação e à imagem, mas o código «N5» do nome do ficheiro **coincide com o código de outro sinal** (pág. 53). O código impresso mais próximo é N’5 (pág. 57); o da pág. 55 é N21.
-- **Não escolhi** um código. Decisão pendente do dono: manter o ficheiro, ou renomear e actualizar a referência em `exame1.js` (pergunta 14). Esta tarefa não altera nenhum dos dois.
+- O ficheiro do sinal da pergunta 14 (que tinha «N5» no nome) é o da paragem proibida com substâncias perigosas. Está certo quanto à designação e à imagem, mas o código «N5» do nome do ficheiro **coincide com o código de outro sinal** (pág. 53). O código impresso mais próximo é N’5 (pág. 57); o da pág. 55 é N21.
+- **Corrigido (DADOS-053, 2026-11-12, autorizado pelo dono):** o ficheiro foi renomeado para `public/sinais/N21-paragem-proibida-substancias-perigosas.png` (a imagem não foi editada) e a pergunta 14 de `exame1.js` aponta para o novo nome.
 
 **D2 — N34 (pergunta 25): a imagem não coincide com o texto da pergunta.**
 - PDF (pág. 56): designação «Via com portagem a....m»; o exemplo desenhado tem o painel «400 m».
 - Imagem do ESTRADA: «400 m» (igual ao PDF).
 - Imagem do APK: fotografia com «300 m».
 - Texto do ESTRADA: a explicação e uma alternativa falam em 300 m.
-- Já registado em `docs/auditorias/simulado-1.md` (secção 5.1). Não corrigi; a decisão (redesenhar com 300 m ou ajustar o texto) é do dono.
+- **Corrigido (DADOS-052, 2026-11-12, autorizado pelo dono):** o sinal foi redesenhado com «300 m», igual ao aplicativo original e ao texto. O PDF continua a mostrar «400 m» só como exemplo. Ver `docs/auditorias/simulado-1.md` (secção 7).
 
-**D3 — G11 (pergunta 4): descrição da imagem.** O campo `imagem.descricao` fala de «fila de carros estacionados», que é a fotografia do APK. O ficheiro do ESTRADA mostra só o painel isolado. A imagem está correcta; a descrição não corresponde ao ficheiro. Não alterei `exame1.js`.
+**D3 — G11 (pergunta 4): descrição da imagem.** O campo `imagem.descricao` fala de «fila de carros estacionados», que é a fotografia do APK. O ficheiro do ESTRADA mostra só o painel isolado. A imagem está correcta; a descrição não correspondia ao ficheiro. **Corrigido (DADOS-053, 2026-11-12):** a descrição passou a dizer que o sinal é apresentado isolado.
 
 **D4 — A17 (pergunta 1): cor.** O PDF tem interior amarelo; a imagem do APK é mais alaranjada. O SVG do ESTRADA segue o PDF. Além disso, o A17 está no Quadro II (sinais **temporários**), embora a pergunta o apresente como «Sinal de perigo». Não identifiquei um sinal equivalente nas páginas de perigo permanentes (21 a 24); não está provado que não exista, e a verificação foi feita em páginas reduzidas.
 
