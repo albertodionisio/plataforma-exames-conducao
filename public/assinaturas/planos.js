@@ -39,24 +39,37 @@
 
     var grupo = elemento("fieldset", "assinaturas-lista");
     grupo.appendChild(elemento("legend", "assinaturas-legenda", "Planos disponíveis"));
-    var selecionado = 0;
+
+    var aviso = elemento("p", "assinaturas-aviso", "");
+    aviso.id = "assinaturas-aviso";
+    aviso.setAttribute("role", "status");
+    aviso.setAttribute("aria-live", "polite");
+
+    function seleccionar(indice) {
+      grupo.querySelectorAll(".plano-cartao").forEach(function (cartao) {
+        cartao.classList.remove("plano-escolhido");
+      });
+      var escolhido = grupo.querySelector("#estrada-plano-" + indice);
+      if (escolhido) {
+        escolhido.checked = true;
+        escolhido.closest(".plano-cartao").classList.add("plano-escolhido");
+      }
+      aviso.textContent = "";
+    }
 
     planos.forEach(function (plano, indice) {
-      var cartao = elemento("article", "plano-cartao" + (indice === 0 ? " plano-gratis" : ""));
-      var label = elemento("label", "plano-seleccao");
+      var cartao = elemento("article", "plano-cartao" + (indice === 0 ? " plano-escolhido" : ""));
       var radio = elemento("input");
       radio.type = "radio";
+      radio.id = "estrada-plano-" + indice;
       radio.name = "plano";
       radio.value = String(indice);
       radio.checked = indice === 0;
       radio.setAttribute("aria-label", "Seleccionar plano " + plano.nome);
-      radio.addEventListener("change", function () {
-        selecionado = indice;
-        grupo.querySelectorAll(".plano-cartao").forEach(function (item) { item.classList.remove("plano-escolhido"); });
-        cartao.classList.add("plano-escolhido");
-        botao.textContent = "Aderir ao plano " + plano.nome;
-        aviso.textContent = "";
-      });
+      radio.addEventListener("change", function () { seleccionar(indice); });
+
+      var conteudo = elemento("label", "plano-conteudo");
+      conteudo.htmlFor = radio.id;
 
       var topo = elemento("div", "plano-topo");
       var nome = elemento("h2", "plano-nome", plano.nome);
@@ -67,6 +80,7 @@
       var preco = elemento("p", "plano-preco", plano.preco);
       var periodicidade = elemento("p", "plano-periodicidade", plano.validade === "Sem limite" ? "Acesso gratuito" : "Pagamento por período de acesso");
 
+      var tituloBeneficios = elemento("h3", "plano-beneficios-titulo", "Incluído neste plano");
       var lista = elemento("ul", "plano-beneficios");
       beneficios(plano).forEach(function (item) {
         var li = elemento("li");
@@ -78,33 +92,28 @@
         lista.appendChild(li);
       });
 
-      label.appendChild(radio);
-      label.appendChild(elemento("span", "plano-radio-visual"));
-      cartao.appendChild(label);
-      cartao.appendChild(topo);
-      cartao.appendChild(preco);
-      cartao.appendChild(periodicidade);
-      cartao.appendChild(lista);
-      if (indice === 0) cartao.classList.add("plano-escolhido");
+      var botao = elemento("button", "assinaturas-botao", "Aderir ao plano " + plano.nome);
+      botao.type = "button";
+      botao.addEventListener("click", function () {
+        seleccionar(indice);
+        aviso.textContent = plano.preco === "0 MT"
+          ? "O plano Free é gratuito. A adesão aos planos pagos ainda não está disponível nesta versão."
+          : "O plano " + plano.nome + " foi seleccionado. A adesão e os pagamentos ainda não estão activos nesta versão.";
+      });
+
+      conteudo.appendChild(topo);
+      conteudo.appendChild(preco);
+      conteudo.appendChild(periodicidade);
+      conteudo.appendChild(tituloBeneficios);
+      conteudo.appendChild(lista);
+      cartao.appendChild(radio);
+      cartao.appendChild(conteudo);
+      cartao.appendChild(botao);
       grupo.appendChild(cartao);
     });
 
     formulario.appendChild(grupo);
-    var acao = elemento("div", "assinaturas-acao");
-    var botao = elemento("button", "assinaturas-botao", "Aderir ao plano " + planos[0].nome);
-    botao.type = "button";
-    var aviso = elemento("p", "assinaturas-aviso", "");
-    aviso.setAttribute("role", "status");
-    aviso.setAttribute("aria-live", "polite");
-    botao.addEventListener("click", function () {
-      var plano = planos[selecionado];
-      aviso.textContent = plano.preco === "0 MT"
-        ? "O plano Free é gratuito. A adesão aos planos pagos ainda não está disponível nesta versão."
-        : "O plano " + plano.nome + " foi seleccionado. A adesão e os pagamentos ainda não estão activos nesta versão.";
-    });
-    acao.appendChild(botao);
-    acao.appendChild(aviso);
-    formulario.appendChild(acao);
+    formulario.appendChild(aviso);
     raiz.appendChild(formulario);
     raiz.appendChild(elemento("p", "assinaturas-nota", "Os preços e as condições apresentados correspondem aos planos actualmente definidos no ESTRADA."));
   }
