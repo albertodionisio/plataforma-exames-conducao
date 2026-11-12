@@ -257,7 +257,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Não reservar várias tarefas de uma vez. Cada sessão escolhe apenas uma tarefa LIVRE, lê `INSTRUCOES.md`, confirma a reserva remota e trabalha exclusivamente nos ficheiros atribuídos.
 
 ## DADOS-032 — Simulado 31 (conteúdo original)
-- Estado: LIVRE
+- Estado: EM CURSO — Claude-DADOS032 — 2026-11-12 14:10 UTC+02 — ficheiros: data/exames/exame31.js, docs/referencias-exames/exame31-mapeamento.md — último sinal: 2026-11-12 14:10 UTC+02
 - Foco temático prioritário: Regras gerais de circulação e posição na via.
 - Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame31.js` (novo) e `docs/referencias-exames/exame31-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
