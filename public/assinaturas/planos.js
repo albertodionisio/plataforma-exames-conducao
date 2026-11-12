@@ -70,15 +70,15 @@
 
       var conteudo = elemento("label", "plano-conteudo");
       conteudo.htmlFor = radio.id;
-
-      var topo = elemento("div", "plano-topo");
-      var nome = elemento("h2", "plano-nome", plano.nome);
-      var validade = elemento("span", "plano-validade", plano.validade === "Sem limite" ? "Sem prazo de expiração" : "Válido por " + plano.validade);
+      var topo = elemento("span", "plano-topo");
+      var nome = elemento("span", "plano-nome", plano.nome);
+      nome.setAttribute("role", "heading");
+      nome.setAttribute("aria-level", "2");
       topo.appendChild(nome);
-      topo.appendChild(validade);
-
-      var preco = elemento("p", "plano-preco", plano.preco);
-      var periodicidade = elemento("p", "plano-periodicidade", plano.validade === "Sem limite" ? "Acesso gratuito" : "Pagamento por período de acesso");
+      topo.appendChild(elemento("span", "plano-validade", plano.validade === "Sem limite" ? "Sem prazo de expiração" : "Válido por " + plano.validade));
+      conteudo.appendChild(topo);
+      conteudo.appendChild(elemento("span", "plano-preco", plano.preco));
+      conteudo.appendChild(elemento("span", "plano-periodicidade", plano.validade === "Sem limite" ? "Acesso gratuito" : "Pagamento por período de acesso"));
 
       var tituloBeneficios = elemento("h3", "plano-beneficios-titulo", "Incluído neste plano");
       var lista = elemento("ul", "plano-beneficios");
@@ -101,13 +101,10 @@
           : "O plano " + plano.nome + " foi seleccionado. A adesão e os pagamentos ainda não estão activos nesta versão.";
       });
 
-      conteudo.appendChild(topo);
-      conteudo.appendChild(preco);
-      conteudo.appendChild(periodicidade);
-      conteudo.appendChild(tituloBeneficios);
-      conteudo.appendChild(lista);
       cartao.appendChild(radio);
       cartao.appendChild(conteudo);
+      cartao.appendChild(tituloBeneficios);
+      cartao.appendChild(lista);
       cartao.appendChild(botao);
       grupo.appendChild(cartao);
     });
