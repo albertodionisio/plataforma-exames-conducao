@@ -23,7 +23,7 @@ Documento editorial interno da tarefa GER-010. **Ainda não está ligado ao site
 
 - APK `original/Codigo_e_Sinais_de_Transito_1_1.apk`, versão 1.1 (pacote `com.app.codigoesinaisdetransito`), e `original/LEIAME.md`.
 - **Análise estática**: leram-se os textos dos ecrãs, o manifesto e a lógica do código. A app **não foi executada**; o que não se consegue ver no código fica por afirmar.
-- `REGRAS.md`, `docs/ESTRADA_Especificacao_Tecnica.md` e os ficheiros do site, ao estado do repositório de 2026-11-11 (commit `13165aa`).
+- `REGRAS.md`, `docs/ESTRADA_Especificacao_Tecnica.md` e os ficheiros do site, ao estado do repositório de 2026-11-12 (commit `13165aa`).
 - Não se copiou texto, pergunta nem imagem do APK. Citam-se apenas os nomes curtos dos botões e mensagens.
 
 ## O que o APK confirma
