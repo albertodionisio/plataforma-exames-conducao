@@ -2,7 +2,7 @@
 
 - **Tarefa:** GER-005 · **Sessão:** Claude-GER005 · **Data:** 2026-11-11
 - **Âmbito:** as 25 perguntas de `data/exames/exame1.js` (ESTRADA) comparadas com o Exame 1 do aplicativo original (`original/Codigo_e_Sinais_de_Transito_1_1.apk`).
-- **Estado:** relatório de leitura. Nada foi alterado em `exame1.js`. As correcções propostas só avançam com aprovação do dono.
+- **Estado:** auditoria concluída em GER-005. O dono aprovou as correcções em 2026-11-11 e foram aplicadas na tarefa DADOS-052 (secção 7). O resultado das secções 2 a 6 mostra o estado **antes** das correcções.
 
 ## 1. Como foi feito
 
@@ -105,3 +105,18 @@ Legenda: **M** manter · **Me** melhorar · **C** corrigir. Os resumos do origin
 - A correcção das imagens de cena (perguntas 2, 3, 7 e 15) foi avaliada pelo tema, não por direitos de imagem nem origem das fotografias.
 - Perguntas 3 e 11 (condução defensiva) não dependem de um artigo do Código; apoiam-se no original.
 - Esta auditoria não avalia a lógica de pontuação nem a interface.
+
+## 7. Correcções aplicadas (DADOS-052, 2026-11-12)
+
+| Pergunta | O que foi feito |
+|---|---|
+| 25 | O sinal `public/sinais/N34-via-com-portagem.png` foi redesenhado com a distância **300 m**, como no original, e agora coincide com o enunciado, a alternativa D e a explicação. Também foram refeitas as bordas direitas da placa e do painel, que estavam cortadas, e retiradas duas linhas finas de recorte. |
+| 15 | A imagem `public/cenas/pergunta-15-braco-do-condutor.jpg` ganhou uma seta vermelha de duplo sentido entre as duas posições do braço, como no aplicativo original. A descrição da imagem em `exame1.js` refere a seta. |
+| 5 | A explicação passou a incluir a regra da inclinação (Art. 41 n.º 4): numa via de inclinação acentuada recua o veículo que vai a subir, salvo se a manobra for manifestamente mais fácil para o que desce. A pergunta e as alternativas não mudaram. |
+| 7 | A imagem foi confirmada: mostra claramente uma lomba. Foi corrigida a descrição da imagem, que dizia «marcas brancas» quando as faixas são amarelas e brancas. |
+
+**Continua em aberto**
+- **Grafia:** a escolha entre a grafia de 1990 e a anterior aguarda confirmação do dono (secção 5.5). Não foi alterada nenhuma palavra.
+- **Pergunta 15:** o significado do gesto (reduzir a velocidade) continua apoiado só no aplicativo original; falta confirmá-lo no regulamento de sinalização.
+- `node scripts/validar-exames.js` passa sem problemas.
+

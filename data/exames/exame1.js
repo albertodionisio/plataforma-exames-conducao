@@ -86,7 +86,7 @@ window.EXAMES[1] = [
    "O veículo que estiver mais perto do local onde o cruzamento é possível."
   ],
   "correta": 3,
-  "explicacao": "Recua quem estiver mais perto de um ponto onde o cruzamento seja possível, porque é o que gasta menos manobra para libertar a passagem."
+  "explicacao": "Recua quem estiver mais perto de um ponto onde o cruzamento seja possível, porque é o que gasta menos manobra para libertar a passagem. Numa via de inclinação acentuada, recua o veículo que vai a subir, salvo se a manobra for manifestamente mais fácil para o que desce."
  },
  {
   "numero": 6,
@@ -109,7 +109,7 @@ window.EXAMES[1] = [
   "dificuldade": "difícil",
   "enunciado": "Observe as faixas pintadas na estrada. O que indicam?",
   "imagem": {
-   "descricao": "Estrada com marcas brancas transversais pintadas no pavimento, vista de frente, com um peão na berma",
+   "descricao": "Estrada vista de frente com uma lomba atravessada por faixas amarelas e brancas pintadas no pavimento, com um peão na berma",
    "src": "public/cenas/pergunta-07-lomba-com-faixas.jpg"
   },
   "opcoes": [
@@ -238,7 +238,7 @@ window.EXAMES[1] = [
   "dificuldade": "média",
   "enunciado": "O condutor da imagem estende o braço pela janela e move-o para cima e para baixo, com a palma da mão virada para baixo. O que comunica aos outros utentes?",
   "imagem": {
-   "descricao": "Braço de um condutor estendido pela janela de um carro branco, mão aberta com a palma para baixo, a mover-se para cima e para baixo",
+   "descricao": "Braço de um condutor estendido pela janela de um carro branco, mão aberta com a palma para baixo, a mover-se para cima e para baixo; uma seta vermelha de duplo sentido indica o movimento",
    "src": "public/cenas/pergunta-15-braco-do-condutor.jpg"
   },
   "opcoes": [
