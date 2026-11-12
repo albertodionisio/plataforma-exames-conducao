@@ -13,13 +13,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 
 
-## GER-005 — Auditoria comparativa do Simulado 1
-- Estado: EM CURSO — Claude-GER005 — 2026-11-11 22:30 UTC+02 — ficheiros: docs/auditorias/simulado-1.md — último sinal: 2026-11-11 22:30 UTC+02
-- Pedido: comparar as 25 perguntas do Simulado 1 do ESTRADA com o modelo de perguntas do aplicativo original guardado em `original/Codigo_e_Sinais_de_Transito_1_1.apk`. Identificar o objectivo de cada pergunta (identificação, interpretação, regra ou situação prática), verificar se o ESTRADA preserva esse objectivo e apontar melhorias necessárias.
-- Onde mexer: leitura de `original/Codigo_e_Sinais_de_Transito_1_1.apk` e `data/exames/exame1.js`; criar apenas o relatório `docs/auditorias/simulado-1.md`.
-- Pronto quando: relatório cobre as 25 perguntas, compara os tipos de pergunta com o aplicativo original, classifica cada uma como manter/melhorar/corrigir/substituir e justifica cada observação com evidência.
-- Cuidados: não copiar perguntas literalmente do APK; não alterar `exame1.js`; não inventar conteúdo que não tenha sido encontrado no aplicativo. Alterações às perguntas só depois da aprovação do dono.
-
 ## GER-006 — Catálogo de sinais com nomenclatura oficial
 - Estado: EM CURSO — Claude-GER006 — 2026-11-11 15:21 UTC+02 — ficheiros: docs/referencia-sinais.md — último sinal: 2026-11-11 15:21 UTC+02
 - Pedido: criar um catálogo de referência dos sinais utilizados no ESTRADA, conferindo cada código, imagem e designação com o PDF de sinais incluído nos documentos de referência do APK original.
