@@ -31,26 +31,27 @@
   }
 
   function catalogo() {
-    var html = "<h1>Simulados</h1><p>Os " + A.gratuitos + " primeiros são gratuitos. Os restantes precisam de assinatura.</p><div class='grelha'>";
+    var html = "<h1>Simulados</h1><p>Os " + A.gratuitos + " primeiros são gratuitos. Os restantes precisam de assinatura. Selecciona um exame bloqueado para conhecer os planos de acesso.</p><div class='grelha'>";
     for (var n = 1; n <= A.totalSimulados; n++) {
       var livre = n <= A.gratuitos, pronto = !!EX[n];
-      html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='#/simulado/" + n + "'><b>Simulado " + n + "</b><small>" + (livre ? (pronto ? "Grátis" : "Em breve") : "🔒 Assinatura") + "</small></a>";
+      html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='" + (livre ? "#/simulado/" + n : "#/planos") + "'><b>Simulado " + n + "</b><small>" + (livre ? (pronto ? "Grátis" : "Em breve") : "Acesso por plano") + "</small></a>";
     }
     app.innerHTML = html + "</div>";
   }
 
   function planos() {
-    var t = "<h1>Planos</h1><div class='card' style='overflow-x:auto'><table><tr><th>Plano</th><th>Preço</th><th>Validade</th><th>Simulados</th><th>Anúncios</th><th>Suporte</th></tr>";
-    A.planos.forEach(function (p) {
-      t += "<tr><td>" + p.nome + "</td><td>" + p.preco + "</td><td>" + p.validade + "</td><td>" + p.simulados + "</td><td>" + p.anuncios + "</td><td>" + p.suporte + "</td></tr>";
-    });
-    app.innerHTML = t + "</table></div><div class='aviso'>Pagamentos ainda não estão ativos nesta versão.</div>";
+    app.innerHTML = "<section id='assinaturas-app' class='assinaturas-pagina' aria-label='Planos de assinatura'></section>";
+    if (typeof window.renderizarPlanosEstrada === "function") {
+      window.renderizarPlanosEstrada();
+    } else {
+      app.innerHTML = "<h1>Planos</h1><div class='aviso'>Não foi possível carregar os planos. Actualiza a página e tenta novamente.</div>";
+    }
   }
 
   function iniciar(n) {
     if (!n || n < 1 || n > A.totalSimulados) return catalogo();
     if (n > A.gratuitos) {
-      app.innerHTML = "<h1>Simulado " + n + "</h1><div class='card'><p>🔒 Este simulado precisa de assinatura.</p><p><a class='btn' href='#/planos'>Ver planos</a> <a class='btn sec' href='#/simulados'>Voltar</a></p></div>";
+      app.innerHTML = "<h1>Simulado " + n + "</h1><div class='card'><p>Este simulado está bloqueado e requer um plano de acesso.</p><p><a class='btn' href='#/planos'>Consultar planos disponíveis</a> <a class='btn sec' href='#/simulados'>Voltar aos simulados</a></p></div>";
       return;
     }
     var Q = EX[n];
