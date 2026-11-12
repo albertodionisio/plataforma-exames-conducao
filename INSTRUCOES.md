@@ -105,3 +105,17 @@ Os ficheiros `PENDENTE.md` e `HISTORICO.md` são a regra, mas o `git log` é a p
 ```
 
 Se `PENDENTE.md` ficar vazio, mantenha o cabeçalho e a linha "Nenhuma instrução pendente.".
+
+## Prioridade global do projecto — terminar e lançar
+
+A prioridade definida pelo dono é concluir o produto ESTRADA e lançá-lo. Todas as sessões devem respeitar a sequência registada em `REGRAS.md`:
+
+1. Avançar na conclusão dos 50 simulados.
+2. Completar e integrar o conjunto de funcionalidades previsto para o produto.
+3. Deixar cada componente funcional e testável ou, quando depender de credenciais, aprovações ou serviços externos, tecnicamente preparado e com os passos de activação documentados.
+4. Depois de concluído esse âmbito, executar a auditoria global, testes completos, correcções e estabilização.
+5. Preparar e efectuar o lançamento Android.
+
+**Regra de ritmo:** não transformar melhorias não críticas, ajustes cosméticos ou auditorias globais antecipadas em bloqueios ao avanço. Registe-os para a fase de auditoria e prossiga para a próxima tarefa disponível. Isto não dispensa testes mínimos por entrega nem a correcção imediata de erros factuais, falhas de segurança, perda de dados ou regressões graves.
+
+Cada sessão deve proteger o trabalho já concluído, fazer verificações proporcionais para não o quebrar e indicar honestamente o que está implementado, integrado, testado, apenas preparado ou efectivamente activo. Não declarar o projecto concluído antes dos 50 simulados, das funcionalidades obrigatórias, da auditoria global e dos requisitos de lançamento estarem tratados.
