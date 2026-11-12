@@ -407,3 +407,11 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Onde mexer: `data/exames/exame50.js` (novo) e `docs/referencias-exames/exame50-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
 - Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
 - Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+
+## DADOS-052 — Correcções do Simulado 1 (auditoria GER-005)
+- Estado: EM CURSO — Claude-DADOS052 — 2026-11-12 06:11 UTC+02 — ficheiros: data/exames/exame1.js, public/sinais/N34-via-com-portagem.png, public/cenas/pergunta-15-braco-do-condutor.jpg, docs/auditorias/simulado-1.md — último sinal: 2026-11-12 06:11 UTC+02
+- Pedido: aplicar as correcções propostas em `docs/auditorias/simulado-1.md`, autorizadas pelo dono em 2026-11-11: pergunta 25 (distância da placa), pergunta 15 (seta de movimento na imagem), pergunta 5 (explicação) e confirmação da imagem da pergunta 7.
+- Onde mexer: `data/exames/exame1.js`, as imagens indicadas e o estado das correcções em `docs/auditorias/simulado-1.md`.
+- Pronto quando: a imagem e o texto da pergunta 25 coincidem (300 m, como no original); a imagem da pergunta 15 tem a seta de movimento; a explicação da pergunta 5 inclui a regra da inclinação; `node scripts/validar-exames.js` passa; o relatório regista o que foi aplicado.
+- Cuidados: não mexer nas respostas correctas nem na ordem das perguntas; não alterar `app.js`, `index.html`, `styles.css` ou `config.js`; a escolha da grafia (1990 ou anterior) aguarda confirmação do dono e não faz parte desta tarefa.
+
