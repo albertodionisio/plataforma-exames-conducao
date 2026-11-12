@@ -73,6 +73,8 @@ Só o Simulado 1 tinha imagens de sinais à data desta leitura (2026-11-12; `dat
 
 ## 4. Divergências e pontos por confirmar
 
+**Seguimento (2026-11-12):** D2 está a ser corrigido por DADOS-052 (em curso; reservou `exame1.js` e a imagem do N34). D1 e D3 passam a ser a tarefa DADOS-053 (LIVRE), a começar só depois de DADOS-052 estar concluída, porque ambas editam `exame1.js`. Esta secção descreve o estado à data da leitura e deve ser actualizada quando as correcções forem aplicadas.
+
 **D1 — N5: o PDF usa o mesmo código para sinais diferentes e atribui outros códigos a este sinal.**
 - Pág. 53 (Quadro XIII): **N5** = «Travessia de peões» (triângulo com painel «PESSOAS IDOSAS»).
 - Pág. 55 (Quadro XIII): **N21** = «Paragem proibida a veículos que transportam substâncias perigosas».
