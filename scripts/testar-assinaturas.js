@@ -111,7 +111,7 @@ vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../public/assinaturas/p
 const planos = window.APP.planos;
 const cartoes = raiz.querySelectorAll(".plano-cartao");
 assert.equal(cartoes.length, 5, "devem ser apresentados os cinco planos definidos em config.js");
-assert.equal(window.renderizarPlanosEstrada instanceof Function, true, "o componente deve expor a função de renderização");
+assert.equal(typeof window.renderizarPlanosEstrada, "function", "o componente deve expor a função de renderização");
 assert.equal(cartoes[0].classList.contains("plano-escolhido"), true, "o plano Free deve iniciar seleccionado");
 
 const texto = raiz.textContent;
