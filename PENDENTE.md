@@ -30,7 +30,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Cuidados: verificar primeiro se `app.js` e `styles.css` estão livres; não alterar dados de perguntas nem regras de pontuação; não mostrar um estado de aprovação sem nota.
 
 ## FE-003 — Auditoria e substituição de emojis por ícones adequados
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-FE003 — 2026-11-12 06:05 UTC+02 — ficheiros: docs/auditorias/icone-interface.md (relatório; auditoria de leitura em index.html, app.js, styles.css e icons/) — último sinal: 2026-11-12 06:05 UTC+02
 - Pedido: identificar todos os emojis usados como elementos visuais e substituí-los por ícones básicos, reconhecíveis e adequados à função e ao local. Os ícones devem ter tamanho equilibrado e pertencer a um conjunto coerente, sem poluição visual.
 - Onde mexer: auditar `index.html`, `app.js`, `styles.css` e `icons/`; documentar a auditoria em `docs/auditorias/icone-interface.md`.
 - Pronto quando: todos os locais com emojis forem identificados; cada substituição tiver ícone semanticamente adequado; estilo, espessura, proporções e tamanho forem consistentes; interface verificada em telemóvel e sem ícones quebrados.
