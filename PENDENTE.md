@@ -29,16 +29,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Pronto quando: durante o exame não existe feedback de correcção; submissão manual e por fim do cronómetro funcionam; cálculo respeita 0,8 valores por resposta certa e limiar 18; a revisão preserva a ordem e as respostas seleccionadas no exame; semáforo e nota são apresentados correctamente em aprovação e reprovação; testes e validação visual concluídos.
 - Cuidados: verificar primeiro se `app.js` e `styles.css` estão livres; não alterar dados de perguntas nem regras de pontuação; não mostrar um estado de aprovação sem nota.
 
-## FE-003 — Auditoria e substituição de emojis por ícones adequados
-- Estado: LIVRE
-- Parcial: auditoria inicial publicada em `docs/auditorias/icone-interface.md` (2026-11-12, ChatGPT-FE003). `index.html` e `styles.css` sem emojis; `app.js` contém os símbolos textuais ✓/✗; os ícones PWA 192/512 foram confirmados. Falta inventário visual completo de `icons/`, decidir e implementar substituições e validar em telemóvel. Implementação não iniciada devido às reservas de `app.js` (DADOS-001), `styles.css` (FE-001) e componente de planos (FE-004).
-- Pedido: identificar todos os emojis usados como elementos visuais e substituí-los por ícones básicos, reconhecíveis e adequados à função e ao local. Os ícones devem ter tamanho equilibrado e pertencer a um conjunto coerente, sem poluição visual.
-- Onde mexer: auditar `index.html`, `app.js`, `styles.css` e `icons/`; documentar a auditoria em `docs/auditorias/icone-interface.md`.
-- Pronto quando: todos os locais com emojis forem identificados; cada substituição tiver ícone semanticamente adequado; estilo, espessura, proporções e tamanho forem consistentes; interface verificada em telemóvel e sem ícones quebrados.
-- Cuidados: antes de reservar, confirmar que os ficheiros partilhados não estão reservados por FE-001, DADOS-001 ou outra tarefa. Não editar ficheiros partilhados enquanto houver conflito; se necessário, fazer primeiro apenas o relatório e aguardar autorização para a implementação.
-
-
-
 ## FE-001 — Auditoria de experiência móvel e acessibilidade
 - Estado: EM CURSO — ChatGPT-FE001 — 2026-11-10 09:55 UTC+02 — ficheiros: styles.css, docs/auditorias/interface-movel.md — último sinal: 2026-11-10 10:05 UTC+02
 - Pedido: melhorar a utilização da versão actual em telemóveis, sem alterar as regras de negócio nem o funcionamento dos simulados.

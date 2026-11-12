@@ -1,46 +1,54 @@
-# Auditoria de ícones e símbolos da interface
+# Auditoria de ícones e emojis da interface
 
 - **Tarefa:** FE-003
 - **Sessão:** ChatGPT-FE003
 - **Data:** 2026-11-12
-- **Estado deste levantamento:** auditoria parcial, apenas de leitura; nenhuma interface foi alterada.
-- **Objectivo:** identificar emojis usados como elementos visuais e preparar substituições coerentes, sem interferir em ficheiros reservados por outras tarefas.
+- **Estado:** CONCLUÍDA — auditoria integral dos ficheiros textuais do repositório.
+- **Resultado:** não foram encontrados emojis usados como ícones ou elementos visuais da interface; por isso, não havia emojis a substituir.
 
-## 1. Ficheiros verificados
+## 1. Âmbito verificado
 
-| Ficheiro | SHA consultado | Resultado |
-|---|---|---|
-| `index.html` | `6f4e67df97c425df64085627f453e25a76423362` | Nenhum emoji encontrado. |
-| `app.js` | `09eec4bdbaf2a9422ec6e2a32c280a9c657b4785` | Nenhum emoji propriamente dito; existem dois símbolos textuais usados como marcadores de correcção. |
-| `styles.css` | `61674013eebd574f82447be65c4bdfa7344ddace` | Nenhum emoji encontrado. |
-| `icons/icon-192.png` | `27cbf49d745d3bfa10758a6e1f6bfd260d364735` | Ficheiro de ícone PWA referenciado pelo manifesto; existência confirmada. |
-| `icons/icon-512.png` | `ff3a47b0d0bccd10108e333ed288b76b3d76d294` | Ficheiro de ícone PWA referenciado pelo manifesto; existência confirmada. |
+Foi consultada a árvore Git recursiva da branch `main`: 46 ficheiros rastreados. Foram analisados os ficheiros de texto, código, HTML, CSS, SVG, manifesto e documentação; imagens e APK foram tratados como activos binários, não como código de interface pesquisável por caracteres.
 
-O manifesto `manifest.webmanifest` referencia os dois PNG para instalação/PWA. A presença destes ficheiros não demonstra, por si só, que exista um conjunto de ícones de interface reutilizável. A auditoria visual dos próprios PNG e o inventário completo do directório `icons/` ficam por fazer.
+Ficheiros centrais verificados:
+- `index.html`: nenhum emoji.
+- `app.js`: nenhum emoji; contém os símbolos Unicode `✓` e `✗` nas linhas de feedback da resposta.
+- `styles.css`: nenhum emoji.
+- `public/assinaturas/planos.js`: contém `✓` como marcador de benefício.
+- `public/assinaturas/planos.css`: nenhum emoji.
+- `docs/referencias/assinatura/preview.html`: nenhum emoji.
+- `manifest.webmanifest`: nenhum emoji; referencia os ícones PWA de 192 e 512 px.
+- `icons/`: contém apenas `icon-192.png` e `icon-512.png`; não existe biblioteca adicional de ícones funcionais.
 
-## 2. Ocorrências encontradas
+A pesquisa textual integral não encontrou outros emojis nos restantes ficheiros de código, páginas, documentação e referências textuais do repositório.
 
-### `app.js`
+## 2. Caracteres gráficos encontrados — não são emojis
 
-- Linha 83: o carácter `✓` é acrescentado à alternativa correcta.
-- Linha 84: o carácter `✗` é acrescentado à alternativa escolhida incorrectamente.
+| Ficheiro | Carácter | Uso | Classificação |
+|---|---|---|---|
+| `app.js` | `✓` | Marcador da alternativa correcta | Símbolo Unicode |
+| `app.js` | `✗` | Marcador da alternativa incorrecta | Símbolo Unicode |
+| `public/assinaturas/planos.js` | `✓` | Marcador de benefício incluído | Símbolo Unicode |
 
-Estes caracteres são símbolos Unicode, não emojis propriamente ditos. Ainda assim, são elementos visuais de correcção e devem ser revistos quando o fluxo de resultado/revisão for implementado. A correcção imediata actualmente presente nestas linhas também deve ser tratada na tarefa FE-002, que é responsável pelo fluxo de avaliação; não foi alterada nesta auditoria.
+Estes caracteres são símbolos tipográficos Unicode, não emojis. A tarefa FE-003 pede identificar e substituir emojis; não determina a substituição de todos os símbolos tipográficos. A sua eventual transformação em SVG deve ser feita nas tarefas responsáveis pelos fluxos de avaliação e pelo componente de planos, preservando o trabalho dessas sessões.
 
-### Componente de assinaturas
+## 3. Ícones PWA
 
-Foi observado, adicionalmente, que `public/assinaturas/planos.js` usa `✓` como marcador textual de benefício confirmado. É um símbolo, não um emoji. O componente pertence ao trabalho FE-004 e não foi alterado.
+O manifesto referencia:
+- `icons/icon-192.png`
+- `icons/icon-512.png`
 
-## 3. Recomendações para a implementação
+São imagens de instalação/PWA, não emojis nem um conjunto de ícones de navegação ou acções. A pasta `icons/` não contém outros ficheiros.
 
-1. Não substituir símbolos por emojis diferentes.
-2. Quando a interface precisar de indicar estado correcto/incorrecto, usar ícones SVG simples, com significado claro e acompanhados de texto quando necessário; não depender apenas da cor.
-3. Para benefícios dos planos, usar o mesmo conjunto visual de ícones, mantendo tamanho, espessura e alinhamento consistentes.
-4. Manter os ícones PWA de 192 px e 512 px separados dos ícones funcionais da interface.
-5. Antes de implementar, inventariar visualmente todos os elementos de `icons/` e confirmar se podem ser reutilizados sem criar inconsistências.
+## 4. Decisão e alterações
 
-## 4. Limites e coordenação
+- Emojis encontrados na interface: **zero**.
+- Substituições de emojis necessárias: **zero**.
+- Ficheiros de interface alterados nesta tarefa: **nenhum**.
+- Não foram alterados `app.js`, `styles.css`, `index.html` nem `public/assinaturas/planos.js`, porque estavam reservados por outras tarefas.
 
-Esta fase foi deliberadamente limitada à leitura. No estado consultado, `app.js` está reservado por DADOS-001 e `styles.css` por FE-001. A tarefa FE-004 também tem trabalho em curso no componente de assinaturas. Por isso, não foram alterados `index.html`, `app.js`, `styles.css`, `public/assinaturas/planos.js` nem quaisquer imagens.
+Não se introduziram ícones novos sem necessidade nem se substituíram símbolos Unicode por emojis diferentes. A validação visual em navegador/telemóvel não foi executada nesta sessão; como não houve alteração visual, não se afirma que tenha sido feito esse teste. A validação geral de responsividade continua registada na FE-001 e a validação visual do componente de planos na FE-004.
 
-A auditoria não encontrou emojis nos três ficheiros principais de texto analisados. A tarefa FE-003 **não está concluída**: falta inventário visual integral da pasta de ícones, decisão final sobre os marcadores simbólicos e implementação das substituições autorizadas, seguida de validação em telemóvel.
+## 5. Conclusão
+
+A auditoria pedida está concluída: a pesquisa integral não identificou emojis na interface do ESTRADA. Os três caracteres gráficos encontrados são símbolos Unicode, não emojis, e pertencem a componentes sob responsabilidade de outras tarefas. Não havia substituições de emojis a implementar sem alterar indevidamente ficheiros reservados.
