@@ -31,3 +31,26 @@ Não reabrir estas decisões sem o dono pedir.
 
 ## Trabalho com várias sessões
 - Regras em `INSTRUCOES.md`. Resumo: ler antes, reservar antes de trabalhar, apagar do `PENDENTE.md` e registar no `HISTORICO.md` ao concluir, nunca duplicar.
+
+## Estratégia de execução e lançamento do projecto
+
+A prioridade definida pelo dono é **terminar o ESTRADA e lançá-lo**, avançando de forma contínua até existir uma versão completa, integrada e pronta para utilização. O objectivo não é manter o projecto indefinidamente em ciclos de planeamento ou aperfeiçoamento de módulos isolados.
+
+### Ordem de execução obrigatória
+
+1. **Concluir os 50 simulados:** desenvolver e integrar os simulados 1 a 50, com perguntas, alternativas, respostas, explicações e imagens correspondentes, respeitando as regras de conteúdo e validação.
+2. **Completar o produto:** implementar e integrar as funcionalidades previstas para a aplicação, incluindo experiência de exame, resultados e revisão, contas, assinaturas, pagamentos e os restantes componentes da especificação.
+3. **Preparar para funcionamento real:** cada componente deve ficar funcional e testável. Quando a activação depender de credenciais, contratos, aprovação comercial ou serviços externos, deixar a integração tecnicamente preparada, documentada e com os requisitos de activação explícitos. Nunca apresentar uma integração apenas preparada como se estivesse activa.
+4. **Auditoria global e estabilização:** depois de concluído o âmbito funcional do produto e os 50 simulados, iniciar uma fase coordenada de auditoria integral, testes de ponta a ponta, verificação de segurança, compatibilidade móvel/Android, desempenho, acessibilidade e correcção dos problemas encontrados.
+5. **Lançamento:** preparar a versão Android de produção, validar o processo de instalação e actualização, completar os requisitos operacionais e publicar/disponibilizar a aplicação.
+
+### Como avançar sem perder qualidade
+
+- Não interromper continuamente o desenvolvimento para aperfeiçoamentos cosméticos ou auditorias globais prematuras. Registar melhorias não críticas para a fase de auditoria e continuar para a próxima entrega.
+- Não adiar verificações essenciais que evitem erros factuais, perda de dados, falhas de segurança, incompatibilidades ou regressões graves. Cada tarefa deve passar os testes mínimos relevantes antes de ser integrada.
+- Preservar as funcionalidades já concluídas: alterações novas não podem quebrar o que já funciona. Fazer verificações de regressão proporcionais ao risco, sem transformar cada entrega numa auditoria total.
+- Distinguir claramente: implementado, integrado, testado, dependente de configuração externa e efectivamente activo.
+- Não declarar o projecto pronto para lançamento enquanto existirem funcionalidades obrigatórias por implementar, simulados por concluir ou bloqueios críticos por resolver.
+- Todas as sessões devem seguir esta prioridade, consultar o estado real no GitHub e escolher a próxima tarefa disponível sem duplicar trabalho.
+
+**Critério final:** o projecto só é considerado concluído quando os 50 simulados e o âmbito funcional acordado estiverem integrados, testados, preparados para operação real, e a auditoria global tiver resolvido ou formalmente identificado todos os bloqueios ao lançamento.
