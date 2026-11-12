@@ -12,10 +12,10 @@
 .plano-cartao>input:focus-visible{outline:3px solid #b8924a;outline-offset:4px}
 .plano-conteudo{display:block;flex:1;min-width:0;padding-right:30px;cursor:pointer}
 .plano-topo{display:flex;flex-direction:column;gap:4px}
-.plano-nome{margin:0;color:#14284b;font-size:1.3rem;line-height:1.25}
+.plano-nome{margin:0;color:#14284b;font-size:1.3rem;line-height:1.25;font-weight:700}
 .plano-validade{display:inline-block;color:#6b7280;font:600 .84rem/1.4 Arial,sans-serif}
-.plano-preco{margin:18px 0 2px;color:#17243a;font:800 1.9rem/1.1 Arial,sans-serif;letter-spacing:-.04em}
-.plano-periodicidade{min-height:38px;margin:5px 0 17px;color:#626a78;font:600 .9rem/1.4 Arial,sans-serif}
+.plano-preco{display:block;margin:18px 0 2px;color:#17243a;font:800 1.9rem/1.1 Arial,sans-serif;letter-spacing:-.04em}
+.plano-periodicidade{display:block;min-height:38px;margin:5px 0 17px;color:#626a78;font:600 .9rem/1.4 Arial,sans-serif}
 .plano-beneficios-titulo{margin:0 0 10px;padding-top:14px;border-top:1px solid #e7e4dc;color:#343b46;font-size:.95rem;line-height:1.3}
 .plano-beneficios{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .plano-beneficios li{display:flex;align-items:flex-start;gap:9px;min-width:0}
