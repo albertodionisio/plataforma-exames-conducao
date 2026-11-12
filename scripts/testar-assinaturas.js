@@ -26,9 +26,9 @@ class Elemento {
         if (!this.classList.contains(name)) this.className = (this.className + " " + name).trim();
       },
       remove: (name) => {
-        this.className = this.className.split(/\\s+/).filter((item) => item && item !== name).join(" ");
+        this.className = this.className.split(/\s+/).filter((item) => item && item !== name).join(" ");
       },
-      contains: (name) => this.className.split(/\\s+/).includes(name)
+      contains: (name) => this.className.split(/\s+/).includes(name)
     };
   }
 
