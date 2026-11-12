@@ -4,15 +4,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
-## GER-010 — Perguntas frequentes baseadas no APK original
-- Estado: EM CURSO — Claude-GER010 — 2026-11-11 15:13 UTC+02 — ficheiros: docs/conteudos/perguntas-frequentes.md — último sinal: 2026-11-11 15:13 UTC+02
-- Pedido: analisar o APK original para identificar dúvidas recorrentes e conteúdos que justifiquem uma secção de Perguntas Frequentes no ESTRADA. A secção deve responder a dúvidas reais sobre exames, regras de utilização, avaliação e preparação, sem inventar funcionalidades ainda não disponíveis.
-- Onde mexer: consultar `original/Codigo_e_Sinais_de_Transito_1_1.apk`, `original/LEIAME.md`, documentos de referência e regras já registadas; criar apenas `docs/conteudos/perguntas-frequentes.md`.
-- Pronto quando: documento apresenta perguntas e respostas curtas, claras e úteis, indica a origem/justificação de cada tema e separa dúvidas confirmadas no APK das recomendações editoriais para o ESTRADA.
-- Cuidados: não copiar texto integral do APK; não afirmar que pagamentos, contas, notificações ou funcionalidades futuras já estão activas; não alterar interface nem código.
-
-
-
 ## Interface (FE-)
 
 ## FE-002 — Resultado final com semáforo e revisão pedagógica
