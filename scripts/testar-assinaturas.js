@@ -140,11 +140,11 @@ assert.ok(aviso.textContent.includes("O plano Free é gratuito"), "o plano gratu
 assert.equal(cartoes[0].classList.contains("plano-escolhido"), true, "o botão também deve actualizar a selecção visual");
 
 const css = fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.css"), "utf8");
-assert.match(css, /@media\\s*\\(max-width:\\s*620px\\)/, "deve existir uma regra responsiva para telemóveis");
-assert.match(css, /:focus-visible/, "os controlos devem ter foco visível por teclado");
-assert.match(css, /prefers-reduced-motion/, "deve respeitar a preferência por movimento reduzido");
-assert.match(css, /\\.plano-preco\\{display:block/, "o preço deve ocupar a sua própria linha");
-assert.match(css, /\\.plano-periodicidade\\{display:block/, "a periodicidade deve ocupar a sua própria linha");
+assert.ok(css.includes("@media(max-width:620px)"), "deve existir uma regra responsiva para telemóveis");
+assert.ok(css.includes(":focus-visible"), "os controlos devem ter foco visível por teclado");
+assert.ok(css.includes("prefers-reduced-motion"), "deve respeitar a preferência por movimento reduzido");
+assert.ok(css.includes(".plano-preco{display:block"), "o preço deve ocupar a sua própria linha");
+assert.ok(css.includes(".plano-periodicidade{display:block"), "a periodicidade deve ocupar a sua própria linha");
 
 const preview = fs.readFileSync(path.join(__dirname, "../docs/referencias/assinatura/preview.html"), "utf8");
 for (const recurso of ["../../../config.js", "../../../public/assinaturas/planos.css", "../../../public/assinaturas/planos.js"]) {
