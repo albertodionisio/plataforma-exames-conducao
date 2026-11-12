@@ -51,7 +51,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1, 2 e 3. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
 
 ## DADOS-006 — Simulado 5
-- Estado: LIVRE
+- Estado: EM CURSO — Claude-DADOS006 — 2026-11-12 13:07 UTC+02 — ficheiros: data/exames/exame5.js, docs/referencias-exames/exame5-mapeamento.md — último sinal: 2026-11-12 13:07 UTC+02
 - Pedido: extrair as 25 perguntas do Exame 5 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame5.js` (novo) e `docs/referencias-exames/exame5-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 5 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
