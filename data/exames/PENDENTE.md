@@ -18,6 +18,13 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - **Validação:** garantir 25 perguntas, quatro alternativas, uma resposta correcta e índice correcto; confirmar conteúdo legal e executar `node scripts/validar-exames.js`. Testar que o exame abre, que imagens correspondem às perguntas e que não há erros no navegador.
 - **Limite da tarefa:** cada sessão trabalha apenas no exame que reservou. Não alterar tarefas EM CURSO de outra sessão nem ficheiros partilhados sem verificar o protocolo de `INSTRUCOES.md`.
 
+## DADOS-054 — Extracção dos exames originais 1 a 10 (extractor + dados estruturados)
+- Estado: EM CURSO — Claude-DADOS054 — 2026-11-12 14:00 UTC+02 — ficheiros: tools/extrair_apk.py, original/extraido/ (novo), docs/extracao/ (novo), tests/test_exames_originais.py (novo) — último sinal: 2026-11-12 14:00 UTC+02
+- Pedido: recuperar do APK (`original/Codigo_e_Sinais_de_Transito_1_1.apk`, classe `BaseDadosExame`, dados em bytecode) o banco de perguntas dos exames originais 1 a 10, em JSON estruturado, com enunciado, quatro alternativas, resposta correcta, ficheiro de imagem e origem de cada dado. Âmbito: só os exames 1 a 10 (os 11 a 30 ficam para um bloco seguinte). Publicação progressiva: exame 1 primeiro, depois os seguintes.
+- Onde mexer: `tools/extrair_apk.py`, `original/extraido/` (exameN.json, imagens, mapeamento, relatório, não recuperado), `docs/extracao/LEIAME.md`, `tests/test_exames_originais.py`. Não toca em `data/exames/exameN.js`, `docs/referencias-exames/`, `app.js`, `index.html`, `styles.css` nem `config.js`.
+- Pronto quando: existem os 10 JSON com 25 perguntas cada, quatro posições de alternativa e resposta correcta; cada pergunta liga à sua imagem pelo mesmo índice do código (sem associar por semelhança); há relatório, mapeamento, registo do que não foi recuperado, instruções para voltar a executar e testes a passar.
+- Cuidados: dados originais, não adaptados; não inventar perguntas, respostas, temas, explicações nem imagens (o que o APK não contém fica marcado como não recuperado); a validade legal das respostas fica por validar. Serve de fonte às tarefas DADOS-001 a DADOS-011 (não altera os seus ficheiros).
+
 ## DADOS-001 — Simulado 2 (grátis)
 - Estado: EM CURSO — Claude-1 — 2026-11-09 20:45 UTC — ficheiros: data/exames/exame2.js, index.html, app.js — último sinal: 2026-11-09 20:45 UTC
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
