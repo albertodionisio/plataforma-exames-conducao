@@ -18,10 +18,10 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 
 ## Distribuição das respostas correctas
 
-- A: 5
-- B: 8
-- C: 7
-- D: 5
+- A: 6
+- B: 7
+- C: 6
+- D: 6
 
 ## Mapa das 25 perguntas
 
