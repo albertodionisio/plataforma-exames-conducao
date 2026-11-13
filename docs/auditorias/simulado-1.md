@@ -1,4 +1,4 @@
-# Auditoria comparativa do Simulado 1
+# Auditoria comparativa do Exame 1
 
 - **Tarefa:** GER-005 · **Sessão:** Claude-GER005 · **Data:** 2026-11-11
 - **Âmbito:** as 25 perguntas de `data/exames/exame1.js` (ESTRADA) comparadas com o Exame 1 do aplicativo original (`original/Codigo_e_Sinais_de_Transito_1_1.apk`).
@@ -37,7 +37,7 @@
 - O Exame 1 original não tem perguntas de cenário complexo. A mais próxima de uma situação prática é a 5 (passagem estreita).
 - **Estrutura das alternativas:** 16 das 25 perguntas originais têm só 3 alternativas e 9 têm 4. O ESTRADA tem sempre 4. As alternativas acrescentadas foram verificadas contra o Código nas perguntas 5, 6, 8, 9, 12, 13, 18, 19, 20, 22, 23 e 24: nenhuma delas é correcta por acidente.
 - **Posição da resposta correcta:** original A 7, B 6, C 10, D 2; ESTRADA A 9, B 4, C 7, D 5. O ESTRADA está mais equilibrado e usa melhor a alternativa D.
-- **Alternativa mais longa:** a resposta correcta é a mais comprida em 12 de 25 no original e em 13 de 25 no ESTRADA. Não houve agravamento, mas é um padrão que um candidato atento pode usar para adivinhar; vale equilibrar nos próximos simulados.
+- **Alternativa mais longa:** a resposta correcta é a mais comprida em 12 de 25 no original e em 13 de 25 no ESTRADA. Não houve agravamento, mas é um padrão que um candidato atento pode usar para adivinhar; vale equilibrar nos próximos exames.
 
 ## 4. Pergunta a pergunta
 
@@ -97,7 +97,7 @@ Legenda: **M** manter · **Me** melhorar · **C** corrigir. Os resumos do origin
 
 ### 5.5 Ortografia
 
-- Os textos do exame ESTRADA usam grafia do Acordo de 1990 («objetos», «reação», «direção»). O Código e o aplicativo original usam a grafia anterior («objectos», «direcção»). Os outros documentos do repositório misturam as duas. Convém o dono decidir uma só e aplicá-la em todos os simulados.
+- Os textos do exame ESTRADA usam grafia do Acordo de 1990 («objetos», «reação», «direção»). O Código e o aplicativo original usam a grafia anterior («objectos», «direcção»). Os outros documentos do repositório misturam as duas. Convém o dono decidir uma só e aplicá-la em todos os exames.
 
 ## 6. O que não foi verificado
 
