@@ -1,60 +1,60 @@
 # Exame 46 — mapa de rastreabilidade
 
-Conteúdo original do ESTRADA, não extraído do APK. Foco: transporte de passageiros e carga.
+Conteúdo original do ESTRADA. Foco: classificação de veículos, reboques e conjuntos de veículos.
 
-## Fontes consultadas
-
-- Código da Estrada, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
-- Diploma de aprovação: Decreto-Lei n.º 1/2011, de 23 de Março; legislação do INATRO: https://www.inatro.gov.mz/?page_id=701
-- Artigos usados: 53.º a 58.º e 64.º. Não foram criados limites de peso ou dimensões adicionais.
+## Fonte primária
+- **Código da Estrada da República de Moçambique**, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
+- Diploma de aprovação: Decreto-Lei n.º 1/2011, de 23 de Março.
+- Artigos usados: 108.º–116.º.
 
 ## Mapa das perguntas
-
 | Nº | Tema | Competência avaliada | Base legal |
 |---:|---|---|---|
-| 1 | Entrada e saída | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 54.º, n.º 1 |
-| 2 | Carga e descarga | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 54.º, n.º 1 |
-| 3 | Operações de embarque | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 54.º, n.º 2 |
-| 4 | Lado de entrada e saída | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 55.º, n.º 1 |
-| 5 | Lotação do veículo | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 55.º, n.º 3 |
-| 6 | Passageiros fora dos assentos | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 55.º, n.º 4 |
-| 7 | Abertura da porta | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 55.º, n.º 5 |
-| 8 | Paragem do transporte colectivo | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 53.º, n.ºs 1 e 2 |
-| 9 | Local de carga e descarga | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 56.º, n.º 1 |
-| 10 | Carga perigosa | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 56.º, n.º 2 |
-| 11 | Equilíbrio da carga | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 12 | Fixação da carga | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 13 | Visibilidade do condutor | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 14 | Carga a arrastar | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 15 | Altura máxima da carga | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 16 | Carga em veículo de passageiros | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 17 | Carga em veículo de mercadorias | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 18 | Mercadorias a granel | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 19 | Posicionamento na carga/descarga | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 56.º, n.º 4 |
-| 20 | Excesso de peso ou dimensão | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 21 | Materiais pulverulentos | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 64.º, n.º 2 |
-| 22 | Danos causados pela carga | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 23 | Carga a deslocar-se | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
-| 24 | Porta e ciclista | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Art. 55.º, n.º 5 |
-| 25 | Carga a cair durante a marcha | Aplicar a regra de transporte seguro de passageiros ou acondicionamento da carga. | Ver explicação da pergunta |
+| 1 | Conceito de automóvel | Identificar os elementos cumulativos da definição legal de automóvel. | Art. 108.º |
+| 2 | Automóvel ligeiro | Classificar veículo até 3 500 kg e até nove lugares, incluindo o condutor. | Art. 109.º, n.º 1, al. a) |
+| 3 | Automóvel pesado | Reconhecer a classificação por peso bruto superior a 3 500 kg. | Art. 109.º, n.º 1, al. b) |
+| 4 | Tipos de automóveis pela utilização | Distinguir os tipos de automóveis segundo a finalidade de transporte. | Art. 109.º, n.º 2 |
+| 5 | Veículo especial | Distinguir veículo especial do transporte normal de passageiros ou carga. | Art. 109.º, n.º 2, al. e) |
+| 6 | Veículo tractor | Identificar a finalidade de tracção e a ausência de carga útil. | Art. 109.º, n.º 2, al. d) |
+| 7 | Definição de motociclo | Aplicar os limiares de cilindrada e velocidade de construção. | Art. 110.º, n.º 1 |
+| 8 | Definição de ciclomotor | Distinguir ciclomotor pelos limites de velocidade e características do motor. | Art. 110.º, n.º 2 |
+| 9 | Definição de triciclo | Reconhecer a disposição simétrica das três rodas e os limiares legais. | Art. 110.º, n.º 3 |
+| 10 | Definição de quadriciclo | Aplicar o critério de quatro rodas e tara até 550 kg. | Art. 110.º, n.º 4 |
+| 11 | Veículo de quatro rodas até 550 kg | Reconhecer que o enquadramento depende também da cilindrada e velocidade, nos termos regulamentares. | Art. 110.º, n.º 5 |
+| 12 | Tractor agrícola ou florestal | Identificar a função de tracção e a destinação predominantemente agrícola/florestal. | Art. 111.º, n.º 1 |
+| 13 | Máquina agrícola ou florestal | Classificar como ligeira ou pesada pelo limite de 3 500 kg. | Art. 111.º, n.º 2 |
+| 14 | Motocultivador | Reconhecer o veículo de um só eixo para trabalhos agrícolas ligeiros. | Art. 111.º, n.º 3 |
+| 15 | Tractocarro | Distinguir o veículo agrícola com caixa de carga e peso bruto até 3 500 kg. | Art. 111.º, n.º 4 |
+| 16 | Veículo sobre carris | Aplicar a definição independentemente do sistema de propulsão. | Art. 112.º, n.º 1 |
+| 17 | Máquina industrial | Identificar veículo destinado a obras/trabalhos industriais e circulação apenas eventual. | Art. 112.º, n.º 2 |
+| 18 | Definição de reboque | Reconhecer veículo destinado a transitar atrelado a outro. | Art. 113.º, n.º 1 |
+| 19 | Definição de semi-reboque | Distinguir o apoio dianteiro e a distribuição de peso sobre o veículo tractor. | Art. 113.º, n.º 2 |
+| 20 | Limite geral de reboques | Aplicar a regra de um reboque por veículo a motor e a excepção interlinks. | Art. 113.º, n.º 6 |
+| 21 | Excepções para comboios turísticos e tractores | Identificar as excepções expressas e a dependência de regulamento local. | Art. 113.º, n.º 7 |
+| 22 | Reboques no transporte público | Reconhecer que a utilização depende de regulamento próprio. | Art. 113.º, n.º 8 |
+| 23 | Veículo único articulado | Distinguir automóvel pesado articulado considerado veículo único. | Art. 114.º, n.º 1, al. a) |
+| 24 | Velocípede e velocípede com motor | Aplicar a definição de velocípede e os limites do motor auxiliar eléctrico. | Art. 115.º, n.ºs 1–3 |
+| 25 | Atrelado e carro lateral em veículos de duas rodas | Reconhecer o reboque de um eixo para carga e o carro lateral para passageiro em motociclos acima de 125 cm³. | Art. 116.º, n.ºs 1 e 2 |
 
 ## Distribuição das respostas correctas
-- A: 7
+- A: 6
 - B: 6
-- C: 5
+- C: 6
 - D: 7
 
-A distribuição não segue sequência cíclica. As alternativas foram redigidas para evitar que a resposta correcta seja sistematicamente a mais longa.
+A distribuição foi conferida no ficheiro do exame e não segue uma sequência cíclica. As alternativas foram redigidas sem fazer da extensão da resposta um indicador fixo.
 
 ## Imagens
-Todas as perguntas usam `imagem: null`; não foram associadas imagens sem correspondência oficial comprovada.
+Todas as perguntas usam `imagem: null`. As competências avaliadas são definições e classificações legais; não foi associada imagem sem necessidade ou correspondência documental.
 
 ## Revisão normativa e limitações
-As regras foram confrontadas com o Código da Estrada disponibilizado pelo INATRO, em especial os arts. 53.º–58.º e 64.º. O art. 56.º, n.º 3, al. f), prevê altura máxima geral da carga de 4,3 m a contar do solo. Os limites de peso e dimensão dependentes de regulamentos não foram quantificados; a pergunta sobre excesso limita-se à exigência de autorização especial dos arts. 57.º e 58.º. Esta revisão documental não constitui parecer jurídico e a versão vigente deve ser confirmada antes do lançamento.
+As 25 perguntas foram redigidas com base nos artigos 108.º–116.º da republicação do Código da Estrada disponibilizada pelo INATRO. Os casos que dependem de regulamento (por exemplo, enquadramento de determinados veículos de quatro rodas, tractores e reboques) foram formulados sem inventar requisitos regulamentares adicionais. Não foram incluídas multas ou taxas.
+
+A consulta documental não constitui parecer jurídico nem certifica, por si só, todas as alterações posteriores à republicação. A versão vigente deve ser confirmada no Boletim da República antes do lançamento.
 
 ## Originalidade e validação
-Perguntas redigidas de forma original, não copiadas do APK. A comparação integral com todos os exames do catálogo ainda não é exaustiva.
-- 25 perguntas; quatro alternativas não vazias; um índice correcto válido; explicação por pergunta.
-- Distribuição: A=7, B=6, C=5, D=7.
-- Validação estrutural interna aprovada; validador oficial e CI a confirmar após publicação.
-- Teste no navegador adiado para verificação conjunta após o Exame 51.
+O exame foi reformulado para remover a sobreposição extensa com o Exame 44, que já cobre o transporte de passageiros e carga. O novo foco é a classificação legal de veículos e as regras de reboques, com base nos arts. 108.º–116.º.
+- 25 perguntas; quatro alternativas por pergunta; um índice correcto válido e explicação por pergunta.
+- Distribuição: A=6, B=6, C=6, D=7.
+- Validação automática e comparação com os demais exames: pendentes de execução após a publicação deste bloco.
+- Teste funcional no navegador fica reservado ao dono.
