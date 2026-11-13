@@ -62,13 +62,13 @@ window.EXAMES[39] = [
       "Entre 120 e 400 metros."
     ],
     "correta": 3,
-    "explicacao": "A regra geral prevê colocação entre 120 e 400 metros do ponto a que o sinal se refere, ressalvadas as excepções regulamentares. (Art. 24.º, n.º 4)."
+    "explicacao": "Os sinais de perigo devem, em regra, ser colocados entre 120 e 400 metros do ponto a que se referem, sem prejuízo das excepções previstas no regulamento. (Regulamento de Sinais de Trânsito, art. 23.º, n.º 1)."
   },
   {
     "numero": 5,
-    "tema": "Sinal de cruzamento D3",
+    "tema": "D3 — estrada com prioridade",
     "dificuldade": "difícil",
-    "enunciado": "Para o sinal de perigo D3, relativo a cruzamento, qual é a distância máxima de colocação indicada fora das localidades?",
+    "enunciado": "Para o sinal de perigo D3, «Estrada com prioridade», qual é a distância máxima de colocação indicada fora das localidades em relação ao cruzamento?",
     "imagem": null,
     "opcoes": [
       "400 metros.",
@@ -77,7 +77,7 @@ window.EXAMES[39] = [
       "220 metros."
     ],
     "correta": 1,
-    "explicacao": "O art. 24.º, n.º 4, estabelece para o sinal D3 uma distância máxima de 50 m fora das localidades e 25 m dentro delas, relativamente ao cruzamento a que respeita."
+    "explicacao": "O sinal D3, que indica uma estrada com prioridade, deve ser colocado a uma distância máxima de 50 m fora das localidades e 25 m dentro delas, em relação ao cruzamento a que respeita. (Regulamento de Sinais de Trânsito, art. 23.º, n.º 1)."
   },
   {
     "numero": 6,
@@ -122,7 +122,7 @@ window.EXAMES[39] = [
       "Deve ceder passagem aos veículos da via com que se cruza, nos termos indicados pelo sinal."
     ],
     "correta": 3,
-    "explicacao": "O M1 indica a obrigação de ceder passagem aos veículos da via intersectada ou dar prioridade aos veículos sobre carris, conforme a situação. (Regulamento, art. 37.º, n.º 2)."
+    "explicacao": "O M1 indica a obrigação de ceder passagem aos veículos da via intersectada ou dar prioridade aos veículos sobre carris, conforme a situação. (Regulamento, art. 37.º, n.º 1)."
   },
   {
     "numero": 9,
@@ -137,7 +137,7 @@ window.EXAMES[39] = [
       "Prosseguir se estiver a circular devagar."
     ],
     "correta": 1,
-    "explicacao": "O M2 impõe paragem antes de entrar no cruzamento e a marcha só deve ser retomada quando o condutor se certificar de que é seguro. (Regulamento, art. 37.º, n.º 2)."
+    "explicacao": "O M2 impõe paragem antes de entrar no cruzamento e a marcha só deve ser retomada quando o condutor se certificar de que é seguro. (Regulamento, art. 37.º, n.º 1)."
   },
   {
     "numero": 10,
@@ -152,7 +152,7 @@ window.EXAMES[39] = [
       "Deve parar sempre durante um minuto."
     ],
     "correta": 2,
-    "explicacao": "O M3 indica a obrigação de ceder passagem aos veículos que transitam em sentido contrário na passagem estreita. (Regulamento, art. 37.º, n.º 2)."
+    "explicacao": "O M3 indica a obrigação de ceder passagem aos veículos que transitam em sentido contrário na passagem estreita. (Regulamento, art. 37.º, n.º 1)."
   },
   {
     "numero": 11,
@@ -167,7 +167,7 @@ window.EXAMES[39] = [
       "É obrigatório ceder passagem a todos os veículos em sentido contrário."
     ],
     "correta": 0,
-    "explicacao": "O M4 indica que o condutor tem prioridade na passagem estreita. A prioridade não elimina o dever geral de prudência. (Regulamento, art. 37.º, n.º 2)."
+    "explicacao": "O M4 indica que o condutor tem prioridade na passagem estreita. A prioridade não elimina o dever geral de prudência. (Regulamento, art. 37.º, n.º 1)."
   },
   {
     "numero": 12,
@@ -182,7 +182,7 @@ window.EXAMES[39] = [
       "Os veículos que circulam na via sinalizada têm prioridade nos termos do regime aplicável."
     ],
     "correta": 3,
-    "explicacao": "O M5 indica prioridade para os condutores que circulam na via onde o sinal está colocado. (Regulamento, art. 37.º, n.º 2)."
+    "explicacao": "O M5 indica prioridade para os condutores que circulam na via onde o sinal está colocado. (Regulamento, art. 37.º, n.º 1)."
   },
   {
     "numero": 13,
@@ -197,7 +197,7 @@ window.EXAMES[39] = [
       "Dar prioridade apenas aos veículos pesados."
     ],
     "correta": 1,
-    "explicacao": "O M6 determina que os condutores que se aproximam da rotunda cedam passagem aos veículos que já nela circulam. (Regulamento, art. 37.º, n.º 2; Código da Estrada, art. 39.º, n.º 1, al. d))."
+    "explicacao": "O M6 determina que os condutores que se aproximam da rotunda cedam passagem aos veículos que já nela circulam. (Regulamento, art. 37.º, n.º 1; Código da Estrada, art. 39.º, n.º 1, al. d))."
   },
   {
     "numero": 14,
@@ -227,7 +227,7 @@ window.EXAMES[39] = [
       "Desligar o motor e sair do veículo."
     ],
     "correta": 0,
-    "explicacao": "O sinal M2 exige paragem e proíbe retomar a marcha até o condutor se certificar de que é seguro fazê-lo. (Regulamento, art. 37.º, n.º 2)."
+    "explicacao": "O sinal M2 exige paragem e proíbe retomar a marcha até o condutor se certificar de que é seguro fazê-lo. (Regulamento, art. 37.º, n.º 1)."
   },
   {
     "numero": 16,
@@ -306,33 +306,33 @@ window.EXAMES[39] = [
   },
   {
     "numero": 21,
-    "tema": "Peão que iniciou a travessia",
-    "dificuldade": "média",
-    "enunciado": "Um condutor aproxima-se de uma passagem para peões e observa que um peão já iniciou a travessia. Como deve proceder?",
+    "tema": "M11 — paragem obrigatória com particularidade para virar à esquerda",
+    "dificuldade": "difícil",
+    "enunciado": "Num cruzamento com o sinal M11, o condutor pretende mudar de direcção para a esquerda. Qual é a particularidade prevista no regulamento?",
     "imagem": null,
     "opcoes": [
-      "Acelerar para passar antes do peão.",
-      "Usar a buzina para obrigar o peão a parar.",
-      "Mudar de faixa sem verificar o trânsito.",
-      "Ceder passagem ao peão que iniciou a travessia, nos termos legais."
+      "Pode seguir em frente sem parar, desde que buzine.",
+      "Deve parar sempre e ceder passagem apenas aos veículos que vêm da esquerda.",
+      "Pode virar à esquerda sem parar, mesmo que atravesse a trajectória de peões.",
+      "Pode virar à esquerda sem efectuar a paragem imposta pelo sinal, mas deve ceder passagem aos peões e aos veículos que se apresentem à sua direita."
     ],
     "correta": 3,
-    "explicacao": "O Código determina a cedência de passagem aos peões que tenham iniciado a travessia na passagem para peões. (Art. 39.º, n.º 1, al. f))."
+    "explicacao": "O sinal M11 impõe paragem antes de entrar no cruzamento, mas prevê a possibilidade de mudar de direcção para a esquerda sem parar, devendo o condutor ceder passagem aos peões e aos veículos que se apresentem à sua direita. (Regulamento de Sinais de Trânsito, art. 37.º, n.º 1)."
   },
   {
     "numero": 22,
-    "tema": "Pessoa com deficiência visual",
+    "tema": "M7/M8 — paragem obrigatória e avance em obras",
     "dificuldade": "média",
-    "enunciado": "Perante uma pessoa com deficiência visual que pretende atravessar a via, o condutor deve:",
+    "enunciado": "Numa zona de obras, o condutor encontra o sinal M7/M8 de «Paragem obrigatória e avance». Como deve proceder?",
     "imagem": null,
     "opcoes": [
-      "Manter a marcha se não existir passagem pintada.",
-      "Ceder passagem, observando as condições de segurança.",
-      "Buzinar continuamente para indicar que vai passar.",
-      "Aguardar apenas se outro veículo também parar."
+      "Passar imediatamente, porque o sinal é apenas informativo.",
+      "Parar antes de entrar na zona protegida e avançar apenas quando o operador autorizar o seu sentido.",
+      "Ceder passagem apenas aos peões e prosseguir.",
+      "Inverter o sentido de marcha sem aguardar instruções."
     ],
     "correta": 1,
-    "explicacao": "O Código prevê a cedência de passagem perante um portador de deficiência visual. (Art. 39.º, n.º 1, al. g))."
+    "explicacao": "Os sinais M7 e M8 impõem a paragem antes da zona protegida; o avanço é regulado por operadores da empresa de obras, que coordenam os sentidos opostos. (Regulamento de Sinais de Trânsito, art. 37.º, n.º 1)."
   },
   {
     "numero": 23,
@@ -351,18 +351,18 @@ window.EXAMES[39] = [
   },
   {
     "numero": 24,
-    "tema": "Veículo prioritário em via congestionada",
+    "tema": "Veículo prioritário perante sinal vermelho ou STOP",
     "dificuldade": "difícil",
-    "enunciado": "Uma ambulância em serviço urgente, devidamente assinalada, aproxima-se numa via congestionada. O que devem fazer os restantes condutores?",
+    "enunciado": "Uma ambulância em missão urgente, devidamente assinalada, aproxima-se de um semáforo vermelho ou de um sinal de paragem obrigatória. Qual é o procedimento legal?",
     "imagem": null,
     "opcoes": [
-      "Facilitar a passagem, deixando livre o espaço previsto na lei e actuando com segurança.",
-      "Acelerar para acompanhar a ambulância.",
-      "Bloquear a via para impedir ultrapassagens.",
-      "Seguir atrás da ambulância sem abrir espaço."
+      "Deve suspender a marcha perante o sinal vermelho ou STOP e, depois de tomar as devidas precauções, pode prosseguir sem esperar que a sinalização mude.",
+      "Pode ignorar o sinal sem reduzir a velocidade.",
+      "Tem de aguardar obrigatoriamente até o semáforo ficar verde, sem qualquer excepção.",
+      "Deve buzinar e entrar imediatamente no cruzamento."
     ],
     "correta": 0,
-    "explicacao": "O Código estabelece deveres de cedência e de facilitação da passagem de veículos prioritários devidamente assinalados. (Arts. 39.º, n.º 2, e 66.º)."
+    "explicacao": "Mesmo os veículos prioritários em serviço urgente devem suspender a marcha perante o sinal luminoso vermelho ou o sinal de paragem obrigatória; depois de tomadas as devidas precauções, podem prosseguir sem esperar pela mudança da sinalização. (Código da Estrada, art. 15.º, n.º 2)."
   },
   {
     "numero": 25,
