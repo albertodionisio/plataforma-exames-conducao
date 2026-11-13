@@ -7,7 +7,7 @@ import hashlib, json, os, subprocess, sys, tempfile, unittest
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXTRAIDO = os.path.join(RAIZ, "original", "extraido")
-AMBITO_PEDIDO = list(range(1, 11))
+AMBITO_PEDIDO = list(range(1, 21))
 
 
 def ler(nome):
@@ -27,9 +27,9 @@ class TestEstado(unittest.TestCase):
 
     def test_ambito_pedido(self):
         self.assertEqual(ESTADO["ambito_da_tarefa"], AMBITO_PEDIDO)
-        self.assertTrue(set(PUBLICADOS) <= set(AMBITO_PEDIDO), "não avançar para os exames 11 a 30")
+        self.assertTrue(set(PUBLICADOS) <= set(AMBITO_PEDIDO), "não avançar para os exames 21 a 30")
 
-    def test_completo_so_quando_os_10_exames_existem(self):
+    def test_completo_so_quando_os_20_exames_existem(self):
         if ESTADO["completo"]:
             self.assertEqual(PUBLICADOS, AMBITO_PEDIDO)
 

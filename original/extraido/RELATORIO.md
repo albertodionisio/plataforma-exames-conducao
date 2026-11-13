@@ -5,7 +5,7 @@
 - Classe: `Lcom/app/codigoesinaisdetransito/BaseDadosExame;`, método `<init>`: 17289 instruções interpretadas
 - Instruções não interpretadas: nenhuma
 - Entradas no APK: 750 perguntas em 30 exames
-- Âmbito da tarefa: exames 1 a 10; publicados até agora: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (completo: True)
+- Âmbito da tarefa: exames 1 a 20; publicados até agora: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] (completo: True)
 
 ## Resultado por exame
 
@@ -21,6 +21,16 @@
 | 8 | 25 | 12 | 25 | 0 | {'enunciado_repetido_no_exame': 5} |
 | 9 | 25 | 11 | 25 | 0 | {'enunciado_repetido_no_exame': 2} |
 | 10 | 25 | 12 | 25 | 0 | {'enunciado_repetido_no_exame': 6, 'enunciado_igual_ao_da_pergunta_anterior': 1} |
+| 11 | 25 | 11 | 25 | 0 | {'enunciado_repetido_no_exame': 2} |
+| 12 | 25 | 10 | 25 | 0 | {'enunciado_repetido_no_exame': 5, 'enunciado_igual_ao_da_pergunta_anterior': 1} |
+| 13 | 25 | 14 | 25 | 0 | {'enunciado_repetido_no_exame': 6, 'enunciado_igual_ao_da_pergunta_anterior': 2} |
+| 14 | 25 | 10 | 25 | 0 | {'enunciado_repetido_no_exame': 6} |
+| 15 | 25 | 11 | 25 | 0 | {'enunciado_repetido_no_exame': 2} |
+| 16 | 25 | 8 | 25 | 0 | {'enunciado_repetido_no_exame': 7, 'enunciado_igual_ao_da_pergunta_anterior': 1} |
+| 17 | 25 | 11 | 25 | 0 | {'enunciado_repetido_no_exame': 4} |
+| 18 | 25 | 14 | 25 | 0 | {'enunciado_repetido_no_exame': 4} |
+| 19 | 25 | 10 | 25 | 0 | {'enunciado_repetido_no_exame': 4} |
+| 20 | 25 | 5 | 25 | 0 | {'enunciado_repetido_no_exame': 6} |
 
 ## O que não foi recuperado
 

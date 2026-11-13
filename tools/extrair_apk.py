@@ -8,7 +8,7 @@ os dados tal como estão no APK, sem os alterar nem os adaptar.
 
 Uso (a partir da raiz do repositório):
     pip install androguard pillow
-    python3 tools/extrair_apk.py --exames 1-10
+    python3 tools/extrair_apk.py --exames 1-20
 
 Saída em original/extraido/ (ver docs/extracao/LEIAME.md).
 """
@@ -20,7 +20,7 @@ APK_PADRAO = "original/Codigo_e_Sinais_de_Transito_1_1.apk"
 SAIDA_PADRAO = "original/extraido"
 CAMPOS = ("img", "pergunta", "opcoes", "respostaCorrecta", "exame")
 PERGUNTAS_POR_EXAME = 25
-AMBITO_DA_TAREFA = list(range(1, 11))   # DADOS-054: só os exames 1 a 10
+AMBITO_DA_TAREFA = list(range(1, 21))   # DADOS-054: exames 1 a 10; DADOS-059: exames 11 a 20
 
 
 def carregar_androguard():
@@ -282,7 +282,7 @@ def escrever_relatorio(args, estat, estado, relatorio, nao_recuperado):
          f"- Classe: `{estat['classe']}`, método `<init>`: {estat['instrucoes']} instruções interpretadas",
          f"- Instruções não interpretadas: {estat['nao_interpretadas'] or 'nenhuma'}",
          f"- Entradas no APK: {estado['entradas_no_apk']} perguntas em {estado['exames_encontrados_no_apk']} exames",
-         f"- Âmbito da tarefa: exames 1 a 10; publicados até agora: {estado['publicados']} (completo: {estado['completo']})",
+         f"- Âmbito da tarefa: exames 1 a 20; publicados até agora: {estado['publicados']} (completo: {estado['completo']})",
          "", "## Resultado por exame", "",
          "| Exame | Perguntas | Alternativas vazias | Imagens ligadas | Imagens prováveis em branco | Avisos |",
          "|---|---|---|---|---|---|"]
@@ -312,7 +312,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--apk", default=APK_PADRAO)
     ap.add_argument("--saida", default=SAIDA_PADRAO)
-    ap.add_argument("--exames", default="1-10", help="exemplo: 1-10 ou 1,3,5 (por omissão 1-10)")
+    ap.add_argument("--exames", default="1-20", help="exemplo: 1-20 ou 1,3,5 (por omissão 1-20)")
     args = ap.parse_args()
     args.exames = analisar_exames_pedidos(args.exames)
     estado = extrair(args)
