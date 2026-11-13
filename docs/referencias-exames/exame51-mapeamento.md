@@ -15,7 +15,7 @@ Conteúdo original do ESTRADA, não extraído do APK. Exame integrador avançado
 | 3 | Circulação de motociclos e velocípedes lado a lado | Aplicar a proibição geral de circular a par, com a excepção regulamentar da pista especial sem perigo ou embaraço. | Art. 93.º, n.º 1, al. e) |
 | 4 | Posicionamento dos velocípedes | Aplicar o dever de circular próximo das bermas ou passeios, mesmo quando existam várias filas no mesmo sentido. | Art. 93.º, n.º 2 |
 | 5 | Controlo do motociclo | Reconhecer a proibição de conduzir com as mãos fora do guiador, salvo para sinalizar manobra. | Art. 93.º, n.º 1, al. a) |
-| 6 | Transporte de carga em veículos de duas rodas | Aplicar a regra de transporte de carga em atrelado ou caixa e a proibição de objectos perigosos. | Art. 95.º, n.ºs 1 e 2 |
+| 6 | Transporte de carga em veículos de duas rodas | Reconhecer que a carga só pode ser transportada em atrelado ou caixa de carga. | Art. 95.º, n.º 1 |
 | 7 | Iluminação obrigatória nos motociclos | Reconhecer a obrigação permanente de iluminação e o uso da luz de cruzamento. | Art. 96.º, n.ºs 1 e 2 |
 | 8 | Criança em motociclo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 94.º, n.º 1 |
 | 9 | Objectos transportados em motociclo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 95.º, n.º 2 |
