@@ -1,51 +1,56 @@
-# Simulado 36 — mapa de rastreabilidade (DADOS-037)
+# Simulado 36 — mapa de rastreabilidade
 
-Foco: velocidade, distância de segurança e travagem. Perguntas originais, não extraídas do APK.
+Conteúdo original do ESTRADA, não extraído do APK. Foco: distância longitudinal e lateral, velocidade adaptada, moderação e limites especiais.
 
-## Fontes
+## Fonte normativa e páginas consultadas
 
-- Código da Estrada, republicação alojada no portal oficial do INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
-- Artigo 20.º — distância entre veículos.
-- Artigos 29.º e 30.º — princípios gerais e velocidade excessiva.
-- Artigo 32.º — velocidade moderada.
-- Artigos 33.º e 34.º — limites de velocidade e limites regionais.
-- O artigo 33.º contém quadros de limites por tipo de veículo e local. Este simulado não reproduz os quadros numéricos gerais, porque a extração textual consultada não preserva integralmente a tabela.
-- As questões não exigem imagens; `imagem: null` em todas.
+- Fonte primária: Código da Estrada — republicação no portal oficial do INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
+- Artigos usados: 20.º, 29.º, 30.º, 32.º, 33.º e 34.º.
+- Páginas do PDF: artigo 20.º na página 6; artigos 29.º a 32.º na página 10; artigo 33.º na página 11; artigo 34.º na página 12.
+- Todas as 25 perguntas usam imagem null; não há ficheiros de imagem associados.
 
-## Rastreabilidade
+## Mapa das perguntas
 
-| Nº | Tema | Competência (resumo) | Artigo |
-|---:|---|---|---:|
-| 1 | Distância longitudinal | /A/o/ /c/i/r/c/u/l/a/r/ /a/t/r/á/s/ /d/e/ /o/u/t/r/o/ /v/e/í/c/u/l/o/,/ /q/u/e/ /d/i/s/t/â/n/c/i/a/ /d/e/v/e/ /m/a/n/t/e/r/?/ | 20.º |
-| 2 | Distância lateral | /A/o/ /c/i/r/c/u/l/a/r/ /a/o/ /l/a/d/o/ /d/e/ /o/u/t/r/o/ /v/e/í/c/u/l/o/ /n/a/ /m/e/s/m/a/ /f/a/i/x/a/ /o/u/ /e/m/ /s/e/n/t/i/d/o/ /o/p/o/s/ | 20.º |
-| 3 | Velocidade adaptada | /A/ /v/e/l/o/c/i/d/a/d/e/ /a/d/e/q/u/a/d/a/ /d/e/v/e/ /t/e/r/ /e/m/ /c/o/n/t/a/:/ | 29.º |
-| 4 | Espaço visível | /Q/u/a/n/d/o/ /é/ /c/o/n/s/i/d/e/r/a/d/a/ /e/x/c/e/s/s/i/v/a/ /a/ /v/e/l/o/c/i/d/a/d/e/,/ /m/e/s/m/o/ /q/u/e/ /o/ /c/o/n/d/u/t/o/r/ /n/ã/o/ / | 30.º |
-| 5 | Redução súbita | /S/e/m/ /e/x/i/s/t/i/r/ /p/e/r/i/g/o/ /i/m/i/n/e/n/t/e/,/ /u/m/ /c/o/n/d/u/t/o/r/ /p/r/e/t/e/n/d/e/ /r/e/d/u/z/i/r/ /b/r/u/s/c/a/m/e/n/t/e/ / | 29.º |
-| 6 | Descida acentuada | /A/o/ /d/e/s/c/e/r/ /u/m/a/ /v/i/a/ /d/e/ /f/o/r/t/e/ /i/n/c/l/i/n/a/ç/ã/o/,/ /c/o/m/o/ /d/e/v/e/ /p/r/o/c/e/d/e/r/ /o/ /c/o/n/d/u/t/o/r/?/ | 32.º |
-| 7 | Piso molhado | /D/e/p/o/i/s/ /d/e/ /u/m/a/ /c/h/u/v/a/,/ /a/ /e/s/t/r/a/d/a/ /e/s/t/á/ /m/o/l/h/a/d/a/ /e/ /c/o/m/ /p/o/u/c/a/ /a/d/e/r/ê/n/c/i/a/./ /Q/u/a/ | 32.º |
-| 8 | Curva sem visibilidade | /A/o/ /a/p/r/o/x/i/m/a/r/-/s/e/ /d/e/ /u/m/a/ /c/u/r/v/a/ /c/o/m/ /v/i/s/i/b/i/l/i/d/a/d/e/ /r/e/d/u/z/i/d/a/,/ /o/ /c/o/n/d/u/t/o/r/ /d/e/v/ | 32.º |
-| 9 | Aproximação de escola | /A/o/ /a/p/r/o/x/i/m/a/r/-/s/e/ /d/e/ /u/m/a/ /e/s/c/o/l/a/ /d/e/v/i/d/a/m/e/n/t/e/ /s/i/n/a/l/i/z/a/d/a/,/ /o/ /c/o/n/d/u/t/o/r/ /d/e/v/e/:/ | 32.º |
-| 10 | Peões na passagem | /A/o/ /a/p/r/o/x/i/m/a/r/-/s/e/ /d/e/ /u/m/a/ /p/a/s/s/a/g/e/m/ /a/s/s/i/n/a/l/a/d/a/ /p/a/r/a/ /p/e/õ/e/s/,/ /q/u/a/l/ /é/ /a/ /a/t/i/t/u/d/ | 32.º |
-| 11 | Visibilidade reduzida | /N/u/m/ /t/r/o/ç/o/ /c/o/m/ /n/e/v/o/e/i/r/o/ /i/n/t/e/n/s/o/,/ /o/ /c/o/n/d/u/t/o/r/ /d/e/v/e/ /e/s/c/o/l/h/e/r/ /a/ /v/e/l/o/c/i/d/a/d/e/ / | 29.º e 30.º |
-| 12 | Trânsito intenso | /N/u/m/ /c/o/n/g/e/s/t/i/o/n/a/m/e/n/t/o/ /c/o/m/ /v/e/í/c/u/l/o/s/ /m/u/i/t/o/ /p/r/ó/x/i/m/o/s/,/ /o/ /c/o/n/d/u/t/o/r/ /d/e/v/e/:/ | 20.º |
-| 13 | Limite máximo | /U/m/ /s/i/n/a/l/ /e/s/t/a/b/e/l/e/c/e/ /u/m/ /l/i/m/i/t/e/ /m/á/x/i/m/o/ /d/e/ /v/e/l/o/c/i/d/a/d/e/./ /O/ /c/o/n/d/u/t/o/r/:/ | 29.º e 30.º |
-| 14 | Velocidade excessiva sem excesso numérico | /U/m/ /a/u/t/o/m/ó/v/e/l/ /c/i/r/c/u/l/a/ /a/b/a/i/x/o/ /d/o/ /l/i/m/i/t/e/ /l/e/g/a/l/,/ /m/a/s/ /a/p/r/o/x/i/m/a/-/s/e/ /d/e/ /u/m/a/ /c/u/ | 30.º |
-| 15 | Cruzamento de veículos | /A/o/ /c/r/u/z/a/r/-/s/e/ /c/o/m/ /o/u/t/r/o/ /v/e/í/c/u/l/o/ /n/u/m/a/ /v/i/a/ /e/s/t/r/e/i/t/a/ /o/u/ /c/o/m/ /c/o/n/d/i/ç/õ/e/s/ /d/i/f/í/ | 20.º e 32.º |
-| 16 | Ponte e túnel | /A/o/ /a/p/r/o/x/i/m/a/r/-/s/e/ /d/e/ /u/m/a/ /p/o/n/t/e/ /o/u/ /t/ú/n/e/l/ /c/o/m/ /v/i/s/i/b/i/l/i/d/a/d/e/ /c/o/n/d/i/c/i/o/n/a/d/a/,/ /o/ | 32.º |
-| 17 | Lombas | /A/o/ /a/p/r/o/x/i/m/a/r/-/s/e/ /d/e/ /u/m/a/ /l/o/m/b/a/ /d/e/ /e/s/t/r/a/d/a/,/ /o/ /c/o/n/d/u/t/o/r/ /d/e/v/e/:/ | 32.º |
-| 18 | Aglomeração de pessoas | /A/o/ /a/p/r/o/x/i/m/a/r/-/s/e/ /d/e/ /u/m/a/ /c/o/n/c/e/n/t/r/a/ç/ã/o/ /d/e/ /p/e/s/s/o/a/s/ /j/u/n/t/o/ /à/ /e/s/t/r/a/d/a/,/ /o/ /c/o/n/d/ | 32.º |
-| 19 | Atenção do condutor | /U/m/ /c/o/n/d/u/t/o/r/ /s/e/n/t/e/-/s/e/ /c/a/n/s/a/d/o/ /e/ /c/o/m/ /m/e/n/o/r/ /c/a/p/a/c/i/d/a/d/e/ /d/e/ /c/o/n/c/e/n/t/r/a/ç/ã/o/./ /S/ | 29.º |
-| 20 | Distância ao veículo pesado | /U/m/ /a/u/t/o/m/ó/v/e/l/ /s/e/g/u/e/ /a/t/r/á/s/ /d/e/ /u/m/ /v/e/í/c/u/l/o/ /p/e/s/a/d/o/ /q/u/e/ /t/a/p/a/ /p/a/r/c/i/a/l/m/e/n/t/e/ /a/ / | 20.º, 29.º e 30.º |
-| 21 | Travagem do veículo da frente | /O/ /v/e/í/c/u/l/o/ /à/ /f/r/e/n/t/e/ /t/r/a/v/a/ /i/n/e/s/p/e/r/a/d/a/m/e/n/t/e/./ /Q/u/e/ /o/b/r/i/g/a/ç/ã/o/ /p/r/o/c/u/r/a/ /p/r/e/v/e/n/ | 20.º |
-| 22 | Via enlameada | /N/u/m/a/ /e/s/t/r/a/d/a/ /e/n/l/a/m/e/a/d/a/,/ /o/ /v/e/í/c/u/l/o/ /p/o/d/e/ /p/e/r/d/e/r/ /a/d/e/r/ê/n/c/i/a/./ /O/ /c/o/n/d/u/t/o/r/ /d/e/ | 32.º |
-| 23 | Velocidade mínima em auto-estrada | /S/e/m/ /p/r/e/j/u/í/z/o/ /d/a/s/ /r/e/g/r/a/s/ /s/o/b/r/e/ /m/a/r/c/h/a/ /l/e/n/t/a/,/ /q/u/a/l/ /é/ /a/ /v/e/l/o/c/i/d/a/d/e/ /m/í/n/i/m/a/ | 31.º e 33.º |
-| 24 | Condutor habilitado há menos de um ano | /S/e/g/u/n/d/o/ /o/ /a/r/t/i/g/o/ /3/3/./º/,/ /n/./º/ /4/,/ /q/u/a/l/ /é/ /o/ /l/i/m/i/t/e/ /e/s/p/e/c/i/a/l/ /r/e/f/e/r/i/d/o/ /p/a/r/a/ /c/ | 33.º |
-| 25 | Limite regional | /P/o/d/e/ /s/e/r/ /f/i/x/a/d/o/ /u/m/ /l/i/m/i/t/e/ /m/á/x/i/m/o/ /r/e/g/i/o/n/a/l/ /d/e/ /v/e/l/o/c/i/d/a/d/e/ /d/i/f/e/r/e/n/t/e/ /d/o/s/ / | 34.º |
+| Nº | Tema | Enunciado / competência avaliada | Base legal |
+|---:|---|---|---|
+| 1 | Distância longitudinal | Ao circular atrás de outro veículo, que distância deve manter? | igo 20 |
+| 2 | Distância lateral | Ao circular ao lado de outro veículo na mesma faixa ou em sentido oposto, o condutor deve: | igo 20 |
+| 3 | Velocidade adaptada | A velocidade adequada deve ter em conta: | igo 29 |
+| 4 | Espaço visível | Quando é considerada excessiva a velocidade, mesmo que o condutor não ultrapasse o limite sinalizado? | igo 30 |
+| 5 | Redução súbita | Sem existir perigo iminente, um condutor pretende reduzir bruscamente a velocidade. O que deve fazer antes? | igo 29 |
+| 6 | Descida acentuada | Ao descer uma via de forte inclinação, como deve proceder o condutor? | igo 32 |
+| 7 | Piso molhado | Depois de uma chuva, a estrada está molhada e com pouca aderência. Qual é a conduta adequada? | igo 32 |
+| 8 | Curva sem visibilidade | Ao aproximar-se de uma curva com visibilidade reduzida, o condutor deve: | igo 32 |
+| 9 | Aproximação de escola | Ao aproximar-se de uma escola devidamente sinalizada, o condutor deve: | igo 32 |
+| 10 | Peões na passagem | Ao aproximar-se de uma passagem assinalada para peões, qual é a atitude exigida? | igo 32 |
+| 11 | Visibilidade reduzida | Num troço com nevoeiro intenso, o condutor deve escolher a velocidade considerando sobretudo: | igos 29 |
+| 12 | Trânsito intenso | Num congestionamento com veículos muito próximos, o condutor deve: | igo 20 |
+| 13 | Limite máximo | Um sinal estabelece um limite máximo de velocidade. O condutor: | igo 30 |
+| 14 | Velocidade excessiva sem excesso numérico | Um automóvel circula abaixo do limite legal, mas aproxima-se de uma curva sem conseguir parar dentro do espaço visível. A velocidade é: | igo 30 |
+| 15 | Cruzamento de veículos | Ao cruzar-se com outro veículo numa via estreita ou com condições difíceis, o condutor deve: | igo 32 |
+| 16 | Ponte e túnel | Ao aproximar-se de uma ponte ou túnel com visibilidade condicionada, o condutor deve: | igo 32 |
+| 17 | Lombas | Ao aproximar-se de uma lomba de estrada, o condutor deve: | igo 32 |
+| 18 | Aglomeração de pessoas | Ao aproximar-se de uma concentração de pessoas junto à estrada, o condutor deve: | igo 32 |
+| 19 | Atenção do condutor | Um condutor sente-se cansado e com menor capacidade de concentração. Segundo os princípios gerais, deve: | igo 29 |
+| 20 | Distância ao veículo pesado | Um automóvel segue atrás de um veículo pesado que tapa parcialmente a visão da estrada. Qual é a decisão mais segura e conforme aos princípios legais? | igo 20 |
+| 21 | Travagem do veículo da frente | O veículo à frente trava inesperadamente. Que obrigação procura prevenir uma colisão traseira? | igo 20 |
+| 22 | Via enlameada | Numa estrada enlameada, o veículo pode perder aderência. O condutor deve: | igo 32 |
+| 23 | Velocidade mínima em auto-estrada | Sem prejuízo das regras sobre marcha lenta, qual é a velocidade mínima prevista para circulação em auto-estradas? | igo 33 |
+| 24 | Condutor habilitado há menos de um ano | Segundo o artigo 33.º, n.º 4, qual é o limite especial referido para condutores não profissionais habilitados há menos de um ano na classe que conduzem? | igo 33 |
+| 25 | Limite regional | Pode ser fixado um limite máximo regional de velocidade diferente dos limites gerais? | igo 34 |
 
 ## Distribuição das respostas correctas
 
-A: 7; B: 6; C: 6; D: 6.
+- A: 7; B: 6; C: 6; D: 6.
 
-## Limitações
+## Revisão jurídica e pedagógica (2026-11-13)
 
-A fonte primária oficial do INATRO foi identificada e os artigos 20.º, 29.º, 30.º e 32.º foram conferidos por texto disponível; os artigos 33.º e 34.º foram cruzados com a republicação e índice do Código. Não foi concluída auditoria consolidada de alterações posteriores nem leitura integral das tabelas gráficas do artigo 33.º. Por isso, não se introduzem os limites gerais por classe e local. A ausência de duplicações com todos os exames não está ainda certificada.
+As perguntas e explicações foram confrontadas directamente com os artigos indicados no PDF oficial do INATRO. Não foi detectada contradição material entre as respostas correctas e os dispositivos citados.
+
+O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Código da Estrada. Esta verificação confirma a correspondência com a republicação oficial consultada; não equivale a pesquisa exaustiva de todos os Boletins da República nem a parecer jurídico sobre eventuais alterações posteriores.
+
+## Originalidade e limitações
+
+A comparação textual e por semelhança foi feita com os Simulados 1, 31 e 32 disponíveis e entre os próprios Simulados 34–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e os 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
+
+A validação estrutural foi reproduzida sobre os dados remotos segundo os critérios do script oficial. O script node scripts/validar-exames.js não pôde ser executado neste ambiente porque o acesso DNS ao GitHub falhou. O teste funcional no navegador permanece pendente.
