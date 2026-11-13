@@ -63,6 +63,10 @@ const vm = require("node:vm");
   const root=path.join(__dirname,"..");
   const appSource=fs.readFileSync(path.join(root,"app.js"),"utf8");
   vm.runInContext(fs.readFileSync(path.join(root,"config.js"),"utf8"),context);
+  assert.equal(context.window.APP.modoTesteAcessoPago,false,
+    "A configuração publicada deve bloquear os exames pagos");
+  // A abertura temporária é simulada apenas neste ambiente de testes, nunca no site publicado.
+  context.window.APP.modoTesteAcessoPago=true;
   for(const n of [1,...Array.from({length:21},(_,i)=>i+31)]){
     const file=path.join(root,"data","exames","exame"+n+".js");
     if(fs.existsSync(file))vm.runInContext(fs.readFileSync(file,"utf8"),context);
