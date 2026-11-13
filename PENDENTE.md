@@ -6,11 +6,11 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Interface (FE-)
 
-## GER-012 — Terminologia oficial: substituir «simulado» por «exame» em toda a plataforma
+## GER-012 — Terminologia oficial: substituir «exame» por «exame» em toda a plataforma
 - Estado: EM CURSO — ChatGPT-3 — 2026-11-13 — ficheiros: index.html, app.js, config.js, docs/, README.md, REGRAS.md, INSTRUCOES.md, PENDENTE.md, HISTORICO.md, data/exames/PENDENTE.md e restantes textos de interface — último sinal: 2026-11-13
-- Pedido: por decisão expressa do dono, a plataforma deve usar «exame» como designação oficial em todos os pontos apresentados ao utilizador e na documentação do produto. Eliminar «simulado/simulados» como rótulo do produto, catálogo, navegação, planos, instruções, resultados, perguntas frequentes e textos de apoio.
+- Pedido: por decisão expressa do dono, a plataforma deve usar «exame» como designação oficial em todos os pontos apresentados ao utilizador e na documentação do produto. Eliminar «exame/exames» como rótulo do produto, catálogo, navegação, planos, instruções, resultados, perguntas frequentes e textos de apoio.
 - Onde mexer: todos os ficheiros textuais do repositório em que a palavra seja usada como designação do produto; verificar especialmente interface, configuração, documentação, instruções, histórico e listas de tarefas.
-- Pronto quando: pesquisa global documentada; textos de interface e documentação actualizados para «exame/exames»; nomes técnicos, identificadores, caminhos e referências históricas só são alterados quando seguro e sem quebrar compatibilidade; testes de sintaxe/validação passam; revisão final confirma que não restam rótulos visíveis «simulado/simulados».
+- Pronto quando: pesquisa global documentada; textos de interface e documentação actualizados para «exame/exames»; nomes técnicos, identificadores, caminhos e referências históricas só são alterados quando seguro e sem quebrar compatibilidade; testes de sintaxe/validação passam; revisão final confirma que não restam rótulos visíveis «exame/exames».
 - Cuidados: não alterar perguntas, respostas, pontuação, preços, planos ou regras funcionais. O dono autorizou expressamente esta alteração global, incluindo os ficheiros partilhados, sem alterar a lógica das tarefas concorrentes. Não renomear identificadores/caminhos técnicos se isso puder quebrar compatibilidade; registar excepções técnicas inevitáveis.
 
 ## FE-002 — Resultado final com semáforo e revisão pedagógica
@@ -23,7 +23,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## FE-001 — Auditoria de experiência móvel e acessibilidade
 - Estado: EM CURSO — ChatGPT-FE001 — 2026-11-10 09:55 UTC+02 — ficheiros: styles.css, docs/auditorias/interface-movel.md — último sinal: 2026-11-10 10:05 UTC+02
-- Pedido: melhorar a utilização da versão actual em telemóveis, sem alterar as regras de negócio nem o funcionamento dos simulados.
+- Pedido: melhorar a utilização da versão actual em telemóveis, sem alterar as regras de negócio nem o funcionamento dos exames.
 - Onde mexer: `styles.css`; criar um relatório curto de verificação em `docs/auditorias/interface-movel.md`, se forem encontrados pontos relevantes.
 - Pronto quando: interface verificada em larguras móveis comuns; navegação, botões, alternativas, imagens, tabela de planos e cabeçalho não provocam cortes ou deslocamento horizontal; foco de teclado é visível e os controlos têm áreas de toque adequadas; alterações testadas no navegador.
 - Cuidados: não alterar `app.js`, `index.html` ou `config.js`; não mudar identidade visual, textos comerciais, preços ou planos. Se a correcção exigir ficheiros partilhados, parar e pedir ao dono para criar/autorizar tarefa separada.
