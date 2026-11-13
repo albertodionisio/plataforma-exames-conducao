@@ -10,7 +10,7 @@ window.APP = {
   limiar: 18,
   // Modo temporário para o dono validar todos os Exames 31–51 sem pagamentos.
   // Desactivar antes da abertura comercial; o bloqueio por plano volta a aplicar-se.
-  modoTesteAcessoPago: true,
+  modoTesteAcessoPago: false,
   examesAbertosTeste: [31, 51],
   planos: [
     { nome: "Free", preco: "0 MT", validade: "Sem limite", exames: "3 fixos", anuncios: "Sim", suporte: "Normal" },
