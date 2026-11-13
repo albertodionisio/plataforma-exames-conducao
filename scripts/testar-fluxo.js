@@ -132,6 +132,20 @@ const vm = require("node:vm");
   await navegar("#/rever");
   assert.match(app.innerHTML,/Revisão do Exame 39/);
 
+  // Confirma que a descrição da imagem é usada tanto no exame como na revisão.
+  const descricaoImagem=context.window.EXAMES[1][0].imagem.descricao;
+  await navegar("#/exame/1");
+  assert.ok(app.innerHTML.includes("alt='"+descricaoImagem+"'"),
+    "A imagem da pergunta deve usar imagem.descricao como texto alternativo");
+  for(let i=0;i<25;i++){
+    app.click("responder",{"data-indice":String(context.window.EXAMES[1][i].correta)});
+    if(i<24)app.click("proxima");
+  }
+  await new Promise(resolve=>setImmediate(resolve));
+  await navegar("#/rever");
+  assert.ok(app.innerHTML.includes("alt='"+descricaoImagem+"'"),
+    "A imagem na revisão deve usar imagem.descricao como texto alternativo");
+
   async function concluirComAcertos(n, certas){
     await navegar("#/exame/"+n);
     for(let i=0;i<25;i++){
