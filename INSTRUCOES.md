@@ -17,7 +17,7 @@ e para que cada sessão saiba **o que já foi feito, o que está em curso e o qu
 |---|---|---|
 | Geral / documentos / vários módulos | `PENDENTE.md` | GER- |
 | Interface (index.html, styles.css, app.js) | `PENDENTE.md` (secção Interface) | FE- |
-| Dados dos simulados (`data/exames/`) | `data/exames/PENDENTE.md` | DADOS- |
+| Dados dos exames (`data/exames/`) | `data/exames/PENDENTE.md` | DADOS- |
 
 Se surgir uma área nova (por exemplo, servidor), crie um `PENDENTE.md` na pasta certa, escolha um prefixo novo (BE-, etc.) e acrescente-o a esta tabela.
 
@@ -85,7 +85,7 @@ Os ficheiros `PENDENTE.md` e `HISTORICO.md` são a regra, mas o `git log` é a p
    - Uma sessão trabalha **numa tarefa de cada vez**.
 4. **Ficheiros partilhados.** Duas tarefas `EM CURSO` não podem tocar no mesmo ficheiro. `app.js`, `styles.css`, `index.html` e `config.js` são partilhados: antes de reservar, confirme que nenhuma outra tarefa `EM CURSO` os lista. Se listar, escolha outra tarefa ou espere.
 5. **Nova tarefa.** Antes de a criar, pesquise a ideia nos `PENDENTE.md` e no `HISTORICO.md` (`grep -ri "palavra" *.md data/exames/*.md`). Se já existe ou já foi feita, **não crie**. Se não existe, use o **próximo número livre** da área. **Um ID nunca é reutilizado**, mesmo depois de concluído.
-6. **Concluir.** Quando a tarefa estiver feita e testada: no **mesmo commit** que a implementa, **apague-a do `PENDENTE.md`** e **acrescente uma linha ao `HISTORICO.md`** com a palavra CONCLUÍDA (ID, data, sessão, o que mudou). A mensagem do commit cita o ID (ex.: `DADOS-001: simulado 2 com 25 perguntas`). Faça push.
+6. **Concluir.** Quando a tarefa estiver feita e testada: no **mesmo commit** que a implementa, **apague-a do `PENDENTE.md`** e **acrescente uma linha ao `HISTORICO.md`** com a palavra CONCLUÍDA (ID, data, sessão, o que mudou). A mensagem do commit cita o ID (ex.: `DADOS-001: exame 2 com 25 perguntas`). Faça push.
 7. **Parar a meio.** Se a sessão tiver de parar antes de concluir: volte o estado a `LIVRE`, acrescente uma linha `Parcial:` com o que já foi feito e o que falta, e faça push. Assim outra sessão continua sem repetir.
 8. **Reserva parada.** Uma tarefa `EM CURSO` com o `último sinal` há mais de 24 horas pode ser assumida por outra sessão, **só depois de perguntar ao dono** (ver "Estados de uma tarefa").
 9. **Sessões sem permissão de escrita no GitHub** (por exemplo, Perplexity ou um chat sem Git): trabalham como pesquisa e rascunho. Não reservam tarefas. Entregam o resultado ao dono, que o passa a uma sessão com acesso para integrar usando este protocolo.
@@ -110,7 +110,7 @@ Se `PENDENTE.md` ficar vazio, mantenha o cabeçalho e a linha "Nenhuma instruç�
 
 A prioridade definida pelo dono é concluir o produto ESTRADA e lançá-lo. Todas as sessões devem respeitar a sequência registada em `REGRAS.md`:
 
-1. Avançar na conclusão dos 50 simulados.
+1. Avançar na conclusão dos 50 exames.
 2. Completar e integrar o conjunto de funcionalidades previsto para o produto.
 3. Deixar cada componente funcional e testável ou, quando depender de credenciais, aprovações ou serviços externos, tecnicamente preparado e com os passos de activação documentados.
 4. Depois de concluído esse âmbito, executar a auditoria global, testes completos, correcções e estabilização.
@@ -118,4 +118,4 @@ A prioridade definida pelo dono é concluir o produto ESTRADA e lançá-lo. Toda
 
 **Regra de ritmo:** não transformar melhorias não críticas, ajustes cosméticos ou auditorias globais antecipadas em bloqueios ao avanço. Registe-os para a fase de auditoria e prossiga para a próxima tarefa disponível. Isto não dispensa testes mínimos por entrega nem a correcção imediata de erros factuais, falhas de segurança, perda de dados ou regressões graves.
 
-Cada sessão deve proteger o trabalho já concluído, fazer verificações proporcionais para não o quebrar e indicar honestamente o que está implementado, integrado, testado, apenas preparado ou efectivamente activo. Não declarar o projecto concluído antes dos 50 simulados, das funcionalidades obrigatórias, da auditoria global e dos requisitos de lançamento estarem tratados.
+Cada sessão deve proteger o trabalho já concluído, fazer verificações proporcionais para não o quebrar e indicar honestamente o que está implementado, integrado, testado, apenas preparado ou efectivamente activo. Não declarar o projecto concluído antes dos 50 exames, das funcionalidades obrigatórias, da auditoria global e dos requisitos de lançamento estarem tratados.
