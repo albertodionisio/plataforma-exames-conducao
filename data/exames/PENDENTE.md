@@ -307,7 +307,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-039 — Exame 38 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-ESTRADA-2 — 2026-11-13 15:07 UTC+02 — ficheiros: data/exames/exame38.js, docs/referencias-exames/exame38-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 15:09 UTC+02
+- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 21:00 UTC+02 — ficheiros: data/exames/exame38.js, docs/referencias-exames/exame38-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 21:00 UTC+02
 - Foco temático prioritário: Passagem de peões e convivência com utilizadores vulneráveis.
 - Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis.
 - Onde mexer: `data/exames/exame38.js` e `docs/referencias-exames/exame38-mapeamento.md`.
