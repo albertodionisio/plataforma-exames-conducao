@@ -1,4 +1,4 @@
-# PENDENTE — dados dos simulados
+# PENDENTE — dados dos exames
 
 Leia `INSTRUCOES.md` antes de reservar uma tarefa. Um ficheiro por exame: `data/exames/exameN.js`.
 Use `exame1.js` como modelo do formato e do nível de adaptação.
@@ -25,7 +25,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: existem os 10 JSON com 25 perguntas cada, quatro posições de alternativa e resposta correcta; cada pergunta liga à sua imagem pelo mesmo índice do código (sem associar por semelhança); há relatório, mapeamento, registo do que não foi recuperado, instruções para voltar a executar e testes a passar.
 - Cuidados: dados originais, não adaptados; não inventar perguntas, respostas, temas, explicações nem imagens (o que o APK não contém fica marcado como não recuperado); a validade legal das respostas fica por validar. Serve de fonte às tarefas DADOS-001 a DADOS-011 (não altera os seus ficheiros).
 
-## DADOS-001 — Simulado 2 (grátis)
+## DADOS-001 — Exame 2 (grátis)
 - Estado: EM CURSO — Claude-1 — 2026-11-09 20:45 UTC — ficheiros: data/exames/exame2.js, index.html, app.js — último sinal: 2026-11-09 20:45 UTC
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame2.js` (novo) e `docs/referencias-exames/exame2-mapeamento.md`. Se for preciso registar o ficheiro, `index.html`/`app.js` (confirmar que nenhuma outra tarefa EM CURSO os usa).
@@ -34,37 +34,37 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ### ACTUALIZAÇÃO OBRIGATÓRIA — decisão do dono (11/11/2026)
-**Esta decisão substitui qualquer instrução anterior ou implementação baseada no modelo antigo de correcção imediata.** A sessão que já está a trabalhar no DADOS-001 deve actualizar o seu plano e executar o Simulado 2 segundo estas regras, sem esperar por uma nova tarefa:
+**Esta decisão substitui qualquer instrução anterior ou implementação baseada no modelo antigo de correcção imediata.** A sessão que já está a trabalhar no DADOS-001 deve actualizar o seu plano e executar o Exame 2 segundo estas regras, sem esperar por uma nova tarefa:
 - Durante as 25 perguntas, o candidato apenas selecciona respostas. Não mostrar certo/errado, cores de correcção, resposta correcta ou explicação enquanto o exame decorre.
 - O exame só é corrigido quando o candidato submeter/terminar as 25 perguntas ou quando o tempo de 60 minutos acabar; neste último caso, submeter automaticamente e contar as perguntas em branco.
 - No ecrã final, mostrar um semáforo gráfico: luz verde acesa + «APROVADO» se a nota for >= 18/20; luz vermelha acesa + «REPROVADO» se for < 18/20. Mostrar sempre a nota em valores (0,8 por resposta certa), além de certas, erradas e não respondidas.
 - Incluir a acção «Rever exame». Na revisão, para cada pergunta, preservar a ordem apresentada e mostrar o enunciado, a imagem correcta, a resposta escolhida, a resposta certa e a explicação pedagógica. Mostrar explicação também nas respostas certas e identificar claramente as não respondidas.
 - Guardar as respostas escolhidas e a ordem efectivamente apresentada, para que a revisão não mude nem perca as escolhas do candidato.
-- Antes de continuar, reler a secção «Avaliação e revisão dos simulados» em `REGRAS.md`. Se já tiver sido implementado feedback imediato, removê-lo/substituí-lo para cumprir integralmente esta decisão. Não manter o comportamento antigo por compatibilidade.
+- Antes de continuar, reler a secção «Avaliação e revisão dos exames» em `REGRAS.md`. Se já tiver sido implementado feedback imediato, removê-lo/substituí-lo para cumprir integralmente esta decisão. Não manter o comportamento antigo por compatibilidade.
 - Actualizar o registo de progresso desta tarefa para indicar que esta instrução foi recebida e que o plano foi alinhado. Não alterar tarefas ou ficheiros reservados a outras sessões.
 
-## DADOS-002 — Simulado 3 (grátis)
+## DADOS-002 — Exame 3 (grátis)
 - Estado: EM CURSO — ChatGPT-2 — 2026-11-11 22:24 UTC+02 — ficheiros: data/exames/exame3.js, docs/referencias-exames/exame3-mapeamento.md — último sinal: 2026-11-11 22:24 UTC+02
 - Pedido: extrair as 25 perguntas do Exame 3 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame3.js` (novo) e `docs/referencias-exames/exame3-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 3 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame deve respeitar integralmente o fluxo definido em `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1 e 2. Não usar correcção imediata. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
 
-## DADOS-005 — Simulado 4
+## DADOS-005 — Exame 4
 - Estado: EM CURSO — ChatGPT-DADOS005 — 2026-11-11 14:39 UTC+02 — ficheiros: data/exames/exame4.js, docs/referencias-exames/exame4-mapeamento.md — último sinal: 2026-11-11 14:41 UTC+02
 - Pedido: extrair as 25 perguntas do Exame 4 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame4.js` (novo) e `docs/referencias-exames/exame4-mapeamento.md`.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 4 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; abre no ESTRADA, cronómetro de 60 minutos, correcção imediata e resultado; mapa completo; validação automática e teste no navegador sem erros.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1, 2 e 3. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
 
-## DADOS-006 — Simulado 5
+## DADOS-006 — Exame 5
 - Estado: EM CURSO — Claude-DADOS006 — 2026-11-12 13:07 UTC+02 — ficheiros: data/exames/exame5.js, docs/referencias-exames/exame5-mapeamento.md — último sinal: 2026-11-12 13:07 UTC+02
 - Pedido: extrair as 25 perguntas do Exame 5 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame5.js` (novo) e `docs/referencias-exames/exame5-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 5 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 5 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-007 — Simulado 6
+## DADOS-007 — Exame 6
 - Estado: EM CURSO — ChatGPT-DADOS007 — 2026-11-12 11:14:55 UTC — ficheiros: data/exames/exame6.js, docs/referencias-exames/exame6-mapeamento.md — último sinal: 2026-11-12 13:30 UTC+02
 - Pedido: extrair as 25 perguntas do Exame 6 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame6.js` (novo) e `docs/referencias-exames/exame6-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
@@ -72,337 +72,337 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 6 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
 - Parcial: reserva confirmada e fonte/modelo do repositório consultados. A extracção fiel depende do APK binário (62 MB); o conector GitHub devolve conteúdo vazio para esse binário e o ambiente desta sessão não consegue descarregar directamente do GitHub (rede/DNS indisponível). Não foram inventadas perguntas. A sessão DADOS-008 está a desenvolver um interpretador do bytecode (`BaseDadosExame`); aguarda-se que o método ou os dados de extracção sejam publicados/partilhados para aplicar ao intervalo do Exame 6 (posições 125–149, a confirmar no próprio extractor).
-## DADOS-008 — Simulado 7
+## DADOS-008 — Exame 7
 - Estado: EM CURSO — Claude-DADOS008 — 2026-11-12 13:24 UTC+02 — ficheiros: data/exames/exame7.js, docs/referencias-exames/exame7-mapeamento.md — último sinal: 2026-11-12 13:24 UTC+02
 - Pedido: extrair as 25 perguntas do Exame 7 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame7.js` (novo) e `docs/referencias-exames/exame7-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 7 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 7 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-009 — Simulado 8
+## DADOS-009 — Exame 8
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 8 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame8.js` (novo) e `docs/referencias-exames/exame8-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 8 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 8 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-010 — Simulado 9
+## DADOS-010 — Exame 9
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 9 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame9.js` (novo) e `docs/referencias-exames/exame9-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 9 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 9 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-011 — Simulado 10
+## DADOS-011 — Exame 10
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 10 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame10.js` (novo) e `docs/referencias-exames/exame10-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 10 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 10 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-012 — Simulado 11
+## DADOS-012 — Exame 11
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 11 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame11.js` (novo) e `docs/referencias-exames/exame11-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 11 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 11 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-013 — Simulado 12
+## DADOS-013 — Exame 12
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 12 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame12.js` (novo) e `docs/referencias-exames/exame12-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 12 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 12 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-014 — Simulado 13
+## DADOS-014 — Exame 13
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 13 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame13.js` (novo) e `docs/referencias-exames/exame13-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 13 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 13 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-015 — Simulado 14
+## DADOS-015 — Exame 14
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 14 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame14.js` (novo) e `docs/referencias-exames/exame14-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 14 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 14 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-016 — Simulado 15
+## DADOS-016 — Exame 15
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 15 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame15.js` (novo) e `docs/referencias-exames/exame15-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 15 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 15 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-017 — Simulado 16
+## DADOS-017 — Exame 16
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 16 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame16.js` (novo) e `docs/referencias-exames/exame16-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 16 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 16 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-018 — Simulado 17
+## DADOS-018 — Exame 17
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 17 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame17.js` (novo) e `docs/referencias-exames/exame17-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 17 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 17 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-019 — Simulado 18
+## DADOS-019 — Exame 18
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 18 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame18.js` (novo) e `docs/referencias-exames/exame18-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 18 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 18 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-020 — Simulado 19
+## DADOS-020 — Exame 19
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 19 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame19.js` (novo) e `docs/referencias-exames/exame19-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 19 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 19 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-021 — Simulado 20
+## DADOS-021 — Exame 20
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 20 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame20.js` (novo) e `docs/referencias-exames/exame20-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 20 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 20 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-022 — Simulado 21
+## DADOS-022 — Exame 21
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 21 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame21.js` (novo) e `docs/referencias-exames/exame21-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 21 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 21 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-023 — Simulado 22
+## DADOS-023 — Exame 22
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 22 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame22.js` (novo) e `docs/referencias-exames/exame22-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 22 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 22 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-024 — Simulado 23
+## DADOS-024 — Exame 23
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 23 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame23.js` (novo) e `docs/referencias-exames/exame23-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 23 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 23 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-025 — Simulado 24
+## DADOS-025 — Exame 24
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 24 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame24.js` (novo) e `docs/referencias-exames/exame24-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 24 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 24 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-026 — Simulado 25
+## DADOS-026 — Exame 25
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 25 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame25.js` (novo) e `docs/referencias-exames/exame25-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 25 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 25 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-027 — Simulado 26
+## DADOS-027 — Exame 26
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 26 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame26.js` (novo) e `docs/referencias-exames/exame26-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 26 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 26 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-028 — Simulado 27
+## DADOS-028 — Exame 27
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 27 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame27.js` (novo) e `docs/referencias-exames/exame27-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 27 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 27 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-029 — Simulado 28
+## DADOS-029 — Exame 28
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 28 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame28.js` (novo) e `docs/referencias-exames/exame28-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 28 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 28 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-030 — Simulado 29
+## DADOS-030 — Exame 29
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 29 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame29.js` (novo) e `docs/referencias-exames/exame29-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 29 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 29 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## DADOS-031 — Simulado 30
+## DADOS-031 — Exame 30
 - Estado: LIVRE
 - Pedido: extrair as 25 perguntas do Exame 30 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame30.js` (novo) e `docs/referencias-exames/exame30-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 30 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 30 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
-## Programa de conteúdo original — Simulados 31 a 50
+## Programa de conteúdo original — Exames 31 a 50
 
 - Estado do programa: APROVADO PELO DONO — tarefas individuais LIVRES
-- Âmbito: os Simulados 1–30 continuam a ser modelados a partir dos 30 exames do APK original. Os Simulados 31–50 são conteúdo novo, criado pela equipa ESTRADA; não afirmar que existem no APK.
+- Âmbito: os Exames 1–30 continuam a ser modelados a partir dos 30 exames do APK original. Os Exames 31–50 são conteúdo novo, criado pela equipa ESTRADA; não afirmar que existem no APK.
 - Fonte normativa prioritária: versão vigente do Código da Estrada de Moçambique e legislação complementar publicada no Boletim da República / Imprensa Nacional; documentos oficiais do INATRO; catálogo oficial de sinais de trânsito; regulamentos e publicações oficiais de segurança rodoviária. Usar fontes oficiais e confirmar vigência, alterações e âmbito territorial.
 - Rastreabilidade obrigatória: cada pergunta deve ter no mapa a fonte exacta, artigo/número, diploma e ano, página ou secção e URL/referência documental quando disponível. Se a regra não puder ser confirmada numa fonte oficial acessível, não publicar a pergunta como validada; assinalar a lacuna para revisão do dono.
-- Originalidade: antes de escrever, comparar com os Simulados 1–30 concluídos e com os Simulados 31–50 já publicados/em curso. Não copiar perguntas do APK, não repetir enunciados nem testar a mesma situação de forma apenas cosmética. Variar competências e contextos sem sair da legislação.
+- Originalidade: antes de escrever, comparar com os Exames 1–30 concluídos e com os Exames 31–50 já publicados/em curso. Não copiar perguntas do APK, não repetir enunciados nem testar a mesma situação de forma apenas cosmética. Variar competências e contextos sem sair da legislação.
 - Conteúdo: privilegiar regras de circulação, prioridades, manobras, velocidade, ultrapassagem, mudança de direcção, cruzamentos, peões, iluminação, paragem/estacionamento, sinalização vertical e horizontal, documentos/deveres do condutor, segurança e situações práticas. Só incluir temas que tenham fundamento normativo confirmado.
 - **Verdade factual e realismo rodoviário (decisão do dono):** todas as perguntas devem transmitir conhecimentos verdadeiros e úteis para a condução real em Moçambique. Os cenários podem ser construídos para fins de avaliação, mas devem representar situações plausíveis nas vias e condições reais do país; a regra, o comportamento correcto e as consequências descritas têm de corresponder à legislação vigente e à prática rodoviária segura. Não inventar regras, sinais, procedimentos, prioridades, multas, características das vias ou comportamentos como se fossem factos. Não usar situações absurdas ou perguntas apenas para preencher as 25 vagas. Quando a pergunta descrever uma situação prática, avaliar a decisão que o condutor realmente deve tomar nessa circunstância, com fundamento legal ou oficial verificável. A explicação deve ensinar a regra e a sua aplicação concreta na estrada, não limitar-se a repetir a alternativa certa. Se houver incerteza factual, legal ou contextual, registar no mapa e deixar a pergunta por validar até confirmação.
-- Estrutura por simulado: exactamente 25 perguntas, quatro alternativas plausíveis, uma resposta correcta, explicação curta e clara em português de Moçambique. A posição da resposta correcta deve ser equilibrada e imprevisível; não usar comprimento da alternativa como pista.
+- Estrutura por exame: exactamente 25 perguntas, quatro alternativas plausíveis, uma resposta correcta, explicação curta e clara em português de Moçambique. A posição da resposta correcta deve ser equilibrada e imprevisível; não usar comprimento da alternativa como pista.
 - Imagens: usar apenas imagens oficiais ou recursos cuja correspondência com a pergunta esteja comprovada. Para sinais, confirmar código, desenho e designação no catálogo oficial. Para situações práticas, só usar imagem quando acrescentar valor e representar fielmente a situação. Não inventar sinais nem associar uma imagem genérica a uma pergunta específica.
 - Aplicação: seguir integralmente `REGRAS.md`: sem feedback durante o exame; submissão manual após 25 perguntas ou automática aos 60 minutos; 0,8 valores por resposta certa; aprovação a partir de 18/20; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão preservando ordem, imagem, resposta escolhida, resposta correcta e explicação.
 - Ficheiros exclusivos de cada tarefa: `data/exames/exameN.js` e `docs/referencias-exames/exameN-mapeamento.md`. Não alterar `app.js`, `index.html`, `styles.css` nem ficheiros partilhados sem verificar e coordenar reservas.
-- Validação: executar `node scripts/validar-exames.js`, conferir manualmente a rastreabilidade legal das 25 perguntas, verificar ausência de duplicações e testar abertura/revisão do simulado. O validador automático não substitui a revisão jurídica e pedagógica.
+- Validação: executar `node scripts/validar-exames.js`, conferir manualmente a rastreabilidade legal das 25 perguntas, verificar ausência de duplicações e testar abertura/revisão do exame. O validador automático não substitui a revisão jurídica e pedagógica.
 - Não reservar várias tarefas de uma vez. Cada sessão escolhe apenas uma tarefa LIVRE, lê `INSTRUCOES.md`, confirma a reserva remota e trabalha exclusivamente nos ficheiros atribuídos.
 
-## DADOS-034 — Simulado 33 (conteúdo original)
+## DADOS-034 — Exame 33 (conteúdo original)
 - Estado: EM CURSO — Claude-DADOS034 — 2026-11-13 15:50 UTC+02 — ficheiros: data/exames/exame33.js, docs/referencias-exames/exame33-mapeamento.md — último sinal: 2026-11-13 15:50 UTC+02
 - Foco temático prioritário: Cruzamentos, entroncamentos e rotundas.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame33.js` (novo) e `docs/referencias-exames/exame33-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-035 — Simulado 34 (conteúdo original)
+## DADOS-035 — Exame 34 (conteúdo original)
 - Estado: EM CURSO — ChatGPT-DADOS035 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: ultrapassagem e cruzamento de veículos.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=6/B=7/C=6/D=6. Revisão jurídica confrontada com os artigos 41.º–44.º do PDF oficial do INATRO (páginas 15–16), sem contradição material detectada. Comparação textual e por semelhança sem candidatos a duplicação face aos exames 1, 31, 32 e 35–37 actualmente acessíveis.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar simulados, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
-- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
 - Falta: teste funcional no navegador pelo dono; comparação com os exames 2–30, 33 e 38–50 quando forem publicados; execução do script oficial quando o ambiente tiver acesso ao repositório. Não marcar como concluída antes desses pontos.
 
 
-## DADOS-036 — Simulado 35 (conteúdo original)
+## DADOS-036 — Exame 35 (conteúdo original)
 - Estado: EM CURSO — ChatGPT-DADOS036 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame35.js, docs/referencias-exames/exame35-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: sinalização, segurança e mudança de direcção.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 23.º, 42.º, 45.º e 46.º do PDF oficial do INATRO (páginas 7, 15 e 17). As perguntas 5, 13 e 22 foram corrigidas para testar, respectivamente, os n.os 2, 3 e 4 do artigo 45.º, com a regra expressa de posicionamento à direita.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar simulados, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
-- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
 - Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32 e 34, 36 e 37 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
 - Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
 
 
-## DADOS-037 — Simulado 36 (conteúdo original)
+## DADOS-037 — Exame 36 (conteúdo original)
 - Estado: EM CURSO — ChatGPT-DADOS037 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame36.js, docs/referencias-exames/exame36-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: velocidade, distância de segurança e travagem.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 20.º, 29.º, 30.º, 32.º, 33.º e 34.º do PDF oficial do INATRO (páginas 6, 10, 11 e 12); não foi detectada contradição material.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar simulados, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
-- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
 - Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34, 35 e 37 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
 - Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
 
 
-## DADOS-038 — Simulado 37 (conteúdo original)
+## DADOS-038 — Exame 37 (conteúdo original)
 - Estado: EM CURSO — ChatGPT-DADOS038 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame37.js, docs/referencias-exames/exame37-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: paragem, estacionamento e imobilização.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 49.º, 50.º e 51.º do PDF oficial do INATRO (páginas 18–19); não foi detectada contradição material.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar simulados, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
-- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
 - Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34–36 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
 - Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
 
 
-## DADOS-039 — Simulado 38 (conteúdo original)
+## DADOS-039 — Exame 38 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Passagem de peões e convivência com utilizadores vulneráveis.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame38.js` (novo) e `docs/referencias-exames/exame38-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-040 — Simulado 39 (conteúdo original)
+## DADOS-040 — Exame 39 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Sinalização vertical: perigo e cedência de passagem.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame39.js` (novo) e `docs/referencias-exames/exame39-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-041 — Simulado 40 (conteúdo original)
+## DADOS-041 — Exame 40 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Sinalização vertical: proibição e obrigação.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame40.js` (novo) e `docs/referencias-exames/exame40-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-042 — Simulado 41 (conteúdo original)
+## DADOS-042 — Exame 41 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Sinalização horizontal, marcas rodoviárias e inscrições.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame41.js` (novo) e `docs/referencias-exames/exame41-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-043 — Simulado 42 (conteúdo original)
+## DADOS-043 — Exame 42 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Semáforos, sinais dos agentes e ordens de trânsito.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame42.js` (novo) e `docs/referencias-exames/exame42-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-044 — Simulado 43 (conteúdo original)
+## DADOS-044 — Exame 43 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Iluminação, visibilidade e utilização dos dispositivos luminosos.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame43.js` (novo) e `docs/referencias-exames/exame43-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-045 — Simulado 44 (conteúdo original)
+## DADOS-045 — Exame 44 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Condução em condições adversas e segurança rodoviária.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame44.js` (novo) e `docs/referencias-exames/exame44-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-046 — Simulado 45 (conteúdo original)
+## DADOS-046 — Exame 45 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Deveres do condutor, documentos e condições do veículo.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame45.js` (novo) e `docs/referencias-exames/exame45-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-047 — Simulado 46 (conteúdo original)
+## DADOS-047 — Exame 46 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Transporte de passageiros e carga.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame46.js` (novo) e `docs/referencias-exames/exame46-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-048 — Simulado 47 (conteúdo original)
+## DADOS-048 — Exame 47 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Manobras, marcha-atrás e inversão do sentido de marcha.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame47.js` (novo) e `docs/referencias-exames/exame47-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-049 — Simulado 48 (conteúdo original)
+## DADOS-049 — Exame 48 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Acidentes, dever de assistência e procedimentos do condutor.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame48.js` (novo) e `docs/referencias-exames/exame48-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-050 — Simulado 49 (conteúdo original)
+## DADOS-050 — Exame 49 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Condução defensiva e prevenção de riscos em situações reais.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame49.js` (novo) e `docs/referencias-exames/exame49-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-051 — Simulado 50 (conteúdo original)
+## DADOS-051 — Exame 50 (conteúdo original)
 - Estado: LIVRE
-- Foco temático prioritário: Simulado integrador: aplicação combinada das regras do Código da Estrada.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
+- Foco temático prioritário: Exame integrador: aplicação combinada das regras do Código da Estrada.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame50.js` (novo) e `docs/referencias-exames/exame50-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
+- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
