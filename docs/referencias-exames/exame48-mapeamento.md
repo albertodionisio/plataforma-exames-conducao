@@ -5,7 +5,7 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: acidentes, dever de 
 ## Fonte primária
 - Código da Estrada da República de Moçambique, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
 - Diploma de aprovação: Decreto-Lei n.º 1/2011, de 23 de Março; legislação do INATRO: https://www.inatro.gov.mz/?page_id=701
-- Artigos usados: 85.º, 90.º, 91.º, 92.º, 147.º, 151.º, 152.º, 154.º e 155.º.
+- Artigos usados: 85.º, 90.º, 91.º, 92.º, 151.º, 152.º, 154.º e 155.º.
 
 ## Mapa das perguntas
 | Nº | Tema | Competência avaliada | Base legal |
@@ -34,7 +34,7 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: acidentes, dever de 
 | 22 | Danos materiais sem feridos | Aplicar o procedimento de segurança, identificação, assistência ou comunicação após acidente. | Art. 155.º, n.º 1 |
 | 23 | Auto de acidente | Aplicar o procedimento de segurança, identificação, assistência ou comunicação após acidente. | Art. 152.º |
 | 24 | Acidente mortal | Aplicar o procedimento de segurança, identificação, assistência ou comunicação após acidente. | Art. 155.º, n.º 4 |
-| 25 | Avaria em auto-estrada | Aplicar o procedimento de segurança, identificação, assistência ou comunicação após acidente. | Art. 90.º, n.ºs 1, 2 e 4 |
+| 25 | Definição de morte em acidente de viação | Aplicar o prazo legal para qualificar a morte como resultante de acidente de viação. | Art. 151.º, n.º 2 |
 
 ## Distribuição das respostas correctas
 - A: 7
