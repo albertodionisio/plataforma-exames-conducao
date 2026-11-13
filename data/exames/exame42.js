@@ -351,18 +351,18 @@ window.EXAMES[42] = [
   },
   {
     "numero": 24,
-    "tema": "Ordem do agente perante semáforo",
+    "tema": "Hierarquia da sinalização temporária",
     "dificuldade": "difícil",
-    "enunciado": "O semáforo está vermelho, mas o agente regulador, de forma clara e segura, manda avançar o trânsito da frente. Qual é a regra de hierarquia?",
+    "enunciado": "Num troço em obras, um sinal temporário de proibição contradiz o semáforo permanente. Qual indicação deve o condutor cumprir?",
     "imagem": null,
     "opcoes": [
-      "O condutor deve obedecer sempre ao vermelho, sem excepção.",
-      "A ordem do agente prevalece sobre o sinal luminoso, devendo o condutor avançar conforme a indicação e com prudência.",
-      "O condutor escolhe conforme a sua preferência.",
-      "A ordem só vale para veículos pesados."
+      "O semáforo permanente, porque os sinais luminosos prevalecem sempre.",
+      "A sinalização temporária, porque ocupa posição superior aos sinais luminosos na hierarquia regulamentar.",
+      "A marca rodoviária, independentemente das restantes indicações.",
+      "A regra geral de circulação, ignorando ambas as sinalizações."
     ],
     "correta": 1,
-    "explicacao": "As ordens dos agentes reguladores prevalecem sobre as prescrições dos sinais e as regras de trânsito. (Código da Estrada, art. 14.º, n.º 3; Regulamento, arts. 8.º e 9.º)."
+    "explicacao": "A hierarquia regulamentar coloca os sinais dos agentes em primeiro lugar, seguidos dos sinais temporários, dos sinais luminosos e, por fim, dos sinais gráficos verticais e horizontais. Assim, prevalece a sinalização temporária sobre o semáforo permanente. (Regulamento de Sinais de Trânsito, art. 8.º, n.º 2, als. a) a d))."
   },
   {
     "numero": 25,
