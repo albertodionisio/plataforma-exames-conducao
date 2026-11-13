@@ -46,7 +46,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1 e 2. Não usar correcção imediata. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
 
 ## DADOS-005 — Exame 4
-- Estado: EM CURSO — ChatGPT-DADOS005 — 2026-11-11 14:39 UTC+02 — ficheiros: data/exames/exame4.js, docs/referencias-exames/exame4-mapeamento.md — último sinal: 2026-11-11 14:41 UTC+02
+- Estado: EM CURSO — Claude-DADOS005 — 2026-11-13 23:55 UTC+02 — ficheiros: data/exames/exame4.js, docs/referencias-exames/exame4-mapeamento.md, public/exames/exame4/ (imagens) — último sinal: 2026-11-13 23:55 UTC+02 — assumida a reserva parada de ChatGPT-DADOS005 (último sinal 2026-11-11 14:41), com autorização expressa do dono em 2026-11-13.
 - Pedido: extrair as 25 perguntas do Exame 4 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame4.js` (novo) e `docs/referencias-exames/exame4-mapeamento.md`.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 4 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; abre no ESTRADA, cronómetro de 60 minutos, correcção imediata e resultado; mapa completo; validação automática e teste no navegador sem erros.
