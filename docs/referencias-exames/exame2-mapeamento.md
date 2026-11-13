@@ -13,6 +13,8 @@ Conteúdo adaptado das 25 perguntas do Exame 2 extraído do APK de referência e
 
 - As 25 perguntas do APK foram localizadas e associadas às 25 imagens correspondentes.
 - Todas as perguntas têm quatro alternativas preenchidas, uma única resposta correcta e explicação para a revisão.
+- O validador oficial e o workflow CI passaram no commit `2b081dcd1a2dcecfe646bdc371f1bd7b9e0c0631`: sintaxe JavaScript, componente de assinaturas, fluxo geral, validador oficial e build Netlify. Run: <https://github.com/albertodionisio/plataforma-exames-conducao/actions/runs/43513191604>.
+- A verificação automática confirmou 25 perguntas, quatro opções não vazias, índices válidos, explicações completas e imagens existentes. Nenhuma explicação contém números de artigos; as referências legais permanecem apenas neste mapa.
 - A posição das respostas correctas foi redistribuída: **A=7, B=6, C=6, D=6**.
 - Auditoria de extensão: **nenhuma resposta correcta é a única alternativa mais longa**. Na pergunta 15, as quatro alternativas têm a mesma extensão.
 - As alternativas vazias no APK foram preenchidas com distratores novos, sem alterar o objectivo da pergunta.
@@ -66,6 +68,10 @@ Posições (A=1.ª … D=4.ª): **A=7, B=6, C=6, D=6**.
 3. **Pergunta 21:** o gesto ilustrado corresponde ao sinal regulamentar de redução de velocidade (braço horizontal, palma voltada para o solo, movimento vertical). A resposta foi corrigida para «Que pretende reduzir a velocidade».
 4. **Pergunta 8:** o sinal E3 proíbe o trânsito de automóveis ligeiros em geral. A formulação do APK, limitada a ligeiros de passageiros, era demasiado estreita.
 5. **Pergunta 10:** a explicação separa a obrigação legal de usar o banco traseiro da recomendação de preferência pelo lugar central quando a instalação é compatível.
+
+## Integração na aplicação
+
+O ficheiro `data/exames/exame2.js` já é copiado pelo build estático, que recolhe todos os ficheiros `exameN.js`. Contudo, no momento desta revisão, `index.html` ainda não contém a tag que carrega o Exame 2 antes de `app.js`. A integração foi deixada pendente para coordenar com a tarefa activa FE-008, que também está a alterar `index.html` e `app.js`. Por isso, a validação estrutural e o build passaram, mas **o Exame 2 ainda não está acessível no catálogo da aplicação publicada**.
 
 ## Ficheiros e imagens
 
