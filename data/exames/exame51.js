@@ -1,6 +1,6 @@
 // Exame 51 — 25 perguntas originais do ESTRADA.
-// Foco: exame integrador avançado, aplicação combinada das regras do Código da Estrada.
-// Base legal: Código da Estrada e Regulamento de Sinais de Trânsito, conforme mapa de rastreabilidade.
+// Exame integrador avançado: combina circulação, segurança, procedimentos de fiscalização e deveres do condutor.
+// Base legal: Código da Estrada de Moçambique e Regulamento de Sinais de Trânsito, com referências específicas no mapa.
 // Rastreabilidade: docs/referencias-exames/exame51-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[51] = [
@@ -141,33 +141,33 @@ window.EXAMES[51] = [
   },
   {
     "numero": 10,
-    "tema": "Categoria e tipo de veículo",
+    "tema": "Carta de condutor profissional",
     "dificuldade": "difícil",
-    "enunciado": "Um condutor possui título para uma categoria que não abrange o veículo que pretende conduzir. O proprietário está presente e autoriza. Pode conduzir?",
+    "enunciado": "Uma pessoa pretende prestar serviços remunerados de transporte rodoviário. Que habilitação específica exige o Código da Estrada?",
     "imagem": null,
     "opcoes": [
-      "Não; a autorização do proprietário não substitui a habilitação legal para a categoria.",
-      "Sim, porque o proprietário assume a responsabilidade.",
-      "Sim, se conduzir apenas durante o dia.",
-      "Sim, desde que não transporte passageiros."
+      "Deve ser titular da carta de condutor profissional.",
+      "Basta possuir qualquer carta de condução particular, independentemente do serviço.",
+      "É suficiente apresentar o documento de identificação do veículo.",
+      "A autorização verbal da empresa substitui o título profissional."
     ],
     "correta": 0,
-    "explicacao": "O título de condução só é válido para as categorias de veículos nele averbadas. (Arts. 125.º e 126.º, n.º 3)."
+    "explicacao": "A prestação de serviços remunerados só é permitida aos titulares da carta de condutor profissional. (Código da Estrada, art. 88.º, n.º 1)."
   },
   {
     "numero": 11,
-    "tema": "Veículo sem seguro",
+    "tema": "Direito à contraprova de álcool",
     "dificuldade": "difícil",
-    "enunciado": "Um veículo está matriculado e passou na inspecção, mas não possui seguro de responsabilidade civil obrigatório. Pode circular?",
+    "enunciado": "Um condutor recebe resultado positivo num teste de álcool no ar expirado. Que informação e possibilidade deve receber do agente de autoridade?",
     "imagem": null,
     "opcoes": [
-      "Sim, porque a inspecção substitui o seguro.",
-      "Sim, se o condutor tiver carta válida.",
-      "Sim, apenas em estradas secundárias.",
-      "Não; a circulação na via pública exige o seguro de responsabilidade civil previsto na lei."
+      "Apenas a informação de que o veículo será apreendido, sem possibilidade de contestação.",
+      "A indicação de que só pode pedir uma análise de sangue no dia seguinte.",
+      "A ordem para abandonar imediatamente o local, sem conhecer o resultado.",
+      "A notificação do resultado e das sanções, bem como a informação de que pode requerer de imediato uma contraprova."
     ],
     "correta": 3,
-    "explicacao": "Os veículos a motor e os seus reboques só podem transitar na via pública desde que tenham seguro de responsabilidade civil. (Art. 157.º)."
+    "explicacao": "Perante resultado positivo, o agente deve notificar o examinando do resultado e das sanções e informar que pode requerer de imediato contraprova, suportando as despesas se esta também for positiva. (Art. 82.º, n.º 2)."
   },
   {
     "numero": 12,
@@ -246,33 +246,33 @@ window.EXAMES[51] = [
   },
   {
     "numero": 17,
-    "tema": "Sinal de perigo e velocidade",
+    "tema": "Impedimento temporário de conduzir",
     "dificuldade": "difícil",
-    "enunciado": "Um sinal vertical anuncia perigo numa curva próxima. Qual é a reacção adequada?",
+    "enunciado": "Um condutor apresenta resultado positivo no exame de álcool no ar expirado. Qual é a consequência imediata prevista no Código, sem prejuízo da possibilidade legal de comprovar que não está influenciado?",
     "imagem": null,
     "opcoes": [
-      "Aumentar a velocidade para sair da zona.",
-      "Manter a velocidade e travar dentro da curva.",
-      "Reduzir a velocidade e adoptar especial prudência perante o perigo anunciado.",
-      "Ultrapassar antes de entrar na curva."
+      "Pode continuar a conduzir se estiver acompanhado por outro adulto.",
+      "Fica impedido de conduzir por duas horas, sem qualquer excepção.",
+      "Fica impedido de conduzir durante doze horas, salvo se comprovar antes desse prazo, por exame por si requerido, que não está influenciado pelo álcool.",
+      "Só fica impedido de conduzir depois de decisão judicial definitiva."
     ],
     "correta": 2,
-    "explicacao": "Os sinais de perigo exigem especial atenção e prudência; a velocidade deve ser adaptada às características da via e visibilidade. (Regulamento, art. 24.º; Código, arts. 29.º e 32.º)."
+    "explicacao": "Quem apresenta resultado positivo, recusa ou não pode submeter-se ao exame fica impedido de conduzir durante doze horas, salvo se comprovar, antes de decorrido esse período, que não está influenciado pelo álcool, através de exame por si requerido. (Art. 83.º, n.º 1)."
   },
   {
     "numero": 18,
-    "tema": "Ultrapassagem e visibilidade",
+    "tema": "Impossibilidade de teste no ar expirado",
     "dificuldade": "difícil",
-    "enunciado": "Um condutor pretende ultrapassar numa curva de visibilidade reduzida, sem conseguir observar a via em toda a extensão necessária. Deve:",
+    "enunciado": "Durante uma fiscalização, não é possível realizar a prova de álcool no ar expirado. Qual procedimento alternativo prevê o Código?",
     "imagem": null,
     "opcoes": [
-      "Não iniciar a ultrapassagem enquanto não houver visibilidade e espaço suficientes.",
-      "Ultrapassar rapidamente para reduzir o risco.",
-      "Usar a buzina e avançar.",
-      "Seguir pela berma."
+      "O examinando deve ser submetido a colheita de sangue para análise ou, se a isso se recusar, a exame médico em estabelecimento oficial de saúde.",
+      "O condutor fica automaticamente dispensado de qualquer exame.",
+      "O agente deve estimar a taxa de álcool apenas pela aparência do condutor.",
+      "A prova é substituída obrigatoriamente por declaração de duas testemunhas."
     ],
     "correta": 0,
-    "explicacao": "A ultrapassagem não deve ser iniciada quando a visibilidade ou as condições da via não permitem realizá-la com segurança. (Código da Estrada, arts. 22.º e 41.º–44.º)."
+    "explicacao": "Quando não for possível realizar a prova no ar expirado, o examinando deve ser submetido a colheita de sangue para análise ou, se se recusar, a exame médico em estabelecimento oficial de saúde. (Art. 82.º, n.º 8)."
   },
   {
     "numero": 19,
@@ -291,18 +291,18 @@ window.EXAMES[51] = [
   },
   {
     "numero": 20,
-    "tema": "Distância frontal e chuva",
+    "tema": "Condutor substituto após impedimento",
     "dificuldade": "difícil",
-    "enunciado": "Com chuva intensa, o veículo da frente reduz a velocidade. Qual é a melhor combinação de medidas?",
+    "enunciado": "Um condutor fica impedido de conduzir após um teste positivo de álcool. Outra pessoa, com o seu consentimento, apresenta teste negativo e propõe-se a conduzir o veículo. O que permite o Código?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se para aproveitar o rasto do veículo.",
-      "Manter a velocidade e usar máximos.",
-      "Travar bruscamente e mudar de faixa.",
-      "Reduzir a velocidade e aumentar a distância de segurança."
+      "O veículo deve ser removido em todos os casos, mesmo havendo condutor substituto.",
+      "O veículo pode permanecer com o condutor inicialmente fiscalizado, desde que este prometa não conduzir.",
+      "A substituição só é permitida depois de decorridas doze horas.",
+      "Não há lugar à imobilização ou remoção se o condutor substituto consentido apresentar resultado negativo no teste de álcool."
     ],
     "correta": 3,
-    "explicacao": "A velocidade deve ser moderada em condições de aderência precária e deve manter-se distância suficiente para evitar colisão em caso de redução súbita. (Arts. 20.º, n.º 1, e 32.º, n.º 1, al. h))."
+    "explicacao": "O Código afasta a imobilização ou remoção quando outro condutor, com consentimento do impedido ou do proprietário, se propõe a conduzir e apresenta resultado negativo no teste. (Art. 84.º, n.º 3)."
   },
   {
     "numero": 21,
@@ -336,18 +336,18 @@ window.EXAMES[51] = [
   },
   {
     "numero": 23,
-    "tema": "Aparelho durante a condução",
+    "tema": "Proibição de lançar objectos para fora do veículo",
     "dificuldade": "difícil",
-    "enunciado": "O condutor utiliza um telemóvel com sistema de alta-voz que não exige manuseamento continuado. Qual é a regra geral do Código?",
+    "enunciado": "Durante a marcha, um passageiro pretende lançar uma embalagem vazia pela janela para a berma. Como é avaliada essa conduta?",
     "imagem": null,
     "opcoes": [
-      "É sempre proibido qualquer sistema de alta-voz.",
-      "O Código prevê excepção para equipamento com auricular ou alta-voz cuja utilização não implique manuseamento continuado.",
-      "É permitido apenas em auto-estradas.",
-      "É permitido apenas quando o veículo está em movimento lento."
+      "É permitida se o objecto for biodegradável.",
+      "É proibido ao condutor e aos passageiros atirar quaisquer objectos para o exterior do veículo.",
+      "É permitida quando não houver peões por perto.",
+      "Só é proibida em auto-estradas."
     ],
     "correta": 1,
-    "explicacao": "O Código proíbe aparelhos radiotelefónicos durante a marcha, mas prevê excepção para auricular ou sistema alta-voz que não implique manuseamento continuado. (Art. 89.º, n.ºs 1 e 2)."
+    "explicacao": "O Código proíbe ao condutor e aos passageiros atirar quaisquer objectos para o exterior do veículo. (Art. 78.º, n.º 3)."
   },
   {
     "numero": 24,
@@ -366,17 +366,17 @@ window.EXAMES[51] = [
   },
   {
     "numero": 25,
-    "tema": "Imobilização por acidente",
+    "tema": "Emissões e derrames do veículo",
     "dificuldade": "difícil",
-    "enunciado": "Após um acidente, o veículo ficou inutilizado e bloqueia a faixa. A polícia ordena a remoção. O condutor deve:",
+    "enunciado": "Um veículo circula a emitir fumos ou gases acima dos limites regulamentares e apresenta um derrame de óleo na via. Qual é a regra aplicável?",
     "imagem": null,
     "opcoes": [
-      "Adoptar as providências para remover o veículo conforme determinado pela autoridade, preservando a segurança.",
-      "Recusar até chegar a seguradora.",
-      "Deixar o veículo no local independentemente do perigo.",
-      "Mover o veículo sem sinalizar nem observar as instruções."
+      "A circulação é proibida quando o veículo emite fumos ou gases acima dos limites regulamentares ou derrama óleo ou outras substâncias.",
+      "A circulação é permitida se o veículo tiver inspecção periódica válida.",
+      "O condutor só deve actuar quando o derrame atingir uma localidade.",
+      "A situação é permitida desde que o veículo mantenha a velocidade reduzida."
     ],
     "correta": 0,
-    "explicacao": "Em acidente com vítima, deixar de adoptar providências para remover o veículo quando determinadas pela polícia ou agente de trânsito pode constituir contravenção grave. (Art. 147.º, al. d), subalínea iv))."
+    "explicacao": "É proibido o trânsito de veículos com motor que emitam fumos ou gases em quantidade superior à fixada em regulamento ou que derramem óleo ou quaisquer outras substâncias. (Art. 78.º, n.º 1)."
   }
 ];
