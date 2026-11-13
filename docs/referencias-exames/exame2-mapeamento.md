@@ -26,7 +26,7 @@ Conteúdo adaptado das 25 perguntas do Exame 2 extraído do APK de referência e
 | Nº | Tema / competência avaliada | Fonte principal | Resposta APK | Resposta ESTRADA | Imagem preservada / nota |
 |---|---|---|---|---|---|
 | 1 | Excepções aplicáveis a veículos prioritários e dever de segurança | CE, art. 15.º, n.os 1–2 | B | B | Veículo em missão prioritária |
-| 2 | Reconhecer pista obrigatória para peões e velocípedes | RST, art. 28.º, F13 | B | C | Sinal F13 |
+| 2 | Identificar os utentes obrigados a utilizar a pista indicada pelo sinal F13 | RST, art. 28.º, F13 | B | C | Sinal F13 |
 | 3 | Prioridade pela direita quando a intersecção não está sinalizada | CE, art. 38.º, n.º 3, al. a) | C | B | Semáforo/intersecção; alternativas duplicadas no APK foram normalizadas |
 | 4 | Identificar o factor humano como factor central de sinistralidade | Conhecimento geral de segurança rodoviária | A | D | Colisão entre veículos pesados; não é uma regra legal específica |
 | 5 | Classificação da falta de sinalização antecipada de manobras | CE, art. 23.º, n.º 1; art. 146.º, al. b) | A | A | Gesto de braço |
@@ -39,17 +39,21 @@ Conteúdo adaptado das 25 perguntas do Exame 2 extraído do APK de referência e
 | 12 | Identificar a carta de condução como título habilitante | CE, art. 127.º | A | A | Documento de carta de condução |
 | 13 | Distinguir parque de estacionamento para táxis (G14) de área reservada (G13) | RST, art. 30.º, G13–G14 | C | C | Sinal com símbolo de táxi e R; chave do APK corrigida no conteúdo |
 | 14 | Relação entre velocidade e distância de paragem | CE, arts. 29.º–30.º; princípio de condução defensiva | B | B | Veículo imobilizado junto à berma; imagem não mede a distância |
-| 15 | Velocidade mínima nas auto-estradas | CE, art. 33.º, n.º 3; art. 72.º, n.º 1 | C | A | Velocímetro |
+| 15 | Identificar veículos incapazes de atingir 40 km/h em patamar e a sua proibição de acesso à auto-estrada | CE, art. 72.º, n.º 1 (com o limite mínimo do art. 33.º, n.º 3) | C | A | Velocímetro |
 | 16 | Sinalização luminosa de veículo rebocado | CE, art. 63.º, n.os 3, al. b), e 4 | B | D | Veículo a ser rebocado |
 | 17 | Reconhecer sinal de direcção para destinos/localidades | RST, art. 31.º, n.os 2–3 | A | C | Placa verde de direcção em Nampula; chave do APK corrigida |
 | 18 | Excepções à regra da via mais à esquerda fora das localidades | CE, art. 18.º, n.º 1 | B | B | Trânsito com várias filas |
-| 19 | Aplicar a regra da via mais à esquerda à situação ilustrada | CE, art. 18.º, n.º 1 | C | B | Estrada com várias vias; pergunta diferenciada da n.º 18 |
+| 19 | Aplicar a excepção de utilização temporária da via adjacente para ultrapassar | CE, art. 18.º, n.º 1 | C | B | Estrada com várias vias; cenário de ultrapassagem, distinto da regra geral |
 | 20 | Reconhecer cruzamento com estrada sem prioridade (D27) | RST, art. 24.º, sinal D27 | B | D | Sinal D27 |
-| 21 | Reconhecer o gesto regulamentar para reduzir a velocidade | RST, art. 46.º, n.º 3, al. a) | B | C | Braço estendido, palma para baixo, movimento vertical; chave do APK corrigida |
+| 21 | Utilizar o gesto manual para indicar redução de velocidade quando o indicador está avariado | RST, art. 46.º, n.º 3, al. a) | B | C | Braço estendido, palma para baixo, movimento vertical; cenário diferente do Exame 1 |
 | 22 | Reconhecer o sinal de visibilidade reduzida (D62) | RST, art. 24.º, sinal D62 | B | C | Sinal temporário de visibilidade reduzida |
 | 23 | Distinguir proibição de estacionamento de proibição de paragem | RST, art. 26.º, sinal E50; CE, art. 49.º, n.os 1–2 | A | A | Sinal E50 |
 | 24 | Verificar regularmente a pressão dos pneus | Recomendação de manutenção e segurança rodoviária | C | D | Verificação da pressão de um pneu; sem artigo específico indicado |
 | 25 | Reconhecer que doenças e medicamentos podem afectar a condução | CE, arts. 132.º e 135.º (aptidão); orientação geral de segurança | A | A | Medicamentos; o Código não enumera todos os efeitos de cada medicamento |
+
+## Comparação com exames já publicados
+
+Foram comparadas as competências e os enunciados com os Exames 1 e 31–51. Existem temas legais próximos, inevitáveis em conteúdos de condução, mas as perguntas foram diferenciadas pelo contexto ou pela competência específica: pergunta 1 (condições gerais dos veículos prioritários) vs. Exame 32, pergunta 14 (ambulância perante luz vermelha); pergunta 2 (identificar os utentes obrigados a usar a pista F13) vs. Exame 40, pergunta 22 (finalidade do sinal); pergunta 3 (avaria do semáforo) vs. Exame 32, pergunta 3 (cruzamento sem sinalização); pergunta 10 (recomendação de segurança do lugar central) vs. Exame 49, perguntas 19–20 (obrigações legais de retenção e banco traseiro); pergunta 15 (aptidão do veículo para circular em auto-estrada) vs. Exame 36, pergunta 23 (limite mínimo de velocidade); pergunta 18 (regra geral e excepções) e pergunta 19 (aplicação da excepção para ultrapassar) vs. Exame 31, pergunta 4 (regra geral da via mais à esquerda); pergunta 21 (sinal manual em caso de avaria do indicador) vs. Exame 1, pergunta 15 (interpretação de um gesto já executado); pergunta 22 (identificação do sinal D62) vs. Exame 1, pergunta 9 (distância mínima de visibilidade reduzida).
 
 ## Resposta correcta por posição
 
