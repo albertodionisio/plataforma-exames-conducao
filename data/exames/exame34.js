@@ -56,11 +56,11 @@ window.EXAMES[34] = [
     "imagem": null,
     "opcoes": [
       "O veículo que tiver maior potência.",
-      "O veículo que estiver mais próximo do local onde o cruzamento é possível.",
+      "O veículo que tiver chegado primeiro à estrada.",
       "O veículo que transportar menos passageiros.",
-      "O veículo que tiver chegado primeiro à estrada."
+      "O veículo que estiver mais próximo do local onde o cruzamento é possível."
     ],
-    "correta": 1,
+    "correta": 3,
     "explicacao": "Se a situação não puder ser resolvida pela regra de cedência perante o obstáculo, recua o veículo que estiver mais próximo do local onde o cruzamento pode ser realizado. (Art. 41.º, n.º 4.)"
   },
   {
@@ -70,8 +70,8 @@ window.EXAMES[34] = [
     "enunciado": "Numa via de inclinação acentuada, dois veículos em sentidos opostos não conseguem cruzar-se e é necessário que um recue. Qual é a regra?",
     "imagem": null,
     "opcoes": [
-      "Recua sempre o veículo que desce, por ter maior controlo da travagem.",
       "Recua o veículo que sobe, excepto se for manifestamente mais fácil o veículo que desce recuar.",
+      "Recua sempre o veículo que desce, por ter maior controlo da travagem.",
       "Recua sempre o veículo mais pesado, independentemente da inclinação.",
       "Os dois devem recuar ao mesmo tempo até encontrarem espaço."
     ],
@@ -86,8 +86,8 @@ window.EXAMES[34] = [
     "imagem": null,
     "opcoes": [
       "Sempre que encontre um veículo ligeiro, mesmo numa estrada larga.",
-      "Apenas quando circular dentro de uma localidade.",
       "Quando a via, o seu perfil ou o estado de conservação não permitirem cruzar com segurança.",
+      "Apenas quando circular dentro de uma localidade.",
       "Só quando o outro condutor fizer sinal de luzes."
     ],
     "correta": 2,
