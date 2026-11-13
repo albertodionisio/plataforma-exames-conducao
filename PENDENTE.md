@@ -6,11 +6,11 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Interface (FE-)
 
-## GER-012 — Terminologia oficial: substituir «exame» por «exame» em toda a plataforma
+## GER-012 — Uniformizar a nomenclatura oficial da plataforma
 - Estado: EM CURSO — ChatGPT-3 — 2026-11-13 — ficheiros: index.html, app.js, config.js, docs/, README.md, REGRAS.md, INSTRUCOES.md, PENDENTE.md, HISTORICO.md, data/exames/PENDENTE.md e restantes textos de interface — último sinal: 2026-11-13
-- Pedido: por decisão expressa do dono, a plataforma deve usar «exame» como designação oficial em todos os pontos apresentados ao utilizador e na documentação do produto. Eliminar «exame/exames» como rótulo do produto, catálogo, navegação, planos, instruções, resultados, perguntas frequentes e textos de apoio.
+- Pedido: por decisão expressa do dono, a plataforma deve usar «exame» como designação oficial em todos os pontos apresentados ao utilizador e na documentação do produto. Usar exclusivamente «exame/exames» como designação do produto, catálogo, navegação, planos, instruções, resultados, perguntas frequentes e textos de apoio.
 - Onde mexer: todos os ficheiros textuais do repositório em que a palavra seja usada como designação do produto; verificar especialmente interface, configuração, documentação, instruções, histórico e listas de tarefas.
-- Pronto quando: pesquisa global documentada; textos de interface e documentação actualizados para «exame/exames»; nomes técnicos, identificadores, caminhos e referências históricas só são alterados quando seguro e sem quebrar compatibilidade; testes de sintaxe/validação passam; revisão final confirma que não restam rótulos visíveis «exame/exames».
+- Pronto quando: pesquisa global documentada; textos de interface e documentação actualizados para «exame/exames»; nomes técnicos, identificadores, caminhos e referências históricas só são alterados quando seguro e sem quebrar compatibilidade; testes de sintaxe/validação passam; revisão final confirma a uniformidade da nomenclatura em todos os pontos visíveis.
 - Cuidados: não alterar perguntas, respostas, pontuação, preços, planos ou regras funcionais. O dono autorizou expressamente esta alteração global, incluindo os ficheiros partilhados, sem alterar a lógica das tarefas concorrentes. Não renomear identificadores/caminhos técnicos se isso puder quebrar compatibilidade; registar excepções técnicas inevitáveis.
 
 ## FE-002 — Resultado final com semáforo e revisão pedagógica
