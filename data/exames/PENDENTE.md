@@ -268,7 +268,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Estado: EM CURSO — ChatGPT-DADOS035 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: ultrapassagem e cruzamento de veículos.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=6/B=7/C=6/D=6. Revisão jurídica confrontada com os artigos 41.º–44.º do PDF oficial do INATRO (páginas 15–16), sem contradição material detectada. Comparação textual e por semelhança sem candidatos a duplicação face aos exames 1, 31, 32 e 35–37 actualmente acessíveis.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js ainda não foi executado: o clone falhou por DNS. Foi criado .github/workflows/validar-exames.yml para automatizar a validação em futuras alterações, mas o GitHub ainda não reportou uma execução desse workflow; não se declara aprovação.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
 - Falta: teste funcional no navegador pelo dono; comparação com os exames 2–30, 33 e 38–50 quando forem publicados; execução do script oficial quando o ambiente tiver acesso ao repositório. Não marcar como concluída antes desses pontos.
 
@@ -277,7 +277,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Estado: EM CURSO — ChatGPT-DADOS036 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame35.js, docs/referencias-exames/exame35-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: sinalização, segurança e mudança de direcção.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 23.º, 42.º, 45.º e 46.º do PDF oficial do INATRO (páginas 7, 15 e 17). As perguntas 5, 13 e 22 foram corrigidas para testar, respectivamente, os n.os 2, 3 e 4 do artigo 45.º, com a regra expressa de posicionamento à direita.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js ainda não foi executado: o clone falhou por DNS. Foi criado .github/workflows/validar-exames.yml para automatizar a validação em futuras alterações, mas o GitHub ainda não reportou uma execução desse workflow; não se declara aprovação.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
 - Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32 e 34, 36 e 37 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
 - Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
@@ -287,7 +287,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Estado: EM CURSO — ChatGPT-DADOS037 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame36.js, docs/referencias-exames/exame36-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: velocidade, distância de segurança e travagem.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 20.º, 29.º, 30.º, 32.º, 33.º e 34.º do PDF oficial do INATRO (páginas 6, 10, 11 e 12); não foi detectada contradição material.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js ainda não foi executado: o clone falhou por DNS. Foi criado .github/workflows/validar-exames.yml para automatizar a validação em futuras alterações, mas o GitHub ainda não reportou uma execução desse workflow; não se declara aprovação.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
 - Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34, 35 e 37 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
 - Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
@@ -297,7 +297,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Estado: EM CURSO — ChatGPT-DADOS038 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame37.js, docs/referencias-exames/exame37-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: paragem, estacionamento e imobilização.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 49.º, 50.º e 51.º do PDF oficial do INATRO (páginas 18–19); não foi detectada contradição material.
-- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js ainda não foi executado: o clone falhou por DNS. Foi criado .github/workflows/validar-exames.yml para automatizar a validação em futuras alterações, mas o GitHub ainda não reportou uma execução desse workflow; não se declara aprovação.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
 - Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34–36 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
 - Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
