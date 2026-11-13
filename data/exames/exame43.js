@@ -260,18 +260,18 @@ window.EXAMES[43] = [
   },
   {
     "numero": 18,
-    "tema": "Uso injustificado das luzes de nevoeiro",
+    "tema": "Avaria na iluminação de velocípede",
     "dificuldade": "média",
-    "enunciado": "Numa noite de céu limpo, com boa visibilidade, um condutor mantém ligadas as luzes de nevoeiro sem necessidade. Esta conduta é:",
+    "enunciado": "Um ciclista circula ao anoitecer e verifica que os dispositivos de iluminação do velocípede deixaram de funcionar. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Obrigatória em todas as estradas fora das localidades.",
-      "Proibida, porque as luzes de nevoeiro não devem ser usadas quando as condições meteorológicas ou ambientais não o justificam.",
-      "Permitida sempre que o veículo tenha essas luzes instaladas.",
-      "Obrigatória quando se circula a menos de 100 metros de outro veículo."
+      "Continuar a circular pela berma, desde que reduza a velocidade.",
+      "Pedir a outro veículo que ilumine o percurso à sua frente.",
+      "Desmontar e conduzir o velocípede à mão.",
+      "Ligar os quatro indicadores de perigo e continuar a pedalar."
     ],
-    "correta": 1,
-    "explicacao": "O Código proíbe o uso das luzes de nevoeiro quando as condições meteorológicas ou ambientais não o justificam. A existência do dispositivo no veículo não significa que possa ser usado permanentemente. (Art. 61.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "Em caso de avaria nas luzes, os velocípedes devem ser conduzidos à mão. (Código da Estrada, art. 97.º, n.º 2)."
   },
   {
     "numero": 19,
