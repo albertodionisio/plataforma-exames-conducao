@@ -57,5 +57,5 @@ Perguntas redigidas de forma original e orientadas para aplicação integrada de
 - 25 perguntas; quatro alternativas não vazias; um índice correcto válido; explicação por pergunta.
 - Distribuição: A=6, B=7, C=6, D=6.
 - Todas as imagens são `null`.
-- Validação estrutural interna aprovada; validador oficial/CI a confirmar após publicação.
+- GitHub Actions run 43469766034 aprovado (sintaxe JavaScript, teste de assinaturas e validador oficial).
 - Teste no navegador adiado para verificação conjunta após o Exame 51.
