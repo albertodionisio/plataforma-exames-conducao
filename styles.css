@@ -119,3 +119,73 @@ table{
   .estado{flex-direction:column}
 }
 
+/* FE-008 — ícones SVG e menu de navegação */
+.icone-nav{
+  width:20px;
+  height:20px;
+  flex:0 0 20px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vertical-align:middle;
+}
+.icone-marca{width:21px;height:21px;flex-basis:21px}
+.marca{display:inline-flex;align-items:center;gap:9px}
+.topo .nav-links{display:flex;align-items:center;gap:8px}
+.topo .nav-links a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:44px;
+  padding:8px 12px;
+  margin:0;
+  border:1px solid transparent;
+  border-radius:8px;
+}
+.topo .nav-links a:hover,
+.topo .nav-links a:focus-visible{
+  background:rgba(250,246,236,.1);
+  border-color:rgba(250,246,236,.28);
+}
+.menu-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  padding:0;
+  color:var(--marfim);
+  background:transparent;
+  border:1px solid rgba(250,246,236,.35);
+  border-radius:8px;
+  cursor:pointer;
+}
+.menu-toggle .icone-nav{width:23px;height:23px}
+@media (max-width:600px){
+  .topo{
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+  }
+  .menu-toggle{display:inline-flex;margin-left:auto}
+  .topo .nav-links{
+    display:none;
+    flex:1 1 100%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:4px;
+    padding-top:4px;
+  }
+  .topo .nav-links.aberto{display:flex}
+  .topo .nav-links a{
+    justify-content:flex-start;
+    width:100%;
+    padding:8px 10px;
+  }
+}
+@media (prefers-reduced-motion:no-preference){
+  .menu-toggle,.topo .nav-links a{transition:background-color .15s,border-color .15s}
+}
