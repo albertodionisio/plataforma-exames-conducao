@@ -314,10 +314,3 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não inventar artigos, sinais, multas ou procedimentos; documentar as limitações da verificação da vigência; não alterar ficheiros partilhados reservados.
 - Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial); falta apenas o teste funcional no navegador pelo dono.
 
-## DADOS-055 — Exame 51 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-ESTRADA-2 — 2026-11-13 17:50 UTC+02 — ficheiros: data/exames/exame51.js, docs/referencias-exames/exame51-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 17:50 UTC+02
-- Foco temático prioritário: Exame integrador avançado: aplicação combinada de regras de circulação, prioridades, sinalização, segurança, documentos, passageiros/carga e procedimentos após incidente.
-- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana e fontes oficiais verificáveis.
-- Onde mexer: `data/exames/exame51.js` e `docs/referencias-exames/exame51-mapeamento.md`.
-- Pronto quando: 25 perguntas originais, quatro alternativas, uma resposta correcta, explicação e referência normativa específica; validação estrutural e validador oficial aprovados; limitações legais e de originalidade documentadas. O teste funcional no navegador fica reservado à verificação conjunta após o Exame 51, conforme decisão do dono.
-- Cuidados: não usar o APK como fonte de perguntas; não copiar bancos externos; não inventar artigos, sinais, multas ou procedimentos; não marcar como validação visual o que ainda não foi testado no navegador.
