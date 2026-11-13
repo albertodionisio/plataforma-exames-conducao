@@ -320,18 +320,18 @@ window.EXAMES[34] = [
   },
   {
     "numero": 22,
-    "tema": "Excepção à proibição em cruzamentos",
-    "dificuldade": "difícil",
-    "enunciado": "Um condutor aproxima-se de um cruzamento numa via devidamente sinalizada como prioritária. Em que condição pode efectuar uma ultrapassagem, apesar da proibição geral?",
+    "tema": "Proibição junto de paragens com aglomeração",
+    "dificuldade": "média",
+    "enunciado": "Um condutor aproxima-se de uma paragem devidamente sinalizada onde se encontra um aglomerado de pessoas. Pode ultrapassar um veículo que segue à sua frente?",
     "imagem": null,
     "opcoes": [
-      "Quando circula numa via que lhe confere prioridade no cruzamento ou entroncamento e essa prioridade está devidamente assinalada.",
-      "Sempre que o veículo da frente circule abaixo do limite de velocidade.",
-      "Quando não existam peões nas proximidades.",
-      "Quando utilizar o sinal sonoro antes de iniciar a manobra."
+      "Não. A ultrapassagem é proibida na aproximação de uma paragem devidamente sinalizada com aglomerado de pessoas.",
+      "Sim, desde que buzine antes de iniciar a manobra.",
+      "Sim, se as pessoas permanecerem no passeio.",
+      "A proibição aplica-se apenas durante a noite."
     ],
     "correta": 0,
-    "explicacao": "A proibição de ultrapassar imediatamente antes e nos cruzamentos e entroncamentos não se aplica quando o condutor transita numa via que lhe confere prioridade e essa prioridade está devidamente assinalada. A manobra continua sujeita às restantes condições de segurança. (Art. 44.º, n.º 4, al. b).)"
+    "explicacao": "O Código proíbe a ultrapassagem na aproximação de uma paragem devidamente sinalizada quando exista um aglomerado de pessoas, para proteger os utentes que possam entrar na faixa de rodagem. (Art. 44.º, n.º 1, al. f).)"
   },
   {
     "numero": 23,

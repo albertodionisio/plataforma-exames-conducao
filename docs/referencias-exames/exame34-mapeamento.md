@@ -14,7 +14,7 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 - O texto integral dos artigos 41.º a 44.º foi confrontado directamente com o PDF alojado no domínio oficial do INATRO (páginas 15–16). As respostas e explicações correspondem aos dispositivos citados.
 - O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Código da Estrada. Esta verificação confirma a correspondência com a republicação oficial consultada, mas não substitui uma pesquisa exaustiva de todos os Boletins da República ou parecer jurídico sobre alterações posteriores.
 - **Imagens:** nenhuma. Todas as perguntas usam `imagem: null`.
-- **Originalidade:** comparação textual e por semelhança realizada com os Exames 1, 31 e 32 disponíveis e com os Exames 35–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
+- **Originalidade:** comparação textual e por semelhança realizada com o Exame 1 e com todos os Exames 31–33 e 35–51 publicados. Foram identificadas duas sobreposições relevantes e corrigidas: a antiga pergunta 7 repetia a ideia da pergunta 23 do Exame 31; a antiga pergunta 22 repetia a proibição geral de ultrapassagem em cruzamentos já abordada nos Exames 33, 50 e 51. A nova pergunta 22 avalia a proibição específica na aproximação de uma paragem devidamente sinalizada com aglomerado de pessoas (art. 44.º, n.º 1, al. f). Não foram encontrados outros enunciados exactos ou candidatos de elevada semelhança no conjunto comparado. Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original.
 
 ## Distribuição das respostas correctas
 
@@ -48,7 +48,7 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 | 19 | Proibição | Lombas | 44.º | 16 | Não |
 | 20 | Proibição | Curvas de visibilidade reduzida | 44.º | 16 | Não |
 | 21 | Proibição | Passagens de nível | 44.º | 16 | Não |
-| 22 | Excepção | Ultrapassagem em via prioritária devidamente sinalizada | 44.º, n.º 4, al. b) | 16 | Não |
+| 22 | Proibição | Aproximação de paragem sinalizada com aglomerado de pessoas | 44.º, n.º 1, al. f) | 16 | Não |
 | 23 | Proibição | Passagens para peões | 44.º | 16 | Não |
 | 24 | Proibição | Visibilidade e largura insuficientes | 44.º | 16 | Não |
 | 25 | Excepção | Várias filas no mesmo sentido | 44.º | 16 | Não |
@@ -59,6 +59,6 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 - Pergunta 7: dever de aguardar por condições que permitam iniciar a manobra sem perigo ou embaraço.
 - Perguntas 8–18: conceito, lado da ultrapassagem, excepções, verificações prévias, aviso, regresso à fila, dever de facilitar e intervalo entre pesados.
 - Perguntas 19–21 e 23–24: proibições de ultrapassagem previstas no artigo 44.º.
-- Pergunta 22: excepção à proibição em cruzamentos quando a via confere prioridade e essa prioridade está devidamente assinalada (art. 44.º, n.º 4, al. b).
+- Pergunta 22: proibição de ultrapassagem na aproximação de uma paragem devidamente sinalizada com aglomerado de pessoas (art. 44.º, n.º 1, al. f).
 - Pergunta 25: excepção para duas ou mais filas no mesmo sentido (art. 44.º, n.º 3).
 - A pergunta 25 limita a excepção às condições do artigo 44.º, n.º 3; não afirma que todas as proibições deixam de existir em vias com várias filas.
