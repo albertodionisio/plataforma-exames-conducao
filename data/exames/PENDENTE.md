@@ -274,7 +274,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não alterar ficheiros partilhados nem exames de outras tarefas. Não marcar como concluída antes dos testes mínimos.
 
 ## DADOS-036 — Simulado 35 (conteúdo original)
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-DADOS036 — 2026-11-13 UTC — ficheiros: data/exames/exame35.js, docs/referencias-exames/exame35-mapeamento.md — último sinal: 2026-11-13 UTC
 - Foco temático prioritário: Mudança de direcção e mudança de via.
 - Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame35.js` (novo) e `docs/referencias-exames/exame35-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
