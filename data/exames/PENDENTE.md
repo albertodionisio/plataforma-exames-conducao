@@ -315,7 +315,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial); falta apenas o teste funcional no navegador pelo dono.
 
 ## DADOS-040 — Exame 39 (conteúdo original)
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-ESTRADA-2 — 2026-11-13 15:20 UTC+02 — ficheiros: data/exames/exame39.js, docs/referencias-exames/exame39-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 15:20 UTC+02
 - Foco temático prioritário: Sinalização vertical: perigo e cedência de passagem.
 - Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame39.js` (novo) e `docs/referencias-exames/exame39-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
