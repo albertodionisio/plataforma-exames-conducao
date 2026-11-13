@@ -26,12 +26,12 @@ window.EXAMES[47] = [
     "enunciado": "Como pode ser feita a sinalização temporária de obras e obstáculos ocasionais na via pública?",
     "imagem": null,
     "opcoes": [
+      "Com sinais verticais, horizontais, luminosos e dispositivos complementares.",
       "Apenas com cones colocados no pavimento.",
       "Exclusivamente com agentes policiais.",
-      "Com sinais verticais, horizontais, luminosos e dispositivos complementares.",
       "Somente com avisos verbais aos condutores."
     ],
-    "correta": 2,
+    "correta": 0,
     "explicacao": "undefined Art. 10.º, n.º 2"
   },
   {
@@ -41,12 +41,12 @@ window.EXAMES[47] = [
     "enunciado": "Depois de concluídas as obras e removidos os obstáculos ocasionais, o que deve acontecer à sinalização temporária?",
     "imagem": null,
     "opcoes": [
-      "Deve ser retirada, restituindo-se à via as condições normais de circulação.",
       "Deve permanecer durante pelo menos um ano.",
       "Deve ser substituída por publicidade da obra.",
-      "Só pode ser retirada depois de autorização de cada condutor."
+      "Só pode ser retirada depois de autorização de cada condutor.",
+      "Deve ser retirada, restituindo-se à via as condições normais de circulação."
     ],
-    "correta": 0,
+    "correta": 3,
     "explicacao": "undefined Art. 10.º, n.º 5"
   },
   {
@@ -246,36 +246,21 @@ window.EXAMES[47] = [
   },
   {
     "numero": 17,
-    "tema": "Raqueta A64 — face verde",
+    "tema": "Raqueta A64 — significados das duas faces",
     "dificuldade": "média",
-    "enunciado": "Um operador de trânsito numa obra mostra a face verde da raqueta A64. O que indica?",
+    "enunciado": "Um operador de trânsito numa zona de obras utiliza a raqueta A64. Que significado têm, respectivamente, as faces verde e vermelha?",
     "imagem": null,
     "opcoes": [
-      "Paragem obrigatória em todas as direcções.",
-      "Proibição de circulação para todos os veículos.",
-      "Sentido autorizado.",
-      "Aproximação de veículo prioritário."
+      "A face verde indica paragem e a vermelha autoriza a passagem.",
+      "A face verde indica sentido autorizado e a vermelha sentido não autorizado.",
+      "Ambas indicam apenas redução de velocidade.",
+      "A face verde destina-se a peões e a vermelha a veículos pesados."
     ],
-    "correta": 2,
+    "correta": 1,
     "explicacao": "undefined Art. 13.º, n.º 4, al. a)"
   },
   {
     "numero": 18,
-    "tema": "Raqueta A64 — face vermelha",
-    "dificuldade": "média",
-    "enunciado": "O operador mostra a face vermelha da bandeirola A64 aos veículos que se aproximam. Qual é a indicação?",
-    "imagem": null,
-    "opcoes": [
-      "Sentido autorizado apenas para motociclos.",
-      "Fim da zona de obras.",
-      "Prioridade para veículos pesados.",
-      "Sentido não autorizado."
-    ],
-    "correta": 3,
-    "explicacao": "undefined Art. 13.º, n.º 4, al. a)"
-  },
-  {
-    "numero": 19,
     "tema": "Baias direccionais A65",
     "dificuldade": "média",
     "enunciado": "Para que servem as baias direccionais A65 previstas entre os dispositivos complementares de sinalização temporária?",
@@ -290,7 +275,7 @@ window.EXAMES[47] = [
     "explicacao": "undefined Art. 13.º, n.º 4, al. b)"
   },
   {
-    "numero": 20,
+    "numero": 19,
     "tema": "Balizas A66, A67 e A68",
     "dificuldade": "média",
     "enunciado": "Qual é a função geral das balizas A66, A67 e A68 na sinalização temporária?",
@@ -305,7 +290,7 @@ window.EXAMES[47] = [
     "explicacao": "undefined Art. 13.º, n.º 4, al. c)"
   },
   {
-    "numero": 21,
+    "numero": 20,
     "tema": "Cones A69",
     "dificuldade": "média",
     "enunciado": "Numa obra, são colocados cones A69 ao longo de uma faixa. Qual é a sua função no conjunto de dispositivos complementares?",
@@ -320,7 +305,7 @@ window.EXAMES[47] = [
     "explicacao": "undefined Art. 13.º, n.º 4, al. d)"
   },
   {
-    "numero": 22,
+    "numero": 21,
     "tema": "Pórtico A70",
     "dificuldade": "média",
     "enunciado": "Um pórtico A70 é instalado antes de uma obra numa via com limitação de altura. Que informação pode transmitir?",
@@ -335,7 +320,7 @@ window.EXAMES[47] = [
     "explicacao": "undefined Art. 13.º, n.º 4, al. e)"
   },
   {
-    "numero": 23,
+    "numero": 22,
     "tema": "Conjuntos de lanternas A71/A72",
     "dificuldade": "média",
     "enunciado": "Que dispositivos são identificados pelas referências A71 e A72 no Regulamento?",
@@ -350,7 +335,7 @@ window.EXAMES[47] = [
     "explicacao": "undefined Art. 13.º, n.º 4, al. f)"
   },
   {
-    "numero": 24,
+    "numero": 23,
     "tema": "Perfil móvel A73",
     "dificuldade": "média",
     "enunciado": "Qual é a utilização prevista para o perfil móvel A73 na sinalização temporária?",
@@ -365,7 +350,7 @@ window.EXAMES[47] = [
     "explicacao": "undefined Art. 13.º, n.º 4, al. g)"
   },
   {
-    "numero": 25,
+    "numero": 24,
     "tema": "Robot A74",
     "dificuldade": "média",
     "enunciado": "O Regulamento inclui o robot A74 entre os dispositivos complementares de sinalização temporária. Em que contexto deve ser entendido?",
@@ -380,7 +365,7 @@ window.EXAMES[47] = [
     "explicacao": "undefined Art. 13.º, n.º 4, al. h)"
   },
   {
-    "numero": 26,
+    "numero": 25,
     "tema": "Atrelado de balizamento A75 e seta luminosa A76",
     "dificuldade": "média",
     "enunciado": "Uma obra utiliza um atrelado A75 e uma seta luminosa A76. Qual é a função regulamentar associada a estes dispositivos?",
@@ -389,8 +374,9 @@ window.EXAMES[47] = [
       "Aumentar a velocidade máxima permitida no troço.",
       "Autorizar o estacionamento de veículos particulares.",
       "Indicar a presença de uma passagem de nível.",
-      null
+      "O A75 assinala mudança brusca de direcção e o A76 é uma seta luminosa de sinalização."
     ],
-    "explicacao": "undefined Art. 13.º, n.º 4, als. i) e j)"
+    "explicacao": "undefined Art. 13.º, n.º 4, als. i) e j)",
+    "correta": 3
   }
 ];
