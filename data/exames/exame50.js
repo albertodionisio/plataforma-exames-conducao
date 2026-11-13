@@ -26,12 +26,12 @@ window.EXAMES[50] = [
     "enunciado": "Quando uma contravenção rodoviária não estiver inteiramente regulada no Código da Estrada, que regime se aplica subsidiariamente?",
     "imagem": null,
     "opcoes": [
-      "O regime geral das infracções, sem prejuízo do Código e da legislação rodoviária complementar ou especial.",
       "Apenas as regras internas da seguradora.",
       "O regulamento municipal, em qualquer circunstância.",
-      "As regras escolhidas pelo agente fiscalizador."
+      "As regras escolhidas pelo agente fiscalizador.",
+      "O regime geral das infracções, sem prejuízo do Código e da legislação rodoviária complementar ou especial."
     ],
-    "correta": 0,
+    "correta": 3,
     "explicacao": "As contravenções são reguladas pelo Código da Estrada e pela legislação rodoviária complementar ou especial; subsidiariamente, aplica-se o regime geral das infracções. (Art. 138.º)."
   },
   {
@@ -57,11 +57,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "É aplicada apenas a sanção da infracção mais antiga.",
-      "As sanções aplicadas às contravenções em concurso são cumuladas materialmente.",
       "As sanções anulam-se umas às outras.",
-      "É aplicada automaticamente uma única multa média."
+      "É aplicada automaticamente uma única multa média.",
+      "As sanções aplicadas às contravenções em concurso são cumuladas materialmente."
     ],
-    "correta": 1,
+    "correta": 3,
     "explicacao": "As sanções aplicadas às contravenções em concurso são cumuladas materialmente. (Art. 139.º, n.º 3)."
   },
   {
@@ -73,10 +73,10 @@ window.EXAMES[50] = [
     "opcoes": [
       "Em simples e complexas.",
       "Em administrativas e criminais.",
-      "Em leves, médias e graves.",
-      "Em urbanas e interurbanas."
+      "Em urbanas e interurbanas.",
+      "Em leves, médias e graves."
     ],
-    "correta": 2,
+    "correta": 3,
     "explicacao": "As contravenções rodoviárias classificam-se em leves, médias e graves. (Art. 141.º, n.º 1)."
   },
   {
@@ -103,10 +103,10 @@ window.EXAMES[50] = [
     "opcoes": [
       "Não admitem aplicação de multa.",
       "São sempre punidas com prisão.",
-      "São sancionadas apenas com advertência.",
-      "São sancionáveis com multa e sanção acessória."
+      "São sancionáveis com multa e sanção acessória.",
+      "São sancionadas apenas com advertência."
     ],
-    "correta": 3,
+    "correta": 2,
     "explicacao": "As contravenções médias ou graves são sancionáveis com multa e com sanção acessória. (Art. 141.º, n.º 3)."
   },
   {
@@ -131,12 +131,12 @@ window.EXAMES[50] = [
     "enunciado": "Um condutor pratica pela primeira vez uma contravenção média punível com inibição de conduzir. Qual é a duração prevista para a primeira ocorrência?",
     "imagem": null,
     "opcoes": [
-      "Três meses.",
       "Seis meses.",
+      "Três meses.",
       "Um ano.",
       "Dois anos."
     ],
-    "correta": 0,
+    "correta": 1,
     "explicacao": "A inibição por contravenção média é de três meses na primeira vez, seis meses na segunda, um ano na terceira e dois anos na quarta. (Art. 148.º, n.º 2)."
   },
   {
@@ -177,11 +177,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "O período em que o condutor esteve fora do país.",
-      "O tempo em que o veículo esteve na oficina.",
       "O tempo durante o qual cumpriu a sanção acessória, a proibição de conduzir ou a interdição de concessão de título.",
+      "O tempo em que o veículo esteve na oficina.",
       "O período de férias do condutor."
     ],
-    "correta": 2,
+    "correta": 1,
     "explicacao": "No prazo de cinco anos não se conta o tempo durante o qual o transgressor cumpriu a sanção acessória ou a proibição de conduzir, ou esteve sujeito à interdição de concessão de título. (Art. 144.º, n.º 2)."
   },
   {
@@ -238,10 +238,10 @@ window.EXAMES[50] = [
     "opcoes": [
       "Um ano.",
       "Dois anos.",
-      "Três anos.",
-      "Cinco anos."
+      "Cinco anos.",
+      "Três anos."
     ],
-    "correta": 3,
+    "correta": 2,
     "explicacao": "Quando é determinada a cassação, não pode ser concedido novo título de condução de veículos a motor, de qualquer categoria, pelo período de cinco anos. (Art. 149.º, n.º 3)."
   },
   {
