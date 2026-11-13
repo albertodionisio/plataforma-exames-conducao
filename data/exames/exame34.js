@@ -75,7 +75,7 @@ window.EXAMES[34] = [
       "Recua sempre o veículo mais pesado, independentemente da inclinação.",
       "Os dois devem recuar ao mesmo tempo até encontrarem espaço."
     ],
-    "correta": 1,
+    "correta": 0,
     "explicacao": "Nas vias de inclinação acentuada, recua o veículo que está a subir. A excepção ocorre quando a manobra for manifestamente mais fácil para o veículo que desce. (Art. 41.º, n.º 4.)"
   },
   {
@@ -90,7 +90,7 @@ window.EXAMES[34] = [
       "Apenas quando circular dentro de uma localidade.",
       "Só quando o outro condutor fizer sinal de luzes."
     ],
-    "correta": 2,
+    "correta": 1,
     "explicacao": "Os veículos com largura total superior a 2 m ou comprimento total superior a 8 m, incluindo a carga, devem diminuir a velocidade ou parar quando as condições da faixa, do perfil ou do pavimento não permitirem um cruzamento seguro. (Art. 41.º, n.º 6.)"
   },
   {
