@@ -197,18 +197,18 @@ window.EXAMES[36] = [
   },
   {
     "numero": 14,
-    "tema": "Velocidade excessiva sem excesso numérico",
+    "tema": "Limite máximo com reboque",
     "dificuldade": "média",
-    "enunciado": "Um automóvel circula abaixo do limite legal, mas aproxima-se de uma curva sem conseguir parar dentro do espaço visível. A velocidade é:",
+    "enunciado": "Fora de uma localidade, qual é o limite máximo geral de velocidade para um automóvel ligeiro de passageiros que circula com reboque?",
     "imagem": null,
     "opcoes": [
-      "Sempre permitida por estar abaixo do limite.",
-      "Excessiva, porque não permite parar no espaço livre visível.",
-      "Correcta se o condutor conhecer bem a estrada.",
-      "Permitida durante o dia."
+      "120 km/h.",
+      "100 km/h.",
+      "90 km/h.",
+      "80 km/h."
     ],
     "correta": 1,
-    "explicacao": "A velocidade pode ser excessiva mesmo abaixo do limite legal se o veículo não puder parar no espaço livre e visível à sua frente (artigo 30.º)."
+    "explicacao": "A tabela do artigo 33.º, n.º 1, fixa em 100 km/h o limite máximo fora das localidades para automóveis ligeiros de passageiros e mistos que circulem com reboque. Este limite não dispensa a adaptação da velocidade às condições concretas da via. (Arts. 29.º, 32.º e 33.º, n.º 1.)"
   },
   {
     "numero": 15,
@@ -317,18 +317,18 @@ window.EXAMES[36] = [
   },
   {
     "numero": 22,
-    "tema": "Via enlameada",
+    "tema": "Moderação junto de sinais de perigo",
     "dificuldade": "média",
-    "enunciado": "Numa estrada enlameada, o veículo pode perder aderência. O condutor deve:",
+    "enunciado": "Um condutor aproxima-se de um local anunciado por um sinal de perigo. Que comportamento deve adoptar quanto à velocidade?",
     "imagem": null,
     "opcoes": [
-      "Fazer travagens bruscas para testar os pneus.",
-      "Moderar especialmente a velocidade e conduzir de acordo com a aderência.",
-      "Acelerar para atravessar rapidamente.",
-      "Seguir muito próximo de outro veículo."
+      "Manter a velocidade máxima geral, porque o sinal apenas informa.",
+      "Moderar especialmente a velocidade na aproximação ao local assinalado.",
+      "Acelerar para atravessar rapidamente a zona de perigo.",
+      "Reduzir a velocidade apenas se já existir um obstáculo na faixa."
     ],
     "correta": 1,
-    "explicacao": "O artigo 32.º inclui vias enlameadas ou com precárias condições de aderência entre as situações de moderação especial."
+    "explicacao": "O Código determina que a velocidade seja especialmente moderada nos locais assinalados com sinais de perigo, mesmo antes de o condutor encontrar um obstáculo concreto. (Art. 32.º, n.º 1, al. j).)"
   },
   {
     "numero": 23,
