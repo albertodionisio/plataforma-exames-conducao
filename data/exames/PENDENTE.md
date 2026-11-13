@@ -20,7 +20,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-001 — Exame 2 (grátis)
-- Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 — ficheiros: data/exames/exame2.js, docs/referencias-exames/exame2-mapeamento.md, public/exames/exame2/ (imagens), data/exames/PENDENTE.md — último sinal: 2026-11-13 — transferência autorizada expressamente pelo dono nesta sessão.
+- Estado: AGUARDA INTEGRAÇÃO — FE-008 — 2026-11-13 — dados, mapa e imagens concluídos; integração pendente em index.html, sem tocar no ficheiro enquanto FE-008 não libertar a reserva — último sinal: 2026-11-13.
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame2.js` (novo) e `docs/referencias-exames/exame2-mapeamento.md`. Se for preciso registar o ficheiro, `index.html`/`app.js` (confirmar que nenhuma outra tarefa EM CURSO os usa).
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 2 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta para a revisão após submissão; abre no ESTRADA com cronómetro de 60 minutos, sem feedback durante a realização, resultado final e revisão comentada; mapa completo; validação automática e teste no navegador sem erros.
@@ -39,7 +39,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Actualizar o registo de progresso desta tarefa para indicar que esta instrução foi recebida e que o plano foi alinhado. Não alterar tarefas ou ficheiros reservados a outras sessões.
 
 ## DADOS-002 — Exame 3 (grátis)
-- Estado: EM CURSO — Claude-DADOS001-002 — 2026-11-13 23:07 UTC+02 — ficheiros: data/exames/exame3.js, docs/referencias-exames/exame3-mapeamento.md, public/ (imagens), index.html — último sinal: 2026-11-13 23:07 UTC+02 — assumida com autorização expressa do dono (instrução de execução, 13/11/2026)
+- Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 — ficheiros: data/exames/exame3.js, docs/referencias-exames/exame3-mapeamento.md, public/exames/exame3/ (imagens), data/exames/PENDENTE.md — último sinal: 2026-11-13 — transferência autorizada expressamente pelo dono nesta sessão.
 - Pedido: extrair as 25 perguntas do Exame 3 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame3.js` (novo) e `docs/referencias-exames/exame3-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 3 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame deve respeitar integralmente o fluxo definido em `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
