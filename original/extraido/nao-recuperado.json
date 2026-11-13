@@ -3,14 +3,22 @@
     {
       "elemento": "explicacao",
       "exames": [
-        1
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "motivo": "o APK não guarda explicações; o campo fica null"
     },
     {
       "elemento": "tema",
       "exames": [
-        1
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "motivo": "o APK não guarda tema ou matéria por pergunta; o campo fica null"
     }

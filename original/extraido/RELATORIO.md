@@ -5,13 +5,17 @@
 - Classe: `Lcom/app/codigoesinaisdetransito/BaseDadosExame;`, método `<init>`: 17289 instruções interpretadas
 - Instruções não interpretadas: nenhuma
 - Entradas no APK: 750 perguntas em 30 exames
-- Âmbito da tarefa: exames 1 a 10; publicados até agora: [1] (completo: False)
+- Âmbito da tarefa: exames 1 a 10; publicados até agora: [1, 2, 3, 4, 5] (completo: False)
 
 ## Resultado por exame
 
 | Exame | Perguntas | Alternativas vazias | Imagens ligadas | Imagens prováveis em branco | Avisos |
 |---|---|---|---|---|---|
 | 1 | 25 | 16 | 25 | 0 | {'enunciado_repetido_no_exame': 5, 'enunciado_igual_ao_da_pergunta_anterior': 1} |
+| 2 | 25 | 11 | 25 | 0 | {'enunciado_repetido_no_exame': 3} |
+| 3 | 25 | 13 | 25 | 0 | {'enunciado_repetido_no_exame': 7, 'enunciado_igual_ao_da_pergunta_anterior': 1} |
+| 4 | 25 | 7 | 25 | 0 | — |
+| 5 | 25 | 14 | 25 | 0 | {'enunciado_repetido_no_exame': 4} |
 
 ## O que não foi recuperado
 
