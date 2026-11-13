@@ -257,19 +257,19 @@ window.EXAMES[2] = [
     "numero": 15,
     "tema": "Auto-estradas",
     "dificuldade": "fácil",
-    "enunciado": "Nas auto-estradas, salvo situações legalmente excepcionadas, é proibido circular a uma velocidade inferior a:",
+    "enunciado": "Um veículo não consegue atingir 40 km/h em patamar. Pode circular numa auto-estrada devidamente sinalizada?",
     "imagem": {
       "descricao": "Velocímetro de automóvel a indicar cerca de 40 km/h",
       "src": "public/exames/exame2/exame2_15.jpg"
     },
     "opcoes": [
-      "40 km/h.",
-      "60 km/h.",
-      "50 km/h.",
-      "70 km/h."
+      "Não. Veículos incapazes de atingir 40 km/h em patamar não podem circular numa auto-estrada.",
+      "Sim, desde que se mantenha na via mais à esquerda, adapte a velocidade e não provoque embaraço ao trânsito.",
+      "Sim, desde que utilize as luzes de perigo durante todo o percurso.",
+      "Não, apenas quando o limite máximo da auto-estrada seja igual a 40 km/h."
     ],
     "correta": 0,
-    "explicacao": "Nas auto-estradas, a circulação não pode ser feita a menos de 40 km/h, salvo situações legalmente excepcionadas. Esta regra também exclui veículos incapazes de atingir essa velocidade em patamar."
+    "explicacao": "Os veículos que não conseguem atingir 40 km/h em patamar não podem circular nas auto-estradas devidamente sinalizadas. A regra procura evitar diferenças de velocidade que criem risco para os restantes utentes."
   },
   {
     "numero": 16,
@@ -365,19 +365,19 @@ window.EXAMES[2] = [
     "numero": 21,
     "tema": "Sinais dos condutores",
     "dificuldade": "média",
-    "enunciado": "O condutor estende o braço para fora e faz o movimento vertical indicado na imagem. O que está a comunicar?",
+    "enunciado": "Se o indicador de direcção estiver avariado e o condutor precisar de indicar que vai reduzir a velocidade, que gesto deve utilizar?",
     "imagem": {
       "descricao": "Braço direito estendido horizontalmente, palma voltada para o solo, a oscilar de cima para baixo",
       "src": "public/exames/exame2/exame2_21.jpg"
     },
     "opcoes": [
-      "Que está a autorizar o veículo de trás a ultrapassá-lo.",
-      "Que pretende mudar de direcção para a esquerda, mantendo o braço imóvel.",
-      "Que pretende reduzir a velocidade.",
-      "Que vai iniciar a marcha imediatamente, sem aguardar pela via livre."
+      "Estender o braço direito horizontalmente, com a palma voltada para a frente, mantendo-o imóvel durante toda a manobra.",
+      "Estender o braço direito, incliná-lo para baixo e movê-lo repetidamente de trás para a frente, com a palma voltada para a frente.",
+      "Estender o braço direito na horizontal, com a palma para baixo, e oscilar de cima para baixo.",
+      "Levantar o braço direito verticalmente, com a palma voltada para a frente."
     ],
     "correta": 2,
-    "explicacao": "Este gesto comunica a intenção de reduzir a velocidade: o braço direito fica estendido horizontalmente, com a palma voltada para o solo, e oscila de cima para baixo."
+    "explicacao": "Quando o indicador de direcção não funciona, o gesto de redução de velocidade é feito com o braço direito na horizontal, a palma voltada para o solo e um movimento repetido de cima para baixo. O gesto de inclinar o braço e movê-lo de trás para a frente comunica que o condutor pode ser ultrapassado."
   },
   {
     "numero": 22,
