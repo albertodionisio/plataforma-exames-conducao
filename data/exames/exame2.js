@@ -23,19 +23,19 @@ window.EXAMES[2] = [
     "numero": 2,
     "tema": "Sinais de obrigação",
     "dificuldade": "fácil",
-    "enunciado": "O que indica o sinal de trânsito apresentado na imagem?",
+    "enunciado": "Perante o sinal F13 da imagem, quais utentes são obrigados a utilizar a pista indicada?",
     "imagem": {
       "descricao": "Sinal circular azul F13, com símbolos de peão e velocípede",
       "src": "public/exames/exame2/exame2_2.jpg"
     },
     "opcoes": [
-      "Pista destinada apenas aos veículos de tracção manual.",
-      "Pista obrigatória exclusivamente para peões.",
-      "Pista obrigatória para peões e velocípedes.",
-      "Trânsito proibido a peões e a velocípedes."
+      "Todos os veículos automóveis e motociclos, sem distinção.",
+      "Apenas os peões, ficando os velocípedes na faixa comum.",
+      "Peões e velocípedes.",
+      "Apenas os velocípedes, ficando os peões no passeio."
     ],
     "correta": 2,
-    "explicacao": "O sinal F13 indica uma pista obrigatória para velocípedes e peões. Ambos devem utilizar a pista especialmente destinada a esses utentes."
+    "explicacao": "O sinal F13 obriga os peões e os velocípedes a utilizar a pista especialmente destinada a ambos. Não é uma pista exclusiva de apenas uma destas categorias."
   },
   {
     "numero": 3,
@@ -329,19 +329,19 @@ window.EXAMES[2] = [
     "numero": 19,
     "tema": "Filas de trânsito múltiplas",
     "dificuldade": "fácil",
-    "enunciado": "Na estrada representada, com duas vias no mesmo sentido, qual deve ser a via normalmente utilizada quando não pretende ultrapassar nem mudar de direcção?",
+    "enunciado": "Na estrada da imagem, um condutor segue atrás de um veículo mais lento na via mais à esquerda e pretende ultrapassá-lo. Que deve fazer?",
     "imagem": {
       "descricao": "Estrada dividida com várias vias de circulação no mesmo sentido",
       "src": "public/exames/exame2/exame2_19.jpg"
     },
     "opcoes": [
-      "A via mais à direita, em qualquer circunstância, mesmo sem sinalização que o determine.",
-      "A via de trânsito mais à esquerda.",
-      "A via que estiver mais próxima da berma, independentemente do destino ou das manobras pretendidas.",
-      "Qualquer via, porque a escolha é sempre indiferente quando não há congestionamento."
+      "Deve permanecer na via mais à esquerda e ultrapassar pela berma, mesmo que a berma esteja livre.",
+      "Pode utilizar temporariamente a via adjacente, se estiver livre e for seguro, e regressar à via mais à esquerda depois de ultrapassar.",
+      "Pode utilizar a via adjacente e permanecer nela durante todo o trajecto, sem regressar à via mais à esquerda e sem verificar as condições do trânsito.",
+      "Deve ultrapassar pela direita sem verificar o trânsito atrás, porque a via da direita está sempre livre."
     ],
     "correta": 1,
-    "explicacao": "Na situação ilustrada, sem necessidade de ultrapassar ou mudar de direcção, a circulação normal deve manter-se pela via mais à esquerda."
+    "explicacao": "A regra geral é circular pela via mais à esquerda. Para efectuar uma ultrapassagem, o condutor pode utilizar temporariamente outra via, desde que confirme que a manobra é segura, e deve regressar à via mais à esquerda quando terminar."
   },
   {
     "numero": 20,
