@@ -1,5 +1,5 @@
 // Exame 44 — 25 perguntas originais do ESTRADA.
-// Base legal: Código da Estrada de Moçambique, arts. 90.º, 91.º, 100.º, 102.º, 103.º, 105.º e 106.º.
+// Base legal: Código da Estrada de Moçambique, arts. 56.º, 90.º, 91.º, 100.º, 102.º, 103.º e 105.º.
 // Rastreabilidade: docs/referencias-exames/exame44-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[44] = [
@@ -146,9 +146,9 @@ window.EXAMES[44] = [
     "imagem": null,
     "opcoes": [
       "Deve ser visível apenas a 10 metros.",
+      "Deve ser colocado de forma a ficar bem visível a pelo menos 100 metros.",
       "Deve ficar visível somente para quem se aproxima pela retaguarda.",
-      "Pode ficar escondido pela carga, desde que esteja na vertical.",
-      "Deve ficar colocado de forma a ser bem visível a uma distância de, pelo menos, 100 metros."
+      "Pode ficar escondido pela carga se estiver na vertical."
     ],
     "correta": 1,
     "explicacao": "O artigo 91.º determina que o sinal seja colocado de modo a ficar bem visível a uma distância de, pelo menos, 100 metros. (Art. 91.º, n.º 3)."
@@ -162,8 +162,8 @@ window.EXAMES[44] = [
     "opcoes": [
       "Um casaco escuro para não distrair os outros condutores.",
       "Apenas luvas de protecção.",
-      "Um colete reflectivo.",
-      "Nenhum equipamento, se a operação for rápida."
+      "Nenhum equipamento, se a operação for rápida.",
+      "Um colete reflectivo."
     ],
     "correta": 3,
     "explicacao": "Nas circunstâncias de sinalização, reparação ou remoção de carga previstas no artigo, a pessoa que executa essas operações deve utilizar o colete reflectivo. (Art. 91.º, n.º 5)."
@@ -365,17 +365,17 @@ window.EXAMES[44] = [
   },
   {
     "numero": 25,
-    "tema": "Segurança de peões em condições de visibilidade",
+    "tema": "Altura da carga",
     "dificuldade": "média",
-    "enunciado": "Um condutor avista na faixa de rodagem um peão com deficiência visual que sinaliza a sua marcha com uma bengala. Que atitude deve adoptar?",
+    "enunciado": "Um veículo transporta uma carga que ultrapassa a altura normal da caixa. Qual é a altura máxima permitida pelo Código da Estrada, medida a partir do solo?",
     "imagem": null,
     "opcoes": [
-      "Continuar a marcha, porque o peão deve esperar que todos os veículos passem.",
-      "Ceder-lhe prioridade e, se necessário, parar para o deixar passar.",
-      "Fazer sinais sonoros para que o peão se afaste.",
-      "Acelerar para atravessar antes de o peão chegar à faixa."
+      "Uma altura máxima de 3 metros, medida a partir do pavimento.",
+      "A carga não pode exceder 4,3 metros de altura, medidos a partir do solo.",
+      "Uma altura máxima de 5 metros, desde que esteja presa.",
+      "Não existe limite de altura se a carga estiver devidamente amarrada."
     ],
     "correta": 1,
-    "explicacao": "Quando avista na faixa de rodagem um peão com deficiência visual que sinaliza a marcha com bengala, o condutor deve ceder-lhe prioridade e, se necessário, parar para o deixar passar. (Art. 106.º, n.º 1)."
+    "explicacao": "Na disposição da carga, o Código determina que não seja excedida a altura de 4,3 metros, medida a partir do solo. (Art. 56.º, n.º 3, alínea f)."
   }
 ];
