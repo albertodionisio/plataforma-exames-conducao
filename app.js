@@ -15,26 +15,26 @@
   function rota() {
     clearInterval(timer);
     var h = location.hash.replace("#", "") || "/";
-    if (h === "/simulados") return catalogo();
+    if (h === "/exames") return catalogo();
     if (h === "/planos") return planos();
     if (h === "/resultado") return resultado();
-    if (h.indexOf("/simulado/") === 0) return iniciar(parseInt(h.split("/")[2], 10));
+    if (h.indexOf("/exame/") === 0) return iniciar(parseInt(h.split("/")[2], 10));
     inicio();
   }
 
   function inicio() {
-    var h = historico(), ult = h.length ? "<div class='card'><h2>Última tentativa</h2><p>Simulado " + h[0].n + ": " + h[0].certas + " certas em " + h[0].total + " (" + nota(h[0].nota) + ").</p></div>" : "";
+    var h = historico(), ult = h.length ? "<div class='card'><h2>Última tentativa</h2><p>Exame " + h[0].n + ": " + h[0].certas + " certas em " + h[0].total + " (" + nota(h[0].nota) + ").</p></div>" : "";
     app.innerHTML = "<h1>" + esc(A.slogan) + "</h1>" +
-      "<p>Pratica com " + A.totalSimulados + " simulados de " + A.perguntasPorSimulado + " perguntas, com explicação a cada resposta.</p>" +
-      "<p><a class='btn' href='#/simulados'>Ver simulados</a> <a class='btn sec' href='#/planos'>Planos</a></p>" + ult +
-      "<div class='aviso'>Versão em construção: o Simulado 1 já está disponível.</div>";
+      "<p>Prepara-te para os exames com " + A.totalExames + " exames de " + A.perguntasPorExame + " perguntas, com explicação a cada resposta.</p>" +
+      "<p><a class='btn' href='#/exames'>Ver exames</a> <a class='btn sec' href='#/planos'>Planos</a></p>" + ult +
+      "<div class='aviso'>Versão em construção: o Exame 1 já está disponível.</div>";
   }
 
   function catalogo() {
-    var html = "<h1>Simulados</h1><p>Os " + A.gratuitos + " primeiros são gratuitos. Os restantes precisam de assinatura. Selecciona um exame bloqueado para conhecer os planos de acesso.</p><div class='grelha'>";
-    for (var n = 1; n <= A.totalSimulados; n++) {
+    var html = "<h1>Exames</h1><p>Os " + A.gratuitos + " primeiros são gratuitos. Os restantes precisam de assinatura. Selecciona um exame bloqueado para conhecer os planos de acesso.</p><div class='grelha'>";
+    for (var n = 1; n <= A.totalExames; n++) {
       var livre = n <= A.gratuitos, pronto = !!EX[n];
-      html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='" + (livre ? "#/simulado/" + n : "#/planos") + "'><b>Simulado " + n + "</b><small>" + (livre ? (pronto ? "Grátis" : "Em breve") : "Acesso por plano") + "</small></a>";
+      html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='" + (livre ? "#/exame/" + n : "#/planos") + "'><b>Exame " + n + "</b><small>" + (livre ? (pronto ? "Grátis" : "Em breve") : "Acesso por plano") + "</small></a>";
     }
     app.innerHTML = html + "</div>";
   }
@@ -49,14 +49,14 @@
   }
 
   function iniciar(n) {
-    if (!n || n < 1 || n > A.totalSimulados) return catalogo();
+    if (!n || n < 1 || n > A.totalExames) return catalogo();
     if (n > A.gratuitos) {
-      app.innerHTML = "<h1>Simulado " + n + "</h1><div class='card'><p>Este simulado está bloqueado e requer um plano de acesso.</p><p><a class='btn' href='#/planos'>Consultar planos disponíveis</a> <a class='btn sec' href='#/simulados'>Voltar aos simulados</a></p></div>";
+      app.innerHTML = "<h1>Exame " + n + "</h1><div class='card'><p>Este exame está bloqueado e requer um plano de acesso.</p><p><a class='btn' href='#/planos'>Consultar planos disponíveis</a> <a class='btn sec' href='#/exames'>Voltar aos exames</a></p></div>";
       return;
     }
     var Q = EX[n];
     if (!Q) {
-      app.innerHTML = "<h1>Simulado " + n + "</h1><div class='card'><p>Este simulado está em preparação.</p><p><a class='btn sec' href='#/simulados'>Voltar</a></p></div>";
+      app.innerHTML = "<h1>Exame " + n + "</h1><div class='card'><p>Este exame está em preparação.</p><p><a class='btn sec' href='#/exames'>Voltar</a></p></div>";
       return;
     }
     var agora = Date.now();
@@ -74,7 +74,7 @@
 
   function questao() {
     var Q = estado.Q, q = Q[estado.i], conf = estado.conf[estado.i], sel = estado.resp[estado.i];
-    var h = "<div class='estado'><span>Simulado " + estado.n + " · Pergunta " + (estado.i + 1) + " de " + Q.length + "</span><span class='tempo' id='tempo'>" + fmt(restante()) + "</span></div>";
+    var h = "<div class='estado'><span>Exame " + estado.n + " · Pergunta " + (estado.i + 1) + " de " + Q.length + "</span><span class='tempo' id='tempo'>" + fmt(restante()) + "</span></div>";
     h += "<h2>" + esc(q.enunciado) + "</h2>";
     if (q.imagem) h += q.imagem.src ? "<img class='img' src='" + q.imagem.src + "' alt='Imagem da pergunta'>" : "<div class='img pend'>Imagem em preparação</div>";
     q.opcoes.forEach(function (o, k) {
@@ -110,9 +110,9 @@
     if (!estado || !estado.res) return inicio();
     var r = estado.res, h = "<h1>Resultado</h1><div class='card'><div class='nota'>" + nota(r.nota) + " / " + nota(r.total * A.valorPorResposta) + "</div>" +
       "<p>Certas: " + r.certas + " · Erradas: " + r.erradas + " · Em branco: " + r.branco + "</p>";
-    if (r.total === A.perguntasPorSimulado) h += "<p>Resultado interno de treino: <b>" + (r.nota >= A.limiar ? "Aprovado" : "Não aprovado") + "</b> (limiar " + A.limiar + "/20).</p>";
-    else h += "<p class='aviso'>Simulado de demonstração com " + r.total + " perguntas: ainda sem resultado de aprovação.</p>";
-    h += "</div><a class='btn' href='#/simulado/" + r.n + "'>Repetir</a> <a class='btn sec' href='#/simulados'>Outros simulados</a>";
+    if (r.total === A.perguntasPorExame) h += "<p>Resultado interno de treino: <b>" + (r.nota >= A.limiar ? "Aprovado" : "Não aprovado") + "</b> (limiar " + A.limiar + "/20).</p>";
+    else h += "<p class='aviso'>Exame de demonstração com " + r.total + " perguntas: ainda sem resultado de aprovação.</p>";
+    h += "</div><a class='btn' href='#/exame/" + r.n + "'>Repetir</a> <a class='btn sec' href='#/exames'>Outros exames</a>";
     app.innerHTML = h;
   }
 
