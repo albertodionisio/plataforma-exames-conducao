@@ -12,11 +12,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "A paragem é qualquer imobilização superior a cinco minutos.",
-      "O estacionamento ocorre apenas fora das localidades.",
       "A paragem limita-se ao tempo necessário para passageiros ou breves operações de carga e descarga, enquanto o estacionamento é outra imobilização não imposta pela circulação.",
+      "O estacionamento ocorre apenas fora das localidades.",
       "A paragem e o estacionamento têm sempre o mesmo significado."
     ],
-    "correta": 2,
+    "correta": 1,
     "explicacao": "A paragem é a imobilização pelo tempo estritamente necessário para entrada ou saída de passageiros ou breves operações de carga e descarga, com o condutor pronto a retomar a marcha. O estacionamento é a imobilização que não constitui paragem nem resulta das circunstâncias da circulação. (Art. 49.º, n.ºs 1 e 2)."
   },
   {
@@ -27,11 +27,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "Sim, se o condutor permanecer ao volante.",
-      "Não. É proibido estacionar nas vias quando isso impeça a formação de uma ou mais filas de trânsito.",
       "Sim, durante o período diurno.",
-      "Sim, se deixar espaço para motociclos."
+      "Sim, se deixar espaço para motociclos.",
+      "Não. É proibido estacionar nas vias quando isso impeça a formação de uma ou mais filas de trânsito."
     ],
-    "correta": 1,
+    "correta": 3,
     "explicacao": "É proibido estacionar nas vias em que o veículo impeça a formação de uma ou mais filas de trânsito, conforme a circulação se faça num ou nos dois sentidos. (Art. 51.º, n.º 1, al. a))."
   },
   {
@@ -41,12 +41,12 @@ window.EXAMES[50] = [
     "enunciado": "Fora de uma localidade, um condutor pretende estacionar numa faixa de rodagem assinalada como via com prioridade. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
+      "Não. Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal de via com prioridade.",
       "Sim, se o veículo estiver junto à margem.",
       "Sim, desde que ligue as luzes de presença.",
-      "Não. Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal de via com prioridade.",
       "Não, mas apenas durante a noite."
     ],
-    "correta": 2,
+    "correta": 0,
     "explicacao": "Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal «via com prioridade». (Art. 51.º, n.º 2, al. b))."
   },
   {
@@ -58,10 +58,10 @@ window.EXAMES[50] = [
     "opcoes": [
       "Deve ocupar sempre o centro da faixa de rodagem.",
       "Deve parar obrigatoriamente na margem direita, em qualquer circunstância.",
-      "Pode escolher qualquer lado da via, mesmo que bloqueie a circulação.",
-      "Deve fazê-lo fora da faixa de rodagem ou, se isso não for possível, o mais próximo possível da margem esquerda, paralelamente e no sentido da marcha."
+      "Deve fazê-lo fora da faixa de rodagem ou, se isso não for possível, o mais próximo possível da margem esquerda, paralelamente e no sentido da marcha.",
+      "Pode escolher qualquer lado da via, mesmo que bloqueie a circulação."
     ],
-    "correta": 3,
+    "correta": 2,
     "explicacao": "Fora das localidades, a paragem e o estacionamento devem ocorrer fora da faixa de rodagem; se tal não for possível, devem fazer-se o mais próximo possível da margem esquerda, paralelamente a esta e no sentido da marcha. (Art. 49.º, n.º 3)."
   },
   {
@@ -72,11 +72,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "Deve imobilizar o veículo em qualquer posição, desde que ligue as luzes de perigo.",
-      "Deve colocá-lo o mais próximo possível do limite esquerdo da faixa de rodagem, paralelamente e no sentido da marcha, respeitando a sinalização aplicável.",
       "Deve estacionar sempre no passeio.",
+      "Deve colocá-lo o mais próximo possível do limite esquerdo da faixa de rodagem, paralelamente e no sentido da marcha, respeitando a sinalização aplicável.",
       "Deve colocá-lo transversalmente à faixa de rodagem."
     ],
-    "correta": 1,
+    "correta": 2,
     "explicacao": "Dentro das localidades, deve usar-se o local especialmente destinado e a forma indicada; na sua falta, a imobilização faz-se na faixa de rodagem, o mais próximo possível do respectivo limite esquerdo, paralelamente e no sentido da marcha. (Art. 49.º, n.º 4)."
   },
   {
@@ -86,12 +86,12 @@ window.EXAMES[50] = [
     "enunciado": "Ao estacionar numa rua com vários veículos, que cuidado deve o condutor ter em relação aos outros veículos e ao próprio automóvel?",
     "imagem": null,
     "opcoes": [
+      "Deixar intervalos necessários à saída e ocupação de lugares e tomar precauções para impedir que o veículo se ponha em movimento.",
       "Deixar o veículo em ponto morto numa descida.",
       "Ocupar o espaço entre dois veículos sem deixar margem para manobras.",
-      "Deixar intervalos necessários à saída e ocupação de lugares e tomar precauções para impedir que o veículo se ponha em movimento.",
       "Encostar o veículo a outro para impedir que se desloque."
     ],
-    "correta": 2,
+    "correta": 0,
     "explicacao": "Ao estacionar, o condutor deve deixar os intervalos indispensáveis à saída de outros veículos, à ocupação dos espaços vagos e ao acesso aos prédios, além de evitar que o veículo se ponha em movimento. (Art. 49.º, n.º 5)."
   },
   {
@@ -101,12 +101,12 @@ window.EXAMES[50] = [
     "enunciado": "Um condutor pretende parar por alguns minutos dentro de um túnel para atender uma chamada. A conduta é permitida?",
     "imagem": null,
     "opcoes": [
-      "Não. É proibido parar ou estacionar em túneis, pontes, passagens de nível e locais de visibilidade insuficiente.",
       "Sim, desde que ligue os quatro indicadores.",
       "Sim, se deixar espaço para outros veículos.",
-      "Sim, porque a proibição se aplica apenas ao estacionamento prolongado."
+      "Sim, porque a proibição se aplica apenas ao estacionamento prolongado.",
+      "Não. É proibido parar ou estacionar em túneis, pontes, passagens de nível e locais de visibilidade insuficiente."
     ],
-    "correta": 0,
+    "correta": 3,
     "explicacao": "O Código proíbe parar ou estacionar em pontes, túneis, passagens de nível, passagens inferiores ou superiores e locais de visibilidade insuficiente. (Art. 50.º, n.º 1, al. a))."
   },
   {
@@ -117,11 +117,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "Dois metros.",
+      "Cinco metros.",
       "Três metros.",
-      "Dez metros.",
-      "Cinco metros."
+      "Dez metros."
     ],
-    "correta": 3,
+    "correta": 1,
     "explicacao": "É proibido parar ou estacionar a menos de cinco metros para um e outro lado dos cruzamentos, entroncamentos ou rotundas. (Art. 50.º, n.º 1, al. b))."
   },
   {
@@ -131,12 +131,12 @@ window.EXAMES[50] = [
     "enunciado": "Um veículo está estacionado a quatro metros de uma passagem assinalada para peões e velocípedes. A posição respeita a distância legal?",
     "imagem": null,
     "opcoes": [
-      "Sim, porque a proibição só começa a dois metros.",
       "Não. É proibido parar ou estacionar a menos de cinco metros dessas passagens.",
+      "Sim, porque a proibição só começa a dois metros.",
       "Sim, desde que não esteja a chover.",
       "Sim, se o condutor permanecer dentro do veículo."
     ],
-    "correta": 1,
+    "correta": 0,
     "explicacao": "É proibido parar ou estacionar a menos de cinco metros das passagens assinaladas para a travessia de peões e velocípedes. (Art. 50.º, n.º 1, al. d))."
   },
   {
@@ -161,12 +161,12 @@ window.EXAMES[50] = [
     "enunciado": "Um condutor encontra uma pista para velocípedes e um passeio livres. Pode utilizar um desses espaços para imobilizar o automóvel?",
     "imagem": null,
     "opcoes": [
-      "Não. A paragem e o estacionamento são proibidos nas pistas de velocípedes, passeios e outros locais destinados ao trânsito de peões.",
       "Sim, se deixar os quatro indicadores ligados.",
+      "Não. A paragem e o estacionamento são proibidos nas pistas de velocípedes, passeios e outros locais destinados ao trânsito de peões.",
       "Sim, desde que a imobilização dure menos de um minuto.",
       "Sim, se não houver ciclistas ou peões naquele momento."
     ],
-    "correta": 0,
+    "correta": 1,
     "explicacao": "O Código proíbe parar ou estacionar nas pistas de velocípedes, ilhéus direccionais, placas centrais de rotundas com trânsito giratório, passeios e demais locais destinados ao trânsito de peões. (Art. 50.º, n.º 1, al. f))."
   },
   {
@@ -178,26 +178,26 @@ window.EXAMES[50] = [
     "opcoes": [
       "Sim, porque o veículo não transpõe a linha.",
       "Sim, se ficar junto à berma.",
-      "Não. É proibido parar ou estacionar nessa situação quando a distância entre o veículo e a linha contínua seja inferior a três metros.",
-      "Não, mas apenas para veículos pesados."
+      "Não, mas apenas para veículos pesados.",
+      "Não. É proibido parar ou estacionar nessa situação quando a distância entre o veículo e a linha contínua seja inferior a três metros."
     ],
-    "correta": 2,
+    "correta": 3,
     "explicacao": "É proibido parar ou estacionar na faixa de rodagem quando esta esteja sinalizada com linha longitudinal contínua e a distância entre a linha e o veículo seja inferior a três metros. (Art. 50.º, n.º 1, al. g))."
   },
   {
     "numero": 13,
-    "tema": "Veículos com substâncias explosivas junto de passagens de nível",
+    "tema": "Estacionamento em zona de duração limitada",
     "dificuldade": "média",
-    "enunciado": "Um veículo que transporta substâncias explosivas pretende parar a oito metros de uma passagem de nível. Pode fazê-lo?",
+    "enunciado": "Um condutor estaciona numa zona de duração limitada, mas não cumpre as condições estabelecidas no respectivo regulamento. Como deve ser avaliada a situação?",
     "imagem": null,
     "opcoes": [
-      "Sim, se não houver comboio à vista.",
-      "Não. Para esses veículos, é proibido parar ou estacionar a menos de dez metros da passagem de nível.",
-      "Sim, se a passagem estiver protegida por barreiras.",
-      "Sim, desde que o condutor não abandone o veículo."
+      "É permitido, desde que o veículo esteja devidamente matriculado.",
+      "É permitido se o condutor permanecer dentro do veículo.",
+      "É proibido estacionar nessa zona sem cumprir o respectivo regulamento.",
+      "É permitido durante a noite."
     ],
-    "correta": 1,
-    "explicacao": "Os veículos que transportem substâncias explosivas não podem parar ou estacionar a menos de dez metros das passagens de nível. (Art. 50.º, n.º 1, al. h))."
+    "correta": 2,
+    "explicacao": "É proibido estacionar nas zonas de estacionamento de duração limitada quando não seja cumprido o respectivo regulamento. (Art. 51.º, n.º 1, al. h))."
   },
   {
     "numero": 14,
@@ -206,12 +206,12 @@ window.EXAMES[50] = [
     "enunciado": "Fora de uma localidade, um condutor pretende estacionar a 40 metros de uma curva de visibilidade reduzida. A posição é permitida?",
     "imagem": null,
     "opcoes": [
+      "Não. Fora das localidades, é proibido parar ou estacionar a menos de 50 metros de cruzamentos, entroncamentos, curvas ou lombas de visibilidade reduzida.",
       "Sim, porque a distância mínima é de 30 metros.",
       "Sim, se o veículo estiver junto à margem esquerda.",
-      "Não. Fora das localidades, é proibido parar ou estacionar a menos de 50 metros de cruzamentos, entroncamentos, curvas ou lombas de visibilidade reduzida.",
       "Não, porque é proibido estacionar em qualquer curva, independentemente da visibilidade."
     ],
-    "correta": 2,
+    "correta": 0,
     "explicacao": "Fora das localidades, é proibido parar ou estacionar a menos de cinquenta metros dos cruzamentos, entroncamentos, curvas ou lombas de visibilidade reduzida. (Art. 50.º, n.º 2, al. a))."
   },
   {
@@ -221,12 +221,12 @@ window.EXAMES[50] = [
     "enunciado": "Um condutor estaciona ao lado de outro veículo já estacionado, ocupando uma segunda fila e dificultando a circulação. A conduta é permitida?",
     "imagem": null,
     "opcoes": [
-      "Não. O estacionamento em segunda fila é proibido.",
       "Sim, se o condutor ficar ao volante.",
+      "Não. O estacionamento em segunda fila é proibido.",
       "Sim, desde que deixe os quatro indicadores ligados.",
       "Sim, quando o veículo da frente estiver vazio."
     ],
-    "correta": 0,
+    "correta": 1,
     "explicacao": "É proibido estacionar na faixa de rodagem em segunda fila e em locais que impeçam o acesso, a saída ou a ocupação de lugares por outros veículos. (Art. 51.º, n.º 1, al. b))."
   },
   {
@@ -237,11 +237,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "É permitida se o condutor deixar o número de telefone no vidro.",
-      "É proibida, porque não se pode estacionar nos locais de acesso a propriedades, parques ou lugares de estacionamento.",
       "É permitida durante o período diurno.",
-      "É permitida se não houver portão."
+      "É permitida se não houver portão.",
+      "É proibida, porque não se pode estacionar nos locais de acesso a propriedades, parques ou lugares de estacionamento."
     ],
-    "correta": 1,
+    "correta": 3,
     "explicacao": "O estacionamento é proibido nos lugares por onde se faça o acesso de pessoas ou veículos a propriedades, parques ou lugares de estacionamento. (Art. 51.º, n.º 1, al. c))."
   },
   {
@@ -252,11 +252,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "Sim, porque a proibição só se aplica a veículos pesados.",
-      "Sim, se não houver comboio à vista.",
       "Não. É proibido estacionar a menos de dez metros das passagens de nível.",
+      "Sim, se não houver comboio à vista.",
       "Não, porque é proibido parar a qualquer distância de uma passagem de nível."
     ],
-    "correta": 2,
+    "correta": 1,
     "explicacao": "O estacionamento é proibido a menos de dez metros das passagens de nível. (Art. 51.º, n.º 1, al. d))."
   },
   {
@@ -268,10 +268,10 @@ window.EXAMES[50] = [
     "opcoes": [
       "Sim, porque a proibição só se aplica dentro do posto.",
       "Sim, se o motor estiver desligado.",
-      "Sim, desde que não abasteça o veículo.",
-      "Não. É proibido estacionar a menos de cinco metros para um e outro lado dos postos de abastecimento."
+      "Não. É proibido estacionar a menos de cinco metros para um e outro lado dos postos de abastecimento.",
+      "Sim, desde que não abasteça o veículo."
     ],
-    "correta": 3,
+    "correta": 2,
     "explicacao": "É proibido estacionar a menos de cinco metros para um e outro lado dos postos de abastecimento de combustíveis. (Art. 51.º, n.º 1, al. e))."
   },
   {
@@ -298,10 +298,10 @@ window.EXAMES[50] = [
     "opcoes": [
       "Sim, se tiver matrícula.",
       "Sim, porque os reboques podem estacionar livremente em qualquer rua.",
-      "Não. É proibido estacionar máquinas, reboques ou semi-reboques desligados do veículo tractor, salvo em parques especialmente destinados a esse efeito.",
-      "Sim, desde que o reboque esteja vazio."
+      "Sim, desde que o reboque esteja vazio.",
+      "Não. É proibido estacionar máquinas, reboques ou semi-reboques desligados do veículo tractor, salvo em parques especialmente destinados a esse efeito."
     ],
-    "correta": 2,
+    "correta": 3,
     "explicacao": "O Código proíbe o estacionamento de máquinas, reboques ou semi-reboques quando não estejam atrelados ao veículo tractor, excepto em parques especialmente destinados a esse efeito. (Art. 51.º, n.º 1, al. g))."
   },
   {
@@ -312,11 +312,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "Sim, se as luzes de presença ficarem ligadas.",
-      "Não. Fora das localidades, é proibido estacionar de noite nas faixas de rodagem.",
       "Sim, desde que o veículo tenha triângulo.",
+      "Não. Fora das localidades, é proibido estacionar de noite nas faixas de rodagem.",
       "Sim, quando não houver iluminação pública."
     ],
-    "correta": 1,
+    "correta": 2,
     "explicacao": "Fora das localidades, é proibido estacionar de noite nas faixas de rodagem. (Art. 51.º, n.º 2, al. a))."
   },
   {
@@ -327,11 +327,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "Quando o condutor abandona o local e regressa depois da descarga.",
+      "Quando o condutor permanece presente, pronto a retomar a marcha, e a retoma se impedir a passagem de outros condutores.",
       "Quando a descarga demora o tempo que for necessário, mesmo que bloqueie a passagem.",
-      "Quando o veículo fica trancado e sem ninguém por perto.",
-      "Quando o condutor permanece presente, pronto a retomar a marcha, e a retoma se impedir a passagem de outros condutores."
+      "Quando o veículo fica trancado e sem ninguém por perto."
     ],
-    "correta": 3,
+    "correta": 1,
     "explicacao": "A proibição de estacionar não abrange a imobilização pelo tempo estritamente necessário para entrada ou saída de passageiros ou breves operações de carga e descarga, desde que o condutor esteja presente, pronto a retomar a marcha e o faça quando impedir a passagem. (Art. 51.º, n.º 3)."
   },
   {
@@ -341,12 +341,12 @@ window.EXAMES[50] = [
     "enunciado": "Para aplicar as distâncias legais de paragem ou estacionamento medidas a partir de uma curva, lomba ou passagem de nível, a contagem começa em que ponto?",
     "imagem": null,
     "opcoes": [
-      "No centro geométrico da estrada.",
       "No início da curva, lomba ou passagem de nível.",
+      "No centro geométrico da estrada.",
       "No ponto onde termina a sinalização horizontal.",
       "Na posição do primeiro veículo que estiver estacionado."
     ],
-    "correta": 1,
+    "correta": 0,
     "explicacao": "As distâncias referidas no Código contam-se a partir do início da curva, lomba ou passagem de nível. (Art. 52.º, al. a))."
   },
   {
@@ -371,12 +371,12 @@ window.EXAMES[50] = [
     "enunciado": "Um autocarro utilizado no transporte colectivo de passageiros pretende parar na faixa de rodagem para permitir a entrada de passageiros, fora de uma paragem especialmente destinada a esse fim. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
-      "Não. Na faixa de rodagem, só pode parar para entrada e saída de passageiros nos locais especialmente destinados a esse fim.",
       "Sim, desde que o autocarro tenha menos de 30 passageiros.",
+      "Não. Na faixa de rodagem, só pode parar para entrada e saída de passageiros nos locais especialmente destinados a esse fim.",
       "Sim, se a paragem durar menos de um minuto.",
       "Sim, quando o condutor ligar os quatro indicadores."
     ],
-    "correta": 0,
+    "correta": 1,
     "explicacao": "Na faixa de rodagem, o veículo utilizado no transporte colectivo de passageiros só pode parar para entrada e saída de passageiros nos locais especialmente destinados a esse fim. (Art. 53.º, n.º 1)."
   }
 ];
