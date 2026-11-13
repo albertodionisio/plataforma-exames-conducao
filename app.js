@@ -62,6 +62,16 @@
   function pararRelogio() {
     if (timer !== null) { clearInterval(timer); timer = null; }
   }
+  function restaurarUltimo() {
+    if (estado !== null) return !!(estado && estado.res);
+    try {
+      var salvo = JSON.parse(sessionStorage.getItem("ultima") || "null");
+      if (!salvo || !salvo.res || !Array.isArray(EX[salvo.n]) ||
+          EX[salvo.n].length !== Number(A.perguntasPorExame || 25)) return false;
+      estado = { n:salvo.n, Q:EX[salvo.n], i:0, fim:Date.now(), resp:{}, res:salvo.res };
+      return true;
+    } catch (e) { return false; }
+  }
   function rota() {
     pararRelogio();
     var h = location.hash.replace("#", "") || "/";
@@ -115,7 +125,6 @@
       return;
     }
     estado = { n:n, Q:Q, i:0, fim:Date.now() + Number(A.minutos || 60) * 60000, resp:{}, res:null };
-    location.hash = "#/realizar";
     renderQuestao();
     timer = setInterval(tick, 1000);
   }
@@ -127,7 +136,7 @@
     if (el) el.textContent = fmt(r);
     if (r <= 0) terminar("tempo");
   }
-  function renderQuestao() {
+  function renderQuestao(focoIndice) {
     if (!estado || estado.res) return;
     var Q = estado.Q, q = Q[estado.i], sel = estado.resp[estado.i];
     var respondidas = Object.keys(estado.resp).length;
@@ -136,9 +145,9 @@
       fmt(restante()) + "</span></div>";
     h += "<div class='progresso' aria-label='Progresso'><span style='width:" +
       Math.round((respondidas / Q.length) * 100) + "%'></span></div>";
-    h += "<h2>" + esc(q.enunciado) + "</h2>";
+    h += "<h2 id='titulo-pergunta' tabindex='-1'>" + esc(q.enunciado) + "</h2>";
     if (q.imagem) h += q.imagem.src ?
-      "<img class='img' src='" + esc(q.imagem.src) + "' alt='Imagem da pergunta'>" :
+      "<img class='img' src='" + esc(q.imagem.src) + "' alt='" + esc(q.imagem.descricao || "Imagem da pergunta") + "'>" :
       "<div class='img pend'>Imagem em preparação</div>";
     h += "<div class='opcoes' role='group' aria-label='Alternativas'>";
     q.opcoes.forEach(function (o, k) {
@@ -154,6 +163,10 @@
     h += "</div><div class='rodape-exame'><span>" + respondidas + " de " + Q.length +
       " respondidas</span><button class='btn terminar' type='button' data-action='submeter'>Terminar e submeter</button></div>";
     app.innerHTML = h;
+    var foco = typeof focoIndice === "number" ?
+      app.querySelector("[data-action='responder'][data-indice='" + focoIndice + "']") :
+      app.querySelector("#titulo-pergunta");
+    if (foco && typeof foco.focus === "function") foco.focus();
   }
   function terminar(motivo) {
     if (!estado || estado.res) return;
@@ -166,12 +179,20 @@
       }
     });
     var erradas = respondidas - certas, branco = estado.Q.length - respondidas;
+    var notaFinal = Math.round(certas * Number(A.valorPorResposta || 0.8) * 10) / 10;
+    var aprovado = estado.Q.length === Number(A.perguntasPorExame || 25) ?
+      notaFinal >= Number(A.limiar || 18) : null;
     estado.res = { certas:certas, erradas:erradas, branco:branco, total:estado.Q.length,
-      nota:certas * Number(A.valorPorResposta || 0.8), n:estado.n, motivo:motivo || "manual",
+      nota:notaFinal, aprovado:aprovado, n:estado.n, motivo:motivo || "manual",
       respostas:estado.Q.map(function (_, i) {
         return Object.prototype.hasOwnProperty.call(estado.resp, i) ? estado.resp[i] : null;
       }) };
     guardar({ n:estado.n, certas:certas, total:estado.Q.length, nota:estado.res.nota });
+    try {
+      sessionStorage.setItem("ultima", JSON.stringify({
+        n:estado.n, respostas:estado.res.respostas, res:estado.res
+      }));
+    } catch (e) {}
     location.hash = "#/resultado";
     resultado();
   }
@@ -181,12 +202,14 @@
       "'><span class='luz vermelha'></span><span class='luz amarela'></span><span class='luz verde'></span></div>";
   }
   function resultado() {
+    if (estado === null) restaurarUltimo();
     if (!estado || !estado.res) return inicio();
-    var r = estado.res, aprovado = r.nota >= Number(A.limiar || 18);
+    var r = estado.res, aprovado = r.aprovado;
     var h = "<h1>Resultado do Exame " + r.n + "</h1><div class='card resultado-card'>" +
-      semaforo(aprovado) + "<div class='nota'>" + nota(r.nota) + " / 20 valores</div>" +
-      "<h2 class='estado-final " + (aprovado ? "texto-aprovado" : "texto-reprovado") + "'>" +
-      (aprovado ? "APROVADO" : "REPROVADO") + "</h2>" +
+      (aprovado === null ? "" : semaforo(aprovado)) +
+      "<div class='nota'>" + nota(r.nota) + " / 20 valores</div>" +
+      (aprovado === null ? "" : "<h2 class='estado-final " + (aprovado ? "texto-aprovado" : "texto-reprovado") + "'>" +
+      (aprovado ? "APROVADO" : "REPROVADO") + "</h2>") +
       "<p>Certas: <b>" + r.certas + "</b> · Erradas: <b>" + r.erradas +
       "</b> · Em branco: <b>" + r.branco + "</b></p>" +
       "<p>Tempo: " + (r.motivo === "tempo" ? "terminou; exame submetido automaticamente." : "submissão pelo candidato.") + "</p></div>" +
@@ -195,6 +218,7 @@
     app.innerHTML = h;
   }
   function rever() {
+    if (estado === null) restaurarUltimo();
     if (!estado || !estado.res) return resultado();
     var h = "<h1>Revisão do Exame " + estado.n + "</h1>" +
       "<p>Consulta as tuas respostas, a resposta correcta e a explicação de cada pergunta.</p>";
@@ -202,7 +226,8 @@
       var sel = estado.res.respostas[i], acertou = sel === q.correta;
       h += "<article class='card revisao-pergunta'><h2>Pergunta " + (i + 1) + "</h2>" +
         "<p>" + esc(q.enunciado) + "</p>";
-      if (q.imagem && q.imagem.src) h += "<img class='img' src='" + esc(q.imagem.src) + "' alt='Imagem da pergunta'>";
+      if (q.imagem && q.imagem.src) h += "<img class='img' src='" + esc(q.imagem.src) + "' alt='" +
+        esc(q.imagem.descricao || "Imagem da pergunta") + "'>";
       h += "<ol type='A' class='lista-revisao'>";
       q.opcoes.forEach(function (o, k) {
         var classe = k === q.correta ? " resposta-correcta" : (k === sel ? " resposta-errada" : "");
@@ -226,12 +251,21 @@
     if (!acao || !estado || estado.res) return;
     if (acao === "responder") {
       var indice = Number(alvo.getAttribute("data-indice"));
-      if (indice >= 0 && indice < 4) { estado.resp[estado.i] = indice; renderQuestao(); }
+      if (indice >= 0 && indice < 4) {
+        estado.resp[estado.i] = indice;
+        if (Object.keys(estado.resp).length === estado.Q.length) terminar("completo");
+        else renderQuestao(indice);
+      }
     } else if (acao === "anterior" && estado.i > 0) {
       estado.i--; renderQuestao();
     } else if (acao === "proxima" && estado.i < estado.Q.length - 1) {
       estado.i++; renderQuestao();
-    } else if (acao === "submeter") terminar("manual");
+    } else if (acao === "submeter") {
+      var brancas = estado.Q.length - Object.keys(estado.resp).length;
+      if (brancas > 0 && !confirm("Tens " + brancas +
+          " pergunta(s) sem resposta. Valem zero. Submeter mesmo assim?")) return;
+      terminar("manual");
+    }
   });
   window.addEventListener("hashchange", function () {
     fecharMenu();
