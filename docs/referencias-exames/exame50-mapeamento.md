@@ -22,18 +22,18 @@ Conteúdo original do ESTRADA, não extraído do APK. Exame integrador que combi
 | 10 | Marcha atrás em auto-estrada | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
 | 11 | Distância de segurança | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 20.º, n.º 1 |
 | 12 | Rotunda | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 13 | Luz amarela | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
+| 13 | Passagem de nível e barreiras | Proibição de entrar enquanto as barreiras estejam atravessadas ou em movimento | Código, art. 67.º, n.º 2 |
 | 14 | Passagem estreita | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Regulamento, art. 37.º, n.º 2 |
 | 15 | Carga de areia | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Código, art. 64.º, n.º 2 |
-| 16 | Limite de velocidade e chuva | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Regulamento, art. 27.º; Código, arts. 29.º–32.º |
-| 17 | Categoria da carta | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Código, art. 126.º, n.º 3 |
-| 18 | Seguro obrigatório | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 157.º |
-| 19 | Peão com deficiência visual | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 106.º, n.º 4 |
-| 20 | Ultrapassagem no cruzamento | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 22.º, n.º 4 |
+| 16 | Limite de velocidade para pesados | Limite máximo geral fora das localidades para pesados de mercadorias | Código, art. 33.º, n.º 1 |
+| 17 | Carta emitida por Estado da SADC | Reconhecimento de títulos emitidos por Estados membros da SADC | Código, art. 129.º, n.º 1, al. b), e n.º 6 |
+| 18 | Troca de carta estrangeira | Prazo de 180 dias para troca após fixação de residência | Código, art. 131.º, n.º 5 |
+| 19 | Cinto de segurança | Obrigação de uso por condutor e passageiros em automóveis | Código, art. 87.º, n.º 1 |
+| 20 | Prioridade à direita | Prioridade do veículo que se apresenta pela direita em intersecção não sinalizada | Código, art. 38.º, n.º 3, al. a), e n.º 4 |
 | 21 | Passagem de nível bloqueada | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 67.º, n.º 1 |
 | 22 | Ordem de paragem | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 11.º, n.º 1 |
 | 23 | Luzes de nevoeiro | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 61.º, n.º 2 |
-| 24 | Fadiga do condutor | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 29.º, n.º 1 |
+| 24 | Álcool zero em transporte profissional | Taxa de 0,0 mg/l para transporte público ou carga perigosa em exercício | Código, art. 81.º, n.º 4 |
 | 25 | Capacete e passageiro | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 87.º, n.º 2 |
 
 ## Distribuição das respostas correctas

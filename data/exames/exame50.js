@@ -186,18 +186,18 @@ window.EXAMES[50] = [
   },
   {
     "numero": 13,
-    "tema": "Luz amarela",
+    "tema": "Passagem de nível com barreiras em movimento",
     "dificuldade": "média",
-    "enunciado": "A luz amarela acende quando o veículo ainda consegue parar em segurança. Qual é a atitude correcta?",
+    "enunciado": "Ao aproximar-se de uma passagem de nível, o condutor vê as barreiras a descer. Mesmo sem avistar o comboio, pode iniciar a travessia?",
     "imagem": null,
     "opcoes": [
-      "Acelerar para evitar o vermelho.",
-      "Parar antes da zona regulada, salvo se já estiver tão perto que não possa parar em segurança.",
-      "Ignorar a luz se não houver peões.",
-      "Parar dentro do cruzamento."
+      "Sim, se acelerar para passar antes do fecho.",
+      "Não. Não deve entrar enquanto os meios de protecção estiverem atravessados na via ou em movimento.",
+      "Sim, se não houver sinal sonoro.",
+      "Sim, desde que o veículo seja ligeiro."
     ],
     "correta": 1,
-    "explicacao": "A luz amarela proíbe a entrada, salvo quando o veículo já está muito perto e não pode parar em segurança. (Regulamento, art. 17.º, n.º 1, al. b))."
+    "explicacao": "O condutor não deve entrar na passagem de nível enquanto os meios de protecção estejam atravessados na via pública ou em movimento. (Código da Estrada, art. 67.º, n.º 2)."
   },
   {
     "numero": 14,
@@ -231,78 +231,78 @@ window.EXAMES[50] = [
   },
   {
     "numero": 16,
-    "tema": "Limite de velocidade e chuva",
+    "tema": "Limite de velocidade para automóveis pesados",
     "dificuldade": "média",
-    "enunciado": "O condutor encontra um sinal de proibição de exceder 60 km/h. A estrada está molhada e a visibilidade é fraca. Como deve proceder?",
+    "enunciado": "Fora das localidades, qual é o limite máximo geral de velocidade para um automóvel pesado de mercadorias, sem prejuízo de limites inferiores ou de condições da via?",
     "imagem": null,
     "opcoes": [
-      "Circular sempre a 60 km/h exactos.",
-      "Circular a 70 km/h se não houver trânsito.",
-      "Não exceder 60 km/h e reduzir ainda mais se as condições exigirem.",
-      "Ignorar o sinal se tiver bons pneus."
+      "120 km/h.",
+      "80 km/h.",
+      "100 km/h.",
+      "90 km/h."
     ],
     "correta": 2,
-    "explicacao": "O E12 proíbe exceder a velocidade indicada; a velocidade também deve ser adaptada às condições da via e visibilidade. (Regulamento, art. 27.º; Código, arts. 29.º–32.º)."
+    "explicacao": "A tabela do artigo 33.º, n.º 1, fixa em 100 km/h o limite máximo geral fora das localidades para automóveis pesados de mercadorias e mistos, sem prejuízo da adaptação da velocidade às condições concretas da via."
   },
   {
     "numero": 17,
-    "tema": "Categoria da carta",
+    "tema": "Reconhecimento de carta de condução da SADC",
     "dificuldade": "média",
-    "enunciado": "Um condutor apresenta carta válida, mas a categoria do veículo não consta do título. Pode conduzi-lo?",
+    "enunciado": "Um condutor apresenta uma carta válida emitida por um Estado membro da SADC e reúne a idade mínima exigida. Pode conduzir em Moçambique?",
     "imagem": null,
     "opcoes": [
-      "Sim, se tiver experiência.",
-      "Não; o título só habilita para as categorias nele averbadas.",
-      "Sim, se o proprietário autorizar.",
-      "Sim, apenas durante o dia."
+      "Não; apenas cartas emitidas em Moçambique são reconhecidas.",
+      "Sim; as cartas emitidas por outros Estados membros da SADC habilitam à condução, respeitada a idade mínima legal.",
+      "Só pode conduzir se for diplomata acreditado.",
+      "Só depois de realizar novamente o exame prático em Moçambique."
     ],
     "correta": 1,
-    "explicacao": "Os títulos são válidos para as categorias de veículos e períodos neles averbados. (Código, art. 126.º, n.º 3)."
+    "explicacao": "O Código reconhece, entre outros títulos, as cartas de condução emitidas por outros Estados membros da SADC, desde que o titular possua a idade mínima exigida para a categoria. (Arts. 129.º, n.º 1, al. b), e 129.º, n.º 6)."
   },
   {
     "numero": 18,
-    "tema": "Seguro obrigatório",
+    "tema": "Troca de carta estrangeira após fixar residência",
     "dificuldade": "média",
-    "enunciado": "Um veículo tem matrícula e inspecção válidas, mas não tem seguro de responsabilidade civil. Pode circular?",
+    "enunciado": "Um titular de carta estrangeira reconhecida por reciprocidade fixa residência habitual em Moçambique. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Sim, porque a matrícula substitui o seguro.",
-      "Sim, se o condutor tiver carta válida.",
-      "Sim, apenas em trajectos curtos.",
-      "Não; os veículos a motor e reboques só podem transitar com o seguro legalmente exigido."
+      "Pode utilizar a carta estrangeira indefinidamente, sem qualquer formalidade.",
+      "Basta apresentar uma fotocópia autenticada da carta.",
+      "Fica imediatamente impedido de conduzir, sem possibilidade de troca.",
+      "Deve requerer a troca por carta moçambicana no prazo de 180 dias a contar da fixação da residência."
     ],
     "correta": 3,
-    "explicacao": "Os veículos a motor e seus reboques só podem transitar na via pública com seguro de responsabilidade civil. (Art. 157.º)."
+    "explicacao": "Os titulares de cartas estrangeiras abrangidas pelo artigo 129.º, alínea d), que fixem residência em Moçambique devem requerer a troca por carta moçambicana no prazo de 180 dias. (Código da Estrada, art. 131.º, n.º 5)."
   },
   {
     "numero": 19,
-    "tema": "Peão com deficiência visual",
+    "tema": "Cinto de segurança nos lugares traseiros",
     "dificuldade": "média",
-    "enunciado": "Ao mudar de direcção, o condutor vê uma pessoa com deficiência visual a atravessar a via em que pretende entrar. O que deve fazer?",
+    "enunciado": "Um adulto viaja no banco traseiro de um automóvel e recusa usar o cinto de segurança. Qual é a regra?",
     "imagem": null,
     "opcoes": [
-      "Reduzir a velocidade e, se necessário, parar para a deixar passar.",
-      "Buzinar e avançar.",
-      "Acelerar para passar antes da pessoa.",
-      "Parar apenas se existir passagem pintada."
+      "O condutor e os passageiros transportados em automóveis são obrigados a usar os cintos e demais acessórios de segurança previstos no regulamento.",
+      "A obrigação só se aplica ao condutor e ao passageiro da frente.",
+      "Os passageiros do banco traseiro estão sempre dispensados.",
+      "O cinto só é obrigatório nas auto-estradas."
     ],
     "correta": 0,
-    "explicacao": "Ao mudar de direcção, deve reduzir a velocidade e, se necessário, parar para deixar passar peões que atravessam a via em que vai entrar. (Art. 106.º, n.º 4)."
+    "explicacao": "O Código determina que o condutor e os passageiros transportados em automóveis usem os cintos e demais acessórios de segurança nos termos fixados em regulamento. (Art. 87.º, n.º 1)."
   },
   {
     "numero": 20,
-    "tema": "Ultrapassagem no cruzamento",
+    "tema": "Prioridade à direita em intersecção não sinalizada",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende ultrapassar outro veículo dentro de um cruzamento. A manobra é:",
+    "enunciado": "Num cruzamento sem sinais de prioridade, sem semáforos e sem agente regulador, um veículo aproxima-se pela direita. Qual é a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Permitida se sinalizar.",
-      "Permitida quando o veículo da frente é pesado.",
-      "Proibida nos cruzamentos e entroncamentos.",
-      "Permitida se não houver semáforos."
+      "Tem prioridade o veículo que se apresenta pela esquerda.",
+      "Tem prioridade o veículo de maiores dimensões.",
+      "Tem prioridade o veículo que se apresenta pela direita, sem prejuízo das prioridades especiais previstas no Código.",
+      "Tem prioridade o veículo que circular a maior velocidade."
     ],
     "correta": 2,
-    "explicacao": "Nos cruzamentos e entroncamentos é proibido ao condutor fazer ultrapassagem. (Art. 22.º, n.º 4)."
+    "explicacao": "Nas intersecções não sinalizadas, têm prioridade os condutores que se apresentem pela direita, respeitando as prioridades especiais previstas no Código. (Código da Estrada, art. 38.º, n.º 3, al. a), e n.º 4)."
   },
   {
     "numero": 21,
@@ -351,18 +351,18 @@ window.EXAMES[50] = [
   },
   {
     "numero": 24,
-    "tema": "Fadiga do condutor",
-    "dificuldade": "média",
-    "enunciado": "O condutor sente fadiga e percebe que a sua capacidade de reacção diminuiu. Como deve agir?",
+    "tema": "Taxa de álcool zero para condutores profissionais em serviço",
+    "dificuldade": "difícil",
+    "enunciado": "Um condutor de transporte público de passageiros, em serviço, apresenta 0,05 mg/l de álcool no ar expirado. Pode continuar a conduzir?",
     "imagem": null,
     "opcoes": [
-      "Manter a velocidade para chegar rapidamente.",
-      "Aumentar a música e continuar.",
-      "Adequar a velocidade ao seu estado físico e psicológico e interromper a condução quando necessário para não criar perigo.",
-      "Seguir muito perto do veículo da frente."
+      "Sim, porque está abaixo do limite geral de 0,3 mg/l.",
+      "Sim, se não transportar passageiros naquele momento.",
+      "Não. Para condutores de transporte público ou de carga perigosa em exercício, a taxa permitida é de 0,0 mg/l.",
+      "Sim, desde que beba água antes de prosseguir."
     ],
     "correta": 2,
-    "explicacao": "A velocidade deve ser regulada tendo em conta o estado físico e psicológico do condutor e as circunstâncias que possam afectar a segurança. (Art. 29.º, n.º 1)."
+    "explicacao": "Para condutores de transporte de serviço público ou de carga perigosa, quando em exercício, a taxa de álcool permitida no ar expirado ou no sangue é de 0,0 mg/l. (Código da Estrada, art. 81.º, n.º 4)."
   },
   {
     "numero": 25,
