@@ -9,7 +9,7 @@ Revisão da interface existente com base em `index.html`, `styles.css` e nos ele
 - Não existia uma regra explícita de foco visível para navegação por teclado.
 - O estado da pergunta usa duas informações lado a lado e podia ficar apertado em ecrãs pequenos.
 - A tabela de planos já está dentro de um contentor com deslocamento horizontal; foi definida uma largura mínima para preservar a leitura das colunas sem alargar a página inteira.
-- A grelha de simulados precisava de uma coluna de segurança para larguras muito estreitas.
+- A grelha de exames precisava de uma coluna de segurança para larguras muito estreitas.
 
 ## Alterações publicadas em `styles.css`
 - Foco de teclado visível com `:focus-visible`.
