@@ -84,7 +84,7 @@
   }
   function inicio() {
     var h = historico(), ult = h.length ?
-      "<div class='card'><h2>Última tentativa</h2><p>Exame " + esc(h[0].n) +
+      "<div class='card'><h2>Último exame</h2><p>Exame " + esc(h[0].n) +
       ": " + esc(h[0].certas) + " certas em " + esc(h[0].total) +
       " (" + nota(h[0].nota) + ").</p></div>" : "";
     app.innerHTML = "<h1>" + esc(A.slogan) + "</h1>" +
@@ -204,7 +204,7 @@
   function resultado() {
     if (estado === null) restaurarUltimo();
     if (!estado || !estado.res) return inicio();
-    var r = estado.res, aprovado = r.aprovado;
+    var r = estado.res, aprovado = typeof r.aprovado === "boolean" ? r.aprovado : null;
     var h = "<h1>Resultado do Exame " + r.n + "</h1><div class='card resultado-card'>" +
       (aprovado === null ? "" : semaforo(aprovado)) +
       "<div class='nota'>" + nota(r.nota) + " / 20 valores</div>" +
@@ -241,7 +241,7 @@
         esc(q.explicacao) + "</p></article>";
     });
     h += "<p><a class='btn' href='#/resultado'>Voltar ao resultado</a> " +
-      "<a class='btn sec' href='#/exames'>Catálogo</a></p>";
+      "<a class='btn sec' href='#/exames'>Ver exames</a></p>";
     app.innerHTML = h;
   }
   app.addEventListener("click", function (event) {
