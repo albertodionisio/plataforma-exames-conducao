@@ -26,12 +26,12 @@ window.EXAMES[50] = [
     "enunciado": "Um veículo fica estacionado num ponto em que impede a formação de uma fila de trânsito. A conduta é permitida?",
     "imagem": null,
     "opcoes": [
+      "Não. É proibido estacionar nas vias quando isso impeça a formação de uma ou mais filas de trânsito.",
       "Sim, se o condutor permanecer ao volante.",
       "Sim, durante o período diurno.",
-      "Sim, se deixar espaço para motociclos.",
-      "Não. É proibido estacionar nas vias quando isso impeça a formação de uma ou mais filas de trânsito."
+      "Sim, se deixar espaço para motociclos."
     ],
-    "correta": 3,
+    "correta": 0,
     "explicacao": "É proibido estacionar nas vias em que o veículo impeça a formação de uma ou mais filas de trânsito, conforme a circulação se faça num ou nos dois sentidos. (Art. 51.º, n.º 1, al. a))."
   },
   {
@@ -41,12 +41,12 @@ window.EXAMES[50] = [
     "enunciado": "Fora de uma localidade, um condutor pretende estacionar numa faixa de rodagem assinalada como via com prioridade. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
-      "Não. Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal de via com prioridade.",
       "Sim, se o veículo estiver junto à margem.",
       "Sim, desde que ligue as luzes de presença.",
-      "Não, mas apenas durante a noite."
+      "Não, mas apenas durante a noite.",
+      "Não. Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal de via com prioridade."
     ],
-    "correta": 0,
+    "correta": 3,
     "explicacao": "Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal «via com prioridade». (Art. 51.º, n.º 2, al. b))."
   },
   {
