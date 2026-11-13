@@ -122,18 +122,18 @@ window.EXAMES[37] = [
   },
   {
     "numero": 9,
-    "tema": "Cruzamento",
+    "tema": "Paragem em pistas de velocípedes",
     "dificuldade": "média",
-    "enunciado": "Segundo o artigo 50.º, qual é a distância mínima geral em relação a cruzamentos, entroncamentos ou rotundas para parar ou estacionar?",
+    "enunciado": "Um condutor pretende imobilizar brevemente o automóvel numa pista destinada a velocípedes. Pode fazê-lo se não vir ciclistas?",
     "imagem": null,
     "opcoes": [
-      "Menos de 5 metros para um e outro lado é proibido.",
-      "Menos de 1 metro apenas do lado direito.",
-      "É permitido em qualquer distância se o veículo for ligeiro.",
-      "A proibição só existe fora das localidades."
+      "Não. É proibido parar ou estacionar nas pistas de velocípedes.",
+      "Sim, desde que a imobilização dure menos de um minuto.",
+      "Sim, se ligar os quatro indicadores de mudança de direcção.",
+      "Sim, quando a pista estiver vazia."
     ],
     "correta": 0,
-    "explicacao": "O artigo 50.º, n.º 1, alínea b), proíbe parar ou estacionar a menos de 5 metros para um e outro lado de cruzamentos, entroncamentos ou rotundas, observada a ressalva legal indicada."
+    "explicacao": "O artigo 50.º, n.º 1, alínea f), proíbe parar ou estacionar nas pistas de velocípedes, independentemente de naquele momento se observar ou não um ciclista."
   },
   {
     "numero": 10,
@@ -167,18 +167,18 @@ window.EXAMES[37] = [
   },
   {
     "numero": 12,
-    "tema": "Sinal luminoso",
-    "dificuldade": "média",
-    "enunciado": "Um veículo alto pretende parar antes de um semáforo de cruzamento e pode encobrir o sinal. Que regra deve observar?",
+    "tema": "Veículos com substâncias explosivas",
+    "dificuldade": "difícil",
+    "enunciado": "Um veículo que transporta substâncias explosivas aproxima-se de uma passagem de nível. A que distância é proibido parar ou estacionar?",
     "imagem": null,
     "opcoes": [
-      "Pode parar se ligar os quatro indicadores.",
-      "Pode parar a qualquer distância, desde que o motor esteja ligado.",
-      "A proibição só se aplica a veículos pesados de passageiros.",
-      "É proibido parar ou estacionar a menos de 20 metros antes dos sinais luminosos à entrada de cruzamentos e entroncamentos."
+      "A menos de 5 metros.",
+      "A menos de 20 metros.",
+      "A menos de 50 metros.",
+      "A menos de 10 metros."
     ],
     "correta": 3,
-    "explicacao": "O artigo 50.º, n.º 1, alínea e), proíbe a paragem ou estacionamento a menos de 20 metros antes dos sinais luminosos à entrada de cruzamentos e entroncamentos e junto de sinais que possam ficar encobertos pelo veículo ou carga."
+    "explicacao": "O artigo 50.º, n.º 1, alínea h), proíbe os veículos que transportem substâncias explosivas de parar ou estacionar a menos de 10 metros das passagens de nível."
   },
   {
     "numero": 13,
@@ -212,18 +212,18 @@ window.EXAMES[37] = [
   },
   {
     "numero": 15,
-    "tema": "Fora das localidades",
+    "tema": "Estacionamento em via com prioridade",
     "dificuldade": "média",
-    "enunciado": "Fora das localidades, o artigo 50.º estabelece uma proibição adicional de parar ou estacionar:",
+    "enunciado": "Fora das localidades, um condutor encontra uma faixa de rodagem assinalada como «via com prioridade». Pode estacionar nessa faixa?",
     "imagem": null,
     "opcoes": [
-      "A menos de 5 metros de qualquer casa.",
-      "A menos de 10 metros de qualquer árvore.",
-      "A menos de 50 metros de cruzamentos, entroncamentos, curvas ou lombas de visibilidade reduzida.",
-      "Em qualquer berma, mesmo quando não existe alternativa."
+      "Sim, se estacionar junto à margem.",
+      "Sim, durante o dia e com boa visibilidade.",
+      "Não. O estacionamento nas faixas de rodagem assinaladas como via com prioridade é proibido.",
+      "Sim, desde que não impeça a passagem de veículos pesados."
     ],
     "correta": 2,
-    "explicacao": "O artigo 50.º, n.º 2, alínea a), proíbe fora das localidades parar ou estacionar a menos de 50 metros dos locais ali indicados quando a visibilidade seja reduzida nas curvas ou lombas."
+    "explicacao": "Fora das localidades, o artigo 51.º, n.º 2, alínea b), proíbe o estacionamento nas faixas de rodagem assinaladas com o sinal «via com prioridade»."
   },
   {
     "numero": 16,
@@ -302,18 +302,18 @@ window.EXAMES[37] = [
   },
   {
     "numero": 21,
-    "tema": "Passeio e estacionamento",
-    "dificuldade": "fácil",
-    "enunciado": "Um condutor deixa o automóvel estacionado sobre o passeio. Qual artigo prevê expressamente essa proibição de estacionamento?",
+    "tema": "Estacionamento de duração limitada",
+    "dificuldade": "média",
+    "enunciado": "Um condutor estaciona numa zona de duração limitada, mas não cumpre as regras próprias dessa zona. Como é tratada a situação?",
     "imagem": null,
     "opcoes": [
-      "Artigo 51.º.",
-      "Artigo 20.º.",
-      "Artigo 29.º.",
-      "Artigo 42.º."
+      "O estacionamento é proibido quando não se cumpra o respectivo regulamento.",
+      "É permitido se o condutor permanecer dentro do veículo.",
+      "É permitido fora das horas de fiscalização.",
+      "A regra só se aplica a veículos pesados."
     ],
     "correta": 0,
-    "explicacao": "O artigo 51.º, n.º 1, alínea i), proíbe o estacionamento nos passeios. O artigo 50.º também inclui os passeios na proibição de parar ou estacionar."
+    "explicacao": "O artigo 51.º, n.º 1, alínea h), proíbe estacionar nas zonas de estacionamento de duração limitada quando não seja cumprido o respectivo regulamento."
   },
   {
     "numero": 22,

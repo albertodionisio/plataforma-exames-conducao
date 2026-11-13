@@ -302,8 +302,8 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 49.º, 50.º e 51.º do PDF oficial do INATRO (páginas 18–19); não foi detectada contradição material.
 - Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
-- Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34–36 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
-- Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
+- Originalidade: comparação com o Exame 1 e todos os Exames 31–51 publicados; foram identificadas e reformuladas as antigas perguntas 9, 12, 15 e 21 por sobreposição com competências já testadas. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
+- Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original; execução do validador oficial/CI após estas reformulações. Não marcar como concluída antes desses pontos.
 
 
 ## DADOS-039 — Exame 38 (conteúdo original)

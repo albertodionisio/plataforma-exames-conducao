@@ -21,19 +21,19 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: conceitos, posiciona
 | 6 | Precauções ao estacionar | Ao estacionar, o condutor deve: | Art. 49.º |
 | 7 | Ponte | É permitido parar ou estacionar numa ponte, sem qualquer circunstância excepcional? | Art. 50.º |
 | 8 | Passagem de peões | Um condutor pretende estacionar junto de uma passagem assinalada para peões. Qual é a regra geral do artigo 50.º? | Art. 50.º |
-| 9 | Cruzamento | Segundo o artigo 50.º, qual é a distância mínima geral em relação a cruzamentos, entroncamentos ou rotundas para parar ou estacionar? | Art. 50.º |
+| 9 | Pistas de velocípedes | Proibição de parar ou estacionar numa pista destinada a velocípedes | Art. 50.º, n.º 1, al. f) |
 | 10 | Túnel e visibilidade | Um condutor encontra um local de visibilidade insuficiente dentro de um túnel. Pode estacionar se deixar o motor ligado? | Art. 50.º |
 | 11 | Paragem de transporte colectivo | Um automóvel particular pretende parar junto de um sinal de paragem de transporte colectivo. Qual é a regra de distância indicada no artigo 50.º? | Art. 50.º |
-| 12 | Sinal luminoso | Um veículo alto pretende parar antes de um semáforo de cruzamento e pode encobrir o sinal. Que regra deve observar? | Art. 50.º |
+| 12 | Substâncias explosivas | Distância de proibição de paragem/estacionamento junto de passagem de nível | Art. 50.º, n.º 1, al. h) |
 | 13 | Passeio | Um condutor estaciona parcialmente sobre o passeio, deixando algum espaço para peões. A conduta é: | Art. 50.º |
 | 14 | Linha longitudinal contínua | Numa faixa de rodagem marcada com linha longitudinal contínua, qual é a situação proibida pelo artigo 50.º? | Art. 50.º |
-| 15 | Fora das localidades | Fora das localidades, o artigo 50.º estabelece uma proibição adicional de parar ou estacionar: | Art. 50.º |
+| 15 | Via com prioridade | Proibição de estacionar na faixa de rodagem sinalizada como via com prioridade fora das localidades | Art. 51.º, n.º 2, al. b) |
 | 16 | Faixa de rodagem fora da localidade | Fora das localidades, existe espaço adequado fora da faixa de rodagem para imobilizar o veículo. O condutor deve: | Art. 50.º |
 | 17 | Segunda fila | Um condutor estaciona ao lado de outro veículo já estacionado, ocupando a segunda fila. A situação é: | Art. 51.º |
 | 18 | Acesso a propriedade | É permitido estacionar diante de uma entrada de garagem, impedindo a saída de outro veículo? | Art. 51.º |
 | 19 | Posto de combustível | Um condutor pretende estacionar junto de um posto de abastecimento de combustível. Qual é a regra do artigo 51.º? | Art. 51.º |
 | 20 | Lugar reservado | Um lugar está devidamente sinalizado como reservado a determinado tipo de veículo. Um veículo não autorizado pode estacionar ali? | Art. 51.º |
-| 21 | Passeio e estacionamento | Um condutor deixa o automóvel estacionado sobre o passeio. Qual artigo prevê expressamente essa proibição de estacionamento? | Art. 51.º |
+| 21 | Duração limitada | Proibição de estacionar sem cumprir o regulamento da zona de duração limitada | Art. 51.º, n.º 1, al. h) |
 | 22 | Paragem breve e estacionamento | Um condutor permanece ao volante durante uma breve operação de carga, pronto a retomar a marcha sempre que dificulte a passagem. O artigo 51.º, n.º 3, esclarece que: | Art. 51.º |
 | 23 | Estacionamento nocturno fora da localidade | Fora das localidades, onde é proibido estacionar durante a noite, nos termos do artigo 51.º? | Art. 51.º |
 | 24 | Veículo impede fila de trânsito | Um veículo fica estacionado num local onde impede a formação de uma fila de trânsito. Qual é a avaliação correcta? | Art. 51.º |
@@ -51,6 +51,6 @@ O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Cód
 
 ## Originalidade e limitações
 
-A comparação textual e por semelhança foi feita com os Exames 1, 31 e 32 disponíveis e entre os próprios Exames 34–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e os 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
+A comparação textual e por semelhança foi refeita com o Exame 1 e todos os Exames 31–51 publicados. Foram identificadas sobreposições nas antigas perguntas 9, 12, 15 e 21: distância de cruzamento, distância antes de semáforos, estacionamento a 50 m de cruzamentos com visibilidade reduzida e estacionamento sobre passeio. As perguntas foram substituídas por competências distintas: proibição nas pistas de velocípedes, distância para veículos com substâncias explosivas junto de passagens de nível, estacionamento em via com prioridade e regras das zonas de duração limitada. Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original.
 
 A validação estrutural foi reproduzida sobre os dados remotos segundo os critérios do script oficial. O script node scripts/validar-exames.js não pôde ser executado neste ambiente porque o acesso DNS ao GitHub falhou. O teste funcional no navegador permanece pendente.
