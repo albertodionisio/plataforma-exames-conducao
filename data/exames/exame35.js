@@ -187,12 +187,12 @@ window.EXAMES[35] = [
     "enunciado": "Numa via de sentido único, um condutor pretende mudar de direcção para a direita. Como deve preparar a manobra?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se, com a necessária antecedência e quando possível, do limite direito da faixa de rodagem e efectuar a manobra pelo trajecto mais curto.",
       "Aproximar-se obrigatoriamente do eixo da via e contornar a parte central pela esquerda.",
+      "Aproximar-se, com a necessária antecedência e quando possível, do limite direito da faixa de rodagem e efectuar a manobra pelo trajecto mais curto.",
       "Utilizar a margem esquerda, independentemente da direcção pretendida.",
       "Escolher qualquer posição, porque numa via de sentido único não existem regras de posicionamento."
     ],
-    "correta": 0,
+    "correta": 1,
     "explicacao": "Nas vias de sentido único, o artigo 45.º, n.º 3, manda aproximar-se, com antecedência e quando possível, do limite direito ou esquerdo conforme a direcção pretendida, efectuando a manobra pelo trajecto mais curto."
   },
   {
