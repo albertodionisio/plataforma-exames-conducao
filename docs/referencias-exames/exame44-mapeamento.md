@@ -1,44 +1,44 @@
 # Exame 44 — mapa de rastreabilidade
 
-Conteúdo original do ESTRADA, não extraído do APK. Foco: segurança rodoviária em situações de risco, imobilização por avaria, pré-sinalização de perigo, circulação de animais e segurança de peões.
+Conteúdo original do ESTRADA, não extraído do APK. Foco: transporte seguro de passageiros e carga, circulação de animais, dimensões e autorização de veículos especiais.
 
 ## Fonte normativa e páginas consultadas
 
 - **Fonte primária:** Código da Estrada da República de Moçambique, republicação disponibilizada no portal oficial do INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
 - **Diploma de aprovação:** Decreto-Lei n.º 1/2011, publicado no Boletim da República n.º 12, I Série, de 23 de Março de 2011; registo bibliográfico oficial da Imprensa Nacional: https://www.inm.gov.mz/pt-br/content/br-n%C2%BA-12-de-230311-boletim-da-rep%C3%BAblica-i-serie
-- **Artigos usados:** 56.º, 90.º, 91.º, 100.º, 102.º, 103.º e 105.º.
-- **Páginas impressas do PDF:** artigo 56.º — p. 21; artigos 90.º e 91.º — pp. 36–37; artigo 100.º — p. 40; artigos 102.º e 103.º — p. 41; artigo 105.º — p. 42.
+- **Artigos usados:** 54.º, 55.º, 56.º, 57.º, 58.º e 100.º.
+- **Páginas impressas do PDF:** artigos 54.º e 55.º — p. 20; artigo 56.º — p. 21; artigos 57.º e 58.º — p. 22; artigo 100.º — p. 40.
 - **Imagens:** as 25 perguntas usam `imagem: null`. As competências avaliadas são regras de conduta e segurança que não dependem de uma imagem específica; não foram associadas imagens sem correspondência comprovada.
 
 ## Mapa das perguntas
 
 | Nº | Tema | Competência avaliada | Base legal |
 |---:|---|---|---|
-| 1 | Imobilização forçada por avaria | Procedimento para estacionar, retirar da faixa ou aproximar o veículo do limite esquerdo e promover a remoção rápida. | Art. 90.º, n.º 1 |
-| 2 | Sinalização de veículo avariado | Dever de tornar a presença do veículo perceptível aos restantes utentes enquanto não for removido. | Art. 90.º, n.º 2 |
-| 3 | Reparação na via pública | Regra de proibição e excepções restritas para remoção ou reparação simples. | Art. 90.º, n.º 3 |
-| 4 | Segurança das pessoas junto de veículo avariado | Impedir que pessoas não envolvidas permaneçam na faixa de rodagem durante as operações. | Art. 90.º, n.º 4 |
-| 5 | Equipamento de pré-sinalização | Identificar os dois triângulos retrorreflectores e o colete reflectivo, bem como as excepções legais. | Art. 91.º, n.º 1 |
-| 6 | Uso do triângulo durante o dia | Reconhecer a obrigação quando veículo ou carga caída não seja visível a pelo menos 100 m. | Art. 91.º, n.º 2, al. a) |
-| 7 | Uso do triângulo durante a noite | Aplicar a regra de utilização em imobilizações nocturnas e a excepção de local iluminado e reconhecível a 100 m. | Art. 91.º, n.º 2, al. b) |
-| 8 | Sinalização de avaria dentro da localidade | Utilizar simultaneamente todos os indicadores de mudança de direcção quando não for viável colocar o triângulo. | Art. 91.º, n.º 2, al. c) |
-| 9 | Posicionamento do triângulo | Colocar o sinal na vertical e a pelo menos 30 m à frente e à retaguarda. | Art. 91.º, n.º 3 |
-| 10 | Visibilidade do triângulo | Garantir que o sinal fica bem visível a pelo menos 100 m. | Art. 91.º, n.º 3 |
-| 11 | Uso do colete reflectivo | Utilizar o colete durante a colocação do sinal, reparação ou remoção da carga. | Art. 91.º, n.º 5 |
-| 12 | Marcas reflectivas em veículos pesados | Identificar os veículos pesados e reboques abrangidos pelo limite de peso ou comprimento e as marcas amarelas exigidas. | Art. 91.º, n.º 4 |
-| 13 | Controlo de animais na via | Manter o domínio sobre a marcha dos animais e evitar perigo ou embaraço ao trânsito. | Art. 100.º, n.º 1 |
-| 14 | Animais em pontes, túneis e passagens de nível | Fazer os animais seguir a passo nesses locais. | Art. 100.º, n.º 2 |
-| 15 | Entrada de gado na via pública | Assinalar devidamente a entrada dos animais e utilizar caminhos ou serventias destinados a esse fim. | Art. 100.º, n.º 3 |
-| 16 | Iluminação de animais em grupo | Utilizar uma lanterna de luz branca, visível nos dois sentidos, quando a sinalização luminosa for obrigatória. | Art. 100.º, n.º 4 |
-| 17 | Animais soltos na via pública | Reconhecer a proibição de deixar animais vaguear de modo a impedir ou fazer perigar o trânsito. | Art. 100.º, n.º 5 |
-| 18 | Percurso dos peões | Identificar passeios, pistas e passagens destinadas aos peões e a utilização das bermas na sua falta. | Art. 102.º, n.º 1 |
-| 19 | Circulação de peões na faixa de rodagem | Aplicar a possibilidade excepcional de circulação com prudência quando os locais próprios não existam ou não possam ser utilizados. | Art. 102.º, n.º 2, al. b) |
-| 20 | Peões em fila única | Aplicar a regra de fila única à noite ou quando a visibilidade/intensidade do trânsito o aconselhe, ressalvadas as formações organizadas. | Art. 102.º, n.º 4 |
-| 21 | Posição dos peões junto ao limite da via | Manter os peões o mais próximo possível do limite da faixa nas situações previstas. | Art. 103.º, n.º 2 |
-| 22 | Utilização de pistas pelos peões | Reconhecer a utilização condicionada de pistas quando a intensidade do trânsito o permita e não prejudique os utentes a que se destinam. | Art. 102.º, n.º 3 |
-| 23 | Sentido de circulação dos peões | Aplicar a circulação pelo lado direito, excepto quando isso comprometa a segurança. | Art. 103.º, n.º 3 |
-| 24 | Iluminação de cortejos e formações organizadas | Identificar a luz branca para a frente e a luz vermelha para a retaguarda, ambas do lado direito. | Art. 105.º, n.º 1 |
-| 25 | Altura da carga | Aplicar o limite máximo de 4,3 m medido a partir do solo. | Art. 56.º, n.º 3, al. f) |
+| 1 | Paragem antes de operações | Entrada, saída, carga, descarga e abertura de portas apenas com veículo completamente parado | Art. 54.º, n.º 1 |
+| 2 | Rapidez das operações | Operações rápidas; excepção para veículo devidamente estacionado sem passageiros na faixa | Art. 54.º, n.º 2 |
+| 3 | Lado de entrada e saída | Lado correspondente à posição do veículo em relação à faixa de rodagem | Art. 55.º, n.º 1 |
+| 4 | Excepções de entrada e saída | Excepções para condutor, passageiros da frente e transporte colectivo | Art. 55.º, n.º 2 |
+| 5 | Lotação e segurança | Proibição de exceder lotação ou comprometer segurança | Art. 55.º, n.º 3 |
+| 6 | Passageiros fora dos assentos | Proibição, salvo condições excepcionais regulamentadas | Art. 55.º, n.º 4 |
+| 7 | Abertura de portas | Dever de verificar ausência de perigo antes de abrir ou sair | Art. 55.º, n.º 5 |
+| 8 | Local de carga/descarga | Retaguarda ou lado da margem junto ao veículo | Art. 56.º, n.º 1 |
+| 9 | Carga perigosa | Proibição de carga que cause perigo, embaraço ou danos | Art. 56.º, n.º 2 |
+| 10 | Equilíbrio da carga | Equilíbrio do veículo parado ou em marcha | Art. 56.º, n.º 3, al. a) |
+| 11 | Fixação da carga | Não cair, oscilar perigosamente ou projectar detritos | Art. 56.º, n.º 3, al. b) |
+| 12 | Visibilidade | A carga não pode reduzir a visibilidade do condutor | Art. 56.º, n.º 3, al. c) |
+| 13 | Controlo de animais | Domínio sobre a marcha dos animais e prevenção de perigo | Art. 100.º, n.º 1 |
+| 14 | Animais em estruturas | Animais seguem a passo em pontes, túneis e passagens de nível | Art. 100.º, n.º 2 |
+| 15 | Entrada de gado | Assinalar a entrada e utilizar caminhos/serventias destinados | Art. 100.º, n.º 3 |
+| 16 | Iluminação de animais | Lanterna branca visível nos dois sentidos quando obrigatória | Art. 100.º, n.º 4 |
+| 17 | Animais soltos | Proibição de deixar animais vaguear e pôr o trânsito em perigo | Art. 100.º, n.º 5 |
+| 18 | Carga sem arrastar | A carga não pode arrastar pelo pavimento | Art. 56.º, n.º 3, al. d) |
+| 19 | Capacidade de animais | Não exceder a capacidade dos animais de carga | Art. 56.º, n.º 3, al. e) |
+| 20 | Carga em passageiros/mistos | Não exceder contornos nem ocultar sinais, luzes ou matrícula | Art. 56.º, n.º 3, al. g) |
+| 21 | Carga em mercadorias | Comprimento e largura dentro dos limites da caixa, salvo excepção regulamentar | Art. 56.º, n.º 3, al. h) |
+| 22 | Mercadorias a granel | Não exceder o bordo superior dos taipais | Art. 56.º, n.º 3, al. i) |
+| 23 | Peso e dimensões excessivos | Proibição de circulação sem autorização especial | Art. 57.º |
+| 24 | Autorização especial | Competência do INAV para autorizar veículos com peso/dimensões superiores | Art. 58.º, n.º 1 |
+| 25 | Altura da carga | Limite máximo de 4,3 m medido do solo | Art. 56.º, n.º 3, al. f) |
 
 ## Distribuição das respostas correctas
 

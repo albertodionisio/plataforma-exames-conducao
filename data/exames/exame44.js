@@ -5,183 +5,183 @@ window.EXAMES = window.EXAMES || {};
 window.EXAMES[44] = [
   {
     "numero": 1,
-    "tema": "Imobilização forçada por avaria",
+    "tema": "Imobilização e operações com passageiros/carga",
     "dificuldade": "média",
-    "enunciado": "Um automóvel sofre uma avaria e fica imobilizado na via pública. Se não for possível estacioná-lo regularmente, que procedimento deve o condutor adoptar?",
+    "enunciado": "Um autocarro ainda está em movimento muito lento junto à paragem. O condutor pode abrir as portas para iniciar a saída dos passageiros?",
     "imagem": null,
     "opcoes": [
-      "Deixar o veículo no local até aparecer ajuda, sem alterar a sua posição.",
-      "Continuar a viagem, mesmo que o veículo não esteja em condições de circular.",
-      "Retirar o veículo da faixa de rodagem ou aproximá-lo o mais possível do limite esquerdo e promover a sua rápida remoção.",
-      "Abandonar o veículo na faixa de rodagem e procurar assistência a pé."
+      "Sim, se o veículo estiver quase parado.",
+      "Sim, desde que o passageiro salte para o passeio.",
+      "Não. A entrada, saída, carga, descarga e abertura de portas só podem ocorrer com o veículo completamente parado.",
+      "Sim, se o condutor activar as luzes de perigo."
     ],
     "correta": 2,
-    "explicacao": "Em caso de imobilização forçada por avaria, o condutor deve estacionar regularmente o veículo; se isso não for viável, deve retirá-lo da faixa de rodagem ou aproximá-lo o mais possível do limite esquerdo e promover a sua rápida remoção. (Art. 90.º, n.º 1)."
+    "explicacao": "É proibido entrar ou sair, carregar, descarregar ou abrir as portas dos veículos sem que estejam completamente parados. (Art. 54.º, n.º 1)."
   },
   {
     "numero": 2,
-    "tema": "Sinalização de veículo avariado",
-    "dificuldade": "fácil",
-    "enunciado": "Enquanto um veículo avariado ainda não foi devidamente estacionado ou removido, o que deve fazer o condutor?",
+    "tema": "Rapidez nas operações de entrada e saída",
+    "dificuldade": "média",
+    "enunciado": "Um veículo está correctamente estacionado e os passageiros podem entrar sem pisar a faixa de rodagem. Como devem decorrer as operações de entrada e saída?",
     "imagem": null,
     "opcoes": [
-      "Adoptar medidas e utilizar os dispositivos de sinalização adequados para que os outros utentes se apercebam da presença do veículo.",
-      "Desligar todas as luzes e aguardar dentro do veículo.",
-      "Colocar objectos improvisados na faixa de rodagem, sem qualquer critério.",
-      "Pedir aos outros condutores que desviem, sem sinalizar o perigo."
+      "Devem ser feitas o mais rapidamente possível; a excepção depende de o veículo estar devidamente estacionado e de os passageiros não saírem para a faixa de rodagem.",
+      "Podem prolongar-se sem limite, mesmo que o veículo esteja a obstruir o trânsito.",
+      "Devem ser feitas sempre pelo lado da faixa de rodagem.",
+      "Só podem ocorrer com autorização de um agente."
     ],
     "correta": 0,
-    "explicacao": "Enquanto o veículo não estiver devidamente estacionado ou removido, o condutor deve adoptar medidas para que os outros utentes se apercebam da sua presença, usando os dispositivos de sinalização previstos. (Art. 90.º, n.º 2)."
+    "explicacao": "A entrada e saída de passageiros e as operações de carga ou descarga devem fazer-se o mais rapidamente possível, salvo se o veículo estiver devidamente estacionado e os passageiros não saírem para a faixa de rodagem. (Art. 54.º, n.º 2)."
   },
   {
     "numero": 3,
-    "tema": "Reparação na via pública",
+    "tema": "Lado de entrada e saída dos passageiros",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende reparar o seu automóvel avariado no meio da via pública. Qual é a regra geral prevista no Código da Estrada?",
+    "enunciado": "Um automóvel está parado junto ao limite direito da faixa de rodagem. Por que lado devem, em regra, entrar ou sair os passageiros?",
     "imagem": null,
     "opcoes": [
-      "A reparação é sempre permitida se o condutor ligar as luzes de perigo.",
-      "A reparação é permitida durante a noite, mas proibida durante o dia.",
-      "A reparação é livre desde que não haja trânsito intenso.",
-      "A reparação na via pública é proibida, salvo se for indispensável à remoção do veículo ou se a avaria for de fácil reparação e permitir prosseguir a marcha."
+      "Pelo lado mais próximo do eixo da via.",
+      "Por qualquer lado, desde que abram a porta rapidamente.",
+      "Pelo lado esquerdo, independentemente da posição do veículo.",
+      "Pelo lado correspondente à posição em que o veículo se encontra parado ou estacionado em relação à faixa de rodagem."
     ],
     "correta": 3,
-    "explicacao": "A reparação de veículos na via pública é proibida. O Código admite apenas as situações em que a reparação seja indispensável para remover o veículo ou, tratando-se de avaria de fácil reparação, para permitir o prosseguimento da marcha. (Art. 90.º, n.º 3)."
+    "explicacao": "Os passageiros devem entrar e sair pelo lado esquerdo ou direito do veículo, consoante este esteja parado ou estacionado à esquerda ou à direita da faixa de rodagem. (Art. 55.º, n.º 1)."
   },
   {
     "numero": 4,
-    "tema": "Segurança das pessoas junto de veículo avariado",
+    "tema": "Excepções ao lado de entrada e saída",
     "dificuldade": "média",
-    "enunciado": "Durante a sinalização e remoção de um veículo avariado, qual deve ser o comportamento das pessoas que não participam nessas operações?",
+    "enunciado": "Em que situação o Código prevê excepções à regra geral sobre o lado de entrada e saída dos passageiros?",
     "imagem": null,
     "opcoes": [
-      "Permanecer na faixa de rodagem para orientar o trânsito.",
-      "Não permanecer na faixa de rodagem.",
-      "Ajudar a empurrar outros veículos que passem pelo local.",
-      "Circular à volta do veículo para observar a avaria."
+      "Sempre que o passageiro tenha pressa.",
+      "Nos casos do condutor em automóvel com volante à direita, dos passageiros do banco da frente em automóvel com volante à esquerda e das situações locais previstas para transportes colectivos.",
+      "Quando a estrada estiver vazia.",
+      "Sempre que o veículo tenha mais de cinco lugares."
     ],
     "correta": 1,
-    "explicacao": "As pessoas que não estejam envolvidas nas operações de sinalização, remoção ou reparação não devem permanecer na faixa de rodagem. A medida reduz a exposição a novos acidentes. (Art. 90.º, n.º 4)."
+    "explicacao": "O artigo 55.º, n.º 2, prevê excepções para a entrada e saída do condutor em automóveis com volante à direita, dos passageiros do banco da frente em automóveis com volante à esquerda e para situações previstas em regulamentos locais de transporte colectivo."
   },
   {
     "numero": 5,
-    "tema": "Equipamento de pré-sinalização",
-    "dificuldade": "fácil",
-    "enunciado": "De acordo com o Código da Estrada, que equipamento de pré-sinalização devem transportar os veículos a motor em circulação, como regra geral?",
+    "tema": "Lotação e segurança dos passageiros",
+    "dificuldade": "média",
+    "enunciado": "Um veículo tem cinco lugares homologados, mas o condutor pretende transportar sete pessoas numa viagem curta. O que determina o Código?",
     "imagem": null,
     "opcoes": [
-      "Um triângulo não reflector e um colete de qualquer cor.",
-      "Dois sinais retrorreflectores de pré-sinalização de perigo e um colete reflectivo, com as excepções previstas para certos veículos.",
-      "Apenas um colete reflectivo, sem triângulos.",
-      "Quatro luzes portáteis de cor branca."
+      "É permitido se todos usarem cinto de segurança.",
+      "É proibido exceder a lotação ou transportar passageiros de modo a comprometer a segurança.",
+      "É permitido dentro das localidades.",
+      "É permitido se os passageiros adicionais forem crianças."
     ],
     "correta": 1,
-    "explicacao": "Os veículos a motor em circulação devem estar equipados com dois sinais de pré-sinalização de perigo retrorreflectores e um colete reflectivo. O n.º 1 do artigo 91.º prevê excepções para veículos dotados apenas de duas ou três rodas, motocultivadores e tratocarros. (Art. 91.º, n.º 1)."
+    "explicacao": "É proibido transportar passageiros em número que exceda a lotação do veículo ou de modo a comprometer a sua segurança ou a segurança da condução. (Art. 55.º, n.º 3)."
   },
   {
     "numero": 6,
-    "tema": "Uso do triângulo durante o dia",
+    "tema": "Transporte fora dos assentos",
     "dificuldade": "média",
-    "enunciado": "Durante o dia, um veículo fica imobilizado, parcialmente na faixa de rodagem, num local onde não pode ser visto a uma distância de 100 metros. O que exige o Código?",
+    "enunciado": "Um passageiro pretende viajar sentado sobre a carga na caixa de uma viatura. Qual é a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Ligar apenas os máximos e continuar dentro do veículo.",
-      "Colocar o triângulo apenas se houver nevoeiro.",
-      "Não é necessária sinalização durante o dia.",
-      "Utilizar o sinal de pré-sinalização de perigo, porque o veículo não é visível a pelo menos 100 metros."
+      "É permitido em estradas rurais.",
+      "É permitido se a viagem for curta.",
+      "É permitido quando a carga estiver amarrada.",
+      "É proibido transportar passageiros fora dos assentos, salvo condições excepcionais definidas em regulamento."
     ],
     "correta": 3,
-    "explicacao": "Durante o dia, é obrigatório usar o sinal de pré-sinalização quando o veículo imobilizado, total ou parcialmente na faixa de rodagem, ou a carga caída no pavimento não for visível a pelo menos 100 metros. (Art. 91.º, n.º 2, alínea a)."
+    "explicacao": "É igualmente proibido o transporte de passageiros fora dos assentos, salvo em condições excepcionais a definir em regulamento. (Art. 55.º, n.º 4)."
   },
   {
     "numero": 7,
-    "tema": "Uso do triângulo durante a noite",
+    "tema": "Abertura de portas e saída segura",
     "dificuldade": "média",
-    "enunciado": "Um automóvel fica imobilizado na berma depois do anoitecer. A zona não está suficientemente iluminada para que o veículo seja facilmente reconhecido a 100 metros. Qual é a obrigação do condutor?",
+    "enunciado": "Depois de estacionar, um passageiro abre a porta sem verificar se se aproxima uma motocicleta. Qual é a regra aplicável?",
     "imagem": null,
     "opcoes": [
-      "Utilizar o sinal de pré-sinalização de perigo, pois durante a noite a regra abrange as imobilizações, salvo a excepção dos locais com iluminação suficiente e reconhecimento fácil a 100 metros.",
-      "Dispensar o triângulo porque o veículo está fora da faixa de rodagem.",
-      "Utilizar o triângulo apenas se houver outros veículos parados.",
-      "Colocar o triângulo somente depois do amanhecer."
+      "Antes de abrir a porta, deixá-la aberta ou sair, deve certificar-se de que não cria perigo para si nem para os outros utentes.",
+      "A responsabilidade é sempre do motociclista.",
+      "A porta pode ser aberta desde que o veículo esteja parado.",
+      "A regra só se aplica ao condutor."
     ],
     "correta": 0,
-    "explicacao": "Do anoitecer ao amanhecer, o sinal de pré-sinalização é obrigatório nas situações de imobilização do veículo ou de queda de carga na faixa ou na berma, excepto nos locais cuja iluminação permita o fácil reconhecimento a 100 metros. (Art. 91.º, n.º 2, alínea b)."
+    "explicacao": "O condutor e os passageiros não devem abrir a porta, deixá-la aberta ou sair do veículo sem antes se certificarem de que isso não constitui perigo para eles e para outros utentes da via. (Art. 55.º, n.º 5)."
   },
   {
     "numero": 8,
-    "tema": "Sinalização de avaria dentro da localidade",
+    "tema": "Local de carga e descarga",
     "dificuldade": "média",
-    "enunciado": "Dentro de uma localidade, o veículo avaria e as condições do local não permitem colocar o triângulo de pré-sinalização. Como deve ser assinalado o veículo?",
+    "enunciado": "Um veículo está parado junto ao passeio para descarregar mercadoria. Por onde deve, em regra, ser feita a operação?",
     "imagem": null,
     "opcoes": [
-      "Com a luz de marcha atrás ligada.",
-      "Com os faróis máximos ligados de forma permanente.",
-      "Com o funcionamento simultâneo de todas as luzes indicadoras de mudança de direcção.",
-      "Apenas com a buzina."
+      "Pelo lado mais próximo do centro da via.",
+      "Pelo tejadilho do veículo.",
+      "Pela retaguarda ou pelo lado da margem da faixa de rodagem junto da qual o veículo está parado ou estacionado.",
+      "Por qualquer lado, mesmo que a carga atravesse a faixa."
     ],
     "correta": 2,
-    "explicacao": "No interior das localidades, quando não for viável colocar o triângulo de pré-sinalização, o veículo avariado deve ser sinalizado com o uso simultâneo de todas as luzes indicadoras de mudança de direcção. (Art. 91.º, n.º 2, alínea c)."
+    "explicacao": "A carga e descarga devem ser feitas pela retaguarda ou pelo lado da margem da faixa de rodagem junto da qual o veículo esteja parado ou estacionado. (Art. 56.º, n.º 1)."
   },
   {
     "numero": 9,
-    "tema": "Posicionamento do triângulo",
+    "tema": "Carga perigosa ou que danifica a via",
     "dificuldade": "média",
-    "enunciado": "Ao colocar o triângulo de pré-sinalização, que posicionamento e distância mínima deve o condutor respeitar?",
+    "enunciado": "Um veículo transporta uma carga que pode cair e danificar equipamentos da estrada. O trânsito nessas condições é permitido?",
     "imagem": null,
     "opcoes": [
-      "Deitado no pavimento, junto à roda traseira.",
-      "Na vertical em relação ao pavimento e ao eixo da faixa, a uma distância nunca inferior a 30 metros, à frente e à retaguarda do veículo ou carga.",
-      "Apenas atrás do veículo, a 5 metros.",
-      "Na berma, sem necessidade de o orientar para o trânsito."
+      "Sim, se o condutor circular lentamente.",
+      "Sim, se houver outro veículo a escoltar.",
+      "Não. É proibido transitar com carga que constitua perigo ou embaraço para outros utentes ou possa danificar a via e as suas instalações.",
+      "Só é proibido durante a noite."
     ],
     "correta": 2,
-    "explicacao": "O sinal deve ser colocado verticalmente em relação ao pavimento e ao eixo da faixa de rodagem, a uma distância nunca inferior a 30 metros, à frente e à retaguarda do veículo, conjunto ou carga a sinalizar. (Art. 91.º, n.º 3)."
+    "explicacao": "É proibido o trânsito de veículos ou animais carregados por forma que possam constituir perigo ou embaraço para os outros utentes da via ou danificar pavimentos, instalações, obras de arte e imóveis marginais. (Art. 56.º, n.º 2)."
   },
   {
     "numero": 10,
-    "tema": "Visibilidade do triângulo",
-    "dificuldade": "fácil",
-    "enunciado": "Além da distância de colocação, que condição de visibilidade deve cumprir o sinal de pré-sinalização de perigo?",
+    "tema": "Equilíbrio da carga",
+    "dificuldade": "média",
+    "enunciado": "Ao distribuir mercadoria por uma viatura, que condição deve o condutor assegurar?",
     "imagem": null,
     "opcoes": [
-      "Deve ser visível apenas a 10 metros.",
-      "Deve ser colocado de forma a ficar bem visível a pelo menos 100 metros.",
-      "Deve ficar visível somente para quem se aproxima pela retaguarda.",
-      "Pode ficar escondido pela carga se estiver na vertical."
+      "Que a maior parte do peso fique sempre de um único lado.",
+      "Que o equilíbrio do veículo fique devidamente assegurado, parado ou em marcha.",
+      "Que a carga fique solta para se adaptar às curvas.",
+      "Que a carga fique concentrada na parte traseira."
     ],
     "correta": 1,
-    "explicacao": "O artigo 91.º determina que o sinal seja colocado de modo a ficar bem visível a uma distância de, pelo menos, 100 metros. (Art. 91.º, n.º 3)."
+    "explicacao": "Na disposição da carga, deve assegurar-se o equilíbrio do veículo, quer esteja parado quer em marcha. (Art. 56.º, n.º 3, al. a)."
   },
   {
     "numero": 11,
-    "tema": "Uso do colete reflectivo",
+    "tema": "Fixação e estabilidade da carga",
     "dificuldade": "média",
-    "enunciado": "Um condutor vai colocar o triângulo de pré-sinalização e, em seguida, retirar uma carga caída na estrada. Que equipamento deve usar?",
+    "enunciado": "Durante a viagem, uma carga começa a oscilar e a projectar pequenos detritos para a estrada. Qual é a avaliação correcta?",
     "imagem": null,
     "opcoes": [
-      "Um casaco escuro para não distrair os outros condutores.",
-      "Apenas luvas de protecção.",
-      "Nenhum equipamento, se a operação for rápida.",
-      "Um colete reflectivo."
+      "É permitido se o veículo não ultrapassar o limite de velocidade.",
+      "É permitido em estradas fora das localidades.",
+      "Só é proibido quando a carga cai completamente.",
+      "A carga deve ser disposta de modo a não cair, oscilar perigosamente nem projectar detritos na via pública."
     ],
     "correta": 3,
-    "explicacao": "Nas circunstâncias de sinalização, reparação ou remoção de carga previstas no artigo, a pessoa que executa essas operações deve utilizar o colete reflectivo. (Art. 91.º, n.º 5)."
+    "explicacao": "A carga não pode cair sobre a via nem oscilar de forma perigosa ou incómoda, nem provocar a projecção de detritos na via pública. (Art. 56.º, n.º 3, al. b)."
   },
   {
     "numero": 12,
-    "tema": "Marcas reflectivas em veículos pesados",
+    "tema": "Visibilidade do condutor",
     "dificuldade": "média",
-    "enunciado": "Que veículos pesados ou reboques devem estar equipados com marcas reflectivas amarelas para facilitar a sua identificação na via pública?",
+    "enunciado": "Uma carga empilhada tapa parte do campo de visão do condutor. Pode o veículo iniciar a marcha?",
     "imagem": null,
     "opcoes": [
-      "Os que tenham peso bruto superior a 10.000 kg ou mais de 6 metros de comprimento.",
-      "Todos os veículos ligeiros com menos de 4 metros.",
-      "Apenas os veículos que transportam passageiros durante a noite.",
-      "Somente os reboques utilizados dentro de parques privados."
+      "Não. A disposição da carga não pode reduzir a visibilidade do condutor.",
+      "Sim, se o condutor usar os espelhos retrovisores.",
+      "Sim, desde que circule apenas em linha recta.",
+      "Sim, se outro ocupante indicar o caminho."
     ],
     "correta": 0,
-    "explicacao": "Os veículos automóveis pesados e os reboques cujo peso bruto exceda 10.000 kg ou tenham mais de 6 metros de comprimento devem estar equipados com marcas reflectivas amarelas. (Art. 91.º, n.º 4)."
+    "explicacao": "A disposição da carga deve garantir que esta não reduz a visibilidade do condutor. (Art. 56.º, n.º 3, al. c)."
   },
   {
     "numero": 13,
@@ -260,108 +260,108 @@ window.EXAMES[44] = [
   },
   {
     "numero": 18,
-    "tema": "Percurso dos peões",
-    "dificuldade": "fácil",
-    "enunciado": "Numa estrada existe passeio destinado aos peões. Onde devem estes circular, segundo a regra geral?",
+    "tema": "Carga sem contacto com o pavimento",
+    "dificuldade": "média",
+    "enunciado": "Um condutor transporta uma peça comprida que fica a arrastar no pavimento. Qual é a regra?",
     "imagem": null,
     "opcoes": [
-      "Pelo centro da faixa de rodagem, para serem vistos.",
-      "Pela berma, mesmo quando existe passeio utilizável.",
-      "Pelos passeios, pistas ou passagens a eles destinados; na falta desses locais, pelas bermas.",
-      "Pela faixa de rodagem, junto ao eixo da via."
+      "É permitido se a peça estiver presa ao veículo.",
+      "É permitido apenas durante o dia.",
+      "A carga não pode arrastar pelo pavimento.",
+      "É permitido quando a estrada estiver vazia."
     ],
     "correta": 2,
-    "explicacao": "Os peões devem utilizar os passeios, pistas ou passagens que lhes são destinados. Na falta desses locais, devem circular pelas bermas. (Art. 102.º, n.º 1)."
+    "explicacao": "Na disposição da carga, deve assegurar-se que esta não arraste pelo pavimento. (Art. 56.º, n.º 3, al. d)."
   },
   {
     "numero": 19,
-    "tema": "Circulação de peões na faixa de rodagem",
+    "tema": "Capacidade dos animais de carga",
     "dificuldade": "média",
-    "enunciado": "Uma estrada não tem passeio nem berma utilizável. Em que condições os peões podem circular pela faixa de rodagem?",
+    "enunciado": "Um animal de tracção transporta uma carga superior à sua capacidade física. Como deve ser avaliada a situação?",
     "imagem": null,
     "opcoes": [
-      "Sempre em grupos largos, ocupando a via.",
-      "Com prudência e de modo a não prejudicar o trânsito dos veículos.",
-      "Apenas se caminharem no sentido dos veículos que se aproximam.",
-      "Sem qualquer cuidado adicional, porque não existe passeio."
+      "É permitida se o percurso for curto.",
+      "É proibido exceder a capacidade dos animais.",
+      "Só é permitido para cavalos.",
+      "É permitida se a carga estiver coberta."
     ],
     "correta": 1,
-    "explicacao": "Na falta dos locais destinados aos peões ou quando seja impossível utilizá-los, estes podem transitar pela faixa de rodagem, mas devem fazê-lo com prudência e sem prejudicar o trânsito dos veículos. (Art. 102.º, n.º 2, alínea b)."
+    "explicacao": "Na disposição da carga transportada por animais, não pode ser excedida a capacidade dos próprios animais. (Art. 56.º, n.º 3, al. e)."
   },
   {
     "numero": 20,
-    "tema": "Peões em fila única",
+    "tema": "Carga em veículos de passageiros ou mistos",
     "dificuldade": "média",
-    "enunciado": "Um grupo de peões tem de circular pela faixa de rodagem ao anoitecer, num local com visibilidade limitada. Como deve organizar-se, em regra?",
+    "enunciado": "Uma viatura de passageiros transporta volumes que ultrapassam o contorno do veículo e tapam a matrícula e as luzes traseiras. Pode circular assim?",
     "imagem": null,
     "opcoes": [
-      "Em várias filas, para ocupar mais espaço.",
-      "Em pares lado a lado, independentemente do trânsito.",
-      "Em fila larga, sem qualquer organização.",
-      "Numa única fila, salvo quando se trate de cortejo ou formação organizada nos termos legais."
+      "Sim, se a carga estiver amarrada.",
+      "Sim, desde que não ultrapasse a largura dos espelhos.",
+      "Só é proibido em auto-estradas.",
+      "Não. A carga não pode ultrapassar os contornos do veículo nem prejudicar a sinalização, iluminação ou matrícula."
     ],
     "correta": 3,
-    "explicacao": "Quando circulam na faixa de rodagem, desde o anoitecer até ao amanhecer e sempre que a visibilidade ou a intensidade do trânsito o aconselhem, os peões devem transitar numa única fila, salvo as situações de cortejo ou formação organizada previstas na lei. (Art. 102.º, n.º 4)."
+    "explicacao": "Nos veículos de passageiros ou mistos, a carga não deve ultrapassar os contornos envolventes do veículo nem prejudicar a indicação dos dispositivos de sinalização, iluminação e matrícula. (Art. 56.º, n.º 3, al. g)."
   },
   {
     "numero": 21,
-    "tema": "Posição dos peões junto ao limite da via",
+    "tema": "Dimensões da carga em veículos de mercadorias",
     "dificuldade": "média",
-    "enunciado": "Na falta de passeio ou quando não seja possível utilizá-lo, os peões têm de circular pela faixa de rodagem. Que posição devem adoptar?",
+    "enunciado": "Um camião transporta mercadoria que ultrapassa o comprimento e a largura da caixa. Qual é a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Devem seguir o mais próximo possível do limite da faixa de rodagem.",
-      "Devem caminhar pelo centro da faixa para evitar a berma.",
-      "Devem ocupar a via de trânsito mais à direita, mesmo que isso os coloque em perigo.",
-      "Devem caminhar junto ao eixo da estrada."
+      "A carga deve respeitar os limites de comprimento e largura da caixa, salvo condições excepcionais fixadas em regulamento.",
+      "Pode ultrapassar livremente se estiver amarrada.",
+      "Só a altura é limitada.",
+      "O condutor decide se a carga é segura."
     ],
     "correta": 0,
-    "explicacao": "Nos casos de falta ou impossibilidade de utilização dos locais destinados aos peões, bem como nas situações previstas no artigo 102.º, os peões devem transitar o mais próximo possível do limite da faixa de rodagem. (Art. 103.º, n.º 2)."
+    "explicacao": "Nos veículos destinados ao transporte de mercadorias, a carga deve conter-se nos limites de comprimento e largura da caixa, salvo condições excepcionais fixadas em regulamento. (Art. 56.º, n.º 3, al. h)."
   },
   {
     "numero": 22,
-    "tema": "Utilização de pistas pelos peões",
+    "tema": "Mercadorias a granel",
     "dificuldade": "média",
-    "enunciado": "Em certas situações, peões que não conseguem utilizar os locais próprios ou que transportam objectos volumosos pretendem utilizar uma pista destinada a outros utentes. Quando isso pode ser permitido?",
+    "enunciado": "Um camião transporta areia a granel. Até que altura pode a carga ser colocada, segundo a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Sempre, mesmo que impeçam a circulação dos veículos a que a pista está destinada.",
-      "Apenas quando estiverem acompanhados por um agente policial.",
-      "Quando a intensidade do trânsito o permitir e não prejudicarem a circulação dos veículos ou animais a que a pista está afecta.",
-      "Nunca, em qualquer circunstância."
+      "Pode ultrapassar os taipais se estiver húmida.",
+      "Pode ficar acima dos taipais quando a viagem for curta.",
+      "Não pode exceder a altura definida pelo bordo superior dos taipais ou dispositivos análogos.",
+      "Pode ultrapassar os taipais se circular de noite."
     ],
     "correta": 2,
-    "explicacao": "Nos casos previstos no artigo 102.º, n.º 2, alíneas b), c) e e), os peões podem utilizar as pistas referidas no artigo 77.º desde que a intensidade do trânsito o permita e não prejudiquem a circulação dos veículos ou animais a que essas pistas estão afectas. (Art. 102.º, n.º 3)."
+    "explicacao": "Tratando-se de mercadorias a granel, a carga não pode exceder a altura definida pelo bordo superior dos taipais ou dispositivos análogos. (Art. 56.º, n.º 3, al. i)."
   },
   {
     "numero": 23,
-    "tema": "Sentido de circulação dos peões",
+    "tema": "Veículos com peso ou dimensões excessivos",
     "dificuldade": "média",
-    "enunciado": "Um peão circula pela faixa de rodagem porque não existe passeio utilizável. Em que lado deve seguir, salvo se isso comprometer a sua segurança?",
+    "enunciado": "Um veículo excede os limites regulamentares de peso ou dimensões. Pode circular livremente numa via pública?",
     "imagem": null,
     "opcoes": [
-      "Pelo lado esquerdo, sempre e sem excepção.",
-      "Pelo lado direito da faixa de rodagem, em relação ao seu sentido de marcha.",
-      "Pelo centro da faixa, para manter distância das bermas.",
-      "Pelo lado que estiver mais próximo de uma casa."
+      "Sim, desde que circule com escolta.",
+      "Não, salvo se tiver autorização especial.",
+      "Sim, quando a viagem for inferior a 10 km.",
+      "Sim, desde que o condutor tenha carta profissional."
     ],
     "correta": 1,
-    "explicacao": "Nos casos de falta ou impossibilidade de utilização dos locais próprios, e nas situações de transporte de objectos volumosos previstas no Código, os peões devem circular pelo lado direito da faixa de rodagem, a não ser que isso comprometa a sua segurança. (Art. 103.º, n.º 3)."
+    "explicacao": "Salvo autorização especial, não podem transitar nas vias públicas veículos cujos pesos ou dimensões excedam os limites fixados em regulamento. (Art. 57.º)."
   },
   {
     "numero": 24,
-    "tema": "Iluminação de cortejos e formações organizadas",
+    "tema": "Autorização especial para veículos de dimensões superiores",
     "dificuldade": "média",
-    "enunciado": "Um cortejo organizado desloca-se pela faixa de rodagem durante a noite. Que sinalização luminosa deve utilizar para assinalar a sua presença?",
+    "enunciado": "Um transportador pretende fazer circular um veículo com dimensões superiores às legalmente fixadas. Quem pode autorizar esse trânsito, nos termos do Código?",
     "imagem": null,
     "opcoes": [
-      "Duas luzes vermelhas dirigidas para a frente.",
-      "Apenas uma luz amarela no centro do grupo.",
-      "Uma luz branca e uma luz azul, ambas na retaguarda.",
-      "Pelo menos uma luz branca dirigida para a frente e uma luz vermelha dirigida para a retaguarda, ambas do lado direito do cortejo ou formação."
+      "Qualquer agente da polícia no local, verbalmente.",
+      "O proprietário da estrada, sem formalidade.",
+      "A empresa transportadora, por declaração própria.",
+      "O INAV, mediante autorização especial e nas condições previstas no Código e no regulamento."
     ],
     "correta": 3,
-    "explicacao": "Os cortejos e formações organizadas que circulem na faixa de rodagem desde o anoitecer até ao amanhecer, ou quando a visibilidade o aconselhe, devem assinalar a presença com pelo menos uma luz branca para a frente e uma luz vermelha para a retaguarda, ambas do lado direito. (Art. 105.º, n.º 1)."
+    "explicacao": "O Código prevê que o INAV pode permitir, nas condições regulamentares, o trânsito de veículos com peso ou dimensões superiores aos limites legais ou que transportem objectos indivisíveis que excedam a caixa. (Art. 58.º, n.º 1)."
   },
   {
     "numero": 25,
