@@ -13,31 +13,31 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: conceitos, posiciona
 
 | Nº | Tema | Enunciado / competência avaliada | Base legal |
 |---:|---|---|---|
-| 1 | Conceito de paragem | Um condutor imobiliza o veículo apenas pelo tempo necessário para um passageiro entrar, mantendo-se pronto a retomar a marcha. Esta situação corresponde a: | igo 49 |
-| 2 | Conceito de estacionamento | Um veículo fica imobilizado durante longo período, sem que a imobilização resulte das circunstâncias do trânsito nem seja uma breve operação de embarque ou carga. Trata-se de: | igo 49 |
-| 3 | Paragem que dificulta trânsito | Um condutor pára brevemente para deixar um passageiro, mas a sua viatura dificulta a passagem de outros veículos. O que deve fazer? | igo 49 |
-| 4 | Local de paragem fora da localidade | Fora de uma localidade, quando não seja possível parar fora da faixa de rodagem, onde deve ser feita a imobilização? | igo 49 |
-| 5 | Estacionamento dentro da localidade | Dentro de uma localidade, onde deve ser feito o estacionamento? | igo 49 |
-| 6 | Precauções ao estacionar | Ao estacionar, o condutor deve: | igo 49 |
-| 7 | Ponte | É permitido parar ou estacionar numa ponte, sem qualquer circunstância excepcional? | igo 50 |
-| 8 | Passagem de peões | Um condutor pretende estacionar junto de uma passagem assinalada para peões. Qual é a regra geral do artigo 50.º? | igo 50 |
-| 9 | Cruzamento | Segundo o artigo 50.º, qual é a distância mínima geral em relação a cruzamentos, entroncamentos ou rotundas para parar ou estacionar? | igo 50 |
-| 10 | Túnel e visibilidade | Um condutor encontra um local de visibilidade insuficiente dentro de um túnel. Pode estacionar se deixar o motor ligado? | igo 50 |
-| 11 | Paragem de transporte colectivo | Um automóvel particular pretende parar junto de um sinal de paragem de transporte colectivo. Qual é a regra de distância indicada no artigo 50.º? | igo 50 |
-| 12 | Sinal luminoso | Um veículo alto pretende parar antes de um semáforo de cruzamento e pode encobrir o sinal. Que regra deve observar? | igo 50 |
-| 13 | Passeio | Um condutor estaciona parcialmente sobre o passeio, deixando algum espaço para peões. A conduta é: | igo 50 |
-| 14 | Linha longitudinal contínua | Numa faixa de rodagem marcada com linha longitudinal contínua, qual é a situação proibida pelo artigo 50.º? | igo 50 |
-| 15 | Fora das localidades | Fora das localidades, o artigo 50.º estabelece uma proibição adicional de parar ou estacionar: | igo 50 |
-| 16 | Faixa de rodagem fora da localidade | Fora das localidades, existe espaço adequado fora da faixa de rodagem para imobilizar o veículo. O condutor deve: | igo 50 |
-| 17 | Segunda fila | Um condutor estaciona ao lado de outro veículo já estacionado, ocupando a segunda fila. A situação é: | igo 51 |
-| 18 | Acesso a propriedade | É permitido estacionar diante de uma entrada de garagem, impedindo a saída de outro veículo? | igo 51 |
-| 19 | Posto de combustível | Um condutor pretende estacionar junto de um posto de abastecimento de combustível. Qual é a regra do artigo 51.º? | igo 51 |
-| 20 | Lugar reservado | Um lugar está devidamente sinalizado como reservado a determinado tipo de veículo. Um veículo não autorizado pode estacionar ali? | igo 51 |
-| 21 | Passeio e estacionamento | Um condutor deixa o automóvel estacionado sobre o passeio. Qual artigo prevê expressamente essa proibição de estacionamento? | igo 51 |
-| 22 | Paragem breve e estacionamento | Um condutor permanece ao volante durante uma breve operação de carga, pronto a retomar a marcha sempre que dificulte a passagem. O artigo 51.º, n.º 3, esclarece que: | igo 51 |
-| 23 | Estacionamento nocturno fora da localidade | Fora das localidades, onde é proibido estacionar durante a noite, nos termos do artigo 51.º? | igo 51 |
-| 24 | Veículo impede fila de trânsito | Um veículo fica estacionado num local onde impede a formação de uma fila de trânsito. Qual é a avaliação correcta? | igo 51 |
-| 25 | Reboque desacoplado | Um reboque é deixado desligado do veículo tractor numa rua comum. Qual é a regra geral? | igo 51 |
+| 1 | Conceito de paragem | Um condutor imobiliza o veículo apenas pelo tempo necessário para um passageiro entrar, mantendo-se pronto a retomar a marcha. Esta situação corresponde a: | Art. 49.º |
+| 2 | Conceito de estacionamento | Um veículo fica imobilizado durante longo período, sem que a imobilização resulte das circunstâncias do trânsito nem seja uma breve operação de embarque ou carga. Trata-se de: | Art. 49.º |
+| 3 | Paragem que dificulta trânsito | Um condutor pára brevemente para deixar um passageiro, mas a sua viatura dificulta a passagem de outros veículos. O que deve fazer? | Art. 49.º |
+| 4 | Local de paragem fora da localidade | Fora de uma localidade, quando não seja possível parar fora da faixa de rodagem, onde deve ser feita a imobilização? | Art. 49.º |
+| 5 | Estacionamento dentro da localidade | Dentro de uma localidade, onde deve ser feito o estacionamento? | Art. 49.º |
+| 6 | Precauções ao estacionar | Ao estacionar, o condutor deve: | Art. 49.º |
+| 7 | Ponte | É permitido parar ou estacionar numa ponte, sem qualquer circunstância excepcional? | Art. 50.º |
+| 8 | Passagem de peões | Um condutor pretende estacionar junto de uma passagem assinalada para peões. Qual é a regra geral do artigo 50.º? | Art. 50.º |
+| 9 | Cruzamento | Segundo o artigo 50.º, qual é a distância mínima geral em relação a cruzamentos, entroncamentos ou rotundas para parar ou estacionar? | Art. 50.º |
+| 10 | Túnel e visibilidade | Um condutor encontra um local de visibilidade insuficiente dentro de um túnel. Pode estacionar se deixar o motor ligado? | Art. 50.º |
+| 11 | Paragem de transporte colectivo | Um automóvel particular pretende parar junto de um sinal de paragem de transporte colectivo. Qual é a regra de distância indicada no artigo 50.º? | Art. 50.º |
+| 12 | Sinal luminoso | Um veículo alto pretende parar antes de um semáforo de cruzamento e pode encobrir o sinal. Que regra deve observar? | Art. 50.º |
+| 13 | Passeio | Um condutor estaciona parcialmente sobre o passeio, deixando algum espaço para peões. A conduta é: | Art. 50.º |
+| 14 | Linha longitudinal contínua | Numa faixa de rodagem marcada com linha longitudinal contínua, qual é a situação proibida pelo artigo 50.º? | Art. 50.º |
+| 15 | Fora das localidades | Fora das localidades, o artigo 50.º estabelece uma proibição adicional de parar ou estacionar: | Art. 50.º |
+| 16 | Faixa de rodagem fora da localidade | Fora das localidades, existe espaço adequado fora da faixa de rodagem para imobilizar o veículo. O condutor deve: | Art. 50.º |
+| 17 | Segunda fila | Um condutor estaciona ao lado de outro veículo já estacionado, ocupando a segunda fila. A situação é: | Art. 51.º |
+| 18 | Acesso a propriedade | É permitido estacionar diante de uma entrada de garagem, impedindo a saída de outro veículo? | Art. 51.º |
+| 19 | Posto de combustível | Um condutor pretende estacionar junto de um posto de abastecimento de combustível. Qual é a regra do artigo 51.º? | Art. 51.º |
+| 20 | Lugar reservado | Um lugar está devidamente sinalizado como reservado a determinado tipo de veículo. Um veículo não autorizado pode estacionar ali? | Art. 51.º |
+| 21 | Passeio e estacionamento | Um condutor deixa o automóvel estacionado sobre o passeio. Qual artigo prevê expressamente essa proibição de estacionamento? | Art. 51.º |
+| 22 | Paragem breve e estacionamento | Um condutor permanece ao volante durante uma breve operação de carga, pronto a retomar a marcha sempre que dificulte a passagem. O artigo 51.º, n.º 3, esclarece que: | Art. 51.º |
+| 23 | Estacionamento nocturno fora da localidade | Fora das localidades, onde é proibido estacionar durante a noite, nos termos do artigo 51.º? | Art. 51.º |
+| 24 | Veículo impede fila de trânsito | Um veículo fica estacionado num local onde impede a formação de uma fila de trânsito. Qual é a avaliação correcta? | Art. 51.º |
+| 25 | Reboque desacoplado | Um reboque é deixado desligado do veículo tractor numa rua comum. Qual é a regra geral? | Art. 51.º |
 
 ## Distribuição das respostas correctas
 
