@@ -76,7 +76,7 @@ const vm = require("node:vm");
   assert.equal(name.textContent,"ESTRADA");
   assert.equal(typeof listeners.hashchange,"function");
   await navegar("#/exames");
-  for(let n=31;n<=51;n++)assert.match(app.innerHTML,new RegExp("Exame "+n+"[\\\\s\\\\S]*Aberto para testes"));
+  for(let n=31;n<=51;n++)assert.ok(app.innerHTML.includes("Exame "+n) && app.innerHTML.includes("Aberto para testes"));
   for(let n=31;n<=51;n++){
     await navegar("#/exame/"+n);
     assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas");
@@ -88,14 +88,14 @@ const vm = require("node:vm");
   await navegar("#/exame/39");
   assert.match(app.innerHTML,/Pergunta 1 de 25/);
   assert.equal(app.lastFocused,"titulo","Ao abrir/mudar de pergunta, o foco deve ir para o título");
-  assert.doesNotMatch(app.innerHTML,/Certo\\.|Errado\\.|explicacao/);
+  assert.ok(!app.innerHTML.includes("Certo.") && !app.innerHTML.includes("Errado.") && !app.innerHTML.includes("explicacao"));
   const tempoInicial=timerNodes.tempo.textContent;
   agora+=1000;
   intervalCallback();
   assert.notEqual(timerNodes.tempo.textContent,tempoInicial,"O cronómetro deve actualizar o tempo");
   for(let i=0;i<25;i++){
     app.click("responder",{"data-indice":String(context.window.EXAMES[39][i].correta)});
-    assert.doesNotMatch(app.innerHTML,/Certo\\.|Errado\\.|<div class='expl'/);
+    assert.ok(!app.innerHTML.includes("Certo.") && !app.innerHTML.includes("Errado.") && !app.innerHTML.includes("<div class='expl'"));
     if(i<24){
       assert.equal(app.lastFocused,"alternativa:"+context.window.EXAMES[39][i].correta,
         "Depois de responder, o foco deve regressar à alternativa escolhida");
@@ -103,7 +103,7 @@ const vm = require("node:vm");
     }
   }
   await new Promise(resolve=>setImmediate(resolve));
-  assert.match(app.innerHTML,/20,0 \\/ 20 valores/);
+  assert.ok(app.innerHTML.includes("20,0 / 20 valores"));
   assert.match(app.innerHTML,/APROVADO/);
   assert.match(app.innerHTML,/Rever exame/);
   assert.equal(intervalCallback,null,"O cronómetro deve parar após a submissão automática");
@@ -111,10 +111,10 @@ const vm = require("node:vm");
 
   // Simula recarregar a página já em #/resultado: o estado em memória desaparece.
   vm.runInContext(appSource,context);
-  assert.match(app.innerHTML,/20,0 \\/ 20 valores/,"O resultado deve sobreviver ao recarregamento");
+  assert.ok(app.innerHTML.includes("20,0 / 20 valores"),"O resultado deve sobreviver ao recarregamento");
   await navegar("#/rever");
   assert.match(app.innerHTML,/resposta correcta/);
-  assert.equal((app.innerHTML.match(/Pergunta \\d+/g)||[]).length,25);
+  assert.equal((app.innerHTML.match(/Pergunta [0-9]+/g)||[]).length,25);
   assert.match(app.innerHTML,/a tua resposta/);
   // Recarregar também na rota de revisão.
   vm.runInContext(appSource,context);
@@ -132,10 +132,10 @@ const vm = require("node:vm");
     await new Promise(resolve=>setImmediate(resolve));
   }
   await concluirComAcertos(41,23);
-  assert.match(app.innerHTML,/18,4 \\/ 20 valores/);
+  assert.ok(app.innerHTML.includes("18,4 / 20 valores"));
   assert.match(app.innerHTML,/APROVADO/);
   await concluirComAcertos(42,22);
-  assert.match(app.innerHTML,/17,6 \\/ 20 valores/);
+  assert.ok(app.innerHTML.includes("17,6 / 20 valores"));
   assert.match(app.innerHTML,/REPROVADO/);
 
   // A submissão manual com perguntas em branco pede confirmação.
@@ -143,12 +143,12 @@ const vm = require("node:vm");
   confirmar=false;
   app.click("submeter");
   assert.equal(confirmacoes.length,1);
-  assert.match(confirmacoes[0],/25 pergunta\\(s\\) sem resposta/);
+  assert.ok(confirmacoes[0].includes("25 pergunta(s) sem resposta"));
   assert.match(app.innerHTML,/Pergunta 1 de 25/,"Recusar a confirmação deve manter o exame aberto");
   confirmar=true;
   app.click("submeter");
   await new Promise(resolve=>setImmediate(resolve));
-  assert.match(app.innerHTML,/0,0 \\/ 20 valores/);
+  assert.ok(app.innerHTML.includes("0,0 / 20 valores"));
   assert.match(app.innerHTML,/REPROVADO/);
   await navegar("#/rever");
   assert.match(app.innerHTML,/Não respondida/);
