@@ -6,6 +6,13 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Interface (FE-)
 
+## FE-007 — Integrar os Exames 33–51 no carregamento da aplicação
+- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 19:00 UTC+02 — ficheiros: index.html, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 19:00 UTC+02
+- Pedido: integrar no carregamento da aplicação os ficheiros de dados dos Exames 33 a 51, que já existem no repositório, sem reconstruir os Exames 1 a 30 e preservando as integrações dos Exames 31 e 32.
+- Onde mexer: index.html; actualizar PENDENTE.md e HISTORICO.md no mesmo commit de conclusão.
+- Pronto quando: os scripts dos Exames 31 a 51 estão presentes uma única vez e são carregados antes de app.js; todos os 21 ficheiros e mapas de rastreabilidade existem; os caminhos são validados; o validador oficial e CI passam; o catálogo reconhece os exames existentes. Teste visual no navegador fica explicitamente pendente se não puder ser executado nesta sessão.
+- Cuidados: não alterar app.js, styles.css, config.js, conteúdo dos exames ou regras de acesso; não alterar exames 1 a 30; não mexer em tarefas de conteúdo reservadas. O dono autorizou expressamente a execução da integração dos Exames 31–51.
+
 ## GER-012 — Uniformizar a nomenclatura oficial da plataforma
 - Estado: EM CURSO — ChatGPT-3 — 2026-11-13 — ficheiros: index.html, app.js, config.js, docs/, README.md, REGRAS.md, INSTRUCOES.md, PENDENTE.md, HISTORICO.md, data/exames/PENDENTE.md e restantes textos de interface — último sinal: 2026-11-13 14:09 UTC
 - Pedido: por decisão expressa do dono, a plataforma deve usar «exame» como designação oficial em todos os pontos apresentados ao utilizador e na documentação do produto. Usar exclusivamente «exame/exames» como designação do produto, catálogo, navegação, planos, instruções, resultados, perguntas frequentes e textos de apoio.
