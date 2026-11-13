@@ -1,382 +1,412 @@
 // Exame 46 — 25 perguntas originais do ESTRADA.
-// Foco: transporte de passageiros e carga.
-// Base legal: Código da Estrada (arts. 53.º–58.º e 64.º).
+// Foco: classificação de veículos, reboques e conjuntos de veículos.
+// Base legal: Código da Estrada de Moçambique, arts. 108.º–116.º.
 // Rastreabilidade: docs/referencias-exames/exame46-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[46] = [
   {
     "numero": 1,
-    "tema": "Entrada e saída",
+    "tema": "Conceito de automóvel",
     "dificuldade": "fácil",
-    "enunciado": "Quando podem os passageiros entrar ou sair de um veículo?",
+    "enunciado": "Segundo o Código da Estrada, qual conjunto de características corresponde à definição de automóvel?",
     "imagem": null,
     "opcoes": [
-      "Quando o veículo estiver completamente parado.",
-      "Quando o veículo circular devagar.",
-      "Sempre que a porta estiver do lado do passeio.",
-      "Quando o passageiro conseguir segurar-se."
+      "Veículo com motor, pelo menos quatro rodas, tara superior a 550 kg e velocidade máxima de construção superior a 25 km/h, destinado a circular na via pública sem carris.",
+      "Veículo com duas rodas, movido exclusivamente por pedais.",
+      "Qualquer máquina agrícola, mesmo sem motor.",
+      "Veículo que só pode circular sobre carris."
     ],
-    "correta": 0,
-    "explicacao": "É proibido entrar ou sair sem que o veículo esteja completamente parado. (Art. 54.º, n.º 1)."
+    "correta": 2,
+    "explicacao": "Art. 108.º: a definição legal considera o motor, o número de rodas, a tara, a velocidade de construção e a destinação à circulação rodoviária."
   },
   {
     "numero": 2,
-    "tema": "Carga e descarga",
+    "tema": "Automóvel ligeiro",
     "dificuldade": "fácil",
-    "enunciado": "Um condutor pretende descarregar mercadoria com o veículo ainda em movimento lento. O que determina o Código?",
+    "enunciado": "Um automóvel tem peso bruto de 3 200 kg e lotação de nove lugares, incluindo o condutor. Como é classificado quanto à classe?",
     "imagem": null,
     "opcoes": [
-      "É permitido para mercadoria leve.",
-      "É permitido apenas durante o dia.",
-      "A descarga pode começar antes de parar.",
-      "A carga e descarga só podem ocorrer com o veículo completamente parado."
+      "Automóvel ligeiro.",
+      "Automóvel pesado, por ter mais de cinco lugares.",
+      "Veículo especial, independentemente da utilização.",
+      "Tractor, por transportar pessoas."
     ],
-    "correta": 3,
-    "explicacao": "É proibido carregar ou descarregar sem que o veículo esteja completamente parado. (Art. 54.º, n.º 1)."
+    "correta": 0,
+    "explicacao": "Art. 109.º, n.º 1, al. a): é ligeiro o veículo com peso bruto até 3 500 kg e lotação não superior a nove lugares, incluindo o condutor."
   },
   {
     "numero": 3,
-    "tema": "Operações de embarque",
-    "dificuldade": "média",
-    "enunciado": "Depois de parar num local adequado, como devem decorrer, em regra, a entrada e a saída dos passageiros?",
+    "tema": "Automóvel pesado",
+    "dificuldade": "fácil",
+    "enunciado": "Um veículo tem peso bruto de 3 700 kg, embora transporte apenas quatro pessoas. Como é classificado?",
     "imagem": null,
     "opcoes": [
-      "Podem prolongar-se enquanto os passageiros conversam.",
-      "Devem fazer-se o mais rapidamente possível, salvo a excepção legal prevista.",
-      "Devem ocorrer sempre na faixa de rodagem.",
-      "Devem ser feitas apenas pelo condutor."
+      "Ligeiro, porque transporta menos de nove pessoas.",
+      "Misto, por transportar pessoas e mercadorias.",
+      "Pesado, porque o peso bruto excede 3 500 kg.",
+      "Especial, por não transportar passageiros."
     ],
-    "correta": 1,
-    "explicacao": "A entrada e saída de passageiros e as operações de carga ou descarga devem fazer-se o mais rapidamente possível, salvo a situação prevista no n.º 2. (Art. 54.º, n.º 2)."
+    "correta": 3,
+    "explicacao": "Art. 109.º, n.º 1, al. b): é pesado o automóvel com peso bruto superior a 3 500 kg ou lotação superior a nove lugares, incluindo o condutor."
   },
   {
     "numero": 4,
-    "tema": "Lado de entrada e saída",
-    "dificuldade": "média",
-    "enunciado": "Um veículo está parado junto ao lado esquerdo da faixa de rodagem. Em regra, por que lado devem entrar ou sair os passageiros?",
+    "tema": "Tipos de automóveis pela utilização",
+    "dificuldade": "fácil",
+    "enunciado": "Um veículo foi concebido para transportar, alternadamente ou em simultâneo, pessoas e carga. Qual é o seu tipo?",
     "imagem": null,
     "opcoes": [
-      "Pelo lado do trânsito em movimento.",
-      "Pelo lado direito em qualquer circunstância.",
-      "Pelo lado esquerdo, junto ao qual o veículo está parado.",
-      "Pelo lado que obrigue a atravessar a faixa."
+      "Automóvel de passageiros.",
+      "Automóvel misto.",
+      "Automóvel tractor.",
+      "Automóvel especial."
     ],
-    "correta": 2,
-    "explicacao": "Os passageiros entram e saem pelo lado esquerdo ou direito consoante o veículo esteja parado ou estacionado à esquerda ou à direita da faixa. (Art. 55.º, n.º 1)."
+    "correta": 1,
+    "explicacao": "Art. 109.º, n.º 2, al. c): os veículos mistos destinam-se ao transporte alternado ou simultâneo de pessoas e carga."
   },
   {
     "numero": 5,
-    "tema": "Lotação do veículo",
+    "tema": "Automóvel de mercadorias",
     "dificuldade": "fácil",
-    "enunciado": "Um automóvel tem cinco lugares e o condutor pretende transportar sete passageiros. A conduta é:",
+    "enunciado": "Um veículo automóvel foi construído e destinado principalmente ao transporte de carga. Em que tipo se enquadra?",
     "imagem": null,
     "opcoes": [
-      "Permitida se o percurso for curto.",
-      "Proibida, por exceder a lotação do veículo.",
-      "Permitida se dois passageiros forem crianças.",
-      "Permitida em estradas com pouco trânsito."
+      "Automóvel de mercadorias.",
+      "Automóvel de passageiros.",
+      "Automóvel misto, obrigatoriamente.",
+      "Veículo sobre carris."
     ],
-    "correta": 1,
-    "explicacao": "É proibido transportar passageiros em número que exceda a lotação do veículo ou comprometa a segurança. (Art. 55.º, n.º 3)."
+    "correta": 0,
+    "explicacao": "Art. 109.º, n.º 2, al. b): os automóveis de mercadorias são os que se destinam ao transporte de carga."
   },
   {
     "numero": 6,
-    "tema": "Passageiros fora dos assentos",
+    "tema": "Veículo especial",
     "dificuldade": "média",
-    "enunciado": "Um passageiro pretende viajar de pé num veículo ligeiro não autorizado para esse transporte. O que estabelece o Código?",
+    "enunciado": "Uma viatura foi concebida para desempenhar uma função específica diferente do transporte normal de passageiros ou de carga. Como é classificada?",
     "imagem": null,
     "opcoes": [
-      "É permitido se segurar no encosto.",
-      "É permitido apenas em trajectos urbanos.",
-      "É permitido quando o veículo circula devagar.",
-      "É proibido, salvo condições excepcionais definidas em regulamento."
+      "Automóvel misto.",
+      "Automóvel de mercadorias.",
+      "Automóvel especial.",
+      "Automóvel ligeiro por definição."
     ],
-    "correta": 3,
-    "explicacao": "É proibido transportar passageiros fora dos assentos, salvo condições excepcionais a definir em regulamento. (Art. 55.º, n.º 4)."
+    "correta": 2,
+    "explicacao": "Art. 109.º, n.º 2, al. e): são especiais os veículos destinados a uma função específica diferente do transporte normal de passageiros ou carga."
   },
   {
     "numero": 7,
-    "tema": "Abertura da porta",
+    "tema": "Veículo tractor",
     "dificuldade": "média",
-    "enunciado": "Antes de abrir a porta para sair, o condutor e os passageiros devem:",
+    "enunciado": "Na classificação dos automóveis segundo a utilização, o que caracteriza um tractor?",
     "imagem": null,
     "opcoes": [
-      "Certificar-se de que a abertura e a saída não constituem perigo para si nem para outros utentes.",
-      "Abrir rapidamente para obrigar os veículos atrás a parar.",
-      "Sair sempre pelo lado da faixa de rodagem.",
-      "Buzinar e abrir sem olhar."
+      "Veículo destinado exclusivamente ao transporte de passageiros.",
+      "Veículo construído para desenvolver esforço de tracção, sem comportar carga útil.",
+      "Veículo com duas rodas accionado por pedais.",
+      "Veículo que circula obrigatoriamente sobre carris."
     ],
-    "correta": 0,
-    "explicacao": "O condutor e os passageiros não devem abrir a porta, deixá-la aberta ou descer sem antes verificar que isso não constitui perigo. (Art. 55.º, n.º 5)."
+    "correta": 1,
+    "explicacao": "Art. 109.º, n.º 2, al. d): os tractores são construídos para desenvolver esforço de tracção e não comportam carga útil."
   },
   {
     "numero": 8,
-    "tema": "Paragem do transporte colectivo",
+    "tema": "Definição de motociclo",
     "dificuldade": "média",
-    "enunciado": "Um autocarro pretende recolher passageiros numa faixa de rodagem. Onde deve parar?",
+    "enunciado": "Um veículo de duas rodas tem motor de combustão com cilindrada de 80 cm³. Qual é a classificação indicada pelo Código, considerando a cilindrada?",
     "imagem": null,
     "opcoes": [
-      "Em qualquer ponto, desde que ligue os quatro indicadores.",
-      "No meio da faixa, para ser mais visível.",
-      "Nos locais destinados à paragem; se não existirem, o mais próximo possível da margem da faixa.",
-      "Sempre junto ao cruzamento mais próximo."
+      "Ciclomotor, porque tem duas rodas.",
+      "Velocípede com motor.",
+      "Tractor agrícola.",
+      "Motociclo, porque a cilindrada é superior a 50 cm³."
     ],
-    "correta": 2,
-    "explicacao": "Os veículos de transporte colectivo só podem parar nos locais destinados; na falta deles, junto à margem da faixa. (Art. 53.º, n.ºs 1 e 2)."
+    "correta": 3,
+    "explicacao": "Art. 110.º, n.º 1: é motociclo o veículo com duas, três ou quatro rodas e motor de cilindrada superior a 50 cm³, ou que exceda 45 km/h por construção."
   },
   {
     "numero": 9,
-    "tema": "Local de carga e descarga",
+    "tema": "Definição de ciclomotor",
     "dificuldade": "média",
-    "enunciado": "Um veículo está parado junto à margem direita da faixa. Em regra, por onde deve ser feita a carga ou descarga?",
+    "enunciado": "Um veículo de duas rodas tem velocidade máxima de construção de 40 km/h e motor de combustão de 49 cm³. Como se enquadra?",
     "imagem": null,
     "opcoes": [
-      "Pelo lado oposto ao trânsito, mesmo que obrigue a atravessar a via.",
-      "Pela retaguarda ou pelo lado da margem junto da qual o veículo está parado.",
-      "Pelo lado do centro da faixa de rodagem.",
-      "Por qualquer lado, sem observar o trânsito."
+      "Ciclomotor.",
+      "Motociclo.",
+      "Automóvel ligeiro.",
+      "Triciclo."
     ],
-    "correta": 1,
-    "explicacao": "A carga e descarga devem ser feitas pela retaguarda ou pelo lado da margem junto da qual o veículo está parado ou estacionado. (Art. 56.º, n.º 1)."
+    "correta": 0,
+    "explicacao": "Art. 110.º, n.º 2: o ciclomotor de duas rodas não excede 45 km/h por construção e tem motor de combustão com cilindrada não superior a 50 cm³, ou motor eléctrico dentro do limite legal."
   },
   {
     "numero": 10,
-    "tema": "Carga perigosa",
-    "dificuldade": "fácil",
-    "enunciado": "Uma carga pode cair sobre a via e atingir outros utentes. O veículo pode continuar a circular?",
+    "tema": "Definição de triciclo",
+    "dificuldade": "média",
+    "enunciado": "Qual das descrições corresponde a um triciclo motorizado nos termos do Código?",
     "imagem": null,
     "opcoes": [
-      "Sim, se o condutor reduzir a velocidade.",
-      "Sim, se os outros veículos mantiverem distância.",
-      "Sim, desde que a viagem seja curta.",
-      "Não; é proibido circular com carga que constitua perigo ou embaraço para os utentes."
+      "Veículo de quatro rodas com tara até 550 kg.",
+      "Veículo de duas rodas accionado por pedais.",
+      "Veículo de três rodas dispostas simetricamente, com motor acima de 50 cm³ ou velocidade de construção superior a 45 km/h.",
+      "Veículo agrícola de um só eixo."
     ],
-    "correta": 3,
-    "explicacao": "É proibido circular com veículos ou animais carregados de forma que possam constituir perigo ou embaraço para outros utentes. (Art. 56.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "Art. 110.º, n.º 3: o triciclo tem três rodas dispostas simetricamente e motor/velocidade acima dos limiares previstos."
   },
   {
     "numero": 11,
-    "tema": "Equilíbrio da carga",
-    "dificuldade": "média",
-    "enunciado": "Ao organizar a carga, o transportador deve assegurar principalmente que:",
+    "tema": "Definição de quadriciclo",
+    "dificuldade": "fácil",
+    "enunciado": "Um veículo tem quatro rodas e tara de 520 kg. Que designação consta do Código, sem prejuízo das regras de enquadramento regulamentar?",
     "imagem": null,
     "opcoes": [
-      "A carga fique equilibrada com o veículo parado e em marcha.",
-      "Todo o peso fique concentrado num só lado.",
-      "A carga fique solta para facilitar a descarga.",
-      "A carga se apoie apenas nas portas traseiras."
+      "Motociclo de duas rodas.",
+      "Ciclomotor de três rodas.",
+      "Automóvel pesado.",
+      "Quadriciclo."
     ],
-    "correta": 0,
-    "explicacao": "A disposição da carga deve assegurar o equilíbrio do veículo, parado ou em marcha. (Art. 56.º, n.º 3, al. a))."
+    "correta": 3,
+    "explicacao": "Art. 110.º, n.º 4: quadriciclo é o veículo dotado de quatro rodas cuja tara não exceda 550 kg."
   },
   {
     "numero": 12,
-    "tema": "Fixação da carga",
+    "tema": "Veículo de quatro rodas até 550 kg",
     "dificuldade": "média",
-    "enunciado": "Uma carga pode oscilar ou cair durante a viagem. O que exige o Código?",
+    "enunciado": "Um veículo de quatro rodas tem tara inferior a 550 kg. A sua inclusão na categoria de motociclo ou ciclomotor depende de quê?",
     "imagem": null,
     "opcoes": [
-      "É suficiente avisar os veículos que seguem atrás.",
-      "Pode circular se usar luzes de perigo.",
-      "A carga deve ser disposta de modo a não cair nem oscilar perigosamente ou projectar detritos.",
-      "Apenas as cargas pesadas precisam de ser fixadas."
+      "Apenas da cor e do formato da carroçaria.",
+      "Das suas características, nomeadamente cilindrada e velocidade máxima de construção, nos termos regulamentares.",
+      "Da idade do proprietário.",
+      "Da quantidade de passageiros transportados numa viagem."
     ],
-    "correta": 2,
-    "explicacao": "A carga não pode cair nem oscilar de forma perigosa ou incómoda, nem provocar projecção de detritos. (Art. 56.º, n.º 3, al. b))."
+    "correta": 1,
+    "explicacao": "Art. 110.º, n.º 5: o enquadramento depende das características, nomeadamente cilindrada e velocidade máxima em patamar e por construção, nos termos fixados em regulamento."
   },
   {
     "numero": 13,
-    "tema": "Visibilidade do condutor",
+    "tema": "Tractor agrícola ou florestal",
     "dificuldade": "fácil",
-    "enunciado": "Uma mercadoria empilhada tapa parte do campo de visão do condutor. O transporte está conforme?",
+    "enunciado": "Qual é a finalidade principal de um tractor agrícola ou florestal, segundo a definição legal?",
     "imagem": null,
     "opcoes": [
-      "Sim, se houver espelhos retrovisores.",
-      "Não; a disposição da carga não pode reduzir a visibilidade do condutor.",
-      "Sim, se o veículo tiver dois passageiros.",
-      "Sim, desde que a carga esteja amarrada."
+      "Transportar passageiros em serviço público.",
+      "Circular sobre carris em explorações agrícolas.",
+      "Desenvolver esforços de tracção em trabalhos predominantemente agrícolas ou florestais.",
+      "Transportar mercadorias perigosas em qualquer estrada."
     ],
-    "correta": 1,
-    "explicacao": "A disposição da carga deve assegurar que esta não reduza a visibilidade do condutor. (Art. 56.º, n.º 3, al. c))."
+    "correta": 2,
+    "explicacao": "Art. 111.º, n.º 1: o tractor agrícola ou florestal é construído para desenvolver esforços de tracção e destina-se predominantemente a trabalhos agrícolas."
   },
   {
     "numero": 14,
-    "tema": "Carga a arrastar",
-    "dificuldade": "fácil",
-    "enunciado": "Uma peça transportada arrasta pelo pavimento durante a circulação. O que deve ser feito?",
+    "tema": "Máquina agrícola ou florestal",
+    "dificuldade": "média",
+    "enunciado": "Uma máquina com motor e dois eixos destina-se à execução de trabalhos agrícolas. Como é classificada quanto ao peso?",
     "imagem": null,
     "opcoes": [
-      "Continuar até ao destino, se não fizer barulho.",
-      "Aumentar a velocidade para reduzir o contacto.",
-      "Pedir a outro veículo para acompanhar.",
-      "Imobilizar e acondicionar a carga para que não arraste pelo pavimento."
+      "Como ligeira ou pesada consoante a tara ou o peso bruto exceda ou não 3 500 kg.",
+      "Sempre como automóvel ligeiro.",
+      "Sempre como tractor pesado, independentemente do peso.",
+      "Como velocípede com motor."
     ],
-    "correta": 3,
-    "explicacao": "A carga deve ser disposta de modo a não arrastar pelo pavimento. (Art. 56.º, n.º 3, al. d))."
+    "correta": 0,
+    "explicacao": "Art. 111.º, n.º 2: a máquina agrícola ou florestal é considerada pesada ou ligeira consoante a tara ou o peso bruto exceda ou não 3 500 kg."
   },
   {
     "numero": 15,
-    "tema": "Altura máxima da carga",
+    "tema": "Motocultivador",
     "dificuldade": "média",
-    "enunciado": "Qual é a altura máxima geral da carga indicada no artigo 56.º, medida a partir do solo?",
+    "enunciado": "Qual é a característica essencial de um motocultivador na definição do Código?",
     "imagem": null,
     "opcoes": [
-      "4,3 metros.",
-      "3 metros.",
-      "5,5 metros.",
-      "6 metros."
+      "Veículo de quatro eixos para transporte colectivo.",
+      "Veículo de um só eixo destinado a trabalhos agrícolas ligeiros, que pode ser dirigido por condutor a pé ou com atrelado próprio.",
+      "Veículo sobre carris para uso industrial.",
+      "Automóvel pesado com caixa fechada."
     ],
-    "correta": 0,
-    "explicacao": "A carga não deve exceder a altura de 4,3 m a contar do solo. (Art. 56.º, n.º 3, al. f))."
+    "correta": 1,
+    "explicacao": "Art. 111.º, n.º 3: o motocultivador tem um só eixo, destina-se a trabalhos agrícolas ligeiros e pode ser dirigido a pé ou com semi-reboque/retrotrem atrelado."
   },
   {
     "numero": 16,
-    "tema": "Carga em veículo de passageiros",
+    "tema": "Tractocarro",
     "dificuldade": "média",
-    "enunciado": "Um veículo de passageiros leva volumes que ultrapassam os contornos do veículo e encobrem uma luz traseira. A situação é:",
+    "enunciado": "Uma viatura agrícola tem motor, dois eixos e caixa de carga para produtos agrícolas, com peso bruto de 3 200 kg. Qual é a designação legal correspondente?",
     "imagem": null,
     "opcoes": [
-      "Permitida se os volumes estiverem amarrados.",
-      "Permitida quando não houver fiscalização.",
-      "Proibida; a carga não deve ultrapassar os contornos nem prejudicar sinalização, iluminação ou matrícula.",
-      "Permitida se a viagem for inferior a 10 km."
+      "Máquina industrial.",
+      "Motocultivador.",
+      "Semi-reboque agrícola.",
+      "Tractocarro."
     ],
-    "correta": 2,
-    "explicacao": "Nos veículos de passageiros ou mistos, a carga não deve ultrapassar os contornos nem prejudicar sinalização, iluminação ou matrícula. (Art. 56.º, n.º 3, al. g))."
+    "correta": 3,
+    "explicacao": "Art. 111.º, n.º 4: tractocarro é veículo de dois ou mais eixos, com caixa de carga para produtos agrícolas ou florestais e peso bruto até 3 500 kg."
   },
   {
     "numero": 17,
-    "tema": "Carga em veículo de mercadorias",
-    "dificuldade": "difícil",
-    "enunciado": "Um veículo de mercadorias leva carga que ultrapassa a largura e o comprimento da caixa. Qual é a regra geral?",
+    "tema": "Veículo sobre carris",
+    "dificuldade": "fácil",
+    "enunciado": "Como define o Código um veículo sobre carris?",
     "imagem": null,
     "opcoes": [
-      "É sempre permitido se a carga estiver coberta.",
-      "A carga deve caber nos limites de comprimento e largura da caixa, salvo condições excepcionais fixadas em regulamento.",
-      "Só a largura tem de respeitar a caixa.",
-      "A regra aplica-se apenas aos veículos ligeiros."
+      "Veículo com motor e quatro rodas, destinado a circular em estrada.",
+      "Veículo agrícola que utiliza pneus especiais.",
+      "Veículo que, independentemente do sistema de propulsão, se desloca sobre carris.",
+      "Qualquer reboque de mercadorias."
     ],
-    "correta": 1,
-    "explicacao": "Nos veículos de mercadorias, a carga deve conter-se nos limites de comprimento e largura da caixa, salvo condições excepcionais fixadas em regulamento. (Art. 56.º, n.º 3, al. h))."
+    "correta": 2,
+    "explicacao": "Art. 112.º, n.º 1: veículo sobre carris é aquele que, independentemente do sistema de propulsão, se desloca sobre carris."
   },
   {
     "numero": 18,
-    "tema": "Mercadorias a granel",
+    "tema": "Máquina industrial",
     "dificuldade": "média",
-    "enunciado": "Num camião com taipais, a carga a granel ultrapassa o bordo superior. Está conforme?",
+    "enunciado": "Uma máquina com motor e dois eixos destina-se a obras ou trabalhos industriais e só ocasionalmente circula na via pública. Como é classificada?",
     "imagem": null,
     "opcoes": [
-      "Sim, se estiver húmida.",
-      "Sim, se o condutor circular lentamente.",
-      "Sim, se não ultrapassar a cabine.",
-      "Não; a carga a granel não deve exceder a altura definida pelo bordo superior dos taipais."
+      "Máquina industrial.",
+      "Máquina agrícola, obrigatoriamente.",
+      "Veículo de passageiros.",
+      "Ciclomotor."
     ],
-    "correta": 3,
-    "explicacao": "A carga a granel não deve exceder a altura definida pelo bordo superior dos taipais ou dispositivos análogos. (Art. 56.º, n.º 3, al. i))."
+    "correta": 0,
+    "explicacao": "Art. 112.º, n.º 2: máquina industrial é veículo motorizado de dois ou mais eixos destinado a obras ou trabalhos industriais e que só eventualmente transita na via pública."
   },
   {
     "numero": 19,
-    "tema": "Posicionamento na carga/descarga",
-    "dificuldade": "média",
-    "enunciado": "Durante uma operação de carga ou descarga, como deve ser posicionado o veículo, em regra?",
+    "tema": "Definição de reboque",
+    "dificuldade": "fácil",
+    "enunciado": "Um veículo foi concebido para circular atrelado a outro veículo. Qual é a sua designação?",
     "imagem": null,
     "opcoes": [
-      "No sentido do fluxo, paralelo ao bordo da faixa e junto ao lancil, salvo excepções sinalizadas.",
-      "Em diagonal, ocupando duas vias.",
-      "Em sentido contrário ao fluxo.",
-      "No centro da faixa para facilitar o acesso."
+      "Semi-reboque, em todos os casos.",
+      "Reboque.",
+      "Tractor agrícola.",
+      "Veículo único articulado."
     ],
-    "correta": 0,
-    "explicacao": "Nas operações de carga ou descarga, o veículo deve ficar no sentido do fluxo, paralelo ao bordo da faixa e junto ao lancil, salvo excepções sinalizadas. (Art. 56.º, n.º 4)."
+    "correta": 1,
+    "explicacao": "Art. 113.º, n.º 1: reboque é o veículo destinado a transitar atrelado a outro veículo."
   },
   {
     "numero": 20,
-    "tema": "Excesso de peso ou dimensão",
-    "dificuldade": "difícil",
-    "enunciado": "Um veículo excede os limites regulamentares de peso ou dimensões e transporta um objecto indivisível. Pode circular sem autorização?",
+    "tema": "Definição de semi-reboque",
+    "dificuldade": "média",
+    "enunciado": "O que distingue um semi-reboque de um reboque comum, segundo o Código?",
     "imagem": null,
     "opcoes": [
-      "Sim, porque o objecto é indivisível.",
-      "Sim, desde que circule à noite.",
-      "Não, salvo se dispuser da autorização especial exigida e cumprir as respectivas condições.",
-      "Sim, se for acompanhado por outro veículo."
+      "É sempre puxado por um motociclo.",
+      "Circula sem qualquer ligação a outro veículo.",
+      "Transporta exclusivamente passageiros.",
+      "É atrelado a um veículo a motor e assenta a parte da frente, distribuindo o peso sobre este."
     ],
-    "correta": 2,
-    "explicacao": "Veículos com peso ou dimensões superiores aos limites não podem transitar salvo autorização especial nos termos regulamentares. (Arts. 57.º e 58.º)."
+    "correta": 3,
+    "explicacao": "Art. 113.º, n.º 2: o semi-reboque destina-se a transitar atrelado a um veículo a motor, assentando a parte da frente e distribuindo o peso sobre este."
   },
   {
     "numero": 21,
-    "tema": "Materiais pulverulentos",
+    "tema": "Limite geral de reboques",
     "dificuldade": "média",
-    "enunciado": "Um camião transporta areia ou brita fina que pode espalhar-se pelo ar ou pelo solo. Como deve acondicionar a carga?",
+    "enunciado": "Em regra, quantos reboques podem ser atrelados a cada veículo a motor?",
     "imagem": null,
     "opcoes": [
-      "Deve cobri-la com oleado ou lona de dimensões adequadas.",
-      "Deve deixar a carga exposta para reduzir o peso.",
-      "Deve transportar a carga acima dos taipais.",
-      "Deve circular apenas pela faixa da esquerda."
+      "Não mais de um, ressalvadas as excepções previstas no Código.",
+      "Dois reboques em qualquer situação.",
+      "Três reboques, se a estrada for larga.",
+      "Um número ilimitado, desde que tenham travões."
     ],
     "correta": 0,
-    "explicacao": "Veículos que transportam materiais pulverulentos e inertes devem evitar que se espalhem pelo ar ou solo, cobrindo-os com oleados ou lonas adequadas. (Art. 64.º, n.º 2)."
+    "explicacao": "Art. 113.º, n.º 6: a cada veículo a motor não pode ser atrelado mais de um reboque, excepto os veículos denominados interlinks, que podem atrelar dois semi-reboques."
   },
   {
     "numero": 22,
-    "tema": "Danos causados pela carga",
+    "tema": "Excepção dos interlinks",
     "dificuldade": "difícil",
-    "enunciado": "Uma carga pode atingir imóveis marginais ou danificar obras de arte da estrada. O transporte é permitido?",
+    "enunciado": "Qual é a excepção expressamente indicada para os veículos denominados «interlinks»?",
     "imagem": null,
     "opcoes": [
-      "Sim, desde que não caia do veículo.",
-      "Sim, se o condutor sinalizar a carga.",
-      "Sim, quando o veículo é pesado.",
-      "Não; é proibido transportar carga que possa constituir perigo ou causar esses danos."
+      "Podem circular sem matrícula.",
+      "Podem transportar qualquer número de passageiros.",
+      "Podem atrelar dois semi-reboques.",
+      "Podem circular sem iluminação."
     ],
-    "correta": 3,
-    "explicacao": "O art. 56.º, n.º 2, proíbe carga que constitua perigo ou embaraço ou danifique pavimentos, instalações, obras de arte e imóveis marginais."
+    "correta": 2,
+    "explicacao": "Art. 113.º, n.º 6: os veículos denominados interlinks constituem a excepção que pode atrelar dois semi-reboques."
   },
   {
     "numero": 23,
-    "tema": "Carga a deslocar-se",
-    "dificuldade": "média",
-    "enunciado": "Uma carga está presa, mas pode oscilar perigosamente durante a viagem. O que deve fazer o condutor?",
+    "tema": "Excepções para comboios turísticos e tractores",
+    "dificuldade": "difícil",
+    "enunciado": "Em que situações o Código admite excepções à regra geral de um único reboque?",
     "imagem": null,
     "opcoes": [
-      "Continuar até ao destino.",
-      "Parar em local seguro e corrigir a disposição e fixação antes de prosseguir.",
-      "Acelerar para reduzir o tempo de transporte.",
-      "Abrir a porta e segurar a carga em andamento."
+      "Em qualquer automóvel ligeiro particular.",
+      "Em comboios turísticos e, nos termos de regulamento local, em tractores agrícolas ou florestais.",
+      "Sempre que o condutor tenha carta de categoria B.",
+      "Apenas em auto-estradas."
     ],
     "correta": 1,
-    "explicacao": "A carga deve permanecer equilibrada e não cair nem oscilar de forma perigosa ou incómoda. (Art. 56.º, n.º 3, als. a) e b))."
+    "explicacao": "Art. 113.º, n.º 7: há excepção para reboques em comboios turísticos e, nos termos a fixar em regulamento local, para reboques em tractores agrícolas ou florestais."
   },
   {
     "numero": 24,
-    "tema": "Porta e ciclista",
+    "tema": "Reboques no transporte público",
     "dificuldade": "média",
-    "enunciado": "O veículo está parado, mas um ciclista aproxima-se pelo lado onde o passageiro pretende abrir a porta. O que deve fazer o passageiro?",
+    "enunciado": "Um operador pretende utilizar reboque num veículo de transporte público de passageiros. Qual é a condição legal?",
     "imagem": null,
     "opcoes": [
-      "Esperar e confirmar que abrir a porta não constitui perigo para o ciclista.",
-      "Abrir rapidamente para que o ciclista desvie.",
-      "Abrir apenas metade da porta.",
-      "Pedir ao ciclista que pare sem observar a situação."
+      "É sempre proibido, sem excepção.",
+      "É permitido apenas dentro das localidades, sem regras próprias.",
+      "Basta autorização verbal do proprietário.",
+      "A utilização depende de regulamento próprio."
     ],
-    "correta": 0,
-    "explicacao": "O condutor e os passageiros devem certificar-se de que a abertura da porta e a saída não constituem perigo para outros utentes. (Art. 55.º, n.º 5)."
+    "correta": 3,
+    "explicacao": "Art. 113.º, n.º 8: o uso de reboques em transporte público de passageiros é autorizado em regulamento próprio."
   },
   {
     "numero": 25,
-    "tema": "Carga a cair durante a marcha",
+    "tema": "Veículo único articulado",
     "dificuldade": "difícil",
-    "enunciado": "Durante a viagem, o condutor percebe que parte da carga se deslocou e pode cair para a via. Qual é a conduta adequada?",
+    "enunciado": "Um automóvel pesado é formado por dois segmentos rígidos permanentemente ligados por uma secção articulada que permite a comunicação entre ambos. Como é considerado?",
     "imagem": null,
     "opcoes": [
-      "Continuar até ao próximo destino.",
-      "Acelerar para chegar mais depressa.",
-      "Abrir a porta e tentar segurar a carga em andamento.",
-      "Parar em local seguro e corrigir a disposição e fixação antes de prosseguir."
+      "Veículo único.",
+      "Conjunto de veículos independentes, sem qualquer equiparação.",
+      "Reboque agrícola.",
+      "Máquina industrial."
+    ],
+    "correta": 0,
+    "explicacao": "Art. 114.º, n.º 1, al. a): o automóvel pesado com dois segmentos rígidos permanentemente ligados por secção articulada é considerado veículo único."
+  },
+  {
+    "numero": 26,
+    "tema": "Velocípede e velocípede com motor",
+    "dificuldade": "média",
+    "enunciado": "Qual descrição corresponde ao velocípede com motor equiparado a velocípede pelo Código?",
+    "imagem": null,
+    "opcoes": [
+      "Veículo com motor de combustão de 125 cm³ e velocidade de 90 km/h.",
+      "Motociclo com pedais decorativos.",
+      "Velocípede com motor auxiliar eléctrico até 0,25 kW, cuja assistência diminui com a velocidade e cessa aos 25 km/h ou quando o ciclista deixa de pedalar.",
+      "Automóvel ligeiro com motor eléctrico."
+    ],
+    "correta": 2,
+    "explicacao": "Art. 115.º, n.ºs 1 a 3: o velocípede é accionado pelo esforço do condutor por pedais ou dispositivos análogos; o velocípede com motor auxiliar eléctrico até 0,25 kW, com assistência progressivamente reduzida e interrompida aos 25 km/h ou quando deixa de pedalar, é equiparado a velocípede."
+  },
+  {
+    "numero": 27,
+    "tema": "Atrelado e carro lateral em veículos de duas rodas",
+    "dificuldade": "média",
+    "enunciado": "Qual das situações é expressamente admitida pelo artigo 116.º?",
+    "imagem": null,
+    "opcoes": [
+      "Qualquer motociclo pode rebocar dois reboques de passageiros.",
+      "Um ciclomotor pode acoplar um carro lateral para quatro pessoas.",
+      "Um velocípede pode rebocar um atrelado sem limite de eixos.",
+      "Motociclos, ciclomotores e velocípedes podem atrelar à retaguarda um reboque de um eixo para carga; motociclos acima de 125 cm³ podem acoplar carro lateral para um passageiro."
     ],
     "correta": 3,
-    "explicacao": "A carga deve permanecer equilibrada, não cair nem oscilar perigosamente ou projectar detritos. (Art. 56.º, n.º 3, als. a) e b))."
+    "explicacao": "Art. 116.º, n.ºs 1 e 2: os veículos de duas rodas indicados podem atrelar um reboque de um eixo para carga; motociclos de cilindrada superior a 125 cm³ podem acoplar carro lateral destinado a um passageiro."
   }
 ];
