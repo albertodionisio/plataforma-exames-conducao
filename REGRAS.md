@@ -3,7 +3,7 @@
 Não reabrir estas decisões sem o dono pedir.
 
 ## Produto
-- **Designação oficial:** usar «exame/exames» em toda a interface, catálogo, planos, documentação e comunicação da plataforma. Não apresentar o produto como um conjunto de simulados.
+- **Designação oficial:** usar «exame/exames» em toda a interface, catálogo, planos, documentação e comunicação da plataforma. Não reduzir a apresentação do produto a uma simples ferramenta de treino.
 - Nome provisório: **ESTRADA**. Muda-se só em `config.js`.
 - Exames de condução em Moçambique: 25 perguntas, cronómetro de 60 minutos, sem indicação de certo/errado nem explicação durante a realização; 0,8 valores por resposta certa e limiar de aprovação de 18 valores. Depois da submissão, apresentar resultado final e permitir revisão comentada de todas as perguntas.
 - Catálogo de 50 exames; 3 grátis, restantes bloqueados por plano.
