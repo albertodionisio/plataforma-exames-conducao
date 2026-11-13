@@ -1,6 +1,6 @@
 // Exame 49 — 25 perguntas originais do ESTRADA.
-// Foco: condução defensiva e prevenção de riscos em situações reais.
-// Base legal: Código da Estrada (arts. 20.º, 28.º–32.º, 60.º–63.º, 87.º e 89.º).
+// Foco: condução defensiva, prevenção de riscos e comunicação segura na via.
+// Base legal: Código da Estrada de Moçambique, com artigos específicos no mapa.
 // Rastreabilidade: docs/referencias-exames/exame49-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[49] = [
@@ -36,18 +36,18 @@ window.EXAMES[49] = [
   },
   {
     "numero": 3,
-    "tema": "Distância de segurança frontal",
+    "tema": "Uso moderado dos sinais sonoros",
     "dificuldade": "média",
-    "enunciado": "Um veículo segue muito próximo do veículo da frente. Que risco deve o condutor evitar?",
+    "enunciado": "Um condutor fica irritado com uma fila e mantém a buzina accionada para protestar contra a demora. Essa utilização é permitida?",
     "imagem": null,
     "opcoes": [
-      "Apenas o consumo de combustível.",
-      "A possibilidade de ultrapassagem por terceiros.",
-      "O atraso na viagem.",
-      "Não dispor de distância suficiente para evitar colisão se o veículo da frente parar ou reduzir bruscamente."
+      "Sim, sempre que o trânsito estiver parado.",
+      "Sim, se os outros condutores não responderem.",
+      "Sim, desde que o veículo esteja parado.",
+      "Não; os sinais sonoros devem ser breves e moderados e não podem servir de protesto contra interrupções do trânsito."
     ],
     "correta": 3,
-    "explicacao": "O condutor deve manter distância suficiente para evitar acidente em caso de paragem ou diminuição súbita de velocidade do veículo precedente. (Art. 20.º, n.º 1)."
+    "explicacao": "Os sinais sonoros devem ser breves e usados de forma moderada; não podem servir de protesto contra interrupções do trânsito nem como meio de chamamento. (Código da Estrada, art. 24.º, n.º 1)."
   },
   {
     "numero": 4,
@@ -321,62 +321,62 @@ window.EXAMES[49] = [
   },
   {
     "numero": 22,
-    "tema": "Descida acentuada",
+    "tema": "Marcha lenta que embaraça o trânsito",
     "dificuldade": "média",
-    "enunciado": "Ao descer uma inclinação acentuada, como deve proceder um automóvel pesado?",
+    "enunciado": "Um automóvel circula muito abaixo de uma velocidade razoável, sem necessidade de segurança, e provoca uma fila atrás de si. Que princípio deve o condutor observar?",
     "imagem": null,
     "opcoes": [
-      "Circular em ponto morto.",
-      "Utilizar o motor como auxiliar do travão.",
-      "Desligar o motor para poupar combustível.",
-      "Acelerar antes da descida."
+      "Deve manter essa marcha, porque circular lentamente nunca pode embaraçar o trânsito.",
+      "Não deve transitar em marcha cuja lentidão cause embaraço injustificado aos restantes utentes, sem prejuízo dos limites máximos.",
+      "Deve parar imediatamente no meio da faixa de rodagem.",
+      "Pode ocupar a berma para permitir que os outros o ultrapassem em qualquer local."
     ],
     "correta": 1,
-    "explicacao": "Nas descidas de inclinação acentuada, os automóveis pesados não podem transitar sem utilizar o motor como auxiliar do travão. (Art. 32.º, n.º 2)."
+    "explicacao": "Sem prejuízo dos limites máximos fixados, os veículos automóveis não devem transitar em marcha cuja lentidão cause embaraço injustificado aos restantes utentes da via. (Art. 31.º, n.º 1)."
   },
   {
     "numero": 23,
-    "tema": "Aglomeração de pessoas",
+    "tema": "Ruído produzido pelo veículo",
     "dificuldade": "média",
-    "enunciado": "O condutor aproxima-se de uma aglomeração de pessoas junto à estrada. Qual é a atitude mais segura e legal?",
+    "enunciado": "Um condutor utiliza o sistema de som do automóvel num volume que causa incómodo aos moradores e aos restantes utentes. Qual é a regra aplicável?",
     "imagem": null,
     "opcoes": [
-      "Manter a velocidade e confiar que as pessoas sairão da via.",
-      "Buzinar e acelerar.",
-      "Ultrapassar todos os veículos que reduzem a velocidade.",
-      "Moderar especialmente a velocidade e estar preparado para parar."
+      "É permitido em qualquer volume, desde que as janelas estejam fechadas.",
+      "Só é proibido se o veículo estiver estacionado.",
+      "O Código regula apenas o ruído do motor, nunca o dos aparelhos de som.",
+      "A condução e as operações com o veículo devem evitar ruídos incómodos, e os aparelhos sonoros não podem ultrapassar os limites regulamentares."
     ],
     "correta": 3,
-    "explicacao": "A velocidade deve ser especialmente moderada na aproximação de aglomerações de pessoas ou animais. (Art. 32.º, n.º 1, al. e))."
+    "explicacao": "A condução e as operações de carga e descarga devem evitar ruídos incómodos; também é proibido exceder os limites sonoros regulamentares nos aparelhos instalados no veículo. (Art. 79.º, n.ºs 1 a 3)."
   },
   {
     "numero": 24,
-    "tema": "Pavimento em mau estado",
+    "tema": "Emissões e derrames na via",
     "dificuldade": "média",
-    "enunciado": "Uma estrada apresenta buracos e zonas enlameadas. O que deve fazer o condutor?",
+    "enunciado": "Um veículo circula a emitir fumos acima dos limites regulamentares e deixa óleo no pavimento. Qual é a avaliação correcta?",
     "imagem": null,
     "opcoes": [
-      "Reduzir e moderar especialmente a velocidade, considerando a aderência e o estado da via.",
-      "Manter a velocidade para não perder equilíbrio.",
-      "Circular junto ao eixo da via sem observar o trânsito.",
-      "Travar bruscamente sobre cada buraco."
+      "A circulação é proibida quando o veículo emite fumos ou gases acima dos limites regulamentares ou derrama óleo ou outras substâncias.",
+      "A circulação é permitida se o condutor reduzir a velocidade.",
+      "O condutor só tem de limpar o pavimento no fim da viagem.",
+      "A situação só é proibida em zonas urbanas."
     ],
     "correta": 0,
-    "explicacao": "A velocidade deve ser especialmente moderada em troços de vias em mau estado, molhados ou enlameados ou com precárias condições de aderência. (Art. 32.º, n.º 1, al. h))."
+    "explicacao": "É proibido o trânsito de veículos com motor que emitam fumos ou gases em quantidade superior à fixada em regulamento ou que derramem óleo ou quaisquer outras substâncias. (Art. 78.º, n.º 1)."
   },
   {
     "numero": 25,
-    "tema": "Distância e travagem",
+    "tema": "Substituição de sinais sonoros por luminosos",
     "dificuldade": "média",
-    "enunciado": "Um veículo à frente trava bruscamente. Que conduta preventiva teria reduzido o risco de colisão?",
+    "enunciado": "Num troço com nevoeiro e visibilidade insuficiente, o veículo circula com as luzes acesas. Em que condição podem os sinais sonoros ser substituídos por sinais luminosos?",
     "imagem": null,
     "opcoes": [
-      "Circular muito próximo para acompanhar o ritmo.",
-      "Confiar que os travões do veículo são melhores.",
-      "Manter distância frontal suficiente para parar em segurança.",
-      "Circular na berma para evitar a fila."
+      "Sempre que o condutor prefira não usar a buzina, independentemente das condições.",
+      "Apenas quando o veículo estiver parado.",
+      "Quando a insuficiência de visibilidade resultar de condições meteorológicas ou ambientais e os faróis forem usados intermitentemente sem causar encandeamento.",
+      "Só em auto-estradas, com máximos permanentes."
     ],
     "correta": 2,
-    "explicacao": "A distância entre veículos deve permitir evitar acidente em caso de súbita paragem ou diminuição de velocidade do veículo da frente. (Art. 20.º, n.º 1)."
+    "explicacao": "Quando os veículos transitam com luzes acesas por insuficiência de luminosidade causada por condições meteorológicas ou ambientais, os sinais sonoros podem ser substituídos por sinais luminosos dos faróis usados intermitentemente e sem encandeamento. (Art. 26.º, n.º 1)."
   }
 ];
