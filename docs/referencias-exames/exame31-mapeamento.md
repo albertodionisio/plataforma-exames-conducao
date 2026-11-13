@@ -1,4 +1,4 @@
-# Simulado 31 — mapa de rastreabilidade (DADOS-032)
+# Exame 31 — mapa de rastreabilidade (DADOS-032)
 
 Conteúdo **original** do ESTRADA (não vem do APK). Foco: regras gerais de circulação e posição na via. Sessão: Claude-DADOS032, 2026-11-12.
 
@@ -16,8 +16,8 @@ Conteúdo **original** do ESTRADA (não vem do APK). Foco: regras gerais de circ
 
 ## Originalidade
 
-- Comparado só com o Simulado 1, o único publicado no repositório. Os restantes (2–7) estão em curso e não puderam ser comparados.
-- O Simulado 1 já tem perguntas sobre o sentido de marcha (art. 17.º, n.º 1), a visibilidade reduzida (art. 28.º), quem recua numa passagem estreita (art. 41.º, n.º 4) e a inversão em autoestrada. Não foram repetidas; as perguntas 21 e 22 usam os n.ºs 3 e 6 do art. 41.º, que são regras diferentes.
+- Comparado só com o Exame 1, o único publicado no repositório. Os restantes (2–7) estão em curso e não puderam ser comparados.
+- O Exame 1 já tem perguntas sobre o sentido de marcha (art. 17.º, n.º 1), a visibilidade reduzida (art. 28.º), quem recua numa passagem estreita (art. 41.º, n.º 4) e a inversão em autoestrada. Não foram repetidas; as perguntas 21 e 22 usam os n.ºs 3 e 6 do art. 41.º, que são regras diferentes.
 - Sem imagens: todas as perguntas são só de texto (`imagem: null`).
 
 ## Mapa das 25 perguntas
