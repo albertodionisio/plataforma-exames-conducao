@@ -25,7 +25,7 @@
   function inicio() {
     var h = historico(), ult = h.length ? "<div class='card'><h2>Última tentativa</h2><p>Exame " + h[0].n + ": " + h[0].certas + " certas em " + h[0].total + " (" + nota(h[0].nota) + ").</p></div>" : "";
     app.innerHTML = "<h1>" + esc(A.slogan) + "</h1>" +
-      "<p>Prepara-te para os exames com " + A.totalExames + " exames de " + A.perguntasPorExame + " perguntas, com explicação a cada resposta.</p>" +
+      "<p>Acede a " + A.totalExames + " exames de preparação, cada um com " + A.perguntasPorExame + " perguntas.</p>" +
       "<p><a class='btn' href='#/exames'>Ver exames</a> <a class='btn sec' href='#/planos'>Planos</a></p>" + ult +
       "<div class='aviso'>Versão em construção: o Exame 1 já está disponível.</div>";
   }
