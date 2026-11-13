@@ -39,7 +39,7 @@ O exame foi reformulado porque a versão anterior repetia extensamente conteúdo
 ## Originalidade e validação
 - 25 perguntas, quatro alternativas e uma resposta correcta por pergunta.
 - Nenhuma questão sobre sinalização temporária repete o conteúdo anterior de manobras dos Exames 33 e 35.
-- Distribuição das respostas: A=6, B=8, C=5, D=6.
+- Distribuição das respostas: A=7, B=6, C=6, D=6.
 - Todas as perguntas usam imagem nula.
 - O validador estrutural e a CI devem ser confirmados após a publicação deste commit.
 - O teste visual no navegador permanece reservado ao dono do projecto.
