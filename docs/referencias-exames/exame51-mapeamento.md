@@ -57,5 +57,5 @@ Perguntas redigidas de forma original, com ênfase em cenários que combinam mai
 - 25 perguntas; quatro alternativas não vazias; um índice correcto válido; explicação por pergunta.
 - Distribuição: A=7, B=6, C=6, D=6.
 - Todas as imagens são `null`.
-- Validação estrutural interna aprovada; validador oficial/CI a confirmar após publicação.
+- GitHub Actions run 43488270259 aprovado no commit 55a36d93a838b69556dab5f1c78a568c8fbdfb7e (sintaxe, testes de fluxo/assinaturas e validador oficial). A revisão de sobreposições do bloco 45–51 continua em curso.
 - Teste funcional no navegador reservado à verificação conjunta após a conclusão deste exame, conforme decisão do dono.
