@@ -318,7 +318,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-043 — Exame 42 (conteúdo original)
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-ESTRADA-2 — 2026-11-13 16:25 UTC+02 — ficheiros: data/exames/exame42.js, docs/referencias-exames/exame42-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 16:25 UTC+02
 - Foco temático prioritário: Semáforos, sinais dos agentes e ordens de trânsito.
 - Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame42.js` (novo) e `docs/referencias-exames/exame42-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
