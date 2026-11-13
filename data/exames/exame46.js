@@ -66,21 +66,6 @@ window.EXAMES[46] = [
   },
   {
     "numero": 5,
-    "tema": "Automóvel de mercadorias",
-    "dificuldade": "fácil",
-    "enunciado": "Um veículo automóvel foi construído e destinado principalmente ao transporte de carga. Em que tipo se enquadra?",
-    "imagem": null,
-    "opcoes": [
-      "Automóvel de mercadorias.",
-      "Automóvel de passageiros.",
-      "Automóvel misto, obrigatoriamente.",
-      "Veículo sobre carris."
-    ],
-    "correta": 0,
-    "explicacao": "Art. 109.º, n.º 2, al. b): os automóveis de mercadorias são os que se destinam ao transporte de carga."
-  },
-  {
-    "numero": 6,
     "tema": "Veículo especial",
     "dificuldade": "média",
     "enunciado": "Uma viatura foi concebida para desempenhar uma função específica diferente do transporte normal de passageiros ou de carga. Como é classificada?",
@@ -95,7 +80,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 109.º, n.º 2, al. e): são especiais os veículos destinados a uma função específica diferente do transporte normal de passageiros ou carga."
   },
   {
-    "numero": 7,
+    "numero": 6,
     "tema": "Veículo tractor",
     "dificuldade": "média",
     "enunciado": "Na classificação dos automóveis segundo a utilização, o que caracteriza um tractor?",
@@ -110,7 +95,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 109.º, n.º 2, al. d): os tractores são construídos para desenvolver esforço de tracção e não comportam carga útil."
   },
   {
-    "numero": 8,
+    "numero": 7,
     "tema": "Definição de motociclo",
     "dificuldade": "média",
     "enunciado": "Um veículo de duas rodas tem motor de combustão com cilindrada de 80 cm³. Qual é a classificação indicada pelo Código, considerando a cilindrada?",
@@ -125,7 +110,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 110.º, n.º 1: é motociclo o veículo com duas, três ou quatro rodas e motor de cilindrada superior a 50 cm³, ou que exceda 45 km/h por construção."
   },
   {
-    "numero": 9,
+    "numero": 8,
     "tema": "Definição de ciclomotor",
     "dificuldade": "média",
     "enunciado": "Um veículo de duas rodas tem velocidade máxima de construção de 40 km/h e motor de combustão de 49 cm³. Como se enquadra?",
@@ -140,7 +125,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 110.º, n.º 2: o ciclomotor de duas rodas não excede 45 km/h por construção e tem motor de combustão com cilindrada não superior a 50 cm³, ou motor eléctrico dentro do limite legal."
   },
   {
-    "numero": 10,
+    "numero": 9,
     "tema": "Definição de triciclo",
     "dificuldade": "média",
     "enunciado": "Qual das descrições corresponde a um triciclo motorizado nos termos do Código?",
@@ -155,7 +140,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 110.º, n.º 3: o triciclo tem três rodas dispostas simetricamente e motor/velocidade acima dos limiares previstos."
   },
   {
-    "numero": 11,
+    "numero": 10,
     "tema": "Definição de quadriciclo",
     "dificuldade": "fácil",
     "enunciado": "Um veículo tem quatro rodas e tara de 520 kg. Que designação consta do Código, sem prejuízo das regras de enquadramento regulamentar?",
@@ -170,7 +155,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 110.º, n.º 4: quadriciclo é o veículo dotado de quatro rodas cuja tara não exceda 550 kg."
   },
   {
-    "numero": 12,
+    "numero": 11,
     "tema": "Veículo de quatro rodas até 550 kg",
     "dificuldade": "média",
     "enunciado": "Um veículo de quatro rodas tem tara inferior a 550 kg. A sua inclusão na categoria de motociclo ou ciclomotor depende de quê?",
@@ -185,7 +170,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 110.º, n.º 5: o enquadramento depende das características, nomeadamente cilindrada e velocidade máxima em patamar e por construção, nos termos fixados em regulamento."
   },
   {
-    "numero": 13,
+    "numero": 12,
     "tema": "Tractor agrícola ou florestal",
     "dificuldade": "fácil",
     "enunciado": "Qual é a finalidade principal de um tractor agrícola ou florestal, segundo a definição legal?",
@@ -200,7 +185,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 111.º, n.º 1: o tractor agrícola ou florestal é construído para desenvolver esforços de tracção e destina-se predominantemente a trabalhos agrícolas."
   },
   {
-    "numero": 14,
+    "numero": 13,
     "tema": "Máquina agrícola ou florestal",
     "dificuldade": "média",
     "enunciado": "Uma máquina com motor e dois eixos destina-se à execução de trabalhos agrícolas. Como é classificada quanto ao peso?",
@@ -215,7 +200,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 111.º, n.º 2: a máquina agrícola ou florestal é considerada pesada ou ligeira consoante a tara ou o peso bruto exceda ou não 3 500 kg."
   },
   {
-    "numero": 15,
+    "numero": 14,
     "tema": "Motocultivador",
     "dificuldade": "média",
     "enunciado": "Qual é a característica essencial de um motocultivador na definição do Código?",
@@ -230,7 +215,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 111.º, n.º 3: o motocultivador tem um só eixo, destina-se a trabalhos agrícolas ligeiros e pode ser dirigido a pé ou com semi-reboque/retrotrem atrelado."
   },
   {
-    "numero": 16,
+    "numero": 15,
     "tema": "Tractocarro",
     "dificuldade": "média",
     "enunciado": "Uma viatura agrícola tem motor, dois eixos e caixa de carga para produtos agrícolas, com peso bruto de 3 200 kg. Qual é a designação legal correspondente?",
@@ -245,7 +230,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 111.º, n.º 4: tractocarro é veículo de dois ou mais eixos, com caixa de carga para produtos agrícolas ou florestais e peso bruto até 3 500 kg."
   },
   {
-    "numero": 17,
+    "numero": 16,
     "tema": "Veículo sobre carris",
     "dificuldade": "fácil",
     "enunciado": "Como define o Código um veículo sobre carris?",
@@ -260,7 +245,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 112.º, n.º 1: veículo sobre carris é aquele que, independentemente do sistema de propulsão, se desloca sobre carris."
   },
   {
-    "numero": 18,
+    "numero": 17,
     "tema": "Máquina industrial",
     "dificuldade": "média",
     "enunciado": "Uma máquina com motor e dois eixos destina-se a obras ou trabalhos industriais e só ocasionalmente circula na via pública. Como é classificada?",
@@ -275,7 +260,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 112.º, n.º 2: máquina industrial é veículo motorizado de dois ou mais eixos destinado a obras ou trabalhos industriais e que só eventualmente transita na via pública."
   },
   {
-    "numero": 19,
+    "numero": 18,
     "tema": "Definição de reboque",
     "dificuldade": "fácil",
     "enunciado": "Um veículo foi concebido para circular atrelado a outro veículo. Qual é a sua designação?",
@@ -290,7 +275,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 113.º, n.º 1: reboque é o veículo destinado a transitar atrelado a outro veículo."
   },
   {
-    "numero": 20,
+    "numero": 19,
     "tema": "Definição de semi-reboque",
     "dificuldade": "média",
     "enunciado": "O que distingue um semi-reboque de um reboque comum, segundo o Código?",
@@ -305,7 +290,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 113.º, n.º 2: o semi-reboque destina-se a transitar atrelado a um veículo a motor, assentando a parte da frente e distribuindo o peso sobre este."
   },
   {
-    "numero": 21,
+    "numero": 20,
     "tema": "Limite geral de reboques",
     "dificuldade": "média",
     "enunciado": "Em regra, quantos reboques podem ser atrelados a cada veículo a motor?",
@@ -320,22 +305,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 113.º, n.º 6: a cada veículo a motor não pode ser atrelado mais de um reboque, excepto os veículos denominados interlinks, que podem atrelar dois semi-reboques."
   },
   {
-    "numero": 22,
-    "tema": "Excepção dos interlinks",
-    "dificuldade": "difícil",
-    "enunciado": "Qual é a excepção expressamente indicada para os veículos denominados «interlinks»?",
-    "imagem": null,
-    "opcoes": [
-      "Podem circular sem matrícula.",
-      "Podem transportar qualquer número de passageiros.",
-      "Podem atrelar dois semi-reboques.",
-      "Podem circular sem iluminação."
-    ],
-    "correta": 2,
-    "explicacao": "Art. 113.º, n.º 6: os veículos denominados interlinks constituem a excepção que pode atrelar dois semi-reboques."
-  },
-  {
-    "numero": 23,
+    "numero": 21,
     "tema": "Excepções para comboios turísticos e tractores",
     "dificuldade": "difícil",
     "enunciado": "Em que situações o Código admite excepções à regra geral de um único reboque?",
@@ -350,7 +320,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 113.º, n.º 7: há excepção para reboques em comboios turísticos e, nos termos a fixar em regulamento local, para reboques em tractores agrícolas ou florestais."
   },
   {
-    "numero": 24,
+    "numero": 22,
     "tema": "Reboques no transporte público",
     "dificuldade": "média",
     "enunciado": "Um operador pretende utilizar reboque num veículo de transporte público de passageiros. Qual é a condição legal?",
@@ -365,7 +335,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 113.º, n.º 8: o uso de reboques em transporte público de passageiros é autorizado em regulamento próprio."
   },
   {
-    "numero": 25,
+    "numero": 23,
     "tema": "Veículo único articulado",
     "dificuldade": "difícil",
     "enunciado": "Um automóvel pesado é formado por dois segmentos rígidos permanentemente ligados por uma secção articulada que permite a comunicação entre ambos. Como é considerado?",
@@ -380,7 +350,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 114.º, n.º 1, al. a): o automóvel pesado com dois segmentos rígidos permanentemente ligados por secção articulada é considerado veículo único."
   },
   {
-    "numero": 26,
+    "numero": 24,
     "tema": "Velocípede e velocípede com motor",
     "dificuldade": "média",
     "enunciado": "Qual descrição corresponde ao velocípede com motor equiparado a velocípede pelo Código?",
@@ -395,7 +365,7 @@ window.EXAMES[46] = [
     "explicacao": "Art. 115.º, n.ºs 1 a 3: o velocípede é accionado pelo esforço do condutor por pedais ou dispositivos análogos; o velocípede com motor auxiliar eléctrico até 0,25 kW, com assistência progressivamente reduzida e interrompida aos 25 km/h ou quando deixa de pedalar, é equiparado a velocípede."
   },
   {
-    "numero": 27,
+    "numero": 25,
     "tema": "Atrelado e carro lateral em veículos de duas rodas",
     "dificuldade": "média",
     "enunciado": "Qual das situações é expressamente admitida pelo artigo 116.º?",
