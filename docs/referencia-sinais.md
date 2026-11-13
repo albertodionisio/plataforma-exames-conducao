@@ -1,7 +1,7 @@
 # Catálogo de referência dos sinais — ESTRADA
 
 - **Tarefa:** GER-006 · **Sessão:** Claude-GER006 · **Data:** 2026-11-12
-- **Âmbito:** os sinais que já aparecem como imagem nas perguntas do ESTRADA (Simulado 1, `data/exames/exame1.js`), conferidos com o PDF oficial de sinais.
+- **Âmbito:** os sinais que já aparecem como imagem nas perguntas do ESTRADA (Exame 1, `data/exames/exame1.js`), conferidos com o PDF oficial de sinais.
 - **Natureza:** documento de referência. Não altera imagens, perguntas nem código.
 
 ## 1. Fontes e método
@@ -10,7 +10,7 @@
 |---|---|---|
 | PDF oficial de sinais (69 páginas) | `assets/sinais.pdf`, dentro de `original/Codigo_e_Sinais_de_Transito_1_1.apk` | Código, designação e página de cada sinal |
 | Imagens das perguntas do APK | `res/drawable/exame1_N.jpg`, dentro do mesmo APK | Comparação com o que o aplicativo original mostra |
-| Imagens do ESTRADA | `public/sinais/` | Imagem usada nos simulados |
+| Imagens do ESTRADA | `public/sinais/` | Imagem usada nos exames |
 | Perguntas do ESTRADA | `data/exames/exame1.js` | Onde cada imagem é usada |
 
 - O PDF **não tem texto extraível** (os códigos e designações estão desenhados). Cada código e designação foi **lido visualmente** numa página renderizada a 130 dpi. Uma só sessão fez a leitura; não houve segunda leitura independente.
@@ -30,7 +30,7 @@
 
 ## 2. Catálogo dos sinais usados no ESTRADA
 
-| Código | Designação (como no PDF) | Pág. PDF | Quadro no PDF | Imagem no ESTRADA | Pergunta (Simulado 1) | Estado |
+| Código | Designação (como no PDF) | Pág. PDF | Quadro no PDF | Imagem no ESTRADA | Pergunta (Exame 1) | Estado |
 |---|---|---|---|---|---|---|
 | A17 | Controlo policial por pirilampos | 4 | II — Sinais temporários, Perigo (título na pág. 3) | `public/sinais/A17-controlo-policial-por-pirilampos.svg` (existe também `.png` no mesmo nome) | 1 | CONFIRMADO COM NOTA (D4) |
 | D16 | Ponte móvel | 21 | IV — Sinais de perigo | `public/sinais/D16-ponte-movel.png` | 16 | CONFIRMADO |
@@ -43,7 +43,7 @@
 
 Notas de leitura: em N34 os pontos de «a....m» são como estão impressos no PDF; o PDF mostra «400 m» no painel inferior como exemplo desenhado; o ficheiro do ESTRADA passou a «300 m», como no aplicativo original e no texto da pergunta 25 (DADOS-052). O ficheiro do sinal da pergunta 14 passou de N5 para N21, o código que o PDF lhe atribui na pág. 55 (DADOS-053).
 
-### Perguntas do Simulado 1 que usam estes sinais
+### Perguntas do Exame 1 que usam estes sinais
 
 | Pergunta | Tema (no exame) | Sinal | Resposta certa (no exame) |
 |---|---|---|---|
@@ -56,7 +56,7 @@ Notas de leitura: em N34 os pontos de «a....m» são como estão impressos no P
 | 21 | Sinais de proibição | E47 | Trânsito proibido a peões, animais e veículos não automóveis |
 | 25 | Sinais de informação | N34 | A existência de portagem na via em que segue |
 
-Só o Simulado 1 tinha imagens de sinais à data desta leitura (2026-11-12; `data/exames/` continha apenas `exame1.js`). Quando outros simulados forem publicados, este catálogo deve ganhar uma linha por sinal novo.
+Só o Exame 1 tinha imagens de sinais à data desta leitura (2026-11-12; `data/exames/` continha apenas `exame1.js`). Quando outros exames forem publicados, este catálogo deve ganhar uma linha por sinal novo.
 
 ## 3. O que foi conferido em cada sinal
 
@@ -87,13 +87,13 @@ Só o Simulado 1 tinha imagens de sinais à data desta leitura (2026-11-12; `dat
 - Imagem do ESTRADA: «400 m» (igual ao PDF).
 - Imagem do APK: fotografia com «300 m».
 - Texto do ESTRADA: a explicação e uma alternativa falam em 300 m.
-- **Corrigido (DADOS-052, 2026-11-12, autorizado pelo dono):** o sinal foi redesenhado com «300 m», igual ao aplicativo original e ao texto. O PDF continua a mostrar «400 m» só como exemplo. Ver `docs/auditorias/simulado-1.md` (secção 7).
+- **Corrigido (DADOS-052, 2026-11-12, autorizado pelo dono):** o sinal foi redesenhado com «300 m», igual ao aplicativo original e ao texto. O PDF continua a mostrar «400 m» só como exemplo. Ver `docs/auditorias/exame-1.md` (secção 7).
 
 **D3 — G11 (pergunta 4): descrição da imagem.** O campo `imagem.descricao` fala de «fila de carros estacionados», que é a fotografia do APK. O ficheiro do ESTRADA mostra só o painel isolado. A imagem está correcta; a descrição não correspondia ao ficheiro. **Corrigido (DADOS-053, 2026-11-12):** a descrição passou a dizer que o sinal é apresentado isolado.
 
 **D4 — A17 (pergunta 1): cor.** O PDF tem interior amarelo; a imagem do APK é mais alaranjada. O SVG do ESTRADA segue o PDF. Além disso, o A17 está no Quadro II (sinais **temporários**), embora a pergunta o apresente como «Sinal de perigo». Não identifiquei um sinal equivalente nas páginas de perigo permanentes (21 a 24); não está provado que não exista, e a verificação foi feita em páginas reduzidas.
 
-**D5 — H4 (pergunta 17): duas designações.** O PDF diz «Pré-advertência da direcção de saída»; a pergunta e a resposta do ESTRADA usam «Pré-aviso da direção de saída» (o original do APK usa «Pré-aviso», segundo a auditoria do Simulado 1). Documento as duas; não escolho. O nome do ficheiro («pre-advertencia-direccao-de-saida») segue o PDF, sem o «da».
+**D5 — H4 (pergunta 17): duas designações.** O PDF diz «Pré-advertência da direcção de saída»; a pergunta e a resposta do ESTRADA usam «Pré-aviso da direção de saída» (o original do APK usa «Pré-aviso», segundo a auditoria do Exame 1). Documento as duas; não escolho. O nome do ficheiro («pre-advertencia-direccao-de-saida») segue o PDF, sem o «da».
 
 ## 5. Índice dos quadros do PDF
 
@@ -124,7 +124,7 @@ Página onde começa cada quadro. Estes títulos foram lidos nas páginas reduzi
 ## 6. O que não foi verificado
 
 - Sinais que o ESTRADA ainda não usa em imagens: não foram catalogados.
-- Perguntas do Simulado 1 sem imagem de sinal que mencionem sinais só no texto: fora do âmbito.
+- Perguntas do Exame 1 sem imagem de sinal que mencionem sinais só no texto: fora do âmbito.
 - O conteúdo legal das designações não foi cruzado com `assets/codigodeestrada.pdf`.
 - Cores e proporções exactas das imagens: comparação visual, sem medição.
 - A distinção entre N’5 (com apóstrofo) e N5 (sem apóstrofo) baseia-se no que se vê impresso; convém o dono confirmar se o apóstrofo é intencional no documento oficial.
