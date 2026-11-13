@@ -11,12 +11,12 @@ window.EXAMES[50] = [
     "enunciado": "Que situação constitui uma contravenção rodoviária, segundo o Código da Estrada?",
     "imagem": null,
     "opcoes": [
-      "Qualquer erro de condução, mesmo sem violar uma norma.",
       "Um facto ilícito e censurável, sancionado com multa, que corresponda à violação de uma norma rodoviária aplicável.",
+      "Qualquer erro de condução, mesmo sem violar uma norma.",
       "Apenas um acidente com danos materiais.",
       "Somente uma infracção cometida por um condutor profissional."
     ],
-    "correta": 1,
+    "correta": 0,
     "explicacao": "Constitui contravenção rodoviária o facto ilícito e censurável a que corresponda multa e que viole uma norma do Código, legislação complementar ou legislação especial aplicável. (Art. 137.º)."
   },
   {
@@ -43,10 +43,10 @@ window.EXAMES[50] = [
     "opcoes": [
       "Apenas como contravenção.",
       "Apenas com uma advertência.",
-      "Sempre a título de crime, sem prejuízo da aplicação da sanção prevista para a contravenção.",
-      "Apenas com a sanção administrativa mais baixa."
+      "Apenas com a sanção administrativa mais baixa.",
+      "Sempre a título de crime, sem prejuízo da aplicação da sanção prevista para a contravenção."
     ],
-    "correta": 2,
+    "correta": 3,
     "explicacao": "Se o mesmo facto constituir crime e contravenção, o agente é punido a título de crime, sem prejuízo da aplicação da sanção prevista para a contravenção. (Art. 139.º, n.º 1)."
   },
   {
@@ -116,12 +116,12 @@ window.EXAMES[50] = [
     "enunciado": "Qual é a sanção acessória aplicável aos condutores pela prática de contravenções médias ou graves previstas no Código?",
     "imagem": null,
     "opcoes": [
-      "A apreensão definitiva do veículo em todos os casos.",
       "A inibição de conduzir.",
+      "A apreensão definitiva do veículo em todos os casos.",
       "A perda automática da propriedade do veículo.",
       "A proibição de viajar para o estrangeiro."
     ],
-    "correta": 1,
+    "correta": 0,
     "explicacao": "A sanção acessória aplicável aos condutores pela prática de contravenções médias ou graves consiste na inibição de conduzir. (Art. 148.º, n.º 1)."
   },
   {
@@ -131,12 +131,12 @@ window.EXAMES[50] = [
     "enunciado": "Um condutor pratica pela primeira vez uma contravenção média punível com inibição de conduzir. Qual é a duração prevista para a primeira ocorrência?",
     "imagem": null,
     "opcoes": [
-      "Seis meses.",
       "Três meses.",
+      "Seis meses.",
       "Um ano.",
       "Dois anos."
     ],
-    "correta": 1,
+    "correta": 0,
     "explicacao": "A inibição por contravenção média é de três meses na primeira vez, seis meses na segunda, um ano na terceira e dois anos na quarta. (Art. 148.º, n.º 2)."
   },
   {
@@ -162,11 +162,11 @@ window.EXAMES[50] = [
     "imagem": null,
     "opcoes": [
       "Quando pratica qualquer infracção, mesmo sem sanção anterior.",
-      "Quando comete uma contravenção com sanção acessória depois de ter sido condenado por outra contravenção do mesmo diploma, também com sanção acessória, praticada há menos de cinco anos.",
       "Quando recebe duas advertências verbais no mesmo dia.",
-      "Quando muda de província depois de uma multa."
+      "Quando muda de província depois de uma multa.",
+      "Quando comete uma contravenção com sanção acessória depois de ter sido condenado por outra contravenção do mesmo diploma, também com sanção acessória, praticada há menos de cinco anos."
     ],
-    "correta": 1,
+    "correta": 3,
     "explicacao": "É reincidente quem comete uma contravenção com sanção acessória depois de ter sido condenado por outra contravenção do mesmo diploma ou regulamentos, também com sanção acessória, praticada há menos de cinco anos. (Art. 144.º, n.º 1)."
   },
   {
@@ -291,18 +291,18 @@ window.EXAMES[50] = [
   },
   {
     "numero": 20,
-    "tema": "Apreensão por validade expirada",
+    "tema": "Responsabilidade do titular do documento do veículo",
     "dificuldade": "média",
-    "enunciado": "Um condutor apresenta um título de condução cujo prazo de validade já expirou. Qual é a medida prevista no artigo 159.º?",
+    "enunciado": "Uma contravenção relativa à condução foi cometida, mas não foi possível identificar quem conduzia o veículo. A quem pode recair a responsabilidade nos termos gerais do Código?",
     "imagem": null,
     "opcoes": [
-      "A apreensão preventiva do título, com possibilidade de emissão de guia de condução substitutiva nos termos legais.",
-      "A destruição imediata do título sem qualquer documento substitutivo.",
-      "A apreensão do veículo em todos os casos.",
-      "A renovação automática do título no local."
+      "Sempre ao proprietário do veículo, sem qualquer excepção.",
+      "Ao titular do documento de identificação do veículo, quando não seja possível identificar o condutor, sem prejuízo das excepções legais.",
+      "Exclusivamente à autoridade que fiscalizou o veículo.",
+      "Apenas à seguradora do veículo."
     ],
-    "correta": 0,
-    "explicacao": "O título deve ser preventivamente apreendido quando tiver expirado o prazo de validade; nos casos previstos nas alíneas b) e c), pode ser fornecida guia de condução pelo tempo julgado necessário. (Art. 159.º, n.ºs 1 e 2)."
+    "correta": 1,
+    "explicacao": "A responsabilidade pelas contravenções respeitantes ao exercício da condução recai no condutor; quando não seja possível identificá-lo, pode recair no titular do documento de identificação do veículo, nos termos do Código. (Art. 140.º, n.º 3, al. b))."
   },
   {
     "numero": 21,
