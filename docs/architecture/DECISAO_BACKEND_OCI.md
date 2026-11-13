@@ -111,7 +111,7 @@ Utilizador (browser/PWA)
 8. **Integrações em sandbox:** e-mail, SMS, pagamento (webhook assinado e idempotente) e anúncios.
 9. **Observabilidade:** logs estruturados sem segredos; alertas de erro, de cópia falhada e de uso da VM (para detectar o risco de máquina ociosa).
 10. **Entrega contínua:** testes e *build* no GitHub, com publicação por SSH para staging e depois produção; versão identificada e plano de reversão (secção 16).
-11. **Teste de carga e ensaio de recuperação** antes do lançamento; critério de aceitação: a aplicação completa um simulado de 25 perguntas e a submissão com o prazo calculado no servidor.
+11. **Teste de carga e ensaio de recuperação** antes do lançamento; critério de aceitação: a aplicação completa um exame de 25 perguntas e a submissão com o prazo calculado no servidor.
 
 ## 8. Decisões que ficam com o dono
 
