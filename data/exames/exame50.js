@@ -1,382 +1,382 @@
 // Exame 50 — 25 perguntas originais do ESTRADA.
-// Foco: exame integrador, aplicação combinada das regras do Código da Estrada.
-// Base legal: Código da Estrada e Regulamento de Sinais de Trânsito, conforme mapa de rastreabilidade.
+// Foco: paragem, estacionamento e utilização de parques e zonas de estacionamento.
+// Base legal: Código da Estrada, arts. 49.º–53.º.
 // Rastreabilidade: docs/referencias-exames/exame50-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[50] = [
   {
     "numero": 1,
-    "tema": "Intersecção com risco",
+    "tema": "Paragem e estacionamento",
     "dificuldade": "média",
-    "enunciado": "O condutor aproxima-se de um cruzamento com visibilidade limitada, pavimento molhado e peões junto da passagem. Qual é a decisão mais adequada?",
+    "enunciado": "Segundo o Código da Estrada, qual é a diferença essencial entre paragem e estacionamento?",
     "imagem": null,
     "opcoes": [
-      "Manter a velocidade máxima e buzinar.",
-      "Moderar a velocidade, observar os utentes e estar preparado para parar em segurança.",
-      "Acelerar para atravessar antes dos peões.",
-      "Ultrapassar o veículo que reduziu a velocidade."
+      "A paragem é qualquer imobilização superior a cinco minutos.",
+      "O estacionamento ocorre apenas fora das localidades.",
+      "A paragem limita-se ao tempo necessário para passageiros ou breves operações de carga e descarga, enquanto o estacionamento é outra imobilização não imposta pela circulação.",
+      "A paragem e o estacionamento têm sempre o mesmo significado."
     ],
-    "correta": 1,
-    "explicacao": "Deve moderar a velocidade nas intersecções, em pavimento molhado e junto de passagens para peões. (Arts. 22.º, n.º 3, e 32.º, n.º 1, als. b), h) e i))."
+    "correta": 2,
+    "explicacao": "A paragem é a imobilização pelo tempo estritamente necessário para entrada ou saída de passageiros ou breves operações de carga e descarga, com o condutor pronto a retomar a marcha. O estacionamento é a imobilização que não constitui paragem nem resulta das circunstâncias da circulação. (Art. 49.º, n.ºs 1 e 2)."
   },
   {
     "numero": 2,
-    "tema": "Verde e cruzamento bloqueado",
+    "tema": "Estacionamento que impede a formação de filas",
     "dificuldade": "média",
-    "enunciado": "O semáforo está verde, mas a fila à frente impede a saída e o veículo ficaria parado no cruzamento. O que deve fazer?",
+    "enunciado": "Um veículo fica estacionado num ponto em que impede a formação de uma fila de trânsito. A conduta é permitida?",
     "imagem": null,
     "opcoes": [
-      "Entrar porque a luz verde dá prioridade absoluta.",
-      "Buzinar até os veículos avançarem.",
-      "Entrar parcialmente e aguardar.",
-      "Não entrar enquanto for previsível ficar imobilizado e bloquear a passagem."
+      "Sim, se o condutor permanecer ao volante.",
+      "Não. É proibido estacionar nas vias quando isso impeça a formação de uma ou mais filas de trânsito.",
+      "Sim, durante o período diurno.",
+      "Sim, se deixar espaço para motociclos."
     ],
-    "correta": 3,
-    "explicacao": "Mesmo com luz verde, não se deve entrar num cruzamento se for previsível ficar imobilizado e dificultar ou impedir a passagem. (Regulamento, art. 17.º, n.º 1, al. c); Código, art. 38.º, n.º 5)."
+    "correta": 1,
+    "explicacao": "É proibido estacionar nas vias em que o veículo impeça a formação de uma ou mais filas de trânsito, conforme a circulação se faça num ou nos dois sentidos. (Art. 51.º, n.º 1, al. a))."
   },
   {
     "numero": 3,
-    "tema": "Paragem e peão",
+    "tema": "Estacionamento em via com prioridade fora das localidades",
     "dificuldade": "média",
-    "enunciado": "O condutor encontra sinal de paragem obrigatória antes de uma passagem para peões. Depois de parar, vê um peão a atravessar. Como deve proceder?",
+    "enunciado": "Fora de uma localidade, um condutor pretende estacionar numa faixa de rodagem assinalada como via com prioridade. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
-      "Aguardar que o peão termine a travessia e só avançar quando for seguro.",
-      "Avançar porque já cumpriu a paragem.",
-      "Buzinar para o peão acelerar.",
-      "Contornar o peão pela berma."
+      "Sim, se o veículo estiver junto à margem.",
+      "Sim, desde que ligue as luzes de presença.",
+      "Não. Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal de via com prioridade.",
+      "Não, mas apenas durante a noite."
     ],
-    "correta": 0,
-    "explicacao": "O sinal de paragem exige imobilização e cedência; deve deixar passar peões que iniciaram a travessia. (Regulamento, art. 37.º; Código, art. 106.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "Fora das localidades, é proibido estacionar nas faixas de rodagem assinaladas com o sinal «via com prioridade». (Art. 51.º, n.º 2, al. b))."
   },
   {
     "numero": 4,
-    "tema": "Linha contínua",
+    "tema": "Paragem e estacionamento fora das localidades",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende ultrapassar um veículo lento, mas a sua via está delimitada por linha longitudinal contínua. O que deve fazer?",
+    "enunciado": "Fora de uma localidade, um condutor pretende imobilizar o veículo. Qual é a regra geral sobre o local?",
     "imagem": null,
     "opcoes": [
-      "Transpor a linha se ligar o indicador.",
-      "Transpor apenas se não houver polícia.",
-      "Não pisar nem transpor a linha contínua.",
-      "Usar a berma para ultrapassar."
+      "Deve ocupar sempre o centro da faixa de rodagem.",
+      "Deve parar obrigatoriamente na margem direita, em qualquer circunstância.",
+      "Pode escolher qualquer lado da via, mesmo que bloqueie a circulação.",
+      "Deve fazê-lo fora da faixa de rodagem ou, se isso não for possível, o mais próximo possível da margem esquerda, paralelamente e no sentido da marcha."
     ],
-    "correta": 2,
-    "explicacao": "A linha O1 indica proibição de pisar ou transpor. (Regulamento, art. 41.º, n.º 2, O1)."
+    "correta": 3,
+    "explicacao": "Fora das localidades, a paragem e o estacionamento devem ocorrer fora da faixa de rodagem; se tal não for possível, devem fazer-se o mais próximo possível da margem esquerda, paralelamente a esta e no sentido da marcha. (Art. 49.º, n.º 3)."
   },
   {
     "numero": 5,
-    "tema": "Sinal e ordem do agente",
+    "tema": "Paragem e estacionamento dentro das localidades",
     "dificuldade": "média",
-    "enunciado": "Um sinal vertical proíbe virar à esquerda, mas um agente regulador manda seguir por essa direcção para desviar o trânsito. O condutor deve:",
+    "enunciado": "Dentro de uma localidade, não existe lugar especialmente destinado ao estacionamento naquele troço. Como deve o condutor proceder, segundo a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Ignorar o agente e cumprir o sinal vertical.",
-      "Obedecer à ordem do agente, que prevalece sobre os sinais.",
-      "Esperar que outro veículo decida.",
-      "Seguir em frente, mesmo contrariando a ordem."
+      "Deve imobilizar o veículo em qualquer posição, desde que ligue as luzes de perigo.",
+      "Deve colocá-lo o mais próximo possível do limite esquerdo da faixa de rodagem, paralelamente e no sentido da marcha, respeitando a sinalização aplicável.",
+      "Deve estacionar sempre no passeio.",
+      "Deve colocá-lo transversalmente à faixa de rodagem."
     ],
     "correta": 1,
-    "explicacao": "As ordens dos agentes reguladores prevalecem sobre as prescrições dos sinais e as regras de trânsito. (Código, art. 14.º, n.º 3)."
+    "explicacao": "Dentro das localidades, deve usar-se o local especialmente destinado e a forma indicada; na sua falta, a imobilização faz-se na faixa de rodagem, o mais próximo possível do respectivo limite esquerdo, paralelamente e no sentido da marcha. (Art. 49.º, n.º 4)."
   },
   {
     "numero": 6,
-    "tema": "Carga e visibilidade",
+    "tema": "Precauções ao estacionar",
     "dificuldade": "média",
-    "enunciado": "Um veículo transporta carga bem amarrada, mas que tapa a visão do condutor num dos espelhos. Pode iniciar a viagem?",
+    "enunciado": "Ao estacionar numa rua com vários veículos, que cuidado deve o condutor ter em relação aos outros veículos e ao próprio automóvel?",
     "imagem": null,
     "opcoes": [
-      "Sim, se circular lentamente.",
-      "Sim, se viajar apenas durante o dia.",
-      "Sim, se outro passageiro observar a retaguarda.",
-      "Não; deve reorganizar a carga para não reduzir a visibilidade."
+      "Deixar o veículo em ponto morto numa descida.",
+      "Ocupar o espaço entre dois veículos sem deixar margem para manobras.",
+      "Deixar intervalos necessários à saída e ocupação de lugares e tomar precauções para impedir que o veículo se ponha em movimento.",
+      "Encostar o veículo a outro para impedir que se desloque."
     ],
-    "correta": 3,
-    "explicacao": "A disposição da carga não pode reduzir a visibilidade do condutor. (Código, art. 56.º, n.º 3, al. c))."
+    "correta": 2,
+    "explicacao": "Ao estacionar, o condutor deve deixar os intervalos indispensáveis à saída de outros veículos, à ocupação dos espaços vagos e ao acesso aos prédios, além de evitar que o veículo se ponha em movimento. (Art. 49.º, n.º 5)."
   },
   {
     "numero": 7,
-    "tema": "Retenção infantil",
+    "tema": "Paragem ou estacionamento em túneis",
     "dificuldade": "média",
-    "enunciado": "Uma criança de 8 anos é transportada num automóvel equipado com cintos. Qual é a medida legal geral?",
+    "enunciado": "Um condutor pretende parar por alguns minutos dentro de um túnel para atender uma chamada. A conduta é permitida?",
     "imagem": null,
     "opcoes": [
-      "Usar sistema de retenção homologado e adaptado ao tamanho e peso, em regra no banco traseiro.",
-      "Viajar ao colo de um adulto.",
-      "Usar apenas o cinto do adulto, em qualquer circunstância.",
-      "Viajar no banco da frente sem retenção."
+      "Não. É proibido parar ou estacionar em túneis, pontes, passagens de nível e locais de visibilidade insuficiente.",
+      "Sim, desde que ligue os quatro indicadores.",
+      "Sim, se deixar espaço para outros veículos.",
+      "Sim, porque a proibição se aplica apenas ao estacionamento prolongado."
     ],
     "correta": 0,
-    "explicacao": "Crianças com menos de 12 anos devem usar sistema de retenção homologado e adaptado ao tamanho e peso, em regra no banco traseiro. (Art. 87.º, n.ºs 4 e 5)."
+    "explicacao": "O Código proíbe parar ou estacionar em pontes, túneis, passagens de nível, passagens inferiores ou superiores e locais de visibilidade insuficiente. (Art. 50.º, n.º 1, al. a))."
   },
   {
     "numero": 8,
-    "tema": "Avaria na faixa",
+    "tema": "Distância de cruzamentos e rotundas",
     "dificuldade": "média",
-    "enunciado": "Um veículo avaria e fica parcialmente imobilizado na faixa. O condutor deve:",
+    "enunciado": "Um condutor pretende estacionar junto de uma rotunda. Qual é a distância mínima geral que deve respeitar para cada lado da rotunda?",
     "imagem": null,
     "opcoes": [
-      "Abandoná-lo sem sinalização.",
-      "Repará-lo imediatamente no meio da faixa.",
-      "Retirá-lo da faixa ou aproximá-lo do limite esquerdo, sinalizar a presença e promover a remoção rápida.",
-      "Pedir aos outros veículos que passem pela berma."
+      "Dois metros.",
+      "Três metros.",
+      "Dez metros.",
+      "Cinco metros."
     ],
-    "correta": 2,
-    "explicacao": "Deve retirar o veículo da faixa ou aproximá-lo do limite esquerdo, sinalizar a presença e promover a remoção rápida. (Arts. 90.º, n.ºs 1 e 2, e 91.º)."
+    "correta": 3,
+    "explicacao": "É proibido parar ou estacionar a menos de cinco metros para um e outro lado dos cruzamentos, entroncamentos ou rotundas. (Art. 50.º, n.º 1, al. b))."
   },
   {
     "numero": 9,
-    "tema": "Acidente com feridos",
+    "tema": "Distância de passagens para peões e velocípedes",
     "dificuldade": "média",
-    "enunciado": "Depois de um acidente com feridos, o condutor interveniente pretende sair do local após trocar contactos. O que deve fazer?",
+    "enunciado": "Um veículo está estacionado a quatro metros de uma passagem assinalada para peões e velocípedes. A posição respeita a distância legal?",
     "imagem": null,
     "opcoes": [
-      "Pode sair se o veículo ainda circular.",
-      "Deve aguardar no local a chegada de agente de autoridade e prestar ou providenciar socorro.",
-      "Deve sair e comunicar apenas à seguradora.",
-      "Pode deixar a vítima ao cuidado de curiosos."
+      "Sim, porque a proibição só começa a dois metros.",
+      "Não. É proibido parar ou estacionar a menos de cinco metros dessas passagens.",
+      "Sim, desde que não esteja a chover.",
+      "Sim, se o condutor permanecer dentro do veículo."
     ],
     "correta": 1,
-    "explicacao": "Em acidente com mortos ou feridos, deve aguardar a autoridade e não abandonar a vítima; deve prestar ou providenciar socorro. (Arts. 92.º, n.º 2, e 154.º)."
+    "explicacao": "É proibido parar ou estacionar a menos de cinco metros das passagens assinaladas para a travessia de peões e velocípedes. (Art. 50.º, n.º 1, al. d))."
   },
   {
     "numero": 10,
-    "tema": "Marcha atrás em auto-estrada",
+    "tema": "Não ocultar sinais luminosos",
     "dificuldade": "média",
-    "enunciado": "Um condutor ultrapassa a saída de uma auto-estrada. Pode recuar pela berma?",
+    "enunciado": "Um camião alto pretende parar antes de um cruzamento, num local onde a sua carga ocultaria o semáforo aos outros condutores. Qual é a regra aplicável?",
     "imagem": null,
     "opcoes": [
-      "Sim, se ligar as luzes de perigo.",
-      "Sim, se não houver trânsito.",
-      "Sim, desde que recue lentamente.",
-      "Não; a marcha atrás é proibida nas auto-estradas."
+      "Pode parar, desde que ligue as luzes de presença.",
+      "Pode parar se o semáforo estiver verde.",
+      "Não pode parar ou estacionar a menos de vinte metros antes do sinal luminoso quando o veículo ou a carga o encobrir.",
+      "Pode parar porque a proibição só abrange veículos de transporte público."
     ],
-    "correta": 3,
-    "explicacao": "A marcha atrás é proibida nas auto-estradas. (Código, art. 48.º, n.º 4, al. d))."
+    "correta": 2,
+    "explicacao": "É proibido parar ou estacionar a menos de vinte metros antes dos sinais luminosos colocados à entrada de cruzamentos e entroncamentos quando o veículo, incluindo a carga, os encobrir. (Art. 50.º, n.º 1, al. e))."
   },
   {
     "numero": 11,
-    "tema": "Distância de segurança",
+    "tema": "Locais destinados a peões e velocípedes",
     "dificuldade": "média",
-    "enunciado": "O veículo da frente trava subitamente. Que comportamento preventivo ajuda a evitar colisão?",
+    "enunciado": "Um condutor encontra uma pista para velocípedes e um passeio livres. Pode utilizar um desses espaços para imobilizar o automóvel?",
     "imagem": null,
     "opcoes": [
-      "Manter distância frontal suficiente para poder parar em segurança.",
-      "Circular muito próximo para evitar que outros entrem.",
-      "Aumentar a velocidade para ultrapassar.",
-      "Confiar apenas no sistema de travagem."
+      "Não. A paragem e o estacionamento são proibidos nas pistas de velocípedes, passeios e outros locais destinados ao trânsito de peões.",
+      "Sim, se deixar os quatro indicadores ligados.",
+      "Sim, desde que a imobilização dure menos de um minuto.",
+      "Sim, se não houver ciclistas ou peões naquele momento."
     ],
     "correta": 0,
-    "explicacao": "Deve manter distância suficiente para evitar acidente em caso de paragem ou diminuição súbita da velocidade do veículo precedente. (Art. 20.º, n.º 1)."
+    "explicacao": "O Código proíbe parar ou estacionar nas pistas de velocípedes, ilhéus direccionais, placas centrais de rotundas com trânsito giratório, passeios e demais locais destinados ao trânsito de peões. (Art. 50.º, n.º 1, al. f))."
   },
   {
     "numero": 12,
-    "tema": "Rotunda",
+    "tema": "Distância à linha longitudinal contínua",
     "dificuldade": "média",
-    "enunciado": "Um condutor aproxima-se de uma rotunda sinalizada com cedência de passagem. Há veículos a circular no interior. O que deve fazer?",
+    "enunciado": "Uma faixa de rodagem está delimitada por linha longitudinal contínua. O espaço entre a linha e o veículo estacionado seria de apenas 2,5 metros. A imobilização é permitida?",
     "imagem": null,
     "opcoes": [
-      "Entrar rapidamente porque tem prioridade.",
-      "Parar sempre durante um minuto.",
-      "Ceder passagem aos veículos que já circulam na rotunda.",
-      "Buzinar e entrar se o veículo for ligeiro."
+      "Sim, porque o veículo não transpõe a linha.",
+      "Sim, se ficar junto à berma.",
+      "Não. É proibido parar ou estacionar nessa situação quando a distância entre o veículo e a linha contínua seja inferior a três metros.",
+      "Não, mas apenas para veículos pesados."
     ],
     "correta": 2,
-    "explicacao": "Quem entra numa rotunda deve ceder passagem aos veículos que nela circulam. (Código, art. 39.º, n.º 1, al. d); Regulamento, M6)."
+    "explicacao": "É proibido parar ou estacionar na faixa de rodagem quando esta esteja sinalizada com linha longitudinal contínua e a distância entre a linha e o veículo seja inferior a três metros. (Art. 50.º, n.º 1, al. g))."
   },
   {
     "numero": 13,
-    "tema": "Passagem de nível com barreiras em movimento",
+    "tema": "Veículos com substâncias explosivas junto de passagens de nível",
     "dificuldade": "média",
-    "enunciado": "Ao aproximar-se de uma passagem de nível, o condutor vê as barreiras a descer. Mesmo sem avistar o comboio, pode iniciar a travessia?",
+    "enunciado": "Um veículo que transporta substâncias explosivas pretende parar a oito metros de uma passagem de nível. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
-      "Sim, se acelerar para passar antes do fecho.",
-      "Não. Não deve entrar enquanto os meios de protecção estiverem atravessados na via ou em movimento.",
-      "Sim, se não houver sinal sonoro.",
-      "Sim, desde que o veículo seja ligeiro."
+      "Sim, se não houver comboio à vista.",
+      "Não. Para esses veículos, é proibido parar ou estacionar a menos de dez metros da passagem de nível.",
+      "Sim, se a passagem estiver protegida por barreiras.",
+      "Sim, desde que o condutor não abandone o veículo."
     ],
     "correta": 1,
-    "explicacao": "O condutor não deve entrar na passagem de nível enquanto os meios de protecção estejam atravessados na via pública ou em movimento. (Código da Estrada, art. 67.º, n.º 2)."
+    "explicacao": "Os veículos que transportem substâncias explosivas não podem parar ou estacionar a menos de dez metros das passagens de nível. (Art. 50.º, n.º 1, al. h))."
   },
   {
     "numero": 14,
-    "tema": "Passagem estreita",
+    "tema": "Distância fora das localidades em locais de visibilidade reduzida",
     "dificuldade": "média",
-    "enunciado": "Dois veículos aproximam-se de uma passagem estreita, e o sinal M3 está dirigido ao condutor. O que indica?",
+    "enunciado": "Fora de uma localidade, um condutor pretende estacionar a 40 metros de uma curva de visibilidade reduzida. A posição é permitida?",
     "imagem": null,
     "opcoes": [
-      "Que tem prioridade absoluta.",
-      "Que deve acelerar para entrar primeiro.",
-      "Que deve inverter o sentido de marcha.",
-      "Que deve ceder passagem aos veículos que transitam em sentido contrário."
+      "Sim, porque a distância mínima é de 30 metros.",
+      "Sim, se o veículo estiver junto à margem esquerda.",
+      "Não. Fora das localidades, é proibido parar ou estacionar a menos de 50 metros de cruzamentos, entroncamentos, curvas ou lombas de visibilidade reduzida.",
+      "Não, porque é proibido estacionar em qualquer curva, independentemente da visibilidade."
     ],
-    "correta": 3,
-    "explicacao": "O M3 indica a obrigação de ceder passagem aos veículos que transitam em sentido contrário na passagem estreita. (Regulamento, art. 37.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "Fora das localidades, é proibido parar ou estacionar a menos de cinquenta metros dos cruzamentos, entroncamentos, curvas ou lombas de visibilidade reduzida. (Art. 50.º, n.º 2, al. a))."
   },
   {
     "numero": 15,
-    "tema": "Carga de areia",
+    "tema": "Estacionamento em segunda fila",
     "dificuldade": "média",
-    "enunciado": "Um camião transporta areia fina que pode espalhar-se pelo ar e pelo solo. O que deve fazer?",
+    "enunciado": "Um condutor estaciona ao lado de outro veículo já estacionado, ocupando uma segunda fila e dificultando a circulação. A conduta é permitida?",
     "imagem": null,
     "opcoes": [
-      "Cobrir a carga com oleado ou lona de dimensões adequadas.",
-      "Deixar a carga exposta para não aumentar o peso.",
-      "Encher acima dos taipais.",
-      "Circular apenas em estradas sem pavimento."
+      "Não. O estacionamento em segunda fila é proibido.",
+      "Sim, se o condutor ficar ao volante.",
+      "Sim, desde que deixe os quatro indicadores ligados.",
+      "Sim, quando o veículo da frente estiver vazio."
     ],
     "correta": 0,
-    "explicacao": "Veículos que transportam materiais pulverulentos e inertes devem cobrir a carga com oleados ou lonas adequadas. (Código, art. 64.º, n.º 2)."
+    "explicacao": "É proibido estacionar na faixa de rodagem em segunda fila e em locais que impeçam o acesso, a saída ou a ocupação de lugares por outros veículos. (Art. 51.º, n.º 1, al. b))."
   },
   {
     "numero": 16,
-    "tema": "Limite de velocidade para automóveis pesados",
+    "tema": "Acesso a propriedades e parques",
     "dificuldade": "média",
-    "enunciado": "Fora das localidades, qual é o limite máximo geral de velocidade para um automóvel pesado de mercadorias, sem prejuízo de limites inferiores ou de condições da via?",
+    "enunciado": "Um veículo fica estacionado diante de uma entrada que permite o acesso de pessoas e viaturas a uma propriedade. Como deve ser avaliada a situação?",
     "imagem": null,
     "opcoes": [
-      "120 km/h.",
-      "80 km/h.",
-      "100 km/h.",
-      "90 km/h."
+      "É permitida se o condutor deixar o número de telefone no vidro.",
+      "É proibida, porque não se pode estacionar nos locais de acesso a propriedades, parques ou lugares de estacionamento.",
+      "É permitida durante o período diurno.",
+      "É permitida se não houver portão."
     ],
-    "correta": 2,
-    "explicacao": "A tabela do artigo 33.º, n.º 1, fixa em 100 km/h o limite máximo geral fora das localidades para automóveis pesados de mercadorias e mistos, sem prejuízo da adaptação da velocidade às condições concretas da via."
+    "correta": 1,
+    "explicacao": "O estacionamento é proibido nos lugares por onde se faça o acesso de pessoas ou veículos a propriedades, parques ou lugares de estacionamento. (Art. 51.º, n.º 1, al. c))."
   },
   {
     "numero": 17,
-    "tema": "Reconhecimento de carta de condução da SADC",
+    "tema": "Estacionamento junto de passagem de nível",
     "dificuldade": "média",
-    "enunciado": "Um condutor apresenta uma carta válida emitida por um Estado membro da SADC e reúne a idade mínima exigida. Pode conduzir em Moçambique?",
+    "enunciado": "Um automóvel fica estacionado a oito metros de uma passagem de nível, sem transportar mercadorias perigosas. A posição é permitida?",
     "imagem": null,
     "opcoes": [
-      "Não; apenas cartas emitidas em Moçambique são reconhecidas.",
-      "Sim; as cartas emitidas por outros Estados membros da SADC habilitam à condução, respeitada a idade mínima legal.",
-      "Só pode conduzir se for diplomata acreditado.",
-      "Só depois de realizar novamente o exame prático em Moçambique."
+      "Sim, porque a proibição só se aplica a veículos pesados.",
+      "Sim, se não houver comboio à vista.",
+      "Não. É proibido estacionar a menos de dez metros das passagens de nível.",
+      "Não, porque é proibido parar a qualquer distância de uma passagem de nível."
     ],
-    "correta": 1,
-    "explicacao": "O Código reconhece, entre outros títulos, as cartas de condução emitidas por outros Estados membros da SADC, desde que o titular possua a idade mínima exigida para a categoria. (Arts. 129.º, n.º 1, al. b), e 129.º, n.º 6)."
+    "correta": 2,
+    "explicacao": "O estacionamento é proibido a menos de dez metros das passagens de nível. (Art. 51.º, n.º 1, al. d))."
   },
   {
     "numero": 18,
-    "tema": "Troca de carta estrangeira após fixar residência",
+    "tema": "Estacionamento junto de postos de abastecimento",
     "dificuldade": "média",
-    "enunciado": "Um titular de carta estrangeira reconhecida por reciprocidade fixa residência habitual em Moçambique. O que deve fazer?",
+    "enunciado": "Um condutor pretende estacionar a quatro metros de um posto de abastecimento de combustíveis. A distância respeita a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Pode utilizar a carta estrangeira indefinidamente, sem qualquer formalidade.",
-      "Basta apresentar uma fotocópia autenticada da carta.",
-      "Fica imediatamente impedido de conduzir, sem possibilidade de troca.",
-      "Deve requerer a troca por carta moçambicana no prazo de 180 dias a contar da fixação da residência."
+      "Sim, porque a proibição só se aplica dentro do posto.",
+      "Sim, se o motor estiver desligado.",
+      "Sim, desde que não abasteça o veículo.",
+      "Não. É proibido estacionar a menos de cinco metros para um e outro lado dos postos de abastecimento."
     ],
     "correta": 3,
-    "explicacao": "Os titulares de cartas estrangeiras abrangidas pelo artigo 129.º, alínea d), que fixem residência em Moçambique devem requerer a troca por carta moçambicana no prazo de 180 dias. (Código da Estrada, art. 131.º, n.º 5)."
+    "explicacao": "É proibido estacionar a menos de cinco metros para um e outro lado dos postos de abastecimento de combustíveis. (Art. 51.º, n.º 1, al. e))."
   },
   {
     "numero": 19,
-    "tema": "Cinto de segurança nos lugares traseiros",
+    "tema": "Estacionamento reservado",
     "dificuldade": "média",
-    "enunciado": "Um adulto viaja no banco traseiro de um automóvel e recusa usar o cinto de segurança. Qual é a regra?",
+    "enunciado": "Um condutor deixa o automóvel num espaço devidamente sinalizado e reservado a uma determinada classe de veículos, embora o seu automóvel não pertença a essa classe. Pode estacionar?",
     "imagem": null,
     "opcoes": [
-      "O condutor e os passageiros transportados em automóveis são obrigados a usar os cintos e demais acessórios de segurança previstos no regulamento.",
-      "A obrigação só se aplica ao condutor e ao passageiro da frente.",
-      "Os passageiros do banco traseiro estão sempre dispensados.",
-      "O cinto só é obrigatório nas auto-estradas."
+      "Não. Deve respeitar a reserva do espaço devidamente sinalizado.",
+      "Sim, se o espaço estiver vazio.",
+      "Sim, durante menos de dez minutos.",
+      "Sim, desde que não impeça a circulação."
     ],
     "correta": 0,
-    "explicacao": "O Código determina que o condutor e os passageiros transportados em automóveis usem os cintos e demais acessórios de segurança nos termos fixados em regulamento. (Art. 87.º, n.º 1)."
+    "explicacao": "É proibido estacionar nos locais reservados ao estacionamento de certos veículos quando estejam devidamente sinalizados. (Art. 51.º, n.º 1, al. f))."
   },
   {
     "numero": 20,
-    "tema": "Prioridade à direita em intersecção não sinalizada",
+    "tema": "Reboques desligados do veículo tractor",
     "dificuldade": "média",
-    "enunciado": "Num cruzamento sem sinais de prioridade, sem semáforos e sem agente regulador, um veículo aproxima-se pela direita. Qual é a regra geral?",
+    "enunciado": "Um reboque é deixado desligado do veículo tractor numa rua pública, fora de um parque próprio para esse efeito. A situação é permitida?",
     "imagem": null,
     "opcoes": [
-      "Tem prioridade o veículo que se apresenta pela esquerda.",
-      "Tem prioridade o veículo de maiores dimensões.",
-      "Tem prioridade o veículo que se apresenta pela direita, sem prejuízo das prioridades especiais previstas no Código.",
-      "Tem prioridade o veículo que circular a maior velocidade."
+      "Sim, se tiver matrícula.",
+      "Sim, porque os reboques podem estacionar livremente em qualquer rua.",
+      "Não. É proibido estacionar máquinas, reboques ou semi-reboques desligados do veículo tractor, salvo em parques especialmente destinados a esse efeito.",
+      "Sim, desde que o reboque esteja vazio."
     ],
     "correta": 2,
-    "explicacao": "Nas intersecções não sinalizadas, têm prioridade os condutores que se apresentem pela direita, respeitando as prioridades especiais previstas no Código. (Código da Estrada, art. 38.º, n.º 3, al. a), e n.º 4)."
+    "explicacao": "O Código proíbe o estacionamento de máquinas, reboques ou semi-reboques quando não estejam atrelados ao veículo tractor, excepto em parques especialmente destinados a esse efeito. (Art. 51.º, n.º 1, al. g))."
   },
   {
     "numero": 21,
-    "tema": "Passagem de nível bloqueada",
+    "tema": "Estacionamento fora das localidades durante a noite",
     "dificuldade": "média",
-    "enunciado": "A sinalização permite atravessar uma passagem de nível, mas o trânsito à frente pode obrigar o veículo a imobilizar-se sobre os carris. O condutor deve:",
+    "enunciado": "Durante a noite, um condutor deixa o automóvel estacionado na faixa de rodagem fora de uma localidade, apesar de existir espaço fora dela. A conduta é permitida?",
     "imagem": null,
     "opcoes": [
-      "Avançar porque a sinalização permite.",
-      "Não iniciar a travessia até ter a certeza de que não ficará imobilizado sobre a passagem.",
-      "Parar sobre os carris e aguardar.",
-      "Seguir o veículo da frente sem deixar distância."
+      "Sim, se as luzes de presença ficarem ligadas.",
+      "Não. Fora das localidades, é proibido estacionar de noite nas faixas de rodagem.",
+      "Sim, desde que o veículo tenha triângulo.",
+      "Sim, quando não houver iluminação pública."
     ],
     "correta": 1,
-    "explicacao": "Só pode iniciar a travessia depois de se certificar de que o tráfego não o obrigará a imobilizar-se sobre a passagem de nível. (Art. 67.º, n.º 1)."
+    "explicacao": "Fora das localidades, é proibido estacionar de noite nas faixas de rodagem. (Art. 51.º, n.º 2, al. a))."
   },
   {
     "numero": 22,
-    "tema": "Ordem de paragem",
+    "tema": "Excepção para operações breves de carga e descarga",
     "dificuldade": "média",
-    "enunciado": "Um agente devidamente uniformizado e identificado faz sinal de paragem ao condutor. O que deve fazer?",
+    "enunciado": "Um condutor imobiliza o veículo por breves instantes para descarregar mercadoria num local onde o estacionamento é proibido. Em que condição a proibição de estacionar não abrange essa imobilização?",
     "imagem": null,
     "opcoes": [
-      "Ignorar se não houver infracção visível.",
-      "Parar apenas se outros veículos também pararem.",
-      "Reduzir a velocidade e continuar.",
-      "Parar, pois os condutores são obrigados a obedecer ao sinal de paragem."
+      "Quando o condutor abandona o local e regressa depois da descarga.",
+      "Quando a descarga demora o tempo que for necessário, mesmo que bloqueie a passagem.",
+      "Quando o veículo fica trancado e sem ninguém por perto.",
+      "Quando o condutor permanece presente, pronto a retomar a marcha, e a retoma se impedir a passagem de outros condutores."
     ],
     "correta": 3,
-    "explicacao": "Os condutores são obrigados a parar quando uma autoridade policial ou agente devidamente uniformizado e identificado lhes faz sinal. (Art. 11.º, n.º 1)."
+    "explicacao": "A proibição de estacionar não abrange a imobilização pelo tempo estritamente necessário para entrada ou saída de passageiros ou breves operações de carga e descarga, desde que o condutor esteja presente, pronto a retomar a marcha e o faça quando impedir a passagem. (Art. 51.º, n.º 3)."
   },
   {
     "numero": 23,
-    "tema": "Luzes de nevoeiro",
+    "tema": "Contagem das distâncias em curvas e passagens de nível",
     "dificuldade": "média",
-    "enunciado": "O condutor utiliza luzes de nevoeiro numa noite limpa, sem redução significativa de visibilidade. A conduta é:",
+    "enunciado": "Para aplicar as distâncias legais de paragem ou estacionamento medidas a partir de uma curva, lomba ou passagem de nível, a contagem começa em que ponto?",
     "imagem": null,
     "opcoes": [
-      "Inadequada; é proibido usar luzes de nevoeiro quando as condições não o justifiquem.",
-      "Obrigatória em todas as noites.",
-      "Permitida apenas em vias urbanas.",
-      "Obrigatória quando há trânsito intenso."
+      "No centro geométrico da estrada.",
+      "No início da curva, lomba ou passagem de nível.",
+      "No ponto onde termina a sinalização horizontal.",
+      "Na posição do primeiro veículo que estiver estacionado."
     ],
-    "correta": 0,
-    "explicacao": "É proibido o uso das luzes de nevoeiro quando as condições meteorológicas ou ambientais não o justifiquem. (Art. 61.º, n.º 2)."
+    "correta": 1,
+    "explicacao": "As distâncias referidas no Código contam-se a partir do início da curva, lomba ou passagem de nível. (Art. 52.º, al. a))."
   },
   {
     "numero": 24,
-    "tema": "Taxa de álcool zero para condutores profissionais em serviço",
-    "dificuldade": "difícil",
-    "enunciado": "Um condutor de transporte público de passageiros, em serviço, apresenta 0,05 mg/l de álcool no ar expirado. Pode continuar a conduzir?",
+    "tema": "Contagem das distâncias junto de vias transversais",
+    "dificuldade": "média",
+    "enunciado": "Quando a distância legal não se refere ao início de uma curva, lomba ou passagem de nível, a partir de que referência deve ser medida?",
     "imagem": null,
     "opcoes": [
-      "Sim, porque está abaixo do limite geral de 0,3 mg/l.",
-      "Sim, se não transportar passageiros naquele momento.",
-      "Não. Para condutores de transporte público ou de carga perigosa em exercício, a taxa permitida é de 0,0 mg/l.",
-      "Sim, desde que beba água antes de prosseguir."
+      "Do centro do cruzamento.",
+      "Da traseira do veículo estacionado mais próximo.",
+      "Do prolongamento do limite mais próximo da faixa de rodagem transversal.",
+      "Do início da berma do lado oposto."
     ],
     "correta": 2,
-    "explicacao": "Para condutores de transporte de serviço público ou de carga perigosa, quando em exercício, a taxa de álcool permitida no ar expirado ou no sangue é de 0,0 mg/l. (Código da Estrada, art. 81.º, n.º 4)."
+    "explicacao": "Nos restantes casos abrangidos pelo artigo, a distância conta-se do prolongamento do limite mais próximo da faixa de rodagem transversal. (Art. 52.º, al. b))."
   },
   {
     "numero": 25,
-    "tema": "Capacete e passageiro",
+    "tema": "Paragem de transporte colectivo",
     "dificuldade": "média",
-    "enunciado": "Um condutor de motociclo transporta um passageiro sem capacete aprovado. Qual é a regra geral?",
+    "enunciado": "Um autocarro utilizado no transporte colectivo de passageiros pretende parar na faixa de rodagem para permitir a entrada de passageiros, fora de uma paragem especialmente destinada a esse fim. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
-      "O capacete só é obrigatório para o condutor.",
-      "Condutor e passageiro devem usar capacete aprovado, ajustado e apertado, salvo excepções legais.",
-      "O passageiro pode levar o capacete na mão.",
-      "O capacete é obrigatório apenas fora das localidades."
+      "Não. Na faixa de rodagem, só pode parar para entrada e saída de passageiros nos locais especialmente destinados a esse fim.",
+      "Sim, desde que o autocarro tenha menos de 30 passageiros.",
+      "Sim, se a paragem durar menos de um minuto.",
+      "Sim, quando o condutor ligar os quatro indicadores."
     ],
-    "correta": 1,
-    "explicacao": "Condutores e passageiros de motociclos e ciclomotores devem usar capacete oficialmente aprovado, ajustado e apertado, ressalvadas as excepções legais. (Art. 87.º, n.º 2)."
+    "correta": 0,
+    "explicacao": "Na faixa de rodagem, o veículo utilizado no transporte colectivo de passageiros só pode parar para entrada e saída de passageiros nos locais especialmente destinados a esse fim. (Art. 53.º, n.º 1)."
   }
 ];
