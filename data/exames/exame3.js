@@ -41,7 +41,7 @@ window.EXAMES[3] = [
     "numero": 3,
     "tema": "Sinais de proibição",
     "dificuldade": "fácil",
-    "enunciado": "O que indica o sinal de trânsito apresentado na imagem?",
+    "enunciado": "O sinal E50 apresentado na imagem significa o quê?",
     "imagem": {
       "descricao": "Sinal E50 de estacionamento proibido",
       "src": "public/exames/exame3/exame3_3.jpg"
@@ -77,25 +77,25 @@ window.EXAMES[3] = [
     "numero": 5,
     "tema": "Cruzamento de veículos",
     "dificuldade": "média",
-    "enunciado": "Em que situação se considera que há cruzamento de veículos?",
+    "enunciado": "Ao cruzar-se com outro veículo na mesma via, que cuidado deve ter o condutor?",
     "imagem": {
       "descricao": "Dois veículos a circular em sentidos opostos na mesma estrada",
       "src": "public/exames/exame3/exame3_5.jpg"
     },
     "opcoes": [
-      "Quando dois veículos que circulam na mesma via, em sentidos opostos, passam um pelo outro ao mesmo tempo.",
-      "Quando dois veículos circulam na mesma via e no mesmo sentido, mantendo a mesma velocidade, sem se ultrapassarem.",
-      "Quando um veículo que segue atrás passa para diante de outro que circula na mesma fila.",
-      "Quando dois veículos que seguem no mesmo sentido se encontram numa intersecção e mudam de direcção."
+      "Deixar distância lateral suficiente para que a passagem se faça em segurança.",
+      "Manter a velocidade, mesmo que a largura disponível não permita a passagem segura.",
+      "Aproximar-se ao máximo do outro veículo para reduzir a distância de passagem.",
+      "Avançar primeiro e obrigar o outro condutor a sair da faixa de rodagem, mesmo sem espaço."
     ],
     "correta": 0,
-    "explicacao": "Há cruzamento quando dois veículos que seguem na mesma via, em sentidos opostos, passam um pelo outro simultaneamente. Cada condutor deve deixar distância lateral suficiente para que a manobra seja segura."
+    "explicacao": "Ao cruzar-se com outro veículo, cada condutor deve deixar distância lateral suficiente para que a passagem se faça com segurança. Se a via estiver parcialmente obstruída, deve reduzir a velocidade ou parar para permitir a passagem."
   },
   {
     "numero": 6,
     "tema": "Sinais de perigo",
     "dificuldade": "fácil",
-    "enunciado": "O que indica o sinal triangular apresentado na imagem?",
+    "enunciado": "O que indica o sinal D63 apresentado na imagem?",
     "imagem": {
       "descricao": "Sinal temporário D63 de congestionamento de tráfego",
       "src": "public/exames/exame3/exame3_6.jpg"
@@ -203,7 +203,7 @@ window.EXAMES[3] = [
     "numero": 12,
     "tema": "Sinais de perigo",
     "dificuldade": "fácil",
-    "enunciado": "O que indica o sinal triangular apresentado junto à estrada?",
+    "enunciado": "O que indica o sinal D68 apresentado junto à passagem ferroviária?",
     "imagem": {
       "descricao": "Sinal triangular de aproximação de passagem de nível",
       "src": "public/exames/exame3/exame3_12.jpg"
@@ -221,7 +221,7 @@ window.EXAMES[3] = [
     "numero": 13,
     "tema": "Sinais de perigo",
     "dificuldade": "média",
-    "enunciado": "O sinal triangular, acompanhado da indicação de 8 km, adverte para que situação?",
+    "enunciado": "O que indica o sinal D14, acompanhado do painel adicional de 8 km?",
     "imagem": {
       "descricao": "Sinal D14 de descida acentuada com painel adicional de 8 km",
       "src": "public/exames/exame3/exame3_13.jpg"
@@ -257,19 +257,19 @@ window.EXAMES[3] = [
     "numero": 15,
     "tema": "Filas de trânsito múltiplas",
     "dificuldade": "média",
-    "enunciado": "Dentro das localidades, quando existem várias vias de trânsito no mesmo sentido, que via deve o condutor utilizar?",
+    "enunciado": "Dentro das localidades, depois de escolher a via mais conveniente ao destino, em que condições pode o condutor mudar para outra via?",
     "imagem": {
       "descricao": "Via urbana com várias faixas de trânsito no mesmo sentido",
       "src": "public/exames/exame3/exame3_15.jpg"
     },
     "opcoes": [
-      "A via mais à esquerda, mesmo que o destino esteja à direita, podendo mudar sem sinalizar.",
-      "A via mais à direita, sem considerar o destino e sem necessidade de observar o trânsito.",
-      "Qualquer via, porque dentro das localidades a escolha é livre e não exige precauções, sinalização ou verificação do trânsito.",
-      "A via mais conveniente ao destino que pretende alcançar, mudando de via apenas após tomar as devidas precauções."
+      "Sempre que a via seguinte estiver mais livre, sem verificar os veículos que circulam ao lado.",
+      "A qualquer momento, desde que ligue o indicador de direcção, mesmo sem observar o trânsito e sem confirmar se a via está livre.",
+      "Apenas quando pretende estacionar, não sendo permitida a mudança para ultrapassar ou virar.",
+      "Depois de tomar as precauções necessárias para mudar de direcção, ultrapassar, parar ou estacionar."
     ],
     "correta": 3,
-    "explicacao": "Dentro das localidades, o condutor deve escolher a via mais conveniente ao destino. A mudança para outra via só deve ser feita depois de sinalizar e tomar as precauções necessárias."
+    "explicacao": "Dentro das localidades, o condutor escolhe a via mais conveniente ao destino. A mudança para outra via só deve ocorrer depois de tomadas as precauções necessárias para mudar de direcção, ultrapassar, parar ou estacionar."
   },
   {
     "numero": 16,
@@ -293,7 +293,7 @@ window.EXAMES[3] = [
     "numero": 17,
     "tema": "Sinais de obrigação",
     "dificuldade": "média",
-    "enunciado": "O que indica o sinal circular azul apresentado na imagem?",
+    "enunciado": "O sinal F54 apresentado na imagem destina-se a que tipo de veículo?",
     "imagem": {
       "descricao": "Sinal circular azul de pista obrigatória para riquexós",
       "src": "public/exames/exame3/exame3_17.jpg"
@@ -365,16 +365,16 @@ window.EXAMES[3] = [
     "numero": 21,
     "tema": "Sinais de proibição",
     "dificuldade": "média",
-    "enunciado": "O que significa o sinal circular apresentado na imagem?",
+    "enunciado": "O sinal E5 apresentado na imagem proíbe a circulação de que veículos?",
     "imagem": {
       "descricao": "Sinal E5 de trânsito proibido a veículos automóveis e motociclos com carro",
       "src": "public/exames/exame3/exame3_21.jpg"
     },
     "opcoes": [
-      "Trânsito proibido apenas a automóveis ligeiros de passageiros.",
-      "Trânsito proibido apenas a táxis e a todos os veículos de transporte colectivo de passageiros.",
-      "Trânsito proibido apenas a veículos pesados de mercadorias.",
-      "Trânsito proibido a veículos automóveis e motociclos com carro lateral."
+      "Apenas automóveis ligeiros de passageiros.",
+      "Apenas táxis e todos os veículos utilizados no transporte colectivo de passageiros.",
+      "Apenas automóveis de mercadorias pesadas.",
+      "Veículos automóveis e motociclos com carro lateral."
     ],
     "correta": 3,
     "explicacao": "O sinal E5 proíbe o acesso a veículos automóveis e a motociclos com carro lateral. Não deve ser confundido com o sinal que proíbe apenas automóveis ligeiros."
@@ -437,7 +437,7 @@ window.EXAMES[3] = [
     "numero": 25,
     "tema": "Sinais de informação",
     "dificuldade": "fácil",
-    "enunciado": "O que indica o sinal azul apresentado junto às paragens de autocarro?",
+    "enunciado": "Qual é a finalidade do sinal G27 apresentado junto à zona de estacionamento?",
     "imagem": {
       "descricao": "Sinal G27 de parque de estacionamento para autocarros e autocarros médios",
       "src": "public/exames/exame3/exame3_25.jpg"
