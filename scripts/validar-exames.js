@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Validador estrutural dos ficheiros de simulados (data/exames/exameN.js).
+// Validador estrutural dos ficheiros de exames (data/exames/exameN.js).
 // Sem dependências externas. Uso: node scripts/validar-exames.js
 // Termina com código 1 se encontrar qualquer falha, 0 se tudo estiver correcto.
 // Só lê os ficheiros; não altera nada.
