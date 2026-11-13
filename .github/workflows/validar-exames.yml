@@ -8,6 +8,8 @@ on:
       - 'scripts/validar-exames.js'
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
+      - 'scripts/build-netlify.js'
+      - 'netlify.toml'
       - 'styles-resultados.css'
       - 'app.js'
       - 'config.js'
@@ -48,3 +50,5 @@ jobs:
         run: node scripts/testar-fluxo.js
       - name: Executar validador oficial
         run: node scripts/validar-exames.js
+      - name: Testar pacote de publicação Netlify
+        run: node scripts/build-netlify.js
