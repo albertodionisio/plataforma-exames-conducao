@@ -23,7 +23,7 @@ Uma especificação reduz ambiguidades, mas não substitui o repositório de có
 
 | Área | Estado | Nota |
 |---|---|---|
-| 50 simulados × 25 perguntas | Definido | 1.250 posições; conteúdo precisa de ser produzido e validado. |
+| 50 exames × 25 perguntas | Definido | 1.250 posições; conteúdo precisa de ser produzido e validado. |
 | Modo estudo | Definido | Explicação após cada resposta; cronómetro continua. |
 | Duração/pontuação | Regra do produto | 60 min; 0,8 valores por resposta certa; limiar interno 18/20, exigindo 23 certas. |
 | Modelo de receita | Definido | Cinco opções de acesso (secção 10): Free e quatro planos pagos. Substitui a proposta anterior de um único plano semanal. |
@@ -42,7 +42,7 @@ Uma especificação reduz ambiguidades, mas não substitui o repositório de có
 5. Modelo de dados
 6. Contratos de API
 7. Autenticação, SMS e permissões
-8. Simulados, cronómetro e pontuação
+8. Exames, cronómetro e pontuação
 9. Conteúdo pedagógico
 10. Assinaturas, monetização e pagamentos
 11. Publicidade
@@ -66,14 +66,14 @@ Construir uma aplicação web responsiva, leve e adaptada a telemóveis, para aj
 
 ### 1.2 Regras do produto
 
-- 50 simulados, 25 perguntas cada, quatro alternativas e exactamente uma correcta por pergunta.
+- 50 exames, 25 perguntas cada, quatro alternativas e exactamente uma correcta por pergunta.
 - Modo estudo: após responder, mostrar correcção e explicação pedagógica.
 - Cronómetro de 60 minutos iniciado no começo; continua durante a leitura das explicações.
 - Ao expirar, submeter automaticamente; perguntas sem resposta são identificadas e valem zero.
 - Cada resposta certa vale 0,8 valores; máximo 20; limiar interno 18/20, ou 23 respostas certas.
-- Três simulados gratuitos, sempre os mesmos para todos os utilizadores. Os restantes são desbloqueados por assinatura paga (secção 10).
-- Todos os planos permitem tentativas ilimitadas nos simulados a que o utilizador tem acesso.
-- Não interromper simulado com anúncios, nem cobrir pergunta, alternativas ou cronómetro.
+- Três exames gratuitos, sempre os mesmos para todos os utilizadores. Os restantes são desbloqueados por assinatura paga (secção 10).
+- Todos os planos permitem tentativas ilimitadas nos exames a que o utilizador tem acesso.
+- Não interromper exame com anúncios, nem cobrir pergunta, alternativas ou cronómetro.
 
 O tempo, a pontuação e o limiar são regras internas de treino, não regras oficiais do exame sem confirmação competente.
 
@@ -91,9 +91,9 @@ O tempo, a pontuação e o limiar são regras internas de treino, não regras of
 |---|---|---|
 | FR-01 | Registo e sessão | Email/password e Google OAuth após configuração. |
 | FR-02 | Verificação de telefone | Código SMS temporário, limite de tentativas e prevenção de abuso. |
-| FR-03 | Catálogo | Mostrar 50 simulados, tema, estado de acesso e progresso. |
-| FR-04 | Plano gratuito | Permitir os 3 simulados gratuitos fixos, com tentativas ilimitadas. |
-| FR-05 | Assinatura | Quatro planos pagos (semanais e mensais) com 25 ou 50 simulados; anúncios reduzidos nos semanais e ausentes nos mensais. |
+| FR-03 | Catálogo | Mostrar 50 exames, tema, estado de acesso e progresso. |
+| FR-04 | Plano gratuito | Permitir os 3 exames gratuitos fixos, com tentativas ilimitadas. |
+| FR-05 | Assinatura | Quatro planos pagos (semanais e mensais) com 25 ou 50 exames; anúncios reduzidos nos semanais e ausentes nos mensais. |
 | FR-06 | Modo estudo | Guardar resposta e mostrar explicação imediatamente. |
 | FR-07 | Cronómetro | Prazo calculado no servidor; relógio local não prolonga a tentativa. |
 | FR-08 | Expiração da tentativa | Finalizar automaticamente ao terminar o prazo. |
@@ -103,7 +103,7 @@ O tempo, a pontuação e o limiar são regras internas de treino, não regras of
 | FR-12 | Administração | Editar, rever e publicar perguntas com auditoria. |
 | FR-13 | Publicidade | Anúncios em zonas permitidas, conforme o plano activo (secção 11). |
 | FR-14 | Auditoria | Registar acções administrativas e eventos de pagamento. |
-| FR-15 | Expiração da assinatura | Bloquear automaticamente os simulados pagos ao expirar, preservar conta e histórico, manter os 3 gratuitos. |
+| FR-15 | Expiração da assinatura | Bloquear automaticamente os exames pagos ao expirar, preservar conta e histórico, manter os 3 gratuitos. |
 | FR-16 | Notificações de expiração | Avisos automáticos 3 dias antes, 1 dia antes, no dia e após a expiração (secção 10.11). |
 
 ---
@@ -190,7 +190,7 @@ Módulos: Auth, Users, QuestionBank, Simulation, Attempt, Scoring, Subscription,
 | legal_sources | id, title, jurisdiction, publication_date, version, article_ref | Rastreabilidade legal. |
 | questions | id, topic_id, prompt, explanation, difficulty, status, source_id, version, reviewed_at | Conteúdo e revisão. |
 | question_options | id, question_id, option_key, option_text, is_correct, position | Quatro opções; uma correcta. |
-| simulations | id, number, title, is_premium, active, version | Catálogo de simulados. |
+| simulations | id, number, title, is_premium, active, version | Catálogo de exames. |
 | simulation_questions | simulation_id, question_id, position | Perguntas fixadas e ordenadas. |
 | attempts | id, user_id, simulation_id, started_at, deadline_at, submitted_at, status, score | Tentativa e resultado. |
 | attempt_answers | id, attempt_id, question_id, selected_option_id, answered_at, is_correct | Resposta e histórico. |
@@ -205,7 +205,7 @@ A tabela `notification_log` resulta do requisito de registar o envio dos avisos 
 
 ### Restrições
 
-- Simulado publicado: 25 perguntas publicadas.
+- Exame publicado: 25 perguntas publicadas.
 - Pergunta publicada: exactamente quatro alternativas e uma correcta.
 - Tentativa tem um único estado final; submissão idempotente.
 - Evento de pagamento tem ID único para evitar duplicação.
@@ -225,7 +225,7 @@ Proposta REST/JSON sob `/api/v1`. Documentar o contrato final com OpenAPI. Os en
 | POST /auth/phone/start | Autenticado | Enviar código SMS. |
 | POST /auth/phone/confirm | Autenticado | Confirmar código. |
 | GET /simulations | Público/autenticado | Catálogo e bloqueios. |
-| POST /attempts | Autenticado | Iniciar simulado se autorizado. |
+| POST /attempts | Autenticado | Iniciar exame se autorizado. |
 | GET /attempts/{id} | Dono/admin | Estado e perguntas. |
 | PUT /attempts/{id}/answers/{questionId} | Dono | Guardar resposta dentro do prazo. |
 | POST /attempts/{id}/submit | Dono/serviço | Submissão idempotente. |
@@ -275,15 +275,15 @@ O backend calcula o resultado a partir das respostas guardadas; nunca aceita a n
 | Papel | Permissões |
 |---|---|
 | Visitante | Páginas públicas e catálogo limitado. |
-| Utilizador | Simulados gratuitos, perfil e progresso próprio. |
-| Assinante | Simulados do plano pago activo, conforme o plano (secção 10). |
+| Utilizador | Exames gratuitos, perfil e progresso próprio. |
+| Assinante | Exames do plano pago activo, conforme o plano (secção 10). |
 | Editor | Criar/editar perguntas em rascunho. |
 | Revisor | Verificar conteúdo e aprovar publicação. |
 | Administrador | Gerir funções autorizadas; acções críticas auditadas. |
 
 ---
 
-## 8. Simulados, cronómetro e pontuação
+## 8. Exames, cronómetro e pontuação
 
 ```
 draft -> in_progress -> submitted
@@ -301,7 +301,7 @@ wrong       = answered_count - correct_count
 - Ao responder, validar dono, estado e prazo; guardar resposta e devolver explicação.
 - Ao expirar, bloquear novas respostas e finalizar automaticamente.
 - A submissão deve ser transaccional e idempotente; repetir pedido não cria resultado duplicado.
-- Repetir um simulado inicia uma nova tentativa, com novas respostas e acesso às explicações associadas.
+- Repetir um exame inicia uma nova tentativa, com novas respostas e acesso às explicações associadas.
 - O sistema guarda o histórico das tentativas e os resultados, para o utilizador acompanhar a evolução e identificar o que precisa de estudar mais.
 
 | Certas | Nota | Resultado interno |
@@ -316,7 +316,7 @@ Recomendação inicial: no modo estudo, bloquear a resposta após confirmação 
 
 ## 9. Conteúdo pedagógico
 
-Objectivo editorial: pelo menos 1.250 perguntas originais, organizadas em 50 simulados. A cobertura final deve ser validada por profissional competente no Código da Estrada moçambicano.
+Objectivo editorial: pelo menos 1.250 perguntas originais, organizadas em 50 exames. A cobertura final deve ser validada por profissional competente no Código da Estrada moçambicano.
 
 - Sinalização vertical, horizontal e luminosa.
 - Agentes reguladores e hierarquia de indicações.
@@ -349,13 +349,13 @@ Não copiar bancos privados nem usar imagens sem licença. Não inventar artigos
 
 ### 10.1 Objectivo e modelo
 
-O modelo de monetização oferece diferentes opções de acesso aos simulados, para que cada utilizador escolha o plano mais adequado às suas necessidades e capacidades financeiras. É um **modelo misto**: um plano gratuito com publicidade, planos semanais com publicidade reduzida e planos mensais sem publicidade e com atendimento prioritário.
+O modelo de monetização oferece diferentes opções de acesso aos exames, para que cada utilizador escolha o plano mais adequado às suas necessidades e capacidades financeiras. É um **modelo misto**: um plano gratuito com publicidade, planos semanais com publicidade reduzida e planos mensais sem publicidade e com atendimento prioritário.
 
-O utilizador pode experimentar a plataforma gratuitamente antes de pagar. Os planos pagos diferem na quantidade de simulados, mantendo a possibilidade de repetir ilimitadamente os simulados desbloqueados durante a validade da assinatura.
+O utilizador pode experimentar a plataforma gratuitamente antes de pagar. Os planos pagos diferem na quantidade de exames, mantendo a possibilidade de repetir ilimitadamente os exames desbloqueados durante a validade da assinatura.
 
 ### 10.2 Os cinco planos
 
-| Plano | Preço | Validade | Simulados | Publicidade | Atendimento |
+| Plano | Preço | Validade | Exames | Publicidade | Atendimento |
 |---|---|---|---|---|---|
 | Free | 0 MT | Sem limite | 3 fixos | Sim | Normal |
 | Semanal Básico | 50 MT | 7 dias | 25 | Reduzida | Normal |
@@ -363,32 +363,32 @@ O utilizador pode experimentar a plataforma gratuitamente antes de pagar. Os pla
 | Mensal Básico | 80 MT | 30 dias | 25 | Sem anúncios | Prioritário |
 | Mensal Completo | 150 MT | 30 dias | 50 | Sem anúncios | Prioritário |
 
-A diferença entre os planos pagos é determinada pela duração, pela quantidade de simulados e pelos benefícios de publicidade e atendimento. Preços e validades são apresentados de forma clara antes da confirmação de qualquer pagamento. Os valores em vigor estão em `config.js`.
+A diferença entre os planos pagos é determinada pela duração, pela quantidade de exames e pelos benefícios de publicidade e atendimento. Preços e validades são apresentados de forma clara antes da confirmação de qualquer pagamento. Os valores em vigor estão em `config.js`.
 
-### 10.3 Organização e acesso aos simulados
+### 10.3 Organização e acesso aos exames
 
-- Existem 50 simulados diferentes, identificados individualmente, cada um com 25 perguntas.
-- Os três simulados gratuitos são sempre os mesmos para todos os utilizadores e fazem parte do conjunto de 50 dos planos pagos.
-- O plano Free dá acesso apenas aos três simulados gratuitos. Os planos pagos desbloqueiam 25 ou 50 simulados, conforme a assinatura.
-- O acesso é controlado automaticamente pelo sistema, de acordo com o plano activo. Antes de permitir um simulado pago, a plataforma verifica o estado da assinatura.
-- Esta regra de acesso é centralizada num serviço backend, usado tanto no catálogo como no início de um simulado.
+- Existem 50 exames diferentes, identificados individualmente, cada um com 25 perguntas.
+- Os três exames gratuitos são sempre os mesmos para todos os utilizadores e fazem parte do conjunto de 50 dos planos pagos.
+- O plano Free dá acesso apenas aos três exames gratuitos. Os planos pagos desbloqueiam 25 ou 50 exames, conforme a assinatura.
+- O acesso é controlado automaticamente pelo sistema, de acordo com o plano activo. Antes de permitir um exame pago, a plataforma verifica o estado da assinatura.
+- Esta regra de acesso é centralizada num serviço backend, usado tanto no catálogo como no início de um exame.
 
 ### 10.4 Duração e validade
 
 - A validade começa a contar a partir da activação do acesso pago, após a confirmação do pagamento.
 - Assinatura semanal: 7 dias. Assinatura mensal: 30 dias.
-- Durante esse período o utilizador acede aos simulados desbloqueados e faz novas tentativas sem limite.
+- Durante esse período o utilizador acede aos exames desbloqueados e faz novas tentativas sem limite.
 - A plataforma apresenta a data de expiração e, quando possível, o tempo restante.
 
 ### 10.5 Tentativas ilimitadas
 
-Todos os planos permitem tentativas ilimitadas nos simulados a que o utilizador tem acesso. No plano Free, os três simulados podem ser repetidos quantas vezes se desejar, sem pagamento. Nos planos pagos, qualquer simulado desbloqueado pode ser repetido durante toda a validade. Ver secção 8 para o comportamento de cada tentativa.
+Todos os planos permitem tentativas ilimitadas nos exames a que o utilizador tem acesso. No plano Free, os três exames podem ser repetidos quantas vezes se desejar, sem pagamento. Nos planos pagos, qualquer exame desbloqueado pode ser repetido durante toda a validade. Ver secção 8 para o comportamento de cada tentativa.
 
 ### 10.6 Expiração das assinaturas
 
-- Ao expirar uma assinatura paga, o sistema bloqueia automaticamente os simulados pagos que dependam dela.
+- Ao expirar uma assinatura paga, o sistema bloqueia automaticamente os exames pagos que dependam dela.
 - A expiração **não elimina** a conta, o histórico de tentativas nem os resultados anteriores.
-- O utilizador continua a ter acesso aos três simulados gratuitos, sem pagar.
+- O utilizador continua a ter acesso aos três exames gratuitos, sem pagar.
 - Para recuperar o acesso pago, renova a assinatura ou adquire um novo plano compatível.
 - A plataforma informa sobre a expiração e oferece uma opção clara para renovar ou escolher outro plano.
 
@@ -400,7 +400,7 @@ Todos os planos permitem tentativas ilimitadas nos simulados a que o utilizador 
 
 ### 10.8 Atendimento prioritário
 
-Os utilizadores com assinaturas mensais têm atendimento prioritário em relação aos restantes. Os pedidos de suporte destes assinantes recebem prioridade no tratamento, sobretudo em pagamentos, acesso à conta, problemas técnicos e funcionamento dos simulados.
+Os utilizadores com assinaturas mensais têm atendimento prioritário em relação aos restantes. Os pedidos de suporte destes assinantes recebem prioridade no tratamento, sobretudo em pagamentos, acesso à conta, problemas técnicos e funcionamento dos exames.
 
 O atendimento prioritário não é garantia de assistência permanente, salvo se a administração o definir expressamente. Antes do lançamento têm de ser estabelecidos os canais de atendimento, os procedimentos e os prazos de resposta.
 
@@ -425,7 +425,7 @@ O atendimento prioritário não é garantia de assistência permanente, salvo se
 
 ### 10.10 Resumo das regras comerciais
 
-O modelo baseia-se em cinco opções: um plano gratuito e quatro pagos. O Free dá três simulados fixos, tentativas ilimitadas e publicidade. Os semanais dão 25 ou 50 simulados, tentativas ilimitadas e publicidade reduzida. Os mensais dão 25 ou 50 simulados, tentativas ilimitadas, ausência de publicidade e atendimento prioritário. Os preços são 50 MT e 80 MT (semanais) e 80 MT e 150 MT (mensais), com validades de 7 e 30 dias. O modelo deve ser implementado de forma transparente: preços, duração, benefícios e condições claros para os utilizadores.
+O modelo baseia-se em cinco opções: um plano gratuito e quatro pagos. O Free dá três exames fixos, tentativas ilimitadas e publicidade. Os semanais dão 25 ou 50 exames, tentativas ilimitadas e publicidade reduzida. Os mensais dão 25 ou 50 exames, tentativas ilimitadas, ausência de publicidade e atendimento prioritário. Os preços são 50 MT e 80 MT (semanais) e 80 MT e 150 MT (mensais), com validades de 7 e 30 dias. O modelo deve ser implementado de forma transparente: preços, duração, benefícios e condições claros para os utilizadores.
 
 ### 10.11 Notificações de expiração das assinaturas
 
@@ -436,7 +436,7 @@ A plataforma tem um sistema automático de notificações para avisar quando uma
 | Momento | Finalidade |
 |---|---|
 | 3 dias antes da expiração | Primeira notificação: a assinatura está perto do fim. |
-| 1 dia antes da expiração | Lembrete para renovar e manter o acesso aos simulados pagos. |
+| 1 dia antes da expiração | Lembrete para renovar e manter o acesso aos exames pagos. |
 | No dia da expiração | Aviso de que a assinatura termina nesse dia. |
 | Após a expiração | Informa que o acesso pago foi suspenso e que é possível renovar. |
 
@@ -446,7 +446,7 @@ As notificações só são enviadas quando aplicáveis à situação da assinatu
 
 **Canais.** O sistema permite notificações dentro da plataforma (por exemplo, avisos no painel do utilizador). A arquitectura deve permitir, no futuro, outros canais — correio electrónico, SMS ou notificações push — conforme os serviços disponíveis, os custos e as preferências do utilizador. Canais externos só podem ser usados depois de configurados e com os dados e autorizações necessários.
 
-**Depois da renovação.** Quando o utilizador renova e o pagamento é confirmado, o sistema actualiza a validade do plano e cancela os avisos de expiração que já não se aplicam. Se não renovar, mantêm-se as regras da secção 10.6: bloqueio dos simulados pagos e preservação dos três gratuitos.
+**Depois da renovação.** Quando o utilizador renova e o pagamento é confirmado, o sistema actualiza a validade do plano e cancela os avisos de expiração que já não se aplicam. Se não renovar, mantêm-se as regras da secção 10.6: bloqueio dos exames pagos e preservação dos três gratuitos.
 
 **Gestão e controlo.** A plataforma regista cada envio (utilizador, tipo de aviso, data e estado, quando disponível) na tabela `notification_log`. O sistema funciona automaticamente, sem o administrador enviar avisos à mão; o administrador pode consultar o estado das notificações para acompanhar e resolver falhas. A implementação considera a privacidade, a segurança dos dados e a prevenção de mensagens duplicadas.
 
@@ -458,7 +458,7 @@ A política de publicidade é diferenciada pelo plano activo: gerar receita nos 
 
 | Plano | Regra de anúncios |
 |---|---|
-| Free | Anúncios nas áreas permitidas; não podem impedir o acesso aos três simulados gratuitos nem comprometer funcionalidades essenciais. |
+| Free | Anúncios nas áreas permitidas; não podem impedir o acesso aos três exames gratuitos nem comprometer funcionalidades essenciais. |
 | Semanais | Quantidade reduzida em comparação com o Free; publicidade moderada, para uma experiência de estudo confortável. |
 | Mensais | Completamente sem publicidade durante a validade da assinatura. É um dos principais benefícios destes planos. |
 
@@ -469,10 +469,10 @@ A política de publicidade é diferenciada pelo plano activo: gerar receita nos 
 | Página inicial | Um espaço discreto entre secções. |
 | Área de estudo | Fora do conteúdo principal. |
 | Resultados | Abaixo do resumo, sem esconder a nota. |
-| Simulado activo | Sem anúncios intrusivos; preferencialmente nenhum. |
+| Exame activo | Sem anúncios intrusivos; preferencialmente nenhum. |
 | Planos mensais | Sem publicidade enquanto a assinatura estiver activa. |
 
-- A publicidade não interrompe simulados em andamento, não bloqueia perguntas, não interfere com o cronómetro e não impede a submissão das respostas.
+- A publicidade não interrompe exames em andamento, não bloqueia perguntas, não interfere com o cronómetro e não impede a submissão das respostas.
 - A plataforma distingue correctamente os utilizadores pelo plano activo, e mostra anúncios só onde são permitidos. Isto vale na interface e na elegibilidade do backend.
 - Cumprir regras da rede publicitária, consentimento aplicável e restrições etárias.
 - Não incentivar cliques, não gerar tráfego artificial e não prometer rendimento fixo.
@@ -495,7 +495,7 @@ A identidade será própria, clássica, discreta, educativa e profissional; não
 | Tom | Português claro e adequado a Moçambique. |
 | Anúncios | Identificados e visualmente separados do conteúdo educativo. |
 
-- Páginas: inicial, registo/login, SMS, painel, catálogo, simulado, resultados, revisão, progresso, biblioteca de sinais, assinatura, perfil, privacidade, suporte e painel administrativo.
+- Páginas: inicial, registo/login, SMS, painel, catálogo, exame, resultados, revisão, progresso, biblioteca de sinais, assinatura, perfil, privacidade, suporte e painel administrativo.
 - Contraste adequado, foco visível, botões cómodos para toque e não depender só da cor para certo/errado.
 - Optimizar imagens, fontes e JavaScript para Android modesto e ligações lentas.
 
@@ -525,7 +525,7 @@ Se menores puderem utilizar a plataforma, rever a recolha de dados, publicidade 
 |---|---|
 | Logs | Estruturados; nunca incluir passwords, tokens ou códigos SMS. |
 | Erros | Monitorização frontend/backend com identificador de correlação. |
-| Métricas | Disponibilidade, latência, erros, simulados, pagamentos falhados. |
+| Métricas | Disponibilidade, latência, erros, exames, pagamentos falhados. |
 | Alertas | Falhas de webhook, aumento de erros, backups falhados, falhas no envio de notificações. |
 | Backups | Automáticos, retenção documentada e restauração testada. |
 | Incidentes | Responsável, prioridade, contenção, recuperação e revisão. |
@@ -539,14 +539,14 @@ Submissões e pagamentos devem ser transaccionais/idempotentes: uma falha parcia
 
 | ID | Teste | Critério |
 |---|---|---|
-| AT-01 | Estrutura | 25 perguntas por simulado; quatro opções por pergunta. |
+| AT-01 | Estrutura | 25 perguntas por exame; quatro opções por pergunta. |
 | AT-02 | Resposta única | Uma única alternativa correcta por pergunta publicada. |
 | AT-03 | Cronómetro | Prazo no servidor; relógio local não o altera. |
 | AT-04 | Explicação | Resposta e explicação após escolha; tempo continua. |
 | AT-05 | Expiração da tentativa | Submissão automática e não respondidas identificadas. |
 | AT-06 | Pontuação | 23 certas = 18,4; 22 = 17,6; branco = zero. |
-| AT-07 | Gratuito | Três simulados abrem sem pagamento. |
-| AT-08 | Bloqueio | Simulados pagos bloqueados sem assinatura activa. |
+| AT-07 | Gratuito | Três exames abrem sem pagamento. |
+| AT-08 | Bloqueio | Exames pagos bloqueados sem assinatura activa. |
 | AT-09 | Pagamento | Só webhook válido concede acesso. |
 | AT-10 | Expiração da assinatura | Acesso pago removido; conta, histórico e os 3 gratuitos mantidos. |
 | AT-11 | Anúncios por plano | Mensais não vêem anúncios; semanais vêem menos que o Free. |
@@ -554,14 +554,14 @@ Submissões e pagamentos devem ser transaccionais/idempotentes: uma falha parcia
 | AT-13 | Responsividade | Páginas essenciais funcionam em telemóvel. |
 | AT-14 | Admin | Só papéis autorizados publicam conteúdo. |
 | AT-15 | Webhook repetido | Evento repetido não duplica cobrança/acesso. |
-| AT-16 | Acesso por plano | Plano de 25 simulados desbloqueia 25; plano de 50 desbloqueia 50. |
+| AT-16 | Acesso por plano | Plano de 25 exames desbloqueia 25; plano de 50 desbloqueia 50. |
 | AT-17 | Notificações | Avisos a 3 dias, 1 dia, no dia e após a expiração; sem duplicados; cancelados após renovação. |
 
 ### Tipos de teste
 
 - Unitários: pontuação, acesso por plano, expiração e validação de perguntas.
 - Integração: API, base de dados, OAuth, SMS e webhooks sandbox.
-- End-to-end: registo até simulado; pagamento até desbloqueio.
+- End-to-end: registo até exame; pagamento até desbloqueio.
 - Segurança: permissões, rate limits, segredos e sessão.
 - Usabilidade com candidatos; revisão editorial independente.
 
@@ -626,7 +626,7 @@ Definição de pronto: código implementado, revisto, testado, documentado e val
 | 0. Decisões | Nome, categoria, stack, auth/SMS/pagamentos e regras finais | Decisões críticas aprovadas. |
 | 1. Fundação | Repo, CI, base de dados, auth inicial, estilos | Build e testes automáticos. |
 | 2. Conteúdo | Fluxo editorial e lote de perguntas validadas | Revisão competente concluída. |
-| 3. Simulados | Catálogo, tentativas, cronómetro, explicações, resultados | AT-01 a AT-06 aprovados. |
+| 3. Exames | Catálogo, tentativas, cronómetro, explicações, resultados | AT-01 a AT-06 aprovados. |
 | 4. Contas | SMS, Google, perfil, histórico e revisão | Fluxos testados. |
 | 5. Receita | Cinco planos, webhooks, acesso por plano, anúncios, expiração e notificações | Sandbox e expiração testados (AT-07 a AT-11, AT-15 a AT-17). |
 | 6. QA | Segurança, desempenho, acessibilidade, backups | Sem defeitos críticos. |
@@ -654,7 +654,7 @@ O calendário depende da equipa, revisão do conteúdo e fornecedores. Não é r
 | Renovação e cancelamento | Define o comportamento no fim do período e o tratamento de pagamentos falhados | Decidir renovação automática ou manual, cancelamento e pagamentos pendentes/falhados antes da implementação final. |
 | Atendimento prioritário | Promessa feita aos assinantes mensais | Definir canais, procedimentos e prazos de resposta antes do lançamento. |
 | Canais de notificação | SMS e email têm custo e exigem autorização | Escolher que canais externos usar, além do aviso dentro da plataforma. |
-| Quais simulados nos planos Básico | Os planos de 25 simulados não dizem quais dos 50 incluem; também não está dito se contam os 3 gratuitos | O dono decide a composição dos 25 antes de implementar o acesso por plano. |
+| Quais exames nos planos Básico | Os planos de 25 exames não dizem quais dos 50 incluem; também não está dito se contam os 3 gratuitos | O dono decide a composição dos 25 antes de implementar o acesso por plano. |
 
 ---
 
@@ -677,7 +677,7 @@ O calendário depende da equipa, revisão do conteúdo e fornecedores. Não é r
 ### Critérios de aceite
 
 - Registo, login e verificação de telefone funcionam.
-- Três simulados gratuitos disponíveis e restantes bloqueados sem assinatura.
+- Três exames gratuitos disponíveis e restantes bloqueados sem assinatura.
 - Pagamento confirmado concede o plano comprado; expiração/cancelamento remove o acesso pago.
 - Planos mensais não vêem anúncios; planos semanais vêem anúncios reduzidos.
 - Avisos de expiração enviados nos momentos definidos, sem duplicados.
