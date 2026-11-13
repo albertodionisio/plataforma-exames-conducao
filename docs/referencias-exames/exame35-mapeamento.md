@@ -48,3 +48,12 @@ A distribuição foi calculada após a construção das alternativas: 0: 7; 1: 6
 - As perguntas são originais e orientadas para aplicação prática dos artigos indicados; não são extraídas do APK.
 - Não foi possível verificar ausência de duplicações contra todos os exames 1–33 e 36–50, porque nem todos os conteúdos estão publicados ou acessíveis nesta tarefa.
 - A regra de mudança de via é tratada através dos deveres de sinalização e segurança; não se acrescentam regras específicas de marcações ou prioridade que não tenham sido confirmadas no texto legal consultado.
+
+
+## Revisão jurídica adicional (2026-11-13)
+
+As perguntas foram confrontadas com os artigos 23.º, 42.º, 45.º e 46.º do PDF oficial do INATRO (páginas 7, 15 e 17). As perguntas 5, 13 e 22 foram actualizadas para explicitar, respectivamente, a regra de aproximação ao eixo e passagem à esquerda da parte central (art. 45.º, n.º 2), o posicionamento numa via de sentido único (art. 45.º, n.º 3) e o dever de não iniciar a manobra se houver perigo ou embaraço (art. 45.º, n.º 4).
+
+O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Código da Estrada. A conferência confirma correspondência com a republicação oficial consultada, mas não é uma pesquisa exaustiva de todos os Boletins da República nem um parecer jurídico sobre alterações posteriores.
+
+A comparação por texto e semelhança não encontrou duplicações prováveis nos exames 1, 31, 32 e 34–37 acessíveis. Os exames 2–30, 33 e 38–50 não estavam disponíveis nesta consulta. Todas as perguntas têm imagem null. O script oficial não pôde ser executado por falha DNS; o teste no navegador continua pendente.
