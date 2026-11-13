@@ -7,7 +7,12 @@
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
       ],
       "motivo": "o APK não guarda explicações; o campo fica null"
     },
@@ -18,7 +23,12 @@
         2,
         3,
         4,
-        5
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
       ],
       "motivo": "o APK não guarda tema ou matéria por pergunta; o campo fica null"
     }

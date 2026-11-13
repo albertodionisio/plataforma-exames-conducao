@@ -16,9 +16,14 @@
     2,
     3,
     4,
-    5
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
   ],
-  "completo": false,
+  "completo": true,
   "perguntas_por_exame": 25,
   "extractor": "tools/extrair_apk.py v1.0",
   "sha256_apk": "95d90835006bb68cdc6ed6093ef9a0a843d0632ed81810aa7722ab46dabc1da2",
