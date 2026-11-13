@@ -351,32 +351,32 @@ window.EXAMES[40] = [
   },
   {
     "numero": 24,
-    "tema": "Hierarquia entre sinal vertical e regra geral",
-    "dificuldade": "difícil",
-    "enunciado": "Uma regra geral permitiria determinada manobra, mas um sinal vertical válido proíbe-a. Qual é a orientação do Código da Estrada?",
+    "tema": "E54/E55 — estacionamento condicionado",
+    "dificuldade": "média",
+    "enunciado": "Um condutor encontra um sinal E54/E55 relativo a estacionamento condicionado. O que deve compreender?",
     "imagem": null,
     "opcoes": [
-      "A regra geral prevalece sempre.",
-      "O condutor escolhe conforme o fluxo de trânsito.",
-      "A prescrição do sinal prevalece sobre a regra geral de trânsito.",
-      "Só a sinalização horizontal tem valor obrigatório."
+      "O estacionamento está permanentemente proibido a todos os veículos.",
+      "A paragem e o estacionamento estão sempre proibidos.",
+      "O estacionamento é permitido apenas nas condições indicadas pelo sinal ou painel complementar.",
+      "O sinal anuncia o fim de todas as proibições da via."
     ],
     "correta": 2,
-    "explicacao": "As prescrições resultantes dos sinais prevalecem sobre as regras gerais de trânsito. (Código da Estrada, art. 14.º, n.º 1)."
+    "explicacao": "Os sinais E54 e E55 indicam estacionamento condicionado; o condutor deve respeitar as condições específicas indicadas no sinal e nos painéis complementares. (Regulamento de Sinais de Trânsito, art. 27.º, n.º 6)."
   },
   {
     "numero": 25,
-    "tema": "Ordem do agente e sinal de obrigação",
-    "dificuldade": "difícil",
-    "enunciado": "Um agente regulador de trânsito ordena que os veículos sigam por um percurso diferente do indicado por um sinal vertical de obrigação. O condutor deve:",
+    "tema": "F14 — via obrigatória para substâncias perigosas",
+    "dificuldade": "média",
+    "enunciado": "Um veículo que transporta substâncias perigosas aproxima-se do sinal F14. Que obrigação estabelece o sinal?",
     "imagem": null,
     "opcoes": [
-      "Ignorar o agente, porque o sinal vertical é permanente.",
-      "Obedecer à ordem do agente regulador de trânsito.",
-      "Escolher o percurso mais curto.",
-      "Aguardar que o sinal seja retirado."
+      "O veículo deve parar e aguardar autorização policial em todos os cruzamentos.",
+      "O veículo deve circular pela via especialmente destinada aos veículos que transportam substâncias perigosas.",
+      "O transporte de substâncias perigosas está proibido em toda a estrada.",
+      "O veículo deve utilizar obrigatoriamente a pista destinada a peões."
     ],
     "correta": 1,
-    "explicacao": "As ordens dos agentes reguladores do trânsito prevalecem sobre as prescrições resultantes dos sinais e sobre as regras de trânsito. (Código da Estrada, art. 14.º, n.º 3)."
+    "explicacao": "O F14 indica a obrigação de os veículos que transportam substâncias perigosas circularem pela via que lhes é especialmente destinada. (Regulamento de Sinais de Trânsito, art. 28.º, n.º 3)."
   }
 ];
