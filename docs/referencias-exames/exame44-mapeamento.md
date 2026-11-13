@@ -8,6 +8,7 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: transporte seguro de
 - **Diploma de aprovação:** Decreto-Lei n.º 1/2011, publicado no Boletim da República n.º 12, I Série, de 23 de Março de 2011; registo bibliográfico oficial da Imprensa Nacional: https://www.inm.gov.mz/pt-br/content/br-n%C2%BA-12-de-230311-boletim-da-rep%C3%BAblica-i-serie
 - **Artigos usados:** 54.º, 55.º, 56.º, 57.º, 58.º e 100.º.
 - **Páginas impressas do PDF:** artigos 54.º e 55.º — p. 20; artigo 56.º — p. 21; artigos 57.º e 58.º — p. 22; artigo 100.º — p. 40.
+- **Actualização administrativa:** embora o artigo 58.º do Código ainda mencione o INAV, o procedimento actual de autorização especial é publicado pelo INATRO, IP, com requerimento dirigido ao PCA do Instituto e parecer da ANE, nos termos do Diploma Ministerial n.º 30/2018: https://www.inatro.gov.mz/?page_id=1102 e https://www.inm.gov.mz/pt-br/content/minist%C3%A9rios-dos-transportes-e-comunica%C3%A7%C3%B5es-e-das-obras-p%C3%BAblicas-habita%C3%A7%C3%A3o-e-recursos-0.
 - **Imagens:** as 25 perguntas usam `imagem: null`. As competências avaliadas são regras de conduta e segurança que não dependem de uma imagem específica; não foram associadas imagens sem correspondência comprovada.
 
 ## Mapa das perguntas
@@ -37,7 +38,7 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: transporte seguro de
 | 21 | Carga em mercadorias | Comprimento e largura dentro dos limites da caixa, salvo excepção regulamentar | Art. 56.º, n.º 3, al. h) |
 | 22 | Mercadorias a granel | Não exceder o bordo superior dos taipais | Art. 56.º, n.º 3, al. i) |
 | 23 | Peso e dimensões excessivos | Proibição de circulação sem autorização especial | Art. 57.º |
-| 24 | Autorização especial | Competência do INAV para autorizar veículos com peso/dimensões superiores | Art. 58.º, n.º 1 |
+| 24 | Autorização especial | Pedido actual dirigido ao INATRO, IP, com documentos e pareceres exigidos | Código, art. 58.º; Diploma Ministerial n.º 30/2018; portal oficial do INATRO |
 | 25 | Altura da carga | Limite máximo de 4,3 m medido do solo | Art. 56.º, n.º 3, al. f) |
 
 ## Distribuição das respostas correctas

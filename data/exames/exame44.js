@@ -350,18 +350,18 @@ window.EXAMES[44] = [
   },
   {
     "numero": 24,
-    "tema": "Autorização especial para veículos de dimensões superiores",
-    "dificuldade": "média",
-    "enunciado": "Um transportador pretende fazer circular um veículo com dimensões superiores às legalmente fixadas. Quem pode autorizar esse trânsito, nos termos do Código?",
+    "tema": "Autorização especial de trânsito para carga anormal",
+    "dificuldade": "difícil",
+    "enunciado": "Uma empresa pretende fazer circular um veículo com excesso de peso ou dimensões. A quem deve dirigir o pedido de autorização especial de trânsito, segundo o procedimento actualmente publicado?",
     "imagem": null,
     "opcoes": [
-      "Qualquer agente da polícia no local, verbalmente.",
-      "O proprietário da estrada, sem formalidade.",
-      "A empresa transportadora, por declaração própria.",
-      "O INAV, mediante autorização especial e nas condições previstas no Código e no regulamento."
+      "A qualquer agente de fiscalização que esteja no local.",
+      "Ao Conselho Municipal, mesmo quando o percurso inclui estradas nacionais.",
+      "À empresa que vendeu o veículo, para emitir uma declaração.",
+      "Ao INATRO, IP, seguindo o regulamento de autorização especial e apresentando os documentos e pareceres exigidos."
     ],
     "correta": 3,
-    "explicacao": "O Código prevê que o INAV pode permitir, nas condições regulamentares, o trânsito de veículos com peso ou dimensões superiores aos limites legais ou que transportem objectos indivisíveis que excedam a caixa. (Art. 58.º, n.º 1)."
+    "explicacao": "O Código prevê autorização especial para veículos com peso ou dimensões superiores aos limites legais (art. 58.º). O procedimento actualmente publicado pelo INATRO orienta o pedido ao Presidente do Conselho de Administração do INATRO, com documentação do veículo, rota e parecer da ANE, nos termos do Diploma Ministerial n.º 30/2018 e da organização institucional actual."
   },
   {
     "numero": 25,
