@@ -325,10 +325,3 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 
-## DADOS-056 — Harmonizar Exame 43 com o catálogo 31–51
-- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 23:30 UTC+02 — ficheiros: data/exames/exame43.js, docs/referencias-exames/exame43-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:30 UTC+02
-- Pedido: corrigir a duplicação identificada entre a pergunta 18 do Exame 43 e a pergunta 23 do Exame 50, mantendo o foco em iluminação e visibilidade.
-- Onde mexer: `data/exames/exame43.js` e `docs/referencias-exames/exame43-mapeamento.md`; actualizar PENDENTE e HISTORICO ao concluir.
-- Pronto quando: a pergunta duplicada for substituída por uma competência distinta, com base legal confirmada; 25 perguntas e distribuição equilibrada mantidas; validador oficial/CI aprovado.
-- Parcial: identificada a repetição exacta sobre uso indevido de luzes de nevoeiro em noite limpa entre Exame 43, pergunta 18, e Exame 50, pergunta 23. A pergunta 18 foi substituída pela regra de condução de velocípedes à mão em caso de avaria das luzes (Código da Estrada, art. 97.º, n.º 2), mantendo o tema de iluminação.
-- Cuidados: não alterar o Exame 50 nesta tarefa; preservar a distribuição A=7/B=6/C=6/D=6.
