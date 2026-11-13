@@ -22,7 +22,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Pronto quando: durante o exame não existe feedback de correcção; submissão manual e por fim do cronómetro funcionam; cálculo respeita 0,8 valores por resposta certa e limiar 18; a revisão preserva a ordem e as respostas seleccionadas no exame; semáforo e nota são apresentados correctamente em aprovação e reprovação; testes e validação visual concluídos.
 - Cuidados: verificar primeiro se `app.js` e `styles.css` estão livres; não alterar dados de perguntas nem regras de pontuação; não mostrar um estado de aprovação sem nota.
 
-- Parcial: fluxo actualizado e publicado; inclui navegação entre perguntas, selecção sem feedback, submissão manual/automática, nota, semáforo e revisão de todas as respostas. Modo de teste abre temporariamente os Exames 31–40 sem assinatura. CI aprovado no run 43485303901; teste adicional de expiração do cronómetro incluído neste commit. Ainda falta validação manual no navegador pelo dono.
+- Parcial: fluxo actualizado e publicado; inclui navegação entre perguntas, selecção sem feedback, submissão manual/automática, nota, semáforo e revisão de todas as respostas. Por pedido expresso do dono em 2026-11-13, o acesso temporário de teste foi alargado aos Exames 31–51. Teste automatizado actualizado para abrir todos os 21 exames. A publicação Netlify está a ser preparada na tarefa FE-005. Ainda falta validação visual no navegador pelo dono.
 ## FE-001 — Auditoria de experiência móvel e acessibilidade
 - Estado: EM CURSO — ChatGPT-FE001 — 2026-11-10 09:55 UTC+02 — ficheiros: styles.css, docs/auditorias/interface-movel.md — último sinal: 2026-11-10 10:05 UTC+02
 - Pedido: melhorar a utilização da versão actual em telemóveis, sem alterar as regras de negócio nem o funcionamento dos exames.
@@ -30,3 +30,11 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Pronto quando: interface verificada em larguras móveis comuns; navegação, botões, alternativas, imagens, tabela de planos e cabeçalho não provocam cortes ou deslocamento horizontal; foco de teclado é visível e os controlos têm áreas de toque adequadas; alterações testadas no navegador.
 - Cuidados: não alterar `app.js`, `index.html` ou `config.js`; não mudar identidade visual, textos comerciais, preços ou planos. Se a correcção exigir ficheiros partilhados, parar e pedir ao dono para criar/autorizar tarefa separada.
 - Parcial: ajustes responsivos e de foco publicados em `styles.css`; relatório parcial em `docs/auditorias/interface-movel.md`. Falta validar visualmente no navegador nas larguras indicadas no relatório.
+
+
+## FE-005 — Publicação web no Netlify dos Exames 31–51
+- Estado: EM CURSO — ChatGPT-6 — 2026-11-13 — ficheiros: netlify.toml, scripts/build-netlify.js, .github/workflows/validar-exames.yml, README.md — último sinal: preparação do build de publicação
+- Pedido: disponibilizar a versão web da aplicação no Netlify, com os Exames 31–51 acessíveis durante a fase de testes, para o dono validar através do endereço gratuito do site.
+- Pronto quando: build estático gera `dist/` com a aplicação e os 21 exames; APK original e documentação interna ficam fora do site; CI valida o build; Netlify publica a partir da branch principal; URL pública abre correctamente e o dono consegue iniciar os Exames 31–51.
+- Cuidados: não declarar o site publicado sem confirmar um deploy bem-sucedido e abrir o URL real. Pagamentos, contas e assinaturas continuam inactivos e não devem ser apresentados como funcionais. O acesso 31–51 é temporário para testes e deve ser revisto antes da abertura comercial.
+- Parcial: `netlify.toml` e `scripts/build-netlify.js` criados; configuração de testes temporários alargada de 31–40 para 31–51; teste de fluxo verifica que todos os 21 exames abrem. Falta CI após estas alterações, confirmação do deploy no Netlify e validação visual pelo dono.
