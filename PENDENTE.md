@@ -6,6 +6,13 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Interface (FE-)
 
+## FE-009 — Integrar o Exame 2 na aplicação
+- Estado: EM CURSO — Claude-FE009 — 2026-11-13 23:55 UTC+02 — ficheiros: index.html (uma linha) — último sinal: 2026-11-13 23:55 UTC+02
+- Nota: o dono autorizou expressamente esta integração em 2026-11-13, apesar da reserva de `index.html` por FE-008 e do estado «aguarda integração» do DADOS-001. É uma só linha `<script>`; não toca em ícones, menu, estilos nem `app.js`.
+- Pedido: carregar `data/exames/exame2.js` em `index.html`, depois de `exame1.js`, e confirmar que as 25 imagens de `public/exames/exame2/` aparecem nas perguntas certas.
+- Pronto quando: a tag existe uma só vez; o Exame 2 abre; todas as imagens carregam; sem erros na consola.
+- Cuidados: não alterar perguntas, imagens, mapa nem a reserva do Exame 3 (DADOS-002).
+
 ## FE-008 — Ícones gráficos e navegação da interface
 - Estado: EM CURSO — ChatGPT-ESTRADA-8 — 2026-11-13 20:06 UTC — ficheiros: index.html, styles.css, app.js — último sinal: 2026-11-13 20:07 UTC
 - Pedido: substituir a apresentação textual simples da navegação por ícones gráficos SVG consistentes (não emojis), incluindo início, exames e planos; acrescentar um botão de menu hambúrguer funcional em ecrãs pequenos.
