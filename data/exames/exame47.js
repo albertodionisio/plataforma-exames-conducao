@@ -1,382 +1,396 @@
 // Exame 47 — 25 perguntas originais do ESTRADA.
-// Foco: manobras, mudança de direcção, inversão de sentido e marcha atrás.
-// Base legal: Código da Estrada (arts. 23.º, 45.º–48.º).
+// Foco: sinalização temporária, obras na via pública e dispositivos complementares.
+// Base legal: Regulamento de Sinais de Trânsito, arts. 10.º–15.º.
 // Rastreabilidade: docs/referencias-exames/exame47-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[47] = [
   {
     "numero": 1,
-    "tema": "Sinalizar a manobra",
-    "dificuldade": "fácil",
-    "enunciado": "Antes de mudar de direcção, o condutor deve:",
+    "tema": "Finalidade da sinalização temporária",
+    "dificuldade": "média",
+    "enunciado": "Para que servem os sinais temporários colocados numa zona de obras ou de obstáculo ocasional?",
     "imagem": null,
     "opcoes": [
-      "Sinalizar com a necessária antecedência e adoptar precauções.",
-      "Começar a virar e só depois ligar o indicador.",
-      "Buzinar continuamente.",
-      "Aguardar que outro veículo faça a mesma manobra."
+      "Indicar apenas o nome da empresa responsável pela obra.",
+      "Prevenir os utentes e transmitir as obrigações, restrições ou proibições especiais temporariamente impostas.",
+      "Substituir permanentemente todos os sinais verticais da estrada.",
+      "Autorizar automaticamente a circulação em qualquer sentido."
     ],
-    "correta": 0,
-    "explicacao": "A intenção de mudar de direcção ou de via deve ser assinalada com antecedência. (Art. 23.º, n.º 1)."
+    "correta": 1,
+    "explicacao": "undefined Art. 10.º, n.º 1"
   },
   {
     "numero": 2,
-    "tema": "Duração do indicador",
+    "tema": "Meios de sinalização de obras",
     "dificuldade": "média",
-    "enunciado": "Um condutor desliga o indicador antes de concluir a manobra. O que deveria fazer?",
+    "enunciado": "Como pode ser feita a sinalização temporária de obras e obstáculos ocasionais na via pública?",
     "imagem": null,
     "opcoes": [
-      "Desligar antes de iniciar.",
-      "Manter o sinal durante a manobra e fazê-lo cessar quando esta terminar.",
-      "Manter o sinal durante toda a viagem.",
-      "Usar apenas sinais sonoros."
+      "Apenas com cones colocados no pavimento.",
+      "Exclusivamente com agentes policiais.",
+      "Com sinais verticais, horizontais, luminosos e dispositivos complementares.",
+      "Somente com avisos verbais aos condutores."
     ],
-    "correta": 1,
-    "explicacao": "A sinalização mantém-se enquanto se efectua a manobra e cessa logo que concluída. (Art. 23.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "undefined Art. 10.º, n.º 2"
   },
   {
     "numero": 3,
-    "tema": "Mudança de via",
+    "tema": "Retirada dos sinais temporários",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende mudar para a via da direita. Qual é a conduta correcta?",
+    "enunciado": "Depois de concluídas as obras e removidos os obstáculos ocasionais, o que deve acontecer à sinalização temporária?",
     "imagem": null,
     "opcoes": [
-      "Mudar imediatamente se houver espaço à frente.",
-      "Forçar a entrada para obrigar os outros a travar.",
-      "Assinalar a intenção com antecedência e mudar apenas depois de verificar que é seguro.",
-      "Mudar sem sinalizar quando a via estiver livre."
+      "Deve ser retirada, restituindo-se à via as condições normais de circulação.",
+      "Deve permanecer durante pelo menos um ano.",
+      "Deve ser substituída por publicidade da obra.",
+      "Só pode ser retirada depois de autorização de cada condutor."
     ],
-    "correta": 2,
-    "explicacao": "A mudança de via deve ser assinalada com antecedência e executada após as precauções necessárias. (Art. 23.º, n.º 1)."
+    "correta": 0,
+    "explicacao": "undefined Art. 10.º, n.º 5"
   },
   {
     "numero": 4,
-    "tema": "Virar à direita",
+    "tema": "Responsabilidade pela sinalização da obra",
     "dificuldade": "média",
-    "enunciado": "Ao pretender virar à direita num cruzamento, como deve o condutor posicionar-se com antecedência?",
+    "enunciado": "Numa obra realizada na via pública por adjudicação, quem é responsável pela sinalização dos trabalhos?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se da margem direita da faixa e efectuar a manobra no trajecto mais curto.",
-      "Aproximar-se do eixo da via e virar pelo trajecto mais longo.",
-      "Manter-se no centro da faixa até ao fim do cruzamento.",
-      "Entrar na via contrária antes de virar."
+      "A seguradora dos veículos que passam no local.",
+      "O primeiro condutor que encontrar a obra.",
+      "Os moradores da zona, em conjunto.",
+      "O adjudicatário da obra."
     ],
-    "correta": 0,
-    "explicacao": "Quem pretende virar à direita deve aproximar-se com antecedência da margem direita e efectuar a manobra no trajecto mais curto. (Art. 45.º, n.º 1)."
+    "correta": 3,
+    "explicacao": "undefined Art. 11.º, n.º 1"
   },
   {
     "numero": 5,
-    "tema": "Segurança ao virar à direita",
+    "tema": "Cláusulas de penalização do adjudicatário",
     "dificuldade": "média",
-    "enunciado": "Um condutor vai virar à direita, mas observa um ciclista na zona da manobra. O que deve fazer?",
+    "enunciado": "O contrato de adjudicação de uma obra na via pública deve prever o quê, quando a obra exigir sinalização temporária?",
     "imagem": null,
     "opcoes": [
-      "Virar rapidamente para não bloquear.",
-      "Buzinar e avançar.",
-      "Fazer a manobra porque já ligou o indicador.",
-      "Aguardar até poder virar sem perigo ou embaraço para o restante tráfego."
+      "A isenção de responsabilidade do adjudicatário.",
+      "Cláusulas com penalidades aplicáveis em caso de incumprimento das regras de sinalização.",
+      "A obrigação de os condutores pagarem a sinalização.",
+      "A eliminação de todos os sinais permanentes da estrada."
     ],
-    "correta": 3,
-    "explicacao": "Não deve iniciar a manobra sem se assegurar de que dela não resulta perigo ou embaraço. (Art. 45.º, n.º 4)."
+    "correta": 1,
+    "explicacao": "undefined Art. 11.º, n.º 2"
   },
   {
     "numero": 6,
-    "tema": "Virar à esquerda",
+    "tema": "Paragem e estacionamento na zona de obras",
     "dificuldade": "média",
-    "enunciado": "Ao pretender virar à esquerda numa via de dois sentidos, o condutor deve:",
+    "enunciado": "Um condutor pretende estacionar dentro de uma zona regulada por sinalização temporária de obras. Qual é a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se da margem direita.",
-      "Aproximar-se com antecedência da margem esquerda e efectuar a manobra no trajecto mais curto.",
-      "Parar no centro da via e esperar por um sinal.",
-      "Virar de qualquer posição, sem sinalizar."
+      "É permitido sempre que o veículo tenha quatro piscas ligados.",
+      "É permitido se o condutor permanecer dentro do veículo.",
+      "A paragem e o estacionamento são proibidos, salvo as excepções previstas no Regulamento.",
+      "É permitido durante o dia, mas proibido à noite."
     ],
-    "correta": 1,
-    "explicacao": "Quem pretende virar à esquerda deve aproximar-se com antecedência da margem esquerda e efectuar a manobra no trajecto mais curto. (Art. 46.º, n.º 1)."
+    "correta": 2,
+    "explicacao": "undefined Art. 12.º, n.º 1"
   },
   {
     "numero": 7,
-    "tema": "Segurança ao virar à esquerda",
+    "tema": "Excepções à proibição de paragem em obras",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende virar à esquerda, mas a manobra obrigaria um veículo em sentido contrário a travar bruscamente. O que deve fazer?",
+    "enunciado": "Qual dos seguintes veículos está expressamente abrangido por uma excepção à proibição geral de parar ou estacionar na zona de obras?",
     "imagem": null,
     "opcoes": [
-      "Avançar porque já sinalizou.",
-      "Acelerar para concluir primeiro.",
-      "Esperar por condições que permitam executar a manobra sem perigo ou embaraço.",
-      "Desligar o indicador e virar."
+      "Um veículo em serviço na obra.",
+      "Qualquer automóvel particular com autorização verbal de um passageiro.",
+      "Um veículo de aluguer sem passageiros, em qualquer circunstância.",
+      "Um veículo particular que pretenda evitar o congestionamento."
     ],
-    "correta": 2,
-    "explicacao": "A manobra não deve ser iniciada sem assegurar que dela não resulta perigo ou embaraço. (Art. 45.º, n.º 4)."
+    "correta": 0,
+    "explicacao": "undefined Art. 12.º, n.º 1"
   },
   {
     "numero": 8,
-    "tema": "Inversão do sentido de marcha",
-    "dificuldade": "fácil",
-    "enunciado": "Em que condições gerais deve ser feita a inversão do sentido de marcha?",
+    "tema": "Transporte colectivo junto à zona de obras",
+    "dificuldade": "média",
+    "enunciado": "Um autocarro utiliza o local de paragem próprio, situado na zona regulada por sinalização temporária. Como se aplica a regra?",
     "imagem": null,
     "opcoes": [
-      "Em local e por forma que não prejudique o trânsito.",
-      "Em qualquer local, desde que o veículo seja ligeiro.",
-      "Sempre no meio dos cruzamentos.",
-      "Apenas quando outro condutor autorizar."
+      "O transporte colectivo está sempre proibido de entrar na zona.",
+      "Só pode parar se desligar os sinais luminosos da obra.",
+      "Pode estacionar durante todo o dia sem limite.",
+      "O transporte colectivo de passageiros pode utilizar os respectivos locais de paragem."
     ],
-    "correta": 0,
-    "explicacao": "A inversão do sentido de marcha deve ser feita em local e por forma que não prejudique o trânsito. (Art. 47.º, n.º 1)."
+    "correta": 3,
+    "explicacao": "undefined Art. 12.º, n.º 1"
   },
   {
     "numero": 9,
-    "tema": "Inversão em curva",
+    "tema": "Imobilização forçada na zona de obras",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende inverter o sentido de marcha numa curva de visibilidade reduzida. A manobra é:",
+    "enunciado": "Um veículo fica forçadamente imobilizado numa zona regulada por sinalização temporária. Que medida deve ser tomada?",
     "imagem": null,
     "opcoes": [
-      "Permitida se não houver peões.",
-      "Permitida com os quatro indicadores ligados.",
-      "Permitida apenas para veículos ligeiros.",
-      "Proibida."
+      "Deve permanecer no local até terminar a obra.",
+      "Deve ser removido o mais rapidamente possível.",
+      "Deve ser deslocado para dentro da área de trabalho.",
+      "Deve aguardar que outro condutor o ultrapasse."
     ],
-    "correta": 3,
-    "explicacao": "É proibido inverter o sentido de marcha em curvas de visibilidade reduzida. (Art. 47.º, n.º 2)."
+    "correta": 1,
+    "explicacao": "undefined Art. 12.º, n.º 2"
   },
   {
     "numero": 10,
-    "tema": "Inversão em cruzamento",
+    "tema": "Custos da remoção em zona de obras",
     "dificuldade": "média",
-    "enunciado": "É permitido inverter o sentido de marcha num cruzamento ou entroncamento de visibilidade reduzida?",
+    "enunciado": "Se a entidade responsável pela sinalização tiver de remover um veículo imobilizado na zona de obras, a quem cabem as despesas?",
     "imagem": null,
     "opcoes": [
-      "Sim, se conhecer bem o local.",
-      "Não; a manobra é proibida nesses locais.",
-      "Sim, quando não há semáforos.",
-      "Sim, apenas durante o dia."
+      "Ao adjudicatário, em todos os casos.",
+      "À autoridade policial que ordenou a remoção.",
+      "Ao proprietário do veículo.",
+      "Aos condutores que circulam na via."
     ],
-    "correta": 1,
-    "explicacao": "A inversão é proibida em cruzamentos ou entroncamentos de visibilidade reduzida. (Art. 47.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "undefined Art. 12.º, n.º 2"
   },
   {
     "numero": 11,
-    "tema": "Inversão em ponte ou túnel",
+    "tema": "Circulação alternada em via estreita",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende inverter o sentido de marcha dentro de um túnel. O que estabelece o Código?",
+    "enunciado": "Quando uma via só permite a circulação alternada nos dois sentidos, como deve ser regulado o trânsito?",
     "imagem": null,
     "opcoes": [
-      "É permitido se não houver trânsito.",
-      "É permitido apenas em túnel iluminado.",
-      "É proibido inverter o sentido de marcha em pontes, passagens de nível e túneis.",
-      "É permitido para veículos de emergência em qualquer situação."
+      "Por sinalização luminosa ou por operadores que utilizem raquetas e/ou bandeirolas.",
+      "Pela escolha livre do condutor do veículo mais pesado.",
+      "Apenas por sinais sonoros dos veículos.",
+      "Pela prioridade do veículo que chega primeiro, sem qualquer sinalização."
     ],
-    "correta": 2,
-    "explicacao": "A inversão é proibida em pontes, passagens de nível e túneis. (Art. 47.º, n.º 2)."
+    "correta": 0,
+    "explicacao": "undefined Art. 14.º, n.º 1"
   },
   {
     "numero": 12,
-    "tema": "Inversão com tráfego intenso",
+    "tema": "Circulação alternada durante a noite",
     "dificuldade": "média",
-    "enunciado": "Numa via com grande intensidade de tráfego, o condutor pretende inverter o sentido de marcha. Qual é a regra?",
+    "enunciado": "Numa zona de obras, a circulação alternada ocorre durante a noite e não existe visibilidade entre os extremos da zona regulada. Que sinalização é obrigatória?",
     "imagem": null,
     "opcoes": [
-      "A manobra é proibida quando a intensidade do tráfego ou a largura/visibilidade da via a tornam inadequada.",
-      "A manobra é permitida se usar a buzina.",
-      "A manobra é permitida apenas para motociclos.",
-      "A manobra depende apenas da vontade do condutor."
+      "Apenas coletes reflectivos nos operadores.",
+      "Sinalização luminosa.",
+      "Somente uma placa informativa no início da obra.",
+      "Nenhuma, desde que os veículos circulem devagar."
     ],
-    "correta": 0,
-    "explicacao": "A inversão é proibida onde a visibilidade ou largura sejam insuficientes ou exista grande intensidade de tráfego. (Art. 47.º, n.º 2)."
+    "correta": 1,
+    "explicacao": "undefined Art. 14.º, n.º 2"
   },
   {
     "numero": 13,
-    "tema": "Natureza da marcha atrás",
-    "dificuldade": "fácil",
-    "enunciado": "Segundo o Código da Estrada, a marcha atrás é:",
+    "tema": "Vestuário do pessoal em obras",
+    "dificuldade": "média",
+    "enunciado": "Uma pessoa trabalha dentro da zona regulada por sinalização temporária. Que equipamento deve utilizar?",
     "imagem": null,
     "opcoes": [
-      "Uma forma normal de circular em qualquer via.",
-      "Uma manobra que pode substituir a inversão em qualquer situação.",
-      "Uma manobra permitida para ultrapassar filas.",
-      "Uma manobra auxiliar ou de recurso."
+      "Capacete de motociclista e luvas de condução.",
+      "Roupa de cor escura para não distrair os condutores.",
+      "Apenas um crachá de identificação.",
+      "Colete munido de material reflectivo."
     ],
     "correta": 3,
-    "explicacao": "A marcha atrás só é permitida como manobra auxiliar ou de recurso. (Art. 48.º, n.º 2)."
+    "explicacao": "undefined Art. 15.º, n.º 1"
   },
   {
     "numero": 14,
-    "tema": "Local para marcha atrás",
+    "tema": "Identificação luminosa dos veículos de obra",
     "dificuldade": "média",
-    "enunciado": "Em que local deve ser realizada a marcha atrás, quando legalmente permitida?",
+    "enunciado": "Um veículo opera dentro de uma zona regulada por sinalização temporária. Como deve ser sinalizado, nos termos do Regulamento?",
     "imagem": null,
     "opcoes": [
-      "Em qualquer local, mesmo sem visibilidade.",
-      "O mais possível à esquerda, em local de boa visibilidade e onde não prejudique o trânsito.",
-      "No centro da faixa, para ser vista por todos.",
-      "Em local de grande intensidade de tráfego."
+      "Com uma luz branca na matrícula e uma buzina especial.",
+      "Com uma bandeira azul na dianteira.",
+      "Com placas retro-reflectoras e um ou dois faróis amarelos no tejadilho.",
+      "Apenas com os quatro indicadores de direcção ligados."
     ],
-    "correta": 1,
-    "explicacao": "A marcha atrás deve efectuar-se o mais possível à esquerda, em local de boa visibilidade e sem prejudicar o trânsito. (Art. 48.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "undefined Art. 15.º, n.º 2"
   },
   {
     "numero": 15,
-    "tema": "Velocidade na marcha atrás",
+    "tema": "Cor dos sinais temporários",
     "dificuldade": "média",
-    "enunciado": "Como deve ser executada a marcha atrás?",
+    "enunciado": "Qual é a configuração geral dos sinais temporários, quanto ao fundo e aos símbolos?",
     "imagem": null,
     "opcoes": [
-      "Rapidamente, para reduzir o tempo da manobra.",
-      "Com aceleração forte e trajecto longo.",
-      "Lentamente e no menor trajecto possível, depois dos sinais e das precauções devidas.",
-      "Sem observar os outros utentes."
+      "Fundo amarelo e símbolo preto, ressalvadas as excepções previstas.",
+      "Fundo azul e símbolo branco em todos os casos.",
+      "Fundo vermelho e símbolo amarelo.",
+      "Fundo branco e símbolo verde."
     ],
-    "correta": 2,
-    "explicacao": "A marcha atrás realiza-se lentamente e no menor trajecto possível, depois dos sinais regulamentares e das precauções devidas. (Art. 48.º, n.º 3)."
+    "correta": 0,
+    "explicacao": "undefined Art. 13.º, n.º 1"
   },
   {
     "numero": 16,
-    "tema": "Marcha atrás em lomba",
+    "tema": "Valor dos sinais temporários",
     "dificuldade": "média",
-    "enunciado": "É permitido efectuar marcha atrás numa lomba?",
+    "enunciado": "Um sinal temporário apresenta cor diferente do sinal permanente correspondente, mas transmite a mesma indicação. Que valor tem essa indicação?",
     "imagem": null,
     "opcoes": [
-      "Não; a marcha atrás é proibida nas lombas.",
-      "Sim, se o condutor tiver experiência.",
-      "Sim, se ligar as luzes de perigo.",
-      "Sim, quando não houver veículos atrás."
+      "Não tem valor obrigatório por ser temporário.",
+      "Tem o mesmo significado e valor do sinal ou marca correspondente previsto no Regulamento.",
+      "Só vale quando um agente o confirma verbalmente.",
+      "Serve apenas como recomendação sem efeito regulamentar."
     ],
-    "correta": 0,
-    "explicacao": "A marcha atrás é proibida nas lombas. (Art. 48.º, n.º 4, al. a))."
+    "correta": 1,
+    "explicacao": "undefined Art. 13.º, n.º 3"
   },
   {
     "numero": 17,
-    "tema": "Marcha atrás em auto-estrada",
+    "tema": "Raqueta A64 — face verde",
     "dificuldade": "média",
-    "enunciado": "Um condutor ultrapassa a saída de uma auto-estrada e pensa recuar para a alcançar. O que deve fazer?",
+    "enunciado": "Um operador de trânsito numa obra mostra a face verde da raqueta A64. O que indica?",
     "imagem": null,
     "opcoes": [
-      "Recuar pela berma, com cuidado.",
-      "Recuar apenas até à saída anterior.",
-      "Pedir a outro veículo para o orientar.",
-      "Não efectuar marcha atrás, pois é proibida nas auto-estradas."
+      "Paragem obrigatória em todas as direcções.",
+      "Proibição de circulação para todos os veículos.",
+      "Sentido autorizado.",
+      "Aproximação de veículo prioritário."
     ],
-    "correta": 3,
-    "explicacao": "A marcha atrás é expressamente proibida nas auto-estradas. (Art. 48.º, n.º 4, al. d))."
+    "correta": 2,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. a)"
   },
   {
     "numero": 18,
-    "tema": "Marcha atrás em cruzamento",
+    "tema": "Raqueta A64 — face vermelha",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende recuar num cruzamento com visibilidade reduzida para corrigir a posição do veículo. A manobra é:",
+    "enunciado": "O operador mostra a face vermelha da bandeirola A64 aos veículos que se aproximam. Qual é a indicação?",
     "imagem": null,
     "opcoes": [
-      "Permitida se não houver peões.",
-      "Proibida em cruzamentos ou entroncamentos de visibilidade reduzida.",
-      "Permitida se durar poucos segundos.",
-      "Permitida apenas com um acompanhante fora do veículo."
+      "Sentido autorizado apenas para motociclos.",
+      "Fim da zona de obras.",
+      "Prioridade para veículos pesados.",
+      "Sentido não autorizado."
     ],
-    "correta": 1,
-    "explicacao": "A marcha atrás é proibida em curvas, cruzamentos ou entroncamentos de visibilidade reduzida. (Art. 48.º, n.º 4, al. b))."
+    "correta": 3,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. a)"
   },
   {
     "numero": 19,
-    "tema": "Marcha atrás em túnel",
+    "tema": "Baias direccionais A65",
     "dificuldade": "média",
-    "enunciado": "Um veículo passa a saída pretendida dentro de um túnel. Pode recuar para regressar?",
+    "enunciado": "Para que servem as baias direccionais A65 previstas entre os dispositivos complementares de sinalização temporária?",
     "imagem": null,
     "opcoes": [
-      "Sim, se ligar os quatro indicadores.",
-      "Sim, se não houver outro veículo.",
-      "Não; a marcha atrás é proibida nos túneis.",
-      "Sim, se recuar lentamente."
+      "Para orientar visualmente os condutores no percurso ou desvio imposto na zona de trabalhos.",
+      "Para medir a velocidade dos veículos.",
+      "Para indicar os lugares de estacionamento dos trabalhadores.",
+      "Para substituir os semáforos permanentes em qualquer cruzamento."
     ],
-    "correta": 2,
-    "explicacao": "A marcha atrás é proibida em pontes, passagens de nível e túneis. (Art. 48.º, n.º 4, al. c))."
+    "correta": 0,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. b)"
   },
   {
     "numero": 20,
-    "tema": "Marcha atrás e trânsito intenso",
+    "tema": "Balizas A66, A67 e A68",
     "dificuldade": "média",
-    "enunciado": "Numa fila intensa, um condutor decide recuar para entrar numa rua que deixou para trás. O que determina o Código?",
+    "enunciado": "Qual é a função geral das balizas A66, A67 e A68 na sinalização temporária?",
     "imagem": null,
     "opcoes": [
-      "A marcha atrás é proibida quando se verifica grande intensidade de trânsito.",
-      "É permitida se os veículos atrás abrirem espaço.",
-      "É permitida para veículos ligeiros.",
-      "É permitida se for inferior a cinco metros."
+      "Indicar o peso máximo permitido aos veículos.",
+      "Assinalar posição e alinhamento dos limites ou trajecto da zona de trabalhos.",
+      "Autorizar a circulação de veículos de mercadorias perigosas.",
+      "Indicar o fim de uma proibição de ultrapassar."
     ],
-    "correta": 0,
-    "explicacao": "A marcha atrás é proibida sempre que se verifique grande intensidade de trânsito. (Art. 48.º, n.º 4, al. f))."
+    "correta": 1,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. c)"
   },
   {
     "numero": 21,
-    "tema": "Sinalização antes de inverter",
+    "tema": "Cones A69",
     "dificuldade": "média",
-    "enunciado": "Antes de iniciar uma inversão do sentido de marcha, o condutor deve:",
+    "enunciado": "Numa obra, são colocados cones A69 ao longo de uma faixa. Qual é a sua função no conjunto de dispositivos complementares?",
     "imagem": null,
     "opcoes": [
-      "Iniciar a manobra e sinalizar no fim.",
-      "Usar apenas a buzina.",
-      "Fazer a manobra sem observar os veículos atrás.",
-      "Assinalar a intenção com antecedência e tomar as precauções necessárias."
+      "Servir de iluminação permanente para a via.",
+      "Substituir o colete reflectivo dos trabalhadores.",
+      "Delimitar e canalizar visualmente a circulação na zona temporária.",
+      "Indicar a velocidade mínima obrigatória da estrada."
     ],
-    "correta": 3,
-    "explicacao": "A inversão deve ser sinalizada com antecedência e realizada com as precauções necessárias. (Arts. 23.º e 47.º)."
+    "correta": 2,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. d)"
   },
   {
     "numero": 22,
-    "tema": "Marcha atrás e visibilidade",
+    "tema": "Pórtico A70",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende fazer marcha atrás num local onde não consegue observar a zona para a qual vai recuar. O que deve fazer?",
+    "enunciado": "Um pórtico A70 é instalado antes de uma obra numa via com limitação de altura. Que informação pode transmitir?",
     "imagem": null,
     "opcoes": [
-      "Recuar lentamente, mesmo sem visibilidade.",
-      "Não iniciar a manobra até existir visibilidade suficiente e segurança.",
-      "Usar apenas os espelhos laterais, sem outras precauções.",
-      "Buzinar e avançar."
+      "A largura máxima da faixa de rodagem.",
+      "A distância até ao posto de combustível.",
+      "A obrigação de parar em todos os cruzamentos.",
+      "A altura livre limitada."
     ],
-    "correta": 1,
-    "explicacao": "A marcha atrás só é permitida em local de boa visibilidade e onde não prejudique o trânsito. (Art. 48.º, n.º 2)."
+    "correta": 3,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. e)"
   },
   {
     "numero": 23,
-    "tema": "Marcha atrás e trajecto",
+    "tema": "Conjuntos de lanternas A71/A72",
     "dificuldade": "média",
-    "enunciado": "Um condutor usa a marcha atrás para percorrer uma distância longa numa avenida, em vez de procurar outro percurso. A conduta é:",
+    "enunciado": "Que dispositivos são identificados pelas referências A71 e A72 no Regulamento?",
     "imagem": null,
     "opcoes": [
-      "Permitida se circular devagar.",
-      "Permitida fora das horas de ponta.",
-      "Inadequada; a marcha atrás é auxiliar ou de recurso e deve limitar-se ao menor trajecto possível.",
-      "Obrigatória quando a saída foi ultrapassada."
+      "Conjuntos de lanternas sequenciais, respectivamente sem fios e com fios.",
+      "Baias direccionais para a esquerda e para a direita.",
+      "Pórticos para limitar a altura dos veículos.",
+      "Perfis móveis de plástico e de betão."
     ],
-    "correta": 2,
-    "explicacao": "A marcha atrás é manobra auxiliar ou de recurso e deve realizar-se no menor trajecto possível. (Art. 48.º, n.ºs 2 e 3)."
+    "correta": 0,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. f)"
   },
   {
     "numero": 24,
-    "tema": "Mudança de direcção em via de sentido único",
+    "tema": "Perfil móvel A73",
     "dificuldade": "média",
-    "enunciado": "Numa via de sentido único, o condutor pretende mudar de direcção. Como deve posicionar-se?",
+    "enunciado": "Qual é a utilização prevista para o perfil móvel A73 na sinalização temporária?",
     "imagem": null,
     "opcoes": [
-      "Com antecedência, junto ao limite direito ou esquerdo conforme a direcção pretendida, efectuando o trajecto mais curto.",
-      "Sempre junto ao limite direito, qualquer que seja a direcção.",
-      "No centro da faixa até ao momento de virar.",
-      "Na faixa contrária antes de efectuar a manobra."
+      "Indicar o nome do adjudicatário da obra.",
+      "Assinalar a posição e os limites dos trabalhos, podendo ser de plástico ou de betão.",
+      "Controlar a taxa de álcool dos condutores.",
+      "Indicar o início de uma via de sentido único."
     ],
-    "correta": 0,
-    "explicacao": "Nas vias de sentido único, o condutor deve aproximar-se com antecedência do limite direito ou esquerdo consoante a direcção pretendida e efectuar o trajecto mais curto. (Art. 45.º, n.º 3)."
+    "correta": 1,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. g)"
   },
   {
     "numero": 25,
-    "tema": "Iniciar a manobra sem perigo",
+    "tema": "Robot A74",
     "dificuldade": "média",
-    "enunciado": "Um condutor tem espaço para mudar de direcção, mas não consegue garantir que a manobra não vai embaraçar o restante tráfego. O que deve fazer?",
+    "enunciado": "O Regulamento inclui o robot A74 entre os dispositivos complementares de sinalização temporária. Em que contexto deve ser entendido?",
     "imagem": null,
     "opcoes": [
-      "Avançar porque o indicador está ligado.",
-      "Buzinar e obrigar os outros a parar.",
-      "Executar a manobra rapidamente.",
-      "Aguardar condições seguras antes de iniciar a manobra."
+      "Como equipamento de medição da pressão dos pneus.",
+      "Como dispositivo destinado a transportar trabalhadores.",
+      "Como dispositivo complementar utilizado na sinalização temporária de obras ou obstáculos.",
+      "Como substituto dos documentos de identificação do veículo."
     ],
-    "correta": 3,
-    "explicacao": "O condutor não deve iniciar a mudança de direcção sem se assegurar de que dela não resulta perigo ou embaraço. (Art. 45.º, n.º 4)."
+    "correta": 2,
+    "explicacao": "undefined Art. 13.º, n.º 4, al. h)"
+  },
+  {
+    "numero": 26,
+    "tema": "Atrelado de balizamento A75 e seta luminosa A76",
+    "dificuldade": "média",
+    "enunciado": "Uma obra utiliza um atrelado A75 e uma seta luminosa A76. Qual é a função regulamentar associada a estes dispositivos?",
+    "imagem": null,
+    "opcoes": [
+      "Aumentar a velocidade máxima permitida no troço.",
+      "Autorizar o estacionamento de veículos particulares.",
+      "Indicar a presença de uma passagem de nível.",
+      null
+    ],
+    "explicacao": "undefined Art. 13.º, n.º 4, als. i) e j)"
   }
 ];
