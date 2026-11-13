@@ -327,3 +327,11 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 
+
+
+## DADOS-058 — Auditoria de duplicações nos Exames 45–51
+- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-14 00:35 UTC+02 — ficheiros: data/exames/exame45.js, data/exames/exame46.js, data/exames/exame47.js, data/exames/exame48.js, data/exames/exame49.js, data/exames/exame50.js, data/exames/exame51.js, respectivos mapas e data/exames/PENDENTE.md — último sinal: 2026-11-14 00:35 UTC+02
+- Pedido: comparar os Exames 45–51 entre si e com os Exames 31–44, corrigindo repetições de perguntas ou competências demasiado semelhantes.
+- Pronto quando: as sobreposições relevantes forem corrigidas sem reduzir as 25 perguntas por exame; mapas pergunta-a-pergunta actualizados; distribuições de respostas preservadas; validador oficial/CI aprovado.
+- Parcial: foram detectadas sobreposições já publicadas: Exame 45 com Exame 50 (documentos, categoria da carta, seguro e fadiga); Exame 47 com Exame 35 (mudança de direcção e sinalização); Exame 49 com Exame 36 (velocidade/distância); Exame 50 com Exames 36, 39, 43 e 45; Exame 51 com Exames 34–36. A auditoria vai preservar os exames temáticos mais específicos e ajustar os exames de revisão/mistos.
+- Cuidados: não duplicar tarefas anteriores; não alterar questões sem base legal; manter as respostas equilibradas e sem padrão fixo.
