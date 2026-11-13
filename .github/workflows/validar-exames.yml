@@ -10,6 +10,8 @@ on:
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
       - 'netlify.toml'
+      - 'scripts/build-netlify.js'
+      - 'netlify.toml'
       - 'styles-resultados.css'
       - 'app.js'
       - 'config.js'
