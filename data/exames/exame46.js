@@ -207,7 +207,7 @@ window.EXAMES[46] = [
     "imagem": null,
     "opcoes": [
       "Veículo de quatro eixos para transporte colectivo.",
-      "Veículo de um só eixo destinado a trabalhos agrícolas ligeiros, que pode ser dirigido por condutor a pé ou com atrelado próprio.",
+      "Veículo de um só eixo destinado a trabalhos agrícolas ligeiros, que pode ser dirigido por um condutor a pé ou em semi-reboque ou retrotrem atrelado.",
       "Veículo sobre carris para uso industrial.",
       "Automóvel pesado com caixa fechada."
     ],
