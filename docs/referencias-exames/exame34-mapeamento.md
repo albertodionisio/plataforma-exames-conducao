@@ -33,7 +33,7 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 | 4 | Obstáculo | Recuo quando necessário | 41.º | 15 | Não |
 | 5 | Inclinação | Regra de cedência em inclinação | 41.º | 15 | Não |
 | 6 | Grandes dimensões | Segurança no cruzamento | 41.º | 15 | Não |
-| 7 | Manobras | Princípio geral de segurança | 42.º | 15 | Não |
+| 7 | Manobras | Não iniciar manobra que cause perigo ou embaraço | 42.º | 15 | Não |
 | 8 | Ultrapassagem | Conceito legal | 43.º | 16 | Não |
 | 9 | Ultrapassagem | Regra do lado de passagem | 43.º | 16 | Não |
 | 10 | Excepção | Ultrapassagem de veículos sobre carris | 43.º | 16 | Não |
@@ -48,7 +48,7 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 | 19 | Proibição | Lombas | 44.º | 16 | Não |
 | 20 | Proibição | Curvas de visibilidade reduzida | 44.º | 16 | Não |
 | 21 | Proibição | Passagens de nível | 44.º | 16 | Não |
-| 22 | Proibição | Cruzamentos e entroncamentos | 44.º | 16 | Não |
+| 22 | Excepção | Ultrapassagem em via prioritária devidamente sinalizada | 44.º, n.º 4, al. b) | 16 | Não |
 | 23 | Proibição | Passagens para peões | 44.º | 16 | Não |
 | 24 | Proibição | Visibilidade e largura insuficientes | 44.º | 16 | Não |
 | 25 | Excepção | Várias filas no mesmo sentido | 44.º | 16 | Não |
@@ -56,7 +56,9 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 ## Notas
 
 - Perguntas 1–6: definição, distância lateral, obstáculos, marcha atrás quando o cruzamento não é possível e veículos de grandes dimensões.
-- Pergunta 7: princípio geral de segurança nas manobras.
+- Pergunta 7: dever de aguardar por condições que permitam iniciar a manobra sem perigo ou embaraço.
 - Perguntas 8–18: conceito, lado da ultrapassagem, excepções, verificações prévias, aviso, regresso à fila, dever de facilitar e intervalo entre pesados.
-- Perguntas 19–25: proibições e excepções previstas no artigo 44.º.
+- Perguntas 19–21 e 23–24: proibições de ultrapassagem previstas no artigo 44.º.
+- Pergunta 22: excepção à proibição em cruzamentos quando a via confere prioridade e essa prioridade está devidamente assinalada (art. 44.º, n.º 4, al. b).
+- Pergunta 25: excepção para duas ou mais filas no mesmo sentido (art. 44.º, n.º 3).
 - A pergunta 25 limita a excepção às condições do artigo 44.º, n.º 3; não afirma que todas as proibições deixam de existir em vias com várias filas.

@@ -95,18 +95,18 @@ window.EXAMES[34] = [
   },
   {
     "numero": 7,
-    "tema": "Segurança nas manobras",
-    "dificuldade": "fácil",
-    "enunciado": "Um condutor inicia uma manobra, mas percebe que a sua continuação pode criar perigo maior para o trânsito. O que deve fazer?",
+    "tema": "Segurança antes da manobra",
+    "dificuldade": "média",
+    "enunciado": "Antes de entrar numa via lateral, um condutor percebe que a manobra obrigaria os veículos que nela circulam a travar bruscamente. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Continuar, porque já iniciou a manobra.",
-      "Acelerar para terminar antes que os outros se aproximem.",
-      "Parar apenas se outro condutor buzinar.",
-      "Suspender a manobra para prevenir o perigo."
+      "Avançar, porque já indicou a mudança de direcção.",
+      "Entrar devagar e deixar que os outros condutores ajustem a marcha.",
+      "Usar o sinal sonoro para exigir espaço.",
+      "Adiar a manobra até a poder efectuar sem perigo ou embaraço para o trânsito."
     ],
     "correta": 3,
-    "explicacao": "O condutor só pode efectuar uma manobra sem criar perigo ou embaraço ao trânsito. Mesmo depois de a iniciar, deve suspendê-la para prevenir um perigo maior. (Art. 42.º.)"
+    "explicacao": "O condutor só pode efectuar uma manobra em local e de forma que dela não resulte perigo ou embaraço para o trânsito. Deve esperar por condições seguras antes de iniciar a entrada na via. (Art. 42.º.)"
   },
   {
     "numero": 8,
@@ -320,18 +320,18 @@ window.EXAMES[34] = [
   },
   {
     "numero": 22,
-    "tema": "Cruzamentos e entroncamentos",
-    "dificuldade": "fácil",
-    "enunciado": "Um condutor aproxima-se de um cruzamento e pretende passar à frente do veículo que segue no mesmo sentido. Qual é a regra geral?",
+    "tema": "Excepção à proibição em cruzamentos",
+    "dificuldade": "difícil",
+    "enunciado": "Um condutor aproxima-se de um cruzamento numa via devidamente sinalizada como prioritária. Em que condição pode efectuar uma ultrapassagem, apesar da proibição geral?",
     "imagem": null,
     "opcoes": [
-      "É proibido ultrapassar imediatamente antes e nos cruzamentos e entroncamentos.",
-      "Pode ultrapassar se o outro veículo circular devagar.",
-      "Pode ultrapassar se não houver peões na via.",
-      "É permitido ultrapassar sempre que a estrada principal tenha prioridade."
+      "Quando circula numa via que lhe confere prioridade no cruzamento ou entroncamento e essa prioridade está devidamente assinalada.",
+      "Sempre que o veículo da frente circule abaixo do limite de velocidade.",
+      "Quando não existam peões nas proximidades.",
+      "Quando utilizar o sinal sonoro antes de iniciar a manobra."
     ],
     "correta": 0,
-    "explicacao": "A regra geral proíbe a ultrapassagem imediatamente antes e nos cruzamentos e entroncamentos. O artigo prevê excepções específicas, mas não basta o veículo circular devagar. (Art. 44.º, n.º 1, al. d), e n.º 4.)"
+    "explicacao": "A proibição de ultrapassar imediatamente antes e nos cruzamentos e entroncamentos não se aplica quando o condutor transita numa via que lhe confere prioridade e essa prioridade está devidamente assinalada. A manobra continua sujeita às restantes condições de segurança. (Art. 44.º, n.º 4, al. b).)"
   },
   {
     "numero": 23,

@@ -270,10 +270,10 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 ## DADOS-035 — Exame 34 (conteúdo original)
 - Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 19:30 UTC+02 — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 19:30 UTC+02
 - Foco: ultrapassagem e cruzamento de veículos.
-- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=6/B=7/C=6/D=6. Revisão jurídica confrontada com os artigos 41.º–44.º do PDF oficial do INATRO (páginas 15–16), sem contradição material detectada. Comparação textual e por semelhança sem candidatos a duplicação face aos exames 1, 31, 32 e 35–37 actualmente acessíveis.
+- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=6/B=7/C=6/D=6. Revisão jurídica confrontada com os artigos 41.º–44.º do PDF oficial do INATRO (páginas 15–16), sem contradição material detectada. Após a publicação dos Exames 33 e 38–51, a comparação integral identificou sobreposição nas antigas perguntas 7 e 22; ambas foram reformuladas para testar competências distintas, mantendo a distribuição das respostas.
 - Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
-- Falta: teste funcional no navegador pelo dono; comparação com os exames 2–30, 33 e 38–50 quando forem publicados; execução do script oficial quando o ambiente tiver acesso ao repositório. Não marcar como concluída antes desses pontos.
+- Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. A comparação com todos os exames 31–51 publicados foi concluída após as duas reformulações. Executar novamente o validador oficial/CI após este commit.
 
 
 ## DADOS-036 — Exame 35 (conteúdo original)
