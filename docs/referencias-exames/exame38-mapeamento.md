@@ -57,7 +57,7 @@ A aprovação da autorização legislativa é relatada por fontes jornalísticas
 
 ## Originalidade e limitações
 
-As perguntas foram redigidas de forma original a partir das normas citadas. A comparação directa possível nesta tarefa abrangeu os ficheiros publicados e acessíveis na branch `main`, em especial os Exames 1, 31, 32 e 34–37. A comparação integral contra os Exames 2–30 e todos os restantes exames ainda não publicados não foi possível; não se declara ausência absoluta de duplicações em todo o catálogo.
+As perguntas foram redigidas de forma original a partir das normas citadas. A comparação textual e por semelhança foi refeita com o Exame 1 e todos os Exames 31–51 publicados. Foram identificadas sobreposições com o bloco de peões do Exame 44: perguntas 1, 2, 6, 8 e 9 (circulação de peões em passeios/faixa, fila única e posição na faixa) e pergunta 25 (iluminação de cortejo). Como o Exame 38 é o exame dedicado a passagens de peões e utilizadores vulneráveis, estas perguntas permanecem aqui; a duplicação será eliminada pela substituição do bloco redundante do Exame 44 quando a tarefa DADOS-045 for revista. Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original.
 
 Não foram introduzidas multas, dimensões, distâncias ou procedimentos não constantes dos artigos citados. Não foram criadas imagens. As regras relativas a outros utilizadores não foram extrapoladas para além do texto legal.
 

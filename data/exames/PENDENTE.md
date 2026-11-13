@@ -307,11 +307,11 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-039 — Exame 38 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 21:00 UTC+02 — ficheiros: data/exames/exame38.js, docs/referencias-exames/exame38-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 21:00 UTC+02
+- Estado: LIVRE
 - Foco temático prioritário: Passagem de peões e convivência com utilizadores vulneráveis.
 - Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis.
 - Onde mexer: `data/exames/exame38.js` e `docs/referencias-exames/exame38-mapeamento.md`.
 - Pronto quando: 25 perguntas originais com quatro alternativas, uma resposta correcta, explicação e referência normativa específica; validador oficial aprovado; revisão legal/pedagógica concluída; teste funcional no navegador confirmado pelo dono.
 - Cuidados: não inventar artigos, sinais, multas ou procedimentos; documentar as limitações da verificação da vigência; não alterar ficheiros partilhados reservados.
-- Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial); falta apenas o teste funcional no navegador pelo dono.
+- Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial). A comparação com os Exames 31–51 identificou sobreposição de seis competências com o bloco de peões do Exame 44 (perguntas 1, 2, 6, 8, 9 e 25); o Exame 38 mantém-se como exame dedicado a peões e a substituição será feita no Exame 44, tarefa DADOS-045. A tarefa fica LIVRE para retomar depois dessa harmonização; teste funcional no navegador pelo dono continua pendente.
 
