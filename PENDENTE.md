@@ -21,3 +21,10 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Pronto quando: interface verificada em larguras móveis comuns; navegação, botões, alternativas, imagens, tabela de planos e cabeçalho não provocam cortes ou deslocamento horizontal; foco de teclado é visível e os controlos têm áreas de toque adequadas; alterações testadas no navegador.
 - Cuidados: não alterar `app.js`, `index.html` ou `config.js`; não mudar identidade visual, textos comerciais, preços ou planos. Se a correcção exigir ficheiros partilhados, parar e pedir ao dono para criar/autorizar tarefa separada.
 - Parcial: ajustes responsivos e de foco publicados em `styles.css`; relatório parcial em `docs/auditorias/interface-movel.md`. Falta validar visualmente no navegador nas larguras indicadas no relatório.
+
+## FE-005 — Registar o Simulado 32 na aplicação
+- Estado: EM CURSO — ChatGPT-FE005 — 2026-11-13 UTC — ficheiros: index.html, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 UTC
+- Pedido: integrar o exame já publicado em `data/exames/exame32.js` na página principal, para que `window.EXAMES[32]` seja carregado antes de `app.js` e o catálogo o reconheça como disponível.
+- Autorização: o dono autorizou expressamente esta integração no chat, incluindo a alteração pontual de `index.html`, apesar de ser ficheiro partilhado.
+- Limite: não alterar `app.js`, CSS, conteúdo das perguntas, planos ou tarefas reservadas por outras sessões.
+- Pronto quando: a tag script do exame 32 está antes de `app.js`; a referência é única; os caminhos e ordem de carregamento estão correctos; a alteração está publicada e confirmada no GitHub.
