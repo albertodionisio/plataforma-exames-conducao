@@ -1,0 +1,61 @@
+# Exame 49 — mapa de rastreabilidade
+
+Conteúdo original do ESTRADA, não extraído do APK. Foco: condução defensiva e prevenção de riscos em situações reais.
+
+## Fonte primária
+- Código da Estrada da República de Moçambique, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
+- Diploma de aprovação: Decreto-Lei n.º 1/2011, de 23 de Março; legislação do INATRO: https://www.inatro.gov.mz/?page_id=701
+- Artigos usados: 20.º, 22.º, 28.º–32.º, 60.º, 61.º, 63.º, 87.º e 89.º.
+
+## Mapa das perguntas
+| Nº | Tema | Competência avaliada | Base legal |
+|---:|---|---|---|
+| 1 | Velocidade adequada | Prevenir risco e adaptar a condução às condições reais. | Art. 29.º, n.º 1 |
+| 2 | Espaço livre visível | Prevenir risco e adaptar a condução às condições reais. | Art. 30.º, n.º 1 |
+| 3 | Distância de segurança frontal | Prevenir risco e adaptar a condução às condições reais. | Art. 20.º, n.º 1 |
+| 4 | Distância lateral | Prevenir risco e adaptar a condução às condições reais. | Art. 20.º, n.º 2 |
+| 5 | Chuva e pavimento molhado | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 6 | Aproximação de curva | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 7 | Aproximação de cruzamento | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 8 | Zona escolar | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 9 | Animais na via | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 10 | Visibilidade insuficiente | Prevenir risco e adaptar a condução às condições reais. | Art. 28.º |
+| 11 | Nevoeiro | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 12 | Uso de luzes de nevoeiro | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 13 | Máximos e encandeamento | Prevenir risco e adaptar a condução às condições reais. | Art. 61.º, n.º 5 |
+| 14 | Condução nocturna | Prevenir risco e adaptar a condução às condições reais. | Art. 61.º, n.º 1 |
+| 15 | Auscultadores durante a marcha | Prevenir risco e adaptar a condução às condições reais. | Art. 89.º, n.ºs 1 e 2 |
+| 16 | Telefone durante a condução | Prevenir risco e adaptar a condução às condições reais. | Art. 89.º, n.ºs 1 e 2 |
+| 17 | Cinto de segurança | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 1 |
+| 18 | Capacete em motociclos | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 2 |
+| 19 | Crianças em automóveis | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 4 |
+| 20 | Criança no banco traseiro | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 5 |
+| 21 | Redução súbita da velocidade | Prevenir risco e adaptar a condução às condições reais. | Art. 29.º, n.º 2; art. 63.º, n.º 2 |
+| 22 | Descida acentuada | Prevenir risco e adaptar a condução às condições reais. | Art. 32.º, n.º 2 |
+| 23 | Aglomeração de pessoas | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 24 | Pavimento em mau estado | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
+| 25 | Distância e travagem | Prevenir risco e adaptar a condução às condições reais. | Art. 20.º, n.º 1 |
+
+## Distribuição das respostas correctas
+- A: 7
+- B: 6
+- C: 6
+- D: 6
+
+As posições não seguem sequência cíclica e a resposta correcta não é sistematicamente a mais longa.
+
+## Imagens
+Todas as perguntas usam `imagem: null`. Os cenários são descritos por texto e não exigem imagens.
+
+## Revisão normativa e limitações
+As perguntas foram confrontadas com o Código da Estrada disponibilizado pelo INATRO. Os limites numéricos de velocidade não foram repetidos para evitar depender de quadros que podem ser alterados por sinalização ou regulamentação específica. A definição de visibilidade reduzida de 50 m consta do art. 28.º; o uso de luzes, acessórios de segurança e aparelhos foi limitado ao texto dos arts. 60.º, 61.º, 87.º e 89.º.
+
+Esta revisão não substitui formação prática nem parecer jurídico. Em situação real, a condução deve ser adaptada à segurança e às instruções das autoridades.
+
+## Originalidade e validação
+Perguntas redigidas de forma original e não copiadas do APK.
+- 25 perguntas; quatro alternativas não vazias; um índice correcto válido; explicação por pergunta.
+- Distribuição: A=7, B=6, C=6, D=6.
+- Todas as imagens são `null`.
+- Validação estrutural interna aprovada; validador oficial/CI a confirmar após publicação.
+- Teste no navegador adiado para verificação conjunta após o Exame 51.
