@@ -17,7 +17,7 @@ window.EXAMES[2] = [
       "Nunca, porque os veículos prioritários devem cumprir todas as regras sem excepção."
     ],
     "correta": 1,
-    "explicacao": "O artigo 15.º permite ao veículo prioritário, quando a missão o exigir, não observar certas regras e sinais, mas nunca as ordens dos agentes nem a segurança dos outros utentes. Perante luz vermelha ou STOP, deve suspender a marcha e só prosseguir depois de tomar as devidas precauções."
+    "explicacao": "Os veículos prioritários podem não observar certas regras quando a missão urgente o exigir, mas devem respeitar as ordens dos agentes e não colocar ninguém em perigo. Mesmo perante luz vermelha ou STOP, devem parar e só avançar depois de verificar que é seguro."
   },
   {
     "numero": 2,
@@ -53,7 +53,7 @@ window.EXAMES[2] = [
       "Parar e aguardar pela reparação do semáforo, mesmo sem sinal de paragem."
     ],
     "correta": 1,
-    "explicacao": "Na ausência de sinalização que estabeleça outra prioridade, aplica-se a regra geral: numa intersecção não sinalizada, tem prioridade o condutor que se apresenta pela direita. A avaria do semáforo não cria prioridade para quem chega primeiro."
+    "explicacao": "Quando não há semáforo a funcionar nem sinais que definam outra prioridade, aplica-se a regra geral da direita: ceder passagem a quem se apresenta pela direita. A avaria não dá prioridade a quem chega primeiro."
   },
   {
     "numero": 4,
@@ -89,7 +89,7 @@ window.EXAMES[2] = [
       "Que não tem classificação como contravenção rodoviária."
     ],
     "correta": 0,
-    "explicacao": "O artigo 146.º, alínea b), classifica como média a falta de indicação antecipada, por gesto regulamentar ou luz indicadora, do início da marcha, da paragem ou da mudança de direcção ou de via. O artigo 23.º estabelece o dever de sinalizar a manobra."
+    "explicacao": "A falta de sinalização antecipada do início da marcha, da paragem ou da mudança de direcção ou de via é classificada como contravenção média. A intenção deve ser indicada com antecedência, por gesto regulamentar ou luz indicadora."
   },
   {
     "numero": 6,
@@ -107,7 +107,7 @@ window.EXAMES[2] = [
       "As luzes de presença, também chamadas mínimos."
     ],
     "correta": 3,
-    "explicacao": "O artigo 61.º, n.º 1, alínea a), determina o uso das luzes de presença durante a paragem ou estacionamento quando a iluminação do local não permite reconhecer facilmente o veículo a 100 metros."
+    "explicacao": "Durante a noite, se o local não estiver suficientemente iluminado para que o veículo seja reconhecido a 100 metros, devem ficar acesas as luzes de presença durante a paragem ou o estacionamento."
   },
   {
     "numero": 7,
@@ -125,7 +125,7 @@ window.EXAMES[2] = [
       "Fazer sinal com a mão para que os peões aguardem na berma."
     ],
     "correta": 2,
-    "explicacao": "O artigo 106.º determina que o condutor deixe passar os peões que já iniciaram a travessia. Ao aproximar-se de uma passagem sem regulação luminosa ou por agente, deve reduzir a velocidade e parar para os deixar passar."
+    "explicacao": "O condutor deve deixar passar os peões que já iniciaram a travessia. Ao aproximar-se de uma passagem sem regulação por semáforo ou agente, deve reduzir a velocidade e parar, se necessário."
   },
   {
     "numero": 8,
@@ -161,7 +161,7 @@ window.EXAMES[2] = [
       "Durante o dia."
     ],
     "correta": 3,
-    "explicacao": "O painel adicional N22 indica que a proibição de exceder a velocidade inscrita se aplica durante o dia. O condutor deve respeitar o limite indicado no sinal e o período indicado no painel."
+    "explicacao": "O painel adicional indica que o limite de velocidade inscrito se aplica durante o dia. O condutor deve respeitar o limite e o período indicados na sinalização."
   },
   {
     "numero": 10,
@@ -179,7 +179,7 @@ window.EXAMES[2] = [
       "Em qualquer assento, porque todos oferecem exactamente a mesma protecção em caso de colisão."
     ],
     "correta": 1,
-    "explicacao": "O centro do banco traseiro é geralmente recomendado quando permite instalar correctamente o sistema, por ficar mais afastado dos impactos laterais. Atenção: o Código da Estrada exige sistema homologado e transporte no banco traseiro, com excepções específicas; não determina que o lugar central seja obrigatório."
+    "explicacao": "O lugar central do banco traseiro é geralmente recomendado quando permite instalar correctamente o sistema de retenção, por ficar mais afastado dos impactos laterais. A regra legal exige sistema homologado e transporte no banco traseiro, com excepções específicas; não torna obrigatório o lugar central."
   },
   {
     "numero": 11,
@@ -197,7 +197,7 @@ window.EXAMES[2] = [
       "Peso bruto até 3 500 kg, sem limite de lugares para passageiros."
     ],
     "correta": 0,
-    "explicacao": "O artigo 109.º, n.º 1, alínea a), define como ligeiros os automóveis com peso bruto até 3 500 kg e lotação não superior a nove lugares, incluindo o lugar do condutor."
+    "explicacao": "Um automóvel ligeiro tem peso bruto até 3 500 kg e lotação não superior a nove lugares, contando também com o lugar do condutor."
   },
   {
     "numero": 12,
@@ -215,7 +215,7 @@ window.EXAMES[2] = [
       "Licença especial para condução ocasional."
     ],
     "correta": 0,
-    "explicacao": "A carta de condução é o título que habilita o seu titular a conduzir as categorias de veículos nela averbadas, nos termos do artigo 127.º do Código da Estrada."
+    "explicacao": "A carta de condução é o título que habilita o seu titular a conduzir as categorias de veículos nele averbadas."
   },
   {
     "numero": 13,
@@ -269,7 +269,7 @@ window.EXAMES[2] = [
       "70 km/h."
     ],
     "correta": 0,
-    "explicacao": "O artigo 33.º, n.º 3, estabelece que nas auto-estradas os condutores não podem circular a velocidade inferior a 40 km/h. O artigo 72.º também proíbe a circulação de veículos incapazes de atingir essa velocidade em patamar."
+    "explicacao": "Nas auto-estradas, a circulação não pode ser feita a menos de 40 km/h, salvo situações legalmente excepcionadas. Esta regra também exclui veículos incapazes de atingir essa velocidade em patamar."
   },
   {
     "numero": 16,
@@ -287,7 +287,7 @@ window.EXAMES[2] = [
       "Com as luzes de perigo ou, se não for possível utilizá-las, com as luzes de presença."
     ],
     "correta": 3,
-    "explicacao": "O artigo 63.º, n.º 3, alínea b), determina o uso das luzes de perigo quando o veículo está a ser rebocado. Se não for possível utilizá-las, devem ser usadas as luzes de presença, nos termos do n.º 4."
+    "explicacao": "Quando um veículo está a ser rebocado, devem ser utilizadas as luzes de perigo. Se não for possível utilizá-las, devem ser usadas as luzes de presença."
   },
   {
     "numero": 17,
@@ -305,7 +305,7 @@ window.EXAMES[2] = [
       "Prescrição absoluta, que impõe uma proibição de circulação."
     ],
     "correta": 2,
-    "explicacao": "A placa indica uma direcção de acesso a destinos identificados. O artigo 31.º do Regulamento de Sinais de Trânsito distingue os sinais de direcção dos sinais de pré-sinalização e dos sinais específicos de saída de auto-estrada."
+    "explicacao": "A placa indica uma direcção de acesso a destinos identificados. É um sinal de direcção, não um sinal específico de saída ou acesso a auto-estrada."
   },
   {
     "numero": 18,
@@ -323,7 +323,7 @@ window.EXAMES[2] = [
       "Sempre que pretenda circular mais devagar do que os restantes veículos, sem atender às condições do trânsito."
     ],
     "correta": 1,
-    "explicacao": "O artigo 18.º, n.º 1, estabelece a circulação pela via mais à esquerda. Pode utilizar-se outra via se não houver lugar naquela, para ultrapassar ou para mudar de direcção."
+    "explicacao": "Fora das localidades, a regra é circular pela via mais à esquerda. Pode utilizar-se outra via se não houver lugar naquela, para ultrapassar ou para mudar de direcção."
   },
   {
     "numero": 19,
@@ -341,7 +341,7 @@ window.EXAMES[2] = [
       "Qualquer via, porque a escolha é sempre indiferente quando não há congestionamento."
     ],
     "correta": 1,
-    "explicacao": "Fora das localidades, o artigo 18.º, n.º 1, determina que a circulação se faça pela via mais à esquerda, podendo utilizar-se outra nas situações previstas no próprio artigo."
+    "explicacao": "Na situação ilustrada, sem necessidade de ultrapassar ou mudar de direcção, a circulação normal deve manter-se pela via mais à esquerda."
   },
   {
     "numero": 20,
@@ -359,7 +359,7 @@ window.EXAMES[2] = [
       "A aproximação de um cruzamento com uma estrada sem prioridade."
     ],
     "correta": 3,
-    "explicacao": "O sinal D27 adverte para um cruzamento com uma estrada sem prioridade, cujos condutores devem ceder passagem. O sinal pertence ao grupo dos sinais de perigo."
+    "explicacao": "O sinal D27 adverte para um cruzamento com uma estrada sem prioridade. Os condutores que se aproximam pela estrada transversal devem ceder passagem."
   },
   {
     "numero": 21,
@@ -377,7 +377,7 @@ window.EXAMES[2] = [
       "Que vai iniciar a marcha imediatamente, sem aguardar pela via livre."
     ],
     "correta": 2,
-    "explicacao": "O artigo 46.º, n.º 3, alínea a), do Regulamento de Sinais de Trânsito define este gesto como sinal de redução de velocidade: braço direito estendido horizontalmente, palma voltada para o solo, oscilando de cima para baixo."
+    "explicacao": "Este gesto comunica a intenção de reduzir a velocidade: o braço direito fica estendido horizontalmente, com a palma voltada para o solo, e oscila de cima para baixo."
   },
   {
     "numero": 22,
@@ -395,7 +395,7 @@ window.EXAMES[2] = [
       "Congestionamento de tráfego."
     ],
     "correta": 2,
-    "explicacao": "O sinal D62, também representado em sinalização temporária, adverte para um troço frequentemente caracterizado por visibilidade reduzida devido a neblina, nevoeiro ou fumos."
+    "explicacao": "O sinal D62 adverte para um troço em que a visibilidade pode estar reduzida, por exemplo devido a neblina, nevoeiro ou fumo."
   },
   {
     "numero": 23,
@@ -413,7 +413,7 @@ window.EXAMES[2] = [
       "Pode parar e estacionar livremente durante a noite, sem atender à sinalização."
     ],
     "correta": 0,
-    "explicacao": "O sinal E50 proíbe o estacionamento, mas não proíbe por si só a paragem. O Código distingue paragem — imobilização breve para entrada ou saída de passageiros ou carga e descarga — de estacionamento."
+    "explicacao": "O sinal E50 proíbe o estacionamento, mas não proíbe por si só a paragem. Paragem é uma imobilização breve para entrada ou saída de passageiros ou carga e descarga; estacionamento é uma imobilização que não corresponde a essa situação."
   },
   {
     "numero": 24,
