@@ -19,6 +19,12 @@ Não reabrir estas decisões sem o dono pedir.
 - Disponibilizar a acção «Rever exame». A revisão deve preservar a pergunta e a ordem efectivamente apresentadas, a imagem correspondente e a alternativa escolhida pelo candidato; mostrar a resposta correcta e uma explicação pedagógica/contextual clara. Assinalar explicitamente perguntas não respondidas. Mostrar explicação mesmo quando o candidato acertou, para consolidar a aprendizagem.
 - Não apresentar feedback de correcção durante o exame. O modo de estudo mantém-se, mas a aprendizagem comentada ocorre depois da submissão, na revisão.
 
+## Finalidade dos exames e forma das perguntas
+- **Decisão do dono (2026-11-13):** todos os exames servem para treinar o candidato para o exame e também para o fazer aprender. A parte de aprendizagem concretiza-se sobretudo na revisão depois da submissão.
+- As perguntas avaliam a **situação que a matéria trata** (por exemplo, o que fazer perante excesso de velocidade, quem cede passagem numa rotunda), e nunca o número ou o nome de um artigo. Não se pergunta «que artigo fala de…».
+- As explicações descrevem o **contexto e o motivo da regra** na situação em causa, para o candidato perceber e conseguir aplicar na estrada. Não citam artigos nem números de artigos; esses ficam só no mapa de rastreabilidade de cada exame (`docs/referencias-exames/`).
+- Estas regras aplicam-se a todos os exames, tanto aos modelados a partir do APK como aos de conteúdo original.
+
 ## Interface e identidade visual
 - **Não utilizar emojis na interface do ESTRADA.** Substituir emojis usados como elementos visuais por ícones próprios e consistentes, adequados à função e ao local onde aparecem (por exemplo: navegação, acções, categorias, estados e funcionalidades).
 - Os ícones devem pertencer a um conjunto visual coerente, manter estilo, espessura e proporções consistentes e ser legíveis em ecrãs pequenos. Usar ícones básicos e reconhecíveis, adequados à função e ao local exacto onde aparecem, com tamanho equilibrado (nem demasiado pequenos nem demasiado grandes). Preferir SVG ou ficheiros de ícones próprios; não usar emojis como substitutos de ícones.

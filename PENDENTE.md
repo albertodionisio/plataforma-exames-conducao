@@ -4,12 +4,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
-## GER-013 — Registar em REGRAS.md a finalidade dos exames e a forma das perguntas
-- Estado: EM CURSO — Claude-GER013 — 2026-11-13 23:50 UTC+02 — ficheiros: REGRAS.md — último sinal: 2026-11-13 23:50 UTC+02
-- Pedido (dono, 2026-11-13): registar que os exames servem para treinar e também para aprender; que as perguntas avaliam a situação que o artigo trata, nunca o número do artigo; e que as explicações descrevem o contexto da situação, sem citar o artigo.
-- Onde mexer: `REGRAS.md` (nova secção curta). Não alterar exames, app nem outros documentos.
-- Pronto quando: a regra está em `REGRAS.md` com as três decisões, sem alterar o resto do ficheiro.
-
 ## Interface (FE-)
 
 ## FE-008 — Ícones gráficos e navegação da interface
