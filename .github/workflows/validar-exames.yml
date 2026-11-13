@@ -6,11 +6,19 @@ on:
     paths:
       - 'data/exames/**'
       - 'scripts/validar-exames.js'
+      - 'scripts/testar-assinaturas.js'
+      - 'app.js'
+      - 'config.js'
+      - 'public/assinaturas/planos.js'
       - '.github/workflows/validar-exames.yml'
   pull_request:
     paths:
       - 'data/exames/**'
       - 'scripts/validar-exames.js'
+      - 'scripts/testar-assinaturas.js'
+      - 'app.js'
+      - 'config.js'
+      - 'public/assinaturas/planos.js'
       - '.github/workflows/validar-exames.yml'
   workflow_dispatch:
 
@@ -27,5 +35,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Verificar sintaxe JavaScript
+        run: |
+          node --check app.js
+          node --check config.js
+          node --check public/assinaturas/planos.js
+      - name: Testar componente de assinaturas
+        run: node scripts/testar-assinaturas.js
       - name: Executar validador oficial
         run: node scripts/validar-exames.js
