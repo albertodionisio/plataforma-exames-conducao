@@ -264,6 +264,15 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
 - Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
+## DADOS-035 — Simulado 34 (conteúdo original)
+- Estado: EM CURSO — ChatGPT-DADOS035 — 2026-11-13 UTC — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md — último sinal: 2026-11-13 UTC
+- Foco temático prioritário: Ultrapassagem e cruzamento de veículos.
+- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis.
+- Onde mexer: `data/exames/exame34.js` e `docs/referencias-exames/exame34-mapeamento.md`.
+- Parcial: os dois ficheiros foram publicados. O exame contém 25 perguntas, quatro alternativas, explicações e referências aos artigos 41.º–44.º; o mapa identifica a fonte oficial do INATRO e as páginas consultadas. Verificação estrutural estática passou (25 perguntas, índices válidos, quatro opções, explicações e referências presentes); respostas equilibradas A=6, B=7, C=6, D=6. Comparação exacta com os exames 1, 31 e 32 não encontrou enunciados repetidos.
+- Falta: executar `node scripts/validar-exames.js`, testar o exame no navegador e completar a comparação de duplicações quando os outros exames estiverem disponíveis. A vigência consolidada da legislação não foi auditada.
+- Cuidados: não alterar ficheiros partilhados nem exames de outras tarefas. Não marcar como concluída antes dos testes mínimos.
+
 ## DADOS-036 — Simulado 35 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Mudança de direcção e mudança de via.
