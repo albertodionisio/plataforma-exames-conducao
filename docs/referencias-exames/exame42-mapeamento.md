@@ -57,7 +57,7 @@ As perguntas foram confrontadas com o Código da Estrada aprovado pelo Decreto-L
 
 ## Originalidade e validação
 
-A comparação com os Exames 31–51 identificou repetição da regra de prevalência das ordens dos agentes na antiga pergunta 24, já testada na pergunta 1 e no Exame 39. A pergunta 24 foi substituída pela hierarquia entre sinalização temporária e semáforos permanentes (art. 8.º, n.º 2). A comparação com os Exames 2–30 será feita quando forem incorporados a partir do aplicativo original.
+A auditoria cruzada identificou repetições nas antigas perguntas 1 (hierarquia das ordens dos agentes, já testada nos Exames 31 e 39), 12 (não entrar num cruzamento bloqueado, já testada nos Exames 32 e 33) e 24 (hierarquia da sinalização temporária, já testada no Exame 32). Foram substituídas por fiscalização dos sinais (art. 6.º), altura regulamentar dos semáforos (art. 20.º, n.º 8) e raquetas/bandeirolas A64 (art. 13.º, n.º 4, al. a)). A comparação com os Exames 2–30 será feita quando forem incorporados a partir do aplicativo original.
 
 - 25 perguntas, quatro alternativas não vazias, índice correcto válido e explicação por pergunta.
 - Distribuição: A=7, B=7, C=6, D=5.
