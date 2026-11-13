@@ -8,6 +8,10 @@ window.APP = {
   minutos: 60,
   valorPorResposta: 0.8,
   limiar: 18,
+  // Modo temporário para validar os Exames 31–40 sem pagamentos.
+  // Antes de abrir ao público, mudar para false; o bloqueio por plano volta a aplicar-se.
+  modoTesteAcessoPago: true,
+  examesAbertosTeste: [31, 40],
   planos: [
     { nome: "Free", preco: "0 MT", validade: "Sem limite", exames: "3 fixos", anuncios: "Sim", suporte: "Normal" },
     { nome: "Semanal Básico", preco: "50 MT", validade: "7 dias", exames: "25", anuncios: "Reduzida", suporte: "Normal" },

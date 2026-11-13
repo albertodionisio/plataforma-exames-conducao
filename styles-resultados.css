@@ -1,0 +1,22 @@
+.progresso{height:6px;background:#e3dccb;border-radius:8px;overflow:hidden;margin:12px 0 18px}
+.progresso span{display:block;height:100%;background:#3f6b4f;transition:width .15s}
+.op.seleccionado{border:2px solid #14284b;background:#edf1f7}
+.op .letra{font-weight:bold;color:#14284b;margin-right:6px}
+.navegacao-exame,.rodape-exame{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 0}
+.rodape-exame{border-top:1px solid #e3dccb;padding-top:14px;color:#6b7280;font-size:.92rem}
+.btn.terminar{background:#8b3030}
+.resultado-card{text-align:center}
+.semaforo{width:64px;padding:8px 0;background:#20252c;border-radius:28px;margin:8px auto 18px;display:flex;flex-direction:column;align-items:center;gap:7px}
+.semaforo .luz{width:15px;height:15px;border-radius:50%;background:#555}
+.semaforo.aprovado .luz.verde{background:#31a65b;box-shadow:0 0 12px #31a65b}
+.semaforo.reprovado .luz.vermelha{background:#d23d3d;box-shadow:0 0 12px #d23d3d}
+.estado-final{letter-spacing:.08em}
+.texto-aprovado{color:#286b3e}
+.texto-reprovado{color:#9b2c2c}
+.revisao-pergunta h2{margin-top:0}
+.lista-revisao{padding-left:30px}
+.lista-revisao li{padding:5px 8px;margin:3px 0}
+.lista-revisao .resposta-correcta{background:#e8f1ea;border-left:3px solid #3f6b4f}
+.lista-revisao .resposta-errada{background:#f7e6e6;border-left:3px solid #9b2c2c}
+.explicacao-revisao{background:#f8f5ed;padding:10px 12px;border-radius:6px}
+@media(max-width:480px){.navegacao-exame,.rodape-exame{align-items:stretch;flex-wrap:wrap}.navegacao-exame .btn{flex:1}.rodape-exame .terminar{width:100%}}

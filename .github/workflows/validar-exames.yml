@@ -7,6 +7,8 @@ on:
       - 'data/exames/**'
       - 'scripts/validar-exames.js'
       - 'scripts/testar-assinaturas.js'
+      - 'scripts/testar-fluxo.js'
+      - 'styles-resultados.css'
       - 'app.js'
       - 'config.js'
       - 'public/assinaturas/planos.js'
@@ -42,5 +44,7 @@ jobs:
           node --check public/assinaturas/planos.js
       - name: Testar componente de assinaturas
         run: node scripts/testar-assinaturas.js
+      - name: Testar fluxo completo dos exames
+        run: node scripts/testar-fluxo.js
       - name: Executar validador oficial
         run: node scripts/validar-exames.js
