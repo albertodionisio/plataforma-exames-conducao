@@ -79,7 +79,7 @@ assert.match(app.innerHTML,/Pergunta 1 de 25/);
 agora += (context.window.APP.minutos * 60000) + 1000;
 intervalCallback();
 assert.match(app.innerHTML,/exame submetido automaticamente/);
-assert.match(app.innerHTML,/Em branco: <b>25<\\/b>/);
+assert.ok(app.innerHTML.includes("Em branco: <b>25</b>"));
 
 context.window.APP.modoTesteAcessoPago=false;
 hash="#/exame/39";listeners.hashchange();
