@@ -5,14 +5,14 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: condução defensiva
 ## Fonte primária
 - Código da Estrada da República de Moçambique, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
 - Diploma de aprovação: Decreto-Lei n.º 1/2011, de 23 de Março; legislação do INATRO: https://www.inatro.gov.mz/?page_id=701
-- Artigos usados: 20.º, 22.º, 28.º–32.º, 60.º, 61.º, 63.º, 87.º e 89.º.
+- Artigos usados: 20.º, 22.º, 24.º, 26.º, 28.º–32.º, 60.º, 61.º, 63.º, 78.º, 79.º, 87.º e 89.º.
 
 ## Mapa das perguntas
 | Nº | Tema | Competência avaliada | Base legal |
 |---:|---|---|---|
 | 1 | Velocidade adequada | Prevenir risco e adaptar a condução às condições reais. | Art. 29.º, n.º 1 |
 | 2 | Espaço livre visível | Prevenir risco e adaptar a condução às condições reais. | Art. 30.º, n.º 1 |
-| 3 | Distância de segurança frontal | Prevenir risco e adaptar a condução às condições reais. | Art. 20.º, n.º 1 |
+| 3 | Uso moderado dos sinais sonoros | Reconhecer que os sinais sonoros devem ser breves e moderados e não podem servir de protesto. | Art. 24.º, n.º 1 |
 | 4 | Distância lateral | Prevenir risco e adaptar a condução às condições reais. | Art. 20.º, n.º 2 |
 | 5 | Chuva e pavimento molhado | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
 | 6 | Aproximação de curva | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
@@ -31,10 +31,10 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: condução defensiva
 | 19 | Crianças em automóveis | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 4 |
 | 20 | Criança no banco traseiro | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 5 |
 | 21 | Redução súbita da velocidade | Prevenir risco e adaptar a condução às condições reais. | Art. 29.º, n.º 2; art. 63.º, n.º 2 |
-| 22 | Descida acentuada | Prevenir risco e adaptar a condução às condições reais. | Art. 32.º, n.º 2 |
-| 23 | Aglomeração de pessoas | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
-| 24 | Pavimento em mau estado | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
-| 25 | Distância e travagem | Prevenir risco e adaptar a condução às condições reais. | Art. 20.º, n.º 1 |
+| 22 | Marcha lenta que embaraça o trânsito | Evitar circulação em marcha injustificadamente lenta que cause embaraço aos restantes utentes. | Art. 31.º, n.º 1 |
+| 23 | Ruído produzido pelo veículo | Evitar ruídos incómodos na condução e respeitar os limites regulamentares dos aparelhos sonoros. | Art. 79.º, n.ºs 1–3 |
+| 24 | Emissões e derrames na via | Reconhecer a proibição de circulação com emissões acima dos limites ou derrame de óleo/substâncias. | Art. 78.º, n.º 1 |
+| 25 | Substituição de sinais sonoros por luminosos | Aplicar a possibilidade de substituir sinais sonoros por sinais luminosos intermitentes em condições de visibilidade insuficiente. | Art. 26.º, n.º 1 |
 
 ## Distribuição das respostas correctas
 - A: 7
@@ -48,7 +48,7 @@ As posições não seguem sequência cíclica e a resposta correcta não é sist
 Todas as perguntas usam `imagem: null`. Os cenários são descritos por texto e não exigem imagens.
 
 ## Revisão normativa e limitações
-As perguntas foram confrontadas com o Código da Estrada disponibilizado pelo INATRO. Os limites numéricos de velocidade não foram repetidos para evitar depender de quadros que podem ser alterados por sinalização ou regulamentação específica. A definição de visibilidade reduzida de 50 m consta do art. 28.º; o uso de luzes, acessórios de segurança e aparelhos foi limitado ao texto dos arts. 60.º, 61.º, 87.º e 89.º.
+As perguntas foram confrontadas com o Código da Estrada disponibilizado pelo INATRO. Os limites numéricos de velocidade não foram repetidos para evitar depender de quadros que podem ser alterados por sinalização ou regulamentação específica. As perguntas 3 e 22–25 foram reformuladas para reduzir a sobreposição directa com o Exame 36, acrescentando regras sobre sinais sonoros, marcha lenta, ruído, emissões e substituição de sinais sonoros por luminosos. A definição de visibilidade reduzida de 50 m consta do art. 28.º; o uso de luzes, acessórios de segurança e aparelhos foi limitado ao texto dos arts. 60.º, 61.º, 87.º e 89.º.
 
 Esta revisão não substitui formação prática nem parecer jurídico. Em situação real, a condução deve ser adaptada à segurança e às instruções das autoridades.
 
