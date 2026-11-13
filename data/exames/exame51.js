@@ -1,5 +1,5 @@
 // Exame 51 — 25 perguntas originais do ESTRADA.
-// Exame integrador avançado: combina circulação, segurança, procedimentos de fiscalização e deveres do condutor.
+// Exame integrador avançado: combina circulação, segurança, fiscalização e regras especiais para veículos de duas rodas.
 // Base legal: Código da Estrada de Moçambique e Regulamento de Sinais de Trânsito, com referências específicas no mapa.
 // Rastreabilidade: docs/referencias-exames/exame51-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
@@ -36,78 +36,78 @@ window.EXAMES[51] = [
   },
   {
     "numero": 3,
-    "tema": "Acidente com vítima e segurança",
+    "tema": "Circulação de motociclos e velocípedes lado a lado",
     "dificuldade": "difícil",
-    "enunciado": "Um condutor envolvido num acidente com feridos percebe que os veículos estão a criar perigo para o trânsito. O que deve fazer?",
+    "enunciado": "Dois ciclistas pretendem circular lado a lado numa estrada comum, sem pista especial. Qual é a regra geral?",
     "imagem": null,
     "opcoes": [
-      "Afastar-se sem sinalizar para não se envolver.",
-      "Deixar a decisão apenas para os curiosos.",
-      "Mover todos os veículos antes de observar a situação.",
-      "Adoptar, podendo fazê-lo, providências para evitar perigo e preservar o local, sem abandonar o dever de socorro."
+      "É sempre permitido, desde que ambos usem capacete.",
+      "É permitido apenas fora das localidades.",
+      "É permitido se a estrada tiver boa iluminação.",
+      "Não podem seguir a par, salvo se transitarem em pista especial e não causarem perigo ou embaraço ao trânsito."
     ],
     "correta": 3,
-    "explicacao": "Em acidente com vítima, o condutor deve prestar ou providenciar socorro, evitar perigo para o trânsito e preservar o local para facilitar os trabalhos policiais e periciais. (Arts. 147.º, al. d), e 154.º)."
+    "explicacao": "Os condutores de motociclos, ciclomotores ou velocípedes não podem seguir a par, salvo se transitarem em pista especial e não causarem perigo ou embaraço ao trânsito. (Art. 93.º, n.º 1, al. e))."
   },
   {
     "numero": 4,
-    "tema": "Identificação após acidente",
+    "tema": "Posicionamento dos velocípedes",
     "dificuldade": "difícil",
-    "enunciado": "Após um acidente, o outro interveniente solicita a identificação do condutor, proprietário, seguradora e apólice. O que deve fornecer?",
+    "enunciado": "Numa estrada com várias filas de trânsito no mesmo sentido, por onde deve circular o condutor de um velocípede?",
     "imagem": null,
     "opcoes": [
-      "Apenas o primeiro nome.",
-      "A identificação do condutor e do proprietário, os dados da seguradora e o número da apólice.",
-      "Somente a matrícula do veículo.",
-      "Apenas o contacto telefónico."
+      "Sempre pelo centro da via mais rápida.",
+      "O mais próximo possível das bermas ou passeios, mesmo quando existam duas ou mais filas no mesmo sentido.",
+      "Pela faixa da direita apenas quando houver fiscalização.",
+      "Pela berma contrária ao sentido de marcha."
     ],
     "correta": 1,
-    "explicacao": "O condutor interveniente deve fornecer a sua identificação, a do proprietário, a da seguradora e o número da apólice, exibindo documentos quando solicitado. (Art. 92.º, n.º 1)."
+    "explicacao": "Os condutores de velocípedes devem transitar o mais próximo possível das bermas ou passeios, mesmo quando no mesmo sentido sejam possíveis duas ou mais filas. (Art. 93.º, n.º 2)."
   },
   {
     "numero": 5,
-    "tema": "Acidente com mortos ou feridos",
+    "tema": "Controlo do motociclo",
     "dificuldade": "difícil",
-    "enunciado": "Do acidente resultam mortos ou feridos. O condutor interveniente pretende sair para procurar ajuda. Qual é a obrigação expressa do Código?",
+    "enunciado": "Um motociclista circula numa via pública e retira ambas as mãos do guiador para ajustar um objecto. Qual é a avaliação correcta?",
     "imagem": null,
     "opcoes": [
-      "Sair imediatamente sem comunicar a ninguém.",
-      "Aguardar apenas se o veículo estiver danificado.",
-      "Aguardar no local a chegada de agente de autoridade e assegurar que o socorro é prestado ou providenciado.",
-      "Deixar o local e voltar no dia seguinte."
+      "É permitido se a velocidade for inferior a 20 km/h.",
+      "É permitido quando a estrada estiver vazia.",
+      "É proibido conduzir com as mãos fora do guiador, salvo para assinalar uma manobra.",
+      "É permitido se o motociclo tiver motor de pequena cilindrada."
     ],
     "correta": 2,
-    "explicacao": "Quando do acidente resultem mortos ou feridos, o condutor deve aguardar no local a chegada de agente de autoridade. Deve também prestar ou providenciar socorro. (Arts. 92.º, n.º 2, e 154.º)."
+    "explicacao": "Os condutores de motociclos, ciclomotores ou velocípedes não podem conduzir com as mãos fora do guiador, salvo para assinalar qualquer manobra. (Art. 93.º, n.º 1, al. a))."
   },
   {
     "numero": 6,
-    "tema": "Triângulo e colete",
+    "tema": "Transporte de carga em veículos de duas rodas",
     "dificuldade": "difícil",
-    "enunciado": "Um condutor precisa de colocar o triângulo e retirar uma carga caída na estrada. Que equipamento deve utilizar?",
+    "enunciado": "Um motociclista pretende transportar uma caixa de mercadorias solta sobre o depósito, sem atrelado nem caixa de carga. O que determina o Código?",
     "imagem": null,
     "opcoes": [
-      "O colete reflectivo, além de cumprir as regras de colocação do sinal.",
-      "Apenas luvas de trabalho.",
-      "Um casaco escuro para não chamar atenção.",
-      "Nenhum equipamento, se for de dia."
+      "O transporte de carga só pode fazer-se em atrelado ou caixa de carga, e não podem ser transportados objectos que prejudiquem a condução ou criem perigo.",
+      "É permitido se a caixa estiver presa com uma corda.",
+      "É permitido apenas em deslocações curtas.",
+      "É permitido se o passageiro segurar a caixa."
     ],
     "correta": 0,
-    "explicacao": "Quem coloca o sinal de pré-sinalização, repara o veículo ou remove a carga deve utilizar o colete reflectivo. (Art. 91.º, n.º 5)."
+    "explicacao": "O transporte de carga em motociclos, ciclomotores ou velocípedes só pode fazer-se em atrelado ou caixa de carga; também é proibido transportar objectos susceptíveis de prejudicar a condução ou constituir perigo. (Art. 95.º, n.ºs 1 e 2)."
   },
   {
     "numero": 7,
-    "tema": "Triângulo na via",
+    "tema": "Iluminação obrigatória nos motociclos",
     "dificuldade": "difícil",
-    "enunciado": "Um veículo imobilizado por avaria está numa zona sem boa iluminação. A que distância mínima deve ser colocado o sinal de pré-sinalização?",
+    "enunciado": "Um motociclo circula durante o dia, com boa visibilidade. Que regra especial deve cumprir quanto às luzes?",
     "imagem": null,
     "opcoes": [
-      "A 5 metros.",
-      "A 10 metros.",
-      "A 20 metros.",
-      "A pelo menos 30 metros à frente e à retaguarda, de forma visível a pelo menos 100 metros."
+      "Pode circular sem luzes se usar roupa reflectora.",
+      "Só precisa de ligar as luzes fora das localidades.",
+      "Deve utilizar apenas as luzes de presença quando houver trânsito.",
+      "Deve manter os dispositivos de iluminação e sinalização luminosa em uso, circulando com a luz de cruzamento acesa."
     ],
     "correta": 3,
-    "explicacao": "O sinal deve ser colocado verticalmente a uma distância nunca inferior a 30 m, à frente e à retaguarda, ficando visível a pelo menos 100 m. (Art. 91.º, n.º 3)."
+    "explicacao": "Nos motociclos, triciclos, quadriciclos e ciclomotores, o uso dos dispositivos de sinalização luminosa e iluminação é obrigatório em qualquer circunstância; motociclos e ciclomotores devem transitar com a luz de cruzamento acesa. (Art. 96.º, n.ºs 1 e 2)."
   },
   {
     "numero": 8,
@@ -306,33 +306,33 @@ window.EXAMES[51] = [
   },
   {
     "numero": 21,
-    "tema": "Reparação após avaria",
+    "tema": "Avaria das luzes num velocípede",
     "dificuldade": "difícil",
-    "enunciado": "Um veículo avariado está numa faixa de rodagem. O condutor pretende reparar uma avaria complexa no próprio local. Qual é a regra?",
+    "enunciado": "Um ciclista detecta que as luzes do velocípede deixaram de funcionar durante a noite. Como deve proceder?",
     "imagem": null,
     "opcoes": [
-      "A reparação na via pública é proibida, salvo se indispensável à remoção ou em avaria de fácil reparação para prosseguir a marcha.",
-      "Pode reparar sempre, desde que ligue os quatro indicadores.",
-      "Pode reparar se outro veículo sinalizar atrás.",
-      "A reparação é obrigatória antes de chamar assistência."
+      "Continuar a pedalar devagar, sem qualquer alteração.",
+      "Ligar a lanterna do telemóvel e continuar a circular normalmente.",
+      "Deve conduzir o velocípede à mão enquanto as luzes estiverem avariadas.",
+      "Circular apenas pela faixa central da estrada."
     ],
     "correta": 0,
-    "explicacao": "É proibida a reparação de veículos na via pública, salvo se indispensável à remoção ou, em avarias de fácil reparação, ao prosseguimento da marcha. (Art. 90.º, n.º 3)."
+    "explicacao": "Em caso de avaria nas luzes, os velocípedes devem ser conduzidos à mão. (Art. 97.º, n.º 2)."
   },
   {
     "numero": 22,
-    "tema": "Teste de álcool após acidente",
+    "tema": "Reboque de veículos de duas rodas",
     "dificuldade": "difícil",
-    "enunciado": "Um condutor interveniente num acidente está em condições de saúde para realizar o teste de álcool no ar expirado. O que prevê o Código?",
+    "enunciado": "Um condutor pretende rebocar um motociclo ou velocípede com outro veículo, prendendo-o por uma corda. Qual é a regra geral?",
     "imagem": null,
     "opcoes": [
-      "O teste é facultativo se não houver culpa.",
-      "Só os condutores feridos são testados.",
-      "Os condutores e peões intervenientes devem ser submetidos ao exame sempre que o estado de saúde o permitir.",
-      "O teste só pode ser feito no dia seguinte."
+      "É permitido se ambos os condutores concordarem.",
+      "É permitido apenas em estradas secundárias.",
+      "Os condutores de motociclos, ciclomotores ou velocípedes não podem fazer-se rebocar.",
+      "É permitido se a distância for inferior a um quilómetro."
     ],
     "correta": 2,
-    "explicacao": "Os condutores e peões intervenientes em acidente devem ser submetidos a exame de pesquisa de álcool no ar expirado sempre que o estado de saúde o permitir. (Art. 85.º, n.º 1)."
+    "explicacao": "Os condutores de motociclos, ciclomotores ou velocípedes não podem fazer-se rebocar. (Art. 93.º, n.º 1, al. c))."
   },
   {
     "numero": 23,
