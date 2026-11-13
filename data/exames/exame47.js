@@ -11,12 +11,12 @@ window.EXAMES[47] = [
     "enunciado": "Para que servem os sinais temporários colocados numa zona de obras ou de obstáculo ocasional?",
     "imagem": null,
     "opcoes": [
-      "Indicar apenas o nome da empresa responsável pela obra.",
       "Prevenir os utentes e transmitir as obrigações, restrições ou proibições especiais temporariamente impostas.",
+      "Indicar apenas o nome da empresa responsável pela obra.",
       "Substituir permanentemente todos os sinais verticais da estrada.",
       "Autorizar automaticamente a circulação em qualquer sentido."
     ],
-    "correta": 1,
+    "correta": 0,
     "explicacao": "undefined Art. 10.º, n.º 1"
   },
   {
@@ -72,11 +72,11 @@ window.EXAMES[47] = [
     "imagem": null,
     "opcoes": [
       "A isenção de responsabilidade do adjudicatário.",
-      "Cláusulas com penalidades aplicáveis em caso de incumprimento das regras de sinalização.",
       "A obrigação de os condutores pagarem a sinalização.",
+      "Cláusulas com penalidades aplicáveis em caso de incumprimento das regras de sinalização.",
       "A eliminação de todos os sinais permanentes da estrada."
     ],
-    "correta": 1,
+    "correta": 2,
     "explicacao": "undefined Art. 11.º, n.º 2"
   },
   {
