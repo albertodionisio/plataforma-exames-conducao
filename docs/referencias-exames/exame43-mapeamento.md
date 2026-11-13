@@ -26,7 +26,7 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: iluminação, visibi
 | 10 | Cores da iluminação | Aplicar a proibição de luz vermelha à frente e branca atrás, considerando as excepções legais. | Art. 59.º, n.º 2 |
 | 11 | Período de utilização | Identificar o período entre o anoitecer e o amanhecer. | Art. 61.º, n.º 1 |
 | 12 | Visibilidade insuficiente durante o dia | Aplicar a obrigação de iluminação quando condições meteorológicas/ambientais reduzem a visibilidade. | Art. 61.º, n.º 1 |
-| 13 | Definição de visibilidade reduzida | Aplicar o critério de não conseguir avistar toda a largura da faixa por pelo menos 50 m. | Art. 28.º |
+| 13 | Luzes de perigo durante o reboque | Aplicar a obrigação de usar luzes de perigo quando o veículo está a ser rebocado e estas funcionam. | Art. 63.º, n.º 3, al. b) |
 | 14 | Luzes de presença em imobilização | Identificar o uso enquanto se aguarda a abertura de passagem de nível e em paragem/estacionamento em local escuro. | Art. 61.º, n.º 1, al. a) |
 | 15 | Utilização dos médios | Reconhecer situações de cruzamento com veículos, pessoas ou animais e seguimento a menos de 100 m. | Art. 61.º, n.º 1, al. b) |
 | 16 | Luzes de estrada | Identificar a regra para os restantes casos, sem afastar as limitações contra encandeamento. | Art. 61.º, n.º 1, al. c), e n.º 5 |
