@@ -63,5 +63,5 @@ A comparação com os Exames 31–51 identificou repetição da regra de preval�
 - Distribuição: A=7, B=7, C=6, D=5.
 - Todas as imagens são `null`.
 - Validação estrutural interna aprovada.
-- Validador oficial e GitHub Actions a confirmar após publicação.
+- Validador oficial e GitHub Actions: aprovado no run 43468215687 (sintaxe JavaScript, teste de assinaturas e validador oficial).
 - Teste funcional em navegador adiado para a verificação conjunta depois do Exame 51.

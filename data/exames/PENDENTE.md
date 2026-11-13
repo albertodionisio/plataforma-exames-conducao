@@ -323,10 +323,3 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 
-## DADOS-043 — Exame 42 (revisão e validação)
-- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 23:00 UTC+02 — ficheiros: data/exames/exame42.js, docs/referencias-exames/exame42-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:00 UTC+02
-- Pedido: rever o Exame 42, confirmar os sinais luminosos e sinais dos agentes no Regulamento de Sinais de Trânsito do Decreto n.º 51/2009 e reduzir repetições com os Exames 31–51.
-- Onde mexer: `data/exames/exame42.js` e `docs/referencias-exames/exame42-mapeamento.md`; actualizar PENDENTE e HISTORICO ao concluir.
-- Pronto quando: 25 perguntas, quatro alternativas, índice correcto e explicação; artigos conferidos no exemplar do Boletim da República; mapa pergunta-a-pergunta actualizado; validador oficial/CI aprovado. Teste visual no navegador fica para validação do dono.
-- Parcial: o Exame 42 existe com 25 perguntas e distribuição A=7/B=7/C=6/D=5. O Regulamento de Sinais de Trânsito foi confirmado no Boletim da República, I Série, n.º 38, 4.º Suplemento, de 29-09-2009 (Decreto n.º 51/2009). Comparação com os Exames 31–51 concluída; substituída a pergunta 24, que repetia a hierarquia das ordens dos agentes, por uma questão sobre a prevalência da sinalização temporária sobre semáforos permanentes.
-- Cuidados: não inventar significados de luzes/gestos; manter respostas equilibradas; não alterar outros exames nesta tarefa.
