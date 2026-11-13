@@ -1,4 +1,4 @@
-# Simulado 36 — mapa de rastreabilidade
+# Exame 36 — mapa de rastreabilidade
 
 Conteúdo original do ESTRADA, não extraído do APK. Foco: distância longitudinal e lateral, velocidade adaptada, moderação e limites especiais.
 
@@ -51,6 +51,6 @@ O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Cód
 
 ## Originalidade e limitações
 
-A comparação textual e por semelhança foi feita com os Simulados 1, 31 e 32 disponíveis e entre os próprios Simulados 34–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e os 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
+A comparação textual e por semelhança foi feita com os Exames 1, 31 e 32 disponíveis e entre os próprios Exames 34–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e os 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
 
 A validação estrutural foi reproduzida sobre os dados remotos segundo os critérios do script oficial. O script node scripts/validar-exames.js não pôde ser executado neste ambiente porque o acesso DNS ao GitHub falhou. O teste funcional no navegador permanece pendente.
