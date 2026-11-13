@@ -1,61 +1,48 @@
 # Exame 50 — mapa de rastreabilidade
 
-Conteúdo original do ESTRADA, não extraído do APK. Exame integrador que combina situações de circulação, sinalização, segurança, passageiros, carga e deveres do condutor.
+Conteúdo reformulado para eliminar a repetição de competências já cobertas pelos Exames 40–49. Foco exclusivo: regras de paragem, estacionamento e utilização de parques.
 
-## Fontes consultadas
-- Código da Estrada, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
-- Legislação do INATRO e diploma de aprovação: https://www.inatro.gov.mz/?page_id=701
-- Regulamento de Sinais de Trânsito consultado como referência complementar: https://codest.co.mz/st.php. A compilação não é fonte governamental; as referências regulamentares devem ser confirmadas em exemplar oficial antes do lançamento.
+## Fonte primária
+- Código da Estrada da República de Moçambique, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
+- Decreto-Lei n.º 1/2011, de 23 de Março.
+- Artigos usados: 49.º–53.º.
 
 ## Mapa das perguntas
 | Nº | Tema | Competência avaliada | Base legal |
 |---:|---|---|---|
-| 1 | Intersecção com risco | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 2 | Verde e cruzamento bloqueado | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 3 | Paragem e peão | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Regulamento, art. 37.º; Código, art. 106.º, n.º 2 |
-| 4 | Linha contínua | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Regulamento, art. 41.º, n.º 2, O1 |
-| 5 | Sinal e ordem do agente | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Código, art. 14.º, n.º 3 |
-| 6 | Carga e visibilidade | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 7 | Retenção infantil | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 87.º, n.ºs 4 e 5 |
-| 8 | Avaria na faixa | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 9 | Acidente com feridos | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 10 | Marcha atrás em auto-estrada | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 11 | Distância de segurança | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 20.º, n.º 1 |
-| 12 | Rotunda | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Ver explicação da pergunta |
-| 13 | Passagem de nível e barreiras | Proibição de entrar enquanto as barreiras estejam atravessadas ou em movimento | Código, art. 67.º, n.º 2 |
-| 14 | Passagem estreita | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Regulamento, art. 37.º, n.º 2 |
-| 15 | Carga de areia | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Código, art. 64.º, n.º 2 |
-| 16 | Limite de velocidade para pesados | Limite máximo geral fora das localidades para pesados de mercadorias | Código, art. 33.º, n.º 1 |
-| 17 | Carta emitida por Estado da SADC | Reconhecimento de títulos emitidos por Estados membros da SADC | Código, art. 129.º, n.º 1, al. b), e n.º 6 |
-| 18 | Troca de carta estrangeira | Prazo de 180 dias para troca após fixação de residência | Código, art. 131.º, n.º 5 |
-| 19 | Cinto de segurança | Obrigação de uso por condutor e passageiros em automóveis | Código, art. 87.º, n.º 1 |
-| 20 | Prioridade à direita | Prioridade do veículo que se apresenta pela direita em intersecção não sinalizada | Código, art. 38.º, n.º 3, al. a), e n.º 4 |
-| 21 | Passagem de nível bloqueada | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 67.º, n.º 1 |
-| 22 | Ordem de paragem | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 11.º, n.º 1 |
-| 23 | Luzes de nevoeiro | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 61.º, n.º 2 |
-| 24 | Álcool zero em transporte profissional | Taxa de 0,0 mg/l para transporte público ou carga perigosa em exercício | Código, art. 81.º, n.º 4 |
-| 25 | Capacete e passageiro | Resolver uma situação que combina regras de circulação, sinalização, segurança ou deveres do condutor. | Art. 87.º, n.º 2 |
-
-## Distribuição das respostas correctas
-- A: 6
-- B: 7
-- C: 6
-- D: 6
-
-As posições não seguem sequência cíclica e a resposta correcta não é sistematicamente a mais longa.
-
-## Imagens
-Todas as perguntas usam `imagem: null`; não foram associadas imagens sem correspondência oficial comprovada.
-
-## Revisão normativa e limitações
-O exame integra regras do Código da Estrada disponibilizado pelo INATRO, incluindo sinalização, prioridades, manobras, velocidade, passageiros, carga, avarias, acidentes, habilitação e seguro. A pergunta relativa a sinais regulamentares usa apenas designações e obrigações já mapeadas; os pormenores do Regulamento de Sinais de Trânsito carecem de confirmação em exemplar oficial.
-
-A comparação integral de duplicações com os exames 1–49 ainda não é exaustiva, pois nem todos os exames estão acessíveis na branch. A validação global de originalidade deve ser feita após a integração dos conteúdos. Não foram incluídas coimas nem sanções.
+| 1 | Paragem e estacionamento | Distinguir as duas formas de imobilização. | Art. 49.º, n.ºs 1 e 2 |
+| 2 | Estacionamento que impede filas | Reconhecer a proibição de impedir a formação de filas de trânsito. | Art. 51.º, n.º 1, al. a) |
+| 3 | Via com prioridade fora das localidades | Aplicar a proibição de estacionar na faixa assinalada como via com prioridade. | Art. 51.º, n.º 2, al. b) |
+| 4 | Paragem/estacionamento fora das localidades | Aplicar a regra de imobilização fora da faixa de rodagem. | Art. 49.º, n.º 3 |
+| 5 | Paragem/estacionamento dentro das localidades | Aplicar o local e posicionamento legal dentro das localidades. | Art. 49.º, n.º 4 |
+| 6 | Precauções ao estacionar | Deixar espaço para manobras e impedir movimento involuntário do veículo. | Art. 49.º, n.º 5 |
+| 7 | Túneis e locais de visibilidade insuficiente | Reconhecer locais onde é proibido parar ou estacionar. | Art. 50.º, n.º 1, al. a) |
+| 8 | Distância de cruzamentos e rotundas | Aplicar a distância mínima de cinco metros. | Art. 50.º, n.º 1, al. b) |
+| 9 | Passagens de peões e velocípedes | Aplicar a distância mínima de cinco metros. | Art. 50.º, n.º 1, al. d) |
+| 10 | Não ocultar sinais luminosos | Aplicar a restrição junto de sinais luminosos que possam ficar encobertos. | Art. 50.º, n.º 1, al. e) |
+| 11 | Pistas de velocípedes e passeios | Reconhecer a proibição de parar ou estacionar em espaços destinados a peões e velocípedes. | Art. 50.º, n.º 1, al. f) |
+| 12 | Distância à linha contínua | Aplicar o limite mínimo de três metros entre veículo e linha contínua. | Art. 50.º, n.º 1, al. g) |
+| 13 | Zona de estacionamento de duração limitada | Reconhecer a proibição de estacionar sem cumprir o regulamento da zona. | Art. 51.º, n.º 1, al. h) |
+| 14 | Curvas e lombas de visibilidade reduzida | Aplicar a distância de cinquenta metros fora das localidades. | Art. 50.º, n.º 2, al. a) |
+| 15 | Estacionamento em segunda fila | Reconhecer a proibição de estacionar em segunda fila. | Art. 51.º, n.º 1, al. b) |
+| 16 | Acesso a propriedades e parques | Evitar bloquear acessos de pessoas e veículos. | Art. 51.º, n.º 1, al. c) |
+| 17 | Estacionamento junto de passagem de nível | Aplicar a distância mínima de dez metros para estacionamento. | Art. 51.º, n.º 1, al. d) |
+| 18 | Postos de abastecimento | Aplicar a distância mínima de cinco metros para cada lado do posto. | Art. 51.º, n.º 1, al. e) |
+| 19 | Estacionamento reservado | Respeitar espaços reservados a determinadas classes de veículos. | Art. 51.º, n.º 1, al. f) |
+| 20 | Reboques desligados | Reconhecer a proibição de estacionar reboques desligados fora de parques próprios. | Art. 51.º, n.º 1, al. g) |
+| 21 | Estacionamento nocturno fora das localidades | Aplicar a proibição de estacionar de noite na faixa de rodagem fora das localidades. | Art. 51.º, n.º 2, al. a) |
+| 22 | Excepção para carga e descarga breve | Identificar as condições em que a imobilização breve não constitui estacionamento proibido. | Art. 51.º, n.º 3 |
+| 23 | Contagem das distâncias em curvas e passagens de nível | Identificar o ponto inicial de medição das distâncias. | Art. 52.º, al. a) |
+| 24 | Contagem junto de vias transversais | Identificar a referência de medição nos restantes casos previstos. | Art. 52.º, al. b) |
+| 25 | Paragem de transporte colectivo | Reconhecer que a entrada e saída de passageiros ocorre em locais especialmente destinados. | Art. 53.º, n.º 1 |
 
 ## Originalidade e validação
-Perguntas redigidas de forma original e orientadas para aplicação integrada de regras.
-- 25 perguntas; quatro alternativas não vazias; um índice correcto válido; explicação por pergunta.
-- Distribuição: A=6, B=7, C=6, D=6.
-- Todas as imagens são `null`.
-- GitHub Actions run 43469766034 aprovado (sintaxe JavaScript, teste de assinaturas e validador oficial).
-- Teste no navegador adiado para verificação conjunta após o Exame 51.
+- 25 perguntas, quatro alternativas e uma resposta correcta por pergunta.
+- Cada pergunta avalia uma regra ou condição distinta dentro do tema; foram removidas as questões integradoras repetidas sobre semáforos, linhas, manobras, segurança infantil, avarias, acidentes, velocidade, rotundas, cintos, álcool, luzes e capacete.
+- Imagens: imagem nula em todas as perguntas.
+- Distribuição de respostas: A=7, B=6, C=6, D=6.
+- A redacção foi confrontada com os artigos indicados. As referências a distâncias foram mantidas apenas quando expressamente previstas no Código.
+- O validador automático e a CI ainda têm de ser executados após esta actualização; o teste visual no navegador fica reservado ao dono.
+
+## Limitações
+A auditoria comparativa com os exames 1–30 depende da extracção estruturada do APK original. Este mapa regista a comparação efectuada com os exames ESTRADA acessíveis nesta tarefa; não afirma uma verificação integral contra dados originais ainda não extraídos.
