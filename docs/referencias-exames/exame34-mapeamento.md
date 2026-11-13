@@ -1,4 +1,4 @@
-# Simulado 34 — mapa de rastreabilidade (DADOS-035)
+# Exame 34 — mapa de rastreabilidade (DADOS-035)
 
 Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzamento de veículos. Sessão: ChatGPT-DADOS035, 2026-11-13.
 
@@ -14,7 +14,7 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 - O texto integral dos artigos 41.º a 44.º foi confrontado directamente com o PDF alojado no domínio oficial do INATRO (páginas 15–16). As respostas e explicações correspondem aos dispositivos citados.
 - O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Código da Estrada. Esta verificação confirma a correspondência com a republicação oficial consultada, mas não substitui uma pesquisa exaustiva de todos os Boletins da República ou parecer jurídico sobre alterações posteriores.
 - **Imagens:** nenhuma. Todas as perguntas usam `imagem: null`.
-- **Originalidade:** comparação textual e por semelhança realizada com os Simulados 1, 31 e 32 disponíveis e com os Simulados 35–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
+- **Originalidade:** comparação textual e por semelhança realizada com os Exames 1, 31 e 32 disponíveis e com os Exames 35–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
 
 ## Distribuição das respostas correctas
 
