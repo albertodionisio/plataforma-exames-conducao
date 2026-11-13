@@ -20,7 +20,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-001 — Exame 2 (grátis)
-- Estado: EM CURSO — Claude-DADOS001-002 — 2026-11-13 23:07 UTC+02 — ficheiros: data/exames/exame2.js, docs/referencias-exames/exame2-mapeamento.md, public/ (imagens), index.html — último sinal: 2026-11-13 23:07 UTC+02 — assumida com autorização expressa do dono (instrução de execução, 13/11/2026)
+- Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 22:30 UTC+02 — ficheiros: data/exames/exame2.js, docs/referencias-exames/exame2-mapeamento.md, public/exames/exame2/ (imagens), data/exames/PENDENTE.md — último sinal: 2026-11-13 22:30 UTC+02 — transferência autorizada expressamente pelo dono nesta sessão; sequência: Exame 2, depois 3 e 4.
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame2.js` (novo) e `docs/referencias-exames/exame2-mapeamento.md`. Se for preciso registar o ficheiro, `index.html`/`app.js` (confirmar que nenhuma outra tarefa EM CURSO os usa).
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 2 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta para a revisão após submissão; abre no ESTRADA com cronómetro de 60 minutos, sem feedback durante a realização, resultado final e revisão comentada; mapa completo; validação automática e teste no navegador sem erros.
