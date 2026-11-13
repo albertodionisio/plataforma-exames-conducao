@@ -315,3 +315,12 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não inventar artigos, sinais, multas ou procedimentos; documentar as limitações da verificação da vigência; não alterar ficheiros partilhados reservados.
 - Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial). A comparação com os Exames 31–51 identificou sobreposição de seis competências com o bloco de peões do Exame 44 (perguntas 1, 2, 6, 8, 9 e 25); o Exame 38 mantém-se como exame dedicado a peões e a substituição será feita no Exame 44, tarefa DADOS-045. A tarefa fica LIVRE para retomar depois dessa harmonização; teste funcional no navegador pelo dono continua pendente.
 
+
+
+## DADOS-040 — Exame 39 (revisão e validação)
+- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 21:20 UTC+02 — ficheiros: data/exames/exame39.js, docs/referencias-exames/exame39-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 21:20 UTC+02
+- Pedido: rever o Exame 39 já publicado, corrigir rastreabilidade normativa e reduzir sobreposições com os restantes Exames 31–51.
+- Onde mexer: `data/exames/exame39.js` e `docs/referencias-exames/exame39-mapeamento.md`; actualizar PENDENTE e HISTORICO quando a revisão estiver concluída.
+- Pronto quando: 25 perguntas com quatro alternativas, índice correcto e explicação; artigos e sinais conferidos no Código da Estrada e no Regulamento de Sinais de Trânsito publicado no Boletim da República (Decreto n.º 51/2009); mapa pergunta-a-pergunta corrigido; validador oficial/CI aprovado. Teste visual no navegador fica para validação do dono.
+- Parcial: o Exame 39 existe com 25 perguntas e distribuição A=6/B=7/C=6/D=6. Foi localizado o exemplar oficial do Regulamento de Sinais de Trânsito no Boletim da República, I Série, n.º 38, 4.º Suplemento, de 29-09-2009 (Decreto n.º 51/2009), substituindo a dependência exclusiva da compilação CodEst. Revisão em curso para corrigir artigos de colocação dos sinais e reduzir sobreposições com os Exames 38 e 31.
+- Cuidados: não inventar imagens ou códigos de sinais; manter as respostas equilibradas; não alterar outros exames nesta tarefa.
