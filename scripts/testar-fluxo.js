@@ -120,11 +120,13 @@ const vm = require("node:vm");
   assert.ok(app.innerHTML.includes("20,0 / 20 valores"),"O resultado deve sobreviver ao recarregamento");
   await navegar("#/rever");
   assert.match(app.innerHTML,/resposta correcta/);
-  assert.equal((app.innerHTML.match(/Pergunta [0-9]+/g)||[]).length,25);
+  assert.equal((app.innerHTML.match(/revisao-pergunta/g)||[]).length,25,
+    "A revisão deve conter exactamente 25 perguntas");
   assert.match(app.innerHTML,/a tua resposta/);
   assert.equal((app.innerHTML.match(/explicacao-revisao/g)||[]).length,25,
     "A revisão deve explicar também as respostas certas");
-  assert.equal((app.innerHTML.match(/resposta correcta/g)||[]).length,25);
+  assert.equal(app.innerHTML.split("(resposta correcta)").length-1,25,
+    "A resposta correcta deve estar identificada em cada pergunta");
   // Recarregar também na rota de revisão.
   vm.runInContext(appSource,context);
   await navegar("#/rever");
