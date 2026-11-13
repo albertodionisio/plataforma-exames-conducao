@@ -327,10 +327,3 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 
-## DADOS-057 — Harmonizar Exame 44 com o catálogo 31–51
-- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-14 00:05 UTC+02 — ficheiros: data/exames/exame44.js, docs/referencias-exames/exame44-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-14 00:05 UTC+02
-- Pedido: remover sobreposições do Exame 44 com os Exames 38 e 48, preservando 25 perguntas e o equilíbrio das respostas.
-- Onde mexer: `data/exames/exame44.js` e `docs/referencias-exames/exame44-mapeamento.md`; actualizar PENDENTE e HISTORICO ao concluir.
-- Pronto quando: as perguntas repetidas sobre avarias e circulação de peões forem substituídas por competências distintas sobre transporte de passageiros, carga, dimensões e segurança; mapa pergunta-a-pergunta baseado no Código da Estrada oficial; validador/CI aprovado.
-- Parcial: o Exame 44 tem 25 perguntas, distribuição A=6/B=7/C=6/D=6. A comparação com os Exames 31–51 revelou que as perguntas 1–12 repetem o bloco de avarias do Exame 48 e as perguntas 18–24 repetem regras de circulação de peões já cobertas no Exame 38. O plano é preservar os Exames 38 e 48, mais específicos, e reorientar o Exame 44 para transporte de passageiros, carga, dimensões e segurança em passagens de nível (Código, arts. 54.º–58.º e 68.º).
-- Cuidados: manter as perguntas 13–17 sobre animais se forem únicas; evitar repetir a cobertura de materiais pulverulentos do Exame 50; preservar distribuição A=6/B=7/C=6/D=6.

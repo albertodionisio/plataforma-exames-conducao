@@ -58,13 +58,11 @@ A consulta confirma a correspondência com a republicação do Código da Estrad
 
 ## Originalidade e limitações
 
-Foi feita comparação com os ficheiros de exames publicados e acessíveis na branch `main` durante esta tarefa: Exames 1, 31, 32 e 34–37. Não foram identificadas perguntas iguais nos enunciados comparados. Existem temas gerais próximos (por exemplo, veículo avariado, peões e segurança da carga) em alguns exames, mas as competências aqui avaliadas são mais específicas, como posicionamento do triângulo, uso do colete, fila única de peões, sinalização de cortejos e limite de altura da carga.
-
-Os Exames 2–30 e 33, bem como os Exames 38–43 e 45–50, não estavam todos disponíveis como ficheiros publicados no momento da comparação. Assim, **não se declara ausência absoluta de duplicações em todo o catálogo**. Antes da publicação final, a comparação deverá ser repetida contra os 50 ficheiros.
+A comparação com os Exames 31–51 identificou que o bloco original de avaria/pré-sinalização repetia o Exame 48 e o bloco de peões repetia o Exame 38. Para preservar os exames especializados 38 (peões) e 48 (avarias/acidentes), o Exame 44 foi reorientado para transporte de passageiros, carga, circulação de animais e veículos com dimensões superiores. As perguntas 13–17 sobre animais foram mantidas por não apresentarem duplicações exactas no conjunto comparado. Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original.
 
 ## Validação técnica
 
-- Estrutura conferida: 25 perguntas numeradas de 1 a 25; quatro alternativas não vazias por pergunta; índice da resposta correcta entre 0 e 3; explicação presente; `imagem: null` em todas.
-- O validador oficial `node scripts/validar-exames.js` é executado automaticamente pelo GitHub Actions quando há alterações em `data/exames/**`; o resultado da execução deve ser consultado antes de declarar a tarefa concluída.
-- O teste de carregamento do ficheiro no formato `window.EXAMES[44]` e a validação estrutural interna serão registados após confirmação remota.
-- A validação visual do ecrã do exame não foi executada nesta tarefa de conteúdo; a integração e o teste visual pertencem à etapa de interface, sem alteração de ficheiros partilhados nesta tarefa.
+- Estrutura confirmada: 25 perguntas numeradas de 1 a 25; quatro alternativas por pergunta; índice da resposta correcta entre 0 e 3; explicação presente; `imagem: null` em todas.
+- GitHub Actions run 43469197859 concluído com sucesso: sintaxe JavaScript, teste do componente de assinaturas e validador oficial.
+- Teste visual do ecrã do exame não foi executado nesta sessão; fica para validação do dono no navegador.
+
