@@ -344,7 +344,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-059 — Equilibrar extensão das alternativas do Exame 1
-- Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 23:11 UTC+02 — ficheiros: data/exames/exame1.js, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:11 UTC+02
+- Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 23:11 UTC+02 — ficheiros: data/exames/exame1.js, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:12 UTC+02
 - Pedido: ajustar somente a formulação textual das alternativas do Exame 1 para eliminar a tendência de a resposta correcta ser a mais longa.
 - Limites obrigatórios: não alterar enunciados, resposta correcta, índice da resposta, sentido jurídico, conteúdo essencial, contexto, tema, dificuldade, explicações, imagens nem a ordem das perguntas. Não criar uma segunda resposta correcta. Reformular apenas palavras das alternativas, mantendo exactamente a mesma ideia de cada uma; alternativas podem ter comprimentos iguais. Não alterar a resposta correcta apenas para manipular o padrão.
-- Pronto quando: 25 perguntas continuam com quatro alternativas e o mesmo índice correcto; nenhuma resposta correcta fica como única alternativa mais longa; todas as alternativas mantêm o significado original; comparação automática confirma que os campos não autorizados não mudaram; validador oficial/CI aprovado.
+- Parcial: 17 alternativas foram reformuladas apenas na linguagem. Commit publicado e confirmado: `7714408f2d48e583131b3a3decb2a6049890ed85`. Verificação remota: 25 perguntas, quatro opções por pergunta; todos os índices correctos preservados; nenhum enunciado, explicação, imagem, tema, dificuldade, numeração ou outro campo foi alterado. Nenhuma resposta correcta é a única alternativa mais longa; nas perguntas 1, 11 e 23 há apenas empate no maior comprimento. O estado CI/status ainda não foi devolvido pelo GitHub; não declarar a tarefa concluída até essa verificação.
