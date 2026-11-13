@@ -1,12 +1,12 @@
-# Simulado 32 — mapa de rastreabilidade (DADOS-033)
+# Exame 32 — mapa de rastreabilidade (DADOS-033)
 
 Conteúdo **original** do ESTRADA (não vem do APK). Foco: prioridade de passagem e cedência de passagem. Sessão: Claude-DADOS033, 2026-11-13.
 
 ## Fonte e vigência
 
 - **Fonte:** Código da Estrada de Moçambique, texto do PDF `assets/codigodeestrada.pdf` (incluído no APK de referência em `original/`). Cada referência abaixo indica artigo, número e página do PDF (numeração do ficheiro PDF, 86 páginas).
-- **Diploma e ano:** o PDF não traz o cabeçalho do diploma. O Código foi aprovado em 2011 (ver o mapa do Simulado 31). **Por confirmar:** número do diploma no Boletim da República.
-- **Vigência:** o texto de 2011 mantinha-se em vigor segundo a notícia citada no mapa do Simulado 31 (16-06-2026, proposta de lei de autorização para rever o Código). **Por confirmar** antes do lançamento que não foi publicada entretanto uma versão nova.
+- **Diploma e ano:** o PDF não traz o cabeçalho do diploma. O Código foi aprovado em 2011 (ver o mapa do Exame 31). **Por confirmar:** número do diploma no Boletim da República.
+- **Vigência:** o texto de 2011 mantinha-se em vigor segundo a notícia citada no mapa do Exame 31 (16-06-2026, proposta de lei de autorização para rever o Código). **Por confirmar** antes do lançamento que não foi publicada entretanto uma versão nova.
 - Não foi possível consultar o Boletim da República nem o texto oficial online nesta sessão: só o PDF do repositório.
 
 ## Estado de validação
@@ -24,10 +24,10 @@ Conteúdo **original** do ESTRADA (não vem do APK). Foco: prioridade de passage
 
 ## Originalidade
 
-- Comparado com os simulados publicados no repositório à data do commit: 1 e 31. Os restantes (2 a 7, 8 a 30, 33 a 50) estão em curso ou livres e não puderam ser comparados.
-- Simulado 31 já cobre: sentido de marcha, rotunda (parte central à direita, art. 22.º, n.º 1), prudência nas intersecções (art. 22.º, n.º 3), agente regulador acima do semáforo (art. 14.º, n.º 3), cruzamento com obstáculo e com veículos largos (art. 41.º, n.os 3 e 6). Nenhuma delas foi repetida.
-- Simulado 1: pergunta 19 é sobre os deveres do peão ao atravessar (art. 104.º). As perguntas 21 a 24 deste simulado são sobre os deveres do condutor perante o peão (art. 106.º); não há repetição.
-- Artigos 38.º, 39.º, 40.º, 15.º, 65.º, 66.º, 67.º, 69.º e 106.º não aparecem nos mapas dos Simulados 1 e 31.
+- Comparado com os exames publicados no repositório à data do commit: 1 e 31. Os restantes (2 a 7, 8 a 30, 33 a 50) estão em curso ou livres e não puderam ser comparados.
+- Exame 31 já cobre: sentido de marcha, rotunda (parte central à direita, art. 22.º, n.º 1), prudência nas intersecções (art. 22.º, n.º 3), agente regulador acima do semáforo (art. 14.º, n.º 3), cruzamento com obstáculo e com veículos largos (art. 41.º, n.os 3 e 6). Nenhuma delas foi repetida.
+- Exame 1: pergunta 19 é sobre os deveres do peão ao atravessar (art. 104.º). As perguntas 21 a 24 deste exame são sobre os deveres do condutor perante o peão (art. 106.º); não há repetição.
+- Artigos 38.º, 39.º, 40.º, 15.º, 65.º, 66.º, 67.º, 69.º e 106.º não aparecem nos mapas dos Exames 1 e 31.
 
 ## Mapa das 25 perguntas
 
