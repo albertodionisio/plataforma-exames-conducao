@@ -105,6 +105,12 @@ const vm = require("node:vm");
   await new Promise(resolve=>setImmediate(resolve));
   assert.ok(app.innerHTML.includes("20,0 / 20 valores"));
   assert.match(app.innerHTML,/APROVADO/);
+  assert.ok(app.innerHTML.includes("class='semaforo aprovado'"));
+  assert.ok(app.innerHTML.includes("class='luz verde'"));
+  const cssResultados=fs.readFileSync(path.join(root,"styles-resultados.css"),"utf8");
+  assert.ok(cssResultados.includes(".semaforo.aprovado .luz.verde"));
+  assert.ok(cssResultados.includes(".semaforo.reprovado .luz.vermelha"));
+  assert.ok(cssResultados.includes("background:#555"));
   assert.match(app.innerHTML,/Rever exame/);
   assert.equal(intervalCallback,null,"O cronómetro deve parar após a submissão automática");
   assert.equal(JSON.parse(sessionStorage.getItem("ultima")).res.aprovado,true);
@@ -116,6 +122,9 @@ const vm = require("node:vm");
   assert.match(app.innerHTML,/resposta correcta/);
   assert.equal((app.innerHTML.match(/Pergunta [0-9]+/g)||[]).length,25);
   assert.match(app.innerHTML,/a tua resposta/);
+  assert.equal((app.innerHTML.match(/explicacao-revisao/g)||[]).length,25,
+    "A revisão deve explicar também as respostas certas");
+  assert.equal((app.innerHTML.match(/resposta correcta/g)||[]).length,25);
   // Recarregar também na rota de revisão.
   vm.runInContext(appSource,context);
   await navegar("#/rever");
@@ -137,6 +146,8 @@ const vm = require("node:vm");
   await concluirComAcertos(42,22);
   assert.ok(app.innerHTML.includes("17,6 / 20 valores"));
   assert.match(app.innerHTML,/REPROVADO/);
+  assert.ok(app.innerHTML.includes("class='semaforo reprovado'"));
+  assert.ok(app.innerHTML.includes("class='luz vermelha'"));
 
   // A submissão manual com perguntas em branco pede confirmação.
   await navegar("#/exame/38");
