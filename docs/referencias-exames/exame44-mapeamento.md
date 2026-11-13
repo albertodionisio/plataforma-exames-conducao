@@ -28,8 +28,8 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: segurança rodoviár
 | 12 | Marcas reflectivas em veículos pesados | Identificar os veículos pesados e reboques abrangidos pelo limite de peso ou comprimento e as marcas amarelas exigidas. | Art. 91.º, n.º 4 |
 | 13 | Controlo de animais na via | Manter o domínio sobre a marcha dos animais e evitar perigo ou embaraço ao trânsito. | Art. 100.º, n.º 1 |
 | 14 | Animais em pontes, túneis e passagens de nível | Fazer os animais seguir a passo nesses locais. | Art. 100.º, n.º 2 |
-| 15 | Entrada de gado na via pública | Assinalar devidamente a entrada dos animais na via. | Art. 100.º, n.º 3 |
-| 16 | Acesso de gado à via | Utilizar caminhos ou serventias destinados à entrada de animais. | Art. 100.º, n.º 3 |
+| 15 | Entrada de gado na via pública | Assinalar devidamente a entrada dos animais e utilizar caminhos ou serventias destinados a esse fim. | Art. 100.º, n.º 3 |
+| 16 | Iluminação de animais em grupo | Utilizar uma lanterna de luz branca, visível nos dois sentidos, quando a sinalização luminosa for obrigatória. | Art. 100.º, n.º 4 |
 | 17 | Animais soltos na via pública | Reconhecer a proibição de deixar animais vaguear de modo a impedir ou fazer perigar o trânsito. | Art. 100.º, n.º 5 |
 | 18 | Percurso dos peões | Identificar passeios, pistas e passagens destinadas aos peões e a utilização das bermas na sua falta. | Art. 102.º, n.º 1 |
 | 19 | Circulação de peões na faixa de rodagem | Aplicar a possibilidade excepcional de circulação com prudência quando os locais próprios não existam ou não possam ser utilizados. | Art. 102.º, n.º 2, al. b) |
