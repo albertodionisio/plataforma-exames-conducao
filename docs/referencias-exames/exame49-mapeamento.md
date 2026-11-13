@@ -57,5 +57,5 @@ Perguntas redigidas de forma original e não copiadas do APK.
 - 25 perguntas; quatro alternativas não vazias; um índice correcto válido; explicação por pergunta.
 - Distribuição: A=7, B=6, C=6, D=6.
 - Todas as imagens são `null`.
-- Validação estrutural interna aprovada; validador oficial/CI a confirmar após publicação.
+- GitHub Actions run 43488179416 aprovado no commit 4a8aa66802006617da714da138c06b0090d13377 (sintaxe, testes de fluxo/assinaturas e validador oficial). A revisão de sobreposições do bloco 45–51 continua em curso.
 - Teste no navegador adiado para verificação conjunta após o Exame 51.
