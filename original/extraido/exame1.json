@@ -1,0 +1,1200 @@
+{
+  "exame": 1,
+  "identificador_no_apk": "exame1",
+  "total_perguntas": 25,
+  "fonte": {
+    "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+    "sha256_apk": "95d90835006bb68cdc6ed6093ef9a0a843d0632ed81810aa7722ab46dabc1da2",
+    "extractor": "tools/extrair_apk.py v1.0"
+  },
+  "perguntas": [
+    {
+      "numero": 1,
+      "indice_global": 0,
+      "enunciado": "O sinal indica:",
+      "alternativas": [
+        "Existência de controlo de tráfego adiante.",
+        "Controle policial por pirilampos.",
+        "Congestionamento de tráfego.",
+        ""
+      ],
+      "resposta_correcta": "B",
+      "resposta_correcta_indice": 1,
+      "imagem": {
+        "recurso_id": 2131231150,
+        "recurso": "drawable/exame1_1",
+        "ficheiro": "imagens/exame1/exame1_1.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_1.jpg",
+        "sha256": "f02f4f8da1ffb89045a7af575ed91084a9c160cc945f2848ab416fbebdb2276f",
+        "largura": 1001,
+        "altura": 553,
+        "media_cinza": 228.3,
+        "desvio_cinza": 53.9,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[0]",
+          "pergunta": "pergunta[0]",
+          "opcoes": "opcoes[0]",
+          "respostaCorrecta": "respostaCorrecta[0]",
+          "exame": "exame[0]"
+        }
+      }
+    },
+    {
+      "numero": 2,
+      "indice_global": 1,
+      "enunciado": "Os automóveis classificam-se em: ",
+      "alternativas": [
+        "Ligeiros e Pesados.",
+        "Ligeiros, Pesados e Motociclos.",
+        "Motociclos, Ciclomotores, Triciclos, Quadriciclos, Ligeiros e Pesados.",
+        "Ligeiros, Pesados e Mistos"
+      ],
+      "resposta_correcta": "A",
+      "resposta_correcta_indice": 0,
+      "imagem": {
+        "recurso_id": 2131231161,
+        "recurso": "drawable/exame1_2",
+        "ficheiro": "imagens/exame1/exame1_2.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_2.jpg",
+        "sha256": "237f5a2e9938a77af9561ce484bc854638da3e2e68fbc2e253371472fb3eabd0",
+        "largura": 1004,
+        "altura": 553,
+        "media_cinza": 123.7,
+        "desvio_cinza": 42.6,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[1]",
+          "pergunta": "pergunta[1]",
+          "opcoes": "opcoes[1]",
+          "respostaCorrecta": "respostaCorrecta[1]",
+          "exame": "exame[1]"
+        }
+      }
+    },
+    {
+      "numero": 3,
+      "indice_global": 2,
+      "enunciado": "É aconselhável viajar à noite para evitar a fadiga?",
+      "alternativas": [
+        "Não, porque o sono aparece mais facilmente.",
+        "Sim, se a viagem é longa.",
+        "Sim, porque há menos tráfego.",
+        "Sim, viajar durante à noite é sempre mais seguro"
+      ],
+      "resposta_correcta": "A",
+      "resposta_correcta_indice": 0,
+      "imagem": {
+        "recurso_id": 2131231168,
+        "recurso": "drawable/exame1_3",
+        "ficheiro": "imagens/exame1/exame1_3.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_3.jpg",
+        "sha256": "04e8fa13543aa4aa93136ca71d39f5ac91d7f65146207353d5baa985de228b6f",
+        "largura": 1003,
+        "altura": 553,
+        "media_cinza": 17.0,
+        "desvio_cinza": 16.6,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[2]",
+          "pergunta": "pergunta[2]",
+          "opcoes": "opcoes[2]",
+          "respostaCorrecta": "respostaCorrecta[2]",
+          "exame": "exame[2]"
+        }
+      }
+    },
+    {
+      "numero": 4,
+      "indice_global": 3,
+      "enunciado": "O que indica o sinal de informação?",
+      "alternativas": [
+        "Área reservada para automóveis ligeiros.",
+        "Área reservada para táxis.",
+        "Parque de estacionamento para automóveis ligeiros de passageiros.",
+        ""
+      ],
+      "resposta_correcta": "A",
+      "resposta_correcta_indice": 0,
+      "imagem": {
+        "recurso_id": 2131231169,
+        "recurso": "drawable/exame1_4",
+        "ficheiro": "imagens/exame1/exame1_4.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_4.jpg",
+        "sha256": "d7dc862b9a3f4d567443b3356388d288d5335c9a38ac8f82702ef905d9db297a",
+        "largura": 1004,
+        "altura": 551,
+        "media_cinza": 114.1,
+        "desvio_cinza": 57.3,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[3]",
+          "pergunta": "pergunta[3]",
+          "opcoes": "opcoes[3]",
+          "respostaCorrecta": "respostaCorrecta[3]",
+          "exame": "exame[3]"
+        }
+      }
+    },
+    {
+      "numero": 5,
+      "indice_global": 4,
+      "enunciado": "Que veículo deve retroceder para dar passagem ao outro, numa passagem estreita sem sinalização onde não seja possível efectuar o cruzamento?",
+      "alternativas": [
+        "O veículo mais pesado.",
+        "O veículo com maior largura.",
+        "O veículo que está mais próximo do local em que o cruzamento seja possível.",
+        "O veiculo que desce se for numa via de inclinação acentuada."
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231170,
+        "recurso": "drawable/exame1_5",
+        "ficheiro": "imagens/exame1/exame1_5.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_5.jpg",
+        "sha256": "74936420a731a93de96df59c6f3c44f7e404424e4ec692a40b4ed14b86aa9451",
+        "largura": 1003,
+        "altura": 552,
+        "media_cinza": 128.2,
+        "desvio_cinza": 87.7,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[4]",
+          "pergunta": "pergunta[4]",
+          "opcoes": "opcoes[4]",
+          "respostaCorrecta": "respostaCorrecta[4]",
+          "exame": "exame[4]"
+        }
+      }
+    },
+    {
+      "numero": 6,
+      "indice_global": 5,
+      "enunciado": "Deve utilizar-se as luzes de perigo...",
+      "alternativas": [
+        "Ao estacionar em segunda fila.",
+        "Para avisar os outros utentes que o veiculo vai fazer a marcha atrás.",
+        "Em caso de imobilização por acidente ou avaria, se origina perigo para os demais utentes da via.",
+        "Apenas quando o veículo esteja a ser rebocado."
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231171,
+        "recurso": "drawable/exame1_6",
+        "ficheiro": "imagens/exame1/exame1_6.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_6.jpg",
+        "sha256": "de3e7348336c20f5de7907f7405007d5daf4600d89beffa733e1bb6df576991b",
+        "largura": 1003,
+        "altura": 552,
+        "media_cinza": 88.2,
+        "desvio_cinza": 38.4,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[5]",
+          "pergunta": "pergunta[5]",
+          "opcoes": "opcoes[5]",
+          "respostaCorrecta": "respostaCorrecta[5]",
+          "exame": "exame[5]"
+        }
+      }
+    },
+    {
+      "numero": 7,
+      "indice_global": 6,
+      "enunciado": "O que indica a marca rodoviária branca?",
+      "alternativas": [
+        "Indica existência de bandas sonoras.",
+        "Indica a redução de filas de trânsito.",
+        "Indica a existência de lombas.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231172,
+        "recurso": "drawable/exame1_7",
+        "ficheiro": "imagens/exame1/exame1_7.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_7.jpg",
+        "sha256": "a2ce62ac67983543793b6d69f5b5d727c32472f1c40deddeb84279ba37b7ffd1",
+        "largura": 1003,
+        "altura": 552,
+        "media_cinza": 85.7,
+        "desvio_cinza": 39.7,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[6]",
+          "pergunta": "pergunta[6]",
+          "opcoes": "opcoes[6]",
+          "respostaCorrecta": "respostaCorrecta[6]",
+          "exame": "exame[6]"
+        }
+      }
+    },
+    {
+      "numero": 8,
+      "indice_global": 7,
+      "enunciado": "Atirar do veículo ou abandonar na via objectos ou substâncias, constitui contravenção:",
+      "alternativas": [
+        "Leve.",
+        "Grave.",
+        "Média.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231173,
+        "recurso": "drawable/exame1_8",
+        "ficheiro": "imagens/exame1/exame1_8.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_8.jpg",
+        "sha256": "9ca7151ddaf6f39f75cbbd1e6cf9a619f892dea17a9a631ad12af87d97ac25eb",
+        "largura": 1004,
+        "altura": 550,
+        "media_cinza": 121.4,
+        "desvio_cinza": 55.6,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[7]",
+          "pergunta": "pergunta[7]",
+          "opcoes": "opcoes[7]",
+          "respostaCorrecta": "respostaCorrecta[7]",
+          "exame": "exame[7]"
+        }
+      }
+    },
+    {
+      "numero": 9,
+      "indice_global": 8,
+      "enunciado": "Entende-se por visibilidade reduzida ou insuficiente, quando o condutor não possa avistar a faixa de rodagem em toda a sua largura numa extensão de:?",
+      "alternativas": [
+        "Pelo menos, 50 metros.",
+        "Pelo menos, 200 metros.",
+        "Pelo menos, 100 metros.",
+        "Pelo menos, 25 metros"
+      ],
+      "resposta_correcta": "A",
+      "resposta_correcta_indice": 0,
+      "imagem": {
+        "recurso_id": 2131231174,
+        "recurso": "drawable/exame1_9",
+        "ficheiro": "imagens/exame1/exame1_9.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_9.jpg",
+        "sha256": "705b36d48bd8e1494cbe99a9e38136dee1faad1b928ea962f28d409aa8c78f4b",
+        "largura": 1004,
+        "altura": 555,
+        "media_cinza": 20.2,
+        "desvio_cinza": 18.7,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[8]",
+          "pergunta": "pergunta[8]",
+          "opcoes": "opcoes[8]",
+          "respostaCorrecta": "respostaCorrecta[8]",
+          "exame": "exame[8]"
+        }
+      }
+    },
+    {
+      "numero": 10,
+      "indice_global": 9,
+      "enunciado": "O que indica o sinal?",
+      "alternativas": [
+        "Sentido proibido.",
+        "Trânsito proibido.",
+        "Trânsito proibido a automóveis ligeiros de passageiros.",
+        ""
+      ],
+      "resposta_correcta": "B",
+      "resposta_correcta_indice": 1,
+      "imagem": {
+        "recurso_id": 2131231151,
+        "recurso": "drawable/exame1_10",
+        "ficheiro": "imagens/exame1/exame1_10.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_10.jpg",
+        "sha256": "4929379c5d97845aaf3efd77511cf4a7c87345378b55bab70f8777a6d7e8c8a0",
+        "largura": 1003,
+        "altura": 554,
+        "media_cinza": 242.1,
+        "desvio_cinza": 41.9,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D",
+        "enunciado_repetido_no_exame"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[9]",
+          "pergunta": "pergunta[9]",
+          "opcoes": "opcoes[9]",
+          "respostaCorrecta": "respostaCorrecta[9]",
+          "exame": "exame[9]"
+        }
+      }
+    },
+    {
+      "numero": 11,
+      "indice_global": 10,
+      "enunciado": "Uma das consequências de aumentar a velocidade, é que...",
+      "alternativas": [
+        "Melhora o tempo de reacção.",
+        "Aumenta a gravidade das lesões em caso de acidente.",
+        "Reduz a distância de travagem.",
+        "Reduz as distâncias."
+      ],
+      "resposta_correcta": "B",
+      "resposta_correcta_indice": 1,
+      "imagem": {
+        "recurso_id": 2131231152,
+        "recurso": "drawable/exame1_11",
+        "ficheiro": "imagens/exame1/exame1_11.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_11.jpg",
+        "sha256": "6b28158621857bef489a3187cad2e8f3ba576631878cfeb9219ba3845e920032",
+        "largura": 997,
+        "altura": 553,
+        "media_cinza": 109.8,
+        "desvio_cinza": 78.8,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[10]",
+          "pergunta": "pergunta[10]",
+          "opcoes": "opcoes[10]",
+          "respostaCorrecta": "respostaCorrecta[10]",
+          "exame": "exame[10]"
+        }
+      }
+    },
+    {
+      "numero": 12,
+      "indice_global": 11,
+      "enunciado": "O trânsito de veículos ou de animais é feito...",
+      "alternativas": [
+        "Do lado direito das faixas de rodagem e o mais próximo possível das bermas ou passeios.",
+        "Próximo do eixo da via.",
+        "Pela esquerda das faixas de rodagem e o mais próximo possível das bermas ou passeios, mas a uma distância destes que permita evitar qualquer acidente.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231153,
+        "recurso": "drawable/exame1_12",
+        "ficheiro": "imagens/exame1/exame1_12.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_12.jpg",
+        "sha256": "b410cb1beb5bad4a456087adce311ab6d57e405123a0c78850643d3a1f31eedc",
+        "largura": 1000,
+        "altura": 553,
+        "media_cinza": 143.8,
+        "desvio_cinza": 35.7,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[11]",
+          "pergunta": "pergunta[11]",
+          "opcoes": "opcoes[11]",
+          "respostaCorrecta": "respostaCorrecta[11]",
+          "exame": "exame[11]"
+        }
+      }
+    },
+    {
+      "numero": 13,
+      "indice_global": 12,
+      "enunciado": "Numa auto-estrada, pode-se inverter o sentido de marcha?",
+      "alternativas": [
+        "Sempre que possível.",
+        "Nunca.",
+        "Sim, se a manobra for feita lentamente.",
+        ""
+      ],
+      "resposta_correcta": "B",
+      "resposta_correcta_indice": 1,
+      "imagem": {
+        "recurso_id": 2131231154,
+        "recurso": "drawable/exame1_13",
+        "ficheiro": "imagens/exame1/exame1_13.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_13.jpg",
+        "sha256": "0913161501afe2a3ef9a7d3fb087f0adf49050697e58611b1fec079db7959720",
+        "largura": 1003,
+        "altura": 554,
+        "media_cinza": 136.6,
+        "desvio_cinza": 50.9,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[12]",
+          "pergunta": "pergunta[12]",
+          "opcoes": "opcoes[12]",
+          "respostaCorrecta": "respostaCorrecta[12]",
+          "exame": "exame[12]"
+        }
+      }
+    },
+    {
+      "numero": 14,
+      "indice_global": 13,
+      "enunciado": "O que indica o sinal",
+      "alternativas": [
+        "Paragem proibida a veículos que transportam substâncias perigosas.",
+        "Paragem obrigatória para veículos que transportam substâncias perigosas.",
+        "Área reservada para veículos que transportam substâncias perigosas.",
+        ""
+      ],
+      "resposta_correcta": "A",
+      "resposta_correcta_indice": 0,
+      "imagem": {
+        "recurso_id": 2131231155,
+        "recurso": "drawable/exame1_14",
+        "ficheiro": "imagens/exame1/exame1_14.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_14.jpg",
+        "sha256": "d67a5fb4ef295b4d096bfc686acd0c7869a5a8e9a3536755a6d90d7c7fa85e44",
+        "largura": 1002,
+        "altura": 550,
+        "media_cinza": 238.6,
+        "desvio_cinza": 51.1,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[13]",
+          "pergunta": "pergunta[13]",
+          "opcoes": "opcoes[13]",
+          "respostaCorrecta": "respostaCorrecta[13]",
+          "exame": "exame[13]"
+        }
+      }
+    },
+    {
+      "numero": 15,
+      "indice_global": 14,
+      "enunciado": "Que comunica o condutor aos outros utentes da via?",
+      "alternativas": [
+        "Que vai voltar para o lado esquerdo do volante.",
+        "Que vai voltar para o lado direito do volante.",
+        "Que vai reduzir a velocidade.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231156,
+        "recurso": "drawable/exame1_15",
+        "ficheiro": "imagens/exame1/exame1_15.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_15.jpg",
+        "sha256": "bada59e066c9c0870106240879efd5dc7c7d2cb3677728b8b6ff70f8e3dedb9a",
+        "largura": 1003,
+        "altura": 552,
+        "media_cinza": 86.6,
+        "desvio_cinza": 70.4,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[14]",
+          "pergunta": "pergunta[14]",
+          "opcoes": "opcoes[14]",
+          "respostaCorrecta": "respostaCorrecta[14]",
+          "exame": "exame[14]"
+        }
+      }
+    },
+    {
+      "numero": 16,
+      "indice_global": 15,
+      "enunciado": "O que indica o sinal?",
+      "alternativas": [
+        "A presença de cancela motorizada ao centro.",
+        "A presença de ponte móvel.",
+        "A presença de entroncamento oblíquo à esquerda.",
+        ""
+      ],
+      "resposta_correcta": "B",
+      "resposta_correcta_indice": 1,
+      "imagem": {
+        "recurso_id": 2131231157,
+        "recurso": "drawable/exame1_16",
+        "ficheiro": "imagens/exame1/exame1_16.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_16.jpg",
+        "sha256": "9e209997ced2e13c97ec13046289c0de3de278218c04c90c7dfd1b5307390b46",
+        "largura": 1002,
+        "altura": 552,
+        "media_cinza": 229.9,
+        "desvio_cinza": 60.0,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D",
+        "enunciado_repetido_no_exame"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[15]",
+          "pergunta": "pergunta[15]",
+          "opcoes": "opcoes[15]",
+          "respostaCorrecta": "respostaCorrecta[15]",
+          "exame": "exame[15]"
+        }
+      }
+    },
+    {
+      "numero": 17,
+      "indice_global": 16,
+      "enunciado": "O que indica o sinal?",
+      "alternativas": [
+        "Pré-advertência da direcção de saída.",
+        "Advertência da direcção de saída.",
+        "Direcção de saída.",
+        ""
+      ],
+      "resposta_correcta": "A",
+      "resposta_correcta_indice": 0,
+      "imagem": {
+        "recurso_id": 2131231158,
+        "recurso": "drawable/exame1_17",
+        "ficheiro": "imagens/exame1/exame1_17.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_17.jpg",
+        "sha256": "2c3238060220a868a255151abc0a6fb3fd230a2b4b512391c32d167c82f3c33c",
+        "largura": 1005,
+        "altura": 554,
+        "media_cinza": 184.7,
+        "desvio_cinza": 96.1,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D",
+        "enunciado_repetido_no_exame",
+        "enunciado_igual_ao_da_pergunta_anterior"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[16]",
+          "pergunta": "pergunta[16]",
+          "opcoes": "opcoes[16]",
+          "respostaCorrecta": "respostaCorrecta[16]",
+          "exame": "exame[16]"
+        }
+      }
+    },
+    {
+      "numero": 18,
+      "indice_global": 17,
+      "enunciado": "Considera-se morte por acidente de viação:",
+      "alternativas": [
+        "Aquele que ocorre até 30 dias após o registo do sinistro.",
+        "Só aquele que ocorre no local do sinistro.",
+        "Só aquele que ocorre à caminho da unidade sanitária.",
+        "Aquele que ocorre 30 dias depois do registro do sinistro."
+      ],
+      "resposta_correcta": "A",
+      "resposta_correcta_indice": 0,
+      "imagem": {
+        "recurso_id": 2131231159,
+        "recurso": "drawable/exame1_18",
+        "ficheiro": "imagens/exame1/exame1_18.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_18.jpg",
+        "sha256": "8012578daefbec77e80fd7d5b628b7de4a84bc274fccaac4ae95882312cc811b",
+        "largura": 1003,
+        "altura": 552,
+        "media_cinza": 96.1,
+        "desvio_cinza": 65.3,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[17]",
+          "pergunta": "pergunta[17]",
+          "opcoes": "opcoes[17]",
+          "respostaCorrecta": "respostaCorrecta[17]",
+          "exame": "exame[17]"
+        }
+      }
+    },
+    {
+      "numero": 19,
+      "indice_global": 18,
+      "enunciado": "Os peões, para atravessar a faixa de rodagem...",
+      "alternativas": [
+        "Podem fazê-lo sem utilizar as passagens para peões, se não existe nenhuma a uma distância inferior a 10 m.",
+        "Estão sempre obrigados a utilizar a passagem desnivelada para peões.",
+        "Têm sempre prioridade de passagem.",
+        "Devem certificar-se de que a distância e a velocidade dos veículos, permite fazê-lo sem perigo de acidente"
+      ],
+      "resposta_correcta": "D",
+      "resposta_correcta_indice": 3,
+      "imagem": {
+        "recurso_id": 2131231160,
+        "recurso": "drawable/exame1_19",
+        "ficheiro": "imagens/exame1/exame1_19.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_19.jpg",
+        "sha256": "37915086e02734407debbb6cdfed1d4b7d82c891eee99db1e2177f03da27b43f",
+        "largura": 1004,
+        "altura": 551,
+        "media_cinza": 102.9,
+        "desvio_cinza": 55.2,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[18]",
+          "pergunta": "pergunta[18]",
+          "opcoes": "opcoes[18]",
+          "respostaCorrecta": "respostaCorrecta[18]",
+          "exame": "exame[18]"
+        }
+      }
+    },
+    {
+      "numero": 20,
+      "indice_global": 19,
+      "enunciado": "Nos veículos de mercadorias, a carga deve ser dispostas de modo a que:",
+      "alternativas": [
+        "O principal peso fique sobre o eixo da retaguarda.",
+        "Fique livre o maior espaço possível à retaguarda da caixa de carga.",
+        "Seja assegurado o equilíbrio do veículo, parado ou em movimento.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231162,
+        "recurso": "drawable/exame1_20",
+        "ficheiro": "imagens/exame1/exame1_20.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_20.jpg",
+        "sha256": "8a92aa09676788ebe17e858a565b367b8e6e45ead57d7804e2cb603f32f98b44",
+        "largura": 1002,
+        "altura": 552,
+        "media_cinza": 86.1,
+        "desvio_cinza": 52.4,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[19]",
+          "pergunta": "pergunta[19]",
+          "opcoes": "opcoes[19]",
+          "respostaCorrecta": "respostaCorrecta[19]",
+          "exame": "exame[19]"
+        }
+      }
+    },
+    {
+      "numero": 21,
+      "indice_global": 20,
+      "enunciado": "O que indica o sinal?",
+      "alternativas": [
+        "Trânsito proibido a peões, animais e veículos automóveis.",
+        "Trânsito proibido a peões, animais e veículos não automóveis.",
+        "Trânsito proibido a animais e veículos não automóveis.",
+        ""
+      ],
+      "resposta_correcta": "B",
+      "resposta_correcta_indice": 1,
+      "imagem": {
+        "recurso_id": 2131231163,
+        "recurso": "drawable/exame1_21",
+        "ficheiro": "imagens/exame1/exame1_21.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_21.jpg",
+        "sha256": "f265332f65435b9478be33f63f1eee0f2170dedbbc4dfdaad9b4b5d366696114",
+        "largura": 1004,
+        "altura": 552,
+        "media_cinza": 230.1,
+        "desvio_cinza": 58.6,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D",
+        "enunciado_repetido_no_exame"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[20]",
+          "pergunta": "pergunta[20]",
+          "opcoes": "opcoes[20]",
+          "respostaCorrecta": "respostaCorrecta[20]",
+          "exame": "exame[20]"
+        }
+      }
+    },
+    {
+      "numero": 22,
+      "indice_global": 21,
+      "enunciado": "É proibido ultrapassar:",
+      "alternativas": [
+        "Em todas as curvas.",
+        "Depois dos cruzamentos.",
+        "Nas estradas que só tenham uma via de trânsito para cada sentido.",
+        "Imediatamente antes e nas passagens para peões."
+      ],
+      "resposta_correcta": "D",
+      "resposta_correcta_indice": 3,
+      "imagem": {
+        "recurso_id": 2131231164,
+        "recurso": "drawable/exame1_22",
+        "ficheiro": "imagens/exame1/exame1_22.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_22.jpg",
+        "sha256": "fdbf2a3650c3f8c19660ae42153c4c4528da469cfd23f6c301708f532cfad118",
+        "largura": 1003,
+        "altura": 554,
+        "media_cinza": 102.0,
+        "desvio_cinza": 55.6,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[21]",
+          "pergunta": "pergunta[21]",
+          "opcoes": "opcoes[21]",
+          "respostaCorrecta": "respostaCorrecta[21]",
+          "exame": "exame[21]"
+        }
+      }
+    },
+    {
+      "numero": 23,
+      "indice_global": 22,
+      "enunciado": "Os automóveis pesados de passageiros, fora das localidades, não devem exceder a velocidade instantânea de:?",
+      "alternativas": [
+        "80 km/h.",
+        "120 km/h.",
+        "100 km/h.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231165,
+        "recurso": "drawable/exame1_23",
+        "ficheiro": "imagens/exame1/exame1_23.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_23.jpg",
+        "sha256": "874fbe0f79fd1e2515afa37d91dd876d893d87fe20cd5f91547635c0fe3df988",
+        "largura": 1001,
+        "altura": 555,
+        "media_cinza": 138.5,
+        "desvio_cinza": 53.1,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[22]",
+          "pergunta": "pergunta[22]",
+          "opcoes": "opcoes[22]",
+          "respostaCorrecta": "respostaCorrecta[22]",
+          "exame": "exame[22]"
+        }
+      }
+    },
+    {
+      "numero": 24,
+      "indice_global": 23,
+      "enunciado": "Todos os condutores de veículos ou animais são obrigados a...",
+      "alternativas": [
+        "Abandonar os veículos nos locais de estacionamento sem motivos justificados.",
+        "Reduzir ou suspender intencionalmente a circulação, formando filas de trânsito desnecessárias.",
+        "Obedecer ao sinal de paragem feito pelas autoridades com competência para fiscalizar o trânsito.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231166,
+        "recurso": "drawable/exame1_24",
+        "ficheiro": "imagens/exame1/exame1_24.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_24.jpg",
+        "sha256": "7e5cab4df79261c3e3c6e1d1718ec162c38baf4601719cb65dd37275e0918882",
+        "largura": 1005,
+        "altura": 555,
+        "media_cinza": 143.5,
+        "desvio_cinza": 56.7,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[23]",
+          "pergunta": "pergunta[23]",
+          "opcoes": "opcoes[23]",
+          "respostaCorrecta": "respostaCorrecta[23]",
+          "exame": "exame[23]"
+        }
+      }
+    },
+    {
+      "numero": 25,
+      "indice_global": 24,
+      "enunciado": "O que indica o sinal?",
+      "alternativas": [
+        "Sentido obrigatório para frente.",
+        "Via rápida.",
+        "Existência de portagem na via em que segue.",
+        ""
+      ],
+      "resposta_correcta": "C",
+      "resposta_correcta_indice": 2,
+      "imagem": {
+        "recurso_id": 2131231167,
+        "recurso": "drawable/exame1_25",
+        "ficheiro": "imagens/exame1/exame1_25.jpg",
+        "ficheiro_no_apk": "res/drawable/exame1_25.jpg",
+        "sha256": "b45582af95b2a3a8a838c37d520c413971b2d7f3698c5cecb33425c734200baa",
+        "largura": 1003,
+        "altura": 552,
+        "media_cinza": 123.7,
+        "desvio_cinza": 54.4,
+        "provavel_em_branco": false
+      },
+      "explicacao": null,
+      "tema": null,
+      "estado": {
+        "enunciado_alternativas_resposta": "recuperado do APK (por validar legalmente)",
+        "explicacao": "não existe no APK",
+        "tema": "não existe no APK",
+        "imagem_associada_por": "mesmo índice nos arrays img e pergunta"
+      },
+      "avisos": [
+        "alternativas_vazias:D",
+        "enunciado_repetido_no_exame"
+      ],
+      "origem": {
+        "apk": "Codigo_e_Sinais_de_Transito_1_1.apk",
+        "classe": "Lcom/app/codigoesinaisdetransito/BaseDadosExame;",
+        "metodo": "<init>",
+        "campos": {
+          "img": "img[24]",
+          "pergunta": "pergunta[24]",
+          "opcoes": "opcoes[24]",
+          "respostaCorrecta": "respostaCorrecta[24]",
+          "exame": "exame[24]"
+        }
+      }
+    }
+  ]
+}

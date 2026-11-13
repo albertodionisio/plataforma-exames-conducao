@@ -1,0 +1,19 @@
+{
+  "estrutural": [
+    {
+      "elemento": "explicacao",
+      "exames": [
+        1
+      ],
+      "motivo": "o APK não guarda explicações; o campo fica null"
+    },
+    {
+      "elemento": "tema",
+      "exames": [
+        1
+      ],
+      "motivo": "o APK não guarda tema ou matéria por pergunta; o campo fica null"
+    }
+  ],
+  "por_pergunta": []
+}
