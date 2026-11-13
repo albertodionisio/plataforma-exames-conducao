@@ -13,8 +13,8 @@ window.EXAMES[1] = [
   "opcoes": [
    "Visibilidade reduzida.",
    "Pavimento escorregadio.",
-   "Congestionamento de tráfego.",
-   "Uma operação de controlo policial com luzes intermitentes."
+   "Congestionamento do tráfego mais à frente.",
+   "Controlo policial com luzes intermitentes."
   ],
   "correta": 3,
   "explicacao": "É o sinal A17, «Controlo policial por pirilampos». É um sinal de perigo: o condutor deve reduzir a velocidade e ficar atento ao que está à frente."
@@ -47,10 +47,10 @@ window.EXAMES[1] = [
    "src": "public/cenas/pergunta-03-estrada-de-noite.jpg"
   },
   "opcoes": [
-   "Não, porque de noite o sono aparece mais facilmente.",
+   "Não; à noite o sono surge mais facilmente.",
    "Sim, se a viagem for longa.",
    "Sim, porque há menos tráfego.",
-   "Sim, viajar de noite é sempre mais seguro."
+   "Sim, viajar de noite é sempre mais seguro para todos."
   ],
   "correta": 0,
   "explicacao": "De noite o corpo pede descanso e o sono aparece mais depressa, o que aumenta o risco de adormecer ao volante. Em viagens longas, faça pausas e evite conduzir durante a noite."
@@ -81,9 +81,9 @@ window.EXAMES[1] = [
   "imagem": null,
   "opcoes": [
    "O veículo mais largo.",
-   "O veículo que transportar mais passageiros.",
+   "O veículo que transportar o maior número de passageiros.",
    "O veículo mais pesado.",
-   "O veículo que estiver mais perto do local onde o cruzamento é possível."
+   "O veículo mais próximo do ponto onde se podem cruzar."
   ],
   "correta": 3,
   "explicacao": "Recua quem estiver mais perto de um ponto onde o cruzamento seja possível, porque é o que gasta menos manobra para libertar a passagem. Numa via de inclinação acentuada, recua o veículo que vai a subir, salvo se a manobra for manifestamente mais fácil para o que desce."
@@ -97,8 +97,8 @@ window.EXAMES[1] = [
   "opcoes": [
    "Para avisar que o veículo vai fazer marcha atrás.",
    "Ao estacionar em segunda fila.",
-   "Quando o veículo fica imobilizado por acidente ou avaria e isso cria perigo para os outros utentes.",
-   "Só quando o veículo está a ser rebocado."
+   "Se uma avaria ou acidente imobilizar o veículo e criar perigo para os outros utentes.",
+   "Apenas quando o veículo estiver a ser rebocado por outro veículo, sem poder circular pelos seus próprios meios."
   ],
   "correta": 2,
   "explicacao": "As luzes de perigo avisam os outros utentes de uma situação de risco, como uma avaria ou um acidente que deixa o veículo parado na via. Não servem para estacionar em segunda fila nem para indicar marcha atrás."
@@ -177,7 +177,7 @@ window.EXAMES[1] = [
   "imagem": null,
   "opcoes": [
    "Reduz o desgaste dos travões.",
-   "Aumenta a gravidade das lesões em caso de acidente.",
+   "Agrava as lesões num acidente.",
    "Melhora o tempo de reação.",
    "Reduz a distância de travagem."
   ],
@@ -193,7 +193,7 @@ window.EXAMES[1] = [
   "opcoes": [
    "Pelo meio da faixa de rodagem.",
    "Pela direita da faixa de rodagem, o mais perto possível da berma ou do passeio.",
-   "Pela esquerda da faixa de rodagem, o mais perto possível da berma ou do passeio, mas a uma distância que permita evitar acidentes.",
+   "Pela esquerda, junto à berma ou passeio, mantendo distância segura.",
    "Junto ao eixo da via."
   ],
   "correta": 2,
@@ -243,7 +243,7 @@ window.EXAMES[1] = [
   },
   "opcoes": [
    "Que vai parar de repente.",
-   "Que vai virar à direita.",
+   "Que pretende mudar de direcção para a direita.",
    "Que vai virar à esquerda.",
    "Que vai reduzir a velocidade."
   ],
@@ -310,8 +310,8 @@ window.EXAMES[1] = [
   "opcoes": [
    "Têm sempre prioridade de passagem.",
    "Estão sempre obrigados a usar a passagem desnivelada para peões.",
-   "Devem certificar-se de que a distância e a velocidade dos veículos permitem atravessar sem perigo.",
-   "Podem atravessar fora das passagens para peões, se não houver nenhuma a menos de 10 metros."
+   "Devem confirmar que a distância e a velocidade dos veículos permitem atravessar em segurança.",
+   "Podem atravessar fora das passagens para peões quando não existir nenhuma a menos de 10 metros do local."
   ],
   "correta": 2,
   "explicacao": "O peão deve ter atenção à distância e à velocidade dos veículos antes de atravessar. Ter prioridade não dispensa a atenção."
@@ -341,7 +341,7 @@ window.EXAMES[1] = [
    "src": "public/sinais/E47-transito-proibido-peoes-animais-veiculos-nao-automoveis.png"
   },
   "opcoes": [
-   "Trânsito proibido a peões, animais e veículos automóveis.",
+   "Trânsito proibido a peões, animais e a todos os veículos automóveis.",
    "Trânsito proibido a animais e veículos não automóveis.",
    "Trânsito proibido a peões, animais e veículos não automóveis.",
    "Trânsito proibido apenas a peões e animais."
@@ -359,7 +359,7 @@ window.EXAMES[1] = [
    "Imediatamente antes das passagens para peões e nelas.",
    "Em todas as curvas.",
    "Depois dos cruzamentos.",
-   "Nas estradas com uma só via em cada sentido."
+   "Nas estradas que tenham apenas uma via de circulação em cada sentido."
   ],
   "correta": 0,
   "explicacao": "Não se deve ultrapassar junto às passagens para peões, porque o veículo ultrapassado pode tapar a visão de peões que estão a atravessar."
@@ -386,7 +386,7 @@ window.EXAMES[1] = [
   "enunciado": "Todos os condutores de veículos ou de animais são obrigados a:",
   "imagem": null,
   "opcoes": [
-   "Obedecer ao sinal de paragem feito pelas autoridades com competência para fiscalizar o trânsito.",
+   "Obedecer ao sinal de paragem das autoridades competentes para fiscalizar o trânsito.",
    "Abandonar os veículos nos locais de estacionamento sem motivo justificado.",
    "Parar sempre que outro condutor lhes faça sinal de luzes.",
    "Reduzir ou suspender de propósito a circulação, formando filas de trânsito sem necessidade."
@@ -405,7 +405,7 @@ window.EXAMES[1] = [
   },
   "opcoes": [
    "Via rápida.",
-   "A existência de portagem na via em que segue.",
+   "Portagem na via em que circula.",
    "Sentido obrigatório para a frente.",
    "Um posto de abastecimento a 300 metros."
   ],
