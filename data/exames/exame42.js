@@ -1,23 +1,21 @@
 // Exame 42 — 25 perguntas originais do ESTRADA.
-// Foco: semáforos, sinais dos agentes e ordens de trânsito.
-// Base legal: Regulamento de Sinais de Trânsito (arts. 8.º, 9.º e 17.º–20.º) e Código da Estrada (art. 14.º).
 // Rastreabilidade: docs/referencias-exames/exame42-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[42] = [
   {
     "numero": 1,
-    "tema": "Hierarquia das ordens do agente",
+    "tema": "Entidades competentes para fiscalizar a sinalização",
     "dificuldade": "fácil",
-    "enunciado": "Um agente regulador do trânsito dá uma ordem diferente da indicada pelo semáforo. Qual indicação deve o condutor cumprir?",
+    "enunciado": "Qual das seguintes entidades está expressamente incluída entre as competentes para fiscalizar os sinais de trânsito em Moçambique?",
     "imagem": null,
     "opcoes": [
-      "A ordem do agente regulador do trânsito.",
-      "O semáforo, em qualquer circunstância.",
-      "A indicação do veículo que segue atrás.",
-      "A regra geral de prioridade, sem observar o agente."
+      "Apenas as empresas privadas de transporte colectivo.",
+      "Apenas as seguradoras dos veículos.",
+      "A Polícia de Trânsito.",
+      "Exclusivamente as associações de automobilistas."
     ],
-    "correta": 0,
-    "explicacao": "As ordens dos agentes reguladores do trânsito prevalecem sobre as prescrições dos sinais e sobre as regras de trânsito. (Código da Estrada, art. 14.º, n.º 3; Regulamento, art. 8.º)."
+    "correta": 2,
+    "explicacao": "A fiscalização dos sinais de trânsito compete, entre outras entidades, à Polícia de Trânsito, à PRM, à Polícia Municipal, ao pessoal técnico do INAV e da ANE e a outras entidades indicadas no Regulamento. (Regulamento de Sinais de Trânsito, art. 6.º)."
   },
   {
     "numero": 2,
@@ -171,18 +169,18 @@ window.EXAMES[42] = [
   },
   {
     "numero": 12,
-    "tema": "Cruzamento bloqueado com verde",
+    "tema": "Altura dos semáforos junto à via",
     "dificuldade": "difícil",
-    "enunciado": "O semáforo está verde, mas há uma fila que impede a saída e o veículo ficaria parado dentro do cruzamento. O que deve fazer?",
+    "enunciado": "Um semáforo destinado a regular o trânsito de veículos está colocado ao lado da faixa de rodagem. Qual é o intervalo de altura regulamentar, medido do solo ao seu limite inferior?",
     "imagem": null,
     "opcoes": [
-      "Entrar, porque a luz verde elimina a obrigação de prudência.",
-      "Avançar até ao centro e esperar.",
-      "Não entrar enquanto for previsível ficar imobilizado no cruzamento e dificultar ou impedir a passagem.",
-      "Buzinar até os outros veículos saírem."
+      "Entre 1,0 m e 1,5 m.",
+      "Entre 2 m e 3,5 m.",
+      "Entre 4 m e 4,5 m.",
+      "Exactamente 5 m."
     ],
-    "correta": 2,
-    "explicacao": "Mesmo com luz verde, o condutor não deve entrar num cruzamento ou entroncamento se for previsível ficar imobilizado e dificultar ou impedir a passagem. (Art. 17.º, n.º 1, al. c))."
+    "correta": 1,
+    "explicacao": "Os sinais luminosos destinados a regular o trânsito de veículos, quando colocados ao lado da faixa de rodagem, devem ficar entre 2 m e 3,5 m de altura, medida do solo ao limite inferior. (Regulamento, art. 20.º, n.º 8)."
   },
   {
     "numero": 13,
@@ -351,18 +349,18 @@ window.EXAMES[42] = [
   },
   {
     "numero": 24,
-    "tema": "Hierarquia da sinalização temporária",
+    "tema": "Raquetas e bandeirolas na circulação alternada",
     "dificuldade": "difícil",
-    "enunciado": "Num troço em obras, um sinal temporário de proibição contradiz o semáforo permanente. Qual indicação deve o condutor cumprir?",
+    "enunciado": "Numa zona de obras, um operador regula manualmente a circulação alternada com uma raqueta ou bandeirola A64. O que significam as duas faces?",
     "imagem": null,
     "opcoes": [
-      "O semáforo permanente, porque os sinais luminosos prevalecem sempre.",
-      "A sinalização temporária, porque ocupa posição superior aos sinais luminosos na hierarquia regulamentar.",
-      "A marca rodoviária, independentemente das restantes indicações.",
-      "A regra geral de circulação, ignorando ambas as sinalizações."
+      "A face verde indica sentido autorizado e a vermelha sentido não autorizado.",
+      "A face vermelha indica prioridade e a verde obriga a parar.",
+      "As duas faces indicam apenas redução de velocidade.",
+      "A face verde destina-se aos peões e a vermelha aos ciclistas."
     ],
-    "correta": 1,
-    "explicacao": "A hierarquia regulamentar coloca os sinais dos agentes em primeiro lugar, seguidos dos sinais temporários, dos sinais luminosos e, por fim, dos sinais gráficos verticais e horizontais. Assim, prevalece a sinalização temporária sobre o semáforo permanente. (Regulamento de Sinais de Trânsito, art. 8.º, n.º 2, als. a) a d))."
+    "correta": 0,
+    "explicacao": "As raquetas e bandeirolas A64 têm uma face verde e outra vermelha, significando, respectivamente, sentido autorizado e sentido não autorizado. (Regulamento, art. 13.º, n.º 4, al. a))."
   },
   {
     "numero": 25,
