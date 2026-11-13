@@ -305,6 +305,15 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
 
 
+## DADOS-039 — Exame 38 (conteúdo original)
+- Estado: EM CURSO — ChatGPT-ESTRADA-2 — 2026-11-13 15:07 UTC+02 — ficheiros: data/exames/exame38.js, docs/referencias-exames/exame38-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 15:07 UTC+02
+- Foco temático prioritário: Passagem de peões e convivência com utilizadores vulneráveis.
+- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis.
+- Onde mexer: `data/exames/exame38.js` e `docs/referencias-exames/exame38-mapeamento.md`.
+- Pronto quando: 25 perguntas originais com quatro alternativas, uma resposta correcta, explicação e referência normativa específica; validador oficial aprovado; revisão legal/pedagógica concluída; teste funcional no navegador confirmado pelo dono.
+- Cuidados: não inventar artigos, sinais, multas ou procedimentos; documentar as limitações da verificação da vigência; não alterar ficheiros partilhados reservados.
+- Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. Falta confirmar o resultado do GitHub Actions e o teste funcional no navegador pelo dono.
+
 ## DADOS-040 — Exame 39 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Sinalização vertical: perigo e cedência de passagem.
