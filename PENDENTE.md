@@ -6,6 +6,13 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Interface (FE-)
 
+## GER-012 — Terminologia oficial: substituir «simulado» por «exame» em toda a plataforma
+- Estado: EM CURSO — ChatGPT-3 — 2026-11-13 — ficheiros: index.html, app.js, config.js, docs/, README.md, REGRAS.md, INSTRUCOES.md, PENDENTE.md, HISTORICO.md, data/exames/PENDENTE.md e restantes textos de interface — último sinal: 2026-11-13
+- Pedido: por decisão expressa do dono, a plataforma deve usar «exame» como designação oficial em todos os pontos apresentados ao utilizador e na documentação do produto. Eliminar «simulado/simulados» como rótulo do produto, catálogo, navegação, planos, instruções, resultados, perguntas frequentes e textos de apoio.
+- Onde mexer: todos os ficheiros textuais do repositório em que a palavra seja usada como designação do produto; verificar especialmente interface, configuração, documentação, instruções, histórico e listas de tarefas.
+- Pronto quando: pesquisa global documentada; textos de interface e documentação actualizados para «exame/exames»; nomes técnicos, identificadores, caminhos e referências históricas só são alterados quando seguro e sem quebrar compatibilidade; testes de sintaxe/validação passam; revisão final confirma que não restam rótulos visíveis «simulado/simulados».
+- Cuidados: não alterar perguntas, respostas, pontuação, preços, planos ou regras funcionais. O dono autorizou expressamente esta alteração global, incluindo os ficheiros partilhados, sem alterar a lógica das tarefas concorrentes. Não renomear identificadores/caminhos técnicos se isso puder quebrar compatibilidade; registar excepções técnicas inevitáveis.
+
 ## FE-002 — Resultado final com semáforo e revisão pedagógica
 - Estado: EM CURSO — Claude-FE002 — 2026-11-12 13:42 UTC+02 — ficheiros: app.js, styles.css, index.html (só se necessário), scripts/testar-fluxo.js — último sinal: 2026-11-12 13:42 UTC+02
 - Nota: o dono autorizou em 2026-11-12 o uso de `app.js`, `styles.css` e `index.html` apesar das reservas paradas de DADOS-001 (Claude-1, desde 2026-11-09) e FE-001 (ChatGPT-FE001, desde 2026-11-10). Essas tarefas continuam com o seu estado; esta só usa os ficheiros partilhados.
