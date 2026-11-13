@@ -29,7 +29,7 @@ Conteúdo reformulado para evitar a repetição de competências de circulação
 | 17 | Competência para determinar cassação | Identificar a autoridade com competência exclusiva para cassar o título. | Art. 149.º, n.º 4 |
 | 18 | Registo de infracções e acidentes | Identificar a entidade que recebe os autos para cadastro. | Art. 150.º, n.º 2 |
 | 19 | Apreensão por suspeita de falsificação | Reconhecer a apreensão preventiva perante suspeita de contrafacção ou viciação. | Art. 159.º, n.º 1, al. a) |
-| 20 | Apreensão por validade expirada | Aplicar a apreensão preventiva e a possibilidade de guia substitutiva. | Art. 159.º, n.ºs 1 e 2 |
+| 20 | Responsabilidade do titular do documento do veículo | Identificar quando a responsabilidade pode recair no titular se não for possível identificar o condutor. | Art. 140.º, n.º 3, al. b) |
 | 21 | Apreensão por ilegibilidade | Reconhecer a apreensão quando indicações ou averbamentos ficam ininteligíveis. | Art. 159.º, n.ºs 1 e 2 |
 | 22 | Apreensão para cumprimento de inibição | Identificar a finalidade da apreensão do título. | Art. 160.º, n.º 1 |
 | 23 | Prazo para entregar título | Aplicar o prazo de quinze dias para entrega após notificação. | Art. 160.º, n.º 3 |
@@ -40,7 +40,7 @@ Conteúdo reformulado para evitar a repetição de competências de circulação
 - 25 perguntas, quatro alternativas e uma resposta correcta por pergunta.
 - Foco diferente dos exames de circulação, sinalização, manobras, estacionamento, veículos, acidentes e condução defensiva já auditados.
 - Todas as perguntas usam imagem nula.
-- Distribuição das respostas: A=5, B=9, C=7, D=4.
+- Distribuição das respostas: A=7, B=6, C=6, D=6.
 - Conteúdo confrontado com os artigos indicados; não foram incluídos valores de multas sujeitos a actualização.
 - Validador automático, CI e teste visual no navegador ainda pendentes.
 
