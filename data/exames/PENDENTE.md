@@ -314,13 +314,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não inventar artigos, sinais, multas ou procedimentos; documentar as limitações da verificação da vigência; não alterar ficheiros partilhados reservados.
 - Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial); falta apenas o teste funcional no navegador pelo dono.
 
-## DADOS-040 — Exame 39 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-ESTRADA-2 — 2026-11-13 15:20 UTC+02 — ficheiros: data/exames/exame39.js, docs/referencias-exames/exame39-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 15:20 UTC+02
-- Foco temático prioritário: Sinalização vertical: perigo e cedência de passagem.
-- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
-- Onde mexer: `data/exames/exame39.js` (novo) e `docs/referencias-exames/exame39-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
 ## DADOS-041 — Exame 40 (conteúdo original)
 - Estado: LIVRE
