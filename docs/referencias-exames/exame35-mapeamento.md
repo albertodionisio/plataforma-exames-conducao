@@ -1,4 +1,4 @@
-# Simulado 35 — mapa de rastreabilidade (DADOS-036)
+# Exame 35 — mapa de rastreabilidade (DADOS-036)
 
 Conteúdo original do ESTRADA. Foco: mudança de direcção, mudança de via e sinalização da manobra.
 
