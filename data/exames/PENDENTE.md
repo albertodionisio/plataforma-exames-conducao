@@ -264,14 +264,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
 - Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
-## DADOS-035 — Simulado 34 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-DADOS035 — 2026-11-13 UTC — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md — último sinal: 2026-11-13 UTC
-- Foco temático prioritário: Ultrapassagem e cruzamento de veículos.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
-- Onde mexer: `data/exames/exame34.js` (novo) e `docs/referencias-exames/exame34-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
-
 ## DADOS-036 — Simulado 35 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Mudança de direcção e mudança de via.
