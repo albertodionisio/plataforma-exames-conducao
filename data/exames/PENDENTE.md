@@ -265,44 +265,43 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
 
 ## DADOS-035 — Simulado 34 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-DADOS035 — 2026-11-13 UTC — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md — último sinal: 2026-11-13 UTC
-- Foco temático prioritário: Ultrapassagem e cruzamento de veículos.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis.
-- Onde mexer: `data/exames/exame34.js` e `docs/referencias-exames/exame34-mapeamento.md`.
-- Parcial: os dois ficheiros foram publicados. O exame contém 25 perguntas, quatro alternativas, explicações e referências aos artigos 41.º–44.º; o mapa identifica a fonte oficial do INATRO e as páginas consultadas. Verificação estrutural estática passou (25 perguntas, índices válidos, quatro opções, explicações e referências presentes); respostas equilibradas A=6, B=7, C=6, D=6. Comparação exacta com os exames 1, 31 e 32 não encontrou enunciados repetidos.
-- Verificação adicional (2026-11-13): a leitura remota do ficheiro confirmou novamente 25 perguntas, quatro alternativas, índices de resposta válidos, explicações e distribuição A=6, B=7, C=6, D=6. O mapa foi corrigido para uma tabela compacta e a alteração foi confirmada no GitHub (commit `d497e56e9d06b16c049a45488788f44c662eb625`).
-- Falta: executar efectivamente `node scripts/validar-exames.js` no ambiente do repositório, testar o exame no navegador e completar a comparação de duplicações quando os outros exames estiverem disponíveis. A tentativa de clonar o repositório para executar Node falhou por indisponibilidade de DNS/rede neste ambiente; não se declara que o validador oficial foi executado. A vigência consolidada da legislação não foi auditada.
-- Cuidados: não alterar ficheiros partilhados nem exames de outras tarefas. Não marcar como concluída antes dos testes mínimos.
+- Estado: EM CURSO — ChatGPT-DADOS035 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md — último sinal: 2026-11-13 UTC+02
+- Foco: ultrapassagem e cruzamento de veículos.
+- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=6/B=7/C=6/D=6. Revisão jurídica confrontada com os artigos 41.º–44.º do PDF oficial do INATRO (páginas 15–16), sem contradição material detectada. Comparação textual e por semelhança sem candidatos a duplicação face aos exames 1, 31, 32 e 35–37 actualmente acessíveis.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Falta: teste funcional no navegador pelo dono; comparação com os exames 2–30, 33 e 38–50 quando forem publicados; execução do script oficial quando o ambiente tiver acesso ao repositório. Não marcar como concluída antes desses pontos.
 
 
-- Parcial (2026-11-13): publicados `data/exames/exame35.js` e `docs/referencias-exames/exame35-mapeamento.md`. O exame contém 25 perguntas originais sobre sinalização, segurança e mudança de direcção à direita/esquerda, com artigos 23.º, 42.º, 45.º e 46.º; distribuição A=7, B=6, C=6, D=6. Verificação estrutural remota confirmou 25 perguntas, numeração, quatro opções, índices e explicações sem erros. A fonte oficial do INATRO foi identificada, mas não foi concluída auditoria consolidada de vigência. Falta executar o validador oficial no ambiente Node, testar no navegador e comparar com todos os exames publicados/disponíveis.
 ## DADOS-036 — Simulado 35 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-DADOS036 — 2026-11-13 UTC — ficheiros: data/exames/exame35.js, docs/referencias-exames/exame35-mapeamento.md — último sinal: 2026-11-13 UTC
-- Foco temático prioritário: Mudança de direcção e mudança de via.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
-- Onde mexer: `data/exames/exame35.js` (novo) e `docs/referencias-exames/exame35-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Estado: EM CURSO — ChatGPT-DADOS036 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame35.js, docs/referencias-exames/exame35-mapeamento.md — último sinal: 2026-11-13 UTC+02
+- Foco: sinalização, segurança e mudança de direcção.
+- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 23.º, 42.º, 45.º e 46.º do PDF oficial do INATRO (páginas 7, 15 e 17). As perguntas 5, 13 e 22 foram corrigidas para testar, respectivamente, os n.os 2, 3 e 4 do artigo 45.º, com a regra expressa de posicionamento à direita.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32 e 34, 36 e 37 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
+- Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
+
 
 ## DADOS-037 — Simulado 36 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-DADOS037 — 2026-11-13 UTC — ficheiros: data/exames/exame36.js, docs/referencias-exames/exame36-mapeamento.md — último sinal: 2026-11-13 UTC
-- Foco temático prioritário: Velocidade, distância de segurança e travagem.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
-- Onde mexer: `data/exames/exame36.js` (novo) e `docs/referencias-exames/exame36-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Estado: EM CURSO — ChatGPT-DADOS037 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame36.js, docs/referencias-exames/exame36-mapeamento.md — último sinal: 2026-11-13 UTC+02
+- Foco: velocidade, distância de segurança e travagem.
+- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 20.º, 29.º, 30.º, 32.º, 33.º e 34.º do PDF oficial do INATRO (páginas 6, 10, 11 e 12); não foi detectada contradição material.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34, 35 e 37 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
+- Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
 
-- Parcial (2026-11-13): publicados `data/exames/exame36.js` e `docs/referencias-exames/exame36-mapeamento.md`. Contém 25 perguntas originais sobre distância longitudinal/lateral, princípios de velocidade, moderação e limites especiais, com artigos 20.º, 29.º, 30.º, 32.º, 33.º e 34.º. Verificação estrutural remota: 25 perguntas, numeração sequencial, quatro opções preenchidas, índices correctos, explicações e imagens nulas; distribuição A=7, B=6, C=6, D=6. Fonte primária INATRO identificada; auditoria consolidada de alterações legais ainda pendente. Validador oficial não executado porque o ambiente não conseguiu clonar o repositório (falha DNS). Teste no navegador e comparação global de duplicações pendentes.
 
 ## DADOS-038 — Simulado 37 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-DADOS038 — 2026-11-13 UTC — ficheiros: data/exames/exame37.js, docs/referencias-exames/exame37-mapeamento.md — último sinal: 2026-11-13 UTC
-- Foco temático prioritário: Paragem, estacionamento e imobilização.
-- Pedido: criar um simulado original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
-- Onde mexer: `data/exames/exame37.js` (novo) e `docs/referencias-exames/exame37-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os simulados 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes simulados; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
+- Estado: EM CURSO — ChatGPT-DADOS038 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame37.js, docs/referencias-exames/exame37-mapeamento.md — último sinal: 2026-11-13 UTC+02
+- Foco: paragem, estacionamento e imobilização.
+- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 49.º, 50.º e 51.º do PDF oficial do INATRO (páginas 18–19); não foi detectada contradição material.
+- Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O script oficial node scripts/validar-exames.js não foi executado: clone bloqueado por falha DNS ao GitHub.
+- Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste simulado.
+- Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34–36 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
+- Falta: teste funcional no navegador pelo dono; comparação com o catálogo restante quando publicado; execução do script oficial quando o ambiente tiver acesso. Não marcar como concluída antes desses pontos.
 
-- Parcial (2026-11-13): publicados `data/exames/exame37.js` e `docs/referencias-exames/exame37-mapeamento.md`. Contém 25 perguntas originais sobre definição de paragem/estacionamento, posicionamento e proibições, com artigos 49.º, 50.º e 51.º. Verificação estrutural remota: 25 perguntas, numeração sequencial, quatro opções preenchidas, índices correctos, explicações e imagens nulas; distribuição A=7, B=6, C=6, D=6. Fontes INATRO e CodEst consultadas; auditoria consolidada de alterações legais ainda pendente. Validador oficial não executado devido à falha DNS ao clonar; teste no navegador e comparação global de duplicações pendentes.
 
 ## DADOS-039 — Simulado 38 (conteúdo original)
 - Estado: LIVRE
