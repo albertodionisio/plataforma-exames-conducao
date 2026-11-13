@@ -19,22 +19,22 @@ Conteúdo original do ESTRADA, não extraído do APK. Exame integrador avançado
 | 7 | Triângulo na via | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 91.º, n.º 3 |
 | 8 | Criança em motociclo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 94.º, n.º 1 |
 | 9 | Objectos transportados em motociclo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 95.º, n.º 2 |
-| 10 | Categoria e tipo de veículo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
-| 11 | Veículo sem seguro | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 157.º |
+| 10 | Carta de condutor profissional | Identificar a habilitação exigida para a prestação de serviços remunerados de transporte. | Art. 88.º, n.º 1 |
+| 11 | Direito à contraprova de álcool | Reconhecer o dever de notificar o resultado positivo e o direito de requerer contraprova imediata. | Art. 82.º, n.º 2 |
 | 12 | Carga acima do limite | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
 | 13 | Carga e estabilidade | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
 | 14 | Sinal de cedência e peões | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
 | 15 | Ordem do agente e semáforo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 14.º, n.º 3 |
 | 16 | Amarelo e distância de paragem | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
-| 17 | Sinal de perigo e velocidade | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Regulamento, art. 24.º; Código, arts. 29.º e 32.º |
-| 18 | Ultrapassagem e visibilidade | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
+| 17 | Impedimento temporário de conduzir | Aplicar o período de impedimento após resultado positivo e a excepção de prova requerida pelo condutor. | Art. 83.º, n.º 1 |
+| 18 | Impossibilidade de teste no ar expirado | Identificar as alternativas legais de colheita de sangue ou exame médico. | Art. 82.º, n.º 8 |
 | 19 | Passagem de nível | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 67.º, n.º 2 |
-| 20 | Distância frontal e chuva | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
+| 20 | Condutor substituto após impedimento | Aplicar a excepção à imobilização/remoção quando um substituto consentido apresenta teste negativo. | Art. 84.º, n.º 3 |
 | 21 | Reparação após avaria | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 90.º, n.º 3 |
 | 22 | Teste de álcool após acidente | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 85.º, n.º 1 |
-| 23 | Aparelho durante a condução | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 89.º, n.ºs 1 e 2 |
+| 23 | Proibição de lançar objectos para fora do veículo | Reconhecer a proibição de lançar objectos para o exterior durante a circulação. | Art. 78.º, n.º 3 |
 | 24 | Paragem em todas as direcções | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Código da Estrada, art. 39.º, n.º 3 |
-| 25 | Imobilização por acidente | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
+| 25 | Emissões e derrames do veículo | Aplicar a proibição de circulação com emissões excessivas ou derrame de óleo/substâncias. | Art. 78.º, n.º 1 |
 
 ## Distribuição das respostas correctas
 - A: 7
@@ -48,9 +48,9 @@ A distribuição não segue sequência cíclica e a resposta correcta não é si
 Todas as perguntas usam `imagem: null`. Os cenários são apresentados por texto; não foram associados sinais gráficos sem correspondência oficial comprovada.
 
 ## Revisão normativa e limitações
-As perguntas foram confrontadas com a republicação do Código da Estrada disponibilizada pelo INATRO, incluindo regras sobre urgência, acidentes, avarias, sinalização, passageiros, carga, motociclos, habilitação, seguro e utilização de aparelhos. As questões que mencionam sinais do Regulamento de Sinais de Trânsito usam apenas referências já documentadas nos mapas dos exames anteriores; a confirmação do regulamento em fonte oficial continua necessária.
+As perguntas foram confrontadas com a republicação do Código da Estrada disponibilizada pelo INATRO, incluindo regras sobre urgência, acidentes, avarias, sinalização, passageiros, carga, motociclos, fiscalização de álcool, impedimento de conduzir, habilitação profissional e poluição do veículo. As questões que mencionam sinais do Regulamento de Sinais de Trânsito usam apenas referências já documentadas nos mapas dos exames anteriores; a confirmação do regulamento em fonte oficial continua necessária.
 
-A comparação integral de duplicações com os exames 1–50 não é exaustiva nesta entrega, porque nem todos os ficheiros estão publicados e acessíveis na branch. O mapa regista esta limitação para a auditoria global. Não foram incluídas coimas nem sanções.
+A auditoria de duplicações identificou sobreposições com os Exames 34–36, 45, 48–50. Para reduzir repetições directas, as perguntas 10, 11, 17, 18, 20, 23 e 25 foram substituídas por competências dos artigos 78.º, 82.º–84.º e 88.º, mantendo o carácter integrador do exame. A comparação com os restantes exames 1–30 continua dependente da sua futura incorporação. O mapa regista esta limitação para a auditoria global. Não foram incluídas coimas nem sanções.
 
 ## Originalidade e validação
 Perguntas redigidas de forma original, com ênfase em cenários que combinam mais de uma regra.
