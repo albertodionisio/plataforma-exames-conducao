@@ -56,5 +56,5 @@ A consulta documental não constitui parecer jurídico nem certifica, por si só
 O exame foi reformulado para remover a sobreposição extensa com o Exame 44, que já cobre o transporte de passageiros e carga. O novo foco é a classificação legal de veículos e as regras de reboques, com base nos arts. 108.º–116.º.
 - 25 perguntas; quatro alternativas por pergunta; um índice correcto válido e explicação por pergunta.
 - Distribuição: A=6, B=6, C=6, D=7.
-- Validação automática e comparação com os demais exames: pendentes de execução após a publicação deste bloco.
+- GitHub Actions run 43488394173 aprovado no commit 974f150ff81974da2d556443f8d0aea7f3a41e22 (sintaxe, testes de fluxo/assinaturas e validador oficial). A auditoria de duplicações entre todos os exames 31–51 continua em curso.
 - Teste funcional no navegador fica reservado ao dono.
