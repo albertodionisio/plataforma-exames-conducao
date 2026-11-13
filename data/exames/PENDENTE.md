@@ -277,7 +277,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-036 — Exame 35 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-DADOS036 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame35.js, docs/referencias-exames/exame35-mapeamento.md — último sinal: 2026-11-13 UTC+02
+- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 19:45 UTC+02 — ficheiros: data/exames/exame35.js, docs/referencias-exames/exame35-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 19:45 UTC+02
 - Foco: sinalização, segurança e mudança de direcção.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 23.º, 42.º, 45.º e 46.º do PDF oficial do INATRO (páginas 7, 15 e 17). As perguntas 5, 13 e 22 foram corrigidas para testar, respectivamente, os n.os 2, 3 e 4 do artigo 45.º, com a regra expressa de posicionamento à direita.
 - Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
