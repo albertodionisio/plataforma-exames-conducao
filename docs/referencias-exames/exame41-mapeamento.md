@@ -57,7 +57,7 @@ As perguntas foram confrontadas com o Regulamento de Sinais de Trânsito aprovad
 
 ## Originalidade e validação
 
-A comparação com os Exames 31–51 identificou sobreposição das antigas perguntas 23 e 24 com a hierarquia de sinais já testada no Exame 39 e da antiga pergunta 25 com a regra de cor das marcas testada nas perguntas 2 e 21. Foram substituídas por marcas R3 (proibição de motociclos), R4 (aproximação de passagem de nível) e R6 (obstáculos ou construções perigosas), todas descritas no art. 45.º do Regulamento. A comparação com os Exames 2–30 será feita quando forem incorporados a partir do aplicativo original.
+A comparação cruzada identificou também que a antiga pergunta 21 sobre a caixa amarela R2 repetia a regra de não bloquear cruzamentos já avaliada no Exame 42. Foi substituída pela marca R10 — verificação obrigatória, descrita no art. 45.º do Regulamento. As perguntas 23–25 já tinham sido substituídas para remover sobreposições com o Exame 39 e entre marcas. A comparação com os Exames 2–30 será feita quando forem incorporados a partir do aplicativo original.
 
 - 25 perguntas, quatro alternativas não vazias, índice correcto válido e explicação por pergunta.
 - Distribuição: A=7, B=7, C=6, D=5.
