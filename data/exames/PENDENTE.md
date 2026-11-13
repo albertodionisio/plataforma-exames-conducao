@@ -297,7 +297,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-038 — Exame 37 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-DADOS038 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame37.js, docs/referencias-exames/exame37-mapeamento.md — último sinal: 2026-11-13 UTC+02
+- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 20:45 UTC+02 — ficheiros: data/exames/exame37.js, docs/referencias-exames/exame37-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 20:45 UTC+02
 - Foco: paragem, estacionamento e imobilização.
 - Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 49.º, 50.º e 51.º do PDF oficial do INATRO (páginas 18–19); não foi detectada contradição material.
 - Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
