@@ -1,6 +1,4 @@
 // Exame 41 — 25 perguntas originais do ESTRADA.
-// Foco: sinalização horizontal, marcas rodoviárias e inscrições.
-// Base legal: Regulamento de Sinais de Trânsito (arts. 40.º–45.º) e Código da Estrada (art. 14.º).
 // Rastreabilidade: docs/referencias-exames/exame41-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[41] = [
@@ -306,18 +304,18 @@ window.EXAMES[41] = [
   },
   {
     "numero": 21,
-    "tema": "Caixa amarela R2",
+    "tema": "R10 — verificação obrigatória",
     "dificuldade": "difícil",
-    "enunciado": "Num cruzamento congestionável existe uma área amarela R2. O trânsito à frente está parado e o veículo ficaria imobilizado dentro dessa área. O que deve fazer?",
+    "enunciado": "Um condutor encontra no pavimento a marca R10, «Verificação obrigatória». Que indicação deve cumprir?",
     "imagem": null,
     "opcoes": [
-      "Não entrar na área, mesmo que tenha prioridade ou autorização semafórica, se for previsível bloquear o cruzamento.",
-      "Entrar porque a prioridade permite ocupar a intersecção.",
-      "Entrar e parar sobre a marca até o trânsito avançar.",
-      "Usar a área para aguardar uma mudança de direcção."
+      "Deve seguir pela via indicada para a verificação obrigatória pela autoridade.",
+      "Deve parar apenas se encontrar um semáforo vermelho.",
+      "Pode ignorar a marca quando transporta passageiros.",
+      "Deve utilizar obrigatoriamente a berma."
     ],
     "correta": 0,
-    "explicacao": "A R2 proíbe entrar na área demarcada quando seja previsível que a intensidade do trânsito obrigue à imobilização dentro dela, mesmo havendo prioridade ou sinalização automática. (Art. 45.º, R2)."
+    "explicacao": "A marca R10 indica a via que todos os veículos devem seguir para verificação obrigatória pela autoridade. (Regulamento de Sinais de Trânsito, art. 45.º)."
   },
   {
     "numero": 22,
