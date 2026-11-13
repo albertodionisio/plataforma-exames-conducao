@@ -336,47 +336,47 @@ window.EXAMES[41] = [
   },
   {
     "numero": 23,
-    "tema": "Hierarquia das marcas rodoviárias",
-    "dificuldade": "difícil",
-    "enunciado": "Um sinal vertical válido contradiz uma marca rodoviária. Segundo a hierarquia do Código da Estrada, qual prevalece?",
+    "tema": "R3 — trânsito proibido a motociclos",
+    "dificuldade": "média",
+    "enunciado": "Uma marca R3 está inscrita no pavimento. Que proibição transmite?",
     "imagem": null,
     "opcoes": [
-      "A marca rodoviária, por estar no pavimento.",
-      "O sinal vertical, que tem posição superior às marcas rodoviárias.",
-      "A indicação do veículo que segue atrás.",
-      "A regra que permita circular mais depressa."
+      "Proíbe apenas o estacionamento de motociclos.",
+      "Proíbe o trânsito de motociclos.",
+      "Obriga os motociclos a circular à velocidade mínima indicada.",
+      "Indica uma zona exclusiva para estacionamento de motociclos."
     ],
     "correta": 1,
-    "explicacao": "Na hierarquia das prescrições, os sinais verticais prevalecem sobre as marcas rodoviárias. (Código da Estrada, art. 14.º, n.º 2, als. c) e d))."
+    "explicacao": "A marca R3 indica trânsito proibido para motociclos. (Regulamento de Sinais de Trânsito, art. 45.º, R3)."
   },
   {
     "numero": 24,
-    "tema": "Ordem do agente",
-    "dificuldade": "fácil",
-    "enunciado": "Um agente regulador manda avançar, apesar de uma marca rodoviária indicar paragem. O que deve o condutor fazer?",
+    "tema": "R4 — aproximação de passagem de nível",
+    "dificuldade": "média",
+    "enunciado": "Um condutor encontra a marca R4 no pavimento. Que informação deve retirar?",
     "imagem": null,
     "opcoes": [
-      "Obedecer à ordem do agente, que prevalece sobre as prescrições dos sinais e as regras de trânsito.",
-      "Ignorar o agente e obedecer apenas à marca.",
-      "Aguardar que os outros condutores avancem primeiro.",
-      "Escolher a indicação que lhe pareça mais segura sem atender ao agente."
+      "Está a aproximar-se de uma passagem de nível.",
+      "Tem obrigação de parar a 10 metros.",
+      "Tem prioridade sobre os veículos ferroviários.",
+      "A via passa a ser exclusiva para comboios."
     ],
     "correta": 0,
-    "explicacao": "As ordens dos agentes reguladores do trânsito prevalecem sobre as prescrições resultantes dos sinais e sobre as regras de trânsito. (Código da Estrada, art. 14.º, n.º 3)."
+    "explicacao": "A marca R4 indica a aproximação de uma passagem de nível. (Regulamento de Sinais de Trânsito, art. 45.º, R4)."
   },
   {
     "numero": 25,
-    "tema": "Marcas de cor branca e excepções",
-    "dificuldade": "difícil",
-    "enunciado": "Um condutor observa uma marca rodoviária amarela numa área de cruzamento. Pode concluir que a marca está errada porque as marcas no pavimento são sempre brancas?",
+    "tema": "R6 — obstáculos ou construções perigosas",
+    "dificuldade": "média",
+    "enunciado": "Um condutor vê listras alternadas amarelas e pretas numa estrutura junto à faixa de rodagem. O que assinalam?",
     "imagem": null,
     "opcoes": [
-      "Sim, todas as marcas são obrigatoriamente brancas, sem excepção.",
-      "Sim, o amarelo só pode ser usado em sinais verticais.",
-      "Não; o regulamento prevê excepções à regra geral da cor branca, incluindo marcas específicas como a área R2.",
-      "Não; a cor das marcas não tem qualquer significado."
+      "Uma zona de estacionamento condicionado.",
+      "Uma passagem obrigatória para peões.",
+      "A presença de obstáculos ou construções que podem constituir perigo.",
+      "O fim de uma via de trânsito."
     ],
     "correta": 2,
-    "explicacao": "O art. 40.º, n.º 3, estabelece a cor branca como regra geral, mas ressalva as excepções constantes do regulamento; a R2 é descrita como área delimitada por linhas amarelas. (Arts. 40.º, n.º 3, e 45.º, R2)."
+    "explicacao": "A marca R6, constituída por listras alternadas amarelas e pretas, assinala obstáculos ou construções que podem constituir perigo. (Regulamento de Sinais de Trânsito, art. 45.º, R6)."
   }
 ];
