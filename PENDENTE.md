@@ -6,14 +6,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Interface (FE-)
 
-## FE-006 — Integrar o Simulado 31 na aplicação
-- Estado: EM CURSO — Claude-FE006 — 2026-11-13 15:40 UTC+02 — ficheiros: index.html — último sinal: 2026-11-13 15:40 UTC+02
-- Nota: o dono autorizou a integração em 2026-11-13. Mesmo método do FE-005: uma única tag `<script>` em `index.html`, sem tocar em `app.js`, estilos nem perguntas.
-- Pedido: carregar `data/exames/exame31.js` em `index.html`, para o catálogo reconhecer o Simulado 31 como disponível.
-- Onde mexer: `index.html` (uma linha, entre `exame1.js` e `exame32.js`).
-- Pronto quando: a tag existe uma só vez, o ficheiro existe, a ordem de carregamento está certa e o simulado abre sem erros num navegador (em cópia de teste, porque o 31 está acima dos 3 gratuitos).
-- Cuidados: não alterar `app.js`, `styles.css`, `config.js` nem preços/planos; não mexer na tag do exame 32.
-
 ## FE-002 — Resultado final com semáforo e revisão pedagógica
 - Estado: EM CURSO — Claude-FE002 — 2026-11-12 13:42 UTC+02 — ficheiros: app.js, styles.css, index.html (só se necessário), scripts/testar-fluxo.js — último sinal: 2026-11-12 13:42 UTC+02
 - Nota: o dono autorizou em 2026-11-12 o uso de `app.js`, `styles.css` e `index.html` apesar das reservas paradas de DADOS-001 (Claude-1, desde 2026-11-09) e FE-001 (ChatGPT-FE001, desde 2026-11-10). Essas tarefas continuam com o seu estado; esta só usa os ficheiros partilhados.
