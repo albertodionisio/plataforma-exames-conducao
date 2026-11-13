@@ -4,7 +4,7 @@ Não reabrir estas decisões sem o dono pedir.
 
 ## Produto
 - Nome provisório: **ESTRADA**. Muda-se só em `config.js`.
-- Exames de exame de condução em Moçambique: 25 perguntas, cronómetro de 60 minutos, sem indicação de certo/errado nem explicação durante a realização; 0,8 valores por resposta certa e limiar de aprovação de 18 valores. Depois da submissão, apresentar resultado final e permitir revisão comentada de todas as perguntas.
+- Exames de condução em Moçambique: 25 perguntas, cronómetro de 60 minutos, sem indicação de certo/errado nem explicação durante a realização; 0,8 valores por resposta certa e limiar de aprovação de 18 valores. Depois da submissão, apresentar resultado final e permitir revisão comentada de todas as perguntas.
 - Catálogo de 50 exames; 3 grátis, restantes bloqueados por plano.
 - Planos e preços: ficam em `config.js` (Free, Semanal Básico, Semanal Completo, Mensal Básico, Mensal Completo). Alterar preços ou planos só com aprovação do dono.
 - As perguntas são reescritas; o site não usa o conteúdo do APK original (esse fica em `original/`, só para consulta).
