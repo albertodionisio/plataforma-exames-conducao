@@ -24,17 +24,17 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: condução defensiva
 | 12 | Uso de luzes de nevoeiro | Prevenir risco e adaptar a condução às condições reais. | Ver explicação da pergunta |
 | 13 | Máximos e encandeamento | Prevenir risco e adaptar a condução às condições reais. | Art. 61.º, n.º 5 |
 | 14 | Condução nocturna | Prevenir risco e adaptar a condução às condições reais. | Art. 61.º, n.º 1 |
-| 15 | Auscultadores durante a marcha | Prevenir risco e adaptar a condução às condições reais. | Art. 89.º, n.ºs 1 e 2 |
-| 16 | Telefone durante a condução | Prevenir risco e adaptar a condução às condições reais. | Art. 89.º, n.ºs 1 e 2 |
-| 17 | Cinto de segurança | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 1 |
-| 18 | Capacete em motociclos | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 2 |
-| 19 | Crianças em automóveis | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 4 |
-| 20 | Criança no banco traseiro | Prevenir risco e adaptar a condução às condições reais. | Art. 87.º, n.º 5 |
+| 15 | Auscultadores durante a marcha | Identificar a proibição geral de usar auscultadores sonoros durante a marcha. | Art. 89.º, n.ºs 1 e 2 |
+| 16 | Telefone durante a condução | Aplicar as excepções de auricular ou alta-voz sem manuseamento continuado. | Art. 89.º, n.ºs 1 e 2 |
+| 17 | Cinto de segurança | Reconhecer a obrigação de utilização de cintos e acessórios de segurança. | Art. 87.º, n.º 1 |
+| 18 | Capacete em motociclos | Reconhecer a obrigação e as excepções legais relativas ao capacete. | Art. 87.º, n.ºs 2 e 3 |
+| 19 | Crianças em automóveis | Aplicar a obrigação de sistema de retenção homologado e adaptado. | Art. 87.º, n.º 4 |
+| 20 | Criança no banco traseiro | Identificar a regra de transporte de crianças no banco traseiro e respectivas excepções. | Art. 87.º, n.º 5 |
 | 21 | Redução súbita da velocidade | Prevenir risco e adaptar a condução às condições reais. | Art. 29.º, n.º 2; art. 63.º, n.º 2 |
-| 22 | Marcha lenta que embaraça o trânsito | Evitar circulação em marcha injustificadamente lenta que cause embaraço aos restantes utentes. | Art. 31.º, n.º 1 |
-| 23 | Ruído produzido pelo veículo | Evitar ruídos incómodos na condução e respeitar os limites regulamentares dos aparelhos sonoros. | Art. 79.º, n.ºs 1–3 |
-| 24 | Emissões e derrames na via | Reconhecer a proibição de circulação com emissões acima dos limites ou derrame de óleo/substâncias. | Art. 78.º, n.º 1 |
-| 25 | Substituição de sinais sonoros por luminosos | Aplicar a possibilidade de substituir sinais sonoros por sinais luminosos intermitentes em condições de visibilidade insuficiente. | Art. 26.º, n.º 1 |
+| 22 | Marcha lenta que embaraça o trânsito | Evitar circulação injustificadamente lenta que cause embaraço. | Art. 31.º, n.º 1 |
+| 23 | Ruído produzido pelo veículo | Evitar ruídos incómodos na condução e respeitar limites dos aparelhos sonoros. | Art. 79.º, n.ºs 1–3 |
+| 24 | Emissões e derrames na via | Reconhecer a proibição de emissões acima dos limites e derrames de substâncias. | Art. 78.º, n.º 1 |
+| 25 | Substituição de sinais sonoros por luminosos | Aplicar a substituição de sinais sonoros por luminosos intermitentes em condições de visibilidade insuficiente. | Art. 26.º, n.º 1 |
 
 ## Distribuição das respostas correctas
 - A: 7
