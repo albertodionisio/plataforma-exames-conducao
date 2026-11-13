@@ -324,7 +324,8 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-058 — Auditoria de duplicações nos Exames 40–50
-- Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 20:56 UTC+02 — ficheiros: data/exames/exame40.js a exame51.js, respectivos mapas e data/exames/PENDENTE.md — último sinal: 2026-11-13 21:03 UTC+02
+- Estado: LIVRE
+- Parcial: execução interrompida temporariamente por prioridade expressa do dono para ajustar apenas a extensão textual das alternativas do Exame 1, sem alterar enunciados, respostas correctas, índices, explicações, imagens, temas, dificuldade ou sentido/contexto. A auditoria de duplicações dos Exames 40–51 fica por retomar exactamente do ponto registado abaixo.
 - Pedido: comparar os Exames 40–50 entre si e com os Exames 31–39, corrigindo repetições de perguntas ou competências demasiado semelhantes.
 - Pronto quando: as sobreposições relevantes forem corrigidas sem reduzir as 25 perguntas por exame; mapas pergunta-a-pergunta actualizados; distribuições de respostas preservadas; validador oficial/CI aprovado.
 - Parcial: foram detectadas sobreposições já publicadas: Exame 45 com Exame 50 (documentos, categoria da carta, seguro e fadiga); Exame 47 com Exame 35 (mudança de direcção e sinalização); Exame 49 com Exame 36 (velocidade/distância); Exame 50 com Exames 36, 38, 42, 43, 45 e 49; Exame 51 com Exames 34–36. No Exame 50 foram substituídas as perguntas 13, 16, 17, 18, 19, 20 e 24 por regras de passagem de nível, velocidade de pesados, cartas estrangeiras, cintos, prioridade à direita e álcool zero profissional. GitHub Actions run 43469766034 aprovado. Fica pendente retomar a auditoria e as correcções dos Exames 45–49 e 51.
@@ -340,3 +341,10 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Commits principais das substituições desta etapa: Exame 41 `56d33eb950ce3889024618c41347c6e18fcf4f59`; Exame 42 `7359bb385851316fc6e22b124cdecab90fc95e17`; Exame 43 `e117985d31bd1d98c4a086bcfc70b336c2cb76ce`; Exame 47 `6481826537c421c2905e7854e47f1c2839a534d5`; Exame 48 `a41349f933cb90dca3ddd4bc53b25cb087d8e32c`; Exame 49 `681465c7e972886c1849cfcbff6b69157eebca58`; Exame 50 `b62cb88311b74b94194b9d4463552280e152a876` e `3eef3c8ee700d0826e22bab00a9e8a7bafafbffb`. Os mapas pergunta-a-pergunta foram actualizados nos exames 41, 42, 43, 47, 48 e 49; os mapas do Exame 50 permanecem ligados à revisão já registada.
 - Os estados de CI para os commits mais recentes não foram devolvidos pelos endpoints de status consultados; por isso, não declarar CI aprovado nesta etapa. O teste visual no navegador permanece reservado ao dono.
 - Cuidados: não duplicar tarefas anteriores; não alterar questões sem base legal; manter as respostas equilibradas e sem padrão fixo.
+
+
+## DADOS-059 — Equilibrar extensão das alternativas do Exame 1
+- Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 23:11 UTC+02 — ficheiros: data/exames/exame1.js, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:11 UTC+02
+- Pedido: ajustar somente a formulação textual das alternativas do Exame 1 para eliminar a tendência de a resposta correcta ser a mais longa.
+- Limites obrigatórios: não alterar enunciados, resposta correcta, índice da resposta, sentido jurídico, conteúdo essencial, contexto, tema, dificuldade, explicações, imagens nem a ordem das perguntas. Não criar uma segunda resposta correcta. Reformular apenas palavras das alternativas, mantendo exactamente a mesma ideia de cada uma; alternativas podem ter comprimentos iguais. Não alterar a resposta correcta apenas para manipular o padrão.
+- Pronto quando: 25 perguntas continuam com quatro alternativas e o mesmo índice correcto; nenhuma resposta correcta fica como única alternativa mais longa; todas as alternativas mantêm o significado original; comparação automática confirma que os campos não autorizados não mudaram; validador oficial/CI aprovado.
