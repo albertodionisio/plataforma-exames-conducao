@@ -1,6 +1,6 @@
 // Exame 48 — 25 perguntas originais do ESTRADA.
 // Foco: acidentes, dever de assistência e procedimentos do condutor.
-// Base legal: Código da Estrada (arts. 85.º, 90.º–92.º, 147.º e 151.º–155.º).
+// Base legal: Código da Estrada, arts. 85.º, 90.º–92.º e 151.º–155.º.
 // Rastreabilidade: docs/referencias-exames/exame48-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[48] = [
@@ -366,17 +366,17 @@ window.EXAMES[48] = [
   },
   {
     "numero": 25,
-    "tema": "Avaria em auto-estrada",
+    "tema": "Definição de morte em acidente de viação",
     "dificuldade": "média",
-    "enunciado": "Um veículo sofre uma avaria numa auto-estrada e fica imobilizado na faixa de rodagem. O que deve fazer o condutor?",
+    "enunciado": "Uma vítima de um acidente de viação falece alguns dias depois do sinistro. Até quando pode essa morte ser considerada, para efeitos do Código, como morte em acidente de viação?",
     "imagem": null,
     "opcoes": [
-      "Sinalizar imediatamente, procurar retirar o veículo da faixa e promover a remoção rápida, mantendo-se fora da faixa quando não estiver envolvido na operação.",
-      "Reparar o veículo no local, mesmo que a faixa fique ocupada.",
-      "Pedir aos outros veículos que passem pela berma.",
-      "Deixar o veículo sem sinalização até chegar assistência."
+      "Até trinta dias após o registo do sinistro.",
+      "Apenas se ocorrer no próprio local do acidente.",
+      "Até sete dias após o acidente.",
+      "Somente quando a morte ocorre antes da chegada da polícia."
     ],
     "correta": 0,
-    "explicacao": "O condutor deve retirar o veículo da faixa ou aproximá-lo do limite esquerdo, sinalizar a presença e promover a remoção rápida; pessoas não envolvidas não devem permanecer na faixa. (Art. 90.º, n.ºs 1, 2 e 4)."
+    "explicacao": "Considera-se morte em acidente de viação aquela que ocorre até trinta dias após o registo do sinistro. (Art. 151.º, n.º 2)."
   }
 ];
