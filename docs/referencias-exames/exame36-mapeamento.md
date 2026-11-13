@@ -51,6 +51,6 @@ O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Cód
 
 ## Originalidade e limitações
 
-A comparação textual e por semelhança foi feita com os Exames 1, 31 e 32 disponíveis e entre os próprios Exames 34–37. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança no conjunto comparado. Os exames 2–30 e 33, e os 38–50, não estavam disponíveis como ficheiros publicados nesta consulta; não se declara ausência de duplicações em todo o catálogo.
+A comparação textual e por semelhança foi refeita com o Exame 1 e todos os Exames 31–51 publicados. Foram identificadas duas sobreposições de competência: a antiga pergunta 14 repetia o conceito de velocidade excessiva já testado na pergunta 4 e no Exame 49; a antiga pergunta 22 repetia a situação de baixa aderência da pergunta 7 e do Exame 49. Foram substituídas por perguntas sobre o limite específico para ligeiros de passageiros com reboque (art. 33.º, n.º 1; página 11) e sobre a moderação junto de sinais de perigo (art. 32.º, n.º 1, al. j; página 10). Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original.
 
 A validação estrutural foi reproduzida sobre os dados remotos segundo os critérios do script oficial. O script node scripts/validar-exames.js não pôde ser executado neste ambiente porque o acesso DNS ao GitHub falhou. O teste funcional no navegador permanece pendente.

@@ -283,17 +283,17 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
 - Originalidade: comparação com o Exame 1 e os Exames 31–51 publicados; foram identificadas e reformuladas questões repetidas sobre mudança à esquerda, sinalização e duração do indicador. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
-- Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original; execução do validador oficial/CI após estas reformulações. Não marcar como concluída antes desses pontos.
+- Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. As reformulações foram validadas pelo GitHub Actions run 43465823167 (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações.
 
 
 ## DADOS-037 — Exame 36 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 20:15 UTC+02 — ficheiros: data/exames/exame36.js, docs/referencias-exames/exame36-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 20:15 UTC+02
+- Estado: LIVRE
 - Foco: velocidade, distância de segurança e travagem.
-- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Revisão jurídica confrontada com os artigos 20.º, 29.º, 30.º, 32.º, 33.º e 34.º do PDF oficial do INATRO (páginas 6, 10, 11 e 12); não foi detectada contradição material.
+- Parcial actualizado: 25 perguntas, quatro alternativas, explicações e distribuição A=7/B=6/C=6/D=6. Na comparação com os Exames 31–51, as antigas perguntas 14 e 22 foram substituídas: a nova pergunta 14 testa o limite de 100 km/h para ligeiros de passageiros com reboque fora das localidades (art. 33.º, n.º 1); a nova pergunta 22 testa a moderação junto de sinais de perigo (art. 32.º, n.º 1, al. j). Revisão jurídica confrontada com o PDF oficial do INATRO.
 - Validação estrutural: critérios do script oficial reproduzidos sobre o conteúdo remoto; 25 perguntas, numeração, quatro opções, índice correcto e explicação passaram. O validador oficial node scripts/validar-exames.js foi executado pelo GitHub Actions (workflow Validar exames, run 2, commit 6036a8c9c340b436953ab88c4bb8c293595e73fc): 7 ficheiros verificados, 0 problemas; exame34.js, exame35.js, exame36.js e exame37.js passaram. O workflow fica activo para futuras alterações.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
-- Originalidade: sem candidatos a duplicação de elevada semelhança face aos exames 1, 31, 32, 34, 35 e 37 acessíveis. Exames 2–30, 33 e 38–50 não disponíveis nesta consulta.
-- Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. A comparação com os Exames 31–51 publicados foi concluída e as perguntas 12, 17, 20, 23 e 25 foram reformuladas para reduzir sobreposições. GitHub Actions run 43465823167 aprovado (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações publicadas.
+- Originalidade: comparação com o Exame 1 e todos os Exames 31–51 publicados; as duas sobreposições detectadas foram corrigidas. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
+- Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. GitHub Actions run 43466155796 aprovado (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações publicadas.
 
 
 ## DADOS-038 — Exame 37 (conteúdo original)
