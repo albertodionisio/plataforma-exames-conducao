@@ -46,7 +46,11 @@ hash="#/exames";listeners.hashchange();
 assert.match(app.innerHTML,/Exame 38[\s\S]*Aberto para testes/);
 assert.match(app.innerHTML,/Exame 39[\s\S]*Aberto para testes/);
 assert.match(app.innerHTML,/Exame 40[\s\S]*Aberto para testes/);
-assert.match(app.innerHTML,/Exame 41[\s\S]*Acesso por plano/);
+for(let n=41;n<=51;n++) assert.match(app.innerHTML,new RegExp("Exame "+n+"[\\s\\S]*Aberto para testes"));
+for(let n=31;n<=51;n++) {
+  hash="#/exame/"+n;listeners.hashchange();
+  assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas");
+}
 
 hash="#/exame/39";listeners.hashchange();
 assert.match(app.innerHTML,/Pergunta 1 de 25/);
@@ -84,4 +88,4 @@ assert.ok(app.innerHTML.includes("Em branco: <b>25</b>"));
 context.window.APP.modoTesteAcessoPago=false;
 hash="#/exame/39";listeners.hashchange();
 assert.match(app.innerHTML,/bloqueado e requer um plano/);
-console.log("FE-002 PASSOU: acesso temporário 31–40, exame de 25 perguntas, ausência de feedback durante a prova, submissão, pontuação, aprovação/reprovação, respostas em branco e revisão pedagógica.");
+console.log("FE-002 PASSOU: acesso temporário 31–51, exame de 25 perguntas, ausência de feedback durante a prova, submissão, pontuação, aprovação/reprovação, respostas em branco e revisão pedagógica.");
