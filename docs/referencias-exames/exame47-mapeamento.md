@@ -1,59 +1,48 @@
 # Exame 47 — mapa de rastreabilidade
 
-Conteúdo original do ESTRADA, não extraído do APK. Foco: manobras, mudança de direcção, inversão do sentido de marcha e marcha atrás.
+O exame foi reformulado porque a versão anterior repetia extensamente conteúdos de mudança de direcção, inversão do sentido de marcha e marcha atrás já avaliados nos Exames 33 e 35. Para não manter perguntas repetidas com cenários diferentes, as perguntas foram substituídas por um bloco autónomo sobre sinalização temporária de obras e dispositivos complementares.
 
-## Fonte consultada
-- Código da Estrada, republicação disponibilizada pelo INATRO: https://www.inatro.gov.mz/wp-content/uploads/2020/06/CODIGO-DA-ESTRADA-REPUBLICA%C3%87%C3%83O.pdf
-- Diploma de aprovação: Decreto-Lei n.º 1/2011, de 23 de Março; legislação do INATRO: https://www.inatro.gov.mz/?page_id=701
-- Artigos usados: 23.º, 45.º, 46.º, 47.º e 48.º.
+## Fonte primária
+- Regulamento de Sinais de Trânsito, aprovado pelo Decreto n.º 51/2009, de 29 de Setembro.
+- Fonte consultada: reprodução do Regulamento e quadros I–XVII: https://codest.co.mz/st.php
+- Artigos usados: 10.º–15.º.
 
 ## Mapa das perguntas
 | Nº | Tema | Competência avaliada | Base legal |
 |---:|---|---|---|
-| 1 | Sinalizar a manobra | Executar ou avaliar a segurança da manobra. | Art. 23.º, n.º 1 |
-| 2 | Duração do indicador | Executar ou avaliar a segurança da manobra. | Art. 23.º, n.º 2 |
-| 3 | Mudança de via | Executar ou avaliar a segurança da manobra. | Art. 23.º, n.º 1 |
-| 4 | Virar à direita | Executar ou avaliar a segurança da manobra. | Art. 45.º, n.º 1 |
-| 5 | Segurança ao virar à direita | Executar ou avaliar a segurança da manobra. | Art. 45.º, n.º 4 |
-| 6 | Virar à esquerda | Executar ou avaliar a segurança da manobra. | Art. 46.º, n.º 1 |
-| 7 | Segurança ao virar à esquerda | Executar ou avaliar a segurança da manobra. | Art. 45.º, n.º 4 |
-| 8 | Inversão do sentido de marcha | Executar ou avaliar a segurança da manobra. | Art. 47.º, n.º 1 |
-| 9 | Inversão em curva | Executar ou avaliar a segurança da manobra. | Art. 47.º, n.º 2 |
-| 10 | Inversão em cruzamento | Executar ou avaliar a segurança da manobra. | Art. 47.º, n.º 2 |
-| 11 | Inversão em ponte ou túnel | Executar ou avaliar a segurança da manobra. | Art. 47.º, n.º 2 |
-| 12 | Inversão com tráfego intenso | Executar ou avaliar a segurança da manobra. | Art. 47.º, n.º 2 |
-| 13 | Natureza da marcha atrás | Executar ou avaliar a segurança da manobra. | Art. 48.º, n.º 2 |
-| 14 | Local para marcha atrás | Executar ou avaliar a segurança da manobra. | Art. 48.º, n.º 2 |
-| 15 | Velocidade na marcha atrás | Executar ou avaliar a segurança da manobra. | Art. 48.º, n.º 3 |
-| 16 | Marcha atrás em lomba | Executar ou avaliar a segurança da manobra. | Ver explicação da pergunta |
-| 17 | Marcha atrás em auto-estrada | Executar ou avaliar a segurança da manobra. | Ver explicação da pergunta |
-| 18 | Marcha atrás em cruzamento | Executar ou avaliar a segurança da manobra. | Ver explicação da pergunta |
-| 19 | Marcha atrás em túnel | Executar ou avaliar a segurança da manobra. | Ver explicação da pergunta |
-| 20 | Marcha atrás e trânsito intenso | Executar ou avaliar a segurança da manobra. | Ver explicação da pergunta |
-| 21 | Sinalização antes de inverter | Executar ou avaliar a segurança da manobra. | Ver explicação da pergunta |
-| 22 | Marcha atrás e visibilidade | Executar ou avaliar a segurança da manobra. | Art. 48.º, n.º 2 |
-| 23 | Marcha atrás e trajecto | Executar ou avaliar a segurança da manobra. | Art. 48.º, n.ºs 2 e 3 |
-| 24 | Mudança de direcção em via de sentido único | Executar ou avaliar a segurança da manobra. | Art. 45.º, n.º 3 |
-| 25 | Iniciar a manobra sem perigo | Executar ou avaliar a segurança da manobra. | Art. 45.º, n.º 4 |
-
-## Distribuição das respostas correctas
-- A: 7
-- B: 6
-- C: 6
-- D: 6
-
-As posições não seguem sequência cíclica; as alternativas não foram desenhadas para que a correcta seja sistematicamente a mais longa.
-
-## Imagens
-Todas as perguntas usam `imagem: null`; os cenários são descritos por texto e não exigem imagens.
-
-## Revisão normativa e limitações
-As perguntas foram confrontadas com o Código da Estrada disponibilizado pelo INATRO, em especial os arts. 23.º e 45.º–48.º. Não foram acrescentadas distâncias mínimas ou sanções não expressamente necessárias. A revisão não constitui parecer jurídico e a versão vigente deve ser confirmada no Boletim da República antes do lançamento.
+| 1 | Finalidade da sinalização temporária | Para que servem os sinais temporários colocados numa zona de obras ou de obstáculo ocasional? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 2 | Meios de sinalização de obras | Como pode ser feita a sinalização temporária de obras e obstáculos ocasionais na via pública? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 3 | Retirada dos sinais temporários | Depois de concluídas as obras e removidos os obstáculos ocasionais, o que deve acontecer à sinalização temporária? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 4 | Responsabilidade pela sinalização da obra | Numa obra realizada na via pública por adjudicação, quem é responsável pela sinalização dos trabalhos? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 5 | Cláusulas de penalização do adjudicatário | O contrato de adjudicação de uma obra na via pública deve prever o quê, quando a obra exigir sinalização temporária? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 6 | Paragem e estacionamento na zona de obras | Um condutor pretende estacionar dentro de uma zona regulada por sinalização temporária de obras. Qual é a regra geral? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 7 | Excepções à proibição de paragem em obras | Qual dos seguintes veículos está expressamente abrangido por uma excepção à proibição geral de parar ou estacionar na zona de obras? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 8 | Transporte colectivo junto à zona de obras | Um autocarro utiliza o local de paragem próprio, situado na zona regulada por sinalização temporária. Como se aplica a regra? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 9 | Imobilização forçada na zona de obras | Um veículo fica forçadamente imobilizado numa zona regulada por sinalização temporária. Que medida deve ser tomada? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 10 | Custos da remoção em zona de obras | Se a entidade responsável pela sinalização tiver de remover um veículo imobilizado na zona de obras, a quem cabem as despesas? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 11 | Circulação alternada em via estreita | Quando uma via só permite a circulação alternada nos dois sentidos, como deve ser regulado o trânsito? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 12 | Circulação alternada durante a noite | Numa zona de obras, a circulação alternada ocorre durante a noite e não existe visibilidade entre os extremos da zona regulada. Que sinalização é obrigatória? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 13 | Vestuário do pessoal em obras | Uma pessoa trabalha dentro da zona regulada por sinalização temporária. Que equipamento deve utilizar? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 14 | Identificação luminosa dos veículos de obra | Um veículo opera dentro de uma zona regulada por sinalização temporária. Como deve ser sinalizado, nos termos do Regulamento? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 15 | Cor dos sinais temporários | Qual é a configuração geral dos sinais temporários, quanto ao fundo e aos símbolos? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 16 | Valor dos sinais temporários | Um sinal temporário apresenta cor diferente do sinal permanente correspondente, mas transmite a mesma indicação. Que valor tem essa indicação? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 17 | Raqueta A64 — significados das duas faces | Um operador de trânsito numa zona de obras utiliza a raqueta A64. Que significado têm, respectivamente, as faces verde e vermelha? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 18 | Baias direccionais A65 | Para que servem as baias direccionais A65 previstas entre os dispositivos complementares de sinalização temporária? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 19 | Balizas A66, A67 e A68 | Qual é a função geral das balizas A66, A67 e A68 na sinalização temporária? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 20 | Cones A69 | Numa obra, são colocados cones A69 ao longo de uma faixa. Qual é a sua função no conjunto de dispositivos complementares? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 21 | Pórtico A70 | Um pórtico A70 é instalado antes de uma obra numa via com limitação de altura. Que informação pode transmitir? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 22 | Conjuntos de lanternas A71/A72 | Que dispositivos são identificados pelas referências A71 e A72 no Regulamento? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 23 | Perfil móvel A73 | Qual é a utilização prevista para o perfil móvel A73 na sinalização temporária? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 24 | Robot A74 | O Regulamento inclui o robot A74 entre os dispositivos complementares de sinalização temporária. Em que contexto deve ser entendido? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
+| 25 | Atrelado de balizamento A75 e seta luminosa A76 | Uma obra utiliza um atrelado A75 e uma seta luminosa A76. Qual é a função regulamentar associada a estes dispositivos? | Regulamento de Sinais de Trânsito, arts. 10.º–15.º |
 
 ## Originalidade e validação
-Perguntas redigidas de forma original. A comparação integral com todos os exames do catálogo ainda não é exaustiva.
-- 25 perguntas; quatro alternativas não vazias; um índice correcto válido; explicação por pergunta.
-- Distribuição: A=7, B=6, C=6, D=6.
-- Todas as imagens são `null`.
-- Validação estrutural interna aprovada; validador oficial/CI a confirmar após publicação.
-- Teste no navegador adiado para verificação conjunta após o Exame 51.
+- 25 perguntas, quatro alternativas e uma resposta correcta por pergunta.
+- Nenhuma questão sobre sinalização temporária repete o conteúdo anterior de manobras dos Exames 33 e 35.
+- Distribuição das respostas: A=6, B=8, C=5, D=6.
+- Todas as perguntas usam imagem nula.
+- O validador estrutural e a CI devem ser confirmados após a publicação deste commit.
+- O teste visual no navegador permanece reservado ao dono do projecto.
+
+## Limitação
+A comparação integral com os Exames 1–30 depende da extracção estruturada do APK original. A revisão acima elimina as sobreposições concretas já identificadas no catálogo ESTRADA disponível.
