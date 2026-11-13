@@ -321,10 +321,3 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 
-## DADOS-042 — Exame 41 (revisão e validação)
-- Estado: EM CURSO — ChatGPT-ESTRADA-4 — 2026-11-13 22:30 UTC+02 — ficheiros: data/exames/exame41.js, docs/referencias-exames/exame41-mapeamento.md, data/exames/PENDENTE.md — último sinal: 2026-11-13 22:30 UTC+02
-- Pedido: rever o Exame 41 já publicado, confirmar as marcas O/P/R no Regulamento de Sinais de Trânsito do Decreto n.º 51/2009 e eliminar repetições com os Exames 31–51.
-- Onde mexer: `data/exames/exame41.js` e `docs/referencias-exames/exame41-mapeamento.md`; actualizar PENDENTE e HISTORICO ao concluir.
-- Pronto quando: 25 perguntas, quatro alternativas, índice correcto e explicação; marcas e artigos conferidos no exemplar do Boletim da República; mapa pergunta-a-pergunta actualizado; validador oficial/CI aprovado. Teste visual no navegador fica para validação do dono.
-- Parcial: o Exame 41 existe com 25 perguntas e distribuição A=7/B=7/C=6/D=5. A revisão usa como fonte primária o Regulamento de Sinais de Trânsito publicado no Boletim da República, I Série, n.º 38, 4.º Suplemento, de 29-09-2009 (Decreto n.º 51/2009). Comparação com os Exames 31–51 concluída; substituídas as perguntas 23 e 24, que repetiam a hierarquia de sinais do Exame 39, e a pergunta 25, que repetia a excepção de cor das marcas. As novas perguntas avaliam R3 (motociclos), R4 (passagem de nível) e R6 (obstáculos).
-- Cuidados: não inventar códigos ou significados de marcas; manter respostas equilibradas; não alterar outros exames nesta tarefa.
