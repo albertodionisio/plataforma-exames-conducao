@@ -321,7 +321,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-048 — Exame 47 (conteúdo original)
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-ESTRADA-2 — 2026-11-13 16:55 UTC+02 — ficheiros: data/exames/exame47.js, docs/referencias-exames/exame47-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-13 16:55 UTC+02
 - Foco temático prioritário: Manobras, marcha-atrás e inversão do sentido de marcha.
 - Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame47.js` (novo) e `docs/referencias-exames/exame47-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
