@@ -167,18 +167,18 @@ window.EXAMES[35] = [
   },
   {
     "numero": 12,
-    "tema": "Mudança à esquerda",
-    "dificuldade": "média",
-    "enunciado": "Um condutor vai virar à esquerda num cruzamento. Qual das opções descreve a regra de aproximação prevista no artigo 46.º?",
+    "tema": "Definição de mudança de direcção",
+    "dificuldade": "fácil",
+    "enunciado": "Segundo o Código da Estrada, em que consiste uma mudança de direcção?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se da margem direita.",
-      "Circular pela berma esquerda.",
-      "Ficar sempre na faixa contrária.",
-      "Aproximar-se antecipadamente da margem esquerda."
+      "Em mudar de faixa mantendo-se na mesma via.",
+      "Em parar junto ao limite da faixa de rodagem.",
+      "Em inverter o sentido de marcha na mesma via.",
+      "Em tomar outra via que se intersecta com aquela em que o veículo vinha a circular."
     ],
     "correta": 3,
-    "explicacao": "Para a mudança à esquerda, o artigo 46.º estabelece a aproximação antecipada à margem esquerda, seguindo o trajecto mais curto. (Art. 46.º.)"
+    "explicacao": "O Código define mudança de direcção como a manobra em que o condutor toma outra via que se intersecta com aquela em que vinha circulando. (Art. 45.º, n.º 1.)"
   },
   {
     "numero": 13,
@@ -242,18 +242,18 @@ window.EXAMES[35] = [
   },
   {
     "numero": 17,
-    "tema": "Trajecto mais curto à esquerda",
+    "tema": "Sinalização manual de manobra",
     "dificuldade": "média",
-    "enunciado": "Por que razão o Código determina que a mudança à esquerda seja feita pelo trajecto mais curto previsto?",
+    "enunciado": "Os indicadores luminosos de direcção deixaram de funcionar. Se precisar de assinalar uma mudança de direcção, como deve proceder?",
     "imagem": null,
     "opcoes": [
-      "Para organizar a manobra e reduzir conflitos com outros movimentos no cruzamento.",
-      "Para permitir cortar a trajectória de veículos que seguem em sentido contrário.",
-      "Para dispensar a sinalização.",
-      "Para obrigar os veículos atrás a parar."
+      "Utilizar o braço para transmitir o sinal regulamentar, na falta do dispositivo luminoso.",
+      "Continuar sem sinalizar, desde que reduza a velocidade.",
+      "Ligar os quatro indicadores e efectuar qualquer manobra.",
+      "Usar o sinal sonoro continuamente durante a mudança."
     ],
     "correta": 0,
-    "explicacao": "O artigo 46.º estabelece o posicionamento e o trajecto da mudança à esquerda; o condutor deve cumprir essa trajectória sem criar perigo. (Art. 46.º.)"
+    "explicacao": "O artigo 23.º prevê a utilização do dispositivo mecânico luminoso ou sonoro e, na falta deste, do braço para indicar o sinal regulamentar correspondente, com a devida antecedência. (Art. 23.º, n.º 1.)"
   },
   {
     "numero": 18,
@@ -287,18 +287,18 @@ window.EXAMES[35] = [
   },
   {
     "numero": 20,
-    "tema": "Sinal durante a manobra",
-    "dificuldade": "fácil",
-    "enunciado": "Um condutor começou a virar e desliga o indicador antes de concluir a manobra. Qual é o problema?",
+    "tema": "Sinalização de redução de velocidade e paragem",
+    "dificuldade": "média",
+    "enunciado": "Um condutor pretende reduzir a velocidade e imobilizar o veículo junto à margem da via. Que regra deve observar quanto à sinalização?",
     "imagem": null,
     "opcoes": [
-      "Nenhum, porque já começou a virar.",
-      "O sinal deve ser desligado antes do cruzamento.",
-      "O indicador só é necessário em estradas nacionais.",
-      "A sinalização deve manter-se durante a manobra."
+      "Só precisa de sinalizar se houver veículos pesados atrás.",
+      "Deve sinalizar apenas depois de começar a travar.",
+      "Pode dispensar o sinal se a paragem durar pouco tempo.",
+      "Deve indicar a intenção com a devida antecedência e manter o sinal enquanto executa a manobra."
     ],
     "correta": 3,
-    "explicacao": "O artigo 23.º determina que o sinal seja mantido durante a manobra e cessado depois de concluída. (Art. 23.º.)"
+    "explicacao": "O artigo 23.º exige sinalização com a devida antecedência quando o veículo diminui a velocidade ou pára; a indicação mantém-se durante a manobra e cessa quando esta termina. (Art. 23.º, n.os 1 e 2.)"
   },
   {
     "numero": 21,
@@ -332,18 +332,18 @@ window.EXAMES[35] = [
   },
   {
     "numero": 23,
-    "tema": "Preparação para virar à esquerda",
+    "tema": "Mudança à esquerda em via de sentido único",
     "dificuldade": "média",
-    "enunciado": "Ao aproximar-se de um cruzamento para virar à esquerda, o condutor deve:",
+    "enunciado": "Numa via de sentido único, um condutor pretende mudar de direcção para a esquerda. Como deve preparar a manobra?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se da margem direita e virar pelo trajecto mais longo.",
-      "Manter-se na berma.",
-      "Sinalizar antecipadamente e aproximar-se da margem esquerda, seguindo o trajecto mais curto previsto.",
-      "Entrar primeiro na via contrária."
+      "Aproximar-se do limite direito e fazer a curva pelo trajecto mais longo.",
+      "Manter-se no centro da faixa até iniciar a mudança.",
+      "Aproximar-se, com antecedência e quando possível, do limite esquerdo e efectuar a manobra pelo trajecto mais curto.",
+      "Utilizar a faixa contrária para aumentar o espaço de viragem."
     ],
     "correta": 2,
-    "explicacao": "O artigo 46.º determina a aproximação antecipada à margem esquerda e o trajecto mais curto. A manobra deve ser sinalizada. (Arts. 23.º e 46.º.)"
+    "explicacao": "Nas vias de sentido único, o condutor deve aproximar-se com a necessária antecedência e, quando possível, do limite esquerdo para virar à esquerda, efectuando a manobra pelo trajecto mais curto. (Art. 45.º, n.º 3.)"
   },
   {
     "numero": 24,
@@ -362,17 +362,17 @@ window.EXAMES[35] = [
   },
   {
     "numero": 25,
-    "tema": "Fim da manobra",
+    "tema": "Manobras que exigem sinalização",
     "dificuldade": "fácil",
-    "enunciado": "Quando deve o condutor cessar o sinal luminoso usado para indicar a mudança de direcção?",
+    "enunciado": "Qual das seguintes opções reúne correctamente manobras que devem ser assinaladas com a devida antecedência?",
     "imagem": null,
     "opcoes": [
-      "Depois de concluir a manobra.",
-      "Antes de iniciar a viragem.",
-      "Só quando parar o veículo.",
-      "Quando outro condutor ligar o seu indicador."
+      "Iniciar a marcha, diminuir a velocidade, parar, mudar de direcção ou de via, ultrapassar e inverter o sentido de marcha.",
+      "Apenas mudar de direcção em cruzamentos com semáforos.",
+      "Somente ultrapassar fora das localidades.",
+      "Apenas parar quando exista uma viatura atrás."
     ],
     "correta": 0,
-    "explicacao": "O sinal deve ser mantido durante a manobra e cessado depois de esta estar concluída. (Art. 23.º.)"
+    "explicacao": "O artigo 23.º determina a sinalização, com a devida antecedência, do início da marcha, redução de velocidade, paragem, mudança de direcção ou de via, início de ultrapassagem e inversão do sentido de marcha. (Art. 23.º, n.º 1.)"
   }
 ];

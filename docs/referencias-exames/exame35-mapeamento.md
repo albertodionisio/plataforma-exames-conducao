@@ -24,20 +24,20 @@ Conteúdo original do ESTRADA. Foco: mudança de direcção, mudança de via e s
 | 9 | Indicador ligado após a manobra | Depois de concluir uma mudança de direcção, o indicador continua ligado. O | 23.º | Não |
 | 10 | Mudança de via com risco | Um condutor pretende mudar para a via ao lado, mas a distância disponível  | 42.º | Não |
 | 11 | Mudança de direcção e peões | Ao aproximar-se do local onde pretende virar, o condutor vê peões cuja pas | 42.º | Não |
-| 12 | Mudança à esquerda | Um condutor vai virar à esquerda num cruzamento. Qual das opções descreve  | 46.º | Não |
+| 12 | Definição | Conceito legal de mudança de direcção | 45.º, n.º 1 | Não |
 | 13 | Mudança à direita | Numa via de sentido único, como deve preparar a mudança à direita, segundo o artigo 45.º, n.º 3? | 45.º, n.º 3 | Não |
 | 14 | Sinalização em mudança de via | Qual é a finalidade principal de indicar uma mudança de via? | 23.º e 42.º | Não |
 | 15 | Manobra interrompida | Um condutor sinaliza uma mudança de direcção, mas percebe que surgiu um pe | 42.º | Não |
 | 16 | Antecedência do sinal | Um veículo circula numa fila movimentada e pretende entrar na via de saída | 23.º | Não |
-| 17 | Trajecto mais curto à esquerda | Por que razão o Código determina que a mudança à esquerda seja feita pelo  | 46.º | Não |
+| 17 | Sinalização manual | Uso do braço na falta do dispositivo de sinalização | 23.º, n.º 1 | Não |
 | 18 | Sinalização e observação | Antes de mudar de via, qual combinação de comportamentos é correcta? | 23.º e 42.º | Não |
 | 19 | Mudança de direcção sem perigo | Um condutor sinaliza correctamente e verifica que pode virar sem perigo ou | 45.º e 46.º | Não |
-| 20 | Sinal durante a manobra | Um condutor começou a virar e desliga o indicador antes de concluir a mano | 23.º | Não |
+| 20 | Redução de velocidade e paragem | Antecedência e duração da sinalização | 23.º, n.os 1 e 2 | Não |
 | 21 | Mudança de via e embaraço | Um condutor muda de via de forma a obrigar bruscamente outro veículo a tra | 42.º | Não |
 | 22 | Preparação para virar à direita | Antes de iniciar a mudança à direita, o que deve confirmar, segundo o artigo 45.º, n.º 4? | 45.º, n.º 4 | Não |
-| 23 | Preparação para virar à esquerda | Ao aproximar-se de um cruzamento para virar à esquerda, o condutor deve: | 46.º | Não |
+| 23 | Mudança à esquerda em sentido único | Posicionamento no limite esquerdo e trajecto mais curto | 45.º, n.º 3 | Não |
 | 24 | Mudança de via em segurança | O condutor sinaliza a mudança de via e observa que um motociclo se aproxim | 23.º e 42.º | Não |
-| 25 | Fim da manobra | Quando deve o condutor cessar o sinal luminoso usado para indicar a mudanç | 23.º | Não |
+| 25 | Manobras sinalizadas | Identificação das manobras que exigem sinal prévio | 23.º, n.º 1 | Não |
 
 ## Distribuição das respostas correctas
 
@@ -46,7 +46,7 @@ A distribuição foi calculada após a construção das alternativas: 0: 7; 1: 6
 ## Limitações e revisão
 
 - As perguntas são originais e orientadas para aplicação prática dos artigos indicados; não são extraídas do APK.
-- A comparação textual e por semelhança foi feita com os exames 1, 31, 32 e 34–37 actualmente acessíveis. Não foram encontrados enunciados exactos nem candidatos a duplicação de elevada semelhança. Os exames 2–30, 33 e 38–50 não estavam disponíveis nesta consulta.
+- A comparação textual e por semelhança foi refeita com o Exame 1 e todos os Exames 31–51 publicados. Foram identificadas repetições de competência em questões sobre posicionamento à esquerda, duração do indicador e segurança genérica da mudança de via; as perguntas 12, 17, 20, 23 e 25 foram reformuladas para cobrir, respectivamente, a definição legal da mudança de direcção, o sinal manual na falta do dispositivo, a sinalização de redução de velocidade/paragem, a mudança à esquerda em via de sentido único e o conjunto de manobras que exigem sinalização. Permanecem temas legais comuns entre exames, mas com ângulos de avaliação distintos. Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original.
 - A regra de mudança de via é tratada através dos deveres de sinalização e segurança; não se acrescentam regras específicas de marcações ou prioridade que não tenham sido confirmadas no texto legal consultado.
 
 
@@ -56,4 +56,4 @@ As perguntas foram confrontadas com os artigos 23.º, 42.º, 45.º e 46.º do PD
 
 O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Código da Estrada. A conferência confirma correspondência com a republicação oficial consultada, mas não é uma pesquisa exaustiva de todos os Boletins da República nem um parecer jurídico sobre alterações posteriores.
 
-A comparação por texto e semelhança não encontrou duplicações prováveis nos exames 1, 31, 32 e 34–37 acessíveis. Os exames 2–30, 33 e 38–50 não estavam disponíveis nesta consulta. Todas as perguntas têm imagem null. O script oficial não pôde ser executado por falha DNS; o teste no navegador continua pendente.
+A comparação actualizada abrange os Exames 1 e 31–51. As reformulações acima reduzem a repetição de competências dentro do catálogo. Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original. Todas as perguntas têm imagem null. O script oficial não pôde ser executado por falha DNS; o teste no navegador continua pendente.
