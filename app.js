@@ -7,6 +7,31 @@
   document.getElementById("nome").textContent = A.nome || "ESTRADA";
   document.title = (A.nome || "ESTRADA") + " — " + (A.slogan || "Exames de condução");
 
+  var botaoMenu = document.getElementById("menu-toggle");
+  var navegacao = document.getElementById("navegacao");
+  function fecharMenu() {
+    if (!botaoMenu || !navegacao) return;
+    navegacao.classList.remove("aberto");
+    botaoMenu.setAttribute("aria-expanded", "false");
+    botaoMenu.setAttribute("aria-label", "Abrir menu");
+  }
+  if (botaoMenu && navegacao) {
+    botaoMenu.addEventListener("click", function () {
+      var aberto = botaoMenu.getAttribute("aria-expanded") === "true";
+      if (aberto) {
+        fecharMenu();
+      } else {
+        navegacao.classList.add("aberto");
+        botaoMenu.setAttribute("aria-expanded", "true");
+        botaoMenu.setAttribute("aria-label", "Fechar menu");
+      }
+    });
+    navegacao.addEventListener("click", function (event) {
+      var link = event.target.closest ? event.target.closest("a") : null;
+      if (link) fecharMenu();
+    });
+  }
+
   function esc(t) {
     return String(t == null ? "" : t).replace(/[&<>"']/g, function (c) {
       return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
@@ -208,6 +233,9 @@
       estado.i++; renderQuestao();
     } else if (acao === "submeter") terminar("manual");
   });
-  window.addEventListener("hashchange", rota);
+  window.addEventListener("hashchange", function () {
+    fecharMenu();
+    rota();
+  });
   rota();
 })();
