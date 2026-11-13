@@ -83,16 +83,16 @@ window.EXAMES[51] = [
     "numero": 6,
     "tema": "Transporte de carga em veículos de duas rodas",
     "dificuldade": "difícil",
-    "enunciado": "Um motociclista pretende transportar uma caixa de mercadorias solta sobre o depósito, sem atrelado nem caixa de carga. O que determina o Código?",
+    "enunciado": "O transporte de carga num motociclo, ciclomotor ou velocípede deve ser feito de que forma?",
     "imagem": null,
     "opcoes": [
-      "O transporte de carga só pode fazer-se em atrelado ou caixa de carga, e não podem ser transportados objectos que prejudiquem a condução ou criem perigo.",
-      "É permitido se a caixa estiver presa com uma corda.",
-      "É permitido apenas em deslocações curtas.",
-      "É permitido se o passageiro segurar a caixa."
+      "Apenas em atrelado ou caixa de carga.",
+      "Sobre o depósito, desde que a carga seja leve.",
+      "Nas mãos do passageiro, se estiver sentado.",
+      "Em qualquer suporte improvisado, desde que esteja amarrado."
     ],
     "correta": 0,
-    "explicacao": "O transporte de carga em motociclos, ciclomotores ou velocípedes só pode fazer-se em atrelado ou caixa de carga; também é proibido transportar objectos susceptíveis de prejudicar a condução ou constituir perigo. (Art. 95.º, n.ºs 1 e 2)."
+    "explicacao": "O transporte de carga em motociclos, ciclomotores ou velocípedes só pode fazer-se em atrelado ou caixa de carga. (Art. 95.º, n.º 1)."
   },
   {
     "numero": 7,
