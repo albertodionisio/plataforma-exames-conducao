@@ -64,16 +64,16 @@ window.EXAMES[35] = [
     "numero": 5,
     "tema": "Mudança à direita",
     "dificuldade": "média",
-    "enunciado": "Ao preparar uma mudança de direcção para a direita, que regra de posicionamento deve observar o condutor segundo o Código?",
+    "enunciado": "Numa via de dois sentidos, ao preparar uma mudança de direcção para a direita num cruzamento, como deve posicionar-se o condutor?",
     "imagem": null,
     "opcoes": [
-      "Deve posicionar-se antecipadamente de acordo com a regra própria da mudança à direita e executar o trajecto legalmente previsto.",
-      "Deve ocupar sempre a margem esquerda, independentemente da via.",
-      "Deve virar a partir de qualquer posição, desde que sinalize.",
-      "Deve parar no centro do cruzamento antes de virar."
+      "Aproximar-se antecipadamente do eixo da via e efectuar a manobra deixando à sua esquerda a parte central do cruzamento ou entroncamento.",
+      "Aproximar-se sempre da margem esquerda e contornar a parte central pela direita.",
+      "Manter-se em qualquer posição, desde que ligue o indicador de direcção.",
+      "Passar para a faixa destinada ao sentido contrário antes de virar."
     ],
     "correta": 0,
-    "explicacao": "A mudança à direita tem regra própria de aproximação e trajecto no artigo 45.º. A sinalização não dispensa o posicionamento correcto. (Art. 45.º.)"
+    "explicacao": "Numa via de dois sentidos, o artigo 45.º, n.º 2, determina que o condutor se aproxime antecipadamente do eixo da via e faça a manobra de modo a deixar à sua esquerda a parte central do cruzamento ou entroncamento."
   },
   {
     "numero": 6,
@@ -184,16 +184,16 @@ window.EXAMES[35] = [
     "numero": 13,
     "tema": "Mudança à direita",
     "dificuldade": "média",
-    "enunciado": "Ao virar à direita, o condutor deve escolher a posição e o trajecto previstos no Código, em vez de:",
+    "enunciado": "Numa via de sentido único, um condutor pretende mudar de direcção para a direita. Como deve preparar a manobra?",
     "imagem": null,
     "opcoes": [
-      "Fazer a manobra a partir de uma posição arbitrária apenas porque accionou o indicador.",
-      "Sinalizar com antecedência.",
-      "Verificar se a manobra é segura.",
-      "Respeitar os restantes utentes."
+      "Aproximar-se, com a necessária antecedência e quando possível, do limite direito da faixa de rodagem e efectuar a manobra pelo trajecto mais curto.",
+      "Aproximar-se obrigatoriamente do eixo da via e contornar a parte central pela esquerda.",
+      "Utilizar a margem esquerda, independentemente da direcção pretendida.",
+      "Escolher qualquer posição, porque numa via de sentido único não existem regras de posicionamento."
     ],
     "correta": 0,
-    "explicacao": "O artigo 45.º estabelece regras próprias de posicionamento e trajecto para virar à direita. O indicador não substitui essas regras. (Arts. 23.º e 45.º.)"
+    "explicacao": "Nas vias de sentido único, o artigo 45.º, n.º 3, manda aproximar-se, com antecedência e quando possível, do limite direito ou esquerdo conforme a direcção pretendida, efectuando a manobra pelo trajecto mais curto."
   },
   {
     "numero": 14,
@@ -319,16 +319,16 @@ window.EXAMES[35] = [
     "numero": 22,
     "tema": "Preparação para virar à direita",
     "dificuldade": "média",
-    "enunciado": "Um condutor aproxima-se de um cruzamento e pretende virar à direita. Qual é a atitude correcta?",
+    "enunciado": "Antes de iniciar uma mudança de direcção para a direita num cruzamento, o que deve confirmar o condutor?",
     "imagem": null,
     "opcoes": [
-      "Virar de qualquer faixa, desde que não venha ninguém.",
-      "Sinalizar antecipadamente e adoptar o posicionamento e trajecto previstos no artigo 45.º.",
-      "Parar sempre no centro do cruzamento.",
-      "Usar a faixa contrária para abrir a curva."
+      "Que pode executar a manobra sem perigo ou embaraço para o restante tráfego.",
+      "Que os veículos atrás são obrigados a parar por ter ligado o indicador.",
+      "Que pode ocupar temporariamente a faixa de sentido contrário, mesmo sem necessidade.",
+      "Que não existe qualquer peão nas proximidades, sendo dispensadas as restantes verificações."
     ],
-    "correta": 1,
-    "explicacao": "A mudança à direita deve respeitar a regra específica do artigo 45.º e o dever geral de sinalização antecipada. (Arts. 23.º e 45.º.)"
+    "correta": 0,
+    "explicacao": "O artigo 45.º, n.º 4, determina que o condutor não inicie a mudança de direcção sem se assegurar previamente de que dela não resulta perigo ou embaraço para o restante tráfego."
   },
   {
     "numero": 23,
