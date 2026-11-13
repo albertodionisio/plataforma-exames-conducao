@@ -259,7 +259,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Não reservar várias tarefas de uma vez. Cada sessão escolhe apenas uma tarefa LIVRE, lê `INSTRUCOES.md`, confirma a reserva remota e trabalha exclusivamente nos ficheiros atribuídos.
 
 ## DADOS-034 — Exame 33 (conteúdo original)
-- Estado: EM CURSO — Claude-DADOS034 — 2026-11-13 15:50 UTC+02 — ficheiros: data/exames/exame33.js, docs/referencias-exames/exame33-mapeamento.md — último sinal: 2026-11-13 15:50 UTC+02
+- Estado: EM CURSO — ChatGPT-ESTRADA-3 (assumida com autorização do dono) — 2026-11-13 — ficheiros: data/exames/exame33.js, docs/referencias-exames/exame33-mapeamento.md — último sinal: 2026-11-13
 - Foco temático prioritário: Cruzamentos, entroncamentos e rotundas.
 - Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
 - Onde mexer: `data/exames/exame33.js` (novo) e `docs/referencias-exames/exame33-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
