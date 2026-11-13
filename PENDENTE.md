@@ -7,13 +7,14 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 ## Interface (FE-)
 
 ## FE-008 — Ícones gráficos e navegação da interface
-- Estado: EM CURSO — ChatGPT-ESTRADA-8 — 2026-11-13 20:06 UTC — ficheiros: index.html, styles.css, app.js — último sinal: 2026-11-13 20:06 UTC
+- Estado: EM CURSO — ChatGPT-ESTRADA-8 — 2026-11-13 20:06 UTC — ficheiros: index.html, styles.css, app.js — último sinal: 2026-11-13 20:07 UTC
 - Pedido: substituir a apresentação textual simples da navegação por ícones gráficos SVG consistentes (não emojis), incluindo início, exames e planos; acrescentar um botão de menu hambúrguer funcional em ecrãs pequenos.
 - Onde mexer: cabeçalho e navegação em `index.html`, estilos dos ícones/menu em `styles.css` e comportamento de abrir/fechar menu em `app.js`.
 - Pronto quando: ícones SVG inline, acessíveis e com traço/tamanho coerentes; navegação existente mantém os destinos correctos; menu móvel abre/fecha e fecha ao escolher um destino; sem controlos fictícios para pesquisa, perfil, definições ou resultados que ainda não tenham rotas/funcionalidade; testes de sintaxe/build e validação visual técnica concluídos.
 - Cuidados: o dono autorizou expressamente esta tarefa a trabalhar em paralelo nos ficheiros de interface reservados por FE-001, FE-002 e GER-012, sem alterar a lógica das tarefas concorrentes. GER-012 também reserva os ficheiros de controlo; a actualização desta reserva é a única alteração necessária a PENDENTE.md. Não alterar perguntas, respostas, pontuação, planos, preços ou pagamentos. A FE-003 foi uma auditoria de emojis e não implementou um sistema de ícones; esta tarefa é uma implementação distinta.
 
 
+- Parcial: SVGs adicionados à marca e aos links Exames/Planos; botão hambúrguer funcional em ecrãs pequenos, com estado ARIA e fecho após navegação. Alterações publicadas em d5f733559d2d2ca740283e3085834c2bbe37c8ba, 7dac4c6f7994add5e9ceb3a28baf2112c1899901 e 6a931b196c9eec5363e07c959a5e83219b881f25. GitHub Actions run 43498563745 aprovado (sintaxe JS, assinaturas, fluxo dos exames, validador oficial e build Netlify). Falta validação visual/interactiva em navegador móvel e desktop pelo dono; tentativa de clonar o repositório neste ambiente falhou por indisponibilidade de DNS.
 ## GER-012 — Uniformizar a nomenclatura oficial da plataforma
 - Estado: EM CURSO — ChatGPT-3 — 2026-11-13 — ficheiros: index.html, app.js, config.js, docs/, README.md, REGRAS.md, INSTRUCOES.md, PENDENTE.md, HISTORICO.md, data/exames/PENDENTE.md e restantes textos de interface — último sinal: 2026-11-13 14:09 UTC
 - Pedido: por decisão expressa do dono, a plataforma deve usar «exame» como designação oficial em todos os pontos apresentados ao utilizador e na documentação do produto. Usar exclusivamente «exame/exames» como designação do produto, catálogo, navegação, planos, instruções, resultados, perguntas frequentes e textos de apoio.
