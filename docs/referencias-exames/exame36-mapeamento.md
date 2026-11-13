@@ -13,31 +13,31 @@ Conteúdo original do ESTRADA, não extraído do APK. Foco: distância longitudi
 
 | Nº | Tema | Enunciado / competência avaliada | Base legal |
 |---:|---|---|---|
-| 1 | Distância longitudinal | Ao circular atrás de outro veículo, que distância deve manter? | igo 20 |
-| 2 | Distância lateral | Ao circular ao lado de outro veículo na mesma faixa ou em sentido oposto, o condutor deve: | igo 20 |
-| 3 | Velocidade adaptada | A velocidade adequada deve ter em conta: | igo 29 |
-| 4 | Espaço visível | Quando é considerada excessiva a velocidade, mesmo que o condutor não ultrapasse o limite sinalizado? | igo 30 |
-| 5 | Redução súbita | Sem existir perigo iminente, um condutor pretende reduzir bruscamente a velocidade. O que deve fazer antes? | igo 29 |
-| 6 | Descida acentuada | Ao descer uma via de forte inclinação, como deve proceder o condutor? | igo 32 |
-| 7 | Piso molhado | Depois de uma chuva, a estrada está molhada e com pouca aderência. Qual é a conduta adequada? | igo 32 |
-| 8 | Curva sem visibilidade | Ao aproximar-se de uma curva com visibilidade reduzida, o condutor deve: | igo 32 |
-| 9 | Aproximação de escola | Ao aproximar-se de uma escola devidamente sinalizada, o condutor deve: | igo 32 |
-| 10 | Peões na passagem | Ao aproximar-se de uma passagem assinalada para peões, qual é a atitude exigida? | igo 32 |
-| 11 | Visibilidade reduzida | Num troço com nevoeiro intenso, o condutor deve escolher a velocidade considerando sobretudo: | igos 29 |
-| 12 | Trânsito intenso | Num congestionamento com veículos muito próximos, o condutor deve: | igo 20 |
-| 13 | Limite máximo | Um sinal estabelece um limite máximo de velocidade. O condutor: | igo 30 |
-| 14 | Velocidade excessiva sem excesso numérico | Um automóvel circula abaixo do limite legal, mas aproxima-se de uma curva sem conseguir parar dentro do espaço visível. A velocidade é: | igo 30 |
-| 15 | Cruzamento de veículos | Ao cruzar-se com outro veículo numa via estreita ou com condições difíceis, o condutor deve: | igo 32 |
-| 16 | Ponte e túnel | Ao aproximar-se de uma ponte ou túnel com visibilidade condicionada, o condutor deve: | igo 32 |
-| 17 | Lombas | Ao aproximar-se de uma lomba de estrada, o condutor deve: | igo 32 |
-| 18 | Aglomeração de pessoas | Ao aproximar-se de uma concentração de pessoas junto à estrada, o condutor deve: | igo 32 |
-| 19 | Atenção do condutor | Um condutor sente-se cansado e com menor capacidade de concentração. Segundo os princípios gerais, deve: | igo 29 |
-| 20 | Distância ao veículo pesado | Um automóvel segue atrás de um veículo pesado que tapa parcialmente a visão da estrada. Qual é a decisão mais segura e conforme aos princípios legais? | igo 20 |
-| 21 | Travagem do veículo da frente | O veículo à frente trava inesperadamente. Que obrigação procura prevenir uma colisão traseira? | igo 20 |
-| 22 | Via enlameada | Numa estrada enlameada, o veículo pode perder aderência. O condutor deve: | igo 32 |
-| 23 | Velocidade mínima em auto-estrada | Sem prejuízo das regras sobre marcha lenta, qual é a velocidade mínima prevista para circulação em auto-estradas? | igo 33 |
-| 24 | Condutor habilitado há menos de um ano | Segundo o artigo 33.º, n.º 4, qual é o limite especial referido para condutores não profissionais habilitados há menos de um ano na classe que conduzem? | igo 33 |
-| 25 | Limite regional | Pode ser fixado um limite máximo regional de velocidade diferente dos limites gerais? | igo 34 |
+| 1 | Distância longitudinal | Ao circular atrás de outro veículo, que distância deve manter? | Art. 20.º |
+| 2 | Distância lateral | Ao circular ao lado de outro veículo na mesma faixa ou em sentido oposto, o condutor deve: | Art. 20.º |
+| 3 | Velocidade adaptada | A velocidade adequada deve ter em conta: | Art. 29.º |
+| 4 | Espaço visível | Quando é considerada excessiva a velocidade, mesmo que o condutor não ultrapasse o limite sinalizado? | Art. 30.º |
+| 5 | Redução súbita | Sem existir perigo iminente, um condutor pretende reduzir bruscamente a velocidade. O que deve fazer antes? | Art. 29.º |
+| 6 | Descida acentuada | Ao descer uma via de forte inclinação, como deve proceder o condutor? | Art. 32.º |
+| 7 | Piso molhado | Depois de uma chuva, a estrada está molhada e com pouca aderência. Qual é a conduta adequada? | Art. 32.º |
+| 8 | Curva sem visibilidade | Ao aproximar-se de uma curva com visibilidade reduzida, o condutor deve: | Art. 32.º |
+| 9 | Aproximação de escola | Ao aproximar-se de uma escola devidamente sinalizada, o condutor deve: | Art. 32.º |
+| 10 | Peões na passagem | Ao aproximar-se de uma passagem assinalada para peões, qual é a atitude exigida? | Art. 32.º |
+| 11 | Visibilidade reduzida | Num troço com nevoeiro intenso, o condutor deve escolher a velocidade considerando sobretudo: | Arts. 29.º |
+| 12 | Trânsito intenso | Num congestionamento com veículos muito próximos, o condutor deve: | Art. 20.º |
+| 13 | Limite máximo | Um sinal estabelece um limite máximo de velocidade. O condutor: | Art. 30.º |
+| 14 | Velocidade excessiva sem excesso numérico | Um automóvel circula abaixo do limite legal, mas aproxima-se de uma curva sem conseguir parar dentro do espaço visível. A velocidade é: | Art. 30.º |
+| 15 | Cruzamento de veículos | Ao cruzar-se com outro veículo numa via estreita ou com condições difíceis, o condutor deve: | Art. 32.º |
+| 16 | Ponte e túnel | Ao aproximar-se de uma ponte ou túnel com visibilidade condicionada, o condutor deve: | Art. 32.º |
+| 17 | Lombas | Ao aproximar-se de uma lomba de estrada, o condutor deve: | Art. 32.º |
+| 18 | Aglomeração de pessoas | Ao aproximar-se de uma concentração de pessoas junto à estrada, o condutor deve: | Art. 32.º |
+| 19 | Atenção do condutor | Um condutor sente-se cansado e com menor capacidade de concentração. Segundo os princípios gerais, deve: | Art. 29.º |
+| 20 | Distância ao veículo pesado | Um automóvel segue atrás de um veículo pesado que tapa parcialmente a visão da estrada. Qual é a decisão mais segura e conforme aos princípios legais? | Art. 20.º |
+| 21 | Travagem do veículo da frente | O veículo à frente trava inesperadamente. Que obrigação procura prevenir uma colisão traseira? | Art. 20.º |
+| 22 | Via enlameada | Numa estrada enlameada, o veículo pode perder aderência. O condutor deve: | Art. 32.º |
+| 23 | Velocidade mínima em auto-estrada | Sem prejuízo das regras sobre marcha lenta, qual é a velocidade mínima prevista para circulação em auto-estradas? | Art. 33.º |
+| 24 | Condutor habilitado há menos de um ano | Segundo o artigo 33.º, n.º 4, qual é o limite especial referido para condutores não profissionais habilitados há menos de um ano na classe que conduzem? | Art. 33.º |
+| 25 | Limite regional | Pode ser fixado um limite máximo regional de velocidade diferente dos limites gerais? | Art. 34.º |
 
 ## Distribuição das respostas correctas
 
