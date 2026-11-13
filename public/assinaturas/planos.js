@@ -10,10 +10,10 @@
 
   function beneficios(plano) {
     return [
-      { titulo: plano.simulados + " simulados", detalhe: "Acesso conforme o plano" },
+      { titulo: plano.exames + " exames", detalhe: "Acesso conforme o plano" },
       { titulo: plano.anuncios === "Sim" ? "Com publicidade" : plano.anuncios === "Reduzida" ? "Publicidade reduzida" : "Sem anúncios", detalhe: "Condição durante a validade" },
       { titulo: plano.suporte === "Prioritário" ? "Atendimento prioritário" : "Atendimento normal", detalhe: "Apoio ao utilizador" },
-      { titulo: plano.validade === "Sem limite" ? "Acesso sem limite de tempo" : "Válido por " + plano.validade, detalhe: "Tentativas ilimitadas nos simulados disponíveis" }
+      { titulo: plano.validade === "Sem limite" ? "Acesso sem limite de tempo" : "Válido por " + plano.validade, detalhe: "Tentativas ilimitadas nos exames disponíveis" }
     ];
   }
 
