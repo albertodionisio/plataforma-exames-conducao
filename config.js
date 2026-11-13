@@ -2,7 +2,7 @@
 window.APP = {
   nome: "ESTRADA",
   slogan: "Exames de condução em Moçambique",
-  totalExames: 50,
+  totalExames: 51,
   gratuitos: 3,
   perguntasPorExame: 25,
   minutos: 60,
