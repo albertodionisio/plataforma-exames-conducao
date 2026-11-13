@@ -12,11 +12,11 @@ Conteúdo original do ESTRADA, não extraído do APK. Exame integrador avançado
 |---:|---|---|---|
 | 1 | Prioridade e emergência | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 66.º, n.ºs 1–3 |
 | 2 | Ambulância perante sinal vermelho | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
-| 3 | Acidente com vítima e segurança | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
-| 4 | Identificação após acidente | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 92.º, n.º 1 |
-| 5 | Acidente com mortos ou feridos | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Ver explicação da pergunta |
-| 6 | Triângulo e colete | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 91.º, n.º 5 |
-| 7 | Triângulo na via | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 91.º, n.º 3 |
+| 3 | Circulação de motociclos e velocípedes lado a lado | Aplicar a proibição geral de circular a par, com a excepção regulamentar da pista especial sem perigo ou embaraço. | Art. 93.º, n.º 1, al. e) |
+| 4 | Posicionamento dos velocípedes | Aplicar o dever de circular próximo das bermas ou passeios, mesmo quando existam várias filas no mesmo sentido. | Art. 93.º, n.º 2 |
+| 5 | Controlo do motociclo | Reconhecer a proibição de conduzir com as mãos fora do guiador, salvo para sinalizar manobra. | Art. 93.º, n.º 1, al. a) |
+| 6 | Transporte de carga em veículos de duas rodas | Aplicar a regra de transporte de carga em atrelado ou caixa e a proibição de objectos perigosos. | Art. 95.º, n.ºs 1 e 2 |
+| 7 | Iluminação obrigatória nos motociclos | Reconhecer a obrigação permanente de iluminação e o uso da luz de cruzamento. | Art. 96.º, n.ºs 1 e 2 |
 | 8 | Criança em motociclo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 94.º, n.º 1 |
 | 9 | Objectos transportados em motociclo | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 95.º, n.º 2 |
 | 10 | Carta de condutor profissional | Identificar a habilitação exigida para a prestação de serviços remunerados de transporte. | Art. 88.º, n.º 1 |
@@ -30,8 +30,8 @@ Conteúdo original do ESTRADA, não extraído do APK. Exame integrador avançado
 | 18 | Impossibilidade de teste no ar expirado | Identificar as alternativas legais de colheita de sangue ou exame médico. | Art. 82.º, n.º 8 |
 | 19 | Passagem de nível | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 67.º, n.º 2 |
 | 20 | Condutor substituto após impedimento | Aplicar a excepção à imobilização/remoção quando um substituto consentido apresenta teste negativo. | Art. 84.º, n.º 3 |
-| 21 | Reparação após avaria | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 90.º, n.º 3 |
-| 22 | Teste de álcool após acidente | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Art. 85.º, n.º 1 |
+| 21 | Avaria das luzes num velocípede | Aplicar o dever de conduzir à mão o velocípede quando as luzes avariam. | Art. 97.º, n.º 2 |
+| 22 | Reboque de veículos de duas rodas | Reconhecer a proibição de os condutores de motociclos, ciclomotores e velocípedes se fazerem rebocar. | Art. 93.º, n.º 1, al. c) |
 | 23 | Proibição de lançar objectos para fora do veículo | Reconhecer a proibição de lançar objectos para o exterior durante a circulação. | Art. 78.º, n.º 3 |
 | 24 | Paragem em todas as direcções | Resolver uma situação integrada com prioridade, segurança, sinalização ou dever legal. | Código da Estrada, art. 39.º, n.º 3 |
 | 25 | Emissões e derrames do veículo | Aplicar a proibição de circulação com emissões excessivas ou derrame de óleo/substâncias. | Art. 78.º, n.º 1 |
@@ -48,9 +48,9 @@ A distribuição não segue sequência cíclica e a resposta correcta não é si
 Todas as perguntas usam `imagem: null`. Os cenários são apresentados por texto; não foram associados sinais gráficos sem correspondência oficial comprovada.
 
 ## Revisão normativa e limitações
-As perguntas foram confrontadas com a republicação do Código da Estrada disponibilizada pelo INATRO, incluindo regras sobre urgência, acidentes, avarias, sinalização, passageiros, carga, motociclos, fiscalização de álcool, impedimento de conduzir, habilitação profissional e poluição do veículo. As questões que mencionam sinais do Regulamento de Sinais de Trânsito usam apenas referências já documentadas nos mapas dos exames anteriores; a confirmação do regulamento em fonte oficial continua necessária.
+As perguntas foram confrontadas com a republicação do Código da Estrada disponibilizada pelo INATRO, incluindo regras sobre urgência, sinalização, carga, motociclos e velocípedes, fiscalização de álcool, impedimento de conduzir, habilitação profissional e poluição do veículo. As questões que mencionam sinais do Regulamento de Sinais de Trânsito usam apenas referências já documentadas nos mapas dos exames anteriores; a confirmação do regulamento em fonte oficial continua necessária.
 
-A auditoria de duplicações identificou sobreposições com os Exames 34–36, 45, 48–50. Para reduzir repetições directas, as perguntas 10, 11, 17, 18, 20, 23 e 25 foram substituídas por competências dos artigos 78.º, 82.º–84.º e 88.º, mantendo o carácter integrador do exame. A comparação com os restantes exames 1–30 continua dependente da sua futura incorporação. O mapa regista esta limitação para a auditoria global. Não foram incluídas coimas nem sanções.
+A auditoria de duplicações identificou sobreposições com os Exames 34–36, 45 e 48–50. Para reduzir repetições directas, as perguntas 3–7 e 21–22 foram substituídas por regras especiais de circulação, carga e iluminação de motociclos e velocípedes (arts. 93.º, 95.º–97.º). As perguntas 10, 11, 17, 18, 20, 23 e 25 também foram substituídas por competências dos arts. 78.º, 82.º–84.º e 88.º. Mantêm-se 25 perguntas e distribuição A=7/B=6/C=6/D=6. A comparação com os restantes exames 1–30 continua dependente da sua futura incorporação. O mapa regista esta limitação para a auditoria global. Não foram incluídas coimas nem sanções.
 
 ## Originalidade e validação
 Perguntas redigidas de forma original, com ênfase em cenários que combinam mais de uma regra.
