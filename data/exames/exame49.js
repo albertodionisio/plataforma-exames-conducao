@@ -1,38 +1,38 @@
 // Exame 49 — 25 perguntas originais do ESTRADA.
-// Foco: condução defensiva, prevenção de riscos e comunicação segura na via.
-// Base legal: Código da Estrada de Moçambique, com artigos específicos no mapa.
+// Foco: condução defensiva, responsabilidade do condutor e circulação em auto-estrada.
+// Base legal: Código da Estrada, arts. 72.º–74.º, 78.º–89.º.
 // Rastreabilidade: docs/referencias-exames/exame49-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[49] = [
   {
     "numero": 1,
-    "tema": "Velocidade adequada",
+    "tema": "Transporte de bebidas alcoólicas ou substâncias psicotrópicas",
     "dificuldade": "fácil",
-    "enunciado": "Qual deve ser a preocupação principal do condutor ao regular a velocidade?",
+    "enunciado": "Um condutor transporta bebidas alcoólicas na parte do automóvel reservada aos passageiros, sem que estejam acondicionadas na bagageira. Qual é a regra do Código?",
     "imagem": null,
     "opcoes": [
-      "Conduzir sempre no limite máximo.",
-      "Adaptar a velocidade ao veículo, via, estado do condutor, trânsito e demais circunstâncias para não criar perigo.",
-      "Acompanhar sempre a velocidade do veículo da frente.",
-      "Circular rapidamente quando a estrada parece livre."
+      "É proibido transportar bebidas alcoólicas ou substâncias psicotrópicas na parte reservada aos passageiros.",
+      "É permitido se o veículo estiver parado.",
+      "É permitido apenas em viagens fora das localidades.",
+      "É permitido quando o condutor não consome as bebidas."
     ],
-    "correta": 1,
-    "explicacao": "A velocidade deve ser regulada considerando características do veículo, condições da via, estado físico e psicológico do condutor, trânsito e outras circunstâncias. (Art. 29.º, n.º 1)."
+    "correta": 0,
+    "explicacao": "É proibido o porte e transporte de bebidas alcoólicas ou substâncias psicotrópicas na parte reservada aos passageiros em veículos automóveis. (Art. 81.º, n.º 1)."
   },
   {
     "numero": 2,
-    "tema": "Espaço livre visível",
+    "tema": "Taxa de álcool que caracteriza influência",
     "dificuldade": "média",
-    "enunciado": "Quando é considerada excessiva a velocidade, mesmo que não ultrapasse o limite numérico?",
+    "enunciado": "Segundo o Código da Estrada, a partir de que taxa de álcool no ar expirado um condutor é considerado sob influência de álcool, em termos gerais?",
     "imagem": null,
     "opcoes": [
-      "Quando o condutor não consegue parar no espaço livre e visível à sua frente.",
-      "Quando o veículo circula abaixo do limite máximo.",
-      "Quando há pouco trânsito.",
-      "Quando o veículo tem motor de baixa cilindrada."
+      "0,1 mg/l.",
+      "0,2 mg/l.",
+      "0,3 mg/l.",
+      "0,5 mg/l."
     ],
-    "correta": 0,
-    "explicacao": "É excessiva a velocidade que não permite parar o veículo no espaço livre visível à frente, ou que excede os limites legais. (Art. 30.º, n.º 1)."
+    "correta": 2,
+    "explicacao": "Considera-se sob influência de álcool o condutor que apresente taxa igual ou superior a 0,3 mg/l no teste de ar expirado ou 0,6 mg/l no teste sanguíneo. (Art. 81.º, n.º 3)."
   },
   {
     "numero": 3,
@@ -51,168 +51,168 @@ window.EXAMES[49] = [
   },
   {
     "numero": 4,
-    "tema": "Distância lateral",
+    "tema": "Taxa zero para transporte profissional e perigoso",
     "dificuldade": "média",
-    "enunciado": "Ao circular lado a lado com outro veículo, o condutor deve:",
+    "enunciado": "Um motorista conduz um veículo de transporte público de passageiros durante o serviço. Qual é a taxa de álcool permitida pelo Código?",
     "imagem": null,
     "opcoes": [
-      "Manter distância lateral suficiente para evitar acidentes.",
-      "Aproximar-se o máximo possível para reduzir espaço.",
-      "Circular sobre a linha divisória.",
-      "Usar a buzina continuamente."
+      "0,0 mg/l, tanto no ar expirado como no sangue.",
+      "Até 0,3 mg/l no ar expirado.",
+      "Até 0,6 mg/l no sangue.",
+      "A mesma taxa geral aplicável a todos os condutores."
     ],
     "correta": 0,
-    "explicacao": "O condutor deve manter distância lateral suficiente em relação aos veículos que circulam na mesma faixa, no mesmo sentido ou em sentido oposto. (Art. 20.º, n.º 2)."
+    "explicacao": "Para o condutor de transporte de serviço público ou de transporte de carga perigosa, quando em exercício, a taxa é de 0,0 mg/l no teste de ar expirado e no teste sanguíneo. (Art. 81.º, n.º 4)."
   },
   {
     "numero": 5,
-    "tema": "Chuva e pavimento molhado",
+    "tema": "Influência de substâncias psicotrópicas",
     "dificuldade": "média",
-    "enunciado": "A estrada está molhada e oferece pouca aderência. Como deve proceder o condutor?",
+    "enunciado": "Para efeitos do Código, como se considera que um condutor está sob influência de substâncias psicotrópicas?",
     "imagem": null,
     "opcoes": [
-      "Manter a velocidade habitual se os pneus forem novos.",
-      "Aumentar a velocidade para evitar derrapagem.",
-      "Moderar especialmente a velocidade e adequar a condução à aderência disponível.",
-      "Travar bruscamente em todas as curvas."
+      "Sempre que apresente sono durante a condução.",
+      "Quando transporte medicamentos no veículo.",
+      "Quando outro condutor o acusa de estar alterado.",
+      "Quando seja assim considerado em relatório médico ou pericial após exame realizado nos termos legais."
     ],
-    "correta": 2,
-    "explicacao": "A velocidade deve ser especialmente moderada em troços molhados, enlameados ou com precárias condições de aderência. (Art. 32.º, n.º 1, al. h))."
+    "correta": 3,
+    "explicacao": "Considera-se sob influência de substâncias psicotrópicas o condutor que, após exame, seja como tal considerado em relatório médico ou pericial. (Art. 81.º, n.º 5)."
   },
   {
     "numero": 6,
-    "tema": "Aproximação de curva",
+    "tema": "Tempos de condução e descanso profissional",
     "dificuldade": "média",
-    "enunciado": "Ao aproximar-se de uma curva, o condutor deve:",
+    "enunciado": "Por razões de segurança, que medida pode ser definida para condutores profissionais de veículos de transporte?",
     "imagem": null,
     "opcoes": [
-      "Acelerar para atravessar rapidamente.",
-      "Moderar especialmente a velocidade e manter controlo do veículo.",
-      "Ultrapassar antes de entrar na curva.",
-      "Circular junto ao limite exterior sem observar a via."
+      "A dispensa geral de períodos de descanso.",
+      "Tempos de condução e descanso e, se necessário, a presença de mais de uma pessoa habilitada para conduzir o mesmo veículo.",
+      "A condução contínua sem substituição.",
+      "Apenas uma pausa obrigatória no fim da semana."
     ],
     "correta": 1,
-    "explicacao": "A velocidade deve ser especialmente moderada nas curvas e noutros locais de visibilidade reduzida. (Art. 32.º, n.º 1, al. b))."
+    "explicacao": "Por razões de segurança, podem ser definidos tempos de condução e descanso para condutores profissionais e pode ser exigida a presença de mais de uma pessoa habilitada para conduzir o mesmo veículo. (Art. 88.º, n.º 2)."
   },
   {
     "numero": 7,
-    "tema": "Aproximação de cruzamento",
+    "tema": "Responsabilidade da entidade patronal",
     "dificuldade": "média",
-    "enunciado": "Ao aproximar-se de um cruzamento ou entroncamento, o condutor deve:",
+    "enunciado": "Uma infracção às regras de condução profissional previstas no artigo 88.º é cometida por um motorista ao serviço de uma empresa. Quem responde pela multa?",
     "imagem": null,
     "opcoes": [
-      "Manter a velocidade máxima permitida.",
-      "Acelerar para passar antes dos outros.",
-      "Usar a buzina como substituto da prudência.",
-      "Moderar a velocidade e demonstrar prudência especial para poder parar em segurança."
+      "Apenas os passageiros transportados.",
+      "Apenas o proprietário da estrada.",
+      "O contraventor e a entidade patronal, solidariamente.",
+      "Exclusivamente a seguradora."
     ],
-    "correta": 3,
-    "explicacao": "Ao aproximar-se de intersecções, o condutor deve demonstrar prudência especial e circular a velocidade moderada. (Arts. 22.º, n.º 3, e 32.º, n.º 1, al. b))."
+    "correta": 2,
+    "explicacao": "Pela contravenção ao artigo 88.º respondem solidariamente o contraventor e a entidade patronal cujo serviço se encontra adstrito. (Art. 88.º, n.º 3)."
   },
   {
     "numero": 8,
-    "tema": "Zona escolar",
+    "tema": "Dispositivos que detectam fiscalização",
     "dificuldade": "média",
-    "enunciado": "Ao aproximar-se de uma escola devidamente sinalizada, o condutor deve:",
+    "enunciado": "Um condutor instala no automóvel um aparelho destinado a revelar a presença ou perturbar o funcionamento dos instrumentos de detecção ou registo de transgressões. A instalação é permitida?",
     "imagem": null,
     "opcoes": [
-      "Moderar especialmente a velocidade e estar atento à presença de crianças.",
-      "Acelerar para reduzir o tempo de exposição.",
-      "Buzinar continuamente para afastar peões.",
-      "Ultrapassar todos os veículos lentos."
+      "Não. A instalação e utilização desses aparelhos, dispositivos ou produtos é proibida.",
+      "Sim, desde que o aparelho esteja desligado durante a noite.",
+      "Sim, se o veículo pertencer a uma empresa.",
+      "É permitida apenas em auto-estradas."
     ],
     "correta": 0,
-    "explicacao": "A velocidade deve ser especialmente moderada junto de escolas e estabelecimentos similares quando devidamente sinalizados. (Art. 32.º, n.º 1, al. c))."
+    "explicacao": "É proibida a instalação e utilização de aparelhos, dispositivos ou produtos susceptíveis de revelar a presença ou perturbar o funcionamento de instrumentos destinados à detecção ou registo das transgressões. (Art. 89.º, n.º 3)."
   },
   {
     "numero": 9,
-    "tema": "Animais na via",
+    "tema": "Consequência da utilização de detector de fiscalização",
     "dificuldade": "média",
-    "enunciado": "O condutor aproxima-se de uma zona com pessoas ou animais junto à estrada. Como deve proceder?",
+    "enunciado": "Durante uma fiscalização, é encontrado no veículo um dispositivo proibido pelo artigo 89.º, n.º 3. Que consequência prevê o Código?",
     "imagem": null,
     "opcoes": [
-      "Manter a velocidade se os animais estiverem fora da faixa.",
-      "Usar máximos para afastá-los.",
-      "Moderar especialmente a velocidade e preparar-se para reagir com segurança.",
-      "Acelerar para passar antes de se aproximarem."
+      "Apenas uma advertência verbal.",
+      "A multa prevista e a perda do objecto, com remoção e apreensão imediata pelo agente, nos termos legais.",
+      "A substituição obrigatória do veículo.",
+      "A renovação automática do título de condução."
     ],
-    "correta": 2,
-    "explicacao": "A velocidade deve ser especialmente moderada na aproximação de aglomerações de pessoas ou animais. (Art. 32.º, n.º 1, al. e))."
+    "correta": 1,
+    "explicacao": "A violação do artigo 89.º, n.º 3, é punida com multa e perda dos objectos; o agente deve proceder à sua remoção e apreensão imediata ou, se isso não for possível, apreender o documento de identificação do veículo até à remoção. (Art. 89.º, n.º 5)."
   },
   {
     "numero": 10,
-    "tema": "Visibilidade insuficiente",
+    "tema": "Veículos proibidos em auto-estradas",
     "dificuldade": "média",
-    "enunciado": "Segundo o Código da Estrada, considera-se reduzida ou insuficiente a visibilidade quando o condutor não consegue avistar a faixa em toda a largura por que distância mínima?",
+    "enunciado": "Numa auto-estrada devidamente sinalizada, qual dos seguintes veículos está expressamente incluído entre os que não podem transitar?",
     "imagem": null,
     "opcoes": [
-      "10 metros.",
-      "Pelo menos 50 metros.",
-      "100 metros em qualquer situação.",
-      "500 metros."
+      "Um automóvel ligeiro capaz de atingir a velocidade regulamentar.",
+      "Um autocarro de transporte colectivo.",
+      "Um motociclo com cilindrada de 125 cm³.",
+      "Um velocípede."
     ],
-    "correta": 1,
-    "explicacao": "A visibilidade é reduzida ou insuficiente quando não se consegue avistar a faixa em toda a largura numa extensão de pelo menos 50 m. (Art. 28.º)."
+    "correta": 3,
+    "explicacao": "Nas auto-estradas e respectivos acessos devidamente sinalizados é proibido o trânsito de velocípedes, entre outras categorias enumeradas no Código. (Art. 72.º, n.º 1)."
   },
   {
     "numero": 11,
-    "tema": "Nevoeiro",
+    "tema": "Paragem e estacionamento em auto-estrada",
     "dificuldade": "média",
-    "enunciado": "Em situação de nevoeiro que reduz a visibilidade, o condutor deve:",
+    "enunciado": "Um condutor pretende parar numa auto-estrada fora de uma área de serviço ou de outro local especialmente destinado a esse fim. O que determina o Código?",
     "imagem": null,
     "opcoes": [
-      "Circular com máximos permanentemente, mesmo que encandeiem.",
-      "Apagar todas as luzes para evitar reflexos.",
-      "Seguir o veículo da frente muito de perto.",
-      "Adaptar a velocidade e utilizar as luzes adequadas sem provocar encandeamento."
+      "A paragem é permitida se durar menos de cinco minutos.",
+      "A paragem e o estacionamento são proibidos, mesmo fora da faixa de rodagem, salvo nos locais especialmente destinados.",
+      "Apenas o estacionamento nocturno é proibido.",
+      "É permitido parar na berma sempre que haja boa visibilidade."
     ],
-    "correta": 3,
-    "explicacao": "O Código exige iluminação adequada quando a visibilidade é insuficiente e proíbe o uso de máximos quando possam encandear outros condutores. (Arts. 61.º e 27.º)."
+    "correta": 1,
+    "explicacao": "Nas auto-estradas e respectivos acessos devidamente sinalizados é proibido parar ou estacionar, ainda que fora das faixas de rodagem, salvo nos locais especialmente destinados a esse fim. (Art. 72.º, n.º 2, al. b))."
   },
   {
     "numero": 12,
-    "tema": "Uso de luzes de nevoeiro",
+    "tema": "Transposição dos separadores em auto-estrada",
     "dificuldade": "média",
-    "enunciado": "Quando deve o condutor utilizar luzes de nevoeiro?",
+    "enunciado": "Um condutor perde a saída pretendida e considera atravessar uma abertura do separador central para alcançar a faixa contrária. Essa manobra é permitida?",
     "imagem": null,
     "opcoes": [
-      "Quando as condições meteorológicas ou ambientais o justifiquem, como em nevoeiro intenso ou redução significativa da visibilidade.",
-      "Sempre que conduzir à noite.",
-      "Em qualquer estrada iluminada.",
-      "Para avisar os veículos que seguem atrás."
+      "Sim, se não houver veículos próximos.",
+      "Sim, desde que ligue os quatro piscas.",
+      "Não. É proibido transpor os separadores de tráfego ou as aberturas neles existentes.",
+      "É permitido apenas durante o dia."
     ],
-    "correta": 0,
-    "explicacao": "As luzes de nevoeiro devem ser utilizadas quando as condições meteorológicas ou ambientais o imponham; é proibido usá-las quando não se justifiquem. (Arts. 60.º, n.º 1, al. i), e 61.º, n.º 2)."
+    "correta": 2,
+    "explicacao": "Nas auto-estradas e respectivos acessos devidamente sinalizados é proibido transpor os separadores de tráfego ou as aberturas neles existentes. (Art. 72.º, n.º 2, al. e))."
   },
   {
     "numero": 13,
-    "tema": "Máximos e encandeamento",
+    "tema": "Utilização da via de aceleração",
     "dificuldade": "média",
-    "enunciado": "Um veículo aproxima-se em sentido contrário durante a noite. O condutor deve evitar:",
+    "enunciado": "Ao entrar numa auto-estrada através de um acesso com via de aceleração, o condutor deve:",
     "imagem": null,
     "opcoes": [
-      "Reduzir a velocidade.",
-      "Manter distância de segurança.",
-      "Usar os máximos de modo a encandear o outro condutor.",
-      "Observar a posição do veículo contrário."
+      "Utilizar a via de aceleração e ajustar a velocidade para entrar na via adjacente sem perigo ou embaraço.",
+      "Parar obrigatoriamente no início da via de aceleração, mesmo com trânsito livre.",
+      "Entrar directamente na via mais à esquerda.",
+      "Obrigar os veículos que já circulam a reduzir a velocidade."
     ],
-    "correta": 2,
-    "explicacao": "O uso dos máximos no cruzamento com outros veículos é proibido e pode perturbar a visão do outro condutor. (Art. 61.º, n.º 5)."
+    "correta": 0,
+    "explicacao": "Se existir via de aceleração, o condutor que pretenda entrar na auto-estrada deve utilizá-la e regular a velocidade para tomar a via adjacente sem perigo ou embaraço. (Art. 73.º, n.º 2)."
   },
   {
     "numero": 14,
-    "tema": "Condução nocturna",
+    "tema": "Saída pela via de desaceleração",
     "dificuldade": "média",
-    "enunciado": "Ao anoitecer, o condutor deve:",
+    "enunciado": "Um condutor pretende sair de uma auto-estrada que dispõe de via de desaceleração. Qual é a preparação correcta?",
     "imagem": null,
     "opcoes": [
-      "Circular sem luzes se conhecer a estrada.",
-      "Utilizar os dispositivos de iluminação exigidos pelas condições de visibilidade e pelo Código.",
-      "Usar apenas as luzes de perigo.",
-      "Acender apenas a luz interior do veículo."
+      "Mudar directamente para a berma no último momento.",
+      "Ocupar com antecedência a via de trânsito mais à esquerda e entrar na via de desaceleração logo que possível.",
+      "Circular pela via mais à direita desde o início da viagem, independentemente da saída.",
+      "Parar na faixa de rodagem antes da saída."
     ],
     "correta": 1,
-    "explicacao": "Do anoitecer ao amanhecer, e também de dia quando a visibilidade for insuficiente, devem ser utilizadas as luzes previstas no Código. (Art. 61.º, n.º 1)."
+    "explicacao": "Para sair de uma auto-estrada, o condutor deve ocupar com a necessária antecedência a via mais à esquerda e, existindo via de desaceleração, entrar nela logo que possível. (Art. 73.º, n.º 3)."
   },
   {
     "numero": 15,
@@ -306,18 +306,18 @@ window.EXAMES[49] = [
   },
   {
     "numero": 21,
-    "tema": "Redução súbita da velocidade",
+    "tema": "Posição de veículos pesados em auto-estrada",
     "dificuldade": "média",
-    "enunciado": "Um obstáculo imprevisto obriga o condutor a reduzir subitamente a velocidade. O que deve fazer?",
+    "enunciado": "Numa auto-estrada com três ou mais vias no mesmo sentido, um veículo pesado de mercadorias tem 8 metros de comprimento. Que vias pode utilizar?",
     "imagem": null,
     "opcoes": [
-      "Reduzir sem observar os veículos atrás.",
-      "Usar apenas a buzina.",
-      "Se possível, sinalizar a situação e reduzir de modo a não criar perigo para os outros utentes.",
-      "Desligar o motor imediatamente."
+      "Todas as vias, desde que circule abaixo do limite de velocidade.",
+      "Apenas a via mais à direita.",
+      "As duas vias mais à esquerda.",
+      "As duas vias mais à direita."
     ],
     "correta": 2,
-    "explicacao": "Salvo perigo iminente, o condutor não deve reduzir subitamente a velocidade sem se certificar de que não cria perigo para os outros utentes. (Art. 29.º, n.º 2; art. 63.º, n.º 2)."
+    "explicacao": "Nas auto-estradas ou troços com três ou mais vias no mesmo sentido, os veículos pesados de mercadorias ou conjuntos com comprimento superior a 7 m só podem utilizar as duas vias de trânsito mais à esquerda. (Art. 74.º, n.º 1)."
   },
   {
     "numero": 22,
