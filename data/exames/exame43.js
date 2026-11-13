@@ -1,5 +1,6 @@
 // Exame 43 — 25 perguntas originais do ESTRADA.
-// Base legal: Código da Estrada de Moçambique, arts. 28.º, 59.º–63.º e 96.º.
+// Foco: iluminação, visibilidade e utilização dos dispositivos luminosos.
+// Base legal: Código da Estrada, arts. 59.º–63.º.
 // Rastreabilidade: docs/referencias-exames/exame43-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[43] = [
@@ -185,18 +186,18 @@ window.EXAMES[43] = [
   },
   {
     "numero": 13,
-    "tema": "Definição de visibilidade reduzida",
+    "tema": "Luzes de perigo durante o reboque",
     "dificuldade": "média",
-    "enunciado": "Para efeitos do Código da Estrada, quando se considera reduzida ou insuficiente a visibilidade numa via?",
+    "enunciado": "Um veículo está a ser rebocado e as luzes de perigo encontram-se em condições de funcionamento. Que sinalização deve utilizar?",
     "imagem": null,
     "opcoes": [
-      "Quando o condutor não consegue avistar toda a largura da faixa de rodagem numa extensão de pelo menos 50 metros.",
-      "Sempre que a estrada não tenha iluminação pública.",
-      "Quando só consegue ver os veículos que circulam a menos de 100 metros.",
-      "Sempre que esteja a chover, independentemente da visibilidade."
+      "Deve utilizar as luzes de perigo.",
+      "Deve manter apenas os máximos ligados.",
+      "Deve desligar toda a iluminação.",
+      "Deve utilizar apenas a luz da chapa de matrícula."
     ],
     "correta": 0,
-    "explicacao": "O Código considera reduzida ou insuficiente a visibilidade quando o condutor não consegue avistar toda a largura da faixa de rodagem numa extensão de, pelo menos, 50 metros. (Art. 28.º)."
+    "explicacao": "Quando o veículo está a ser rebocado, devem ser utilizadas as luzes de perigo, desde que estejam em condições de funcionamento. (Art. 63.º, n.º 3, al. b))."
   },
   {
     "numero": 14,
