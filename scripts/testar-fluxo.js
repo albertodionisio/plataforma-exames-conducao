@@ -25,11 +25,12 @@ let hash="";
 const location={get hash(){return hash;},set hash(v){hash=v;}};
 const storage={};
 const localStorage={getItem:k=>storage[k]||null,setItem:(k,v)=>{storage[k]=v;}};
-let intervalCallback=null;
+let intervalCallback=null, agora=1700000000000;
+class FakeDate extends Date { static now(){ return agora; } }
 const window={APP:null,EXAMES:{},addEventListener:(n,fn)=>{listeners[n]=fn;}};
 const fakeSetInterval=fn=>{intervalCallback=fn;return 1;};
 const fakeClearInterval=()=>{intervalCallback=null;};
-const context={window,document,location,localStorage,Date,Math,JSON,Object,Array,String,Number,
+const context={window,document,location,localStorage,Date:FakeDate,Math,JSON,Object,Array,String,Number,
   setInterval:fakeSetInterval,clearInterval:fakeClearInterval,console};
 vm.createContext(context);
 const root=path.join(__dirname,"..");
@@ -72,6 +73,13 @@ assert.match(app.innerHTML,/REPROVADO/);
 assert.match(app.innerHTML,/Em branco: <b>25<\/b>/);
 hash="#/rever";listeners.hashchange();
 assert.match(app.innerHTML,/Não respondida/);
+
+hash="#/exame/40";listeners.hashchange();
+assert.match(app.innerHTML,/Pergunta 1 de 25/);
+agora += (context.window.APP.minutos * 60000) + 1000;
+intervalCallback();
+assert.match(app.innerHTML,/exame submetido automaticamente/);
+assert.match(app.innerHTML,/Em branco: <b>25<\\/b>/);
 
 context.window.APP.modoTesteAcessoPago=false;
 hash="#/exame/39";listeners.hashchange();
