@@ -258,14 +258,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Validação: executar `node scripts/validar-exames.js`, conferir manualmente a rastreabilidade legal das 25 perguntas, verificar ausência de duplicações e testar abertura/revisão do exame. O validador automático não substitui a revisão jurídica e pedagógica.
 - Não reservar várias tarefas de uma vez. Cada sessão escolhe apenas uma tarefa LIVRE, lê `INSTRUCOES.md`, confirma a reserva remota e trabalha exclusivamente nos ficheiros atribuídos.
 
-## DADOS-034 — Exame 33 (conteúdo original)
-- Estado: EM CURSO — ChatGPT-ESTRADA-3 (assumida com autorização do dono) — 2026-11-13 — ficheiros: data/exames/exame33.js, docs/referencias-exames/exame33-mapeamento.md — último sinal: 2026-11-13
-- Foco temático prioritário: Cruzamentos, entroncamentos e rotundas.
-- Pedido: criar um exame original de 25 perguntas sobre o foco indicado, fundamentado em legislação moçambicana vigente e fontes oficiais verificáveis. O foco orienta a selecção, mas não obriga a inventar regras; quando necessário, integrar temas relacionados com base legal confirmada.
-- Onde mexer: `data/exames/exame33.js` (novo) e `docs/referencias-exames/exame33-mapeamento.md` (novo). Não alterar ficheiros partilhados sem coordenação.
-- Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
-- Cuidados: não usar o APK como fonte de perguntas para estes exames; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`. Reservar apenas esta tarefa e confirmar a reserva no GitHub antes de começar.
-
 ## DADOS-035 — Exame 34 (conteúdo original)
 - Estado: EM CURSO — ChatGPT-DADOS035 — 2026-11-13 UTC+02 — ficheiros: data/exames/exame34.js, docs/referencias-exames/exame34-mapeamento.md — último sinal: 2026-11-13 UTC+02
 - Foco: ultrapassagem e cruzamento de veículos.
