@@ -1,4 +1,4 @@
-# Plataforma de exames de exame de condução
+# Plataforma de exames de condução
 
 Nome provisório: **ESTRADA** (muda-se só em `config.js`).
 
