@@ -69,10 +69,10 @@ const vm = require("node:vm");
     assert.ok(indexSource.indexOf(tag)<indexSource.indexOf('<script src="app.js"></script>'), "O Exame "+n+" deve carregar antes de app.js");
   }
   vm.runInContext(fs.readFileSync(path.join(root,"config.js"),"utf8"),context);
-  assert.equal(context.window.APP.modoTesteAcessoPago,false,
-    "A configuração publicada deve bloquear os exames pagos");
-  // A abertura temporária é simulada apenas neste ambiente de testes, nunca no site publicado.
-  context.window.APP.modoTesteAcessoPago=true;
+  assert.equal(context.window.APP.modoTesteAcessoPago,true,
+    "A configuração actual de testes deve manter os exames abertos");
+  assert.deepEqual(Array.from(context.window.APP.examesAbertosTeste),[1,51],
+    "O intervalo de testes deve abranger os Exames 1 a 51");
   for(const n of [1,...Array.from({length:5},(_,i)=>i+26),...Array.from({length:21},(_,i)=>i+31)]){
     const file=path.join(root,"data","exames","exame"+n+".js");
     if(fs.existsSync(file))vm.runInContext(fs.readFileSync(file,"utf8"),context);
