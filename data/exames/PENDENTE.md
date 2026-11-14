@@ -123,12 +123,14 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Commits: conteúdo `749824f8c8d19abb403fb72fa4d2a257e920ccc8`; mapa `83996e621ba1707bc6b36d651541fabfe73802fc`.
 
 ## DADOS-014 — Exame 13
-- Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa em preparação; imagens adiadas por decisão do responsável.
-- **Fonte já extraída (2026-11-14):** NÃO abrir nem descodificar o APK. Ler `original/extraido/exame13.json` (enunciado, 4 alternativas, resposta do APK, ficheiro de imagem) e copiar as imagens de `original/extraido/imagens/exame13/` para `public/exames/exame13/`. 341 das 750 perguntas têm a 4.ª alternativa vazia (criar distrator novo) e algumas chaves do APK estão erradas: confirmar cada resposta e registar no mapa «resposta APK vs ESTRADA». Sinal desfocado ou pixelizado: extrair do PDF `original/referencia/sinais.pdf` (código no nome do ficheiro, em `public/sinais/`). Artigos: conferir em `original/referencia/codigodeestrada.pdf`. Modelo a copiar: Exame 4 (`data/exames/exame4.js`, `docs/referencias-exames/exame4-mapeamento.md`). Sem artigos nem valores de coimas nos textos.
-- Pedido: extrair as 25 perguntas do Exame 13 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
-- Onde mexer: `data/exames/exame13.js` (novo) e `docs/referencias-exames/exame13-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
-- Pronto quando: as 25 perguntas correspondem às 25 do Exame 13 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
-- Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 13 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
+- Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa publicados; imagens pendentes.
+- Conteúdo criado em `data/exames/exame13.js`: 25 perguntas, quatro alternativas preenchidas e explicações pedagógicas.
+- Mapa criado em `docs/referencias-exames/exame13-mapeamento.md`.
+- Por decisão do responsável, não foi feita revisão legal nesta fase; as respostas seguem a chave extraída do APK, sem alegação de validação jurídica independente.
+- As perguntas 1, 2, 3, 4, 5, 6, 7, 8, 10, 15, 16, 17, 22 e 25 tinham a alternativa D vazia; foram acrescentados distratores.
+- As imagens ainda não foram copiadas nem associadas; serão tratadas numa etapa posterior.
+- O Exame 13 não foi ligado à aplicação. A sequência autorizada pelo responsável abrange os Exames 12 a 15, com integração adiada.
+- Commits: conteúdo `95c9a55e9482da8460e960a83bfef5c476650c39`; mapa `78155d09a6ad6f93aa5e6d47811674a39094a683`.
 
 ## DADOS-015 — Exame 14
 - Estado: LIVRE
