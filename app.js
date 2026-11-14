@@ -6,6 +6,147 @@
   var A = window.APP || {}, EX = window.EXAMES || {};
   var app = document.getElementById("app");
   var estado = null, timer = null;
+  var supabaseClient = null, authUser = null, authReady = false, authAvailable = false;
+  var authMode = "login", authFeedback = "";
+
+  function iniciarAuth() {
+    try {
+      if (!window.supabase || typeof window.supabase.createClient !== "function" ||
+          !A.supabaseUrl || !A.supabasePublishableKey) {
+        authReady = true;
+        authAvailable = false;
+        return Promise.resolve();
+      }
+      supabaseClient = window.supabase.createClient(A.supabaseUrl, A.supabasePublishableKey, {
+        auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+      });
+      authAvailable = true;
+      supabaseClient.auth.onAuthStateChange(function (event, session) {
+        authUser = session && session.user ? session.user : null;
+        renderConta();
+        if (event === "SIGNED_IN" && authUser) retomarExamePendente();
+        if (event === "SIGNED_OUT" && location.hash.indexOf("#/exame/") === 0) rota();
+      });
+      return supabaseClient.auth.getSession().then(function (resultado) {
+        authUser = resultado && resultado.data && resultado.data.session ?
+          resultado.data.session.user : null;
+        authReady = true;
+        renderConta();
+      }).catch(function () {
+        authReady = true;
+        authAvailable = false;
+      });
+    } catch (e) {
+      authReady = true;
+      authAvailable = false;
+      return Promise.resolve();
+    }
+  }
+
+  function renderConta() {
+    var el = document.getElementById("conta-utilizador");
+    if (!el) return;
+    el.innerHTML = authUser ?
+      "<span class='conta-email'>" + esc(authUser.email || "Conta autenticada") +
+      "</span><button class='conta-sair' type='button' data-action='auth-logout'>Sair</button>" :
+      "<a class='conta-entrar' href='#/entrar'>Entrar</a>";
+  }
+
+  function retomarExamePendente() {
+    var n = null;
+    try {
+      n = Number(sessionStorage.getItem("estrada.exame.pendente"));
+      if (n > 0) sessionStorage.removeItem("estrada.exame.pendente");
+      else n = null;
+    } catch (e) {}
+    location.hash = n ? "#/exame/" + n : "#/exames";
+    if (location.hash === (n ? "#/exame/" + n : "#/exames")) rota();
+  }
+
+  function telaAutenticacao() {
+    if (!authAvailable) {
+      app.innerHTML = "<h1>Entrar</h1><div class='card aviso'>O serviço de autenticação não está disponível neste momento. Tenta novamente mais tarde.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
+      return;
+    }
+    var registo = authMode === "registo";
+    app.innerHTML = "<section class='auth-card card' aria-labelledby='auth-titulo'>" +
+      "<h1 id='auth-titulo'>" + (registo ? "Criar conta" : "Entrar na tua conta") + "</h1>" +
+      "<p>" + (registo ? "Regista-te para começares a realizar exames." : "Inicia sessão para continuares para o exame seleccionado.") + "</p>" +
+      "<form id='auth-form'>" +
+      "<label for='auth-email'>Email</label><input id='auth-email' name='email' type='email' autocomplete='email' required maxlength='254'>" +
+      "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' required>" +
+      "<button class='btn auth-submit' type='submit'>" + (registo ? "Criar conta" : "Entrar") + "</button></form>" +
+      (authFeedback ? "<p class='auth-feedback' role='status'>" + esc(authFeedback) + "</p>" : "") +
+      "<p class='auth-alternar'>" + (registo ? "Já tens conta?" : "Ainda não tens conta?") +
+      " <button class='link-button' type='button' data-action='auth-mode'>" + (registo ? "Entrar" : "Criar conta") + "</button></p>" +
+      "<button class='btn sec auth-google' type='button' disabled aria-disabled='true'>Continuar com Google — brevemente</button>" +
+      "<p><a href='#/exames'>Voltar ao catálogo</a></p></section>";
+  }
+
+  function concluirAutenticacao(user) {
+    authUser = user || authUser;
+    authFeedback = "";
+    renderConta();
+    retomarExamePendente();
+  }
+
+  function terminarAutenticacao(event) {
+    var form = event.target;
+    if (!form || form.id !== "auth-form") return;
+    event.preventDefault();
+    if (!authAvailable || !supabaseClient) {
+      authFeedback = "Serviço de autenticação indisponível.";
+      return telaAutenticacao();
+    }
+    var emailEl = form.querySelector("#auth-email");
+    var passwordEl = form.querySelector("#auth-password");
+    var email = emailEl ? emailEl.value.trim() : "";
+    var password = passwordEl ? passwordEl.value : "";
+    if (!email || password.length < 8) {
+      authFeedback = "Indica um email válido e uma palavra-passe com pelo menos 8 caracteres.";
+      return telaAutenticacao();
+    }
+    authFeedback = "A processar...";
+    telaAutenticacao();
+    var pedido = authMode === "registo" ?
+      supabaseClient.auth.signUp({ email: email, password: password,
+        options: { emailRedirectTo: location.origin + location.pathname + "#/entrar" } }) :
+      supabaseClient.auth.signInWithPassword({ email: email, password: password });
+    pedido.then(function (resultado) {
+      if (resultado.error) {
+        authFeedback = resultado.error.message || "Não foi possível autenticar.";
+        telaAutenticacao();
+        return;
+      }
+      if (resultado.data && resultado.data.session && resultado.data.user) {
+        concluirAutenticacao(resultado.data.user);
+      } else if (authMode === "registo") {
+        authFeedback = "Conta criada. Confirma o teu email através da mensagem enviada para concluir o registo.";
+        telaAutenticacao();
+      } else {
+        authFeedback = "Não foi possível iniciar sessão. Tenta novamente.";
+        telaAutenticacao();
+      }
+    }).catch(function () {
+      authFeedback = "Ocorreu um erro de ligação. Tenta novamente.";
+      telaAutenticacao();
+    });
+  }
+
+  function sairDaConta() {
+    if (supabaseClient) supabaseClient.auth.signOut().then(function (resultado) {
+      if (resultado && resultado.error) {
+        authFeedback = "Não foi possível terminar a sessão.";
+      } else {
+        authUser = null;
+        renderConta();
+        location.hash = "#/";
+        rota();
+      }
+    }).catch(function () {
+      authFeedback = "Não foi possível terminar a sessão.";
+    });
+  }
 
   document.getElementById("nome").textContent = A.nome || "ESTRADA";
   document.title = (A.nome || "ESTRADA") + " — " + (A.slogan || "Exames de condução");
@@ -78,6 +219,8 @@
   function rota() {
     pararRelogio();
     var h = location.hash.replace("#", "") || "/";
+    if (!authReady) { app.innerHTML = "<p>A carregar...</p>"; return; }
+    if (h === "/entrar") return telaAutenticacao();
     if (h === "/exames") return catalogo();
     if (h === "/planos") return planos();
     if (h === "/resultado") return resultado();
@@ -103,7 +246,7 @@
       var pronto = Array.isArray(EX[n]), livre = temAcesso(n);
       var rotulo = !pronto ? "Em preparação" : (n <= A.gratuitos ? "Grátis" :
         (testeAberto(n) ? "Aberto para testes" : "Acesso por plano"));
-      var destino = pronto && livre ? "#/exame/" + n : (pronto ? "#/planos" : "#/exames");
+      var destino = pronto ? "#/exame/" + n : "#/exames";
       html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='" + destino +
         "'><b>Exame " + n + "</b><small>" + rotulo + "</small></a>";
     }
@@ -116,6 +259,17 @@
   }
   function iniciar(n) {
     if (!n || n < 1 || n > Number(A.totalExames || 0)) return catalogo();
+    if (!authReady) { app.innerHTML = "<p>A carregar...</p>"; return; }
+    if (!authAvailable) {
+      app.innerHTML = "<h1>Exame " + n + "</h1><div class='card aviso'>Não foi possível ligar ao serviço de autenticação. O exame não foi iniciado.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
+      return;
+    }
+    if (!authUser) {
+      try { sessionStorage.setItem("estrada.exame.pendente", String(n)); } catch (e) {}
+      location.hash = "#/entrar";
+      telaAutenticacao();
+      return;
+    }
     if (!temAcesso(n)) {
       app.innerHTML = "<h1>Exame " + n + "</h1><div class='card'><p>Este exame está bloqueado e requer um plano de acesso.</p>" +
         "<p><a class='btn' href='#/planos'>Consultar planos</a> <a class='btn sec' href='#/exames'>Voltar aos exames</a></p></div>";
@@ -247,11 +401,20 @@
       "<a class='btn sec' href='#/exames'>Ver exames</a></p>";
     app.innerHTML = h;
   }
+  app.addEventListener("submit", terminarAutenticacao);
   app.addEventListener("click", function (event) {
     var alvo = event.target;
     if (!alvo || !alvo.getAttribute) return;
     var acao = alvo.getAttribute("data-action");
-    if (!acao || !estado || estado.res) return;
+    if (!acao) return;
+    if (acao === "auth-mode") {
+      authMode = authMode === "login" ? "registo" : "login";
+      authFeedback = "";
+      telaAutenticacao();
+      return;
+    }
+    if (acao === "auth-logout") { sairDaConta(); return; }
+    if (!estado || estado.res) return;
     if (acao === "responder") {
       var indice = Number(alvo.getAttribute("data-indice"));
       if (indice >= 0 && indice < 4) {
