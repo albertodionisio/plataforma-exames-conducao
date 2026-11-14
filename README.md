@@ -9,7 +9,7 @@ Aplicação web de preparação para exames de condução em Moçambique.
 - O Exame 1 permanece como demonstração. Os Exames 2–30 ainda não estão integrados nesta versão.
 - O exame tem cronómetro de 60 minutos, 0,8 valores por resposta certa e aprovação a partir de 18 valores.
 - A correcção é apresentada apenas no resultado e na revisão pedagógica, depois da submissão.
-- A área de planos está integrada visualmente, mas pagamentos, contas e assinaturas reais ainda não estão activos.
+- A área de planos está integrada visualmente; autenticação por email/palavra-passe integrada no código, pendente configuração de URL de retorno e teste real; pagamentos e assinaturas ainda não estão activos.
 
 ## Publicação no Netlify
 O ficheiro `netlify.toml` configura a publicação automática:
