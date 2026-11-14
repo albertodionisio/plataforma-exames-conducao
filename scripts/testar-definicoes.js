@@ -119,7 +119,7 @@ assert.match(config, /limiar:\s*18/);
 assert.match(workflow, /node --check public\/definicoes\/definicoes\.js/);
 assert.match(workflow, /node scripts\/testar-definicoes\.js/);
 assert.match(workflow, /test -f dist\/public\/definicoes\/index\.html/);
-assert.ok(workflow.includes("test -f dist/public/ajuda/index.html") === false, "O workflow ainda precisa de validar o novo destino de ajuda");
+assert.ok(workflow.includes("test -f dist/public/ajuda/index.html"), "O workflow deve validar o destino de ajuda publicado");
 assert.ok(fs.existsSync(path.join(root, "public", "ajuda", "index.html")));
 assert.ok(fs.existsSync(path.join(root, "public", "ajuda", "ajuda.css")));
 assert.ok(fs.existsSync(path.join(root, "public", "ajuda", "ajuda.js")));
