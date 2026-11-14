@@ -4,12 +4,14 @@ on:
   push:
     branches: [main]
     paths:
+      - 'index.html'
       - 'public/definicoes/**'
       - 'scripts/testar-definicoes.js'
       - 'scripts/build-netlify.js'
       - '.github/workflows/testar-definicoes.yml'
   pull_request:
     paths:
+      - 'index.html'
       - 'public/definicoes/**'
       - 'scripts/testar-definicoes.js'
       - 'scripts/build-netlify.js'
