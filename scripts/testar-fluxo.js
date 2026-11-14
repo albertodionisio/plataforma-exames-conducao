@@ -228,8 +228,8 @@ const vm = require("node:vm");
 
   context.window.APP.modoTesteAcessoPago=false;
   await navegar("#/exames");
-  assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/planos'><b>Exame 39</b>"),
-    "O catálogo deve encaminhar os exames pagos para os planos");
+  assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/39'><b>Exame 39</b>"),
+    "O catálogo deve encaminhar todos os exames disponíveis para autenticação antes de verificar o acesso");
   await navegar("#/exame/39");
   assert.match(app.innerHTML,/bloqueado e requer um plano/);
   console.log("FE-002 PASSOU: hashchange assíncrono, cronómetro, foco, ausência de feedback, submissão automática/manual, confirmação de brancas, notas 20,0/18,4/17,6, semáforo, revisão e persistência após recarregar.");
