@@ -1,0 +1,23 @@
+:root{color-scheme:light;--azul:#14284b;--marfim:#faf6ec;--texto:#1d2433;--cinza:#6b7280;--linha:#e3dccb;--branco:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{margin:0;background:var(--marfim);color:var(--texto);font:16px/1.55 Georgia,"Times New Roman",serif}
+a{color:var(--azul)}
+a:focus-visible,summary:focus-visible{outline:3px solid #b8924a;outline-offset:3px}
+.cabecalho{min-height:62px;padding:10px max(18px,calc((100% - 900px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--azul);color:#fff}
+.marca,.voltar{color:#fff;text-decoration:none;font-weight:700}
+main{width:min(100% - 36px,900px);margin:0 auto;padding:30px 0 40px}
+.sobretitulo{margin:0 0 6px;color:#3f6b4f;font:700 .75rem/1.4 Arial,sans-serif;letter-spacing:.13em}
+h1{margin:0;color:var(--azul);font-size:clamp(1.8rem,5vw,2.35rem);line-height:1.2}
+.introducao{max-width:700px;color:var(--cinza)}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+nav a{padding:8px 11px;border:1px solid var(--linha);border-radius:8px;background:#fff;text-decoration:none;font:600 .88rem Arial,sans-serif}
+section{margin:18px 0;padding:18px;border:1px solid var(--linha);border-radius:12px;background:#fff;scroll-margin-top:15px}
+h2{margin:0 0 12px;color:var(--azul);font-size:1.3rem}
+details{padding:12px 0;border-top:1px solid var(--linha)}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:700}
+details p,section p{margin:8px 0 0}
+footer{margin-top:26px;color:var(--cinza);font-size:.9rem}
+@media(max-width:520px){.cabecalho{align-items:flex-start;flex-direction:column}.voltar{min-height:40px}main{width:min(100% - 24px,900px);padding-top:22px}section{padding:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
