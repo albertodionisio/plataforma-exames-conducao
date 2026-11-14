@@ -91,7 +91,7 @@
     authUser = user || authUser;
     authFeedback = "";
     renderConta();
-    if (!retomarExamePendente()) { location.hash = "#/exames"; if (location.hash === "#/exames") rota(); }
+    if (!retomarExamePendente() && location.hash === "#/entrar") { location.hash = "#/exames"; if (location.hash === "#/exames") rota(); }
   }
 
   function terminarAutenticacao(event) {
