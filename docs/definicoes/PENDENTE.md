@@ -2,15 +2,9 @@
 
 Tarefas do módulo de definições. Protocolo geral em `INSTRUCOES.md`. Executar uma tarefa de cada vez; reservar no GitHub antes de alterar código.
 
-## DEF-002 — Aparência e preferências
-- Estado: EM CURSO — ChatGPT-ESTRADA-DEF1 — 2026-11-14 12:50 UTC+02 — ficheiros: public/definicoes/index.html, public/definicoes/definicoes.css, public/definicoes/definicoes.js, styles.css, app.js, scripts/testar-definicoes.js — último sinal: 2026-11-14 12:53 UTC+02
-- Pedido: tornar funcionais as preferências de apresentação da aplicação, começando por opções suportadas e persistência local; não mostrar controlos sem efeito.
-- Onde mexer: `public/definicoes/` e, se necessário, integração global após verificar reservas de ficheiros partilhados.
-- Pronto quando: tema/preferência implementado com estado persistente e acessível; opções de som/idioma só activadas se existir suporte real; testes e validação visual móvel concluídos.
-- Cuidados: não alterar preços, planos, dados de exames ou ficheiros partilhados reservados sem autorização específica. Não prometer tradução ou efeitos sonoros inexistentes.
-
 ## DEF-003 — Notificações
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-ESTRADA-DEF1 — 2026-11-14 12:55 UTC+02 — ficheiros: public/definicoes/index.html, public/definicoes/definicoes.css, public/definicoes/definicoes.js, scripts/testar-definicoes.js — último sinal: 2026-11-14 12:55 UTC+02
+- Pedido: implementar preferências e notificações úteis, incluindo permissões e estados de suporte do navegador quando aplicável.
 - Pedido: implementar preferências e notificações úteis, incluindo permissões e estados de suporte do navegador quando aplicável.
 - Onde mexer: módulo de definições e integração de notificações; documentar dependências externas.
 - Pronto quando: permissões são pedidas apenas após acção explícita; estados permitido/negado/não suportado são tratados; não há notificações fictícias; testes aprovados.
