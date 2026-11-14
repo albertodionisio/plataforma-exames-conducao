@@ -3,13 +3,6 @@
 Tarefas do módulo de definições. Protocolo geral em `INSTRUCOES.md`. Executar uma tarefa de cada vez; reservar no GitHub antes de alterar código.
 
 
-## DEF-006 — Planos, subscrições e pagamentos
-- Estado: EM CURSO — ChatGPT-ESTRADA-DEF1 — 2026-11-14 13:42 UTC+02 — ficheiros: public/definicoes/index.html, public/definicoes/definicoes.css, public/definicoes/definicoes.js, scripts/testar-definicoes.js, docs/definicoes/DEF-006.md — último sinal: 2026-11-14 13:42 UTC+02
-- Pedido: apresentar estado do plano e preparar gestão de subscrição/pagamentos de acordo com as integrações existentes.
-- Onde mexer: módulo de definições e integração de pagamentos.
-- Pronto quando: estado e validade vêm de fonte verificável; dependências externas ficam documentadas; nenhuma cobrança é simulada.
-- Cuidados: preços, planos, cobranças e bloqueios exigem aprovação expressa do dono. Manter o regime de testes actual até nova autorização.
-
 ## DEF-007 — Ajuda, suporte e informação legal
 - Estado: LIVRE
 - Pedido: disponibilizar ajuda, perguntas frequentes, contacto, reporte de problemas, termos e privacidade com conteúdo verdadeiro e canais válidos.
