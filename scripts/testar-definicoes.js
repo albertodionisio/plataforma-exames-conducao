@@ -75,3 +75,14 @@ assert.match(js, /sessionStorage\.getItem\("ultima"\)/);
 assert.match(js, /Abrir o último resultado desta sessão/);
 assert.match(css, /\.item-historico/);
 assert.match(css, /\.resumo-progresso/);
+
+assert.match(html, /src="\.\.\/\.\.\/config\.js"/);
+assert.match(html, /id="estado-subscricao"/);
+assert.match(html, /id="plano-individual"/);
+assert.match(html, /Histórico de pagamentos/);
+assert.match(html, /não cria subscrição nem efectua cobranças/);
+assert.match(js, /modoTesteAcessoPago/);
+assert.match(js, /examesAbertosTeste/);
+assert.match(js, /Modo de testes activo/);
+assert.match(js, /Não existe, nesta versão, uma conta ou serviço/);
+assert.match(css, /\.estado-subscricao/);

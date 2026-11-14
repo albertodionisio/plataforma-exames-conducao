@@ -84,6 +84,34 @@
   actualizarEstadoNotificacoes();
 
   // DEF-005: apresentar apenas os dados reais já persistidos pelo fluxo de exames.
+  // DEF-006: apresentar o estado global de acesso que a configuração realmente permite conhecer.
+  var estadoSubscricao = document.getElementById("estado-subscricao");
+  var planoIndividual = document.getElementById("plano-individual");
+
+  function actualizarSubscricao() {
+    if (!estadoSubscricao) return;
+    estadoSubscricao.textContent = "";
+    var appConfig = window.APP;
+    if (!appConfig || typeof appConfig !== "object") {
+      estadoSubscricao.appendChild(elemento("strong", "", "Não foi possível ler a configuração de acesso."));
+      estadoSubscricao.appendChild(elemento("p", "", "Não apresentamos um plano ou uma validade sem uma fonte verificável."));
+      return;
+    }
+    var modoTeste = appConfig.modoTesteAcessoPago === true;
+    var intervalo = Array.isArray(appConfig.examesAbertosTeste) && appConfig.examesAbertosTeste.length === 2
+      ? appConfig.examesAbertosTeste.map(Number) : null;
+    if (modoTeste && intervalo && intervalo.every(Number.isFinite)) {
+      estadoSubscricao.appendChild(elemento("strong", "", "Modo de testes activo"));
+      estadoSubscricao.appendChild(elemento("p", "", "A configuração abre temporariamente os exames " + intervalo[0] + " a " + intervalo[1] + " para testes. Este acesso não é uma subscrição individual e não tem validade pessoal."));
+    } else {
+      estadoSubscricao.appendChild(elemento("strong", "", "Acesso normal configurado"));
+      estadoSubscricao.appendChild(elemento("p", "", "A configuração indica " + Number(appConfig.gratuitos || 0) + " exames gratuitos. Não existe, nesta versão, uma conta ou serviço que confirme uma subscrição paga individual."));
+    }
+    if (planoIndividual) {
+      planoIndividual.textContent = "Sem conta ou autenticação: não é possível identificar um plano pessoal, a data de início ou a data de expiração. Os planos e preços definidos podem ser consultados na página de planos.";
+    }
+  }
+
   var listaHistorico = document.getElementById("historico-exames");
   var resumoProgresso = document.getElementById("resumo-progresso");
   var atalhoUltimoResultado = document.getElementById("atalho-ultimo-resultado");
@@ -175,6 +203,7 @@
       }
     }
   }
+  actualizarSubscricao();
   actualizarAprendizagem();
   window.addEventListener("storage", function (e) {
     if (e.key === "hist" || e.key === null) actualizarAprendizagem();

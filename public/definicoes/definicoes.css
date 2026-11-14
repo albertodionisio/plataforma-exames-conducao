@@ -178,3 +178,10 @@ html[data-theme="dark"] li{border-color:#35445a}html[data-theme="dark"] .icone{b
 .estado-vazio{color:var(--cinza);font-size:.9rem;line-height:1.5}
 .atalho-resultado{margin:12px 0 0;font-size:.88rem}
 .atalho-resultado a{color:var(--azul);font-weight:700}
+
+/* DEF-006 — estado de acesso e subscrição sem simular pagamentos */
+.estado-subscricao,.detalhes-subscricao>div{margin-top:12px;padding:13px 15px;border:1px solid var(--linha);border-radius:9px;background:var(--branco)}
+.estado-subscricao strong,.detalhes-subscricao strong{display:block;margin:0 0 5px;color:var(--azul);font-size:.96rem}
+.estado-subscricao p,.detalhes-subscricao p{margin:5px 0 0;color:var(--cinza);font-size:.88rem;line-height:1.5}
+.detalhes-subscricao{display:grid;gap:8px;margin-top:10px}
+.link-planos{margin-top:14px;font-weight:700}
