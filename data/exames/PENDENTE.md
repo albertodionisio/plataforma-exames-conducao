@@ -46,13 +46,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 3 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame deve respeitar integralmente o fluxo definido em `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1 e 2. Não usar correcção imediata. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
 
-## DADOS-005 — Exame 4
-- Estado: EM CURSO — Claude-DADOS005 — 2026-11-13 23:55 UTC+02 — ficheiros: data/exames/exame4.js, docs/referencias-exames/exame4-mapeamento.md, public/exames/exame4/ (imagens) — último sinal: 2026-11-13 23:55 UTC+02 — assumida a reserva parada de ChatGPT-DADOS005 (último sinal 2026-11-11 14:41), com autorização expressa do dono em 2026-11-13.
-- Pedido: extrair as 25 perguntas do Exame 4 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
-- Onde mexer: `data/exames/exame4.js` (novo) e `docs/referencias-exames/exame4-mapeamento.md`.
-- Pronto quando: as 25 perguntas correspondem às 25 do Exame 4 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; abre no ESTRADA, cronómetro de 60 minutos, correcção imediata e resultado; mapa completo; validação automática e teste no navegador sem erros.
-- Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1, 2 e 3. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
-
 ## DADOS-006 — Exame 5
 - Estado: LIVRE
 - Parcial: (2026-11-14, Claude-DADOS006) FEITO e publicado: `data/exames/exame5.js` (25 perguntas, validador sem problemas), `docs/referencias-exames/exame5-mapeamento.md`, 8 sinais extraídos do PDF em `public/sinais/` (A54, D79, E12, E25, E52, G62, J12, M3) e 3 fotografias em `public/cenas/` (perguntas 8, 20 e 21). FALTA: registar o Exame 5 na aplicação e testá-lo no navegador (fluxo completo, imagens, resultado e revisão). Isso depende de `index.html`/`app.js`, reservados pela DADOS-001; só avançar quando a DADOS-001 estiver concluída ou o dono autorizar. Não refazer o conteúdo.
