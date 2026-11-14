@@ -49,7 +49,7 @@ Conteúdo adaptado das 25 perguntas recuperadas em `original/extraido/exame8.jso
 | 14 | Ergonomia do veículo | Conceito geral de ergonomia e adaptação do equipamento ao utilizador | C | C | exame8_14.jpg. Chave mantida. |
 | 15 | Raquetas e bandeirolas de sinalização | Regulamento de Sinais, art. 13, n.º 4, al. a) — A64 | C | B | exame8_15.jpg. Chave mantida em conteúdo; posição alterada para B. |
 | 16 | Instabilidade dos velocípedes e espaço lateral | Segurança rodoviária — vulnerabilidade dos velocípedes | C | D | exame8_16.jpg. Reformulada para focar a instabilidade do velocípede e a necessidade de espaço lateral; evita repetir literalmente a pergunta do Exame 3, pergunta 18. |
-| 17 | Cedência de passagem na entrada da rotunda | Art. 39, n.º 1, al. d) | B | A | exame8_17.jpg. Chave do APK corrigida; a imagem apresenta uma entrada de rotunda com sinal de cedência. |
+| 17 | Cedência de passagem na entrada da rotunda | Art. 39, n.º 1, al. d) | B | A | exame8_17.jpg. A resposta B do APK está correcta em conteúdo; a pergunta foi adaptada para avaliar a entrada quando a rotunda está livre, sem repetir a pergunta 5, e a alternativa correcta foi reposicionada em A. |
 | 18 | Via de sentido único | Regulamento de Sinais, quadro VII — G86 | A | C | exame8_18.jpg. Chave do APK corrigida: o sinal quadrado de informação indica via de sentido único, não obrigação de seguir em frente. |
 | 19 | Visibilidade reduzida ou insuficiente | Art. 28 | A | B | exame8_19.jpg. Reformulada como situação prática com visibilidade de 40 metros; evita repetir literalmente a definição do Exame 1, pergunta 9. |
 | 20 | Distância de segurança e imobilização | Art. 20, n.º 1 | B | D | exame8_20.jpg. Chave mantida em conteúdo; posição alterada para D. |
@@ -65,4 +65,4 @@ Conteúdo adaptado das 25 perguntas recuperadas em `original/extraido/exame8.jso
 - A posição das alternativas no ESTRADA foi reorganizada para obter uma distribuição equilibrada e não previsível. A letra final não tem de coincidir com a letra original.
 - Na pergunta 8, a designação INATTER do APK foi actualizada para INATRO, nome da entidade actualmente responsável.
 - Na pergunta 18, a chave A do APK foi rejeitada: a imagem representa uma via de sentido único, não uma obrigação de seguir em frente.
-- Na pergunta 17, a chave B do APK foi rejeitada: a imagem apresenta uma entrada de rotunda com sinal de cedência de passagem.
+- Na pergunta 17, a chave B do APK foi mantida em conteúdo: a pergunta foi reformulada para avaliar quando a entrada da rotunda está livre e não exige paragem desnecessária.

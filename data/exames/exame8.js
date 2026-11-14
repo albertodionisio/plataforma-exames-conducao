@@ -292,15 +292,15 @@ window.EXAMES[8] = [
     "numero": 17,
     "tema": "Cedência de passagem na entrada da rotunda",
     "dificuldade": "fácil",
-    "enunciado": "Na situação apresentada, o condutor aproxima-se de uma rotunda e encontra o sinal triangular invertido. O que deve fazer?",
+    "enunciado": "Na entrada de uma rotunda com sinal de cedência de passagem, não há veículos a circular no seu interior. Como deve proceder?",
     "opcoes": [
-      "Ceder passagem aos veículos que já circulam na rotunda.",
-      "Acelerar para entrar antes dos veículos que se aproximam.",
-      "Parar sempre, mesmo quando a rotunda está completamente livre.",
-      "Inverter o sentido de marcha antes de chegar à entrada."
+      "Abranda, confirma que a entrada está livre e entra sem parar desnecessariamente.",
+      "Pára sempre durante alguns segundos, mesmo quando a rotunda está livre e sem trânsito a aproximar-se.",
+      "Acelera para entrar antes de surgir outro veículo no interior da rotunda, sem reduzir a velocidade.",
+      "Inverte o sentido de marcha antes de chegar à entrada da rotunda, se não houver semáforo."
     ],
     "correta": 0,
-    "explicacao": "O sinal de cedência de passagem obriga o condutor a dar prioridade ao trânsito que tem preferência. Ao entrar numa rotunda, deve aguardar por uma abertura segura e não forçar a entrada.",
+    "explicacao": "O sinal obriga a ceder passagem quando existem veículos com prioridade. Se a entrada estiver livre, o condutor deve confirmar que pode entrar em segurança e prosseguir sem efectuar uma paragem desnecessária.",
     "imagem": {
       "descricao": "Entrada de uma rotunda com sinal de cedência de passagem.",
       "src": "public/exames/exame8/exame8_17.jpg"
