@@ -55,8 +55,8 @@
   function retomarExamePendente() {
     var n = null;
     try {
-      n = Number(sessionStorage.getItem("estrada.exame.pendente"));
-      if (n > 0) sessionStorage.removeItem("estrada.exame.pendente");
+      n = Number(localStorage.getItem("estrada.exame.pendente"));
+      if (n > 0) localStorage.removeItem("estrada.exame.pendente");
       else n = null;
     } catch (e) {}
     if (!n) return false;
@@ -84,7 +84,7 @@
       "<p class='auth-alternar'>" + (registo ? "Já tens conta?" : "Ainda não tens conta?") +
       " <button class='link-button' type='button' data-action='auth-mode'>" + (registo ? "Entrar" : "Criar conta") + "</button></p>" +
       (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'>Continuar com Google</button>" : "<button class='btn sec auth-google' type='button' disabled aria-disabled='true'>Continuar com Google — brevemente</button>") +
-      "<p><a href='#/exames'>Voltar ao catálogo</a></p></section>";
+      "<p><a href='#/exames' data-action='auth-cancel'>Voltar ao catálogo</a></p></section>";
   }
 
   function concluirAutenticacao(user) {
@@ -114,7 +114,7 @@
     telaAutenticacao();
     var pedido = authMode === "registo" ?
       supabaseClient.auth.signUp({ email: email, password: password,
-        options: { emailRedirectTo: location.origin + location.pathname + "#/entrar" } }) :
+        options: { emailRedirectTo: location.origin + location.pathname } }) :
       supabaseClient.auth.signInWithPassword({ email: email, password: password });
     pedido.then(function (resultado) {
       if (resultado.error) {
@@ -154,12 +154,14 @@
   }
 
   function sairDaConta() {
-    try { sessionStorage.removeItem("estrada.exame.pendente"); } catch (e) {}
+    try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {}
     if (supabaseClient) supabaseClient.auth.signOut().then(function (resultado) {
       if (resultado && resultado.error) {
         authFeedback = "Não foi possível terminar a sessão.";
       } else {
         authUser = null;
+        estado = null;
+        pararRelogio();
         renderConta();
         location.hash = "#/";
         rota();
@@ -286,7 +288,7 @@
       return;
     }
     if (!authUser) {
-      try { sessionStorage.setItem("estrada.exame.pendente", String(n)); } catch (e) {}
+      try { localStorage.setItem("estrada.exame.pendente", String(n)); } catch (e) {}
       location.hash = "#/entrar";
       telaAutenticacao();
       return;
@@ -435,6 +437,7 @@
       return;
     }
     if (acao === "auth-logout") { sairDaConta(); return; }
+    if (acao === "auth-cancel") { try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {} return; }
     if (acao === "auth-google") { entrarComGoogle(); return; }
     if (!estado || estado.res) return;
     if (acao === "responder") {
