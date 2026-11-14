@@ -22,7 +22,12 @@
         17,
         18,
         19,
-        20
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
       ],
       "motivo": "o APK não guarda explicações; o campo fica null"
     },
@@ -48,7 +53,12 @@
         17,
         18,
         19,
-        20
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
       ],
       "motivo": "o APK não guarda tema ou matéria por pergunta; o campo fica null"
     }

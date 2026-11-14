@@ -1,6 +1,6 @@
 # Extracção do banco de perguntas do APK original
 
-Tarefa DADOS-054. Recupera, do APK `original/Codigo_e_Sinais_de_Transito_1_1.apk`, as perguntas dos exames originais **1 a 20**, tal como estão na app, sem as alterar nem adaptar.
+Tarefa DADOS-054. Recupera, do APK `original/Codigo_e_Sinais_de_Transito_1_1.apk`, as perguntas dos exames originais **1 a 30**, tal como estão na app, sem as alterar nem adaptar.
 
 ## Onde estão os dados no APK
 Não há ficheiros de texto nem base de dados. As perguntas estão no código compilado: a classe `Lcom/app/codigoesinaisdetransito/BaseDadosExame;`, método `<init>` (17 289 instruções), constrói cinco arrays com o **mesmo índice** `i` (0 a 749):
@@ -18,7 +18,7 @@ O extractor interpreta essas instruções (`const`, `const-string` e `const-stri
 ## Como voltar a executar
 ```
 pip install androguard pillow
-python3 tools/extrair_apk.py --exames 1-20          # por omissão
+python3 tools/extrair_apk.py --exames 1-30          # por omissão
 python3 -m unittest tests/test_exames_originais.py -v
 ```
 A saída vai para `original/extraido/`. Voltar a executar gera exactamente os mesmos ficheiros (o teste de reproducibilidade confirma-o).
@@ -29,7 +29,7 @@ A saída vai para `original/extraido/`. Voltar a executar gera exactamente os me
 - `mapeamento.json` e `mapeamento.csv`: de cada pergunta para a sua posição nos arrays, o recurso e o ficheiro de imagem.
 - `nao-recuperado.json`: o que não foi recuperado.
 - `RELATORIO.md`: contagens por exame, avisos e limitações.
-- `ESTADO.json`: exames publicados e se o âmbito (1 a 20) está completo.
+- `ESTADO.json`: exames publicados e se o âmbito (1 a 30) está completo.
 
 ## Campos de cada pergunta
 `numero` (1 a 25), `indice_global`, `enunciado`, `alternativas` (4 posições A a D, `""` se vazia), `resposta_correcta` e `resposta_correcta_indice`, `imagem` (`recurso_id`, `recurso`, `ficheiro`, `sha256`, dimensões, `provavel_em_branco`), `explicacao` (`null`), `tema` (`null`), `estado`, `avisos`, `origem`.
@@ -47,4 +47,4 @@ Muitas perguntas sobre sinais usam o mesmo enunciado («O que indica o sinal da 
 Uma leitura preliminar do APK, feita antes deste extractor, não reconhecia as strings `const-string/jumbo` e repetia o valor anterior em 8 perguntas: exame 1 (pergunta 4), exame 2 (13), exame 4 (5 e 7), exame 8 (3 e 18) e exame 9 (5, 9 e 25). Este extractor corrige isso. Quem tenha usado a leitura preliminar deve voltar a conferir essas perguntas com `original/extraido/`.
 
 ## Âmbito
-Exames 1 a 10 (DADOS-054) e 11 a 20 (DADOS-059). Os exames 21 a 30 ficam para um bloco seguinte: `python3 tools/extrair_apk.py --exames 1-30` (e alargar `AMBITO_DA_TAREFA` no extractor e nos testes).
+Todo o APK: os 30 exames, em três blocos. Exames 1 a 10 (DADOS-054), 11 a 20 (DADOS-059) e 21 a 30 (DADOS-061). Os exames 1 a 30 da plataforma baseiam-se nestes 30; os exames 31 a 50 são originais da plataforma e não vêm do APK.
