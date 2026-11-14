@@ -123,7 +123,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Commits: conteúdo `749824f8c8d19abb403fb72fa4d2a257e920ccc8`; mapa `83996e621ba1707bc6b36d651541fabfe73802fc`.
 
 ## DADOS-014 — Exame 13
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa em preparação; imagens adiadas por decisão do responsável.
 - **Fonte já extraída (2026-11-14):** NÃO abrir nem descodificar o APK. Ler `original/extraido/exame13.json` (enunciado, 4 alternativas, resposta do APK, ficheiro de imagem) e copiar as imagens de `original/extraido/imagens/exame13/` para `public/exames/exame13/`. 341 das 750 perguntas têm a 4.ª alternativa vazia (criar distrator novo) e algumas chaves do APK estão erradas: confirmar cada resposta e registar no mapa «resposta APK vs ESTRADA». Sinal desfocado ou pixelizado: extrair do PDF `original/referencia/sinais.pdf` (código no nome do ficheiro, em `public/sinais/`). Artigos: conferir em `original/referencia/codigodeestrada.pdf`. Modelo a copiar: Exame 4 (`data/exames/exame4.js`, `docs/referencias-exames/exame4-mapeamento.md`). Sem artigos nem valores de coimas nos textos.
 - Pedido: extrair as 25 perguntas do Exame 13 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame13.js` (novo) e `docs/referencias-exames/exame13-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
