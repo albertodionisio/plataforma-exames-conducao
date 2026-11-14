@@ -1,3 +1,4 @@
+- DEF-001 — CONCLUÍDA — ChatGPT-ESTRADA-DEF1 (2026-11-14): página principal de Definições integrada no menu e publicada em Vercel; o dono confirmou que a página abre visualmente no telemóvel. As seis categorias e atalhos internos estão presentes; o único link funcional externo é «Ver planos disponíveis». Os restantes itens são apresentados como texto/estado futuro, não como controlos operacionais. Workflow dedicado corrigido para incluir alterações a `index.html`; execução GitHub Actions `43588153474` concluída com sucesso: sintaxe JS, teste estrutural/navegação, build e verificação dos três ficheiros publicados. Documentação `docs/definicoes/DEF-001.md` actualizada. A conclusão desta tarefa limita-se à estrutura e navegação da página; funcionalidades das opções ficam para DEF-002 a DEF-007.
 # HISTÓRICO — o que já foi feito
 
 Não é instrução: serve para consultar e para evitar repetir trabalho. Uma linha por tarefa concluída (ID, data, sessão, o que mudou).
