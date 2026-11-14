@@ -25,7 +25,7 @@
         authUser = session && session.user ? session.user : null;
         renderConta();
         if (event === "SIGNED_IN" && authUser) retomarExamePendente();
-        if (event === "SIGNED_OUT" && location.hash.indexOf("#/exame/") === 0) rota();
+        if (event === "SIGNED_OUT" && location.hash.indexOf("#/exame/") === 0) location.hash = "#/";
       });
       return supabaseClient.auth.getSession().then(function (resultado) {
         authUser = resultado && resultado.data && resultado.data.session ?
@@ -59,8 +59,12 @@
       if (n > 0) sessionStorage.removeItem("estrada.exame.pendente");
       else n = null;
     } catch (e) {}
-    location.hash = n ? "#/exame/" + n : "#/exames";
-    if (location.hash === (n ? "#/exame/" + n : "#/exames")) rota();
+    if (!n) return false;
+    var destino = "#/exame/" + n;
+    var hashAnterior = location.hash;
+    location.hash = destino;
+    if (hashAnterior === destino) rota();
+    return true;
   }
 
   function telaAutenticacao() {
@@ -87,7 +91,7 @@
     authUser = user || authUser;
     authFeedback = "";
     renderConta();
-    retomarExamePendente();
+    if (!retomarExamePendente()) { location.hash = "#/exames"; if (location.hash === "#/exames") rota(); }
   }
 
   function terminarAutenticacao(event) {
@@ -134,6 +138,7 @@
   }
 
   function sairDaConta() {
+    try { sessionStorage.removeItem("estrada.exame.pendente"); } catch (e) {}
     if (supabaseClient) supabaseClient.auth.signOut().then(function (resultado) {
       if (resultado && resultado.error) {
         authFeedback = "Não foi possível terminar a sessão.";
