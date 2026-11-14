@@ -83,7 +83,7 @@
       (authFeedback ? "<p class='auth-feedback' role='status'>" + esc(authFeedback) + "</p>" : "") +
       "<p class='auth-alternar'>" + (registo ? "Já tens conta?" : "Ainda não tens conta?") +
       " <button class='link-button' type='button' data-action='auth-mode'>" + (registo ? "Entrar" : "Criar conta") + "</button></p>" +
-      "<button class='btn sec auth-google' type='button' disabled aria-disabled='true'>Continuar com Google — brevemente</button>" +
+      (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'>Continuar com Google</button>" : "<button class='btn sec auth-google' type='button' disabled aria-disabled='true'>Continuar com Google — brevemente</button>") +
       "<p><a href='#/exames'>Voltar ao catálogo</a></p></section>";
   }
 
@@ -133,6 +133,22 @@
       }
     }).catch(function () {
       authFeedback = "Ocorreu um erro de ligação. Tenta novamente.";
+      telaAutenticacao();
+    });
+  }
+
+  function entrarComGoogle() {
+    if (!authAvailable || !supabaseClient || A.googleOAuthEnabled !== true) return;
+    supabaseClient.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo: location.origin + location.pathname }
+    }).then(function (resultado) {
+      if (resultado && resultado.error) {
+        authFeedback = resultado.error.message || "Não foi possível iniciar o acesso com Google.";
+        telaAutenticacao();
+      }
+    }).catch(function () {
+      authFeedback = "Não foi possível iniciar o acesso com Google.";
       telaAutenticacao();
     });
   }
@@ -419,6 +435,7 @@
       return;
     }
     if (acao === "auth-logout") { sairDaConta(); return; }
+    if (acao === "auth-google") { entrarComGoogle(); return; }
     if (!estado || estado.res) return;
     if (acao === "responder") {
       var indice = Number(alvo.getAttribute("data-indice"));
