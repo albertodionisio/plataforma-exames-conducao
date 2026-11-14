@@ -6,6 +6,13 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Interface (FE-)
 
+## FE-010 — Ecrã de abertura (splash) estilo WhatsApp com assinatura "From BORJA"
+- Estado: LIVRE
+- Pedido: ao abrir a plataforma, mostrar um ecrã de abertura de 1,5–2 s: fundo liso, logótipo ESTRADA centrado e, no rodapé do ecrã, a assinatura pequena e discreta, como o "from Meta" do WhatsApp (referência: `docs/referencias-visuais/splash-whatsapp.jpg`). Assinatura: linha pequena "from", abaixo "B O R J A" (com espaçamento entre letras), "Technology & Innovation" e, por último, "Todos Direitos Reservados" em letra ainda menor. Estilo escuro/tipografia simples da segunda referência (`docs/referencias-visuais/rodape-from-borja.jpg`).
+- Onde mexer: `index.html` (bloco do splash), `styles.css` (posição fixa no fundo com `bottom` + `env(safe-area-inset-bottom)`, tamanhos pequenos com `clamp()`), `app.js` (esconder com transição suave após carregar; mostrar só na 1.ª abertura da sessão).
+- Pronto quando: logótipo ao centro, assinatura colada ao fundo e legível em ecrãs de 360 px a desktop; não bloqueia a app nem os testes (`scripts/testar-fluxo.js`); respeita `prefers-reduced-motion`; sem imagens externas.
+- Cuidados: usar apenas o logótipo já existente em `icons/`; não alterar perguntas, pontuação, planos ou preços.
+
 ## FE-008 — Ícones gráficos e navegação da interface
 - Estado: EM CURSO — ChatGPT-ESTRADA-8 — 2026-11-13 20:06 UTC — ficheiros: index.html, styles.css, app.js — último sinal: 2026-11-13 20:07 UTC
 - Pedido: substituir a apresentação textual simples da navegação por ícones gráficos SVG consistentes (não emojis), incluindo início, exames e planos; acrescentar um botão de menu hambúrguer funcional em ecrãs pequenos.
