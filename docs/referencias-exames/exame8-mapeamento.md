@@ -20,11 +20,17 @@ Conteúdo adaptado das 25 perguntas recuperadas em `original/extraido/exame8.jso
 - As 25 imagens originais estão associadas às perguntas correspondentes e copiadas para `public/exames/exame8/`.
 - As imagens de sinais foram mantidas quando legíveis; não foi redesenhado nenhum sinal de memória.
 
+## Execução da validação automática
+
+- Workflow GitHub Actions `43595306116`, no commit `42a54f03f4045df9ea5f7c8d51519d3d0a17f7ce`: a verificação de sintaxe JavaScript e o teste de assinaturas passaram. O teste geral `scripts/testar-fluxo.js` falhou na primeira asserção porque `config.js` tem `modoTesteAcessoPago=true`, enquanto o teste existente espera `false`. Por causa dessa falha, `scripts/validar-exames.js` e o build Netlify foram ignorados. A configuração de acesso não foi alterada, pois está fora do escopo DADOS-009 e mantém o regime temporário de testes definido pelo dono.
+- A validação estrutural directa do Exame 8 confirmou 25 perguntas, quatro alternativas preenchidas, índices correctos válidos, distribuição A7/B6/C6/D6, nenhuma resposta correcta como única mais longa, sintaxe do ficheiro e presença das 25 imagens. Isto não substitui a execução do validador oficial nem o teste no navegador.
+
 ## Repetições encontradas e adaptações
 
 - **Pergunta 1:** o conteúdo de classificação da manobra de derrapagem já aparece no Exame 5, pergunta 13. Foi transformada numa situação de segurança sobre como reagir ao observar essa manobra, sem repetir a pergunta de classificação.
 - **Pergunta 9:** tema de fadiga próximo do Exame 4. Foi aplicada a uma viagem longa e ao efeito sobre reacção e distância de paragem.
 - **Pergunta 16:** tema próximo do Exame 3, pergunta 18. Foi focada a instabilidade do velocípede e a necessidade de espaço lateral.
+- **Pergunta 17:** tema próximo da pergunta 5. Foi reformulada para avaliar a entrada quando a rotunda está livre e não exige paragem desnecessária; a pergunta 5 continua a avaliar quem tem prioridade quando já há veículos no interior.
 - **Pergunta 19:** definição de visibilidade reduzida já aparece no Exame 1, pergunta 9. Foi convertida numa situação prática de nevoeiro com visibilidade limitada a 40 metros.
 - **Pergunta 21:** tema próximo do Exame 1, pergunta 13. Foi convertida numa situação de inversão numa rua movimentada, com pouca visibilidade e espaço limitado.
 - **Pergunta 10:** o APK pergunta por uma hora exacta de eliminação do álcool. Como o Código não estabelece um tempo universal e a eliminação varia entre pessoas, a pergunta foi reformulada para avaliar a decisão segura de não conduzir com base numa estimativa de horas.
