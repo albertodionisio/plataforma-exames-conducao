@@ -38,7 +38,7 @@ const vm = require("node:vm");
   };
   const listeners={};
   let hash="";
-  const location={
+  const location={origin:"https://estrada.example",pathname:"/",
     get hash(){return hash;},
     set hash(v){
       if(hash===v)return;
@@ -48,11 +48,31 @@ const vm = require("node:vm");
   };
   const storage={}, session={};
   const localStorage={getItem:k=>storage[k]||null,setItem:(k,v)=>{storage[k]=v;}};
-  const sessionStorage={getItem:k=>session[k]||null,setItem:(k,v)=>{session[k]=v;}};
+  const sessionStorage={getItem:k=>session[k]||null,setItem:(k,v)=>{session[k]=v;},removeItem:k=>{delete session[k];}};
   let intervalCallback=null, agora=1700000000000, confirmar=true;
   const confirmacoes=[];
   class FakeDate extends Date { static now(){ return agora; } }
-  const window={APP:null,EXAMES:{},addEventListener:(n,fn)=>{listeners[n]=fn;}};
+  const authState={session:{user:{email:"candidato@estrada.test"}},listener:null,calls:[]};
+  const fakeAuth={
+    onAuthStateChange(fn){authState.listener=fn;return {data:{subscription:{unsubscribe(){}}}};},
+    getSession(){return Promise.resolve({data:{session:authState.session}});},
+    signInWithPassword({email,password}){
+      authState.calls.push({method:"login",email,password});
+      authState.session={user:{email}};
+      if(authState.listener)authState.listener("SIGNED_IN",authState.session);
+      return Promise.resolve({data:{session:authState.session,user:authState.session.user},error:null});
+    },
+    signUp({email,password}){
+      authState.calls.push({method:"registo",email,password});
+      return Promise.resolve({data:{session:null,user:{email}},error:null});
+    },
+    signOut(){
+      authState.session=null;
+      if(authState.listener)authState.listener("SIGNED_OUT",null);
+      return Promise.resolve({error:null});
+    }
+  };
+  const window={APP:null,EXAMES:{},supabase:{createClient:()=>({auth:fakeAuth})},addEventListener:(n,fn)=>{listeners[n]=fn;}};
   const fakeSetInterval=fn=>{intervalCallback=fn;return 1;};
   const fakeClearInterval=()=>{intervalCallback=null;};
   const context={
@@ -213,4 +233,24 @@ const vm = require("node:vm");
   await navegar("#/exame/39");
   assert.match(app.innerHTML,/bloqueado e requer um plano/);
   console.log("FE-002 PASSOU: hashchange assíncrono, cronómetro, foco, ausência de feedback, submissão automática/manual, confirmação de brancas, notas 20,0/18,4/17,6, semáforo, revisão e persistência após recarregar.");
+
+  // FE-012: visitante pode navegar, mas um acesso directo a exame exige autenticação.
+  authState.session=null;
+  if(authState.listener)authState.listener("SIGNED_OUT",null);
+  await navegar("#/exame/42");
+  assert.equal(location.hash,"#/entrar","Visitante deve ser encaminhado para autenticação");
+  assert.equal(sessionStorage.getItem("estrada.exame.pendente"),"42","O exame seleccionado deve ficar preservado");
+  assert.match(app.innerHTML,/id='auth-form'/,"O ecrã de autenticação deve apresentar formulário real");
+  const authInputs={"#auth-email":{value:"candidato@estrada.test"},"#auth-password":{value:"senha-segura-123"}};
+  app.listeners.submit({target:{id:"auth-form",querySelector:s=>authInputs[s]},preventDefault(){}});
+  await new Promise(resolve=>setImmediate(resolve));
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(location.hash,"#/exame/42","Após login deve retomar o exame seleccionado");
+  assert.match(app.innerHTML,/Pergunta 1 de 25/,"O exame só deve começar depois do login");
+  assert.equal(sessionStorage.getItem("estrada.exame.pendente"),null,"O destino pendente deve ser limpo após retomar");
+  assert.ok(authState.calls.some(c=>c.method==="login"),"O login deve usar o Supabase Auth");
+  app.click("auth-logout");
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(authState.session,null,"O logout deve terminar a sessão Supabase");
+  console.log("FE-012 PASSOU: acesso visitante bloqueado antes do exame, destino preservado, login Supabase e retoma automática, logout.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
