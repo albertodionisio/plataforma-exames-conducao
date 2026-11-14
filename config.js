@@ -2,6 +2,10 @@
 window.APP = {
   nome: "ESTRADA",
   slogan: "Exames de condução em Moçambique",
+  // Chave publishable: pode estar no frontend; nunca colocar aqui service_role/secret keys.
+  supabaseUrl: "https://ldtvbmmweqiaggmsicnu.supabase.co",
+  supabasePublishableKey: "sb_publishable_axaCm24ax4LASWUjezu-pQ_tgl1CXat",
+  googleOAuthEnabled: false,
   totalExames: 51,
   gratuitos: 3,
   perguntasPorExame: 25,
