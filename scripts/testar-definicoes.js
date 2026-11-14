@@ -1,190 +1,91 @@
-:root {
-  color-scheme: light;
-  --azul: #14284b;
-  --marfim: #faf6ec;
-  --verde: #3f6b4f;
-  --ouro: #b8924a;
-  --texto: #1d2433;
-  --cinza: #6b7280;
-  --linha: #e3dccb;
-  --branco: #fff;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 22px; }
-body {
-  margin: 0;
-  background: var(--marfim);
-  color: var(--texto);
-  font: 16px/1.55 Georgia, "Times New Roman", serif;
-}
-a { color: var(--azul); }
-a:focus-visible {
-  outline: 3px solid var(--ouro);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-.cabecalho {
-  min-height: 64px;
-  padding: 10px max(18px, calc((100% - 1040px) / 2));
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  color: var(--marfim);
-  background: var(--azul);
-}
-.marca, .voltar {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--marfim);
-  text-decoration: none;
-}
-.marca { font-weight: bold; letter-spacing: .12em; }
-.marca svg { width: 23px; height: 23px; }
-.voltar { min-height: 44px; padding: 7px 10px; border-radius: 7px; }
-.voltar:hover { background: rgb(255 255 255 / 10%); }
-.voltar svg { width: 19px; height: 19px; }
-svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-main { width: min(100% - 36px, 1040px); margin: 0 auto; padding: 34px 0 24px; }
-.introducao { max-width: 720px; margin-bottom: 24px; }
-.sobretitulo { margin: 0 0 5px; color: var(--verde); font: bold .75rem/1.4 Arial, sans-serif; letter-spacing: .14em; }
-h1 { margin: 0; color: var(--azul); font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.2; }
-.descricao { max-width: 650px; margin: 10px 0 0; color: var(--cinza); }
-.atalhos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 20px;
-}
-.atalhos a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 8px 13px;
-  border: 1px solid var(--linha);
-  border-radius: 999px;
-  background: var(--branco);
-  text-decoration: none;
-  font-size: .92rem;
-}
-.atalhos a:hover, .atalhos a[aria-current="location"] {
-  border-color: var(--verde);
-  color: var(--verde);
-  background: #f0f5f0;
-}
-.aviso {
-  display: flex;
-  align-items: flex-start;
-  gap: 11px;
-  margin: 0 0 22px;
-  padding: 13px 15px;
-  border-left: 4px solid var(--ouro);
-  border-radius: 7px;
-  background: #f3ecd6;
-}
-.aviso svg { flex: 0 0 21px; width: 21px; height: 21px; margin-top: 2px; color: var(--azul); }
-.aviso p { margin: 0; font-size: .92rem; }
-.categorias { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
-.categoria {
-  display: flex;
-  gap: 14px;
-  min-width: 0;
-  padding: 19px;
-  border: 1px solid var(--linha);
-  border-radius: 12px;
-  background: var(--branco);
-  scroll-margin-top: 18px;
-}
-.icone {
-  display: grid;
-  place-items: center;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  color: var(--azul);
-  background: #f1eee5;
-}
-.icone svg { width: 23px; height: 23px; }
-.categoria-conteudo { min-width: 0; flex: 1; }
-h2 { margin: 2px 0 5px; color: var(--azul); font-size: 1.12rem; line-height: 1.3; }
-.categoria-conteudo > p { margin: 0 0 13px; color: var(--cinza); font-size: .91rem; }
-ul { list-style: none; margin: 0; padding: 0; }
-li { padding: 9px 0; border-top: 1px solid #eee9df; }
-li span { display: block; font-weight: bold; }
-li small { display: block; margin-top: 2px; color: var(--cinza); font-size: .82rem; line-height: 1.4; }
-li small a { color: var(--verde); font-weight: bold; }
-.rodape { display: flex; justify-content: space-between; gap: 14px; margin-top: 28px; padding: 17px 0 8px; border-top: 1px solid var(--linha); color: var(--cinza); font-size: .85rem; }
-.rodape p { margin: 0; }
-.rodape a { color: var(--azul); }
-@media (max-width: 760px) {
-  .categorias { grid-template-columns: 1fr; }
-  main { width: min(100% - 28px, 620px); padding-top: 25px; }
-}
-@media (max-width: 430px) {
-  .cabecalho { padding: 9px 13px; }
-  .voltar { font-size: .88rem; }
-  main { width: calc(100% - 24px); }
-  .atalhos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .atalhos a { justify-content: center; padding: 7px 8px; text-align: center; font-size: .82rem; }
-  .categoria { gap: 11px; padding: 14px 12px; }
-  .icone { flex-basis: 36px; width: 36px; height: 36px; }
-  .icone svg { width: 20px; height: 20px; }
-  .rodape { flex-direction: column; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
+#!/usr/bin/env node
+"use strict";
 
-/* DEF-002 */
-.opcoes-tema{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px}.opcoes-tema button{min-height:42px;padding:8px 16px;border:1px solid var(--linha);border-radius:8px;background:var(--cartao,#fff);color:var(--texto);font:inherit;cursor:pointer}.opcoes-tema button[aria-pressed="true"]{border-color:var(--verde);background:#e8f1ea;color:#234b31;font-weight:bold}.opcoes-tema button:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
-html[data-theme="dark"]{color-scheme:dark;--azul:#b9cbe4;--marfim:#111a29;--verde:#91cba2;--ouro:#e0bd70;--texto:#e8edf5;--cinza:#b2bdcc;--linha:#35445a;--branco:#1b293d;--cartao:#1b293d}html[data-theme="dark"] .aviso{background:#3a3427;color:var(--texto)}html[data-theme="dark"] .atalhos a{background:var(--cartao);color:var(--texto)}html[data-theme="dark"] .atalhos a:hover,html[data-theme="dark"] .atalhos a[aria-current="location"]{background:#263b34}html[data-theme="dark"] .opcoes-tema button[aria-pressed="true"]{background:#294536;color:#d8f2df}
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
 
-html[data-theme="dark"] li{border-color:#35445a}html[data-theme="dark"] .icone{background:#29384d;color:var(--azul)}
+const root = path.join(__dirname, "..");
+const base = path.join(root, "public", "definicoes");
+const html = fs.readFileSync(path.join(base, "index.html"), "utf8");
+const css = fs.readFileSync(path.join(base, "definicoes.css"), "utf8");
+const js = fs.readFileSync(path.join(base, "definicoes.js"), "utf8");
+const globalCss = fs.readFileSync(path.join(root, "styles.css"), "utf8");
+const appJs = fs.readFileSync(path.join(root, "app.js"), "utf8");
 
-/* DEF-003 — controlos de notificações */
-.acoes-notificacoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
-.acoes-notificacoes button{min-height:42px;padding:8px 12px;border:1px solid var(--linha);border-radius:8px;background:var(--branco);color:var(--texto);font:inherit;cursor:pointer}
-.acoes-notificacoes button:hover{border-color:var(--verde)}
-.acoes-notificacoes button:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
-.estado-notificacoes{margin:6px 0 0;color:var(--cinza);font-size:.88rem}
-[hidden]{display:none!important}
+const ids = ["personalizacao", "conta", "aprendizagem", "subscricao", "suporte", "sobre"];
+for (const id of ids) {
+  assert.match(html, new RegExp('id="' + id + '"'), "Falta a secção " + id);
+  assert.match(html, new RegExp('href="#' + id + '"'), "Falta o atalho para " + id);
+}
+for (const label of [
+  "Personalização", "Conta e segurança", "Aprendizagem",
+  "Subscrição e pagamentos", "Ajuda e suporte", "Sobre o ESTRADA"
+]) {
+  assert.ok(html.includes(label), "Falta a categoria: " + label);
+}
+assert.match(html, /href="\.\.\/\.\.\/"/, "Deve existir uma ligação para voltar à aplicação");
+assert.match(html, /href="\.\.\/\.\.\/#\/planos"/, "A ligação para os planos deve abrir a rota existente");
+assert.match(html, /aria-label="Navegar pelas definições"/, "A navegação deve ter nome acessível");
+assert.match(html, /role="note"/, "A página deve explicar o estado real das funcionalidades");
+assert.match(js, /aria-current/);
+assert.match(js, /hashchange/);
+assert.match(css, /:focus-visible/);
+assert.match(css, /@media \(max-width: 760px\)/);
+assert.match(css, /@media \(max-width: 430px\)/);
+assert.match(css, /prefers-reduced-motion/);
+assert.match(html, /data-theme-choice="light"/);
+assert.match(html, /id="activar-notificacoes"/);
+assert.match(html, /Conta ainda não disponível/);
+assert.match(html, /não tem registo, início de sessão nem autenticação/);
+assert.match(html, /últimas 20 tentativas/);
+assert.match(html, /não está associado a uma conta nem é sincronizado/);
+assert.match(css, /\.estado-conta/);
+assert.match(css, /\.informacao-dados/);
+assert.match(html, /id="desactivar-notificacoes"/);
+assert.match(html, /id="testar-notificacao"/);
+assert.match(html, /role="status" aria-live="polite"/);
+assert.match(html, /não existem notificações push/i);
+assert.match(js, /Notification\.requestPermission/);
+assert.match(js, /window\.isSecureContext/);
+assert.match(js, /Notification\.permission/);
+assert.match(js, /estrada\.notificacoes\.ativas/);
+assert.match(js, /new Notification/);
+assert.match(css, /\.acoes-notificacoes/);
+assert.match(html, /data-theme-choice="dark"/);
+assert.match(js, /estrada\.tema/);
+assert.match(js, /localStorage\.setItem/);
+assert.match(css, /data-theme="dark"/);
+assert.match(css, /--branco:#1b293d/, "Os cartões da página devem escurecer com o tema");
+assert.match(globalCss, /data-theme="dark"/);
+assert.match(appJs, /estrada\.tema/);
+assert.ok(!/TODO|FIXME/i.test(html + css + js), "Remover marcadores de implementação");
 
-/* DEF-004 — estado transparente da conta */
-.estado-conta,.informacao-dados{margin-top:12px;padding:13px 15px;border:1px solid var(--linha);border-radius:9px;background:var(--branco)}
-.estado-conta strong,.informacao-dados h3{display:block;margin:0 0 6px;color:var(--azul);font-size:1rem}
-.estado-conta p,.informacao-dados p{margin:6px 0 0;color:var(--cinza);font-size:.9rem;line-height:1.5}
-.informacao-dados h3{font-size:.95rem}
+console.log("DEF-001/DEF-002 PASSOU: estrutura, navegação, tema e persistência.");
 
-/* DEF-005 — histórico e progresso baseados em registos reais */
-.painel-aprendizagem{display:grid;gap:16px;margin-top:12px}
-.bloco-aprendizagem{padding:14px;border:1px solid var(--linha);border-radius:10px;background:var(--branco)}
-.bloco-aprendizagem h3{margin:0 0 6px;color:var(--azul);font-size:1rem}
-.nota-dados,.historico-data{color:var(--cinza);font-size:.82rem;line-height:1.45}
-.resumo-progresso{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:8px;margin:12px 0}
-.metrica-progresso{padding:10px;border:1px solid var(--linha);border-radius:8px;background:var(--marfim)}
-.metrica-rotulo,.metrica-valor{display:block}
-.metrica-rotulo{color:var(--cinza);font-size:.78rem}
-.metrica-valor{margin-top:4px;color:var(--azul);font-size:1.05rem}
-.lista-historico{display:grid;gap:8px}
-.item-historico{padding:11px;border:1px solid var(--linha);border-radius:8px}
-.historico-topo{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.historico-detalhe,.historico-nota{margin:5px 0;color:var(--cinza);font-size:.88rem}
-.historico-nota{color:var(--texto);font-weight:700}
-.estado-aprovacao{padding:3px 8px;border-radius:20px;font-size:.76rem;font-weight:700}
-.estado-aprovacao.aprovado{background:#e4f4e9;color:#176534}
-.estado-aprovacao.reprovado{background:#fbe9e7;color:#982d25}
-.estado-vazio{color:var(--cinza);font-size:.9rem;line-height:1.5}
-.atalho-resultado{margin:12px 0 0;font-size:.88rem}
-.atalho-resultado a{color:var(--azul);font-weight:700}
+assert.match(html, /id="historico-exames"/);
+assert.match(html, /id="resumo-progresso"/);
+assert.match(html, /Perguntas guardadas/);
+assert.match(html, /Ainda não existe uma função para guardar perguntas/);
+assert.match(js, /localStorage\.getItem\("hist"\)/);
+assert.match(js, /Array\.isArray\(dados\)/);
+assert.match(js, /Tentativas/);
+assert.match(js, /Melhor nota/);
+assert.match(js, /sessionStorage\.getItem\("ultima"\)/);
+assert.match(js, /Abrir o último resultado desta sessão/);
+assert.match(css, /\.item-historico/);
+assert.match(css, /\.resumo-progresso/);
 
-/* DEF-006 — estado de acesso e subscrição sem simular pagamentos */
-.estado-subscricao,.detalhes-subscricao>div{margin-top:12px;padding:13px 15px;border:1px solid var(--linha);border-radius:9px;background:var(--branco)}
-.estado-subscricao strong,.detalhes-subscricao strong{display:block;margin:0 0 5px;color:var(--azul);font-size:.96rem}
-.estado-subscricao p,.detalhes-subscricao p{margin:5px 0 0;color:var(--cinza);font-size:.88rem;line-height:1.5}
-.detalhes-subscricao{display:grid;gap:8px;margin-top:10px}
-.link-planos{margin-top:14px;font-weight:700}
+assert.match(html, /src="\.\.\/\.\.\/config\.js"/);
+assert.match(html, /id="estado-subscricao"/);
+assert.match(html, /id="plano-individual"/);
+assert.match(html, /Histórico de pagamentos/);
+assert.match(html, /não cria subscrição nem efectua cobranças/);
+assert.match(js, /modoTesteAcessoPago/);
+assert.match(js, /examesAbertosTeste/);
+assert.match(js, /Modo de testes activo/);
+assert.match(js, /Não existe, nesta versão, uma conta ou serviço/);
+assert.match(css, /\.estado-subscricao/);
 
 const ajuda = fs.readFileSync(path.join(root, "public", "ajuda", "index.html"), "utf8");
 const ajudaCss = fs.readFileSync(path.join(root, "public", "ajuda", "ajuda.css"), "utf8");
