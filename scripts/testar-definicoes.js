@@ -39,6 +39,7 @@ assert.match(html, /data-theme-choice="dark"/);
 assert.match(js, /estrada\.tema/);
 assert.match(js, /localStorage\.setItem/);
 assert.match(css, /data-theme="dark"/);
+assert.match(css, /--branco:#1b293d/, "Os cartões da página devem escurecer com o tema");
 assert.match(globalCss, /data-theme="dark"/);
 assert.match(appJs, /estrada\.tema/);
 assert.ok(!/TODO|FIXME/i.test(html + css + js), "Remover marcadores de implementação");
