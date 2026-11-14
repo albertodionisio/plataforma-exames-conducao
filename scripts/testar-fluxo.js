@@ -62,12 +62,18 @@ const vm = require("node:vm");
   vm.createContext(context);
   const root=path.join(__dirname,"..");
   const appSource=fs.readFileSync(path.join(root,"app.js"),"utf8");
+  const indexSource=fs.readFileSync(path.join(root,"index.html"),"utf8");
+  for(let n=26;n<=30;n++){
+    const tag=`<script src="data/exames/exame${n}.js"></script>`;
+    assert.ok(indexSource.includes(tag), "O Exame "+n+" deve estar registado no index.html");
+    assert.ok(indexSource.indexOf(tag)<indexSource.indexOf('<script src="app.js"></script>'), "O Exame "+n+" deve carregar antes de app.js");
+  }
   vm.runInContext(fs.readFileSync(path.join(root,"config.js"),"utf8"),context);
   assert.equal(context.window.APP.modoTesteAcessoPago,false,
     "A configuração publicada deve bloquear os exames pagos");
   // A abertura temporária é simulada apenas neste ambiente de testes, nunca no site publicado.
   context.window.APP.modoTesteAcessoPago=true;
-  for(const n of [1,...Array.from({length:21},(_,i)=>i+31)]){
+  for(const n of [1,...Array.from({length:5},(_,i)=>i+26),...Array.from({length:21},(_,i)=>i+31)]){
     const file=path.join(root,"data","exames","exame"+n+".js");
     if(fs.existsSync(file))vm.runInContext(fs.readFileSync(file,"utf8"),context);
   }
@@ -80,7 +86,13 @@ const vm = require("node:vm");
   assert.equal(name.textContent,"ESTRADA");
   assert.equal(typeof listeners.hashchange,"function");
   await navegar("#/exames");
+  for(let n=26;n<=30;n++)assert.ok(app.innerHTML.includes("Exame "+n) && app.innerHTML.includes("Aberto para testes"), "Exame "+n+" deve aparecer aberto no catálogo");
   for(let n=31;n<=51;n++)assert.ok(app.innerHTML.includes("Exame "+n) && app.innerHTML.includes("Aberto para testes"));
+  for(let n=26;n<=30;n++){
+    await navegar("#/exame/"+n);
+    assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas");
+    assert.ok(app.innerHTML.includes("public/exames/exame"+n+"/exame"+n+"_1.jpg"),"A imagem da primeira pergunta do Exame "+n+" deve ser apresentada");
+  }
   for(let n=31;n<=51;n++){
     await navegar("#/exame/"+n);
     assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas");

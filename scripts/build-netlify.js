@@ -47,7 +47,7 @@ for (const name of examFiles) fs.copyFileSync(path.join(dataSource, name), path.
 for (const file of required) {
   if (!fs.existsSync(path.join(dist, file))) throw new Error("Ficheiro não publicado: " + file);
 }
-for (let n = 31; n <= 51; n++) {
+for (let n = 26; n <= 51; n++) {
   const file = path.join(dataTarget, "exame" + n + ".js");
   if (!fs.existsSync(file)) throw new Error("Exame " + n + " não incluído na publicação.");
 }
@@ -55,4 +55,4 @@ if (fs.existsSync(path.join(dist, "original", "Codigo_e_Sinais_de_Transito_1_1.a
   throw new Error("O APK original não pode ser incluído na publicação.");
 }
 
-console.log("Build Netlify concluído: aplicação e Exames 31–51 incluídos; APK e documentação interna excluídos.");
+console.log("Build Netlify concluído: aplicação e Exames 26–51 incluídos; APK e documentação interna excluídos.");
