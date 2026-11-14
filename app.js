@@ -459,5 +459,5 @@
     fecharMenu();
     rota();
   });
-  rota();
+  iniciarAuth().then(function () { rota(); });
 })();
