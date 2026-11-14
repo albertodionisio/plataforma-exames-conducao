@@ -30,3 +30,19 @@ O repositório GitHub é a fonte principal do projecto. Consultar `INSTRUCOES.md
 
 ## Segurança
 Não guardar chaves, tokens, passwords nem ficheiros `.env` no repositório. O APK original está em `original/` apenas como referência de trabalho e fica excluído da publicação do site.
+
+
+## Autenticação Supabase (FE-012)
+
+A autenticação por email e palavra-passe usa o projecto Supabase ESTRADA (ldtvbmmweqiaggmsicnu). O URL do projecto e a chave publishable ficam em config.js; esta chave é pública e foi concebida para uso no frontend. Nunca substituir por uma chave service_role ou por qualquer chave secreta.
+
+Antes de testar registos e confirmações por email:
+1. No Supabase, abrir Authentication → URL Configuration.
+2. Definir Site URL para o endereço público real do site ESTRADA no Netlify.
+3. Adicionar esse mesmo endereço à lista Redirect URLs. Acrescentar também o endereço local de desenvolvimento, se for usado.
+4. Em Authentication → Sign In / Providers, confirmar que o fornecedor Email está activo.
+5. Se a confirmação de email estiver activa, o utilizador deve abrir o link recebido antes de iniciar sessão.
+
+O login Google está preparado no código, mas permanece desactivado (googleOAuthEnabled: false). Para o activar, criar as credenciais OAuth no Google Cloud, configurar o fornecedor Google no painel Supabase e só então mudar a opção para true. O Client Secret do Google fica guardado apenas no painel Supabase, nunca em config.js, no GitHub ou no frontend.
+
+Nesta fase, as contas são geridas pelo Supabase Auth. Ainda não foi criada uma tabela pública de perfis nem uma base de dados de tentativas, resultados ou assinaturas; esses módulos devem ter tarefas e modelos próprios.
