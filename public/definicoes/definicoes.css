@@ -150,3 +150,9 @@ html[data-theme="dark"] li{border-color:#35445a}html[data-theme="dark"] .icone{b
 .acoes-notificacoes button:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
 .estado-notificacoes{margin:6px 0 0;color:var(--cinza);font-size:.88rem}
 [hidden]{display:none!important}
+
+/* DEF-004 — estado transparente da conta */
+.estado-conta,.informacao-dados{margin-top:12px;padding:13px 15px;border:1px solid var(--linha);border-radius:9px;background:var(--branco)}
+.estado-conta strong,.informacao-dados h3{display:block;margin:0 0 6px;color:var(--azul);font-size:1rem}
+.estado-conta p,.informacao-dados p{margin:6px 0 0;color:var(--cinza);font-size:.9rem;line-height:1.5}
+.informacao-dados h3{font-size:.95rem}

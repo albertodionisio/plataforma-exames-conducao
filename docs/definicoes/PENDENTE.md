@@ -2,12 +2,6 @@
 
 Tarefas do módulo de definições. Protocolo geral em `INSTRUCOES.md`. Executar uma tarefa de cada vez; reservar no GitHub antes de alterar código.
 
-## DEF-004 — Perfil e segurança
-- Estado: EM CURSO — ChatGPT-ESTRADA-DEF1 — 2026-11-14 13:26 UTC+02 — ficheiros: public/definicoes/index.html, public/definicoes/definicoes.css, public/definicoes/definicoes.js, scripts/testar-definicoes.js — último sinal: 2026-11-14 13:26 UTC+02
-- Pedido: estruturar e implementar gestão de perfil e segurança conforme a autenticação realmente existente.
-- Onde mexer: módulo de definições e autenticação/backend, caso já exista.
-- Pronto quando: dados apresentados vêm de fonte real; alterações são validadas e protegidas; se faltar backend, a interface informa claramente e não simula conta.
-- Cuidados: nunca guardar palavras-passe em texto simples nem expor dados pessoais.
 
 ## DEF-005 — Histórico, resultados e progresso
 - Estado: LIVRE
