@@ -61,7 +61,7 @@ assert.match(globalCss, /data-theme="dark"/);
 assert.match(appJs, /estrada\.tema/);
 assert.ok(!/TODO|FIXME/i.test(html + css + js), "Remover marcadores de implementação");
 
-console.log("DEF-001/DEF-002 PASSOU: estrutura, navegação, tema e persistência.");
+
 
 assert.match(html, /id="historico-exames"/);
 assert.match(html, /id="resumo-progresso"/);
@@ -101,3 +101,26 @@ assert.match(ajuda, /Atendimento ainda não disponível/);
 assert.match(ajuda, /Documento ainda não publicado/);
 assert.match(ajuda, /Não apresentamos contactos inventados/);
 assert.match(ajudaCss, /@media\(max-width:520px\)/);
+
+const menu = fs.readFileSync(path.join(root, "index.html"), "utf8");
+const config = fs.readFileSync(path.join(root, "config.js"), "utf8");
+const ajudaJs = fs.readFileSync(path.join(root, "public", "ajuda", "ajuda.js"), "utf8");
+assert.match(menu, /href="public\/definicoes\//);
+assert.match(html, /Algumas opções já funcionam neste dispositivo/);
+assert.ok(!html.includes("A preparar"), "Não devem ficar opções antigas sem destino");
+assert.match(help, /src="ajuda\.js"/);
+assert.match(ajudaJs, /estrada\.tema/);
+assert.match(ajudaJs, /data-theme/);
+assert.match(helpCss, /data-theme="dark"/);
+assert.match(config, /totalExames:\s*51/);
+assert.match(config, /minutos:\s*60/);
+assert.match(config, /valorPorResposta:\s*0\.8/);
+assert.match(config, /limiar:\s*18/);
+assert.match(workflow, /node --check public\/definicoes\/definicoes\.js/);
+assert.match(workflow, /node scripts\/testar-definicoes\.js/);
+assert.match(workflow, /test -f dist\/public\/definicoes\/index\.html/);
+assert.ok(workflow.includes("test -f dist/public/ajuda/index.html") === false, "O workflow ainda precisa de validar o novo destino de ajuda");
+assert.ok(fs.existsSync(path.join(root, "public", "ajuda", "index.html")));
+assert.ok(fs.existsSync(path.join(root, "public", "ajuda", "ajuda.css")));
+assert.ok(fs.existsSync(path.join(root, "public", "ajuda", "ajuda.js")));
+console.log("DEF-001 a DEF-007 PASSOU: estrutura, temas, notificações, histórico, subscrição e destinos de ajuda.");

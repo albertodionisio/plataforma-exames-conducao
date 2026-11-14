@@ -32,7 +32,9 @@ jobs:
         with:
           node-version: 20
       - name: Verificar sintaxe JavaScript
-        run: node --check public/definicoes/definicoes.js
+        run: |
+          node --check public/definicoes/definicoes.js
+          node --check public/ajuda/ajuda.js
       - name: Testar estrutura e navegação
         run: node scripts/testar-definicoes.js
       - name: Construir publicação
@@ -42,3 +44,6 @@ jobs:
           test -f dist/public/definicoes/index.html
           test -f dist/public/definicoes/definicoes.css
           test -f dist/public/definicoes/definicoes.js
+          test -f dist/public/ajuda/index.html
+          test -f dist/public/ajuda/ajuda.css
+          test -f dist/public/ajuda/ajuda.js
