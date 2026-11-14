@@ -6,7 +6,10 @@ window.EXAMES[29] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Que veículos podem conduzir as pessoas que só possuam a carta de condução da categoria B",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_1.jpg",
+      "descricao": "Imagem original da pergunta 1 do Exame 29"
+    },
     "opcoes": [
       "Todos.",
       "Automóveis pesados de mercadorias ou passageiros.",
@@ -21,7 +24,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_2.jpg",
+      "descricao": "Imagem original da pergunta 2 do Exame 29"
+    },
     "opcoes": [
       "Estacionamento proibido.",
       "Estacionamento condicionado.",
@@ -36,7 +42,10 @@ window.EXAMES[29] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Em curvas de visibilidade reduzida, pode ultrapassar?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_3.jpg",
+      "descricao": "Imagem original da pergunta 3 do Exame 29"
+    },
     "opcoes": [
       "Não, a menos que sejam possíveis duas ou mais filas de transito no mesmo sentido e não se faça pela parte reservada ao sentido contrário.",
       "Não, em nenhum caso.",
@@ -51,7 +60,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_4.jpg",
+      "descricao": "Imagem original da pergunta 4 do Exame 29"
+    },
     "opcoes": [
       "Obrigação de acender as luzes.",
       "Obrigação de apagar as luzes.",
@@ -66,7 +78,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_5.jpg",
+      "descricao": "Imagem original da pergunta 5 do Exame 29"
+    },
     "opcoes": [
       "Área reservada para veículos com dimensões anormais.",
       "Área reservada para veículos que transportam substâncias perigosas.",
@@ -81,7 +96,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Os condutores devem utilizar as luzes de presença (mínimos)...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_6.jpg",
+      "descricao": "Imagem original da pergunta 6 do Exame 29"
+    },
     "opcoes": [
       "Apenas durante a paragem ou estacionamento dentro das localidades.",
       "Em condições de visibilidade insuficiente, enquanto aguardam a abertura de passagem de nível.",
@@ -96,7 +114,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal vertical?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_7.jpg",
+      "descricao": "Imagem original da pergunta 7 do Exame 29"
+    },
     "opcoes": [
       "Fim da proibição de ultrapassagem.",
       "Fim da proibição de ultrapassagem para automóveis pesados.",
@@ -111,7 +132,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Perante uma passagem de nível que não dispuser de protecção ou sinalização, o condutor...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_8.jpg",
+      "descricao": "Imagem original da pergunta 8 do Exame 29"
+    },
     "opcoes": [
       "Tem prioridade sobre os veículos que circulem nos carris.",
       "Está obrigado a utilizar os sinais sonoros.",
@@ -126,7 +150,10 @@ window.EXAMES[29] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Circular com os pneus do veículo velhos...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_9.jpg",
+      "descricao": "Imagem original da pergunta 9 do Exame 29"
+    },
     "opcoes": [
       "Não é perigoso se têm o piso com uma boa profundidade.",
       "Só é perigoso se os pneus têm cortes ou deformações.",
@@ -141,7 +168,10 @@ window.EXAMES[29] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A fadiga, é um estado que pode influenciar a recolha de informação durante a condução?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_10.jpg",
+      "descricao": "Imagem original da pergunta 10 do Exame 29"
+    },
     "opcoes": [
       "Sim, tal como influencia toda a tarefa da condução.",
       "Não.",
@@ -156,7 +186,10 @@ window.EXAMES[29] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Ao transitar, é necessário manter entre os veículos uma distância de segurança?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_11.jpg",
+      "descricao": "Imagem original da pergunta 11 do Exame 29"
+    },
     "opcoes": [
       "Sim, mas apenas em relação aos veículos que transitam á minha frente.",
       "Sim, em relação ao trânsito que me rodeia.",
@@ -171,7 +204,10 @@ window.EXAMES[29] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Os acidentes de viação são um problema que afecta...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_12.jpg",
+      "descricao": "Imagem original da pergunta 12 do Exame 29"
+    },
     "opcoes": [
       "Só as vitimas.",
       "A toda a sociedade.",
@@ -186,7 +222,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A que grupo pertence o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_13.jpg",
+      "descricao": "Imagem original da pergunta 13 do Exame 29"
+    },
     "opcoes": [
       "Sinais de direcção para áreas turísticas.",
       "Sinais de direcção nas estradas, ruas e vias rápidas.",
@@ -201,7 +240,10 @@ window.EXAMES[29] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Que veículos consideram-se prioritários?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_14.jpg",
+      "descricao": "Imagem original da pergunta 14 do Exame 29"
+    },
     "opcoes": [
       "Os que transitam em missão urgente de socorro e comitivas governamentais, assinalando adequadamente a sua marcha.",
       "As ambulância que transporta feridos.",
@@ -216,7 +258,10 @@ window.EXAMES[29] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "A luz indicadora de mudança de direcção à direita accionada ao iniciar uma ultrapassagem, só deve ser desligada...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_15.jpg",
+      "descricao": "Imagem original da pergunta 15 do Exame 29"
+    },
     "opcoes": [
       "Quando termine de mudar de via de trânsito.",
       "Uma vez finalizada a ultrapassagem.",
@@ -231,7 +276,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O agente regulador de trânsito da fotografia manda:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_16.jpg",
+      "descricao": "Imagem original da pergunta 16 do Exame 29"
+    },
     "opcoes": [
       "Parar o tráfego que venha da frente.",
       "Parar o tráfego que venha da frente e da retaguarda.",
@@ -246,7 +294,10 @@ window.EXAMES[29] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Qual é o comportamento correcto para ajudar em caso de acidente?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_17.jpg",
+      "descricao": "Imagem original da pergunta 17 do Exame 29"
+    },
     "opcoes": [
       "Não fazer nada até chegarem os agentes da autoridade.",
       "Transportar imediatamente os feriados mais graves para o hospital mais próximo.",
@@ -261,7 +312,10 @@ window.EXAMES[29] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Pode transpor um condutor a linha existente no eixo da via?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_18.jpg",
+      "descricao": "Imagem original da pergunta 18 do Exame 29"
+    },
     "opcoes": [
       "Sim, para mudar de direcção.",
       "Sim, para ultrapassar.",
@@ -276,7 +330,10 @@ window.EXAMES[29] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "A finalidade dos sistemas de segurança activa e passiva dos veículos, é:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_19.jpg",
+      "descricao": "Imagem original da pergunta 19 do Exame 29"
+    },
     "opcoes": [
       "Poder circular em alta velocidade sem perigo.",
       "Reduzir os acidentes de trânsito e as suas consequências.",
@@ -291,7 +348,10 @@ window.EXAMES[29] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Na tarefa da condução, em que momento é a audição um sentido muito importante?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_20.jpg",
+      "descricao": "Imagem original da pergunta 20 do Exame 29"
+    },
     "opcoes": [
       "Na decisão.",
       "No tratamento da informação.",
@@ -306,7 +366,10 @@ window.EXAMES[29] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Entende-se por cidadania:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_21.jpg",
+      "descricao": "Imagem original da pergunta 21 do Exame 29"
+    },
     "opcoes": [
       "O conjunto de valores sociais que determinam o conjunto de deveres e direitos de um cidadão.",
       "A nacionalidade de um cidadão que o identifica como tal.",
@@ -321,7 +384,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_22.jpg",
+      "descricao": "Imagem original da pergunta 22 do Exame 29"
+    },
     "opcoes": [
       "Cancela motorizada à esquerda.",
       "Cancela motorizada à direita.",
@@ -336,7 +402,10 @@ window.EXAMES[29] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Nesta via de sentido duplo, onde deve estacionar se não existem locais destinados para este fim?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_23.jpg",
+      "descricao": "Imagem original da pergunta 23 do Exame 29"
+    },
     "opcoes": [
       "O mais próximo possível do limite direito da faixa de rodagem, paralelamente a esta e no sentido da marcha.",
       "Nesta situação é proibido.",
@@ -351,7 +420,10 @@ window.EXAMES[29] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "o que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_24.jpg",
+      "descricao": "Imagem original da pergunta 24 do Exame 29"
+    },
     "opcoes": [
       "Passagem de nível.",
       "A presença de máquinas na via.",
@@ -366,7 +438,10 @@ window.EXAMES[29] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Sempre que o veículo esteja parado ou estacionado do lado esquerdo da faixa de rodagem...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame29/exame29_25.jpg",
+      "descricao": "Imagem original da pergunta 25 do Exame 29"
+    },
     "opcoes": [
       "Os passageiros devem entrar e sair pelo lado direito do veículo.",
       "Os passageiros não podem sair do veículo.",

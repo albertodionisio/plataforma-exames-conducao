@@ -6,7 +6,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Quando existe dificuldade na recolha de informação, a velocidade:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_1.jpg",
+      "descricao": "Imagem original da pergunta 1 do Exame 26"
+    },
     "opcoes": [
       "Deve aumentar.",
       "Deve diminuir.",
@@ -21,7 +24,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O que se entende por sanção",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_2.jpg",
+      "descricao": "Imagem original da pergunta 2 do Exame 26"
+    },
     "opcoes": [
       "A repetição de valores positivos.",
       "O prémio ou castigo anexo às acções humanas.",
@@ -36,7 +42,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "As pessoas que são encontradas a conduzir sem possuir carta de condução:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_3.jpg",
+      "descricao": "Imagem original da pergunta 3 do Exame 26"
+    },
     "opcoes": [
       "São punidas apenas com uma multa de 500 Mt.",
       "São punidas com pena de prisão de três dias  a seis meses e multa de 5000 Mt.",
@@ -51,7 +60,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Perante a luz verde de um semáforo?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_4.jpg",
+      "descricao": "Imagem original da pergunta 4 do Exame 26"
+    },
     "opcoes": [
       "Regra geral, deve parar.",
       "Regra geral, deve avançar.",
@@ -66,7 +78,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Diante do sinal, o condutor deve:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_5.jpg",
+      "descricao": "Imagem original da pergunta 5 do Exame 26"
+    },
     "opcoes": [
       "Inverter o sentido de marcha.",
       "Dar prioridade nas rotundas.",
@@ -81,7 +96,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Entende-se por moral:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_6.jpg",
+      "descricao": "Imagem original da pergunta 6 do Exame 26"
+    },
     "opcoes": [
       "A condução defensiva praticada com o intuito de evitar acidentes de viação.",
       "A sensação de frustração depois da violação das regras de trânsito.",
@@ -96,7 +114,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O condutor que pretende iniciar a sua marcha, deve...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_7.jpg",
+      "descricao": "Imagem original da pergunta 7 do Exame 26"
+    },
     "opcoes": [
       "Só sinalizar a sua intenção, já que os demais condutores devem ceder-lhe a passagem.",
       "Ligar a luz intermitente do lado direito e avançar.",
@@ -111,7 +132,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O socorrista, na avaliação do grau de consciência deve:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_8.jpg",
+      "descricao": "Imagem original da pergunta 8 do Exame 26"
+    },
     "opcoes": [
       "Ver os movimentos do tórax e do abdómen.",
       "Sentir o ar expirado, encostando a sua face ao nariz e boca da vítima.",
@@ -126,7 +150,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Pode provocar distracção no condutor:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_9.jpg",
+      "descricao": "Imagem original da pergunta 9 do Exame 26"
+    },
     "opcoes": [
       "Olhar o espelho retrovisor.",
       "Ligar os intermitentes.",
@@ -141,7 +168,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal circular?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_10.jpg",
+      "descricao": "Imagem original da pergunta 10 do Exame 26"
+    },
     "opcoes": [
       "Trânsito proibido para todos os veículos automóveis.",
       "Proibição de ultrapassagem para automóveis ligeiros.",
@@ -156,7 +186,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O agente regulador de trânsito, manda:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_11.jpg",
+      "descricao": "Imagem original da pergunta 11 do Exame 26"
+    },
     "opcoes": [
       "Avançar o tráfego que venha da frente.",
       "Parar o tráfego que venha da frente.",
@@ -171,7 +204,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O sinal da fotografia proíbe:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_12.jpg",
+      "descricao": "Imagem original da pergunta 12 do Exame 26"
+    },
     "opcoes": [
       "A presença de peões e veículos não automóveis.",
       "A presença de vendedores.",
@@ -186,7 +222,10 @@ window.EXAMES[26] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Pode o condutor evitar um acidente devido ao mau estado do seu veículo?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_13.jpg",
+      "descricao": "Imagem original da pergunta 13 do Exame 26"
+    },
     "opcoes": [
       "Não, as falhas mecânicas são sempre imprevisíveis e inevitáveis.",
       "Não, o condutor só pode evitar os acidentes devido ao factor humano.",
@@ -201,7 +240,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de interesse turístico?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_14.jpg",
+      "descricao": "Imagem original da pergunta 14 do Exame 26"
+    },
     "opcoes": [
       "Reserva de caça.",
       "Reserva de florestal.",
@@ -216,7 +258,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "De dia e com boa visibilidade, que veículos estão obrigados a transitar com as luzes de cruzamento acesas?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_15.jpg",
+      "descricao": "Imagem original da pergunta 15 do Exame 26"
+    },
     "opcoes": [
       "Nenhum veículo.",
       "Os motociclos e ciclomotores.",
@@ -231,7 +276,10 @@ window.EXAMES[26] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "O que deve fazer o condutor se a fila da esquerda estiver a circular mais rapidamente?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_16.jpg",
+      "descricao": "Imagem original da pergunta 16 do Exame 26"
+    },
     "opcoes": [
       "Mudar de fila de trânsito.",
       "Sinalizar e mudar de fila de trânsito.",
@@ -246,7 +294,10 @@ window.EXAMES[26] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "O sistema de iluminação dos veículos automóveis...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_17.jpg",
+      "descricao": "Imagem original da pergunta 17 do Exame 26"
+    },
     "opcoes": [
       "Não tem manutenção.",
       "Serve apenas para iluminar a estrada.",
@@ -261,7 +312,10 @@ window.EXAMES[26] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Dentro das localidades, é proibido parar ou estacionar?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_18.jpg",
+      "descricao": "Imagem original da pergunta 18 do Exame 26"
+    },
     "opcoes": [
       "A menos de 50 metros dos cruzamentos ou entrocamentos.",
       "A menos de 5 metros antes da passagens assinaladas para a travessia de peões e velocípedes.",
@@ -276,7 +330,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_19.jpg",
+      "descricao": "Imagem original da pergunta 19 do Exame 26"
+    },
     "opcoes": [
       "Indica a existência de um parque de estacionamento para veículos da policia.",
       "Indica a existência de uma área reservada para veículos da policia.",
@@ -291,7 +348,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que deve fazer o condutor perante a marca rodoviária de cor branca?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_20.jpg",
+      "descricao": "Imagem original da pergunta 20 do Exame 26"
+    },
     "opcoes": [
       "Manter-se na via de trânsito que ela delimita, só podendo ser pisada ou transposta para efectuar manobras.",
       "Manter-se na via de trânsito que ela delimita, não podendo ser pisada ou transposta.",
@@ -306,7 +366,10 @@ window.EXAMES[26] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Os sistemas de segurança activa de um veículo...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_21.jpg",
+      "descricao": "Imagem original da pergunta 21 do Exame 26"
+    },
     "opcoes": [
       "Minimizam as lesões em caso de acidente.",
       "Ajudam o condutor a reduzir a possibilidade de ter um acidente.",
@@ -321,7 +384,10 @@ window.EXAMES[26] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal complementar de perigo?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_22.jpg",
+      "descricao": "Imagem original da pergunta 22 do Exame 26"
+    },
     "opcoes": [
       "Baia direccional para a direita.",
       "Baia direccional para a esquerda.",
@@ -336,7 +402,10 @@ window.EXAMES[26] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Quem tem prioridade de passagem nesta intersecção?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_23.jpg",
+      "descricao": "Imagem original da pergunta 23 do Exame 26"
+    },
     "opcoes": [
       "Os condutores que se apresentem pela esquerda.",
       "Todos os condutores que circulem pela via transversal.",
@@ -351,7 +420,10 @@ window.EXAMES[26] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Deve ter alguma precaução especial quando circula dentro das localidades?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_24.jpg",
+      "descricao": "Imagem original da pergunta 24 do Exame 26"
+    },
     "opcoes": [
       "Não.",
       "Sim, utilizar os sinais sonoros quando se aproximar dos peões.",
@@ -366,7 +438,10 @@ window.EXAMES[26] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Se a viagem é curta, é obrigatório utilizar o cinto de segurança",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame26/exame26_25.jpg",
+      "descricao": "Imagem original da pergunta 25 do Exame 26"
+    },
     "opcoes": [
       "Sim, mas só para o condutor.",
       "Não, se não sai da localidade.",

@@ -6,7 +6,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de perigo?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_1.jpg",
+      "descricao": "Imagem original da pergunta 1 do Exame 28"
+    },
     "opcoes": [
       "Passagem de nível com guarda.",
       "Local de passagem de nível sem guarda.",
@@ -21,7 +24,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A carta de condução, tem tempo de validade?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_2.jpg",
+      "descricao": "Imagem original da pergunta 2 do Exame 28"
+    },
     "opcoes": [
       "Não.",
       "Só as sub categorias P, D e G.",
@@ -36,7 +42,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Transitar em sentido oposto ao estabelecido, constitui contravenção:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_3.jpg",
+      "descricao": "Imagem original da pergunta 3 do Exame 28"
+    },
     "opcoes": [
       "Grave",
       "Leve",
@@ -51,7 +60,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que deve fazer o condutor perante o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_4.jpg",
+      "descricao": "Imagem original da pergunta 4 do Exame 28"
+    },
     "opcoes": [
       "Circular acima de 80 km/h.",
       "Circular a uma velocidade que vá até os 80 km/h.",
@@ -66,7 +78,10 @@ window.EXAMES[28] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Entende-se por prioridade de passagem:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_5.jpg",
+      "descricao": "Imagem original da pergunta 5 do Exame 28"
+    },
     "opcoes": [
       "A obrigação que o condutor tem de imobilizar o veículo num cruzamento com sinal de paragem obrigatória.",
       "O direito que o condutor tem de passar em primeiro lugar.",
@@ -81,7 +96,10 @@ window.EXAMES[28] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Salvo no caso de perigo iminente, que deve fazer o condutor se tem que diminuir subitamente a velocidade do veículo?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_6.jpg",
+      "descricao": "Imagem original da pergunta 6 do Exame 28"
+    },
     "opcoes": [
       "Advertir com sinais sonoros.",
       "Utilizar as luzes indicadoras de mudança de direcção para a direita.",
@@ -96,7 +114,10 @@ window.EXAMES[28] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Pode ultrapassar veículos que estejam a ultrapassar outros?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_7.jpg",
+      "descricao": "Imagem original da pergunta 7 do Exame 28"
+    },
     "opcoes": [
       "Não, mesmo que sejam possíveis três ou mais filas de trânsito no mesmo sentido.",
       "Sim, mesmo que utilize a parte da faixa de rodagem reservada ao trânsito em sentido contrário.",
@@ -111,7 +132,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_8.jpg",
+      "descricao": "Imagem original da pergunta 8 do Exame 28"
+    },
     "opcoes": [
       "Área reservada para mini-autocarros.",
       "Área reservada para veículos de emergência.",
@@ -126,7 +150,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O agente regulador de trânsito, manda:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_9.jpg",
+      "descricao": "Imagem original da pergunta 9 do Exame 28"
+    },
     "opcoes": [
       "parar o tráfego que venha da retaguarda e da frente.",
       "Avançar o tráfego da esquerda.",
@@ -141,7 +168,10 @@ window.EXAMES[28] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Num automóvel é obrigatório a utilização de cintos de segurança:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_10.jpg",
+      "descricao": "Imagem original da pergunta 10 do Exame 28"
+    },
     "opcoes": [
       "Dentro e fora das localidades.",
       "Apenas fora das localidades.",
@@ -156,7 +186,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_11.jpg",
+      "descricao": "Imagem original da pergunta 11 do Exame 28"
+    },
     "opcoes": [
       "Cascata.",
       "Águas termais.",
@@ -171,7 +204,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O estado emocional do condutor, é um factor de ordem interna, que influência:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_12.jpg",
+      "descricao": "Imagem original da pergunta 12 do Exame 28"
+    },
     "opcoes": [
       "O tempo de reacção e a distância de travagem.",
       "Apenas a distância de travagem.",
@@ -186,7 +222,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O que entende-se por dever?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_13.jpg",
+      "descricao": "Imagem original da pergunta 13 do Exame 28"
+    },
     "opcoes": [
       "A obrigação de avançar rapidamente, logo que o sinal verde do semáforo assim o permita.",
       "A intenção de iniciar a marcha sem a devida sinalização.",
@@ -201,7 +240,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_14.jpg",
+      "descricao": "Imagem original da pergunta 14 do Exame 28"
+    },
     "opcoes": [
       "Prioridade nas passagens estreitas.",
       "Fim da fila de trânsito à esquerda.",
@@ -216,7 +258,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_15.jpg",
+      "descricao": "Imagem original da pergunta 15 do Exame 28"
+    },
     "opcoes": [
       "A existência de um acidente na via.",
       "A existência de uma oficina.",
@@ -231,7 +276,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A maioria dos acidentes de trânsito são devidos...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_16.jpg",
+      "descricao": "Imagem original da pergunta 16 do Exame 28"
+    },
     "opcoes": [
       "Às condições do veículo.",
       "Às pessoas.",
@@ -246,7 +294,10 @@ window.EXAMES[28] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Nesta estrada de duplo sentido de circulação, como deve circular?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_17.jpg",
+      "descricao": "Imagem original da pergunta 17 do Exame 28"
+    },
     "opcoes": [
       "Pelo centro, já que não existe linha que delimite os sentidos da circulação.",
       "Pela esquerda e o mais próximo possível do eixo da faixa de rodagem.",
@@ -261,7 +312,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A que grupo pertence a marca rodoviária branca?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_18.jpg",
+      "descricao": "Imagem original da pergunta 18 do Exame 28"
+    },
     "opcoes": [
       "Marcas transversais.",
       "Marcas orientadoras de sentido de trânsito.",
@@ -276,7 +330,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Nos dias quentes, é recomendável...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_19.jpg",
+      "descricao": "Imagem original da pergunta 19 do Exame 28"
+    },
     "opcoes": [
       "Fazer menos descansos durante a viagem, para chegar ao destino o mais rápido possível.",
       "Efectuar mais descansos durante uma viagem, porque a fadiga e o sono aparecem mais facilmente.",
@@ -291,7 +348,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Para auxiliar uma vítima de um acidente rodoviário, deve dar-lhe alimentos ou bebidas?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_20.jpg",
+      "descricao": "Imagem original da pergunta 20 do Exame 28"
+    },
     "opcoes": [
       "Sim, se ele o pedir.",
       "Não, só se pode dar medicamentos tranquilizantes.",
@@ -306,7 +366,10 @@ window.EXAMES[28] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Os sistemas de segurança passive dos veículos…",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_21.jpg",
+      "descricao": "Imagem original da pergunta 21 do Exame 28"
+    },
     "opcoes": [
       "Devem ser utilizados correctamente, porque o seu mau uso pode ser perigoso.",
       "Não são eficazes para reduzir as consequências dos acidentes.",
@@ -321,7 +384,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A utilização dos sinais sonoros é permitida:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_22.jpg",
+      "descricao": "Imagem original da pergunta 22 do Exame 28"
+    },
     "opcoes": [
       "Dentro das localidades, para prevenir um condutor da intenção de o ultrapassar.",
       "Em caso de perigo iminente.",
@@ -336,7 +402,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal circular?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_23.jpg",
+      "descricao": "Imagem original da pergunta 23 do Exame 28"
+    },
     "opcoes": [
       "Estacionamento proibido.",
       "Fim de estacionamento proibido.",
@@ -351,7 +420,10 @@ window.EXAMES[28] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Quando se devem utilizar as luzes de estrada?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_24.jpg",
+      "descricao": "Imagem original da pergunta 24 do Exame 28"
+    },
     "opcoes": [
       "Quando a iluminação não permite uma boa visibilidade e não cause encandeamento aos outros utentes.",
       "No cruzamento com outros veículos.",
@@ -366,7 +438,10 @@ window.EXAMES[28] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Fora das localidades, a paragem e o estacionamento devem fazer-se:?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame28/exame28_25.jpg",
+      "descricao": "Imagem original da pergunta 25 do Exame 28"
+    },
     "opcoes": [
       "Só nos locais especialmente destinados para esse efeito e pela forma indicada.",
       "For a das faixas de rodagem.",

@@ -6,7 +6,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_1.jpg",
+      "descricao": "Imagem original da pergunta 1 do Exame 27"
+    },
     "opcoes": [
       "Local de passagem de nível sem guarda.",
       "Passagem de nível.",
@@ -21,7 +24,10 @@ window.EXAMES[27] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Em acidente de viação com vitima, deixar de prestar ou providenciar socorro, constitui contravenção:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_2.jpg",
+      "descricao": "Imagem original da pergunta 2 do Exame 27"
+    },
     "opcoes": [
       "Leve.",
       "Média.",
@@ -36,7 +42,10 @@ window.EXAMES[27] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Quando os pneus têm uma pressão incorrecta:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_3.jpg",
+      "descricao": "Imagem original da pergunta 3 do Exame 27"
+    },
     "opcoes": [
       "Desgastam-se mais e correm maior risco de rebentar.",
       "Desgastam-se menos e têm menos riscos de rebentar.",
@@ -51,7 +60,10 @@ window.EXAMES[27] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "São evitáveis os acidentes de viação?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_4.jpg",
+      "descricao": "Imagem original da pergunta 4 do Exame 27"
+    },
     "opcoes": [
       "Não, porque os acidentes ocorrem por acaso.",
       "Sim, podemos aprender a evitá-los e a reduzir as suas consequências.",
@@ -66,7 +78,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Desde o anoitecer até o amanhecer, pode deixar as luzes de cruzamento acesas quando o veículo estiver estacionado",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_5.jpg",
+      "descricao": "Imagem original da pergunta 5 do Exame 27"
+    },
     "opcoes": [
       "Sim, é obrigatório.",
       "Não, é proibido.",
@@ -81,7 +96,10 @@ window.EXAMES[27] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Quando na faixa de rodagem existam placas, postes, ilhéus, direccionais ou dispositivos semelhantes, como deve transitar?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_6.jpg",
+      "descricao": "Imagem original da pergunta 6 do Exame 27"
+    },
     "opcoes": [
       "Dando lhe a esquerda, se estão numa via de dois sentidos.",
       "Pela direita ou pela esquerda, se estão numa via de dois sentidos.",
@@ -96,7 +114,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O agente regulador de trânsito que aparece na fotografia, manda",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_7.jpg",
+      "descricao": "Imagem original da pergunta 7 do Exame 27"
+    },
     "opcoes": [
       "Parar o tráfego que venha da retaguarda.",
       "Parar o tráfego que venha da frente.",
@@ -111,7 +132,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A velocidade controlada pelo sinal, é:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_8.jpg",
+      "descricao": "Imagem original da pergunta 8 do Exame 27"
+    },
     "opcoes": [
       "A velocidade mínima.",
       "A velocidade máxima.",
@@ -126,7 +150,10 @@ window.EXAMES[27] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Se os ocupantes do veículo não utilizarem o cinto de segurança, o airbag é eficaz?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_9.jpg",
+      "descricao": "Imagem original da pergunta 9 do Exame 27"
+    },
     "opcoes": [
       "Sim, o airbag é sempre eficaz.",
       "Sim, sempre que o os passageiros estejam sentados correctamente.",
@@ -141,7 +168,10 @@ window.EXAMES[27] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Nesta situação, posso ultrapassar?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_10.jpg",
+      "descricao": "Imagem original da pergunta 10 do Exame 27"
+    },
     "opcoes": [
       "Sim, já que tenho prioridade no cruzamento.",
       "Não.",
@@ -156,7 +186,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_11.jpg",
+      "descricao": "Imagem original da pergunta 11 do Exame 27"
+    },
     "opcoes": [
       "Estacionamento condicionado.",
       "Estacionamento limitado.",
@@ -171,7 +204,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de interesse turístico?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_12.jpg",
+      "descricao": "Imagem original da pergunta 12 do Exame 27"
+    },
     "opcoes": [
       "Lugar histórico e genérico.",
       "Parque de campismo.",
@@ -186,7 +222,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_13.jpg",
+      "descricao": "Imagem original da pergunta 13 do Exame 27"
+    },
     "opcoes": [
       "A existência de uma berma baixa à esquerda.",
       "A existência de um terreno falso à direita.",
@@ -201,7 +240,10 @@ window.EXAMES[27] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Devem utilizar os cintos de segurança os passageiros que viajam no veículo??",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_14.jpg",
+      "descricao": "Imagem original da pergunta 14 do Exame 27"
+    },
     "opcoes": [
       "Não, só é obrigatório para o condutor.",
       "Só for a das localidades.",
@@ -216,7 +258,10 @@ window.EXAMES[27] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Qual dos veículos tem prioridade de passagem neste situação?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_15.jpg",
+      "descricao": "Imagem original da pergunta 15 do Exame 27"
+    },
     "opcoes": [
       "O veículo amarelo.",
       "O veículo vermelho.",
@@ -231,7 +276,10 @@ window.EXAMES[27] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Dentro das localidades, é proibido parar ou estacionar?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_16.jpg",
+      "descricao": "Imagem original da pergunta 16 do Exame 27"
+    },
     "opcoes": [
       "Durante a noite.",
       "Só em caso de manifestar necessidade, como um perigo iminente.",
@@ -246,7 +294,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que deve fazer o condutor perante a marca rodoviária de cor branca?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_17.jpg",
+      "descricao": "Imagem original da pergunta 17 do Exame 27"
+    },
     "opcoes": [
       "Pisar ou transpor a linha.",
       "Abrandar a marcha.",
@@ -261,7 +312,10 @@ window.EXAMES[27] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Os direitos humanos:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_18.jpg",
+      "descricao": "Imagem original da pergunta 18 do Exame 27"
+    },
     "opcoes": [
       "São universais, intransmissíveis e de reivindicação perante o estado.",
       "São universais, naturais e de reivindicação.",
@@ -276,7 +330,10 @@ window.EXAMES[27] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O facto de conduzir de noite, deve ter influência na velocidade a que segue?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_19.jpg",
+      "descricao": "Imagem original da pergunta 19 do Exame 27"
+    },
     "opcoes": [
       "Não, porque a utilização de luzes é obrigatória.",
       "Sim.",
@@ -291,7 +348,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_20.jpg",
+      "descricao": "Imagem original da pergunta 20 do Exame 27"
+    },
     "opcoes": [
       "Trânsito nos dois sentidos.",
       "Dar prioridade nas passagens estreitas.",
@@ -306,7 +366,10 @@ window.EXAMES[27] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Quando se considera velocidade excessiva?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_21.jpg",
+      "descricao": "Imagem original da pergunta 21 do Exame 27"
+    },
     "opcoes": [
       "Sempre que o condutor não possa fazer parar o veículo no espaço livre visível à sua frente, ou exceda os limites de velocidade fixados nos termos legais.",
       "Só quando o condutor não possa fazer parar o veículo no espaço livre e visível.",
@@ -321,7 +384,10 @@ window.EXAMES[27] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Num acidente há feridos muitos graves. Que deve fazer-se não sabe como os ajudar?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_22.jpg",
+      "descricao": "Imagem original da pergunta 22 do Exame 27"
+    },
     "opcoes": [
       "Abandonar o local e não fazer nada.",
       "Não lhes tocar e ligar ao 112.",
@@ -336,7 +402,10 @@ window.EXAMES[27] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Um condutor distraído",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_23.jpg",
+      "descricao": "Imagem original da pergunta 23 do Exame 27"
+    },
     "opcoes": [
       "Tem um tempo de reacção mais reduzido.",
       "Tem o mesmo tempo de reacção que qualquer condutor.",
@@ -351,7 +420,10 @@ window.EXAMES[27] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Dentro das localidades, pode utilizar os sinais sonoros...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_24.jpg",
+      "descricao": "Imagem original da pergunta 24 do Exame 27"
+    },
     "opcoes": [
       "A menos de 5 metros para um e outro dos cruzamentos, entroncamentos e rotundas.",
       "Em segunda fila.",
@@ -366,7 +438,10 @@ window.EXAMES[27] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame27/exame27_25.jpg",
+      "descricao": "Imagem original da pergunta 25 do Exame 27"
+    },
     "opcoes": [
       "Parque de estacionamento para veículos com altura acima do normal.",
       "Parque de estacionamento para veículos de emergência.",

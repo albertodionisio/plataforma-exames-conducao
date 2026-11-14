@@ -98,7 +98,7 @@
   }
   function catalogo() {
     var html = "<h1>Exames</h1><p>Os " + esc(A.gratuitos) +
-      " primeiros são gratuitos. Durante a fase de testes, os Exames 31–51 estão temporariamente abertos.</p><div class='grelha'>";
+      " primeiros são gratuitos. Durante a fase de testes, os Exames 1–51 estão temporariamente abertos.</p><div class='grelha'>";
     for (var n = 1; n <= Number(A.totalExames || 0); n++) {
       var pronto = Array.isArray(EX[n]), livre = temAcesso(n);
       var rotulo = !pronto ? "Em preparação" : (n <= A.gratuitos ? "Grátis" :

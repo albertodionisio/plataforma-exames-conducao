@@ -6,7 +6,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_1.jpg",
+      "descricao": "Imagem original da pergunta 1 do Exame 30"
+    },
     "opcoes": [
       "Trânsito proibido a veículos automóveis e motociclos com carro.",
       "Trânsito proibido a automóveis ligeiros de passageiros.",
@@ -21,7 +24,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_2.jpg",
+      "descricao": "Imagem original da pergunta 2 do Exame 30"
+    },
     "opcoes": [
       "Pista obrigatória para veículos de tracção animal.",
       "Pista obrigatória para Requeixo.",
@@ -36,7 +42,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Ao mudar de direcção num cruzamento, como o deve sinalizar para os outros utentes da via?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_3.jpg",
+      "descricao": "Imagem original da pergunta 3 do Exame 30"
+    },
     "opcoes": [
       "Depois de iniciar a mudança de direcção.",
       "Com antecedência, utilizando a luz indicadora de direcção e, na falta desta, o braço.",
@@ -51,7 +60,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Durante a noite, quando deve o condutor utilizar as luzes de cruzamento?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_4.jpg",
+      "descricao": "Imagem original da pergunta 4 do Exame 30"
+    },
     "opcoes": [
       "Só no cruzamento com pessoas ou animais.",
       "Durante a paragem ou estacionamento do veículo.",
@@ -66,7 +78,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_5.jpg",
+      "descricao": "Imagem original da pergunta 5 do Exame 30"
+    },
     "opcoes": [
       "Paragem e estacionamento proibidos.",
       "Estacionamento condicionado.",
@@ -81,7 +96,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "As luzes de travagem dos automóveis tem a cor:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_6.jpg",
+      "descricao": "Imagem original da pergunta 6 do Exame 30"
+    },
     "opcoes": [
       "Branca ou amarela.",
       "Amarela ou alaranjada.",
@@ -96,7 +114,10 @@ window.EXAMES[30] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Com o fim de ter uma boa capacidade de manobra e garantir o bom funcionamento dos sistemas de segurança do veículo, o condutor deve regular o assento...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_7.jpg",
+      "descricao": "Imagem original da pergunta 7 do Exame 30"
+    },
     "opcoes": [
       "Por forma a ficar muito próximo do volante, com as pernas e braços encolhidos.",
       "Por forma a que as pernas e braços fiquem ligeiramente flectidos.",
@@ -111,7 +132,10 @@ window.EXAMES[30] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A medida que aumenta a velocidade...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_8.jpg",
+      "descricao": "Imagem original da pergunta 8 do Exame 30"
+    },
     "opcoes": [
       "Aumenta o campo de visão do condutor.",
       "Reduz-se o campo de visão do condutor e aumenta a fadiga.",
@@ -126,7 +150,10 @@ window.EXAMES[30] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Pode conduzir um automóvel ligeiro com reboque a carta de condução da categoria B?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_9.jpg",
+      "descricao": "Imagem original da pergunta 9 do Exame 30"
+    },
     "opcoes": [
       "Sim, desde que o peso bruto do reboque não exceda 750kg.",
       "Não, é necessária a da categoria C1E.",
@@ -141,7 +168,10 @@ window.EXAMES[30] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Se o condutor sofre de uma doença, o que deve fazer para reduzir o risco de ter um acidente?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_10.jpg",
+      "descricao": "Imagem original da pergunta 10 do Exame 30"
+    },
     "opcoes": [
       "Conhecer os efeitos secundários dos medicamentos.",
       "Interromper a medicação que estiver a tomar, se tem que conduzir.",
@@ -156,7 +186,10 @@ window.EXAMES[30] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O que deve fazer o condutor quando um velocípede segue no mesmo sentido de trânsito",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_11.jpg",
+      "descricao": "Imagem original da pergunta 11 do Exame 30"
+    },
     "opcoes": [
       "Ter em atenção a instabilidade desse veículo.",
       "Utilizar sinais sonoros.",
@@ -171,7 +204,10 @@ window.EXAMES[30] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Se tem a carta de condução da categoria B há menos de um ano e conduzir um automóvel ligeiro de passageiros, não pode exceder a velocidade de...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_12.jpg",
+      "descricao": "Imagem original da pergunta 12 do Exame 30"
+    },
     "opcoes": [
       "120 km/h.",
       "90 km/h.",
@@ -186,7 +222,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_13.jpg",
+      "descricao": "Imagem original da pergunta 13 do Exame 30"
+    },
     "opcoes": [
       "Terreno falso à direita.",
       "Congestionamento de tráfego.",
@@ -201,7 +240,10 @@ window.EXAMES[30] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Onde é proibido realizar ultrapassagem?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_14.jpg",
+      "descricao": "Imagem original da pergunta 14 do Exame 30"
+    },
     "opcoes": [
       "Nas rotundas.",
       "Em todos os cruzamentos e entroncamentos.",
@@ -216,7 +258,10 @@ window.EXAMES[30] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Entende-se por cruzamento de veículos:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_15.jpg",
+      "descricao": "Imagem original da pergunta 15 do Exame 30"
+    },
     "opcoes": [
       "Quando na mesma via, se encontram dois veículos transitando no mesmo sentido.",
       "Quando dois veículos, circulando na mesma fila, o que se encontra atrás passa para diante do outro.",
@@ -231,7 +276,10 @@ window.EXAMES[30] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "As ordens dos agentes reguladores de trânsito, prevalecem sobre os sinais luminosos:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_16.jpg",
+      "descricao": "Imagem original da pergunta 16 do Exame 30"
+    },
     "opcoes": [
       "Verdes.",
       "Amarelos.",
@@ -246,7 +294,10 @@ window.EXAMES[30] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A marcha atrás, é uma manobra que deve ser efectuada...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_17.jpg",
+      "descricao": "Imagem original da pergunta 17 do Exame 30"
+    },
     "opcoes": [
       "O mais à direita possível, em locais de boa visibilidade.",
       "Lentamente e o mais possível à esquerda.",
@@ -261,7 +312,10 @@ window.EXAMES[30] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "É a via pública um espaço destinado ao trânsito de peões?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_18.jpg",
+      "descricao": "Imagem original da pergunta 18 do Exame 30"
+    },
     "opcoes": [
       "Não. Na via pública só podem transitar veículos.",
       "Sim, de peões e de veículos.",
@@ -276,7 +330,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_19.jpg",
+      "descricao": "Imagem original da pergunta 19 do Exame 30"
+    },
     "opcoes": [
       "Descida de inclinação acentuada ao longo da distância indicada.",
       "Descida de inclinação acentuada.",
@@ -291,7 +348,10 @@ window.EXAMES[30] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Dentro das localidades, em vias com mais de uma via de transito no mesmo sentido, o condutor deve utilizar...",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_20.jpg",
+      "descricao": "Imagem original da pergunta 20 do Exame 30"
+    },
     "opcoes": [
       "A via de trânsito mais à esquerda, podendo utilizar outro só para ultrapassar ou mudar de direcção.",
       "A vida de trânsito mais conveniente ao seu destino.",
@@ -306,7 +366,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal triangular?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_21.jpg",
+      "descricao": "Imagem original da pergunta 21 do Exame 30"
+    },
     "opcoes": [
       "Local de passagem de nível com cancela.",
       "Local de passagem de nível com cancela, com duas ou mais vias.",
@@ -321,7 +384,10 @@ window.EXAMES[30] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_22.jpg",
+      "descricao": "Imagem original da pergunta 22 do Exame 30"
+    },
     "opcoes": [
       "Parque de estacionamento para autocarros e autocarros médios.",
       "Área reservada para autocarros e autocarros médios.",
@@ -336,7 +402,10 @@ window.EXAMES[30] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Quais são os princípios gerais do socorrismo?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_23.jpg",
+      "descricao": "Imagem original da pergunta 23 do Exame 30"
+    },
     "opcoes": [
       "Prevenir, alertar e socorrer.",
       "Prevenir, socorrer e evacuar.",
@@ -351,7 +420,10 @@ window.EXAMES[30] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "É permitido levar um bebé nos braços quando o veículo está em circulação?",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_24.jpg",
+      "descricao": "Imagem original da pergunta 24 do Exame 30"
+    },
     "opcoes": [
       "Não, deve sempre usar um dispositivo adequado ao tamanho e ao peso do bebé .",
       "Sim, se a viagem é curta.",
@@ -366,7 +438,10 @@ window.EXAMES[30] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Utilizar o veículo para em via pública, demonstrar ou exibir manobra de arranque brusco, derrapagem ou travagem com deslizamento de pneus, constitui contravenção:",
-    "imagem": null,
+    "imagem": {
+      "src": "public/exames/exame30/exame30_25.jpg",
+      "descricao": "Imagem original da pergunta 25 do Exame 30"
+    },
     "opcoes": [
       "Média.",
       "Grave.",
