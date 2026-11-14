@@ -19,6 +19,13 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - **Limite da tarefa:** cada sessão trabalha apenas no exame que reservou. Não alterar tarefas EM CURSO de outra sessão nem ficheiros partilhados sem verificar o protocolo de `INSTRUCOES.md`.
 
 
+## DADOS-061 — Extracção dos exames originais 21 a 30 (último bloco do APK)
+- Estado: EM CURSO — Claude-DADOS061 — 2026-11-14 12:40 UTC+02 — ficheiros: original/extraido/ (exame21.json a exame30.json, imagens, mapeamento, relatório, estado), tools/extrair_apk.py, tests/test_exames_originais.py, docs/extracao/LEIAME.md — último sinal: 2026-11-14 12:40 UTC+02
+- Pedido: completar a extracção do APK com os exames originais 21 a 30 (250 perguntas), com o mesmo formato, extractor e testes dos blocos 1 a 10 (DADOS-054) e 11 a 20 (DADOS-059). Com este bloco ficam recuperados os 30 exames do APK, em que se baseiam os exames 1 a 30 da plataforma.
+- Onde mexer: só os ficheiros acima. Não toca em `data/exames/exameN.js`, `docs/referencias-exames/`, `app.js`, `index.html`, `styles.css` nem `config.js`. Os JSON dos exames 1 a 20 só podem mudar se o extractor os gerar de forma diferente (não devem mudar).
+- Pronto quando: existem os exames 21 a 30 com 25 perguntas, quatro alternativas e resposta indicada pelo APK, 250 imagens ligadas pelo mesmo índice, mapeamento e relatório actualizados, âmbito do extractor e dos testes alargado a 1–30, e todos os testes a passar também numa cópia limpa do remoto.
+- Cuidados: dados originais, nada inventado; o APK não tem explicação nem tema; a validade legal das respostas fica por validar.
+
 ## DADOS-001 — Exame 2 (grátis)
 - Estado: EM CURSO (integrado no site) — dados, mapa, imagens e integração concluídos; falta a revisão de duplicações com os Exames 3 e 4 — último sinal: 2026-11-13.
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
