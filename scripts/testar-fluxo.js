@@ -33,6 +33,7 @@ const vm = require("node:vm");
   const app=new FakeApp(), name={textContent:""}, timerNodes={};
   const document={
     title:"",
+    documentElement:{setAttribute(){},style:{}},
     getElementById(id){ if(id==="app")return app;if(id==="nome")return name;return timerNodes[id]||null; }
   };
   const listeners={};
