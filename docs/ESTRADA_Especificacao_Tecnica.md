@@ -264,8 +264,10 @@ O backend calcula o resultado a partir das respostas guardadas; nunca aceita a n
 
 ## 7. Autenticação, SMS e permissões
 
-- Registo/login por email e palavra-passe através de fornecedor fiável ou implementação conforme padrões reconhecidos.
-- Google OAuth após configurar client ID, segredo no servidor e URLs de retorno permitidas.
+- **Fornecedor seleccionado para a primeira fase:** Supabase Auth no projecto ESTRADA. O frontend usa o URL do projecto e a chave publishable, com sessão persistente e renovação automática.
+- Registo e login por email e palavra-passe estão implementados no frontend. A palavra-passe exige pelo menos 8 caracteres. O início de qualquer exame exige sessão autenticada; o catálogo continua público. O exame escolhido é preservado durante o redireccionamento e retomado depois do login.
+- O login Google está preparado no código, mas fica desactivado até configurar o fornecedor Google no Supabase e as credenciais OAuth no painel do fornecedor; nunca colocar o Client Secret no frontend.
+- As contas e credenciais são geridas pelo Supabase Auth. Tabelas de perfil, tentativas, resultados e assinaturas serão criadas em tarefas próprias, conforme os respectivos requisitos.
 - Recuperação de conta sem revelar se um email está registado.
 - Código SMS de utilização única, com expiração, limites de tentativas e limites por número/IP.
 - Administradores devem usar protecção adicional; SMS não deve ser o único factor administrativo.
