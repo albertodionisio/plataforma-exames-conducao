@@ -3,13 +3,6 @@
 Tarefas do módulo de definições. Protocolo geral em `INSTRUCOES.md`. Executar uma tarefa de cada vez; reservar no GitHub antes de alterar código.
 
 
-## DEF-005 — Histórico, resultados e progresso
-- Estado: EM CURSO — ChatGPT-ESTRADA-DEF1 — 2026-11-14 13:35 UTC+02 — ficheiros: public/definicoes/index.html, public/definicoes/definicoes.css, public/definicoes/definicoes.js, scripts/testar-definicoes.js, docs/definicoes/DEF-005.md — último sinal: 2026-11-14 13:35 UTC+02
-- Pedido: disponibilizar histórico de exames, resultados, perguntas guardadas e progresso com base em dados reais.
-- Onde mexer: módulo de definições e camada de persistência disponível.
-- Pronto quando: dados são recuperados de forma consistente, com estados vazios e erros tratados; não inventar resultados nem perder dados; testes de recuperação aprovados.
-- Cuidados: preservar o fluxo e os resultados actuais dos exames; não alterar perguntas ou pontuação.
-
 ## DEF-006 — Planos, subscrições e pagamentos
 - Estado: LIVRE
 - Pedido: apresentar estado do plano e preparar gestão de subscrição/pagamentos de acordo com as integrações existentes.
