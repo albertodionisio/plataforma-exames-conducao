@@ -1,0 +1,42 @@
+name: Validar definições
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/definicoes/**'
+      - 'scripts/testar-definicoes.js'
+      - 'scripts/build-netlify.js'
+      - '.github/workflows/testar-definicoes.yml'
+  pull_request:
+    paths:
+      - 'public/definicoes/**'
+      - 'scripts/testar-definicoes.js'
+      - 'scripts/build-netlify.js'
+      - '.github/workflows/testar-definicoes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar-definicoes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Verificar sintaxe JavaScript
+        run: node --check public/definicoes/definicoes.js
+      - name: Testar estrutura e navegação
+        run: node scripts/testar-definicoes.js
+      - name: Construir publicação
+        run: node scripts/build-netlify.js
+      - name: Confirmar inclusão dos ficheiros na publicação
+        run: |
+          test -f dist/public/definicoes/index.html
+          test -f dist/public/definicoes/definicoes.css
+          test -f dist/public/definicoes/definicoes.js
