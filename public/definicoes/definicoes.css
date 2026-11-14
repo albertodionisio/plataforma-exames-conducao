@@ -142,3 +142,11 @@ li small a { color: var(--verde); font-weight: bold; }
 html[data-theme="dark"]{color-scheme:dark;--azul:#b9cbe4;--marfim:#111a29;--verde:#91cba2;--ouro:#e0bd70;--texto:#e8edf5;--cinza:#b2bdcc;--linha:#35445a;--branco:#1b293d;--cartao:#1b293d}html[data-theme="dark"] .aviso{background:#3a3427;color:var(--texto)}html[data-theme="dark"] .atalhos a{background:var(--cartao);color:var(--texto)}html[data-theme="dark"] .atalhos a:hover,html[data-theme="dark"] .atalhos a[aria-current="location"]{background:#263b34}html[data-theme="dark"] .opcoes-tema button[aria-pressed="true"]{background:#294536;color:#d8f2df}
 
 html[data-theme="dark"] li{border-color:#35445a}html[data-theme="dark"] .icone{background:#29384d;color:var(--azul)}
+
+/* DEF-003 — controlos de notificações */
+.acoes-notificacoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
+.acoes-notificacoes button{min-height:42px;padding:8px 12px;border:1px solid var(--linha);border-radius:8px;background:var(--branco);color:var(--texto);font:inherit;cursor:pointer}
+.acoes-notificacoes button:hover{border-color:var(--verde)}
+.acoes-notificacoes button:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.estado-notificacoes{margin:6px 0 0;color:var(--cinza);font-size:.88rem}
+[hidden]{display:none!important}

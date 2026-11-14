@@ -2,14 +2,6 @@
 
 Tarefas do módulo de definições. Protocolo geral em `INSTRUCOES.md`. Executar uma tarefa de cada vez; reservar no GitHub antes de alterar código.
 
-## DEF-003 — Notificações
-- Estado: EM CURSO — ChatGPT-ESTRADA-DEF1 — 2026-11-14 12:55 UTC+02 — ficheiros: public/definicoes/index.html, public/definicoes/definicoes.css, public/definicoes/definicoes.js, scripts/testar-definicoes.js — último sinal: 2026-11-14 12:55 UTC+02
-- Pedido: implementar preferências e notificações úteis, incluindo permissões e estados de suporte do navegador quando aplicável.
-- Pedido: implementar preferências e notificações úteis, incluindo permissões e estados de suporte do navegador quando aplicável.
-- Onde mexer: módulo de definições e integração de notificações; documentar dependências externas.
-- Pronto quando: permissões são pedidas apenas após acção explícita; estados permitido/negado/não suportado são tratados; não há notificações fictícias; testes aprovados.
-- Cuidados: não pedir permissão automaticamente ao abrir a aplicação; não enviar mensagens sem consentimento.
-
 ## DEF-004 — Perfil e segurança
 - Estado: LIVRE
 - Pedido: estruturar e implementar gestão de perfil e segurança conforme a autenticação realmente existente.
