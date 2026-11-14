@@ -156,3 +156,25 @@ html[data-theme="dark"] li{border-color:#35445a}html[data-theme="dark"] .icone{b
 .estado-conta strong,.informacao-dados h3{display:block;margin:0 0 6px;color:var(--azul);font-size:1rem}
 .estado-conta p,.informacao-dados p{margin:6px 0 0;color:var(--cinza);font-size:.9rem;line-height:1.5}
 .informacao-dados h3{font-size:.95rem}
+
+/* DEF-005 — histórico e progresso baseados em registos reais */
+.painel-aprendizagem{display:grid;gap:16px;margin-top:12px}
+.bloco-aprendizagem{padding:14px;border:1px solid var(--linha);border-radius:10px;background:var(--branco)}
+.bloco-aprendizagem h3{margin:0 0 6px;color:var(--azul);font-size:1rem}
+.nota-dados,.historico-data{color:var(--cinza);font-size:.82rem;line-height:1.45}
+.resumo-progresso{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:8px;margin:12px 0}
+.metrica-progresso{padding:10px;border:1px solid var(--linha);border-radius:8px;background:var(--fundo)}
+.metrica-rotulo,.metrica-valor{display:block}
+.metrica-rotulo{color:var(--cinza);font-size:.78rem}
+.metrica-valor{margin-top:4px;color:var(--azul);font-size:1.05rem}
+.lista-historico{display:grid;gap:8px}
+.item-historico{padding:11px;border:1px solid var(--linha);border-radius:8px}
+.historico-topo{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.historico-detalhe,.historico-nota{margin:5px 0;color:var(--cinza);font-size:.88rem}
+.historico-nota{color:var(--texto);font-weight:700}
+.estado-aprovacao{padding:3px 8px;border-radius:20px;font-size:.76rem;font-weight:700}
+.estado-aprovacao.aprovado{background:#e4f4e9;color:#176534}
+.estado-aprovacao.reprovado{background:#fbe9e7;color:#982d25}
+.estado-vazio{color:var(--cinza);font-size:.9rem;line-height:1.5}
+.atalho-resultado{margin:12px 0 0;font-size:.88rem}
+.atalho-resultado a{color:var(--azul);font-weight:700}

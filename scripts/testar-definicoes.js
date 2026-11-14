@@ -62,3 +62,16 @@ assert.match(appJs, /estrada\.tema/);
 assert.ok(!/TODO|FIXME/i.test(html + css + js), "Remover marcadores de implementação");
 
 console.log("DEF-001/DEF-002 PASSOU: estrutura, navegação, tema e persistência.");
+
+assert.match(html, /id="historico-exames"/);
+assert.match(html, /id="resumo-progresso"/);
+assert.match(html, /Perguntas guardadas/);
+assert.match(html, /Ainda não existe uma função para guardar perguntas/);
+assert.match(js, /localStorage\.getItem\("hist"\)/);
+assert.match(js, /Array\.isArray\(dados\)/);
+assert.match(js, /Tentativas/);
+assert.match(js, /Melhor nota/);
+assert.match(js, /sessionStorage\.getItem\("ultima"\)/);
+assert.match(js, /Abrir o último resultado desta sessão/);
+assert.match(css, /\.item-historico/);
+assert.match(css, /\.resumo-progresso/);

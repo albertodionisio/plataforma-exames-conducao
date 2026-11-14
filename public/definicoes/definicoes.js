@@ -83,6 +83,103 @@
   window.addEventListener("focus", function () { actualizarEstadoNotificacoes(); });
   actualizarEstadoNotificacoes();
 
+  // DEF-005: apresentar apenas os dados reais já persistidos pelo fluxo de exames.
+  var listaHistorico = document.getElementById("historico-exames");
+  var resumoProgresso = document.getElementById("resumo-progresso");
+  var atalhoUltimoResultado = document.getElementById("atalho-ultimo-resultado");
+
+  function lerHistoricoLocal() {
+    try {
+      var dados = JSON.parse(localStorage.getItem("hist") || "[]");
+      if (!Array.isArray(dados)) return [];
+      return dados.filter(function (item) {
+        return item && Number.isFinite(Number(item.n)) &&
+          Number.isFinite(Number(item.certas)) &&
+          Number.isFinite(Number(item.total)) &&
+          Number.isFinite(Number(item.nota)) &&
+          Number(item.total) > 0;
+      }).slice(0, 20);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function elemento(tag, classe, texto) {
+    var el = document.createElement(tag);
+    if (classe) el.className = classe;
+    if (texto !== undefined) el.textContent = texto;
+    return el;
+  }
+
+  function actualizarAprendizagem() {
+    if (!listaHistorico || !resumoProgresso) return;
+    var historico = lerHistoricoLocal();
+    listaHistorico.textContent = "";
+    resumoProgresso.textContent = "";
+    if (historico === null) {
+      listaHistorico.appendChild(elemento("p", "estado-vazio", "Não foi possível ler o histórico guardado neste navegador. Verifica as permissões de armazenamento do site."));
+      return;
+    }
+    if (!historico.length) {
+      resumoProgresso.appendChild(elemento("p", "estado-vazio", "Ainda não existem exames concluídos neste dispositivo."));
+      listaHistorico.appendChild(elemento("p", "estado-vazio", "Quando terminares um exame, o respectivo resumo aparecerá aqui."));
+    } else {
+      var soma = 0, melhor = 0, aprovados = 0, examesUnicos = {};
+      historico.forEach(function (item) {
+        var nota = Number(item.nota);
+        soma += nota;
+        melhor = Math.max(melhor, nota);
+        if (nota >= 18) aprovados++;
+        examesUnicos[String(Number(item.n))] = true;
+      });
+      var metricas = [
+        ["Tentativas", String(historico.length)],
+        ["Exames praticados", String(Object.keys(examesUnicos).length)],
+        ["Média", (soma / historico.length).toFixed(1).replace(".", ",") + "/20"],
+        ["Melhor nota", melhor.toFixed(1).replace(".", ",") + "/20"],
+        ["Aprovações", String(aprovados)]
+      ];
+      metricas.forEach(function (par) {
+        var cartao = elemento("div", "metrica-progresso");
+        cartao.appendChild(elemento("span", "metrica-rotulo", par[0]));
+        cartao.appendChild(elemento("strong", "metrica-valor", par[1]));
+        resumoProgresso.appendChild(cartao);
+      });
+      historico.forEach(function (item, indice) {
+        var nota = Number(item.nota);
+        var aprovado = nota >= 18;
+        var linha = elemento("article", "item-historico");
+        var topo = elemento("div", "historico-topo");
+        topo.appendChild(elemento("strong", "", "Exame " + Number(item.n)));
+        topo.appendChild(elemento("span", aprovado ? "estado-aprovacao aprovado" : "estado-aprovacao reprovado", aprovado ? "Aprovado" : "Reprovado"));
+        linha.appendChild(topo);
+        linha.appendChild(elemento("p", "historico-detalhe", Number(item.certas) + " certas em " + Number(item.total) + " perguntas"));
+        linha.appendChild(elemento("p", "historico-nota", nota.toFixed(1).replace(".", ",") + " / 20 valores"));
+        linha.appendChild(elemento("small", "historico-data", "Registo local " + (indice + 1) + " · sem data guardada"));
+        listaHistorico.appendChild(linha);
+      });
+    }
+    if (atalhoUltimoResultado) {
+      var disponivel = false;
+      try {
+        var ultima = JSON.parse(sessionStorage.getItem("ultima") || "null");
+        disponivel = !!(ultima && ultima.res && Number.isFinite(Number(ultima.n)));
+      } catch (e) {}
+      atalhoUltimoResultado.textContent = "";
+      atalhoUltimoResultado.hidden = !disponivel;
+      if (disponivel) {
+        var link = elemento("a", "", "Abrir o último resultado desta sessão");
+        link.href = "../../#/resultado";
+        atalhoUltimoResultado.appendChild(link);
+        atalhoUltimoResultado.appendChild(document.createTextNode(" · a revisão completa só fica recuperável enquanto os dados da sessão existirem."));
+      }
+    }
+  }
+  actualizarAprendizagem();
+  window.addEventListener("storage", function (e) {
+    if (e.key === "hist" || e.key === null) actualizarAprendizagem();
+  });
+
   var links = Array.prototype.slice.call(
     document.querySelectorAll(".atalhos a[href^='#']")
   );

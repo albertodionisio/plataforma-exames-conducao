@@ -83,11 +83,21 @@
         <div class="categoria-conteudo">
           <h2 id="titulo-aprendizagem">Aprendizagem</h2>
           <p>Acompanhamento da preparação e revisão dos exames.</p>
-          <ul>
-            <li><span>Histórico de exames</span><small>Consultar resultados anteriores · Em preparação</small></li>
-            <li><span>Perguntas guardadas</span><small>Rever perguntas seleccionadas · Em preparação</small></li>
-            <li><span>Progresso de aprendizagem</span><small>Acompanhar a evolução · Em preparação</small></li>
-          </ul>
+          <div class="painel-aprendizagem" aria-live="polite">
+            <section class="bloco-aprendizagem" aria-labelledby="titulo-historico">
+              <h3 id="titulo-historico">Histórico de exames</h3>
+              <p class="nota-dados">Resumo das tentativas guardadas neste navegador (até 20 registos).</p>
+              <div id="resumo-progresso" class="resumo-progresso"></div>
+              <div id="historico-exames" class="lista-historico">
+                <p>A carregar o histórico deste dispositivo…</p>
+              </div>
+              <p id="atalho-ultimo-resultado" class="atalho-resultado" hidden></p>
+            </section>
+            <section class="bloco-aprendizagem" aria-labelledby="titulo-guardadas">
+              <h3 id="titulo-guardadas">Perguntas guardadas</h3>
+              <p id="estado-perguntas-guardadas">Ainda não existe uma função para guardar perguntas. Esta opção ficará disponível quando a selecção e a persistência de perguntas forem implementadas.</p>
+            </section>
+          </div>
         </div>
       </section>
 
