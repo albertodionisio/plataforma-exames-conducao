@@ -1,5 +1,8 @@
 (function () {
   "use strict";
+  // DEF-002: carregar a preferência de aparência antes de desenhar a aplicação.
+  try{var temaInicial=localStorage.getItem("estrada.tema")==="dark"?"dark":"light";document.documentElement.setAttribute("data-theme",temaInicial);document.documentElement.style.colorScheme=temaInicial;}catch(e){document.documentElement.setAttribute("data-theme","light");}
+  window.addEventListener("storage",function(e){if(e.key==="estrada.tema"){var tema=e.newValue==="dark"?"dark":"light";document.documentElement.setAttribute("data-theme",tema);document.documentElement.style.colorScheme=tema;}});
   var A = window.APP || {}, EX = window.EXAMES || {};
   var app = document.getElementById("app");
   var estado = null, timer = null;

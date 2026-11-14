@@ -10,6 +10,8 @@ const base = path.join(root, "public", "definicoes");
 const html = fs.readFileSync(path.join(base, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(base, "definicoes.css"), "utf8");
 const js = fs.readFileSync(path.join(base, "definicoes.js"), "utf8");
+const globalCss = fs.readFileSync(path.join(root, "styles.css"), "utf8");
+const appJs = fs.readFileSync(path.join(root, "app.js"), "utf8");
 
 const ids = ["personalizacao", "conta", "aprendizagem", "subscricao", "suporte", "sobre"];
 for (const id of ids) {
@@ -32,7 +34,13 @@ assert.match(css, /:focus-visible/);
 assert.match(css, /@media \(max-width: 760px\)/);
 assert.match(css, /@media \(max-width: 430px\)/);
 assert.match(css, /prefers-reduced-motion/);
-assert.ok(!/<button\b/i.test(html), "Não criar botões sem acção nesta etapa");
+assert.match(html, /data-theme-choice="light"/);
+assert.match(html, /data-theme-choice="dark"/);
+assert.match(js, /estrada\.tema/);
+assert.match(js, /localStorage\.setItem/);
+assert.match(css, /data-theme="dark"/);
+assert.match(globalCss, /data-theme="dark"/);
+assert.match(appJs, /estrada\.tema/);
 assert.ok(!/TODO|FIXME/i.test(html + css + js), "Remover marcadores de implementação");
 
-console.log("DEF-001 PASSOU: seis categorias, atalhos internos, links existentes, acessibilidade básica e regras responsivas.");
+console.log("DEF-001/DEF-002 PASSOU: estrutura, navegação, tema e persistência.");

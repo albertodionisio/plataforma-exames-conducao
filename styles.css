@@ -1,4 +1,4 @@
-:root{--azul:#14284b;--marfim:#faf6ec;--verde:#3f6b4f;--ouro:#b8924a;--texto:#1d2433;--cinza:#6b7280;--linha:#e3dccb;--erro:#9b2c2c}
+:root{color-scheme:light;--azul:#14284b;--marfim:#faf6ec;--verde:#3f6b4f;--ouro:#b8924a;--texto:#1d2433;--cinza:#6b7280;--linha:#e3dccb;--erro:#9b2c2c;--cartao:#fff;--certo:#e8f1ea;--errado:#f7e6e6;--aviso:#f3ecd6}
 *{box-sizing:border-box}
 body{margin:0;background:var(--marfim);color:var(--texto);font:17px/1.5 Georgia,"Times New Roman",serif}
 .topo{background:var(--azul);color:var(--marfim);display:flex;justify-content:space-between;align-items:center;padding:12px 16px;position:sticky;top:0;z-index:5}
@@ -8,24 +8,24 @@ body{margin:0;background:var(--marfim);color:var(--texto);font:17px/1.5 Georgia,
 main{max-width:720px;margin:0 auto;padding:18px 16px 40px}
 h1{font-size:1.5rem;margin:.2em 0 .4em;color:var(--azul)}
 h2{font-size:1.15rem;color:var(--azul)}
-.card{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:16px;margin:14px 0}
+.card{background:var(--cartao);border:1px solid var(--linha);border-radius:10px;padding:16px;margin:14px 0}
 .btn{display:inline-block;background:var(--azul);color:var(--marfim);border:0;border-radius:8px;padding:12px 18px;font:inherit;text-decoration:none;cursor:pointer}
 .btn.sec{background:transparent;color:var(--azul);border:1px solid var(--azul)}
 .btn[disabled]{opacity:.5;cursor:not-allowed}
 .grelha{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
-.sim{display:block;background:#fff;border:1px solid var(--linha);border-radius:10px;padding:12px;text-decoration:none;color:inherit}
+.sim{display:block;background:var(--cartao);border:1px solid var(--linha);border-radius:10px;padding:12px;text-decoration:none;color:inherit}
 .sim b{display:block;color:var(--azul)}
 .sim small{color:var(--cinza)}
 .sim.livre{border-color:var(--verde)}
 .sim.livre small{color:var(--verde)}
 .sim.bloq{opacity:.65}
-.aviso{background:#f3ecd6;border-left:4px solid var(--ouro);padding:10px 12px;border-radius:6px;font-size:.92rem}
+.aviso{background:var(--aviso);border-left:4px solid var(--ouro);padding:10px 12px;border-radius:6px;font-size:.92rem}
 .estado{display:flex;justify-content:space-between;color:var(--cinza);font-size:.95rem;margin-bottom:8px}
 .tempo{font-variant-numeric:tabular-nums;color:var(--azul);font-weight:bold}
 .img{display:block;max-width:100%;max-height:240px;margin:10px auto;background:#fff;border:1px solid var(--linha);border-radius:8px}
-.op{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--linha);border-radius:8px;padding:12px;margin:8px 0;font:inherit;cursor:pointer}
-.op.certa{border-color:var(--verde);background:#e8f1ea}
-.op.errada{border-color:var(--erro);background:#f7e6e6}
+.op{display:block;width:100%;text-align:left;background:var(--cartao);border:1px solid var(--linha);border-radius:8px;padding:12px;margin:8px 0;font:inherit;cursor:pointer}
+.op.certa{border-color:var(--verde);background:var(--certo)}
+.op.errada{border-color:var(--erro);background:var(--errado)}
 .op[disabled]{cursor:default}
 .expl{background:#fff;border:1px solid var(--linha);border-left:4px solid var(--verde);border-radius:6px;padding:10px 12px;margin:12px 0}
 table{width:100%;border-collapse:collapse;font-size:.9rem}
@@ -189,3 +189,7 @@ table{
 @media (prefers-reduced-motion:no-preference){
   .menu-toggle,.topo .nav-links a{transition:background-color .15s,border-color .15s}
 }
+
+/* DEF-002 — tema global persistente */
+:root[data-theme="dark"]{color-scheme:dark;--azul:#b9cbe4;--marfim:#111a29;--verde:#91cba2;--ouro:#e0bd70;--texto:#e8edf5;--cinza:#b2bdcc;--linha:#35445a;--erro:#ff9b9b;--cartao:#1b293d;--certo:#294536;--errado:#492d35;--aviso:#3a3427}
+:root[data-theme="dark"] .card,:root[data-theme="dark"] .sim,:root[data-theme="dark"] .op,:root[data-theme="dark"] .expl{color:var(--texto)}:root[data-theme="dark"] .sim small,:root[data-theme="dark"] .estado{color:var(--cinza)}:root[data-theme="dark"] .op.certa{color:#e0f5e5}:root[data-theme="dark"] .op.errada{color:#ffe5e8}
