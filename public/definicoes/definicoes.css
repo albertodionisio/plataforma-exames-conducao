@@ -163,7 +163,7 @@ html[data-theme="dark"] li{border-color:#35445a}html[data-theme="dark"] .icone{b
 .bloco-aprendizagem h3{margin:0 0 6px;color:var(--azul);font-size:1rem}
 .nota-dados,.historico-data{color:var(--cinza);font-size:.82rem;line-height:1.45}
 .resumo-progresso{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:8px;margin:12px 0}
-.metrica-progresso{padding:10px;border:1px solid var(--linha);border-radius:8px;background:var(--fundo)}
+.metrica-progresso{padding:10px;border:1px solid var(--linha);border-radius:8px;background:var(--marfim)}
 .metrica-rotulo,.metrica-valor{display:block}
 .metrica-rotulo{color:var(--cinza);font-size:.78rem}
 .metrica-valor{margin-top:4px;color:var(--azul);font-size:1.05rem}
