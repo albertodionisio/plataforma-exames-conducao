@@ -1,6 +1,6 @@
 # Exame 16 — mapa de rastreabilidade (DADOS-017)
 
-Conteúdo adaptado das 25 perguntas de `original/extraido/exame16.json`. As imagens de origem estão identificadas em `original/extraido/imagens/exame16/`; a associação no conteúdo aponta para `public/exames/exame16/`, mas a cópia física das imagens continua pendente.
+Conteúdo adaptado das 25 perguntas de `original/extraido/exame16.json`. As 25 imagens originais foram copiadas sem recompressão para `public/exames/exame16/` e associadas à pergunta correspondente, preservando os mesmos Git blob SHA da origem.
 
 ## Critérios aplicados
 
@@ -45,6 +45,6 @@ Conteúdo adaptado das 25 perguntas de `original/extraido/exame16.json`. As imag
 
 - Conteúdo: 25 perguntas, 100 alternativas preenchidas e 25 explicações.
 - Respostas: mantidas conforme a chave do APK; não revistas legalmente nesta fase.
-- Imagens: 25 referências preparadas; cópia/associação física pendente.
+- Imagens: 25 ficheiros originais copiados e associados (25/25); correspondência por número de pergunta.
 - Integração na aplicação: não realizada.
-- Validação automática e teste no navegador: pendentes, dependem também da presença das imagens.
+- Validação automática: pendente de reexecução global após publicação das imagens. Teste no navegador: pendente.

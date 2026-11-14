@@ -1,4 +1,4 @@
-// Exame 16 — 25 perguntas adaptadas da fonte original; imagens por associar.
+// Exame 16 — 25 perguntas adaptadas da fonte original; imagens originais copiadas e associadas.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[16] = [
   {
