@@ -1,4 +1,4 @@
-// Exame 25 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 25 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[25] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[25] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "A que altura deve ficar a parte central do encosto de cabeça, para garantir uma protecção eficaz em caso de acidente rodoviário?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Condutor ao volante, visto de lado",
+      "src": "public/exames/exame25/exame25_1.jpg"
+    },
     "opcoes": [
       "À altura do pescoço.",
       "O mais baixo possível.",
@@ -21,7 +24,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O agente regulador de trânsito que aparece na fotografia, manda:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Agente regulador de trânsito num cruzamento com semáforo",
+      "src": "public/exames/exame25/exame25_2.jpg"
+    },
     "opcoes": [
       "Avançar o tráfego que venha da esquerda.",
       "Avançar o tráfego que venha da direita.",
@@ -36,7 +42,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que deve fazer o condutor perante a marca rodoviária que delimita a via de trânsito da esquerda?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Via com marcas rodoviárias e setas de sentido",
+      "src": "public/exames/exame25/exame25_3.jpg"
+    },
     "opcoes": [
       "Aumentar a velocidade, se circula pela via de trânsito que delimita.",
       "Abrandar a marcha, se circula pela via de trânsito que delimita.",
@@ -51,7 +60,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal circular de proibição, com bordo vermelho e um símbolo de mão riscado",
+      "src": "public/exames/exame25/exame25_4.jpg"
+    },
     "opcoes": [
       "Proibição de parar.",
       "Proibição de circulação de vendedores.",
@@ -66,7 +78,10 @@ window.EXAMES[25] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "É proibido estacionar...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Fotografia de uma estrada com trânsito",
+      "src": "public/exames/exame25/exame25_5.jpg"
+    },
     "opcoes": [
       "Em cima dos passeios.",
       "De noite, nas faixas de rodagem das localidades.",
@@ -81,7 +96,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Se conduz muito tempo sem descansar...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Fotografia de uma estrada com trânsito",
+      "src": "public/exames/exame25/exame25_6.jpg"
+    },
     "opcoes": [
       "Aumenta a atenção do condutor.",
       "A condução torna-se perigosa.",
@@ -96,7 +114,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que luz aparece antes de acender a luz amarela de um semáforo?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Cruzamento com semáforo e veículos parados",
+      "src": "public/exames/exame25/exame25_7.jpg"
+    },
     "opcoes": [
       "A luz vermelha.",
       "A luz amarela intermitente.",
@@ -111,7 +132,10 @@ window.EXAMES[25] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "É necessário verificar o nível do líquido de travão com frequência?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Compartimento do motor de um automóvel",
+      "src": "public/exames/exame25/exame25_8.jpg"
+    },
     "opcoes": [
       "Sim, mas não precisa de ser substituído.",
       "Sim e deve ser substituído dentro do período indicado pelo fabricante.",
@@ -126,7 +150,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Qual dos seguintes procedimentos causa maior distracção durante a condução?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Mãos de um condutor no volante junto de um telemóvel",
+      "src": "public/exames/exame25/exame25_9.jpg"
+    },
     "opcoes": [
       "Observar os sinais.",
       "Ouvir a rádio.",
@@ -141,7 +168,10 @@ window.EXAMES[25] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Os condutores de motociclos, ciclomotores ou velocípedes podem circular a par nesta estrada?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Fotografia de uma estrada com trânsito",
+      "src": "public/exames/exame25/exame25_10.jpg"
+    },
     "opcoes": [
       "Não.",
       "Sim.",
@@ -156,7 +186,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Os jovens, têm mais possibilidades de ter acidentes rodoviários?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Jovem condutor ao volante",
+      "src": "public/exames/exame25/exame25_11.jpg"
+    },
     "opcoes": [
       "Sim devido à falta de reflexos.",
       "Sim, a sua visão é mais reduzida.",
@@ -171,7 +204,10 @@ window.EXAMES[25] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Têm prioridade de passagem os condutores:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Fotografia de uma estrada com trânsito",
+      "src": "public/exames/exame25/exame25_12.jpg"
+    },
     "opcoes": [
       "Que siam de um prédio ou caminho particular.",
       "Que transitem pelas auto-estradas, em relação aos veículos que se apresentes pelos ramais de acesso.",
@@ -186,7 +222,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A idade mínima para poder obter a carta de condução da categoria , é...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Verso de uma carta de condução com códigos de categorias",
+      "src": "public/exames/exame25/exame25_13.jpg"
+    },
     "opcoes": [
       "16 anos.",
       "21 anos.",
@@ -201,7 +240,10 @@ window.EXAMES[25] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Considera-se ultrapassagem quando:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Fotografia de uma estrada com trânsito",
+      "src": "public/exames/exame25/exame25_14.jpg"
+    },
     "opcoes": [
       "Dois veículos, circulando na mesma fila, o que de encontra atrás passa para diante do outro.",
       "Os condutores que saiam de qualquer parque de estacionamento cedem passagem aos outros utentes da via.",
@@ -216,7 +258,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Entende-se por consciência moral:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Fotografia de uma estrada com trânsito",
+      "src": "public/exames/exame25/exame25_15.jpg"
+    },
     "opcoes": [
       "A capacidade de o indivíduo interpretar os sinais de trânsito.",
       "A faculdade de a pessoa distinguir entre o bem e o mal, de julgar os seus actos e adoptar uma determinada forma de conduta.",
@@ -231,7 +276,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal rectangular castanho com símbolos brancos",
+      "src": "public/exames/exame25/exame25_16.jpg"
+    },
     "opcoes": [
       "Indica a existência de uma igreja.",
       "Indica a existência de um cemitério.",
@@ -246,7 +294,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Num automóvel, as luzes mínimas e as de presença, devem estar colocadas:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Painel de instrumentos de um automóvel",
+      "src": "public/exames/exame25/exame25_17.jpg"
+    },
     "opcoes": [
       "Duas à frente e duas atrás.",
       "Somente duas à frente.",
@@ -261,7 +312,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal circular de proibição com bordo vermelho, junto a uma ponte",
+      "src": "public/exames/exame25/exame25_18.jpg"
+    },
     "opcoes": [
       "Trânsito proibido a veículos de peso total superior a 2 toneladas.",
       "Trânsito proibido a veículos de peso por eixo inferior a 2 toneladas.",
@@ -276,7 +330,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O sinal realizado pelo operador da obra, indica:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Operário de obra a fazer sinal a veículos junto de uma zona de obras",
+      "src": "public/exames/exame25/exame25_19.jpg"
+    },
     "opcoes": [
       "Aproximação de um estrada com prioridade.",
       "Paragem obrigatória em quatro vias.",
@@ -291,7 +348,10 @@ window.EXAMES[25] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Nas estradas com dois sentidos de circulação, que devem fazer os condutores que pretendam mudar de direcção para a direita?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Fotografia de uma estrada com trânsito",
+      "src": "public/exames/exame25/exame25_20.jpg"
+    },
     "opcoes": [
       "Chegar-se o mais possível para a esquerda.",
       "Aproximar-se com a devida antecedência do eixo da via.",
@@ -306,7 +366,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O que se entende por inconsciência?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Condutor com a mão na cabeça e olhos fechados ao volante",
+      "src": "public/exames/exame25/exame25_21.jpg"
+    },
     "opcoes": [
       "O estado no qual o cérebro não está a funcionar bem.",
       "O estado em que o peito da vítima de acidente de viação, desce e sobe regularmente.",
@@ -321,7 +384,10 @@ window.EXAMES[25] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "O condutor num ciclomotor, pode levar o capacete mal ajustado e apertado?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Motociclista de colete reflector numa estrada",
+      "src": "public/exames/exame25/exame25_22.jpg"
+    },
     "opcoes": [
       "Não, porque não garante uma protecção eficaz em caso de acidente.",
       "Sim, sempre que seja um modelo aprovado oficialmente.",
@@ -336,7 +402,10 @@ window.EXAMES[25] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal azul com letra P e símbolo branco, junto a um parque",
+      "src": "public/exames/exame25/exame25_23.jpg"
+    },
     "opcoes": [
       "Faixa reservada para veículos de deficientes.",
       "Parque de estacionamento para veículos de deficientes.",
@@ -351,7 +420,10 @@ window.EXAMES[25] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Para conduzir com segurança, deve moderar especialmente a velocidade...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Ponte estreita sobre um rio",
+      "src": "public/exames/exame25/exame25_24.jpg"
+    },
     "opcoes": [
       "Só nas pontes, túneis e passagens de nível.",
       "Nos cruzamentos e entroncamentos nos que tenham prioridade de passagem.",
@@ -366,7 +438,10 @@ window.EXAMES[25] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Podem deixar de respeitar as regras e os sinais de trânsito os condutores de veículos prioritários?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Veículo com pessoas na caixa de carga numa avenida",
+      "src": "public/exames/exame25/exame25_25.jpg"
+    },
     "opcoes": [
       "Não.",
       "Sim, incluindo as ordens dos agentes reguladores do trânsito.",
