@@ -61,7 +61,7 @@ window.EXAMES[29] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame29/exame29_4.jpg",
+      "src": "public/sinais/F55-obrigacao-acender-luzes.png",
       "descricao": "Imagem original da pergunta 4 do Exame 29"
     },
     "opcoes": [
@@ -385,7 +385,7 @@ window.EXAMES[29] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame29/exame29_22.jpg",
+      "src": "public/sinais/A69-cancela-motorizada-a-direita.png",
       "descricao": "Imagem original da pergunta 22 do Exame 29"
     },
     "opcoes": [
@@ -421,7 +421,7 @@ window.EXAMES[29] = [
     "dificuldade": "média",
     "enunciado": "o que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame29/exame29_24.jpg",
+      "src": "public/sinais/A48-passagem-de-nivel.png",
       "descricao": "Imagem original da pergunta 24 do Exame 29"
     },
     "opcoes": [

@@ -205,7 +205,7 @@ window.EXAMES[27] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de interesse turístico?",
     "imagem": {
-      "src": "public/exames/exame27/exame27_12.jpg",
+      "src": "public/sinais/J17-reserva-florestal.png",
       "descricao": "Imagem original da pergunta 12 do Exame 27"
     },
     "opcoes": [
@@ -439,7 +439,7 @@ window.EXAMES[27] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame27/exame27_25.jpg",
+      "src": "public/sinais/G63-parque-estacionamento-veiculos-emergencia.png",
       "descricao": "Imagem original da pergunta 25 do Exame 27"
     },
     "opcoes": [

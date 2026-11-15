@@ -42,3 +42,7 @@ As 25 imagens originais foram copiadas para `public/exames/exame28/` e associada
 - Imagens pendentes; `imagem: null`.
 - Conteúdo não integrado no catálogo nem testado no navegador.
 - Nenhuma configuração de acesso ou regra da aplicação foi alterada.
+
+## Sinais de melhor qualidade (2026-11-15, Claude-DADOS005)
+
+Perguntas 11 (J12) e 22 (E25): imagem do APK (~440 px, com contorno desfocado e ruído) substituída pelo sinal vectorial do `original/referencia/sinais.pdf`, desenhado a 600 ppp e guardado em `public/sinais/` com o código no nome. Desenho confirmado igual ao do APK.

@@ -187,7 +187,7 @@ window.EXAMES[28] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame28/exame28_11.jpg",
+      "src": "public/sinais/J12-cascata.png",
       "descricao": "Imagem original da pergunta 11 do Exame 28"
     },
     "opcoes": [
@@ -385,7 +385,7 @@ window.EXAMES[28] = [
     "dificuldade": "média",
     "enunciado": "A utilização dos sinais sonoros é permitida:",
     "imagem": {
-      "src": "public/exames/exame28/exame28_22.jpg",
+      "src": "public/sinais/E25-fim-proibicao-sinais-sonoros.png",
       "descricao": "Imagem original da pergunta 22 do Exame 28"
     },
     "opcoes": [

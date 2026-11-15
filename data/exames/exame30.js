@@ -25,7 +25,7 @@ window.EXAMES[30] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame30/exame30_2.jpg",
+      "src": "public/sinais/F54-pista-obrigatoria-riquixo.png",
       "descricao": "Imagem original da pergunta 2 do Exame 30"
     },
     "opcoes": [

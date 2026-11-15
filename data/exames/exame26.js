@@ -241,7 +241,7 @@ window.EXAMES[26] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de interesse turístico?",
     "imagem": {
-      "src": "public/exames/exame26/exame26_14.jpg",
+      "src": "public/sinais/J28-reserva-de-caca.png",
       "descricao": "Imagem original da pergunta 14 do Exame 26"
     },
     "opcoes": [

@@ -62,7 +62,7 @@ window.EXAMES[25] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Sinal circular de proibição, com bordo vermelho e um símbolo de mão riscado",
-      "src": "public/exames/exame25/exame25_4.jpg"
+      "src": "public/sinais/E65-proibicao-pedir-boleia.png"
     },
     "opcoes": [
       "Proibição de parar.",
@@ -278,7 +278,7 @@ window.EXAMES[25] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Sinal rectangular castanho com símbolos brancos",
-      "src": "public/exames/exame25/exame25_16.jpg"
+      "src": "public/sinais/J40-cemiterio-historico.png"
     },
     "opcoes": [
       "Indica a existência de uma igreja.",

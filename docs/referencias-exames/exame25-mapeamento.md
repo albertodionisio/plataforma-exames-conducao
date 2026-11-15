@@ -44,3 +44,7 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 - Imagens (2026-11-15, Claude-DADOS005): as 25 imagens do APK foram copiadas de `original/extraido/imagens/exame25/` para `public/exames/exame25/` e associadas pelo mesmo número da pergunta; verificadas à vista (todas ~1000×550 px, sinais nítidos). Perguntas 4, 16, 18 e 23 mostram sinais; se se pretender versão vectorial, extrair do `original/referencia/sinais.pdf`.
 - Não integrado no catálogo nem testado no navegador nesta tarefa.
 - Nenhuma regra de acesso, assinatura, cronómetro ou ficheiro de integração foi alterado.
+
+## Sinais de melhor qualidade (2026-11-15, Claude-DADOS005)
+
+Perguntas 4 (E65) e 16 (J40): imagem do APK (~440 px, com contorno desfocado e ruído) substituída pelo sinal vectorial do `original/referencia/sinais.pdf`, desenhado a 600 ppp e guardado em `public/sinais/` com o código no nome. Desenho confirmado igual ao do APK.
