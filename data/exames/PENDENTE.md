@@ -18,8 +18,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - **Validação:** garantir 25 perguntas, quatro alternativas, uma resposta correcta e índice correcto; confirmar conteúdo legal e executar `node scripts/validar-exames.js`. Testar que o exame abre, que imagens correspondem às perguntas e que não há erros no navegador.
 - **Limite da tarefa:** cada sessão trabalha apenas no exame que reservou. Não alterar tarefas EM CURSO de outra sessão nem ficheiros partilhados sem verificar o protocolo de `INSTRUCOES.md`.
 
-
-
 - Nota (Claude-DADOS005, 2026-11-15, por ordem do dono): imagens dos Exames 9–14 e 17–24 associadas (`public/exames/exameN/`) e Exames 9–14 e 16–24 ligados em `index.html`; sinais de pouca qualidade a substituir pelos do PDF numa etapa seguinte. Estas tarefas mantêm as suas reservas, mas as imagens e a integração já estão feitas — não repetir.
 
 ## DADOS-001 — Exame 2 (grátis)
@@ -29,7 +27,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 2 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta para a revisão após submissão; abre no ESTRADA com cronómetro de 60 minutos, sem feedback durante a realização, resultado final e revisão comentada; mapa completo; validação automática e teste no navegador sem erros.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Esta tarefa já está reservada: nenhuma outra sessão deve mexer nela sem autorização do dono.
 - Parcial: 25 perguntas adaptadas em `data/exames/exame2.js`; 25 imagens do APK publicadas em `public/exames/exame2/`; mapa completo em `docs/referencias-exames/exame2-mapeamento.md`. Corrigidas as interpretações do APK nas perguntas 13 (G14, parque para táxis), 17 (sinal de direcção) e 21 (gesto de redução de velocidade); formulação da 8 ajustada ao sinal E3. Perguntas 15 e 19 diferenciadas de sobreposições existentes. Respostas correctas distribuídas A=7/B=6/C=6/D=6; nenhuma é a única alternativa mais longa. CI passou no run 43513191604 (sintaxe, assinaturas, fluxo geral, validador oficial e build Netlify). Tag do Exame 2 integrada em `index.html` pela FE-009 (autorizada pelo dono em 2026-11-13); catálogo mostra o Exame 2 como «Grátis» e as 25 imagens carregam sem erros num navegador (Chromium headless). Falta só concluir a revisão de duplicações com os Exames 3 e 4 antes de fechar a tarefa.
-
 
 ### ACTUALIZAÇÃO OBRIGATÓRIA — decisão do dono (11/11/2026)
 **Esta decisão substitui qualquer instrução anterior ou implementação baseada no modelo antigo de correcção imediata.** A sessão que já está a trabalhar no DADOS-001 deve actualizar o seu plano e executar o Exame 2 segundo estas regras, sem esperar por uma nova tarefa:
@@ -144,13 +141,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - As imagens ainda não foram copiadas nem associadas; serão tratadas numa etapa posterior.
 - O Exame 14 não foi ligado à aplicação. A sequência autorizada abrange os Exames 12 a 15, com integração adiada.
 - Commits: conteúdo `bb7ad35d0d1ce246fe54d16ee57842bcfd7986b3`; mapa `100224ae0612afb730bc0527033f79a24acc2e91`.
-
-## DADOS-016 — Exame 15
-- Estado: EM CURSO — Claude-DADOS005 — 2026-11-15 19:25 UTC+02 — ficheiros: data/exames/exame15.js, docs/referencias-exames/exame15-mapeamento.md, public/exames/exame15/ (imagens) — último sinal: 2026-11-15 19:25 UTC+02 — reserva anterior parada (sem ficheiros publicados) assumida com autorização expressa do dono em 2026-11-15.
-- Pedido: extrair as 25 perguntas do Exame 15 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
-- Onde mexer: `data/exames/exame15.js` (novo) e `docs/referencias-exames/exame15-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
-- Pronto quando: as 25 perguntas correspondem às 25 do Exame 15 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
-- Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 15 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
 ## DADOS-017 — Exame 16
 - Estado: CONTEÚDO E IMAGENS PUBLICADOS — assumido por ChatGPT-ESTRADA-9 em 2026-11-14, com autorização expressa do dono nesta conversa; reserva anterior transferida — validação global e teste de navegador pendentes
@@ -322,7 +312,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
 - Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. A comparação com todos os exames 31–51 publicados foi concluída após as reformulações; a pergunta 22 ficou centrada na proibição específica junto de paragem sinalizada com aglomerado de pessoas (art. 44.º, n.º 1, al. f). GitHub Actions run 43465533318 aprovado (sintaxe, assinaturas e validador oficial). A tarefa fica LIVRE para retomar os dois pontos pendentes sem refazer as alterações publicadas.
 
-
 ## DADOS-036 — Exame 35 (conteúdo original)
 - Estado: LIVRE
 - Foco: sinalização, segurança e mudança de direcção.
@@ -331,7 +320,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Imagens: todas as perguntas têm imagem null; não existem imagens a associar neste exame.
 - Originalidade: comparação com o Exame 1 e os Exames 31–51 publicados; foram identificadas e reformuladas questões repetidas sobre mudança à esquerda, sinalização e duração do indicador. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
 - Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. As reformulações foram validadas pelo GitHub Actions run 43465823167 (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações.
-
 
 ## DADOS-037 — Exame 36 (conteúdo original)
 - Estado: LIVRE
@@ -342,7 +330,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Originalidade: comparação com o Exame 1 e todos os Exames 31–51 publicados; as duas sobreposições detectadas foram corrigidas. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
 - Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. GitHub Actions run 43466155796 aprovado (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações publicadas.
 
-
 ## DADOS-038 — Exame 37 (conteúdo original)
 - Estado: LIVRE
 - Foco: paragem, estacionamento e imobilização.
@@ -352,7 +339,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Originalidade: comparação com o Exame 1 e todos os Exames 31–51 publicados; foram identificadas e reformuladas as antigas perguntas 9, 12, 15 e 21 por sobreposição com competências já testadas. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
 - Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. GitHub Actions run 43466423355 aprovado (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações publicadas.
 
-
 ## DADOS-039 — Exame 38 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Passagem de peões e convivência com utilizadores vulneráveis.
@@ -361,20 +347,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: 25 perguntas originais com quatro alternativas, uma resposta correcta, explicação e referência normativa específica; validador oficial aprovado; revisão legal/pedagógica concluída; teste funcional no navegador confirmado pelo dono.
 - Cuidados: não inventar artigos, sinais, multas ou procedimentos; documentar as limitações da verificação da vigência; não alterar ficheiros partilhados reservados.
 - Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial). A comparação com os Exames 31–51 identificou sobreposição de seis competências com o bloco de peões do Exame 44 (perguntas 1, 2, 6, 8, 9 e 25); o Exame 38 mantém-se como exame dedicado a peões e a substituição será feita no Exame 44, tarefa DADOS-045. A tarefa fica LIVRE para retomar depois dessa harmonização; teste funcional no navegador pelo dono continua pendente.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## DADOS-058 — Auditoria de duplicações nos Exames 40–50
 - Estado: LIVRE
@@ -394,7 +366,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Commits principais das substituições desta etapa: Exame 41 `56d33eb950ce3889024618c41347c6e18fcf4f59`; Exame 42 `7359bb385851316fc6e22b124cdecab90fc95e17`; Exame 43 `e117985d31bd1d98c4a086bcfc70b336c2cb76ce`; Exame 47 `6481826537c421c2905e7854e47f1c2839a534d5`; Exame 48 `a41349f933cb90dca3ddd4bc53b25cb087d8e32c`; Exame 49 `681465c7e972886c1849cfcbff6b69157eebca58`; Exame 50 `b62cb88311b74b94194b9d4463552280e152a876` e `3eef3c8ee700d0826e22bab00a9e8a7bafafbffb`. Os mapas pergunta-a-pergunta foram actualizados nos exames 41, 42, 43, 47, 48 e 49; os mapas do Exame 50 permanecem ligados à revisão já registada.
 - Os estados de CI para os commits mais recentes não foram devolvidos pelos endpoints de status consultados; por isso, não declarar CI aprovado nesta etapa. O teste visual no navegador permanece reservado ao dono.
 - Cuidados: não duplicar tarefas anteriores; não alterar questões sem base legal; manter as respostas equilibradas e sem padrão fixo.
-
 
 ## DADOS-062 — Equilibrar extensão das alternativas do Exame 1
 - Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 23:11 UTC+02 — ficheiros: data/exames/exame1.js, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:12 UTC+02
