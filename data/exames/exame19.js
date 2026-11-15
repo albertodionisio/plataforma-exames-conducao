@@ -26,7 +26,7 @@ window.EXAMES[19] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 2 do Exame 19",
-      "src": "public/exames/exame19/exame19_2.jpg"
+      "src": "public/sinais/A19-sinal-pdf.png"
     },
     "opcoes": [
       "Zona onde só podem passar três carros de cada vez.",
@@ -62,7 +62,7 @@ window.EXAMES[19] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 4 do Exame 19",
-      "src": "public/exames/exame19/exame19_4.jpg"
+      "src": "public/sinais/A47-sinal-pdf.png"
     },
     "opcoes": [
       "Passagem estreita.",

@@ -350,7 +350,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 20 do Exame 17",
-      "src": "public/exames/exame17/exame17_20.jpg"
+      "src": "public/sinais/A50-sinal-pdf.png"
     },
     "opcoes": [
       "Bois ou vacas.",
@@ -440,7 +440,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 25 do Exame 17",
-      "src": "public/exames/exame17/exame17_25.jpg"
+      "src": "public/sinais/A9-sinal-pdf.png"
     },
     "opcoes": [
       "Obrigação de ceder passagem no próximo cruzamento.",

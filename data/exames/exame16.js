@@ -314,7 +314,7 @@ window.EXAMES[16] = [
     "enunciado": "O que indica o sinal apresentado?",
     "imagem": {
       "descricao": "Sinal de paragem obrigatória colocado antes de uma intersecção.",
-      "src": "public/exames/exame16/exame16_18.jpg"
+      "src": "public/sinais/pdf-p52-x87-y319.png"
     },
     "opcoes": [
       "Paragem obrigatória.",
@@ -422,7 +422,7 @@ window.EXAMES[16] = [
     "enunciado": "Qual é o significado do sinal apresentado?",
     "imagem": {
       "descricao": "Sinal de perigo que representa alteração no número ou na disposição das vias.",
-      "src": "public/exames/exame16/exame16_24.jpg"
+      "src": "public/sinais/A36-sinal-pdf.png"
     },
     "opcoes": [
       "Fim de duas vias.",

@@ -278,7 +278,7 @@ window.EXAMES[20] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 16 do Exame 20",
-      "src": "public/exames/exame20/exame20_16.jpg"
+      "src": "public/sinais/A19-sinal-pdf.png"
     },
     "opcoes": [
       "Congestionamento de tráfego.",

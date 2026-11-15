@@ -178,7 +178,7 @@ window.EXAMES[13] = [
     "explicacao": "O sinal apresentado proíbe o trânsito a veículos de tracção animal. Os condutores devem respeitar a restrição indicada.",
     "imagem": {
       "descricao": "Imagem original da pergunta 10 do Exame 13",
-      "src": "public/exames/exame13/exame13_10.jpg"
+      "src": "public/sinais/E33-sinal-pdf.png"
     }
   },
   {
@@ -304,7 +304,7 @@ window.EXAMES[13] = [
     "explicacao": "O sinal indica uma via obrigatória para automóveis pesados. Os condutores devem seguir a via correspondente à categoria do veículo.",
     "imagem": {
       "descricao": "Imagem original da pergunta 17 do Exame 13",
-      "src": "public/exames/exame13/exame13_17.jpg"
+      "src": "public/sinais/pdf-p32-x42-y326.png"
     }
   },
   {

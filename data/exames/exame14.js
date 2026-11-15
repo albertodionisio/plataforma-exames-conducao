@@ -52,7 +52,7 @@ window.EXAMES[14] = [
     "explicacao": "A imagem corresponde ao sinal de máquinas. O condutor deve reconhecer o símbolo e interpretar a informação transmitida.",
     "imagem": {
       "descricao": "Imagem original da pergunta 3 do Exame 14",
-      "src": "public/exames/exame14/exame14_3.jpg"
+      "src": "public/sinais/A61-sinal-pdf.png"
     }
   },
   {
@@ -214,7 +214,7 @@ window.EXAMES[14] = [
     "explicacao": "O sinal apresentado proíbe o trânsito a peões, animais e veículos não automóveis. Os utentes devem respeitar a restrição indicada.",
     "imagem": {
       "descricao": "Imagem original da pergunta 12 do Exame 14",
-      "src": "public/exames/exame14/exame14_12.jpg"
+      "src": "public/sinais/pdf-p28-x206-y431.png"
     }
   },
   {

@@ -98,7 +98,7 @@ window.EXAMES[21] = [
     "enunciado": "O sinal, quando proíbe a inversão de sentido de marcha?",
     "imagem": {
       "descricao": "Imagem original da pergunta 6 do Exame 21",
-      "src": "public/exames/exame21/exame21_6.jpg"
+      "src": "public/sinais/pdf-p55-x164-y18.png"
     },
     "opcoes": [
       "De dia.",
@@ -116,7 +116,7 @@ window.EXAMES[21] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Imagem original da pergunta 7 do Exame 21",
-      "src": "public/exames/exame21/exame21_7.jpg"
+      "src": "public/sinais/D16-ponte-movel.png"
     },
     "opcoes": [
       "Presença de cancela motorizada ao centro.",

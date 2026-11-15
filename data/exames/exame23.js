@@ -188,7 +188,7 @@ window.EXAMES[23] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Imagem original da pergunta 11 do Exame 23",
-      "src": "public/exames/exame23/exame23_11.jpg"
+      "src": "public/sinais/A48-passagem-de-nivel.png"
     },
     "opcoes": [
       "A presença de máquina na via.",

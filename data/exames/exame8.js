@@ -69,7 +69,7 @@ window.EXAMES[8] = [
     "explicacao": "O sinal avisa que mais à frente existe um local onde o trânsito é controlado ou regulado. O condutor deve reduzir a velocidade, observar as indicações e estar preparado para parar.",
     "imagem": {
       "descricao": "Sinal temporário triangular que representa um agente a regular o trânsito.",
-      "src": "public/exames/exame8/exame8_4.jpg"
+      "src": "public/sinais/A14-sinal-pdf.png"
     }
   },
   {
@@ -195,7 +195,7 @@ window.EXAMES[8] = [
     "explicacao": "O sinal indica que a fila de trânsito deve desviar-se para a esquerda devido a um obstáculo ou condicionamento. O condutor deve ajustar a trajectória com antecedência e respeitar a prioridade de quem já circula na fila de destino.",
     "imagem": {
       "descricao": "Sinal de afectação de vias que indica desvio da fila de trânsito para a esquerda.",
-      "src": "public/exames/exame8/exame8_11.jpg"
+      "src": "public/sinais/pdf-p51-x29-y189.png"
     }
   },
   {
@@ -393,7 +393,7 @@ window.EXAMES[8] = [
     "explicacao": "O sinal avisa que a fila de trânsito do lado esquerdo vai terminar. O condutor deve preparar a integração na fila que continua, sinalizar a manobra e evitar mudanças bruscas de trajectória.",
     "imagem": {
       "descricao": "Sinal triangular de aviso de fim da fila de trânsito à esquerda.",
-      "src": "public/exames/exame8/exame8_22.jpg"
+      "src": "public/sinais/A42-sinal-pdf.png"
     }
   },
   {
@@ -411,7 +411,7 @@ window.EXAMES[8] = [
     "explicacao": "O sinal proíbe a circulação de veículos que transportam substâncias perigosas abrangidas pela sinalização especial. Os restantes veículos não ficam abrangidos por esta proibição apenas por serem pesados ou transportarem mercadorias comuns.",
     "imagem": {
       "descricao": "Sinal circular de proibição a veículos que transportam substâncias perigosas.",
-      "src": "public/exames/exame8/exame8_23.jpg"
+      "src": "public/sinais/pdf-p28-x296-y63.png"
     }
   },
   {

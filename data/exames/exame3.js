@@ -296,7 +296,7 @@ window.EXAMES[3] = [
     "enunciado": "O sinal F54 apresentado na imagem destina-se a que tipo de veículo?",
     "imagem": {
       "descricao": "Sinal circular azul de pista obrigatória para riquexós",
-      "src": "public/exames/exame3/exame3_17.jpg"
+      "src": "public/sinais/pdf-p34-x182-y195.png"
     },
     "opcoes": [
       "Pista obrigatória para veículos de tracção animal.",
@@ -368,7 +368,7 @@ window.EXAMES[3] = [
     "enunciado": "O sinal E5 apresentado na imagem proíbe a circulação de que veículos?",
     "imagem": {
       "descricao": "Sinal E5 de trânsito proibido a veículos automóveis e motociclos com carro",
-      "src": "public/exames/exame3/exame3_21.jpg"
+      "src": "public/sinais/pdf-p26-x22-y192.png"
     },
     "opcoes": [
       "Apenas automóveis ligeiros de passageiros.",

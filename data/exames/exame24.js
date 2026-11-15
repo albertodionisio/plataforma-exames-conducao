@@ -44,7 +44,7 @@ window.EXAMES[24] = [
     "enunciado": "O significado deste sinal é?",
     "imagem": {
       "descricao": "Imagem original da pergunta 3 do Exame 24",
-      "src": "public/exames/exame24/exame24_3.jpg"
+      "src": "public/sinais/A62-sinal-pdf.png"
     },
     "opcoes": [
       "Sinalização luminosa e de passagem de nível.",
@@ -386,7 +386,7 @@ window.EXAMES[24] = [
     "enunciado": "O que indica o sinal de interesse turístico?",
     "imagem": {
       "descricao": "Imagem original da pergunta 22 do Exame 24",
-      "src": "public/exames/exame24/exame24_22.jpg"
+      "src": "public/sinais/J80-sinal-pdf.png"
     },
     "opcoes": [
       "Posto de socorro.",
@@ -422,7 +422,7 @@ window.EXAMES[24] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Imagem original da pergunta 24 do Exame 24",
-      "src": "public/exames/exame24/exame24_24.jpg"
+      "src": "public/sinais/pdf-p39-x245-y68.png"
     },
     "opcoes": [
       "Passagem de peões.",

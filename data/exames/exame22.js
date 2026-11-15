@@ -134,7 +134,7 @@ window.EXAMES[22] = [
     "enunciado": "O significado deste sinal é?",
     "imagem": {
       "descricao": "Imagem original da pergunta 8 do Exame 22",
-      "src": "public/exames/exame22/exame22_8.jpg"
+      "src": "public/sinais/A14-sinal-pdf.png"
     },
     "opcoes": [
       "Controle de tráfego adiante.",
@@ -188,7 +188,7 @@ window.EXAMES[22] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 11 do Exame 22",
-      "src": "public/exames/exame22/exame22_11.jpg"
+      "src": "public/sinais/A7-sinal-pdf.png"
     },
     "opcoes": [
       "Convergência de filas à direita.",

@@ -296,7 +296,7 @@ window.EXAMES[18] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Imagem original da pergunta 17 do Exame 18",
-      "src": "public/exames/exame18/exame18_17.jpg"
+      "src": "public/sinais/pdf-p39-x245-y68.png"
     },
     "opcoes": [
       "Passagem desnivelada para peões com rampas.",
