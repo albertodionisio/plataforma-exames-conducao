@@ -1,4 +1,4 @@
-// Exame 22 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 22 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[22] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[22] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Os sistemas de segurança passiva dos veículos, têm a função de:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 22",
+      "src": "public/exames/exame22/exame22_1.jpg"
+    },
     "opcoes": [
       "Evitar os acidentes.",
       "Evitar ou reduzir as lesões que podem ocorrer no caso de sofrer um acidente.",
@@ -21,7 +24,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 22",
+      "src": "public/exames/exame22/exame22_2.jpg"
+    },
     "opcoes": [
       "Área reservada para mini-autocarros.",
       "Área reservada para veículos de emergência.",
@@ -36,7 +42,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A sonolência provocada pela fadiga provoca o aumento:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 22",
+      "src": "public/exames/exame22/exame22_3.jpg"
+    },
     "opcoes": [
       "Da distância de travagem.",
       "Do tempo de reacção e não da distância de paragem.",
@@ -51,7 +60,10 @@ window.EXAMES[22] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Num veículo equipado com motor Diesel em aceleração, a liberação de muito fumo negro pelo tubo de escape, significa:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 22",
+      "src": "public/exames/exame22/exame22_4.jpg"
+    },
     "opcoes": [
       "Necessidade de regulação da bomba injectora.",
       "Óptima qualidade de combustível.",
@@ -66,7 +78,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Para combater a fadiga e o sono, o melhor remédio é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 22",
+      "src": "public/exames/exame22/exame22_5.jpg"
+    },
     "opcoes": [
       "Parar de conduzir, descansar e, se necessário, dormir um pouco.",
       "Conduzir com o banco inclinado para trás.",
@@ -81,7 +96,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Entende-se por tarefa de condução aquela que tem como principal objectivo:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 22",
+      "src": "public/exames/exame22/exame22_6.jpg"
+    },
     "opcoes": [
       "O controlo de um veículo e do espaço envolvente.",
       "O controlo do trânsito e dos sinais dos outros condutores.",
@@ -96,7 +114,10 @@ window.EXAMES[22] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Pode conduzir um automóvel ligeiro com reboque com a carta de condução da categoria B?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 22",
+      "src": "public/exames/exame22/exame22_7.jpg"
+    },
     "opcoes": [
       "Sim, desde que o peso bruto do reboque não exceda 750 kg.",
       "Não, é necessária a da categoria C1E.",
@@ -111,7 +132,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 22",
+      "src": "public/exames/exame22/exame22_8.jpg"
+    },
     "opcoes": [
       "Controle de tráfego adiante.",
       "Controle de tráfego com obrigatoriedade de parar.",
@@ -126,7 +150,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 22",
+      "src": "public/exames/exame22/exame22_9.jpg"
+    },
     "opcoes": [
       "Parque de estacionamento para veículos pesados que transportam substâncias perigosas.",
       "Parque de estacionamento para veículos que transportam substâncias perigosas.",
@@ -141,7 +168,10 @@ window.EXAMES[22] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Com o fim de ter uma boa capacidade de manobra e garantir o bom funcionamento dos sistemas de segurança do veículo, o condutor deve regular o assento...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 22",
+      "src": "public/exames/exame22/exame22_10.jpg"
+    },
     "opcoes": [
       "Por forma a ficar muito próximo do volante, com as pernas e braços encolhidos.",
       "Por forma a ficar longe do volante, com as pernas e braços esticados.",
@@ -156,7 +186,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 22",
+      "src": "public/exames/exame22/exame22_11.jpg"
+    },
     "opcoes": [
       "Convergência de filas à direita.",
       "Fim da fila à direita.",
@@ -171,7 +204,10 @@ window.EXAMES[22] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Nas vias públicas, os peões devem transitar...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 22",
+      "src": "public/exames/exame22/exame22_12.jpg"
+    },
     "opcoes": [
       "Pelos passeios, pistas ou passagens a eles destinados ou, se não existirem, pela bermas.",
       "Pela faixa de rodagem, mesmo que existam bermas.",
@@ -186,7 +222,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A linha transversal descontínua, é uma",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 22",
+      "src": "public/exames/exame22/exame22_13.jpg"
+    },
     "opcoes": [
       "Linha de paragem obrigatória.",
       "Linha descontinua de aviso.",
@@ -201,7 +240,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Nesta situação, se não for possível efectuar o cruzamento com segurança, como deve proceder o condutor?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 22",
+      "src": "public/exames/exame22/exame22_14.jpg"
+    },
     "opcoes": [
       "Acelerar para passar antes do veículo que circula em sentido contrário.",
       "Reduz a velocidade ou parar, de modo a dar a passagem ao outro veículo.",
@@ -216,7 +258,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que deve fazer o condutor perante a marca rodoviária de cor branca?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 22",
+      "src": "public/exames/exame22/exame22_15.jpg"
+    },
     "opcoes": [
       "Pisar ou transpor a linha.",
       "Abrandar a marcha.",
@@ -231,7 +276,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "As ordens dos agentes reguladores do trânsito, prevalecem sobre os sinais luminosos:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 22",
+      "src": "public/exames/exame22/exame22_16.jpg"
+    },
     "opcoes": [
       "Verde.",
       "De qualquer cor.",
@@ -246,7 +294,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "É necessário regular e ajustar o encosto de cabeça para a altura dos ocupantes",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 22",
+      "src": "public/exames/exame22/exame22_17.jpg"
+    },
     "opcoes": [
       "Sim, porque pode evitar lesões na zona de pescoço.",
       "Não é necessária, porque é apenas um elemento de conforto.",
@@ -261,7 +312,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 22",
+      "src": "public/exames/exame22/exame22_18.jpg"
+    },
     "opcoes": [
       "Parque de estacionamento para veículos do Governo.",
       "Parque de estacionamento para veículos do Ministério.",
@@ -276,7 +330,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Os sinais sonoros devem ser:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 22",
+      "src": "public/exames/exame22/exame22_19.jpg"
+    },
     "opcoes": [
       "Longos, usados de forma moderada e em caso algum devem servir de meio de protesto contra interrupções do trânsito ou como meios de chamamento.",
       "Breves, usados de forma moderada e podem servir de meio de protesto contra interrupções do trânsito ou como meios de chamamento.",
@@ -291,7 +348,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Para ter mais segurança, os peões devem...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 22",
+      "src": "public/exames/exame22/exame22_20.jpg"
+    },
     "opcoes": [
       "Transitar sempre do lado esquerdo da faixa de rodagem, em relação ao seu sentido de marcha.",
       "Transitar pelo lado direito, em relação ao seu sentido de marcha, a não ser que tal comprometa a sua segurança.",
@@ -306,7 +366,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica a marca rodoviária?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 22",
+      "src": "public/exames/exame22/exame22_21.jpg"
+    },
     "opcoes": [
       "Passagem para ciclistas.",
       "Passagem para peões.",
@@ -321,7 +384,10 @@ window.EXAMES[22] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Ao ligar as luzes, se no painel aparecer o símbolo do farol de cor verde, significa que estão ligadas:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 22",
+      "src": "public/exames/exame22/exame22_22.jpg"
+    },
     "opcoes": [
       "As luzes de estrada (máximos).",
       "As luzes de cruzamento (médios).",
@@ -336,7 +402,10 @@ window.EXAMES[22] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Se os ocupantes do veículo não utilizarem o cinto de segurança, o airbag é eficaz?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 22",
+      "src": "public/exames/exame22/exame22_23.jpg"
+    },
     "opcoes": [
       "Não e pode causar lesões graves.",
       "Sim, o airbag é sempre eficaz.",
@@ -351,7 +420,10 @@ window.EXAMES[22] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Só pode ser ordenada a suspensão do trânsito por:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 22",
+      "src": "public/exames/exame22/exame22_24.jpg"
+    },
     "opcoes": [
       "Ser feriado e haver festejos.",
       "Motivos de segurança, de emergência grave ou de obras, ou com o fim de promover produtos e marcas de automóveis.",
@@ -366,7 +438,10 @@ window.EXAMES[22] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Atirar do veículo ou abandonar na via objectos ou substâncias, constitui contravenção:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 22",
+      "src": "public/exames/exame22/exame22_25.jpg"
+    },
     "opcoes": [
       "Média.",
       "Leve.",

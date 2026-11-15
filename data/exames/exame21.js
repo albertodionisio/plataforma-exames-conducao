@@ -1,4 +1,4 @@
-// Exame 21 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 21 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[21] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Ao ligar as luzes, se no painel aparecer o símbolo do farol, com a cor azul, indica que:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 21",
+      "src": "public/exames/exame21/exame21_1.jpg"
+    },
     "opcoes": [
       "Estão ligadas as luzes de estrada (máximos).",
       "Estão ligadas as luzes de cruzamento (médios).",
@@ -21,7 +24,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Quando existe dificuldade na recolha de informação, a velocidade:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 21",
+      "src": "public/exames/exame21/exame21_2.jpg"
+    },
     "opcoes": [
       "Deve aumentar.",
       "Deve diminuir.",
@@ -36,7 +42,10 @@ window.EXAMES[21] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Para que aconteçam graves acidentes de trânsito, a fadiga é um dos factores que mais contribuem, sobretudo:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 21",
+      "src": "public/exames/exame21/exame21_3.jpg"
+    },
     "opcoes": [
       "Durante a manhã.",
       "Durante a noite.",
@@ -51,7 +60,10 @@ window.EXAMES[21] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Nesta situação, posso ultrapassar?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 21",
+      "src": "public/exames/exame21/exame21_4.jpg"
+    },
     "opcoes": [
       "Não.",
       "Sim, mas só aos veículos que mudam de direcção para a direita.",
@@ -66,7 +78,10 @@ window.EXAMES[21] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O condutor dum ciclomotor, pode levar o capacete mal ajustado e apertado?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 21",
+      "src": "public/exames/exame21/exame21_5.jpg"
+    },
     "opcoes": [
       "Não, porque não garante uma protecção eficaz em caso de acidente.",
       "Sim, sempre que seja modelo aprovado oficialmente.",
@@ -81,7 +96,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O sinal, quando proíbe a inversão de sentido de marcha?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 21",
+      "src": "public/exames/exame21/exame21_6.jpg"
+    },
     "opcoes": [
       "De dia.",
       "De noite.",
@@ -96,7 +114,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 21",
+      "src": "public/exames/exame21/exame21_7.jpg"
+    },
     "opcoes": [
       "Presença de cancela motorizada ao centro.",
       "Presença de entroncamento oblíquo à esquerda.",
@@ -111,7 +132,10 @@ window.EXAMES[21] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Quais os efeitos mais comuns da fadiga ao volante?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 21",
+      "src": "public/exames/exame21/exame21_8.jpg"
+    },
     "opcoes": [
       "Sentir fome e sede o que provoca a necessidade de se deslocar com maior velocidade para chegar mais rápido ao seu destino.",
       "A dificuldade em manter o veículo, dentro dos limites da faixa de rodagem.",
@@ -126,7 +150,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 21",
+      "src": "public/exames/exame21/exame21_9.jpg"
+    },
     "opcoes": [
       "Via de sentido único.",
       "Via de sentido único para a esquerda.",
@@ -141,7 +168,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que indica a marca rodoviária?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 21",
+      "src": "public/exames/exame21/exame21_10.jpg"
+    },
     "opcoes": [
       "Passagem para peões.",
       "Passagem para ciclistas.",
@@ -156,7 +186,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A definição de berma é",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 21",
+      "src": "public/exames/exame21/exame21_11.jpg"
+    },
     "opcoes": [
       "Superfície de via pública especialmente destinada ao trânsito de veículos e que ladeia a faixa de rodagem.",
       "Superfície de via pública destinada ao trânsito de veículos e que ladeia a faixa de rodagem.",
@@ -171,7 +204,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 21",
+      "src": "public/exames/exame21/exame21_12.jpg"
+    },
     "opcoes": [
       "Área reservada para veículos de dimensões anormais.",
       "Área reservada para veículos de pesos anormais.",
@@ -186,7 +222,10 @@ window.EXAMES[21] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Pode ter consequências num acidente o facto de não levar o cinto de segurança bem colocado?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 21",
+      "src": "public/exames/exame21/exame21_13.jpg"
+    },
     "opcoes": [
       "Não, se o veículo estiver equipado com airbag.",
       "Não, o cinto é sempre eficaz.",
@@ -201,7 +240,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de informação?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 21",
+      "src": "public/exames/exame21/exame21_14.jpg"
+    },
     "opcoes": [
       "Área reservada para automóveis ligeiros.",
       "Área reservada para táxis.",
@@ -216,7 +258,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Posso mudar de direcção para a direita nesta situação?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 21",
+      "src": "public/exames/exame21/exame21_15.jpg"
+    },
     "opcoes": [
       "Sim, desde que assinale com a devida antecedência.",
       "Não, porque não é possível assegurar-se que a manobra pode ser realizada sem perigo.",
@@ -231,7 +276,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Qual é a hierarquia entre as prescrições resultantes da sinalização?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 21",
+      "src": "public/exames/exame21/exame21_16.jpg"
+    },
     "opcoes": [
       "Prescrições resultantes dos sinais verticais e prescrições resultantes de sinalização temporária que modifique o regime normal de utilização.",
       "Prescrições resultantes das marcas rodoviárias e prescrições resultantes dos sinais verticais.",
@@ -246,7 +294,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 21",
+      "src": "public/exames/exame21/exame21_17.jpg"
+    },
     "opcoes": [
       "Área reservada para autocarros de excursão.",
       "Área reservada para autocarros de transporte escolar.",
@@ -261,7 +312,10 @@ window.EXAMES[21] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "O condutor, quando muda de direcção, tem que ceder passagem aos peões que estejam a atravessar a faixa de rodagem?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 21",
+      "src": "public/exames/exame21/exame21_18.jpg"
+    },
     "opcoes": [
       "Não.",
       "Sim, mas só aos que o façam pela passagem para peões.",
@@ -276,7 +330,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Em especial, à noite, com nevoeiro (cacimba), as luzes de estrada:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 21",
+      "src": "public/exames/exame21/exame21_19.jpg"
+    },
     "opcoes": [
       "Devem ser usadas porque permitem uma maior visibilidade a maior distância.",
       "Devem ser evitadas porque permitem uma maior visibilidade a maior distância.",
@@ -291,7 +348,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Em condição de nevoeiro (cacimba), a velocidade segura a que circula:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 21",
+      "src": "public/exames/exame21/exame21_20.jpg"
+    },
     "opcoes": [
       "Deve ser a velocidade indicada pela sinalização vertical.",
       "Deve permitir que o condutor, consiga parar no espaço livre e visível.",
@@ -306,7 +366,10 @@ window.EXAMES[21] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "A luz indicadora de mudança de direcção à direita accionada ao iniciar uma ultrapassagem, só deve ser ligada...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 21",
+      "src": "public/exames/exame21/exame21_21.jpg"
+    },
     "opcoes": [
       "Quando termine de mudar de via de trânsito.",
       "Uma vez finalizada a ultrapassagem.",
@@ -321,7 +384,10 @@ window.EXAMES[21] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Quais são os princípios gerais de socorrismo?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 21",
+      "src": "public/exames/exame21/exame21_22.jpg"
+    },
     "opcoes": [
       "Prevenir, alertar e socorrer.",
       "Prevenir, socorrer e evacuar.",
@@ -336,7 +402,10 @@ window.EXAMES[21] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Num acidente há feridos muito graves. Que deve fazer se não sabe como ajudar?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 21",
+      "src": "public/exames/exame21/exame21_23.jpg"
+    },
     "opcoes": [
       "Abandonar o local e não fazer nada.",
       "Não lhes tocar e ligar ao 112.",
@@ -351,7 +420,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A definição de passeio é?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 21",
+      "src": "public/exames/exame21/exame21_24.jpg"
+    },
     "opcoes": [
       "Parte que ladeia a faixa de rodagem, destinada exclusivamente ao trânsito de veículos.",
       "Parte que ladeia a faixa de rodagem, destinada ao estacionamento de veículos.",
@@ -366,7 +438,10 @@ window.EXAMES[21] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que entende-se por dever?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 21",
+      "src": "public/exames/exame21/exame21_25.jpg"
+    },
     "opcoes": [
       "A obrigação de avançar rapidamente, logo que o sinal verde do semáforo assim o permita.",
       "A intenção de iniciar a marcha sem a devida sinalização.",

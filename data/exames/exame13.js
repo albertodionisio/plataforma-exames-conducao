@@ -1,4 +1,4 @@
-// Exame 13 — conteúdo adaptado da extracção do APK. Imagens serão adicionadas numa etapa posterior.
+// Exame 13 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[13] = [
   {
@@ -13,7 +13,11 @@ window.EXAMES[13] = [
       "Obriga todos os veículos a ceder passagem no cruzamento."
     ],
     "correta": 1,
-    "explicacao": "A marca amarela reforça a marca que impede a imobilização de veículos no centro da intersecção. O condutor não deve bloquear o cruzamento."
+    "explicacao": "A marca amarela reforça a marca que impede a imobilização de veículos no centro da intersecção. O condutor não deve bloquear o cruzamento.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 13",
+      "src": "public/exames/exame13/exame13_1.jpg"
+    }
   },
   {
     "numero": 2,
@@ -27,7 +31,11 @@ window.EXAMES[13] = [
       "Reduz a distância de travagem em piso molhado."
     ],
     "correta": 2,
-    "explicacao": "As condições atmosféricas adversas, como chuva ou nevoeiro, podem alterar a aderência e aumentar a distância necessária para travar."
+    "explicacao": "As condições atmosféricas adversas, como chuva ou nevoeiro, podem alterar a aderência e aumentar a distância necessária para travar.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 13",
+      "src": "public/exames/exame13/exame13_2.jpg"
+    }
   },
   {
     "numero": 3,
@@ -41,7 +49,11 @@ window.EXAMES[13] = [
       "Ceder passagem apenas aos veículos que se aproximem pela direita."
     ],
     "correta": 0,
-    "explicacao": "Ao sair de um caminho particular, o condutor deve ceder passagem aos veículos que circulam na via pública."
+    "explicacao": "Ao sair de um caminho particular, o condutor deve ceder passagem aos veículos que circulam na via pública.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 13",
+      "src": "public/exames/exame13/exame13_3.jpg"
+    }
   },
   {
     "numero": 4,
@@ -55,7 +67,11 @@ window.EXAMES[13] = [
       "Cancela manual à direita."
     ],
     "correta": 0,
-    "explicacao": "O sinal apresentado indica a existência de uma cancela motorizada à direita. O condutor deve reduzir a velocidade e preparar-se para a passagem controlada."
+    "explicacao": "O sinal apresentado indica a existência de uma cancela motorizada à direita. O condutor deve reduzir a velocidade e preparar-se para a passagem controlada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 13",
+      "src": "public/exames/exame13/exame13_4.jpg"
+    }
   },
   {
     "numero": 5,
@@ -69,7 +85,11 @@ window.EXAMES[13] = [
       "De máximos em todos os túneis, independentemente do trânsito."
     ],
     "correta": 1,
-    "explicacao": "Nos túneis, devem ser utilizadas luzes de cruzamento quando há possibilidade de encandear os condutores que circulam em sentido contrário."
+    "explicacao": "Nos túneis, devem ser utilizadas luzes de cruzamento quando há possibilidade de encandear os condutores que circulam em sentido contrário.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 13",
+      "src": "public/exames/exame13/exame13_5.jpg"
+    }
   },
   {
     "numero": 6,
@@ -83,7 +103,11 @@ window.EXAMES[13] = [
       "Não, quando o túnel tiver iluminação artificial."
     ],
     "correta": 2,
-    "explicacao": "A inversão do sentido de marcha é proibida nos túneis. O condutor deve continuar até encontrar um local onde a manobra seja permitida e segura."
+    "explicacao": "A inversão do sentido de marcha é proibida nos túneis. O condutor deve continuar até encontrar um local onde a manobra seja permitida e segura.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 13",
+      "src": "public/exames/exame13/exame13_6.jpg"
+    }
   },
   {
     "numero": 7,
@@ -97,7 +121,11 @@ window.EXAMES[13] = [
       "0,2 mg/l."
     ],
     "correta": 2,
-    "explicacao": "Para os condutores de transporte público ou de carga perigosa em serviço, a resposta indicada na fonte é uma taxa de álcool de 0,0 mg/l."
+    "explicacao": "Para os condutores de transporte público ou de carga perigosa em serviço, a resposta indicada na fonte é uma taxa de álcool de 0,0 mg/l.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 13",
+      "src": "public/exames/exame13/exame13_7.jpg"
+    }
   },
   {
     "numero": 8,
@@ -111,7 +139,11 @@ window.EXAMES[13] = [
       "A forma mais rápida de conduzir para chegar ao destino."
     ],
     "correta": 0,
-    "explicacao": "A condução defensiva consiste numa forma ponderada de conduzir, antecipando perigos e adoptando comportamentos destinados a evitar acidentes."
+    "explicacao": "A condução defensiva consiste numa forma ponderada de conduzir, antecipando perigos e adoptando comportamentos destinados a evitar acidentes.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 13",
+      "src": "public/exames/exame13/exame13_8.jpg"
+    }
   },
   {
     "numero": 9,
@@ -125,7 +157,11 @@ window.EXAMES[13] = [
       "Apenas deve sinalizar a intenção, já que as luzes indicadoras de direcção lhe dão prioridade para realizar a manobra."
     ],
     "correta": 1,
-    "explicacao": "Antes de ultrapassar, o condutor deve verificar se existe espaço e visibilidade suficientes, confirmar que não há perigo e sinalizar a manobra."
+    "explicacao": "Antes de ultrapassar, o condutor deve verificar se existe espaço e visibilidade suficientes, confirmar que não há perigo e sinalizar a manobra.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 13",
+      "src": "public/exames/exame13/exame13_9.jpg"
+    }
   },
   {
     "numero": 10,
@@ -139,7 +175,11 @@ window.EXAMES[13] = [
       "Trânsito proibido a veículos de tracção eléctrica."
     ],
     "correta": 1,
-    "explicacao": "O sinal apresentado proíbe o trânsito a veículos de tracção animal. Os condutores devem respeitar a restrição indicada."
+    "explicacao": "O sinal apresentado proíbe o trânsito a veículos de tracção animal. Os condutores devem respeitar a restrição indicada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 13",
+      "src": "public/exames/exame13/exame13_10.jpg"
+    }
   },
   {
     "numero": 11,
@@ -153,7 +193,11 @@ window.EXAMES[13] = [
       "Só os que ocupem o banco da frente."
     ],
     "correta": 1,
-    "explicacao": "Os passageiros devem utilizar cintos de segurança tanto nos lugares dianteiros como nos lugares traseiros."
+    "explicacao": "Os passageiros devem utilizar cintos de segurança tanto nos lugares dianteiros como nos lugares traseiros.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 13",
+      "src": "public/exames/exame13/exame13_11.jpg"
+    }
   },
   {
     "numero": 12,
@@ -167,7 +211,11 @@ window.EXAMES[13] = [
       "Sim, por isso o seu uso não é obrigatório."
     ],
     "correta": 2,
-    "explicacao": "Um cinto mal colocado pode provocar ferimentos graves, mesmo quando o veículo está equipado com outros sistemas de segurança."
+    "explicacao": "Um cinto mal colocado pode provocar ferimentos graves, mesmo quando o veículo está equipado com outros sistemas de segurança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 13",
+      "src": "public/exames/exame13/exame13_12.jpg"
+    }
   },
   {
     "numero": 13,
@@ -181,7 +229,11 @@ window.EXAMES[13] = [
       "Na via de trânsito de esquerda."
     ],
     "correta": 2,
-    "explicacao": "Fora das localidades, a paragem e o estacionamento devem ser feitos fora das faixas de rodagem, sempre que possível e em condições de segurança."
+    "explicacao": "Fora das localidades, a paragem e o estacionamento devem ser feitos fora das faixas de rodagem, sempre que possível e em condições de segurança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 13",
+      "src": "public/exames/exame13/exame13_13.jpg"
+    }
   },
   {
     "numero": 14,
@@ -195,7 +247,11 @@ window.EXAMES[13] = [
       "Tomar uma bebida com álcool."
     ],
     "correta": 2,
-    "explicacao": "A melhor forma de combater a fadiga e o sono é interromper a condução, descansar e, se necessário, dormir antes de retomar a viagem."
+    "explicacao": "A melhor forma de combater a fadiga e o sono é interromper a condução, descansar e, se necessário, dormir antes de retomar a viagem.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 13",
+      "src": "public/exames/exame13/exame13_14.jpg"
+    }
   },
   {
     "numero": 15,
@@ -209,7 +265,11 @@ window.EXAMES[13] = [
       "Obrigação de circular à velocidade mínima de 80 km/h na fila à esquerda."
     ],
     "correta": 0,
-    "explicacao": "O sinal indica obrigação de circular à velocidade mínima de 80 km/h na fila da direita."
+    "explicacao": "O sinal indica obrigação de circular à velocidade mínima de 80 km/h na fila da direita.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 13",
+      "src": "public/exames/exame13/exame13_15.jpg"
+    }
   },
   {
     "numero": 16,
@@ -223,7 +283,11 @@ window.EXAMES[13] = [
       "Início da estrada alcatroada."
     ],
     "correta": 0,
-    "explicacao": "O sinal apresentado indica o fim da estrada alcatroada. O condutor deve preparar-se para uma alteração das condições do piso."
+    "explicacao": "O sinal apresentado indica o fim da estrada alcatroada. O condutor deve preparar-se para uma alteração das condições do piso.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 13",
+      "src": "public/exames/exame13/exame13_16.jpg"
+    }
   },
   {
     "numero": 17,
@@ -237,7 +301,11 @@ window.EXAMES[13] = [
       "Via obrigatória para veículos ligeiros de passageiros."
     ],
     "correta": 1,
-    "explicacao": "O sinal indica uma via obrigatória para automóveis pesados. Os condutores devem seguir a via correspondente à categoria do veículo."
+    "explicacao": "O sinal indica uma via obrigatória para automóveis pesados. Os condutores devem seguir a via correspondente à categoria do veículo.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 13",
+      "src": "public/exames/exame13/exame13_17.jpg"
+    }
   },
   {
     "numero": 18,
@@ -251,7 +319,11 @@ window.EXAMES[13] = [
       "À Policia de trânsito."
     ],
     "correta": 2,
-    "explicacao": "A regulamentação do trânsito no interior das localidades compete aos corpos administrativos ou conselhos municipais, conforme a resposta da fonte."
+    "explicacao": "A regulamentação do trânsito no interior das localidades compete aos corpos administrativos ou conselhos municipais, conforme a resposta da fonte.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 13",
+      "src": "public/exames/exame13/exame13_18.jpg"
+    }
   },
   {
     "numero": 19,
@@ -265,7 +337,11 @@ window.EXAMES[13] = [
       "Melhora a apreciação das distâncias."
     ],
     "correta": 2,
-    "explicacao": "O álcool pode reduzir o campo de visão do condutor e prejudicar a percepção do ambiente rodoviário."
+    "explicacao": "O álcool pode reduzir o campo de visão do condutor e prejudicar a percepção do ambiente rodoviário.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 13",
+      "src": "public/exames/exame13/exame13_19.jpg"
+    }
   },
   {
     "numero": 20,
@@ -279,7 +355,11 @@ window.EXAMES[13] = [
       "Não é necessário colocá-lo nesta situação."
     ],
     "correta": 1,
-    "explicacao": "Quando o veículo avariado não é visível a 100 metros, os sinais de pré-sinalização devem ser colocados à frente e à retaguarda, a uma distância não inferior a 30 metros, segundo a resposta indicada."
+    "explicacao": "Quando o veículo avariado não é visível a 100 metros, os sinais de pré-sinalização devem ser colocados à frente e à retaguarda, a uma distância não inferior a 30 metros, segundo a resposta indicada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 13",
+      "src": "public/exames/exame13/exame13_20.jpg"
+    }
   },
   {
     "numero": 21,
@@ -293,7 +373,11 @@ window.EXAMES[13] = [
       "Sim, mas só quando necessitem atravessar."
     ],
     "correta": 0,
-    "explicacao": "Na situação representada, os peões podem transitar pela faixa de rodagem com prudência e sem prejudicar o trânsito dos veículos."
+    "explicacao": "Na situação representada, os peões podem transitar pela faixa de rodagem com prudência e sem prejudicar o trânsito dos veículos.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 13",
+      "src": "public/exames/exame13/exame13_21.jpg"
+    }
   },
   {
     "numero": 22,
@@ -307,7 +391,11 @@ window.EXAMES[13] = [
       "Aproximação de saída de auto-estrada a 400 metros."
     ],
     "correta": 2,
-    "explicacao": "O sinal indica a aproximação de uma saída de auto-estrada a 300 metros. O condutor deve preparar-se antecipadamente para a saída."
+    "explicacao": "O sinal indica a aproximação de uma saída de auto-estrada a 300 metros. O condutor deve preparar-se antecipadamente para a saída.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 13",
+      "src": "public/exames/exame13/exame13_22.jpg"
+    }
   },
   {
     "numero": 23,
@@ -321,7 +409,11 @@ window.EXAMES[13] = [
       "Sim, sempre que utilize o cinto de segurança"
     ],
     "correta": 1,
-    "explicacao": "A resposta indicada na fonte permite que a criança viaje no banco da frente se não existirem bancos ou cintos de segurança na retaguarda."
+    "explicacao": "A resposta indicada na fonte permite que a criança viaje no banco da frente se não existirem bancos ou cintos de segurança na retaguarda.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 13",
+      "src": "public/exames/exame13/exame13_23.jpg"
+    }
   },
   {
     "numero": 24,
@@ -335,7 +427,11 @@ window.EXAMES[13] = [
       "60 km/h."
     ],
     "correta": 2,
-    "explicacao": "A velocidade instantânea indicada para motociclos dentro das localidades é de 50 km/h, conforme a chave extraída."
+    "explicacao": "A velocidade instantânea indicada para motociclos dentro das localidades é de 50 km/h, conforme a chave extraída.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 13",
+      "src": "public/exames/exame13/exame13_24.jpg"
+    }
   },
   {
     "numero": 25,
@@ -349,6 +445,10 @@ window.EXAMES[13] = [
       "Desligar os indicadores de mudança de direcção."
     ],
     "correta": 1,
-    "explicacao": "O sinal obriga o condutor a acender as luzes do veículo. A iluminação deve ser utilizada de acordo com as condições de circulação e visibilidade."
+    "explicacao": "O sinal obriga o condutor a acender as luzes do veículo. A iluminação deve ser utilizada de acordo com as condições de circulação e visibilidade.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 13",
+      "src": "public/exames/exame13/exame13_25.jpg"
+    }
   }
 ];

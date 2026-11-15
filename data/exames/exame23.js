@@ -1,4 +1,4 @@
-// Exame 23 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 23 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[23] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[23] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A que grupo pertence o sinal triangular?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 23",
+      "src": "public/exames/exame23/exame23_1.jpg"
+    },
     "opcoes": [
       "Sinais temporários de perigo.",
       "Sinais temporários de obrigação.",
@@ -21,7 +24,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Em situação de chuva forte:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 23",
+      "src": "public/exames/exame23/exame23_2.jpg"
+    },
     "opcoes": [
       "Aumenta a probabilidade de aquaplanagem (hidroplanagem).",
       "Reduz a probabilidade de aquaplanagem (hidroplanagem).",
@@ -36,7 +42,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A definição de estacionamento é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 23",
+      "src": "public/exames/exame23/exame23_3.jpg"
+    },
     "opcoes": [
       "Imobilização de um veículo que constitua paragem e que seja motivada por circunstâncias próprias da circulação.",
       "Imobilização de um veículo que não constitua paragem e que seja motivada por circunstâncias próprias da circulação.",
@@ -51,7 +60,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Os peões podem transitar pela faixa de rodagem nesta estrada?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 23",
+      "src": "public/exames/exame23/exame23_4.jpg"
+    },
     "opcoes": [
       "Não, nesta estrada não podem transitar, já que não tem bermas.",
       "Sim, com prudência e por forma a não prejudicar o trânsito de veículos.",
@@ -66,7 +78,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Os condutores não podem exceder as seguintes velocidades instantâneas (em km/h):",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 23",
+      "src": "public/exames/exame23/exame23_5.jpg"
+    },
     "opcoes": [
       "Automóveis ligeiros de passageiros e mistos sem reboque dentro das localidades 60, fora das localidades 120.",
       "Automóveis ligeiros de passageiros e mistos sem reboque dentro das localidades 50, fora das localidades 120.",
@@ -81,7 +96,10 @@ window.EXAMES[23] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Que veículos devem ter seguro de responsabilidade civil para transitar na via pública?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 23",
+      "src": "public/exames/exame23/exame23_6.jpg"
+    },
     "opcoes": [
       "Todos os veículos.",
       "Só os ciclomotores.",
@@ -96,7 +114,10 @@ window.EXAMES[23] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "É necessário verificar o nível do liquido de travão com frequência?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 23",
+      "src": "public/exames/exame23/exame23_7.jpg"
+    },
     "opcoes": [
       "Sim e deve ser substituído dentro do período indicado pelo fabricante.",
       "Sim, mas não precisa de ser substituído.",
@@ -111,7 +132,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Para os condutores de transporte de serviço público ou de carga perigosa, quando em exercício, a taxa de álcool deve ser de:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 23",
+      "src": "public/exames/exame23/exame23_8.jpg"
+    },
     "opcoes": [
       "0,3 mg/l.",
       "0,0 mg/l.",
@@ -126,7 +150,10 @@ window.EXAMES[23] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Em especial à noite, com nevoeiro (cacimba), as luzes de estrada?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 23",
+      "src": "public/exames/exame23/exame23_9.jpg"
+    },
     "opcoes": [
       "Devem ser evitadas porque reflectem-se no nevoeiro impedindo a visibilidade a maior distância.",
       "Devem ser usadas porque permitem uma maior visibilidade a maior distância.",
@@ -141,7 +168,10 @@ window.EXAMES[23] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 23",
+      "src": "public/exames/exame23/exame23_10.jpg"
+    },
     "opcoes": [
       "Passagem de peões.",
       "Pista obrigatória para peões.",
@@ -156,7 +186,10 @@ window.EXAMES[23] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 23",
+      "src": "public/exames/exame23/exame23_11.jpg"
+    },
     "opcoes": [
       "A presença de máquina na via.",
       "Passagem de nível.",
@@ -171,7 +204,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A distância de reacção é influenciada:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 23",
+      "src": "public/exames/exame23/exame23_12.jpg"
+    },
     "opcoes": [
       "Pelo tempo dividido pela velocidade.",
       "Pelo semáforo de tempo mais a velocidade.",
@@ -186,7 +222,10 @@ window.EXAMES[23] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Quando existe um forte vento lateral corremos o perigo de sermos desviados da nossa trajectória. Nestas circunstâncias a melhor solução é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 23",
+      "src": "public/exames/exame23/exame23_13.jpg"
+    },
     "opcoes": [
       "Circular ao lado de um veículo pesado, se for possível.",
       "Acelerar mais para vencer a força do vento.",
@@ -201,7 +240,10 @@ window.EXAMES[23] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 23",
+      "src": "public/exames/exame23/exame23_14.jpg"
+    },
     "opcoes": [
       "Área reservada para veículos de dimensões anormais.",
       "Área reservada para veículos de pesos anormais.",
@@ -216,7 +258,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A definição de lotação é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 23",
+      "src": "public/exames/exame23/exame23_15.jpg"
+    },
     "opcoes": [
       "Número de passageiros que o veículo pode transportar, não incluindo o condutor.",
       "Número de lugares que o veículo tem, incluindo o condutor.",
@@ -231,7 +276,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "O agente regulador de trânsito que apareça na fotografia, manda:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 23",
+      "src": "public/exames/exame23/exame23_16.jpg"
+    },
     "opcoes": [
       "Avançar o tráfego que venha da esquerda.",
       "Parar o tráfego que venha da direita.",
@@ -246,7 +294,10 @@ window.EXAMES[23] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Se pretende inverter o sentido de marcha, deve ter em conta...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 23",
+      "src": "public/exames/exame23/exame23_17.jpg"
+    },
     "opcoes": [
       "Que só é permitido fazê-lo nas rotundas.",
       "Que a manobra deve ser feita em local e de forma a não prejudicar o trânsito.",
@@ -261,7 +312,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Em cada situação, a decisão que tomo:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 23",
+      "src": "public/exames/exame23/exame23_18.jpg"
+    },
     "opcoes": [
       "Depende exclusivamente da sinalização que encontro no local.",
       "É consequência unicamente da intensidade do trânsito.",
@@ -276,7 +330,10 @@ window.EXAMES[23] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "São evitáveis os acidentes de viação?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 23",
+      "src": "public/exames/exame23/exame23_19.jpg"
+    },
     "opcoes": [
       "Não, porque os acidentes ocorrem por acaso.",
       "Sim, podemos aprender a evitá-los e a reduzir as suas consequências.",
@@ -291,7 +348,10 @@ window.EXAMES[23] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "É permitido que uma criança de 6 anos viaje no banco de frente de um automóvel?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 23",
+      "src": "public/exames/exame23/exame23_20.jpg"
+    },
     "opcoes": [
       "Não, em nenhum caso.",
       "Sim, se não tiver bancos ou cintos de segurança na retaguarda.",
@@ -306,7 +366,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "A distância de segurança é um factor a considerar:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 23",
+      "src": "public/exames/exame23/exame23_21.jpg"
+    },
     "opcoes": [
       "Apenas em condução urbana, devido à intensidade do trânsito.",
       "Nas estradas rurais pela diminuição dos limites de velocidade.",
@@ -321,7 +384,10 @@ window.EXAMES[23] = [
     "tema": "Veículos, ocupantes e deveres do condutor",
     "dificuldade": "média",
     "enunciado": "Uma mulher grávida, é obrigada a usar o cinto de segurança?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 23",
+      "src": "public/exames/exame23/exame23_22.jpg"
+    },
     "opcoes": [
       "Não, porque é prejudicial para a criança.",
       "Não é obrigatório, mas é aconselhável.",
@@ -336,7 +402,10 @@ window.EXAMES[23] = [
     "tema": "Circulação e manobras",
     "dificuldade": "média",
     "enunciado": "Pode uma criança com idade inferior a 3 anos viajar no banco de frente do automóvel?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 23",
+      "src": "public/exames/exame23/exame23_23.jpg"
+    },
     "opcoes": [
       "Sim, sempre que utilize o cinto de segurança.",
       "Não, em nenhum caso.",
@@ -351,7 +420,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Conduzir sob influência de álcool, sob efeito de substâncias legalmente consideradas estupefacientes ou psicotrópicas, constitui contravenção:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 23",
+      "src": "public/exames/exame23/exame23_24.jpg"
+    },
     "opcoes": [
       "Leve.",
       "Média.",
@@ -366,7 +438,10 @@ window.EXAMES[23] = [
     "tema": "Comportamento, prevenção e segurança",
     "dificuldade": "média",
     "enunciado": "Um condutor que expressa o descontentamento através de gestos ou palavras agressivas:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 23",
+      "src": "public/exames/exame23/exame23_25.jpg"
+    },
     "opcoes": [
       "Está apenas, e bem, a demonstrar o seu descontentamento com o comportamento dos outros.",
       "Manifesta agressividade e falta de civismo.",

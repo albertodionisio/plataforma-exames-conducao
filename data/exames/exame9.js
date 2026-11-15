@@ -1,4 +1,4 @@
-// Exame 9 — conteúdo adaptado da extracção do APK. Imagens serão adicionadas numa etapa posterior.
+// Exame 9 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[9] = [
   {
@@ -13,7 +13,11 @@ window.EXAMES[9] = [
       "Estrada com buracos na direita."
     ],
     "correta": 0,
-    "explicacao": "A imagem apresenta um sinal de perigo que adverte para a possibilidade de queda de pedras do lado indicado. O condutor deve reduzir a velocidade e manter atenção à berma e à faixa de rodagem."
+    "explicacao": "A imagem apresenta um sinal de perigo que adverte para a possibilidade de queda de pedras do lado indicado. O condutor deve reduzir a velocidade e manter atenção à berma e à faixa de rodagem.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 9",
+      "src": "public/exames/exame9/exame9_1.jpg"
+    }
   },
   {
     "numero": 2,
@@ -27,7 +31,11 @@ window.EXAMES[9] = [
       "Nos passeios."
     ],
     "correta": 1,
-    "explicacao": "Segundo a resposta indicada na fonte do exame, a opção B é a pretendida. A pergunta aborda a posição de estacionamento numa via de sentido duplo; a manobra deve sempre ser feita sem criar perigo ou obstrução."
+    "explicacao": "Segundo a resposta indicada na fonte do exame, a opção B é a pretendida. A pergunta aborda a posição de estacionamento numa via de sentido duplo; a manobra deve sempre ser feita sem criar perigo ou obstrução.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 9",
+      "src": "public/exames/exame9/exame9_2.jpg"
+    }
   },
   {
     "numero": 3,
@@ -41,7 +49,11 @@ window.EXAMES[9] = [
       "É uma actividade simples, que dispensa preparação e atenção permanente."
     ],
     "correta": 1,
-    "explicacao": "A condução exige responsabilidade, conhecimentos técnicos e experiência. O condutor deve conhecer as regras e manter capacidade para avaliar e responder às situações da estrada."
+    "explicacao": "A condução exige responsabilidade, conhecimentos técnicos e experiência. O condutor deve conhecer as regras e manter capacidade para avaliar e responder às situações da estrada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 9",
+      "src": "public/exames/exame9/exame9_3.jpg"
+    }
   },
   {
     "numero": 4,
@@ -55,7 +67,11 @@ window.EXAMES[9] = [
       "Sim, excepto os causados pelo mau estado dos pneus."
     ],
     "correta": 2,
-    "explicacao": "Os acidentes não são inevitáveis em todos os casos. A condução prudente, o respeito pelas regras e a prevenção ajudam a evitar acidentes e a reduzir as suas consequências."
+    "explicacao": "Os acidentes não são inevitáveis em todos os casos. A condução prudente, o respeito pelas regras e a prevenção ajudam a evitar acidentes e a reduzir as suas consequências.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 9",
+      "src": "public/exames/exame9/exame9_4.jpg"
+    }
   },
   {
     "numero": 5,
@@ -69,7 +85,11 @@ window.EXAMES[9] = [
       "Na execução da decisão."
     ],
     "correta": 2,
-    "explicacao": "A audição contribui para recolher informação do ambiente rodoviário, como a aproximação de veículos de emergência, buzinas e outros sons relevantes."
+    "explicacao": "A audição contribui para recolher informação do ambiente rodoviário, como a aproximação de veículos de emergência, buzinas e outros sons relevantes.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 9",
+      "src": "public/exames/exame9/exame9_5.jpg"
+    }
   },
   {
     "numero": 6,
@@ -83,7 +103,11 @@ window.EXAMES[9] = [
       "A aproximação de uma passagem de nível."
     ],
     "correta": 2,
-    "explicacao": "A sinalização vertical representada corresponde à indicação de cruzamento com trânsito nos dois sentidos. O condutor deve adaptar a condução à configuração da intersecção."
+    "explicacao": "A sinalização vertical representada corresponde à indicação de cruzamento com trânsito nos dois sentidos. O condutor deve adaptar a condução à configuração da intersecção.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 9",
+      "src": "public/exames/exame9/exame9_6.jpg"
+    }
   },
   {
     "numero": 7,
@@ -97,7 +121,11 @@ window.EXAMES[9] = [
       "Proibição de ultrapassar em toda a extensão da via."
     ],
     "correta": 1,
-    "explicacao": "A marca rodoviária amarela indicada alerta para um cruzamento ou entroncamento que pode ficar facilmente congestionado. O condutor deve evitar bloquear a intersecção."
+    "explicacao": "A marca rodoviária amarela indicada alerta para um cruzamento ou entroncamento que pode ficar facilmente congestionado. O condutor deve evitar bloquear a intersecção.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 9",
+      "src": "public/exames/exame9/exame9_7.jpg"
+    }
   },
   {
     "numero": 8,
@@ -111,7 +139,11 @@ window.EXAMES[9] = [
       "Motociclos com carro, dentro das localidades 60, fora das localidades 90."
     ],
     "correta": 2,
-    "explicacao": "Esta pergunta testa os limites de velocidade apresentados na fonte para motociclos com carro. A opção assinalada como correcta no APK é a C."
+    "explicacao": "Esta pergunta testa os limites de velocidade apresentados na fonte para motociclos com carro. A opção assinalada como correcta no APK é a C.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 9",
+      "src": "public/exames/exame9/exame9_8.jpg"
+    }
   },
   {
     "numero": 9,
@@ -125,7 +157,11 @@ window.EXAMES[9] = [
       "Sim, porque de noite pode-se circular um pouco mais rápido, dentro dos limites, porque existe menos trânsito."
     ],
     "correta": 0,
-    "explicacao": "À noite, a visibilidade e a recolha de informação ficam condicionadas. O condutor deve adequar a velocidade à distância que consegue observar e à possibilidade de parar em segurança."
+    "explicacao": "À noite, a visibilidade e a recolha de informação ficam condicionadas. O condutor deve adequar a velocidade à distância que consegue observar e à possibilidade de parar em segurança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 9",
+      "src": "public/exames/exame9/exame9_9.jpg"
+    }
   },
   {
     "numero": 10,
@@ -139,7 +175,11 @@ window.EXAMES[9] = [
       "A luz azul intermitente."
     ],
     "correta": 2,
-    "explicacao": "Num semáforo de funcionamento normal, a luz verde antecede a luz amarela. O condutor deve observar a sinalização e preparar-se para parar quando a luz muda, se isso puder ser feito em segurança."
+    "explicacao": "Num semáforo de funcionamento normal, a luz verde antecede a luz amarela. O condutor deve observar a sinalização e preparar-se para parar quando a luz muda, se isso puder ser feito em segurança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 9",
+      "src": "public/exames/exame9/exame9_10.jpg"
+    }
   },
   {
     "numero": 11,
@@ -153,7 +193,11 @@ window.EXAMES[9] = [
       "Não."
     ],
     "correta": 1,
-    "explicacao": "O vento lateral forte pode deslocar o veículo e afectar a sua estabilidade, sobretudo em zonas expostas. O condutor deve segurar firmemente o volante e reduzir a velocidade."
+    "explicacao": "O vento lateral forte pode deslocar o veículo e afectar a sua estabilidade, sobretudo em zonas expostas. O condutor deve segurar firmemente o volante e reduzir a velocidade.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 9",
+      "src": "public/exames/exame9/exame9_11.jpg"
+    }
   },
   {
     "numero": 12,
@@ -167,7 +211,11 @@ window.EXAMES[9] = [
       "Pelo lado da faixa de rodagem, independentemente das condições de segurança."
     ],
     "correta": 1,
-    "explicacao": "A carga e descarga devem ser feitas pelo lado permitido para a paragem do veículo ou pela retaguarda, evitando expor pessoas ao trânsito e criar riscos na via."
+    "explicacao": "A carga e descarga devem ser feitas pelo lado permitido para a paragem do veículo ou pela retaguarda, evitando expor pessoas ao trânsito e criar riscos na via.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 9",
+      "src": "public/exames/exame9/exame9_12.jpg"
+    }
   },
   {
     "numero": 13,
@@ -181,7 +229,11 @@ window.EXAMES[9] = [
       "Que pretende aumentar a velocidade."
     ],
     "correta": 2,
-    "explicacao": "O condutor comunica aos outros utentes as suas intenções através dos sinais adequados. Nesta questão, a resposta indicada é a redução da velocidade."
+    "explicacao": "O condutor comunica aos outros utentes as suas intenções através dos sinais adequados. Nesta questão, a resposta indicada é a redução da velocidade.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 9",
+      "src": "public/exames/exame9/exame9_13.jpg"
+    }
   },
   {
     "numero": 14,
@@ -195,7 +247,11 @@ window.EXAMES[9] = [
       "Ciclomotores e quadriciclos dentro das localidades, 40 e fora das localidades 55."
     ],
     "correta": 0,
-    "explicacao": "A opção A reproduz os valores de velocidade indicados como correctos na fonte do exame para ciclomotores e quadriciclos."
+    "explicacao": "A opção A reproduz os valores de velocidade indicados como correctos na fonte do exame para ciclomotores e quadriciclos.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 9",
+      "src": "public/exames/exame9/exame9_14.jpg"
+    }
   },
   {
     "numero": 15,
@@ -209,7 +265,11 @@ window.EXAMES[9] = [
       "Aproximar-se com a necessária antecedência, do eixo da via e efectuar a manobra no trajecto mais curto."
     ],
     "correta": 0,
-    "explicacao": "Para mudar de direcção à esquerda, o condutor deve posicionar-se com antecedência e executar a manobra pelo trajecto mais curto, depois de verificar que a pode realizar em segurança."
+    "explicacao": "Para mudar de direcção à esquerda, o condutor deve posicionar-se com antecedência e executar a manobra pelo trajecto mais curto, depois de verificar que a pode realizar em segurança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 9",
+      "src": "public/exames/exame9/exame9_15.jpg"
+    }
   },
   {
     "numero": 16,
@@ -223,7 +283,11 @@ window.EXAMES[9] = [
       "Melhora a capacidade de controlar o veículo nas situações de emergência."
     ],
     "correta": 1,
-    "explicacao": "À medida que a velocidade aumenta, o campo de visão do condutor tende a diminuir e a fadiga pode aumentar. Isso reduz a capacidade de detectar perigos atempadamente."
+    "explicacao": "À medida que a velocidade aumenta, o campo de visão do condutor tende a diminuir e a fadiga pode aumentar. Isso reduz a capacidade de detectar perigos atempadamente.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 9",
+      "src": "public/exames/exame9/exame9_16.jpg"
+    }
   },
   {
     "numero": 17,
@@ -237,7 +301,11 @@ window.EXAMES[9] = [
       "Afastar-se do local sem prestar qualquer assistência."
     ],
     "correta": 2,
-    "explicacao": "Perante um acidente ou doença súbita, deve-se proteger o local, as vítimas e quem presta socorro, evitando o agravamento da situação e pedindo ajuda adequada."
+    "explicacao": "Perante um acidente ou doença súbita, deve-se proteger o local, as vítimas e quem presta socorro, evitando o agravamento da situação e pedindo ajuda adequada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 9",
+      "src": "public/exames/exame9/exame9_17.jpg"
+    }
   },
   {
     "numero": 18,
@@ -251,7 +319,11 @@ window.EXAMES[9] = [
       "Indicação de duas localidades próximas."
     ],
     "correta": 2,
-    "explicacao": "A imagem apresenta um sinal de informação que indica duas direcções. O condutor deve seguir a orientação indicada e escolher o percurso correspondente ao seu destino."
+    "explicacao": "A imagem apresenta um sinal de informação que indica duas direcções. O condutor deve seguir a orientação indicada e escolher o percurso correspondente ao seu destino.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 9",
+      "src": "public/exames/exame9/exame9_18.jpg"
+    }
   },
   {
     "numero": 19,
@@ -265,7 +337,11 @@ window.EXAMES[9] = [
       "Leve."
     ],
     "correta": 0,
-    "explicacao": "A pergunta aborda a prioridade nos cruzamentos ou entroncamentos sem sinalização. A fonte do exame classifica a falta de cedência ao veículo que vem da direita como contravenção grave."
+    "explicacao": "A pergunta aborda a prioridade nos cruzamentos ou entroncamentos sem sinalização. A fonte do exame classifica a falta de cedência ao veículo que vem da direita como contravenção grave.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 9",
+      "src": "public/exames/exame9/exame9_19.jpg"
+    }
   },
   {
     "numero": 20,
@@ -279,7 +355,11 @@ window.EXAMES[9] = [
       "Um ano após a data da matrícula e depois a cada seis meses."
     ],
     "correta": 2,
-    "explicacao": "A opção C corresponde ao intervalo de inspecção indicado na fonte para automóveis ligeiros e motociclos. Esta resposta foi mantida conforme a chave extraída do APK."
+    "explicacao": "A opção C corresponde ao intervalo de inspecção indicado na fonte para automóveis ligeiros e motociclos. Esta resposta foi mantida conforme a chave extraída do APK.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 9",
+      "src": "public/exames/exame9/exame9_20.jpg"
+    }
   },
   {
     "numero": 21,
@@ -293,7 +373,11 @@ window.EXAMES[9] = [
       "Parar ou estacionar junto ao sinal."
     ],
     "correta": 2,
-    "explicacao": "O sinal apresentado proíbe inverter o sentido de marcha. O condutor não deve efectuar a manobra no local sinalizado."
+    "explicacao": "O sinal apresentado proíbe inverter o sentido de marcha. O condutor não deve efectuar a manobra no local sinalizado.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 9",
+      "src": "public/exames/exame9/exame9_21.jpg"
+    }
   },
   {
     "numero": 22,
@@ -307,7 +391,11 @@ window.EXAMES[9] = [
       "Podem ser afinados ou reparados na via pública só durante o dia."
     ],
     "correta": 1,
-    "explicacao": "Os sinais sonoros não devem ser afinados ou reparados na via pública, pois essas operações devem ser realizadas num local apropriado."
+    "explicacao": "Os sinais sonoros não devem ser afinados ou reparados na via pública, pois essas operações devem ser realizadas num local apropriado.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 9",
+      "src": "public/exames/exame9/exame9_22.jpg"
+    }
   },
   {
     "numero": 23,
@@ -321,7 +409,11 @@ window.EXAMES[9] = [
       "Os hábitos do condutor não aumentam a fadiga."
     ],
     "correta": 0,
-    "explicacao": "Os hábitos alimentares, incluindo o tipo, a quantidade e a frequência das refeições, podem influenciar o estado físico do condutor e contribuir para a fadiga."
+    "explicacao": "Os hábitos alimentares, incluindo o tipo, a quantidade e a frequência das refeições, podem influenciar o estado físico do condutor e contribuir para a fadiga.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 9",
+      "src": "public/exames/exame9/exame9_23.jpg"
+    }
   },
   {
     "numero": 24,
@@ -335,7 +427,11 @@ window.EXAMES[9] = [
       "É escolha do condutor a substituição dos sinais sonoros pelos sinais gestuais."
     ],
     "correta": 0,
-    "explicacao": "Durante a noite, dentro das localidades, a pergunta indica como correcta a substituição dos sinais sonoros pelos sinais luminosos, nos termos apresentados na fonte do exame."
+    "explicacao": "Durante a noite, dentro das localidades, a pergunta indica como correcta a substituição dos sinais sonoros pelos sinais luminosos, nos termos apresentados na fonte do exame.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 9",
+      "src": "public/exames/exame9/exame9_24.jpg"
+    }
   },
   {
     "numero": 25,
@@ -349,6 +445,10 @@ window.EXAMES[9] = [
       "Área reservada exclusivamente a motociclos."
     ],
     "correta": 2,
-    "explicacao": "O sinal indica uma área reservada a automóveis ligeiros. O condutor deve respeitar a categoria de veículos indicada pela sinalização."
+    "explicacao": "O sinal indica uma área reservada a automóveis ligeiros. O condutor deve respeitar a categoria de veículos indicada pela sinalização.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 9",
+      "src": "public/exames/exame9/exame9_25.jpg"
+    }
   }
 ];

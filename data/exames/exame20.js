@@ -1,4 +1,4 @@
-// Exame 20 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 20 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[20] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[20] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Fumar enquanto conduz...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 20",
+      "src": "public/exames/exame20/exame20_1.jpg"
+    },
     "opcoes": [
       "É aconselhável, pois ajuda a manter a atenção.",
       "É proibido.",
@@ -21,7 +24,10 @@ window.EXAMES[20] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "Na via pública, a carga e descarga de um veículo deve ser feita:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 20",
+      "src": "public/exames/exame20/exame20_2.jpg"
+    },
     "opcoes": [
       ".Sempre pela direita",
       "Sempre pela retaguarda.",
@@ -36,7 +42,10 @@ window.EXAMES[20] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Que entende-se por consciência moral?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 20",
+      "src": "public/exames/exame20/exame20_3.jpg"
+    },
     "opcoes": [
       "A capacidade de o indivíduo interpretar os sinais de trânsito.",
       "A faculdade de a pessoa distinguir entre o bem e o mal, de julgar os seus actos e de adoptar uma determinada forma de conduta.",
@@ -51,7 +60,10 @@ window.EXAMES[20] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Os condutores não podem exceder as seguintes velocidades instantâneas (em km/h)",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 20",
+      "src": "public/exames/exame20/exame20_4.jpg"
+    },
     "opcoes": [
       "Automóveis pesados de passageiros dentro das localidades 50, fora das localidades 100.",
       "Automóveis pesados de passageiros dentro das localidades 60, fora das localidades 100.",
@@ -66,7 +78,10 @@ window.EXAMES[20] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Os sinais sonoros:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 20",
+      "src": "public/exames/exame20/exame20_5.jpg"
+    },
     "opcoes": [
       "Não podem ser afinados ou reparados na via pública.",
       "Podem ser afinados ou reparados na via pública.",
@@ -81,7 +96,10 @@ window.EXAMES[20] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 20",
+      "src": "public/exames/exame20/exame20_6.jpg"
+    },
     "opcoes": [
       "Descida de inclinação acentuada.",
       "subida de inclinação acentuada.",
@@ -96,7 +114,10 @@ window.EXAMES[20] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 20",
+      "src": "public/exames/exame20/exame20_7.jpg"
+    },
     "opcoes": [
       "Pavimento escorregadio.",
       "Visibilidade reduzida.",
@@ -111,7 +132,10 @@ window.EXAMES[20] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "É necessário regular e ajustar o encosto de cabeça para a altura dos ocupantes?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 20",
+      "src": "public/exames/exame20/exame20_8.jpg"
+    },
     "opcoes": [
       "Não é necessário, porque é apenas um elemento de conforto.",
       "Sim, mas só nos bancos da frente.",
@@ -126,7 +150,10 @@ window.EXAMES[20] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 20",
+      "src": "public/exames/exame20/exame20_9.jpg"
+    },
     "opcoes": [
       "Descida de inclinação acentuada.",
       "entroncamento oblíquo à direita.",
@@ -141,7 +168,10 @@ window.EXAMES[20] = [
     "tema": "Condução e segurança rodoviária",
     "dificuldade": "média",
     "enunciado": "As pessoas que são encontradas a conduzir sem possuir a carta de condução",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 20",
+      "src": "public/exames/exame20/exame20_10.jpg"
+    },
     "opcoes": [
       "São punidas com pena de prisão de três dias a seis meses e multa de 5000 Mt.",
       "São punidas apenas com uma multa de 500 Mt.",
@@ -156,7 +186,10 @@ window.EXAMES[20] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "Um dos elementos de segurança é a almofada de ar (airbag)?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 20",
+      "src": "public/exames/exame20/exame20_11.jpg"
+    },
     "opcoes": [
       "Não.",
       "Sim, de segurança passiva.",
@@ -171,7 +204,10 @@ window.EXAMES[20] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Os condutores de motociclos simples, fora das localidades, não devem, exceder a velocidade instantânea de:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 20",
+      "src": "public/exames/exame20/exame20_12.jpg"
+    },
     "opcoes": [
       "60 km/h.",
       "70 km/h.",
@@ -186,7 +222,10 @@ window.EXAMES[20] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "O condutor selecciona o acto motor a realizar em que momento?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 20",
+      "src": "public/exames/exame20/exame20_13.jpg"
+    },
     "opcoes": [
       "Quando recolhe a informação.",
       "Quando trata a informação.",
@@ -201,7 +240,10 @@ window.EXAMES[20] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "As luzes de máximos, com nevoeiro (cacimba):",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 20",
+      "src": "public/exames/exame20/exame20_14.jpg"
+    },
     "opcoes": [
       "Devem obrigatoriamente ser usadas.",
       "Devem ser evitadas, em especial à noite.",
@@ -216,7 +258,10 @@ window.EXAMES[20] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Se o condutor consome álcool, em que momento aumenta o risco de acidente?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 20",
+      "src": "public/exames/exame20/exame20_15.jpg"
+    },
     "opcoes": [
       "Antes de superar o limite legal permitido.",
       "Depois de superar o limite legal permitido.",
@@ -231,7 +276,10 @@ window.EXAMES[20] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 20",
+      "src": "public/exames/exame20/exame20_16.jpg"
+    },
     "opcoes": [
       "Congestionamento de tráfego.",
       "Zona onde só podem passar três carros de cada vez.",
@@ -246,7 +294,10 @@ window.EXAMES[20] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Os jovens, têm mais possibilidades de ter acidentes rodoviários",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 20",
+      "src": "public/exames/exame20/exame20_17.jpg"
+    },
     "opcoes": [
       "Sim, devido à falta de reflexos.",
       "Sim, a sua visão é mais reduzida.",
@@ -261,7 +312,10 @@ window.EXAMES[20] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Qual é a velocidade instantânea que não devem exceder os automóveis ligeiros de passageiros e mistos dentro das localidades?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 20",
+      "src": "public/exames/exame20/exame20_18.jpg"
+    },
     "opcoes": [
       "50 km/h, se tem reboque.",
       "60 km/h.",
@@ -276,7 +330,10 @@ window.EXAMES[20] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "A definição de estacionamento é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 20",
+      "src": "public/exames/exame20/exame20_19.jpg"
+    },
     "opcoes": [
       "Imobilização de um veículo que constitua paragem e que seja motivada por circunstâncias próprias da circulação.",
       "Imobilização de um veículo que não constitua paragem e que seja motivada por circunstâncias próprias da circulação.",
@@ -291,7 +348,10 @@ window.EXAMES[20] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Os condutores não podem exceder as seguintes velocidades instantâneas (em km/h)",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 20",
+      "src": "public/exames/exame20/exame20_20.jpg"
+    },
     "opcoes": [
       "Automóveis ligeiros de mercadoria com reboque dentro das localidades 60, fora das localidades 80.",
       "Automóveis ligeiros de mercadoria com reboque dentro das localidades 50, fora das localidades 90.",
@@ -306,7 +366,10 @@ window.EXAMES[20] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Como o álcool afecta a tarefa de conduzir",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 20",
+      "src": "public/exames/exame20/exame20_21.jpg"
+    },
     "opcoes": [
       "Reduz o campo de visão do condutor.",
       "Aumenta a atenção do condutor, assim que as distracções são reduzidas.",
@@ -321,7 +384,10 @@ window.EXAMES[20] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "O vento afecta a estabilidade do veículo",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 20",
+      "src": "public/exames/exame20/exame20_22.jpg"
+    },
     "opcoes": [
       "Particularmente quando é mais forte em túneis.",
       "Particularmente quando é muito forte e sopra lateralmente.",
@@ -336,7 +402,10 @@ window.EXAMES[20] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 20",
+      "src": "public/exames/exame20/exame20_23.jpg"
+    },
     "opcoes": [
       "Advertência de saída.",
       "Pré-advertência da direcção de saída.",
@@ -351,7 +420,10 @@ window.EXAMES[20] = [
     "tema": "Condução e segurança rodoviária",
     "dificuldade": "média",
     "enunciado": "A paragem e o estacionamento devem fazer-se, fora das localidades:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 20",
+      "src": "public/exames/exame20/exame20_24.jpg"
+    },
     "opcoes": [
       "Nas faixas de rodagem ou, não sendo isso possível, o mais próximo possível, o mais próximo possível da margem esquerda, paralelamente a esta e no mesmo sentido de marcha.",
       "Fora das faixas de rodagem ou, não sendo isso possível, o mais próximo possível, o mais próximo possível da margem direita, paralelamente a esta e no mesmo sentido de marcha.",
@@ -366,7 +438,10 @@ window.EXAMES[20] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A definição de auto-estrada é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 20",
+      "src": "public/exames/exame20/exame20_25.jpg"
+    },
     "opcoes": [
       "A via pública destinada a trânsito lento, com separação física de faixas de rodagem, sem cruzamentos de nível nem acesso a propriedades marginais, com acessos condicionados e sinalizada como tal.",
       "A via pública destinada a trânsito rápido, sem separação física de faixas de rodagem, sem cruzamentos de nível nem acesso a propriedades marginais, com acessos condicionados e sinalizada como tal.",

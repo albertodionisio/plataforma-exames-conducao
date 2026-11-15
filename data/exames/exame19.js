@@ -1,4 +1,4 @@
-// Exame 19 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 19 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[19] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[19] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "O que é a ergonomia de um veículo?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 19",
+      "src": "public/exames/exame19/exame19_1.jpg"
+    },
     "opcoes": [
       "É a capacidade de adaptação do equipamento às particularidades de cada ser humano.",
       "É a capacidade de um condutor economizar no combustível.",
@@ -21,7 +24,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 19",
+      "src": "public/exames/exame19/exame19_2.jpg"
+    },
     "opcoes": [
       "Zona onde só podem passar três carros de cada vez.",
       "Congestionamento.",
@@ -36,7 +42,10 @@ window.EXAMES[19] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "A definição de tara é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 19",
+      "src": "public/exames/exame19/exame19_3.jpg"
+    },
     "opcoes": [
       "Peso do veículo com carga.",
       "Peso de veículo vazio.",
@@ -51,7 +60,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 19",
+      "src": "public/exames/exame19/exame19_4.jpg"
+    },
     "opcoes": [
       "Passagem estreita.",
       "Só veículos pesados de passageiros.",
@@ -66,7 +78,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "As luzes de travagem dos automóveis tem a cor:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 19",
+      "src": "public/exames/exame19/exame19_5.jpg"
+    },
     "opcoes": [
       "Branca ou amarela.",
       "Amarela ou alaranjada.",
@@ -81,7 +96,10 @@ window.EXAMES[19] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Como é frito o processo de eliminação de álcool no organismo?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 19",
+      "src": "public/exames/exame19/exame19_6.jpg"
+    },
     "opcoes": [
       "Pela urina e pela transpiração.",
       "Pelo ar expirado, pela urina e quantidade de água ingerida.",
@@ -96,7 +114,10 @@ window.EXAMES[19] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "Nos veículos de mercadorias, a carga deve ser disposta de modo que:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 19",
+      "src": "public/exames/exame19/exame19_7.jpg"
+    },
     "opcoes": [
       "O principal pesado fique sobre o eixo da retaguarda.",
       "Seja assegurado o equilíbrio do veículo, parado ou em movimento.",
@@ -111,7 +132,10 @@ window.EXAMES[19] = [
     "tema": "Condução e segurança rodoviária",
     "dificuldade": "média",
     "enunciado": "A marcha atrás, é uma manobra que deve ser efectuada...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 19",
+      "src": "public/exames/exame19/exame19_8.jpg"
+    },
     "opcoes": [
       "O mais à direita possível, em local de boa visibilidade.",
       "O mais rapidamente possível, em local onde não prejudique o trânsito.",
@@ -126,7 +150,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que deve fazer o condutor se a fila da esquerda estiver a circular rapidamente?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 19",
+      "src": "public/exames/exame19/exame19_9.jpg"
+    },
     "opcoes": [
       "Manter-se na fila de trânsito em que se encontra.",
       "Mudar de fila de trânsito.",
@@ -141,7 +168,10 @@ window.EXAMES[19] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "O condutor de veículo utilizado n transporte colectivo de passageiros, só pode parar nas faixas de rodagem para:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 19",
+      "src": "public/exames/exame19/exame19_10.jpg"
+    },
     "opcoes": [
       "Carregar e descarregar mercadorias, só durante o dia.",
       "Carregar e descarregar mercadorias, só durante a noite.",
@@ -156,7 +186,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O agente de trânsito que aparece na fotografia, manda:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 19",
+      "src": "public/exames/exame19/exame19_11.jpg"
+    },
     "opcoes": [
       "Avançar o tráfego que venha da retaguarda.",
       "Avançar o tráfego que venha da esquerda.",
@@ -171,7 +204,10 @@ window.EXAMES[19] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "O que é força centrífuga?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 19",
+      "src": "public/exames/exame19/exame19_12.jpg"
+    },
     "opcoes": [
       "É a força aparente que 'empurra' os veículos para o interior das curvas.",
       "É a força aparente que 'empurra' os veículos para o exterior das curvas.",
@@ -186,7 +222,10 @@ window.EXAMES[19] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Dentro da localidades, durante a noite:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 19",
+      "src": "public/exames/exame19/exame19_13.jpg"
+    },
     "opcoes": [
       "Não é obrigatória a substituição dos sinais sonoros pelos sinais luminosos.",
       "É obrigatória a substituição dos sinais sonoros pelos sinais gestuais.",
@@ -201,7 +240,10 @@ window.EXAMES[19] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Podem ser submetidos às provas para a detecção de álcool ou substâncias estupefacientes ou psicotrópicas:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 19",
+      "src": "public/exames/exame19/exame19_14.jpg"
+    },
     "opcoes": [
       "Os peões, sempre que sejam intervenientes em acidentes de trânsito e os condutores.",
       "Apenas os condutores de veículos automóveis.",
@@ -216,7 +258,10 @@ window.EXAMES[19] = [
     "tema": "Condução e segurança rodoviária",
     "dificuldade": "média",
     "enunciado": "Nas pontes, túneis e passagens de nível:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 19",
+      "src": "public/exames/exame19/exame19_15.jpg"
+    },
     "opcoes": [
       "Os animais atrelados ou não, devem seguir a passo.",
       "Os animais só quando estiverem atrelados, devem seguir a passo.",
@@ -231,7 +276,10 @@ window.EXAMES[19] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Se conduz muito tempo sem descansar...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 19",
+      "src": "public/exames/exame19/exame19_16.jpg"
+    },
     "opcoes": [
       "Aumenta a atenção do condutor.",
       "A condução torna-se perigosa.",
@@ -246,7 +294,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 19",
+      "src": "public/exames/exame19/exame19_17.jpg"
+    },
     "opcoes": [
       "Trânsito proibido ao conjunto de veículos de mercadorias, de peso total superior a 10t.",
       "Trânsito proibido a veículos de peso por eixo superior a 10t.",
@@ -261,7 +312,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de perigo?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 19",
+      "src": "public/exames/exame19/exame19_18.jpg"
+    },
     "opcoes": [
       "Controle policial por pirilampos.",
       "Aproximação de uma estrada com prioridade.",
@@ -276,7 +330,10 @@ window.EXAMES[19] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Depois de ter tomado bebidas alcoólicas:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 19",
+      "src": "public/exames/exame19/exame19_19.jpg"
+    },
     "opcoes": [
       "O álcool entra rapidamente no sistema circulatório.",
       "O álcool entra rapidamente no sistema urinário.",
@@ -291,7 +348,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 19",
+      "src": "public/exames/exame19/exame19_20.jpg"
+    },
     "opcoes": [
       "Terreno falso à direita.",
       "Cruzamento facilmente congestionável.",
@@ -306,7 +366,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O sinal, pertence ao grupo de sinais de:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 19",
+      "src": "public/exames/exame19/exame19_21.jpg"
+    },
     "opcoes": [
       "pré-sinalização de direcção.",
       "Direcção.",
@@ -321,7 +384,10 @@ window.EXAMES[19] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "A definição de tractor é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 19",
+      "src": "public/exames/exame19/exame19_22.jpg"
+    },
     "opcoes": [
       "Veículo a motor exclusivamente construído para desenvolver esforço de tracção, sem comportar carga útil.",
       "Veículo automóvel exclusivamente construído para desenvolver esforço de tracção, sem comportar carga útil.",
@@ -336,7 +402,10 @@ window.EXAMES[19] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 19",
+      "src": "public/exames/exame19/exame19_23.jpg"
+    },
     "opcoes": [
       "Paragem e estacionamento proibidos.",
       "Estacionamento proibido.",
@@ -351,7 +420,10 @@ window.EXAMES[19] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "A condução em dias de chuva provoca um aumento do risco de acidente, por causa de factores como:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 19",
+      "src": "public/exames/exame19/exame19_24.jpg"
+    },
     "opcoes": [
       "Maior visibilidade, menor aderência e maior stress físico.",
       "Maior tempo de reacção e menor tempo de paragem.",
@@ -366,7 +438,10 @@ window.EXAMES[19] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Como deve actuar o condutor quando tem que fazer uma curva?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 19",
+      "src": "public/exames/exame19/exame19_25.jpg"
+    },
     "opcoes": [
       "Reduzir a velocidade, já dentro da curva.",
       "Aumentar a velocidade, antes de entrar na curva.",

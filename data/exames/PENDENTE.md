@@ -20,6 +20,8 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 
+- Nota (Claude-DADOS005, 2026-11-15, por ordem do dono): imagens dos Exames 9–14 e 17–24 associadas (`public/exames/exameN/`) e Exames 9–14 e 16–24 ligados em `index.html`; sinais de pouca qualidade a substituir pelos do PDF numa etapa seguinte. Estas tarefas mantêm as suas reservas, mas as imagens e a integração já estão feitas — não repetir.
+
 ## DADOS-001 — Exame 2 (grátis)
 - Estado: EM CURSO (integrado no site) — dados, mapa, imagens e integração concluídos; falta a revisão de duplicações com os Exames 3 e 4 — último sinal: 2026-11-13.
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.

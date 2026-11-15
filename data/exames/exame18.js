@@ -1,4 +1,4 @@
-// Exame 18 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 18 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[18] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Para praticar uma condução segura o condutor deve:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 18",
+      "src": "public/exames/exame18/exame18_1.jpg"
+    },
     "opcoes": [
       "Avaliar constantemente tudo que me rodeia.",
       "Ter atenção apenas a sinalização existente.",
@@ -21,7 +24,10 @@ window.EXAMES[18] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Nesta situação, pode ultrapassar o veículo que circula à sua frente?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 18",
+      "src": "public/exames/exame18/exame18_2.jpg"
+    },
     "opcoes": [
       "Sim, utilizar os dispositivos luminosos ou sonoros.",
       "Não, se para o fazer tiver que pisar ou transpor a linha contínua.",
@@ -36,7 +42,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 18",
+      "src": "public/exames/exame18/exame18_3.jpg"
+    },
     "opcoes": [
       "Trânsito proibido ao conjunto de veículos de mercadoria, de peso total superior a 10t.",
       "Trânsito proibido a veículos de peso por eixo múltiplo superior a 10t.",
@@ -51,7 +60,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica a marca rodoviária?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 18",
+      "src": "public/exames/exame18/exame18_4.jpg"
+    },
     "opcoes": [
       "Aproximação de passagem de nível.",
       "Faixa de sentido reversível.",
@@ -66,7 +78,10 @@ window.EXAMES[18] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Conduzindo com chuva...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 18",
+      "src": "public/exames/exame18/exame18_5.jpg"
+    },
     "opcoes": [
       "Deve aumentar a distância de segurança para o veículo da frente.",
       "A distância de travagem é menor.",
@@ -81,7 +96,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Nos veículos destinados ao transporte de passageiros ou mistos...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 18",
+      "src": "public/exames/exame18/exame18_6.jpg"
+    },
     "opcoes": [
       "A carga pode ocultar a matrícula e os dispositivos de sinalização luminosa.",
       "A carga deve estar arrumada por forma a que seja devidamente assegurada o equilíbrio do veículo.",
@@ -96,7 +114,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Qual é o comportamento correcto para ajudar em caso de acidente?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 18",
+      "src": "public/exames/exame18/exame18_7.jpg"
+    },
     "opcoes": [
       "Não fazer nada até chegarem os agentes da autoridade.",
       "Transportar imediatamente os feridos mais graves para o hospital mais próximo.",
@@ -111,7 +132,10 @@ window.EXAMES[18] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Os automóveis ligeiros de passageiros e mistos com reboque, fora das localidades, não devem exceder a velocidade instantânea de:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 18",
+      "src": "public/exames/exame18/exame18_8.jpg"
+    },
     "opcoes": [
       "80 km/h.",
       "100 km/h.",
@@ -126,7 +150,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 18",
+      "src": "public/exames/exame18/exame18_9.jpg"
+    },
     "opcoes": [
       "Paragem obrigatória.",
       "Trânsito proibido a veículos com comprimento superior a 60 metros.",
@@ -141,7 +168,10 @@ window.EXAMES[18] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Como deve pisar o pedal de travão, em caso de necessidade de travagem de emergência, com um veículo que tenha ABS?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 18",
+      "src": "public/exames/exame18/exame18_10.jpg"
+    },
     "opcoes": [
       "Até o fundo, sem soltá-lo até que o veículo pare.",
       "Até ao fundo e libertá-lo quando sinta uma vibração.",
@@ -156,7 +186,10 @@ window.EXAMES[18] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Como deve actuar o condutor quando tem que fazer uma curva?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 18",
+      "src": "public/exames/exame18/exame18_11.jpg"
+    },
     "opcoes": [
       "Reduzir a velocidade, já dentro da curva.",
       "Aumentar a velocidade, antes de entrar na curva.",
@@ -171,7 +204,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 18",
+      "src": "public/exames/exame18/exame18_12.jpg"
+    },
     "opcoes": [
       "Passagem estreita.",
       "Ponte estreita.",
@@ -186,7 +222,10 @@ window.EXAMES[18] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Como pode ser definido o stress?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 18",
+      "src": "public/exames/exame18/exame18_13.jpg"
+    },
     "opcoes": [
       "Acalmia mental diante de pressões ou exigências que ultrapassem os limites das suas próprias capacidades.",
       "Indiferença perante pressões ou exigências que ultrapassem os limites das suas próprias capacidades.",
@@ -201,7 +240,10 @@ window.EXAMES[18] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Ao circular com a velocidade excessiva...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 18",
+      "src": "public/exames/exame18/exame18_14.jpg"
+    },
     "opcoes": [
       "Aumenta a probabilidade de ter um acidente.",
       "É mais fácil controlar o veículo noma situação de emergência.",
@@ -216,7 +258,10 @@ window.EXAMES[18] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "O que deve fazer o condutor quando a intensidade do tráfego é grande?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 18",
+      "src": "public/exames/exame18/exame18_15.jpg"
+    },
     "opcoes": [
       "Aumenta a velocidade.",
       "Praticar uma condução defensiva.",
@@ -231,7 +276,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "A que grupo pertence o sinal triangular?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 18",
+      "src": "public/exames/exame18/exame18_16.jpg"
+    },
     "opcoes": [
       "Sinalização temporários de obrigação.",
       "Sinalização temporários de proibição.",
@@ -246,7 +294,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 18",
+      "src": "public/exames/exame18/exame18_17.jpg"
+    },
     "opcoes": [
       "Passagem desnivelada para peões com rampas.",
       "Passagem de peões.",
@@ -261,7 +312,10 @@ window.EXAMES[18] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Perante um obstáculo imprevisto que o obriga a reduzir subitamente a velocidade, o condutor deve?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 18",
+      "src": "public/exames/exame18/exame18_18.jpg"
+    },
     "opcoes": [
       "Sinalizar a situação utilizando os máximos e os médios alternadamente.",
       "Ligar as luzes de presença para avisar os outros utentes da via.",
@@ -276,7 +330,10 @@ window.EXAMES[18] = [
     "tema": "Prevenção e assistência em acidentes",
     "dificuldade": "média",
     "enunciado": "Quais são os princípios gerais do socorrismo?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 18",
+      "src": "public/exames/exame18/exame18_19.jpg"
+    },
     "opcoes": [
       "Prevenir, socorrer e evacuar.",
       "Prevenir, observar e socorrer.",
@@ -291,7 +348,10 @@ window.EXAMES[18] = [
     "tema": "Condução e segurança rodoviária",
     "dificuldade": "média",
     "enunciado": "Para ter mais segurança, os peões devem...",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 18",
+      "src": "public/exames/exame18/exame18_20.jpg"
+    },
     "opcoes": [
       "Transitar sempre do lado esquerdo da faixa de rodagem, em relação ao seu sentido de marcha.",
       "Transitar pelo lado direito, em relação ao seu sentido de marcha, a não ser que tal comprometa a sua segurança.",
@@ -306,7 +366,10 @@ window.EXAMES[18] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Onde é proibido inverter o sentido de marcha?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 18",
+      "src": "public/exames/exame18/exame18_21.jpg"
+    },
     "opcoes": [
       "Nos cruzamentos ou entroncamentos de visibilidade reduzida.",
       "Nas rotundas.",
@@ -321,7 +384,10 @@ window.EXAMES[18] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "Conduzir um automóvel com uma parte do corpo fora do veículo, constitui:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 18",
+      "src": "public/exames/exame18/exame18_22.jpg"
+    },
     "opcoes": [
       "Contravenção média.",
       "Contravenção leve.",
@@ -336,7 +402,10 @@ window.EXAMES[18] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Nesta situação, se não for possível efectuar o cruzamento com segurança, como deve proceder o condutor?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 18",
+      "src": "public/exames/exame18/exame18_23.jpg"
+    },
     "opcoes": [
       "Acelerar para passar antes do veículo que circula em sentido contrário.",
       "Reduzir a velocidade ou parar, de modo a dar a passagem ao outro veículo.",
@@ -351,7 +420,10 @@ window.EXAMES[18] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Existe algum truque para conseguir eliminar o álcool do corpo do condutor, de uma forma mais rápida",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 18",
+      "src": "public/exames/exame18/exame18_24.jpg"
+    },
     "opcoes": [
       "Sim, dormir um pouco.",
       "Sim, tomar doces.",
@@ -366,7 +438,10 @@ window.EXAMES[18] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Pode favorecer o aparecimento da fadiga ao volante:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 18",
+      "src": "public/exames/exame18/exame18_25.jpg"
+    },
     "opcoes": [
       "Descansar frequentemente durante uma viagem.",
       "Conduzir por uma estrada em boas condições.",

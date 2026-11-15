@@ -1,4 +1,4 @@
-// Exame 14 — conteúdo adaptado da extracção do APK. Imagens serão adicionadas numa etapa posterior.
+// Exame 14 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[14] = [
   {
@@ -13,7 +13,11 @@ window.EXAMES[14] = [
       "A existência de uma berma baixa à direita e à esquerda."
     ],
     "correta": 2,
-    "explicacao": "O sinal apresentado indica a existência de uma berma baixa à direita. O condutor deve adaptar a trajectória e a velocidade às condições da berma."
+    "explicacao": "O sinal apresentado indica a existência de uma berma baixa à direita. O condutor deve adaptar a trajectória e a velocidade às condições da berma.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 14",
+      "src": "public/exames/exame14/exame14_1.jpg"
+    }
   },
   {
     "numero": 2,
@@ -27,7 +31,11 @@ window.EXAMES[14] = [
       "Não, nunca"
     ],
     "correta": 2,
-    "explicacao": "A opção indicada na fonte exige que a criança tenha pelo menos sete anos e utilize capacete devidamente ajustado. A imagem original deve ser consultada quando as imagens forem integradas."
+    "explicacao": "A opção indicada na fonte exige que a criança tenha pelo menos sete anos e utilize capacete devidamente ajustado. A imagem original deve ser consultada quando as imagens forem integradas.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 14",
+      "src": "public/exames/exame14/exame14_2.jpg"
+    }
   },
   {
     "numero": 3,
@@ -41,7 +49,11 @@ window.EXAMES[14] = [
       "Pista obrigatória para máquinas"
     ],
     "correta": 0,
-    "explicacao": "A imagem corresponde ao sinal de máquinas. O condutor deve reconhecer o símbolo e interpretar a informação transmitida."
+    "explicacao": "A imagem corresponde ao sinal de máquinas. O condutor deve reconhecer o símbolo e interpretar a informação transmitida.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 14",
+      "src": "public/exames/exame14/exame14_3.jpg"
+    }
   },
   {
     "numero": 4,
@@ -55,7 +67,11 @@ window.EXAMES[14] = [
       "É escolha do a substituição dos sinais sonoros pelos sinais gestuais"
     ],
     "correta": 1,
-    "explicacao": "Durante a noite, dentro das localidades, a pergunta indica a substituição dos sinais sonoros pelos sinais luminosos."
+    "explicacao": "Durante a noite, dentro das localidades, a pergunta indica a substituição dos sinais sonoros pelos sinais luminosos.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 14",
+      "src": "public/exames/exame14/exame14_4.jpg"
+    }
   },
   {
     "numero": 5,
@@ -69,7 +85,11 @@ window.EXAMES[14] = [
       "Com a idade do condutor"
     ],
     "correta": 1,
-    "explicacao": "O enunciado extraído está incompleto («A capacidade de o condutor»). As alternativas foram preservadas conforme a fonte; esta questão necessita de conferência visual quando a imagem for adicionada."
+    "explicacao": "O enunciado extraído está incompleto («A capacidade de o condutor»). As alternativas foram preservadas conforme a fonte; esta questão necessita de conferência visual quando a imagem for adicionada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 14",
+      "src": "public/exames/exame14/exame14_5.jpg"
+    }
   },
   {
     "numero": 6,
@@ -83,7 +103,11 @@ window.EXAMES[14] = [
       "Efectuar através da utilização exclusiva do pedal de travão."
     ],
     "correta": 2,
-    "explicacao": "O controlo dinâmico do veículo envolve definir e manter a velocidade e a trajectória adequadas à situação de circulação."
+    "explicacao": "O controlo dinâmico do veículo envolve definir e manter a velocidade e a trajectória adequadas à situação de circulação.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 14",
+      "src": "public/exames/exame14/exame14_6.jpg"
+    }
   },
   {
     "numero": 7,
@@ -97,7 +121,11 @@ window.EXAMES[14] = [
       "Estrada convergente"
     ],
     "correta": 2,
-    "explicacao": "O sinal representa um entroncamento em forma de Y ou bifurcação. O condutor deve antecipar a divisão dos fluxos de trânsito."
+    "explicacao": "O sinal representa um entroncamento em forma de Y ou bifurcação. O condutor deve antecipar a divisão dos fluxos de trânsito.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 14",
+      "src": "public/exames/exame14/exame14_7.jpg"
+    }
   },
   {
     "numero": 8,
@@ -111,7 +139,11 @@ window.EXAMES[14] = [
       "O condutor deve entrar e sair pelo lado direito do veículo"
     ],
     "correta": 1,
-    "explicacao": "Quando o veículo está parado ou estacionado do lado esquerdo da faixa de rodagem, a opção indicada na fonte determina que os passageiros entrem e saiam pelo lado esquerdo do veículo."
+    "explicacao": "Quando o veículo está parado ou estacionado do lado esquerdo da faixa de rodagem, a opção indicada na fonte determina que os passageiros entrem e saiam pelo lado esquerdo do veículo.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 14",
+      "src": "public/exames/exame14/exame14_8.jpg"
+    }
   },
   {
     "numero": 9,
@@ -125,7 +157,11 @@ window.EXAMES[14] = [
       "Dar água à vítima e pedir-lhe que caminhe."
     ],
     "correta": 2,
-    "explicacao": "Perante uma hemorragia forte na perna, a opção indicada é cobrir a ferida e elevar a perna, sem improvisar procedimentos que possam agravar a lesão."
+    "explicacao": "Perante uma hemorragia forte na perna, a opção indicada é cobrir a ferida e elevar a perna, sem improvisar procedimentos que possam agravar a lesão.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 14",
+      "src": "public/exames/exame14/exame14_9.jpg"
+    }
   },
   {
     "numero": 10,
@@ -139,7 +175,11 @@ window.EXAMES[14] = [
       "Estrada com lombas sucessivas."
     ],
     "correta": 0,
-    "explicacao": "O sinal apresentado indica uma ponte estreita. O condutor deve reduzir a velocidade e ter atenção à passagem de veículos em sentido contrário."
+    "explicacao": "O sinal apresentado indica uma ponte estreita. O condutor deve reduzir a velocidade e ter atenção à passagem de veículos em sentido contrário.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 14",
+      "src": "public/exames/exame14/exame14_10.jpg"
+    }
   },
   {
     "numero": 11,
@@ -153,7 +193,11 @@ window.EXAMES[14] = [
       "O seu estado não tem influência na condução"
     ],
     "correta": 0,
-    "explicacao": "Problemas de sono significam que o condutor não se encontra em condições ideais para conduzir. Deve descansar antes de prosseguir."
+    "explicacao": "Problemas de sono significam que o condutor não se encontra em condições ideais para conduzir. Deve descansar antes de prosseguir.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 14",
+      "src": "public/exames/exame14/exame14_11.jpg"
+    }
   },
   {
     "numero": 12,
@@ -167,7 +211,11 @@ window.EXAMES[14] = [
       "Trânsito proibido apenas a veículos pesados."
     ],
     "correta": 2,
-    "explicacao": "O sinal apresentado proíbe o trânsito a peões, animais e veículos não automóveis. Os utentes devem respeitar a restrição indicada."
+    "explicacao": "O sinal apresentado proíbe o trânsito a peões, animais e veículos não automóveis. Os utentes devem respeitar a restrição indicada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 14",
+      "src": "public/exames/exame14/exame14_12.jpg"
+    }
   },
   {
     "numero": 13,
@@ -181,7 +229,11 @@ window.EXAMES[14] = [
       "Quando o condutor é inexperiente"
     ],
     "correta": 2,
-    "explicacao": "Os acidentes relacionados com o sono podem ocorrer antes de o condutor adormecer completamente, quando a atenção e a vigilância já estão diminuídas."
+    "explicacao": "Os acidentes relacionados com o sono podem ocorrer antes de o condutor adormecer completamente, quando a atenção e a vigilância já estão diminuídas.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 14",
+      "src": "public/exames/exame14/exame14_13.jpg"
+    }
   },
   {
     "numero": 14,
@@ -195,7 +247,11 @@ window.EXAMES[14] = [
       "Não, é sempre proibido ao condutor utilizar aparelhos radiotelefónicos"
     ],
     "correta": 2,
-    "explicacao": "A utilização de aparelhos radiotelefónicos durante a marcha só é permitida nas condições indicadas, sem manuseamento continuado do aparelho."
+    "explicacao": "A utilização de aparelhos radiotelefónicos durante a marcha só é permitida nas condições indicadas, sem manuseamento continuado do aparelho.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 14",
+      "src": "public/exames/exame14/exame14_14.jpg"
+    }
   },
   {
     "numero": 15,
@@ -209,7 +265,11 @@ window.EXAMES[14] = [
       "Manobra através da qual o condutor coloca o veículo no mesmo sentido e na mesma direcção"
     ],
     "correta": 0,
-    "explicacao": "A inversão de marcha é a manobra através da qual o condutor coloca o veículo no sentido oposto ao que seguia, invertendo a direcção de marcha."
+    "explicacao": "A inversão de marcha é a manobra através da qual o condutor coloca o veículo no sentido oposto ao que seguia, invertendo a direcção de marcha.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 14",
+      "src": "public/exames/exame14/exame14_15.jpg"
+    }
   },
   {
     "numero": 16,
@@ -223,7 +283,11 @@ window.EXAMES[14] = [
       "Baia direccional para a frente."
     ],
     "correta": 1,
-    "explicacao": "O sinal complementar apresentado indica uma baia indicadora de direcção à direita. O condutor deve orientar-se pela indicação visual."
+    "explicacao": "O sinal complementar apresentado indica uma baia indicadora de direcção à direita. O condutor deve orientar-se pela indicação visual.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 14",
+      "src": "public/exames/exame14/exame14_16.jpg"
+    }
   },
   {
     "numero": 17,
@@ -237,7 +301,11 @@ window.EXAMES[14] = [
       "Obedecer sempre às ordens dos outros condutores."
     ],
     "correta": 2,
-    "explicacao": "Responsabilidade moral significa responder pelos próprios actos e reconhecer as consequências das decisões tomadas."
+    "explicacao": "Responsabilidade moral significa responder pelos próprios actos e reconhecer as consequências das decisões tomadas.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 14",
+      "src": "public/exames/exame14/exame14_17.jpg"
+    }
   },
   {
     "numero": 18,
@@ -251,7 +319,11 @@ window.EXAMES[14] = [
       "Paragem obrigatória."
     ],
     "correta": 2,
-    "explicacao": "O sinal indica estacionamento condicionado. O condutor deve observar as condições e limitações associadas à sinalização."
+    "explicacao": "O sinal indica estacionamento condicionado. O condutor deve observar as condições e limitações associadas à sinalização.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 14",
+      "src": "public/exames/exame14/exame14_18.jpg"
+    }
   },
   {
     "numero": 19,
@@ -265,7 +337,11 @@ window.EXAMES[14] = [
       "Motociclos com ou sem carro"
     ],
     "correta": 1,
-    "explicacao": "A carta de condução da categoria B permite conduzir automóveis ligeiros, nos termos indicados na pergunta."
+    "explicacao": "A carta de condução da categoria B permite conduzir automóveis ligeiros, nos termos indicados na pergunta.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 14",
+      "src": "public/exames/exame14/exame14_19.jpg"
+    }
   },
   {
     "numero": 20,
@@ -279,7 +355,11 @@ window.EXAMES[14] = [
       "Conduzir sempre à velocidade máxima permitida."
     ],
     "correta": 2,
-    "explicacao": "A condução defensiva permite antecipar situações de risco e adoptar comportamentos que ajudam a prevenir acidentes."
+    "explicacao": "A condução defensiva permite antecipar situações de risco e adoptar comportamentos que ajudam a prevenir acidentes.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 14",
+      "src": "public/exames/exame14/exame14_20.jpg"
+    }
   },
   {
     "numero": 21,
@@ -293,7 +373,11 @@ window.EXAMES[14] = [
       "Aumentar a estabilidade facilitando a sua condução"
     ],
     "correta": 0,
-    "explicacao": "A carga mal acondicionada pode reduzir a visibilidade do condutor, comprometer o controlo do veículo e aumentar o risco de acidente."
+    "explicacao": "A carga mal acondicionada pode reduzir a visibilidade do condutor, comprometer o controlo do veículo e aumentar o risco de acidente.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 14",
+      "src": "public/exames/exame14/exame14_21.jpg"
+    }
   },
   {
     "numero": 22,
@@ -307,7 +391,11 @@ window.EXAMES[14] = [
       "Sempre o condutor pela direita e os restantes ocupantes pela esquerda"
     ],
     "correta": 1,
-    "explicacao": "A entrada e saída de passageiros deve fazer-se pelo lado permitido para a paragem, evitando a exposição ao trânsito."
+    "explicacao": "A entrada e saída de passageiros deve fazer-se pelo lado permitido para a paragem, evitando a exposição ao trânsito.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 14",
+      "src": "public/exames/exame14/exame14_22.jpg"
+    }
   },
   {
     "numero": 23,
@@ -321,7 +409,11 @@ window.EXAMES[14] = [
       "O embaciamento dos vidros e consequente melhoria da visibilidade."
     ],
     "correta": 2,
-    "explicacao": "As baixas temperaturas associadas ao nevoeiro podem provocar embaciamento dos vidros e reduzir a visibilidade para o exterior."
+    "explicacao": "As baixas temperaturas associadas ao nevoeiro podem provocar embaciamento dos vidros e reduzir a visibilidade para o exterior.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 14",
+      "src": "public/exames/exame14/exame14_23.jpg"
+    }
   },
   {
     "numero": 24,
@@ -335,7 +427,11 @@ window.EXAMES[14] = [
       "Não"
     ],
     "correta": 0,
-    "explicacao": "A opção indicada associa o maior risco rodoviário entre jovens a uma avaliação incorrecta dos perigos e das situações de trânsito."
+    "explicacao": "A opção indicada associa o maior risco rodoviário entre jovens a uma avaliação incorrecta dos perigos e das situações de trânsito.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 14",
+      "src": "public/exames/exame14/exame14_24.jpg"
+    }
   },
   {
     "numero": 25,
@@ -349,6 +445,10 @@ window.EXAMES[14] = [
       "Sinalização de itinerário obrigatório"
     ],
     "correta": 1,
-    "explicacao": "O sinal representa uma pré-sinalização de itinerário numa intersecção de nível. O condutor deve interpretar a orientação antes de chegar à intersecção."
+    "explicacao": "O sinal representa uma pré-sinalização de itinerário numa intersecção de nível. O condutor deve interpretar a orientação antes de chegar à intersecção.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 14",
+      "src": "public/exames/exame14/exame14_25.jpg"
+    }
   }
 ];

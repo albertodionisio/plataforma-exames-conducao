@@ -1,4 +1,4 @@
-// Exame 11 — conteúdo adaptado da extracção do APK. Imagens serão adicionadas numa etapa posterior.
+// Exame 11 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[11] = [
   {
@@ -13,7 +13,11 @@ window.EXAMES[11] = [
       "De obediência e de submissão."
     ],
     "correta": 2,
-    "explicacao": "Os deveres para com os outros incluem atitudes de justiça e caridade. A convivência social exige respeito pelo próximo e consideração pelas suas necessidades."
+    "explicacao": "Os deveres para com os outros incluem atitudes de justiça e caridade. A convivência social exige respeito pelo próximo e consideração pelas suas necessidades.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 11",
+      "src": "public/exames/exame11/exame11_1.jpg"
+    }
   },
   {
     "numero": 2,
@@ -27,7 +31,11 @@ window.EXAMES[11] = [
       "Acesso ou passagem reservado a veículos pesados."
     ],
     "correta": 2,
-    "explicacao": "A pergunta apresenta um sinal luminoso cujo significado indicado na chave do exame é acesso ou passagem condicionado. A interpretação deve ser feita observando o sinal representado na imagem original."
+    "explicacao": "A pergunta apresenta um sinal luminoso cujo significado indicado na chave do exame é acesso ou passagem condicionado. A interpretação deve ser feita observando o sinal representado na imagem original.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 11",
+      "src": "public/exames/exame11/exame11_2.jpg"
+    }
   },
   {
     "numero": 3,
@@ -41,7 +49,11 @@ window.EXAMES[11] = [
       "Linha longitudinal contínua."
     ],
     "correta": 0,
-    "explicacao": "A marca rodoviária representada corresponde a uma passagem destinada a peões. O condutor deve estar atento à aproximação de pessoas que pretendam atravessar."
+    "explicacao": "A marca rodoviária representada corresponde a uma passagem destinada a peões. O condutor deve estar atento à aproximação de pessoas que pretendam atravessar.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 11",
+      "src": "public/exames/exame11/exame11_3.jpg"
+    }
   },
   {
     "numero": 4,
@@ -55,7 +67,11 @@ window.EXAMES[11] = [
       "Maior concentração na tarefa de condução."
     ],
     "correta": 1,
-    "explicacao": "O álcool afecta as capacidades necessárias à condução. A resposta indicada na fonte é o aumento do tempo de reacção e da distância de paragem."
+    "explicacao": "O álcool afecta as capacidades necessárias à condução. A resposta indicada na fonte é o aumento do tempo de reacção e da distância de paragem.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 11",
+      "src": "public/exames/exame11/exame11_4.jpg"
+    }
   },
   {
     "numero": 5,
@@ -69,7 +85,11 @@ window.EXAMES[11] = [
       "Sim, apenas são obrigatórios dois triângulos de pré-sinalização de perigo."
     ],
     "correta": 2,
-    "explicacao": "A pergunta trata dos equipamentos de pré-sinalização e segurança que devem acompanhar o automóvel. A opção C é a resposta constante da chave extraída do exame."
+    "explicacao": "A pergunta trata dos equipamentos de pré-sinalização e segurança que devem acompanhar o automóvel. A opção C é a resposta constante da chave extraída do exame.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 11",
+      "src": "public/exames/exame11/exame11_5.jpg"
+    }
   },
   {
     "numero": 6,
@@ -83,7 +103,11 @@ window.EXAMES[11] = [
       "Só aos condutores que circulam em sentido contrário e sigam em frente."
     ],
     "correta": 1,
-    "explicacao": "Ao mudar de direcção para a direita, o condutor deve considerar os veículos que circulam em sentido contrário e pretendem seguir em frente ou virar à esquerda, conforme a situação apresentada."
+    "explicacao": "Ao mudar de direcção para a direita, o condutor deve considerar os veículos que circulam em sentido contrário e pretendem seguir em frente ou virar à esquerda, conforme a situação apresentada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 11",
+      "src": "public/exames/exame11/exame11_6.jpg"
+    }
   },
   {
     "numero": 7,
@@ -97,7 +121,11 @@ window.EXAMES[11] = [
       "É indiferente, sempre que utilize um sistema de retenção homologado e adaptado ao seu tamanho e peso"
     ],
     "correta": 1,
-    "explicacao": "A resposta indicada é o transporte no banco traseiro, utilizando um sistema de retenção homologado e adequado ao tamanho e peso da criança."
+    "explicacao": "A resposta indicada é o transporte no banco traseiro, utilizando um sistema de retenção homologado e adequado ao tamanho e peso da criança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 11",
+      "src": "public/exames/exame11/exame11_7.jpg"
+    }
   },
   {
     "numero": 8,
@@ -111,7 +139,11 @@ window.EXAMES[11] = [
       "Demora mais tempo em obter as informações necessárias para conduzir com segurança."
     ],
     "correta": 0,
-    "explicacao": "A distracção prejudica a recolha e o processamento da informação necessária à condução. A opção A corresponde à chave extraída para esta pergunta."
+    "explicacao": "A distracção prejudica a recolha e o processamento da informação necessária à condução. A opção A corresponde à chave extraída para esta pergunta.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 11",
+      "src": "public/exames/exame11/exame11_8.jpg"
+    }
   },
   {
     "numero": 9,
@@ -125,7 +157,11 @@ window.EXAMES[11] = [
       "Pré-sinalização de via sem saída em frente."
     ],
     "correta": 0,
-    "explicacao": "O sinal representa uma pré-sinalização de via sem saída à direita. O condutor deve interpretar a indicação antes de escolher o percurso."
+    "explicacao": "O sinal representa uma pré-sinalização de via sem saída à direita. O condutor deve interpretar a indicação antes de escolher o percurso.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 11",
+      "src": "public/exames/exame11/exame11_9.jpg"
+    }
   },
   {
     "numero": 10,
@@ -139,7 +175,11 @@ window.EXAMES[11] = [
       "Com o motor ligado e acelerado."
     ],
     "correta": 1,
-    "explicacao": "A verificação do nível de óleo deve ser feita com o motor parado e frio, conforme a resposta indicada na fonte do exame."
+    "explicacao": "A verificação do nível de óleo deve ser feita com o motor parado e frio, conforme a resposta indicada na fonte do exame.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 11",
+      "src": "public/exames/exame11/exame11_10.jpg"
+    }
   },
   {
     "numero": 11,
@@ -153,7 +193,11 @@ window.EXAMES[11] = [
       "Que é proibido fazê-lo dentro das localidades."
     ],
     "correta": 2,
-    "explicacao": "A inversão do sentido de marcha deve ser efectuada num local e de uma forma que não prejudique o trânsito. O condutor deve verificar as condições de segurança antes de iniciar a manobra."
+    "explicacao": "A inversão do sentido de marcha deve ser efectuada num local e de uma forma que não prejudique o trânsito. O condutor deve verificar as condições de segurança antes de iniciar a manobra.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 11",
+      "src": "public/exames/exame11/exame11_11.jpg"
+    }
   },
   {
     "numero": 12,
@@ -167,7 +211,11 @@ window.EXAMES[11] = [
       "Fim da via com duas faixas de trânsito."
     ],
     "correta": 2,
-    "explicacao": "O sinal apresentado indica convergência de filas de trânsito. O condutor deve antecipar a junção dos fluxos e adaptar a posição e velocidade."
+    "explicacao": "O sinal apresentado indica convergência de filas de trânsito. O condutor deve antecipar a junção dos fluxos e adaptar a posição e velocidade.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 11",
+      "src": "public/exames/exame11/exame11_12.jpg"
+    }
   },
   {
     "numero": 13,
@@ -181,7 +229,11 @@ window.EXAMES[11] = [
       "Parar junto ao sinal."
     ],
     "correta": 1,
-    "explicacao": "O sinal proíbe a inversão do sentido de marcha. O condutor não deve realizar essa manobra no local sinalizado."
+    "explicacao": "O sinal proíbe a inversão do sentido de marcha. O condutor não deve realizar essa manobra no local sinalizado.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 11",
+      "src": "public/exames/exame11/exame11_13.jpg"
+    }
   },
   {
     "numero": 14,
@@ -195,7 +247,11 @@ window.EXAMES[11] = [
       "Não é obrigatório, mas é aconselhável."
     ],
     "correta": 0,
-    "explicacao": "O cinto de segurança nos lugares traseiros protege os ocupantes e reduz também o risco de estes causarem lesões aos outros passageiros numa colisão."
+    "explicacao": "O cinto de segurança nos lugares traseiros protege os ocupantes e reduz também o risco de estes causarem lesões aos outros passageiros numa colisão.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 11",
+      "src": "public/exames/exame11/exame11_14.jpg"
+    }
   },
   {
     "numero": 15,
@@ -209,7 +265,11 @@ window.EXAMES[11] = [
       "Do proprietário do veículo."
     ],
     "correta": 2,
-    "explicacao": "Durante o exame de condução, a responsabilidade pelas contravenções praticadas é atribuída ao examinando, de acordo com a resposta indicada na fonte."
+    "explicacao": "Durante o exame de condução, a responsabilidade pelas contravenções praticadas é atribuída ao examinando, de acordo com a resposta indicada na fonte.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 11",
+      "src": "public/exames/exame11/exame11_15.jpg"
+    }
   },
   {
     "numero": 16,
@@ -223,7 +283,11 @@ window.EXAMES[11] = [
       "Sim, pela direita ou pela esquerda, sempre que o veículo não esteja em movimento."
     ],
     "correta": 1,
-    "explicacao": "Se o veículo da frente assinala que vai virar à direita, a resposta indicada permite ultrapassar pela esquerda, desde que a manobra possa ser realizada sem perigo."
+    "explicacao": "Se o veículo da frente assinala que vai virar à direita, a resposta indicada permite ultrapassar pela esquerda, desde que a manobra possa ser realizada sem perigo.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 11",
+      "src": "public/exames/exame11/exame11_16.jpg"
+    }
   },
   {
     "numero": 17,
@@ -237,7 +301,11 @@ window.EXAMES[11] = [
       "Sentido obrigatório para a esquerda."
     ],
     "correta": 2,
-    "explicacao": "O sinal representa um sentido obrigatório giratório. O condutor deve seguir o sentido indicado pela sinalização."
+    "explicacao": "O sinal representa um sentido obrigatório giratório. O condutor deve seguir o sentido indicado pela sinalização.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 11",
+      "src": "public/exames/exame11/exame11_17.jpg"
+    }
   },
   {
     "numero": 18,
@@ -251,7 +319,11 @@ window.EXAMES[11] = [
       "60 km/h."
     ],
     "correta": 1,
-    "explicacao": "A chave extraída indica 40 km/h como velocidade instantânea que não devem exceder ciclomotores e quadriciclos dentro das localidades."
+    "explicacao": "A chave extraída indica 40 km/h como velocidade instantânea que não devem exceder ciclomotores e quadriciclos dentro das localidades.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 11",
+      "src": "public/exames/exame11/exame11_18.jpg"
+    }
   },
   {
     "numero": 19,
@@ -265,7 +337,11 @@ window.EXAMES[11] = [
       "E iluminá-lo eficazmente, numa distância não superior a 100 metros."
     ],
     "correta": 0,
-    "explicacao": "As luzes de cruzamento devem iluminar eficazmente a via sem projectar o feixe para uma distância superior à indicada na opção A."
+    "explicacao": "As luzes de cruzamento devem iluminar eficazmente a via sem projectar o feixe para uma distância superior à indicada na opção A.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 11",
+      "src": "public/exames/exame11/exame11_19.jpg"
+    }
   },
   {
     "numero": 20,
@@ -279,7 +355,11 @@ window.EXAMES[11] = [
       "Melhora a atenção do condutor."
     ],
     "correta": 2,
-    "explicacao": "A fadiga reduz a capacidade de concentração e compromete a segurança. O condutor deve evitar conduzir quando não está em condições de manter atenção adequada."
+    "explicacao": "A fadiga reduz a capacidade de concentração e compromete a segurança. O condutor deve evitar conduzir quando não está em condições de manter atenção adequada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 11",
+      "src": "public/exames/exame11/exame11_20.jpg"
+    }
   },
   {
     "numero": 21,
@@ -293,7 +373,11 @@ window.EXAMES[11] = [
       "Pela pouca presença de peões."
     ],
     "correta": 0,
-    "explicacao": "A condução urbana caracteriza-se por uma grande intensidade de trânsito, com interacções frequentes entre veículos e outros utentes da via."
+    "explicacao": "A condução urbana caracteriza-se por uma grande intensidade de trânsito, com interacções frequentes entre veículos e outros utentes da via.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 11",
+      "src": "public/exames/exame11/exame11_21.jpg"
+    }
   },
   {
     "numero": 22,
@@ -307,7 +391,11 @@ window.EXAMES[11] = [
       "Sim."
     ],
     "correta": 2,
-    "explicacao": "A resposta indicada na fonte é a opção C, que assinala a proibição de transportar bebidas alcoólicas na parte do veículo reservada aos passageiros."
+    "explicacao": "A resposta indicada na fonte é a opção C, que assinala a proibição de transportar bebidas alcoólicas na parte do veículo reservada aos passageiros.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 11",
+      "src": "public/exames/exame11/exame11_22.jpg"
+    }
   },
   {
     "numero": 23,
@@ -321,7 +409,11 @@ window.EXAMES[11] = [
       "Baia indicadora de curva perigosa."
     ],
     "correta": 1,
-    "explicacao": "A baia de cor amarela e preta apresentada é uma baia limitadora de altura. O condutor deve observar a altura do veículo e respeitar a limitação indicada."
+    "explicacao": "A baia de cor amarela e preta apresentada é uma baia limitadora de altura. O condutor deve observar a altura do veículo e respeitar a limitação indicada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 11",
+      "src": "public/exames/exame11/exame11_23.jpg"
+    }
   },
   {
     "numero": 24,
@@ -335,7 +427,11 @@ window.EXAMES[11] = [
       "São os meios humanos e materiais utilizados para a remoção dos acidentados."
     ],
     "correta": 2,
-    "explicacao": "Primeiros socorros são os cuidados imediatos prestados a alguém que se feriu ou adoeceu subitamente, para preservar a vida e evitar o agravamento da situação."
+    "explicacao": "Primeiros socorros são os cuidados imediatos prestados a alguém que se feriu ou adoeceu subitamente, para preservar a vida e evitar o agravamento da situação.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 11",
+      "src": "public/exames/exame11/exame11_24.jpg"
+    }
   },
   {
     "numero": 25,
@@ -349,6 +445,10 @@ window.EXAMES[11] = [
       "O sistema de som"
     ],
     "correta": 1,
-    "explicacao": "A revisão periódica dos pneus, amortecedores e travões contribui para manter as condições de segurança e o comportamento adequado do veículo."
+    "explicacao": "A revisão periódica dos pneus, amortecedores e travões contribui para manter as condições de segurança e o comportamento adequado do veículo.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 11",
+      "src": "public/exames/exame11/exame11_25.jpg"
+    }
   }
 ];

@@ -1,4 +1,4 @@
-// Exame 17 — conteúdo publicado sem imagens; associação visual pendente.
+// Exame 17 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[17] = [
   {
@@ -6,7 +6,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica a marca rodoviária branca?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 17",
+      "src": "public/exames/exame17/exame17_1.jpg"
+    },
     "opcoes": [
       "Indica a existência de bandas sonoras.",
       "Indica a existência de lombas.",
@@ -21,7 +24,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de informação?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 17",
+      "src": "public/exames/exame17/exame17_2.jpg"
+    },
     "opcoes": [
       "Inicio da faixa reservada para táxis do lado esquerdo.",
       "Parque de estacionamento para táxis.",
@@ -36,7 +42,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Quando existe dificuldade na recolha de informação, a velocidade:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 17",
+      "src": "public/exames/exame17/exame17_3.jpg"
+    },
     "opcoes": [
       "Deve diminuir.",
       "Deve aumentar.",
@@ -51,7 +60,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Se perceber o principio de um incêndio:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 17",
+      "src": "public/exames/exame17/exame17_4.jpg"
+    },
     "opcoes": [
       "Actue de imediato, desligando o motor do veículo e utilizando um extintor.",
       "Actue de imediato, desligando as luzes do veículo e utilizando um extintor.",
@@ -66,7 +78,10 @@ window.EXAMES[17] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "O que deve ser ajustado antes de iniciar a marcha?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 17",
+      "src": "public/exames/exame17/exame17_5.jpg"
+    },
     "opcoes": [
       "De forma folgada o cinto de segurança.",
       "A distância do assento aos pedais, à inclinação das costas do banco e o encosto de cabeça.",
@@ -81,7 +96,10 @@ window.EXAMES[17] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "A distância de segurança entre veículos em marcha depende:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 17",
+      "src": "public/exames/exame17/exame17_6.jpg"
+    },
     "opcoes": [
       "Apenas da pressão do condutor.",
       "De que circulem em auto-estrada, podendo ser mais pequenas neste caso.",
@@ -96,7 +114,10 @@ window.EXAMES[17] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "Se um indivíduo atingir uma TAS de 1,2 g/l às 0 horas, só por volta das:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 17",
+      "src": "public/exames/exame17/exame17_7.jpg"
+    },
     "opcoes": [
       "8 horas do dia seguinte é que terá eliminado completamente o álcool no seu sangue.",
       "22 horas do dia seguinte é que terá eliminado completamente o álcool no seu sangue.",
@@ -111,7 +132,10 @@ window.EXAMES[17] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Quem exceder de 30 km/h a 60 km/h de velocidade (automóveis ligeiros e motociclos) os limites, fora das localidade é punido:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 17",
+      "src": "public/exames/exame17/exame17_8.jpg"
+    },
     "opcoes": [
       "Com multa de 2.000,00 Mt e contravenção média.",
       "Com multa de 3.000,00 Mt e contravenção média.",
@@ -126,7 +150,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Desde o anoitecer até o amanhecer, pode deixar as luzes de cruzamento acesas quando o veículo estiver estacionado?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 17",
+      "src": "public/exames/exame17/exame17_9.jpg"
+    },
     "opcoes": [
       "Sim, é obrigatório.",
       "Não, é proibido.",
@@ -141,7 +168,10 @@ window.EXAMES[17] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Quais são os efeitos mais comuns da fadiga ao volante?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 17",
+      "src": "public/exames/exame17/exame17_10.jpg"
+    },
     "opcoes": [
       "Sentir fome e sede o que provoca a necessidade de se deslocar com maior velocidade para chegar mais rápido ao seu destino.",
       "A dificuldade de manter o veículo, dentro dos limites da faixa de rodagem.",
@@ -156,7 +186,10 @@ window.EXAMES[17] = [
     "tema": "Comportamento e segurança do condutor",
     "dificuldade": "média",
     "enunciado": "Deve ter alguma precaução especial quando circula dentro das localidades?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 17",
+      "src": "public/exames/exame17/exame17_11.jpg"
+    },
     "opcoes": [
       "Não.",
       "Sim, moderar a velocidade, especialmente nas vias marginadas por edificações.",
@@ -171,7 +204,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 17",
+      "src": "public/exames/exame17/exame17_12.jpg"
+    },
     "opcoes": [
       "Indicação de aproximação de entrada de auto-estrada.",
       "Indicação de aproximação de entrada de via rápida.",
@@ -186,7 +222,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "Ao perceber que existe um acidente ou vitima de doença súbita, deve:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 17",
+      "src": "public/exames/exame17/exame17_13.jpg"
+    },
     "opcoes": [
       "Colocar o triângulo de sinalização, no mínimo a 25 metros do local do acidente e de forma a ser visível a pelo menos 100 metros.",
       "Colocar o triângulo de sinalização, no mínimo a 25 metros do local do acidente e de forma a ser visível a pelo menos 150 metros.",
@@ -201,7 +240,10 @@ window.EXAMES[17] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Como deve actuar perante a diminuição de aderência, que provoca aumento da distância de travagem?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 17",
+      "src": "public/exames/exame17/exame17_14.jpg"
+    },
     "opcoes": [
       "Aumentar a velocidade.",
       "A diminuição da aderência diminui a distância de travagem.",
@@ -216,7 +258,10 @@ window.EXAMES[17] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "Como deve ser feita a carga e descarga de um veículo na via pública?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 17",
+      "src": "public/exames/exame17/exame17_15.jpg"
+    },
     "opcoes": [
       "Pela retaguarda ou pelo lado da faixa de rodagem junto da qual o veículo esteja parado ou estacionado.",
       "Sempre pela retaguarda.",
@@ -231,7 +276,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O sinal realizado pelo operador da obra, indica:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 17",
+      "src": "public/exames/exame17/exame17_16.jpg"
+    },
     "opcoes": [
       "Paragem obrigatória.",
       "Aproximação de uma estrada com prioridade.",
@@ -246,7 +294,10 @@ window.EXAMES[17] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "Os condutores não podem exceder as seguintes velocidades instantâneas (em km/h):",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 17",
+      "src": "public/exames/exame17/exame17_17.jpg"
+    },
     "opcoes": [
       "Automóveis ligeiros de passageiros e mistos sem reboque dentro das localidades 50, fora das localidades 120.",
       "Automóveis ligeiros de passageiros e mistos sem reboque dentro das localidades 60, fora das localidades 120.",
@@ -261,7 +312,10 @@ window.EXAMES[17] = [
     "tema": "Álcool, substâncias e comportamento",
     "dificuldade": "média",
     "enunciado": "A ingestão de drogas:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 17",
+      "src": "public/exames/exame17/exame17_18.jpg"
+    },
     "opcoes": [
       "Não afecta o equilíbrio e a personalidade do condutor.",
       "Só afecta a personalidade do condutor.",
@@ -276,7 +330,10 @@ window.EXAMES[17] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "Deve ajustar o banco e o volante para:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 17",
+      "src": "public/exames/exame17/exame17_19.jpg"
+    },
     "opcoes": [
       "Que o condutor esteja posicionado o mais próximo do volante.",
       "Que o condutor possa manusear o rádio, o GPS e o telemóvel em segurança.",
@@ -291,7 +348,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 17",
+      "src": "public/exames/exame17/exame17_20.jpg"
+    },
     "opcoes": [
       "Bois ou vacas.",
       "Animais.",
@@ -306,7 +366,10 @@ window.EXAMES[17] = [
     "tema": "Veículos, ocupantes e carga",
     "dificuldade": "média",
     "enunciado": "Para ter a posição mais correcta, o condutor deve ter em conta:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 17",
+      "src": "public/exames/exame17/exame17_21.jpg"
+    },
     "opcoes": [
       "A morfologia física, a utilização eficaz dos controles e comandos de segurança e o conforto do condutor.",
       "O ajuste do cinto de segurança e a fácil regulação dos espelhos retrovisores.",
@@ -321,7 +384,10 @@ window.EXAMES[17] = [
     "tema": "Circulação, velocidade e manobras",
     "dificuldade": "média",
     "enunciado": "O condutor que pretenda mudar de direcção para a esquerda deve:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 17",
+      "src": "public/exames/exame17/exame17_22.jpg"
+    },
     "opcoes": [
       "Aproximar-se, com a necessária antecedência, da margem direita da faixa de rodagem e efectuar a manobra no trajecto mais curto.",
       "Aproximar-se, com a necessária antecedência, da margem esquerda da faixa de rodagem e efectuar a manobra no trajecto mais longo.",
@@ -336,7 +402,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 17",
+      "src": "public/exames/exame17/exame17_23.jpg"
+    },
     "opcoes": [
       "Parque de estacionamento para veículos de 12 toneladas.",
       "Parque de estacionamento para veículos de alta tonelagem.",
@@ -351,7 +420,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 17",
+      "src": "public/exames/exame17/exame17_24.jpg"
+    },
     "opcoes": [
       "Pista obrigatória para veículos de tracção manual.",
       "Pista obrigatória para peões.",
@@ -366,7 +438,10 @@ window.EXAMES[17] = [
     "tema": "Sinalização e regras da via",
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 17",
+      "src": "public/exames/exame17/exame17_25.jpg"
+    },
     "opcoes": [
       "Obrigação de ceder passagem no próximo cruzamento.",
       "Paragem obrigatória.",

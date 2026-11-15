@@ -1,4 +1,4 @@
-// Exame 12 — conteúdo adaptado da extracção do APK. Imagens serão adicionadas numa etapa posterior.
+// Exame 12 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[12] = [
   {
@@ -13,7 +13,11 @@ window.EXAMES[12] = [
       "Pelos passeios, se empurram um veículo de tracção manual."
     ],
     "correta": 0,
-    "explicacao": "Os peões devem utilizar os passeios, pistas ou passagens que lhes são destinados. Quando estes não existam, devem circular pelas bermas, respeitando as condições de segurança."
+    "explicacao": "Os peões devem utilizar os passeios, pistas ou passagens que lhes são destinados. Quando estes não existam, devem circular pelas bermas, respeitando as condições de segurança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 1 do Exame 12",
+      "src": "public/exames/exame12/exame12_1.jpg"
+    }
   },
   {
     "numero": 2,
@@ -27,7 +31,11 @@ window.EXAMES[12] = [
       "Sim, excepto os causados pelo mau estado dos pneus."
     ],
     "correta": 1,
-    "explicacao": "Os acidentes podem ser evitados ou ter consequências reduzidas através de aprendizagem, prevenção, atenção e respeito pelas regras de trânsito."
+    "explicacao": "Os acidentes podem ser evitados ou ter consequências reduzidas através de aprendizagem, prevenção, atenção e respeito pelas regras de trânsito.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 2 do Exame 12",
+      "src": "public/exames/exame12/exame12_2.jpg"
+    }
   },
   {
     "numero": 3,
@@ -41,7 +49,11 @@ window.EXAMES[12] = [
       "Melhora a estabilidade do veículo"
     ],
     "correta": 1,
-    "explicacao": "Quando os travões actuam de forma desigual nas rodas do mesmo eixo, o veículo pode desviar-se da trajectória pretendida, comprometendo a estabilidade e o controlo."
+    "explicacao": "Quando os travões actuam de forma desigual nas rodas do mesmo eixo, o veículo pode desviar-se da trajectória pretendida, comprometendo a estabilidade e o controlo.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 3 do Exame 12",
+      "src": "public/exames/exame12/exame12_3.jpg"
+    }
   },
   {
     "numero": 4,
@@ -55,7 +67,11 @@ window.EXAMES[12] = [
       "Trânsito proibido a máquinas agrícolas rebocadas."
     ],
     "correta": 2,
-    "explicacao": "O sinal apresentado indica trânsito proibido a tractores agrícolas. O condutor deve respeitar a restrição representada na sinalização."
+    "explicacao": "O sinal apresentado indica trânsito proibido a tractores agrícolas. O condutor deve respeitar a restrição representada na sinalização.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 4 do Exame 12",
+      "src": "public/exames/exame12/exame12_4.jpg"
+    }
   },
   {
     "numero": 5,
@@ -69,7 +85,11 @@ window.EXAMES[12] = [
       "Fazer a manobra, mesmo que prejudique o trânsito."
     ],
     "correta": 2,
-    "explicacao": "Se a largura da via não permite inverter o sentido de marcha sem prejudicar o trânsito, deve prosseguir até encontrar um local adequado para efectuar a manobra."
+    "explicacao": "Se a largura da via não permite inverter o sentido de marcha sem prejudicar o trânsito, deve prosseguir até encontrar um local adequado para efectuar a manobra.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 5 do Exame 12",
+      "src": "public/exames/exame12/exame12_5.jpg"
+    }
   },
   {
     "numero": 6,
@@ -83,7 +103,11 @@ window.EXAMES[12] = [
       "Não, excepto quando os peões já tenham iniciado a travessia."
     ],
     "correta": 2,
-    "explicacao": "Ao mudar de direcção, o condutor deve ceder passagem aos peões que estejam a atravessar a faixa de rodagem, tendo especial atenção aos utentes vulneráveis."
+    "explicacao": "Ao mudar de direcção, o condutor deve ceder passagem aos peões que estejam a atravessar a faixa de rodagem, tendo especial atenção aos utentes vulneráveis.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 6 do Exame 12",
+      "src": "public/exames/exame12/exame12_6.jpg"
+    }
   },
   {
     "numero": 7,
@@ -97,7 +121,11 @@ window.EXAMES[12] = [
       "Reduz a sua agressividade na condução"
     ],
     "correta": 1,
-    "explicacao": "O álcool pode aumentar a autoconfiança e levar o condutor a avaliar mal os riscos, favorecendo comportamentos perigosos e decisões inadequadas."
+    "explicacao": "O álcool pode aumentar a autoconfiança e levar o condutor a avaliar mal os riscos, favorecendo comportamentos perigosos e decisões inadequadas.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 7 do Exame 12",
+      "src": "public/exames/exame12/exame12_7.jpg"
+    }
   },
   {
     "numero": 8,
@@ -111,7 +139,11 @@ window.EXAMES[12] = [
       "Fim da proibição de estacionamento."
     ],
     "correta": 1,
-    "explicacao": "O sinal apresentado corresponde a uma proibição de paragem. O condutor deve evitar imobilizar voluntariamente o veículo no local abrangido."
+    "explicacao": "O sinal apresentado corresponde a uma proibição de paragem. O condutor deve evitar imobilizar voluntariamente o veículo no local abrangido.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 8 do Exame 12",
+      "src": "public/exames/exame12/exame12_8.jpg"
+    }
   },
   {
     "numero": 9,
@@ -125,7 +157,11 @@ window.EXAMES[12] = [
       "Pista obrigatória para ciclistas."
     ],
     "correta": 0,
-    "explicacao": "A imagem representa uma passagem de peões. O condutor deve moderar a velocidade e estar preparado para parar para permitir a travessia em segurança."
+    "explicacao": "A imagem representa uma passagem de peões. O condutor deve moderar a velocidade e estar preparado para parar para permitir a travessia em segurança.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 9 do Exame 12",
+      "src": "public/exames/exame12/exame12_9.jpg"
+    }
   },
   {
     "numero": 10,
@@ -139,7 +175,11 @@ window.EXAMES[12] = [
       "Sim, quando o automóvel não tenha nenhum cinto de segurança"
     ],
     "correta": 0,
-    "explicacao": "Uma criança com menos de três anos pode viajar no banco da frente nas condições indicadas na opção A, incluindo sistema de retenção voltado para trás e airbag frontal desactivado."
+    "explicacao": "Uma criança com menos de três anos pode viajar no banco da frente nas condições indicadas na opção A, incluindo sistema de retenção voltado para trás e airbag frontal desactivado.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 10 do Exame 12",
+      "src": "public/exames/exame12/exame12_10.jpg"
+    }
   },
   {
     "numero": 11,
@@ -153,7 +193,11 @@ window.EXAMES[12] = [
       "0,8 mg/l no ar expirado ou 1,2 mg/l no sangue."
     ],
     "correta": 0,
-    "explicacao": "A opção A apresenta os valores indicados na chave extraída para a taxa de álcool considerada na pergunta. A resposta foi mantida conforme a fonte do exame."
+    "explicacao": "A opção A apresenta os valores indicados na chave extraída para a taxa de álcool considerada na pergunta. A resposta foi mantida conforme a fonte do exame.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 11 do Exame 12",
+      "src": "public/exames/exame12/exame12_11.jpg"
+    }
   },
   {
     "numero": 12,
@@ -167,7 +211,11 @@ window.EXAMES[12] = [
       "O aumento da frequência das pulsações por minuto"
     ],
     "correta": 1,
-    "explicacao": "A inconsciência é um estado em que o funcionamento normal do cérebro está comprometido, podendo a pessoa não responder adequadamente aos estímulos."
+    "explicacao": "A inconsciência é um estado em que o funcionamento normal do cérebro está comprometido, podendo a pessoa não responder adequadamente aos estímulos.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 12 do Exame 12",
+      "src": "public/exames/exame12/exame12_12.jpg"
+    }
   },
   {
     "numero": 13,
@@ -181,7 +229,11 @@ window.EXAMES[12] = [
       "10 metros."
     ],
     "correta": 1,
-    "explicacao": "Em caso de avaria, o sinal de pré-sinalização deve ficar visível a uma distância de pelo menos 100 metros, de acordo com a resposta indicada na fonte."
+    "explicacao": "Em caso de avaria, o sinal de pré-sinalização deve ficar visível a uma distância de pelo menos 100 metros, de acordo com a resposta indicada na fonte.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 13 do Exame 12",
+      "src": "public/exames/exame12/exame12_13.jpg"
+    }
   },
   {
     "numero": 14,
@@ -195,7 +247,11 @@ window.EXAMES[12] = [
       "Sim, apenas não ficar imobilizado nos cruzamentos e entroncamentos."
     ],
     "correta": 2,
-    "explicacao": "Nas localidades, o condutor deve moderar a velocidade, sobretudo em vias ladeadas por edifícios, onde podem surgir peões e outros perigos de forma inesperada."
+    "explicacao": "Nas localidades, o condutor deve moderar a velocidade, sobretudo em vias ladeadas por edifícios, onde podem surgir peões e outros perigos de forma inesperada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 14 do Exame 12",
+      "src": "public/exames/exame12/exame12_14.jpg"
+    }
   },
   {
     "numero": 15,
@@ -209,7 +265,11 @@ window.EXAMES[12] = [
       "Proibição de circulação de veículos pesados."
     ],
     "correta": 2,
-    "explicacao": "A marca rodoviária amarela apresentada indica proibição de estacionamento. O condutor deve respeitar a marcação e não deixar o veículo estacionado nesse local."
+    "explicacao": "A marca rodoviária amarela apresentada indica proibição de estacionamento. O condutor deve respeitar a marcação e não deixar o veículo estacionado nesse local.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 15 do Exame 12",
+      "src": "public/exames/exame12/exame12_15.jpg"
+    }
   },
   {
     "numero": 16,
@@ -223,7 +283,11 @@ window.EXAMES[12] = [
       "Aproximação de uma passagem de nível sem guarda."
     ],
     "correta": 2,
-    "explicacao": "O sinal de perigo alerta para a existência de sinalização luminosa à frente. O condutor deve reduzir a velocidade e preparar-se para obedecer aos sinais luminosos."
+    "explicacao": "O sinal de perigo alerta para a existência de sinalização luminosa à frente. O condutor deve reduzir a velocidade e preparar-se para obedecer aos sinais luminosos.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 16 do Exame 12",
+      "src": "public/exames/exame12/exame12_16.jpg"
+    }
   },
   {
     "numero": 17,
@@ -237,7 +301,11 @@ window.EXAMES[12] = [
       "Sim, se existir espaço suficiente para os três na faixa de rodagem."
     ],
     "correta": 1,
-    "explicacao": "Não se deve iniciar uma ultrapassagem quando o veículo da frente já assinalou a intenção de ultrapassar. É necessário aguardar uma oportunidade segura."
+    "explicacao": "Não se deve iniciar uma ultrapassagem quando o veículo da frente já assinalou a intenção de ultrapassar. É necessário aguardar uma oportunidade segura.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 17 do Exame 12",
+      "src": "public/exames/exame12/exame12_17.jpg"
+    }
   },
   {
     "numero": 18,
@@ -251,7 +319,11 @@ window.EXAMES[12] = [
       "Honestidade"
     ],
     "correta": 1,
-    "explicacao": "A responsabilidade, a cortesia, as boas maneiras e a honestidade são virtudes profissionais. O egoísmo não contribui para uma condução segura e respeitosa."
+    "explicacao": "A responsabilidade, a cortesia, as boas maneiras e a honestidade são virtudes profissionais. O egoísmo não contribui para uma condução segura e respeitosa.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 18 do Exame 12",
+      "src": "public/exames/exame12/exame12_18.jpg"
+    }
   },
   {
     "numero": 19,
@@ -265,7 +337,11 @@ window.EXAMES[12] = [
       "Obrigação de circular à velocidade máxima de 60 km/h."
     ],
     "correta": 0,
-    "explicacao": "O sinal apresentado indica a obrigação de circular a uma velocidade mínima de 60 km/h na fila da direita, conforme a chave extraída da fonte."
+    "explicacao": "O sinal apresentado indica a obrigação de circular a uma velocidade mínima de 60 km/h na fila da direita, conforme a chave extraída da fonte.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 19 do Exame 12",
+      "src": "public/exames/exame12/exame12_19.jpg"
+    }
   },
   {
     "numero": 20,
@@ -279,7 +355,11 @@ window.EXAMES[12] = [
       "Sim, mas apenas durante as primeiras horas da manhã."
     ],
     "correta": 1,
-    "explicacao": "O sono pode provocar acidentes também durante o dia. A sonolência reduz a atenção e a capacidade de reacção, independentemente da hora."
+    "explicacao": "O sono pode provocar acidentes também durante o dia. A sonolência reduz a atenção e a capacidade de reacção, independentemente da hora.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 20 do Exame 12",
+      "src": "public/exames/exame12/exame12_20.jpg"
+    }
   },
   {
     "numero": 21,
@@ -293,7 +373,11 @@ window.EXAMES[12] = [
       "Sim, mas apenas com o motor acelerado."
     ],
     "correta": 2,
-    "explicacao": "O condutor pode verificar o nível do óleo do motor, desde que conheça e siga o procedimento correcto de verificação."
+    "explicacao": "O condutor pode verificar o nível do óleo do motor, desde que conheça e siga o procedimento correcto de verificação.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 21 do Exame 12",
+      "src": "public/exames/exame12/exame12_21.jpg"
+    }
   },
   {
     "numero": 22,
@@ -307,7 +391,11 @@ window.EXAMES[12] = [
       "Pista obrigatória para veículos de transporte colectivo."
     ],
     "correta": 1,
-    "explicacao": "O sinal indica uma pista obrigatória para veículos de tracção animal. Os restantes utentes devem respeitar a separação indicada."
+    "explicacao": "O sinal indica uma pista obrigatória para veículos de tracção animal. Os restantes utentes devem respeitar a separação indicada.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 22 do Exame 12",
+      "src": "public/exames/exame12/exame12_22.jpg"
+    }
   },
   {
     "numero": 23,
@@ -321,7 +409,11 @@ window.EXAMES[12] = [
       "Luzes de presença ou luzes de emergência."
     ],
     "correta": 0,
-    "explicacao": "Para iluminar a via, os condutores utilizam as luzes de médios ou máximos, escolhendo a opção adequada às condições de circulação para não encandear outros utentes."
+    "explicacao": "Para iluminar a via, os condutores utilizam as luzes de médios ou máximos, escolhendo a opção adequada às condições de circulação para não encandear outros utentes.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 23 do Exame 12",
+      "src": "public/exames/exame12/exame12_23.jpg"
+    }
   },
   {
     "numero": 24,
@@ -335,7 +427,11 @@ window.EXAMES[12] = [
       "80 km/h."
     ],
     "correta": 0,
-    "explicacao": "A resposta indicada na fonte para motociclos simples fora das localidades é 90 km/h. A chave foi mantida conforme a extracção do APK."
+    "explicacao": "A resposta indicada na fonte para motociclos simples fora das localidades é 90 km/h. A chave foi mantida conforme a extracção do APK.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 24 do Exame 12",
+      "src": "public/exames/exame12/exame12_24.jpg"
+    }
   },
   {
     "numero": 25,
@@ -349,6 +445,10 @@ window.EXAMES[12] = [
       "Sim, mas apenas fora das cidades."
     ],
     "correta": 1,
-    "explicacao": "A mulher grávida deve utilizar o cinto de segurança, correctamente colocado, para reduzir o risco de lesões para si e para a criança em caso de acidente."
+    "explicacao": "A mulher grávida deve utilizar o cinto de segurança, correctamente colocado, para reduzir o risco de lesões para si e para a criança em caso de acidente.",
+    "imagem": {
+      "descricao": "Imagem original da pergunta 25 do Exame 12",
+      "src": "public/exames/exame12/exame12_25.jpg"
+    }
   }
 ];
