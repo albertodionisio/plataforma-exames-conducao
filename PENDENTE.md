@@ -7,7 +7,7 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 ## Interface (FE-)
 
 ## FE-012 — Exigir login ao seleccionar um exame e retomar a selecção após autenticação
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-ESTRADA-10 — 2026-11-16 — ficheiros: config.js (activação Google OAuth) — último sinal: 2026-11-16
 - Nota: o dono autorizou expressamente a sobreposição limitada com as tarefas de interface em curso, exclusivamente para a integração do Supabase; preservar todas as alterações concorrentes e não alterar lógica fora do fluxo de autenticação.
 - Pedido: permitir que qualquer visitante navegue pela aplicação e consulte o catálogo sem iniciar sessão. Quando clicar em qualquer exame, gratuito ou pago, se ainda não estiver autenticado, encaminhar automaticamente para o ecrã de login/registo. Depois de autenticar com sucesso, regressar automaticamente ao mesmo exame que tinha seleccionado, sem obrigar o utilizador a voltar ao catálogo ou a procurá-lo. Só depois da autenticação deve ser permitido iniciar a tentativa.
 - Onde mexer: fluxo de navegação/autenticação em `app.js`, `index.html` e estilos/componentes de autenticação necessários; testes de fluxo. Verificar também a secção de autenticação em `docs/ESTRADA_Especificacao_Tecnica.md` e a arquitectura existente antes de escolher ou configurar um fornecedor.
