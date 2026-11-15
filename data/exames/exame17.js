@@ -1,4 +1,4 @@
-// Exame 17 — 25 perguntas adaptadas do APK, com imagens do aplicativo original.
+// Exame 17 — 25 perguntas adaptadas do APK, com imagens do aplicativo original e sinais do PDF oficial de sinais.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[17] = [
   {
@@ -7,7 +7,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O que indica a marca rodoviária branca?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 1 do Exame 17",
+      "descricao": "Estrada com marcas rodoviárias brancas pintadas no pavimento, com trânsito ao fundo.",
       "src": "public/exames/exame17/exame17_1.jpg"
     },
     "opcoes": [
@@ -25,8 +25,8 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de informação?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 2 do Exame 17",
-      "src": "public/exames/exame17/exame17_2.jpg"
+      "descricao": "Sinal G13 do PDF oficial: Área reservada para táxis.",
+      "src": "public/sinais/G13-area-reservada-taxis.png"
     },
     "opcoes": [
       "Inicio da faixa reservada para táxis do lado esquerdo.",
@@ -43,7 +43,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Quando existe dificuldade na recolha de informação, a velocidade:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 3 do Exame 17",
+      "descricao": "Estrada com trânsito, seta pintada no pavimento e painéis de direcção à beira da via.",
       "src": "public/exames/exame17/exame17_3.jpg"
     },
     "opcoes": [
@@ -61,7 +61,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Se perceber o principio de um incêndio:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 4 do Exame 17",
+      "descricao": "Dois camiões acidentados na berma de uma estrada.",
       "src": "public/exames/exame17/exame17_4.jpg"
     },
     "opcoes": [
@@ -79,7 +79,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O que deve ser ajustado antes de iniciar a marcha?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 5 do Exame 17",
+      "descricao": "Condutor sentado ao volante, com o assento regulado, visto de lado.",
       "src": "public/exames/exame17/exame17_5.jpg"
     },
     "opcoes": [
@@ -97,7 +97,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "A distância de segurança entre veículos em marcha depende:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 6 do Exame 17",
+      "descricao": "Dois veículos todo-o-terreno numa estrada de terra batida.",
       "src": "public/exames/exame17/exame17_6.jpg"
     },
     "opcoes": [
@@ -115,7 +115,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Se um indivíduo atingir uma TAS de 1,2 g/l às 0 horas, só por volta das:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 7 do Exame 17",
+      "descricao": "Aparelho de medição de álcool (etilómetro) na mão de uma pessoa, com a leitura 0,00.",
       "src": "public/exames/exame17/exame17_7.jpg"
     },
     "opcoes": [
@@ -133,7 +133,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Quem exceder de 30 km/h a 60 km/h de velocidade (automóveis ligeiros e motociclos) os limites, fora das localidade é punido:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 8 do Exame 17",
+      "descricao": "Agente de trânsito a regular a circulação numa avenida junto ao mar.",
       "src": "public/exames/exame17/exame17_8.jpg"
     },
     "opcoes": [
@@ -151,7 +151,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Desde o anoitecer até o amanhecer, pode deixar as luzes de cruzamento acesas quando o veículo estiver estacionado?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 9 do Exame 17",
+      "descricao": "Luzes acesas de um automóvel, à noite.",
       "src": "public/exames/exame17/exame17_9.jpg"
     },
     "opcoes": [
@@ -169,7 +169,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Quais são os efeitos mais comuns da fadiga ao volante?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 10 do Exame 17",
+      "descricao": "Condutor a bocejar ao volante.",
       "src": "public/exames/exame17/exame17_10.jpg"
     },
     "opcoes": [
@@ -187,7 +187,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Deve ter alguma precaução especial quando circula dentro das localidades?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 11 do Exame 17",
+      "descricao": "Trânsito intenso numa avenida da cidade, com um agente ao fundo.",
       "src": "public/exames/exame17/exame17_11.jpg"
     },
     "opcoes": [
@@ -205,8 +205,8 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 12 do Exame 17",
-      "src": "public/exames/exame17/exame17_12.jpg"
+      "descricao": "Painel amarelo do PDF oficial: Indicação de aproximação de saída de auto-estrada.",
+      "src": "public/sinais/sem-codigo-indicacao-aproximacao-saida-auto-estrada.png"
     },
     "opcoes": [
       "Indicação de aproximação de entrada de auto-estrada.",
@@ -223,7 +223,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Ao perceber que existe um acidente ou vitima de doença súbita, deve:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 13 do Exame 17",
+      "descricao": "Acidente grave numa estrada, com veículos destruídos e pessoas a prestar socorro.",
       "src": "public/exames/exame17/exame17_13.jpg"
     },
     "opcoes": [
@@ -241,7 +241,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Como deve actuar perante a diminuição de aderência, que provoca aumento da distância de travagem?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 14 do Exame 17",
+      "descricao": "Estrada molhada pela chuva, vista através do pára-brisas.",
       "src": "public/exames/exame17/exame17_14.jpg"
     },
     "opcoes": [
@@ -259,7 +259,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Como deve ser feita a carga e descarga de um veículo na via pública?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 15 do Exame 17",
+      "descricao": "Veículo estacionado na rua com a mala aberta e duas pessoas a mexer na carga.",
       "src": "public/exames/exame17/exame17_15.jpg"
     },
     "opcoes": [
@@ -277,7 +277,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O sinal realizado pelo operador da obra, indica:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 16 do Exame 17",
+      "descricao": "Zona de obras na estrada, com um trabalhador de colete reflector e um sinal triangular de obras.",
       "src": "public/exames/exame17/exame17_16.jpg"
     },
     "opcoes": [
@@ -295,7 +295,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Os condutores não podem exceder as seguintes velocidades instantâneas (em km/h):",
     "imagem": {
-      "descricao": "Imagem original da pergunta 17 do Exame 17",
+      "descricao": "Rua de terra com trânsito e veículos estacionados.",
       "src": "public/exames/exame17/exame17_17.jpg"
     },
     "opcoes": [
@@ -313,7 +313,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "A ingestão de drogas:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 18 do Exame 17",
+      "descricao": "Embalagens de medicamentos sobre uma mesa.",
       "src": "public/exames/exame17/exame17_18.jpg"
     },
     "opcoes": [
@@ -331,7 +331,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Deve ajustar o banco e o volante para:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 19 do Exame 17",
+      "descricao": "Condutor sentado ao volante, visto de lado, com o cinto de segurança.",
       "src": "public/exames/exame17/exame17_19.jpg"
     },
     "opcoes": [
@@ -349,7 +349,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 20 do Exame 17",
+      "descricao": "Sinal A50 do PDF oficial: Animais.",
       "src": "public/sinais/A50-sinal-pdf.png"
     },
     "opcoes": [
@@ -367,7 +367,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "Para ter a posição mais correcta, o condutor deve ter em conta:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 21 do Exame 17",
+      "descricao": "Condutor com as mãos no volante, visto de perfil.",
       "src": "public/exames/exame17/exame17_21.jpg"
     },
     "opcoes": [
@@ -385,7 +385,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O condutor que pretenda mudar de direcção para a esquerda deve:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 22 do Exame 17",
+      "descricao": "Pessoa em cadeira de rodas junto à passagem de peões, com um automóvel parado.",
       "src": "public/exames/exame17/exame17_22.jpg"
     },
     "opcoes": [
@@ -403,8 +403,8 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 23 do Exame 17",
-      "src": "public/exames/exame17/exame17_23.jpg"
+      "descricao": "Painel amarelo do PDF oficial: Parque de estacionamento para veículos de alta tonelagem.",
+      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png"
     },
     "opcoes": [
       "Parque de estacionamento para veículos de 12 toneladas.",
@@ -421,8 +421,8 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 24 do Exame 17",
-      "src": "public/exames/exame17/exame17_24.jpg"
+      "descricao": "Sinal F50 do PDF oficial: Pistas obrigatórias para peões e velocípedes.",
+      "src": "public/sinais/F50-pistas-obrigatorias-peoes-velocipedes.png"
     },
     "opcoes": [
       "Pista obrigatória para veículos de tracção manual.",
@@ -439,7 +439,7 @@ window.EXAMES[17] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 25 do Exame 17",
+      "descricao": "Sinal A9 do PDF oficial: Paragem obrigatória (pré-sinalização).",
       "src": "public/sinais/A9-sinal-pdf.png"
     },
     "opcoes": [
