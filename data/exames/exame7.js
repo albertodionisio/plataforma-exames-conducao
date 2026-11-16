@@ -25,8 +25,8 @@ window.EXAMES[7] = [
     "dificuldade": "fácil",
     "enunciado": "Num parque, o condutor vê o sinal amarelo da imagem, com a letra R e o desenho de uma ambulância. Qual é o seu significado?",
     "imagem": {
-      "descricao": "Sinal amarelo com ambulância e a letra R",
-      "src": "public/exames/exame7/exame7_2.jpg"
+      "descricao": "Sinal amarelo com a letra R e o desenho de uma carrinha com um círculo vermelho com a letra A",
+      "src": "public/sinais/sem-codigo-area-reservada-veiculos-emergencia.png"
     },
     "opcoes": [
       "Área reservada para veículos de polícia.",
@@ -167,9 +167,9 @@ window.EXAMES[7] = [
     "numero": 10,
     "tema": "Sinais dos agentes",
     "dificuldade": "fácil",
-    "enunciado": "O agente regulador de trânsito que aparece na fotografia está em cima de um estrado, com os braços abertos na horizontal. O que ordena?",
+    "enunciado": "O agente regulador de trânsito que aparece na fotografia está em cima de um estrado, com um braço levantado na vertical e o outro estendido na horizontal. O que ordena?",
     "imagem": {
-      "descricao": "Agente de trânsito com os braços abertos, em cima de um estrado, num cruzamento",
+      "descricao": "Agente de trânsito em cima de um estrado, com um braço levantado na vertical e o outro estendido na horizontal",
       "src": "public/exames/exame7/exame7_10.jpg"
     },
     "opcoes": [
@@ -179,7 +179,7 @@ window.EXAMES[7] = [
       "Deixar passar o trânsito de todos os lados."
     ],
     "correta": 0,
-    "explicacao": "Com os braços abertos o agente manda parar quem vem à sua frente e atrás, e deixa passar o trânsito dos lados. A ordem do agente vale mais do que o semáforo e do que os outros sinais."
+    "explicacao": "O braço levantado na vertical manda parar o trânsito que vem da frente do agente, e o braço estendido na horizontal manda parar o que vem da retaguarda. Feitos ao mesmo tempo, os dois gestos mandam parar o trânsito da frente e da retaguarda. A ordem do agente vale mais do que o semáforo e do que os outros sinais."
   },
   {
     "numero": 11,
@@ -314,7 +314,7 @@ window.EXAMES[7] = [
     "enunciado": "Junto a uma rua, o condutor vê o sinal amarelo da imagem, com a letra P e a indicação 60 min. O que significa?",
     "imagem": {
       "descricao": "Sinal amarelo com a letra P e a indicação 60 min",
-      "src": "public/exames/exame7/exame7_18.jpg"
+      "src": "public/sinais/sem-codigo-parque-estacionamento-limitado-60-min.png"
     },
     "opcoes": [
       "Parque de estacionamento com tempo limitado a 60 minutos.",
@@ -350,7 +350,7 @@ window.EXAMES[7] = [
     "enunciado": "Num parque de camiões, o condutor vê o sinal amarelo da imagem, com a letra P e um losango com o número 12. O que indica?",
     "imagem": {
       "descricao": "Sinal amarelo com a letra P e um losango com o número 12",
-      "src": "public/exames/exame7/exame7_20.jpg"
+      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png"
     },
     "opcoes": [
       "Parque de estacionamento para veículos de 12 toneladas exactas.",
