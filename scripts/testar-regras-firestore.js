@@ -1,0 +1,133 @@
+"use strict";
+
+const fs = require("node:fs");
+const {
+  initializeTestEnvironment,
+  assertFails,
+  assertSucceeds
+} = require("@firebase/rules-unit-testing");
+const {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  updateDoc,
+  where
+} = require("firebase/firestore");
+
+async function main() {
+  const projectId = "demo-estrada";
+  const rules = fs.readFileSync("firestore.rules", "utf8");
+  const testEnv = await initializeTestEnvironment({
+    projectId,
+    firestore: { rules }
+  });
+
+  try {
+    await testEnv.clearFirestore();
+
+    const alice = testEnv.authenticatedContext("alice", {
+      email: "alice@example.test",
+      email_verified: true
+    }).firestore();
+    const bob = testEnv.authenticatedContext("bob", {
+      email: "bob@example.test",
+      email_verified: true
+    }).firestore();
+    const unverified = testEnv.authenticatedContext("unverified", {
+      email: "unverified@example.test",
+      email_verified: false
+    }).firestore();
+    const anonymous = testEnv.unauthenticatedContext().firestore();
+
+    // Dados de servidor: a API privilegiada contorna as regras de cliente.
+    await testEnv.withSecurityRulesDisabled(async (context) => {
+      const admin = context.firestore();
+      await setDoc(doc(admin, "exam_attempts/alice-attempt"), {
+        uid: "alice", score: 18.4, status: "approved"
+      });
+      await setDoc(doc(admin, "exam_attempts/bob-attempt"), {
+        uid: "bob", score: 16.8, status: "failed"
+      });
+      await setDoc(doc(admin, "subscriptions/alice"), {
+        uid: "alice", plan: "monthly", active: true
+      });
+      await setDoc(doc(admin, "subscriptions/bob"), {
+        uid: "bob", plan: "weekly", active: true
+      });
+      await setDoc(doc(admin, "payment_transactions/alice-payment"), {
+        uid: "alice", status: "confirmed", amount: 150
+      });
+      await setDoc(doc(admin, "payment_transactions/bob-payment"), {
+        uid: "bob", status: "confirmed", amount: 80
+      });
+    });
+
+    // Perfis: negar anónimo, acesso a terceiros e criação sem email verificado.
+    await assertFails(getDoc(doc(anonymous, "users/alice")));
+    await assertFails(getDoc(doc(bob, "users/alice")));
+    await assertFails(setDoc(doc(unverified, "users/unverified"), {
+      uid: "unverified",
+      email: "unverified@example.test"
+    }));
+
+    await assertSucceeds(setDoc(doc(alice, "users/alice"), {
+      uid: "alice",
+      email: "alice@example.test",
+      displayName: "Alice",
+      createdAt: new Date()
+    }));
+    await assertSucceeds(updateDoc(doc(alice, "users/alice"), {
+      displayName: "Alice B.",
+      updatedAt: new Date()
+    }));
+    await assertFails(updateDoc(doc(alice, "users/alice"), {
+      email: "attacker@example.test"
+    }));
+    await assertFails(updateDoc(doc(alice, "users/alice"), {
+      uid: "bob"
+    }));
+    await assertFails(getDocs(collection(alice, "users")));
+
+    // Tentativas: só leitura do próprio registo; lista exige filtro pelo UID.
+    await assertSucceeds(getDoc(doc(alice, "exam_attempts/alice-attempt")));
+    await assertFails(getDoc(doc(alice, "exam_attempts/bob-attempt")));
+    await assertSucceeds(getDocs(query(
+      collection(alice, "exam_attempts"),
+      where("uid", "==", "alice")
+    )));
+    await assertFails(getDocs(collection(alice, "exam_attempts")));
+    await assertFails(setDoc(doc(alice, "exam_attempts/fake"), {
+      uid: "alice", score: 20
+    }));
+    await assertFails(updateDoc(doc(alice, "exam_attempts/alice-attempt"), {
+      score: 20
+    }));
+
+    // Assinaturas e pagamentos: leitura própria, nenhuma escrita pelo cliente.
+    await assertSucceeds(getDoc(doc(alice, "subscriptions/alice")));
+    await assertFails(getDoc(doc(alice, "subscriptions/bob")));
+    await assertFails(setDoc(doc(alice, "subscriptions/alice"), {
+      uid: "alice", plan: "premium", active: true
+    }));
+    await assertSucceeds(getDoc(doc(alice, "payment_transactions/alice-payment")));
+    await assertFails(getDoc(doc(alice, "payment_transactions/bob-payment")));
+    await assertFails(setDoc(doc(alice, "payment_transactions/fake"), {
+      uid: "alice", status: "confirmed", amount: 999999
+    }));
+
+    // Negação por omissão para colecções não previstas.
+    await assertFails(getDoc(doc(alice, "admin/secrets")));
+
+    console.log("APROVADO: regras Firestore — perfis, tentativas, assinaturas, pagamentos e default-deny.");
+  } finally {
+    await testEnv.cleanup();
+  }
+}
+
+main().catch((error) => {
+  console.error("FALHOU: testes das regras Firestore", error);
+  process.exitCode = 1;
+});
