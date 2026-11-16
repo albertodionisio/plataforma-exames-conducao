@@ -341,13 +341,133 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Os estados de CI para os commits mais recentes não foram devolvidos pelos endpoints de status consultados; por isso, não declarar CI aprovado nesta etapa. O teste visual no navegador permanece reservado ao dono.
 - Cuidados: não duplicar tarefas anteriores; não alterar questões sem base legal; manter as respostas equilibradas e sem padrão fixo.
 
-## DADOS-063 — Reformular os Exames 36 a 51 segundo o guia de perguntas
-- Estado: LIVRE (uma sessão por exame ou por pequeno grupo; reservar escrevendo o intervalo neste campo)
-- Pedido: os Exames 36–51 citam artigos em todas as explicações («(Art. 23.º.)»), têm vários enunciados «Segundo o Código…» e, em 13 a 22 de cada 25 perguntas, a resposta certa é a mais comprida. Reescrever as 25 perguntas e explicações de cada um em forma de situação, como os Exames 34 e 35 (modelos recentes) e os Exames 1–30.
-- Onde mexer: `data/exames/exameN.js` e `docs/referencias-exames/exameN-mapeamento.md`.
-- Regras: seguir `docs/GUIA-PERGUNTAS.md`; manter os mesmos temas e a ordem das perguntas para a tabela do mapa continuar válida (se mudar a regra de uma pergunta, actualizar a linha); confirmar cada resposta no Código; sem artigos nem multas nos textos; correcta não é a única mais longa em mais de 6 perguntas; posições equilibradas e não cíclicas.
-- Pronto quando: `node scripts/auditar-estilo.js N` sem «<-- rever», validador a passar, nota no mapa, e a tarefa removida deste ficheiro com linha CONCLUÍDA no `HISTORICO.md`.
-- Cuidados: antes de reescrever, ver se existe tarefa DADOS-039 a 061 reservada para o mesmo exame e coordenar; não alterar ficheiros partilhados.
+## DADOS-063 — Reformular o Exame 36 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 36 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame36.js` e `docs/referencias-exames/exame36-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 36`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-064 — Reformular o Exame 37 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 37 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame37.js` e `docs/referencias-exames/exame37-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 37`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-065 — Reformular o Exame 38 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 38 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame38.js` e `docs/referencias-exames/exame38-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 38`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-066 — Reformular o Exame 39 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 39 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame39.js` e `docs/referencias-exames/exame39-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 39`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-067 — Reformular o Exame 40 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 40 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame40.js` e `docs/referencias-exames/exame40-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 40`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-068 — Reformular o Exame 41 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 41 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame41.js` e `docs/referencias-exames/exame41-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 41`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-069 — Reformular o Exame 42 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 42 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame42.js` e `docs/referencias-exames/exame42-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 42`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-070 — Reformular o Exame 43 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 43 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame43.js` e `docs/referencias-exames/exame43-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 43`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-071 — Reformular o Exame 44 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 44 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame44.js` e `docs/referencias-exames/exame44-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 44`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-072 — Reformular o Exame 45 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 45 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame45.js` e `docs/referencias-exames/exame45-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 45`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-073 — Reformular o Exame 46 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 46 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame46.js` e `docs/referencias-exames/exame46-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 46`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-074 — Reformular o Exame 47 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 47 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame47.js` e `docs/referencias-exames/exame47-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 47`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-075 — Reformular o Exame 48 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 48 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame48.js` e `docs/referencias-exames/exame48-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 48`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-076 — Reformular o Exame 49 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 49 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame49.js` e `docs/referencias-exames/exame49-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 49`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-077 — Reformular o Exame 50 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 50 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame50.js` e `docs/referencias-exames/exame50-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 50`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
+## DADOS-078 — Reformular o Exame 51 (situações, sem artigos)
+- Estado: LIVRE
+- Pedido: reescrever as 25 perguntas e explicações do Exame 51 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
+- Onde mexer: `data/exames/exame51.js` e `docs/referencias-exames/exame51-mapeamento.md`.
+- Medir antes e depois: `node scripts/auditar-estilo.js 51`.
+- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
 ## DADOS-062 — Equilibrar extensão das alternativas do Exame 1
 - Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 23:11 UTC+02 — ficheiros: data/exames/exame1.js, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:12 UTC+02

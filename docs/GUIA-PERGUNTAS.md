@@ -2,6 +2,12 @@
 
 Vale para **todos** os exames (APK ou conteúdo original). A regra de fundo está em `REGRAS.md` («Finalidade dos exames e forma das perguntas»); este guia diz como a aplicar. Exemplos de referência: Exames 1–30, 34 e 35.
 
+## Regra do dono (não reabrir)
+
+- **Nunca** escrever «Segundo o Código da Estrada…», «De acordo com o artigo…» ou citar artigos, n.os ou alíneas, nem na pergunta nem nas alternativas nem na explicação.
+- A pergunta é **sempre uma situação** do dia-a-dia; a explicação ensina o que fazer e porquê. Os artigos ficam só no mapa de cada exame.
+- Este guia pode ser corrigido e completado por qualquer sessão: quando o dono der uma nova indicação sobre o estilo, acrescentá-la aqui e registar no `HISTORICO.md`.
+
 ## A ideia
 
 O exame treina e ensina. Pergunta-se **a situação que o artigo trata**, nunca o artigo. O candidato lê uma cena concreta, decide o que fazer, e na revisão percebe porquê.
