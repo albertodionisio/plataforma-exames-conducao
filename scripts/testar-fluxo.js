@@ -66,6 +66,10 @@ const vm = require("node:vm");
       authState.calls.push({method:"registo",email,password});
       return Promise.resolve({data:{session:null,user:{email}},error:null});
     },
+    signInWithOAuth({provider,options}){
+      authState.calls.push({method:"google",provider,options});
+      return Promise.resolve({data:{provider,url:"https://accounts.google.com/o/oauth2/auth"},error:null});
+    },
     signOut(){
       authState.session=null;
       if(authState.listener)authState.listener("SIGNED_OUT",null);
@@ -248,7 +252,11 @@ const vm = require("node:vm");
   await navegar("#/exames");
   await navegar("#/exame/42");
   assert.equal(localStorage.getItem("estrada.exame.pendente"),"42","Uma nova selecção deve ser guardada");
-  assert.ok(app.innerHTML.includes("Continuar com Google — brevemente"),"Google deve permanecer desactivado até configurar OAuth");
+  assert.ok(app.innerHTML.includes("Continuar com Google"),"O botão Google deve estar disponível quando OAuth está activado");
+  assert.ok(!app.innerHTML.includes("Google — brevemente"),"O botão Google não deve aparecer como indisponível");
+  app.click("auth-google");
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.ok(authState.calls.some(c=>c.method==="google" && c.provider==="google"),"O botão deve iniciar OAuth Google pelo Supabase");
   app.click("auth-mode");
   assert.ok(app.innerHTML.includes("Criar conta"),"Deve existir modo de registo");
   const senhaCurta={"#auth-email":{value:"candidato@estrada.test"},"#auth-password":{value:"1234567"}};
