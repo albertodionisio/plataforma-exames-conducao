@@ -34,7 +34,6 @@
               authUser = null;
               authReady = true;
               renderConta();
-              firebaseAuth.signOut().catch(function () {});
               if (!initialised) { initialised = true; resolve(); }
               return;
             }
