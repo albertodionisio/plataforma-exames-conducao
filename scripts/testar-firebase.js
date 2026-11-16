@@ -15,7 +15,7 @@ assert.strictEqual(app.firebase.authDomain, "plataforma-exames-conducao.vercel.a
 const previewHost = "plataforma-exames-conducao-git-feat-firebase-full-preview.vercel.app";
 const previewContext = { window: { location: { hostname: previewHost } } };
 vm.runInNewContext(configSource, previewContext);
-assert.strictEqual(previewContext.window.APP.firebase.authDomain, previewHost, "O preview Vercel deve usar o próprio domínio como authDomain.");
+assert.strictEqual(previewContext.window.APP.firebase.authDomain, "plataforma-exames-conducao.firebaseapp.com", "Previews Vercel devem usar o domínio Firebase padrão para evitar callbacks OAuth únicos por deployment.");
 const localContext = { window: { location: { hostname: "localhost" } } };
 vm.runInNewContext(configSource, localContext);
 assert.strictEqual(localContext.window.APP.firebase.authDomain, "plataforma-exames-conducao.firebaseapp.com", "Ambiente local deve usar o domínio Firebase padrão.");
