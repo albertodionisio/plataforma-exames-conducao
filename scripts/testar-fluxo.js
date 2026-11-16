@@ -266,6 +266,9 @@ const vm = require("node:vm");
   console.log("FE-002 PASSOU: hashchange assíncrono, cronómetro, foco, ausência de feedback, submissão automática/manual, confirmação de brancas, notas 20,0/18,4/17,6, semáforo, revisão e persistência após recarregar.");
 
   // BE-002: visitante pode navegar, mas precisa de autenticação Firebase antes de iniciar um exame.
+  // Reabre temporariamente os exames no contexto isolado para testar a retoma após login.
+  context.window.APP.modoTesteAcessoPago=true;
+  context.window.APP.examesAbertosTeste=[1,51];
   authState.user=null;
   if(authState.listener)authState.listener(null);
   await navegar("#/exames");
