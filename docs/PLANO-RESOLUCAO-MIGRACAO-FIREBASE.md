@@ -107,7 +107,7 @@ Não é necessário executar agora qualquer passo manual. Só será solicitada i
 
 | Etapa | Estado | Evidência / observação |
 |---|---|---|
-| 1. Estado-base | Em grande parte concluída | Comparação GitHub e relatório técnico de 2026-11-16 |
+| 1. Estado-base | Concluída | Branch e PR localizadas; `main` HEAD `fc08c00`; merge-base `7cde108`; Firebase branch commit do plano `c0da8e2`; comparação: 69 à frente, 12 atrás, 26 ficheiros diferentes. Valores reconfirmados em 2026-11-16. |
 | 2. Sincronização | Por fazer | 68 à frente / 12 atrás; requer análise dos commits |
 | 3. Testes de fluxo | Por fazer | Falha reportada em foco após resposta |
 | 4. Preview real | Por fazer | Preview reportado como antigo; validar commit e fluxos |
