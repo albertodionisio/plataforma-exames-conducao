@@ -49,7 +49,7 @@ Uma CDN pode reduzir pedidos à origem e transferência de origem, mas cada entr
 - Confirmar no navegador que `service-worker.js` está registado e que os caches `estrada-cache-exames-v1` e `estrada-cache-media-v1` recebem ficheiros.
 - Testar primeiro acesso online, segundo acesso, modo offline, ficheiro expirado, actualização após novo deploy e logout.
 - A quota física da Cache API é gerida pelo navegador/dispositivo; não existe um limite universal de MB/GB definido por esta aplicação.
-- Esta implementação usa o CDN do Netlify, porque o repositório actual contém `netlify.toml` e o build publica em `dist/`. Não presume que a Vercel esteja a servir a versão actualmente publicada.
+- A configuração inclui tanto Vercel (`vercel.json`) como Netlify (`netlify.toml`), porque o repositório mantém os dois caminhos de publicação. O domínio principal do projecto é Vercel; nessa plataforma, os ficheiros estáticos são distribuídos pela CDN automaticamente, e os cabeçalhos `Cache-Control` definem a validade de cache. A configuração Netlify mantém compatibilidade se o projecto também for publicado lá.
 
 ## Limites conhecidos desta primeira entrega
 
