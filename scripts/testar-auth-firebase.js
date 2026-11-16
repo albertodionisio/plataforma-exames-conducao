@@ -16,7 +16,8 @@ const {
   sendPasswordResetEmail,
   confirmPasswordReset,
   signOut,
-  deleteUser
+  deleteUser,
+  signInWithEmailAndPassword
 } = require("firebase/auth");
 
 const PROJECT_ID = "demo-estrada";
@@ -74,12 +75,7 @@ async function main() {
     await confirmPasswordReset(auth, resetCode, NEW_PASSWORD);
     await signOut(auth);
 
-    const signedIn = await createUserWithEmailAndPassword(auth, "segundo@estrada.test", PASSWORD)
-      .then(async (created) => {
-        await deleteUser(created.user);
-        return signInWithNewPassword();
-      });
-
+    const signedIn = (await signInWithEmailAndPassword(auth, EMAIL, NEW_PASSWORD)).user;
     assert.equal(signedIn.email, EMAIL);
     assert.equal(signedIn.emailVerified, true);
     console.log("APROVADO: Auth Emulator — registo, verificação de email, recuperação e login com nova palavra-passe.");
@@ -93,10 +89,6 @@ async function main() {
     await deleteApp(app);
   }
 
-  async function signInWithNewPassword() {
-    const { signInWithEmailAndPassword } = require("firebase/auth");
-    return (await signInWithEmailAndPassword(auth, EMAIL, NEW_PASSWORD)).user;
-  }
 }
 
 main().catch((error) => {
