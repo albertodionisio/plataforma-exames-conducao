@@ -3,7 +3,6 @@
 Não reabrir estas decisões sem o dono pedir.
 
 ## Produto
-- **Como escrever:** ver `docs/GUIA-PERGUNTAS.md` (estrutura da pergunta, alternativas, explicação, exemplos) e verificar com `node scripts/auditar-estilo.js N`.
 - **Designação oficial:** usar «exame/exames» em toda a interface, catálogo, planos, documentação e comunicação da plataforma. Não reduzir a apresentação do produto a uma simples ferramenta de treino.
 - Nome provisório: **ESTRADA**. Muda-se só em `config.js`.
 - Exames de condução em Moçambique: 25 perguntas, cronómetro de 60 minutos, sem indicação de certo/errado nem explicação durante a realização; 0,8 valores por resposta certa e limiar de aprovação de 18 valores. Depois da submissão, apresentar resultado final e permitir revisão comentada de todas as perguntas.
@@ -25,6 +24,7 @@ Não reabrir estas decisões sem o dono pedir.
 - As perguntas avaliam a **situação que a matéria trata** (por exemplo, o que fazer perante excesso de velocidade, quem cede passagem numa rotunda), e nunca o número ou o nome de um artigo. Não se pergunta «que artigo fala de…».
 - As explicações descrevem o **contexto e o motivo da regra** na situação em causa, para o candidato perceber e conseguir aplicar na estrada. Não citam artigos nem números de artigos; esses ficam só no mapa de rastreabilidade de cada exame (`docs/referencias-exames/`).
 - Estas regras aplicam-se a todos os exames, tanto aos modelados a partir do APK como aos de conteúdo original.
+- **Como escrever:** ver `docs/GUIA-PERGUNTAS.md` (estrutura da pergunta, alternativas, explicação, exemplos) e verificar com `node scripts/auditar-estilo.js N`.
 
 ## Interface e identidade visual
 - **Não utilizar emojis na interface do ESTRADA.** Substituir emojis usados como elementos visuais por ícones próprios e consistentes, adequados à função e ao local onde aparecem (por exemplo: navegação, acções, categorias, estados e funcionalidades).
