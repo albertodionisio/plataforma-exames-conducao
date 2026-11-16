@@ -1,0 +1,16 @@
+name: Validar integração Firebase
+on:
+  push:
+    branches: [main, "feat/firebase-full-migration"]
+  pull_request:
+    branches: [main]
+jobs:
+  firebase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validar configuração e integração Firebase
+        run: node scripts/testar-firebase.js
