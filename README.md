@@ -32,17 +32,10 @@ O repositório GitHub é a fonte principal do projecto. Consultar `INSTRUCOES.md
 Não guardar chaves, tokens, passwords nem ficheiros `.env` no repositório. O APK original está em `original/` apenas como referência de trabalho e fica excluído da publicação do site.
 
 
-## Autenticação Supabase (FE-012)
+## Firebase Authentication e Firestore
 
-A autenticação por email e palavra-passe usa o projecto Supabase ESTRADA (ldtvbmmweqiaggmsicnu). O URL do projecto e a chave publishable ficam em config.js; esta chave é pública e foi concebida para uso no frontend. Nunca substituir por uma chave service_role ou por qualquer chave secreta.
+A migração para Firebase está em curso na branch `feat/firebase-full-migration`. O frontend usa Firebase Authentication para email/palavra-passe, confirmação de email, recuperação, Google e sessão persistente. O perfil mínimo é sincronizado em `users/{uid}` no Cloud Firestore, sujeito à publicação das regras.
 
-Antes de testar registos e confirmações por email:
-1. No Supabase, abrir Authentication → URL Configuration.
-2. Definir Site URL para o endereço público real do site ESTRADA no Netlify.
-3. Adicionar esse mesmo endereço à lista Redirect URLs. Acrescentar também o endereço local de desenvolvimento, se for usado.
-4. Em Authentication → Sign In / Providers, confirmar que o fornecedor Email está activo.
-5. Se a confirmação de email estiver activa, o utilizador deve abrir o link recebido antes de iniciar sessão.
+A configuração Web pública fica em `config.js`. Não guardar credenciais Admin, service-account, tokens ou segredos no repositório. O domínio Vercel está preparado como `authDomain` através de rewrites `/__/auth/*`; requer teste em Preview Deployment e autorização do domínio no Firebase/Google OAuth antes de ser considerado activo.
 
-O login Google está preparado no código, mas permanece desactivado (googleOAuthEnabled: false). Para o activar, criar as credenciais OAuth no Google Cloud, configurar o fornecedor Google no painel Supabase e só então mudar a opção para true. O Client Secret do Google fica guardado apenas no painel Supabase, nunca em config.js, no GitHub ou no frontend.
-
-Nesta fase, as contas são geridas pelo Supabase Auth. Ainda não foi criada uma tabela pública de perfis nem uma base de dados de tentativas, resultados ou assinaturas; esses módulos devem ter tarefas e modelos próprios.
+Ver `docs/firebase/README.md` para arquitectura, serviços adiados, activação e validação. Firestore não recebe perguntas nem imagens estáticas. Tentativas, resultados, assinaturas e pagamentos continuam bloqueados para escrita pelo cliente até existir backend confiável. A migração não apaga o projecto nem os dados antigos do Supabase.
