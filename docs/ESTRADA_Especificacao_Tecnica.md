@@ -222,8 +222,8 @@ Proposta REST/JSON sob `/api/v1`. Documentar o contrato final com OpenAPI. Os en
 | Método/rota | Acesso | Finalidade |
 |---|---|---|
 | GET /me | Autenticado | Perfil e verificação. |
-| POST /auth/phone/start | Autenticado | Enviar código SMS. |
-| POST /auth/phone/confirm | Autenticado | Confirmar código. |
+| Firebase Auth — Email/Password | Público | Registo, login, verificação de email e recuperação de palavra-passe via SDK. |
+| Firebase Auth — Google | Público | Autenticação OAuth Google via SDK. |
 | GET /simulations | Público/autenticado | Catálogo e bloqueios. |
 | POST /attempts | Autenticado | Iniciar exame se autorizado. |
 | GET /attempts/{id} | Dono/admin | Estado e perguntas. |
@@ -262,7 +262,7 @@ O backend calcula o resultado a partir das respostas guardadas; nunca aceita a n
 
 ---
 
-## 7. Autenticação, SMS e permissões
+## 7. Autenticação e permissões
 
 - **Fornecedor seleccionado para a primeira fase:** Firebase Authentication no projecto ESTRADA. A aplicação Web usa a configuração pública Firebase, persistência de sessão local e fornecedores Email/Password e Google.
 - Registo e login por email/palavra-passe, confirmação de email e recuperação de palavra-passe são tratados pelo Firebase Authentication. O início de qualquer exame exige utilizador autenticado; para contas Email/Password também exige email verificado. O catálogo continua público e o exame escolhido é preservado durante a autenticação.
