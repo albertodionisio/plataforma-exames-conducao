@@ -341,13 +341,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Os estados de CI para os commits mais recentes não foram devolvidos pelos endpoints de status consultados; por isso, não declarar CI aprovado nesta etapa. O teste visual no navegador permanece reservado ao dono.
 - Cuidados: não duplicar tarefas anteriores; não alterar questões sem base legal; manter as respostas equilibradas e sem padrão fixo.
 
-## DADOS-063 — Reformular o Exame 36 (situações, sem artigos)
-- Estado: EM CURSO — Claude-DADOS005 — 2026-11-16 10:45 UTC+02 — ficheiros: data/exames/exame36.js, docs/referencias-exames/exame36-mapeamento.md
-- Pedido: reescrever as 25 perguntas e explicações do Exame 36 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
-- Onde mexer: `data/exames/exame36.js` e `docs/referencias-exames/exame36-mapeamento.md`.
-- Medir antes e depois: `node scripts/auditar-estilo.js 36`.
-- Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
-- Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
 ## DADOS-064 — Reformular o Exame 37 (situações, sem artigos)
 - Estado: LIVRE
