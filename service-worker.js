@@ -7,38 +7,25 @@ var CACHE_MEDIA = CACHE_PREFIX + "media-v1";
 var CACHE_DIAS = 30 * 24 * 60 * 60 * 1000;
 var CACHE_MEDIA_DIAS = 365 * 24 * 60 * 60 * 1000;
 var SHELL = [
-  "/",
-  "/index.html",
-  "/config.js",
-  "/app.js",
-  "/styles.css",
-  "/styles-resultados.css",
-  "/manifest.webmanifest"
+  "/", "/index.html", "/config.js", "/app.js", "/styles.css",
+  "/styles-resultados.css", "/manifest.webmanifest"
 ];
 
 self.addEventListener("install", function (event) {
-  event.waitUntil(
-    caches.open(CACHE_SHELL).then(function (cache) {
-      return Promise.all(SHELL.map(function (url) {
-        return cache.add(url).catch(function () { return null; });
-      }));
-    }).then(function () {
-      return self.skipWaiting();
-    })
-  );
+  event.waitUntil(caches.open(CACHE_SHELL).then(function (cache) {
+    return Promise.all(SHELL.map(function (url) {
+      return cache.add(url).catch(function () { return null; });
+    }));
+  }).then(function () { return self.skipWaiting(); }));
 });
 
 self.addEventListener("activate", function (event) {
-  event.waitUntil(
-    caches.keys().then(function (keys) {
-      return Promise.all(keys.filter(function (key) {
-        return key.indexOf(CACHE_PREFIX) === 0 &&
-          [CACHE_SHELL, CACHE_EXAMES, CACHE_MEDIA].indexOf(key) === -1;
-      }).map(function (key) { return caches.delete(key); }));
-    }).then(function () {
-      return self.clients.claim();
-    })
-  );
+  event.waitUntil(caches.keys().then(function (keys) {
+    return Promise.all(keys.filter(function (key) {
+      return key.indexOf(CACHE_PREFIX) === 0 &&
+        [CACHE_SHELL, CACHE_EXAMES, CACHE_MEDIA].indexOf(key) === -1;
+    }).map(function (key) { return caches.delete(key); }));
+  }).then(function () { return self.clients.claim(); }));
 });
 
 function idadeDaResposta(response) {
@@ -64,20 +51,18 @@ function actualizarEmSegundoPlano(request, cache) {
   });
 }
 
-function cacheComValidade(request, cacheName, validade) {
+function cacheComValidade(event, request, cacheName, validade) {
   return caches.open(cacheName).then(function (cache) {
     return cache.match(request).then(function (guardada) {
       var valida = guardada && idadeDaResposta(guardada) < validade;
       if (valida) {
-        // Entrega imediatamente a cópia local e actualiza-a em segundo plano.
-        // A CDN partilhada responde a este pedido; não é uma leitura Firestore.
-        return Promise.resolve().then(function () {
-          actualizarEmSegundoPlano(request, cache).catch(function () {});
-          return guardada;
-        });
+        // A cópia local é entregue imediatamente. A CDN pode responder à
+        // revalidação sem consultar a origem da aplicação.
+        event.waitUntil(actualizarEmSegundoPlano(request, cache).catch(function () {}));
+        return guardada;
       }
       return actualizarEmSegundoPlano(request, cache).catch(function () {
-        // Se estiver sem rede, conserva a última cópia mesmo depois da validade.
+        // Offline: conservar e utilizar a última cópia disponível.
         if (guardada) return guardada;
         throw new Error("Conteúdo indisponível na rede e sem cópia local.");
       });
@@ -96,9 +81,8 @@ function eMediaPublica(url) {
 }
 
 function eRecursoBase(url) {
-  return url.origin === self.location.origin &&
-    ["/", "/index.html", "/config.js", "/app.js", "/styles.css",
-      "/styles-resultados.css", "/manifest.webmanifest"].indexOf(url.pathname) !== -1;
+  return ["/", "/index.html", "/config.js", "/app.js", "/styles.css",
+    "/styles-resultados.css", "/manifest.webmanifest"].indexOf(url.pathname) !== -1;
 }
 
 self.addEventListener("fetch", function (event) {
@@ -107,21 +91,23 @@ self.addEventListener("fetch", function (event) {
 
   var url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  // Nunca colocar sessões, autenticação, resultados ou dados pessoais em cache.
+  // Nunca guardar sessões, autenticação, resultados ou dados pessoais.
   if (/\/auth(?:\/|$)|\/api(?:\/|$)|\/rest\/v1(?:\/|$)|\/storage\/v1(?:\/|$)/i.test(url.pathname)) return;
 
   if (ePedidoDeExame(url)) {
-    event.respondWith(cacheComValidade(request, CACHE_EXAMES, CACHE_DIAS));
+    event.respondWith(cacheComValidade(event, request, CACHE_EXAMES, CACHE_DIAS));
     return;
   }
   if (eMediaPublica(url)) {
-    event.respondWith(cacheComValidade(request, CACHE_MEDIA, CACHE_MEDIA_DIAS));
+    event.respondWith(cacheComValidade(event, request, CACHE_MEDIA, CACHE_MEDIA_DIAS));
     return;
   }
   if (eRecursoBase(url)) {
     event.respondWith(caches.open(CACHE_SHELL).then(function (cache) {
       return fetch(request).then(function (response) {
-        if (response && response.ok) cache.put(request, response.clone()).catch(function () {});
+        if (response && response.ok) {
+          return cache.put(request, response.clone()).then(function () { return response; });
+        }
         return response;
       }).catch(function () {
         return cache.match(request).then(function (guardada) {
