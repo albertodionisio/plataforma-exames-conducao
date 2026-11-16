@@ -44,14 +44,14 @@ Perguntas, alternativas, explicações e imagens estáticas permanecem em `data/
 
 ## Domínio Vercel no fluxo Google
 
-O `vercel.json` encaminha transparentemente `/__/auth/*` e `/__/firebase/*` para os auxiliares do Firebase Authentication. O `authDomain` é escolhido em tempo de execução: usa o hostname actual quando termina em `.vercel.app` (produção ou Preview) e usa `plataforma-exames-conducao.firebaseapp.com` em localhost/outros hosts. Assim, o preview testa o seu próprio proxy e a produção usa o domínio Vercel principal. Isto segue a opção de reverse proxy documentada pelo Firebase e os rewrites externos do Vercel, mas **a compatibilidade ainda tem de ser confirmada com pedidos GET/POST e login Google completo**.
+O `vercel.json` encaminha `/__/auth/*` e `/__/firebase/*` para os auxiliares do Firebase Authentication. O `authDomain` usa `plataforma-exames-conducao.vercel.app` apenas no domínio de produção definitivo; localhost e todos os Preview deployments usam `plataforma-exames-conducao.firebaseapp.com`. Esta separação evita exigir um callback OAuth Google diferente para cada URL temporário de Preview. O proxy Vercel fica reservado à produção e só deve ser considerado validado depois de testar GET, POST e o login Google completo.
 
 Passos externos:
 1. Firebase Console → Authentication → Settings → Authorized domains: adicionar `plataforma-exames-conducao.vercel.app` e `plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app` (Preview Vercel actual).
 2. Firebase Console → Authentication → Sign-in method: confirmar Google e Email/Password activos.
-3. No Google Cloud OAuth Client associado ao Firebase, confirmar/adicionar os URIs de callback `https://plataforma-exames-conducao.vercel.app/__/auth/handler` (produção) e `https://plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app/__/auth/handler` (Preview actual). Manter o URI Firebase padrão até o novo fluxo passar.
-4. Criar Preview Deployment desta branch e verificar `/__/auth/handler`, `/__/auth/iframe` e pedidos POST, sem 302.
-5. Testar escolha de conta, autenticação e retorno ao exame pendente. Se o proxy falhar, reverter temporariamente `authDomain` para `plataforma-exames-conducao.firebaseapp.com`; não publicar um login quebrado.
+3. No Google Cloud OAuth Client associado ao Firebase, adicionar o URI de callback de produção `https://plataforma-exames-conducao.vercel.app/__/auth/handler`. Não adicionar callbacks para Preview: estes usam o `authDomain` Firebase padrão.
+4. Criar Preview Deployment desta branch e testar login Google/email com o domínio Firebase padrão.
+5. Depois do merge e deploy autorizado em produção, validar `/__/auth/handler` e `/__/auth/iframe` por GET/POST e completar o login através do proxy Vercel, sem 302. Se falhar, manter o domínio Firebase padrão até corrigir.
 
 ## Activação e validação
 
