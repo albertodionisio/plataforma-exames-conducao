@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -19,6 +19,6 @@ jobs:
       - name: Validar configuração e integração Firebase
         run: node scripts/testar-firebase.js
       - name: Instalar dependências temporárias do Emulator Suite
-        run: npm install --no-save --package-lock=false firebase @firebase/rules-unit-testing firebase-tools
+        run: npm install --no-save --package-lock=false 'firebase@^12' '@firebase/rules-unit-testing@^5' firebase-tools
       - name: Testar regras Firestore no emulador isolado
         run: npx firebase-tools emulators:exec --only firestore --project demo-estrada --config firebase.emulator.json "node scripts/testar-regras-firestore.js"
