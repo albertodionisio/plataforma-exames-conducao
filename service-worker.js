@@ -52,16 +52,22 @@ function actualizarEmSegundoPlano(request, cache) {
 }
 
 function cacheComValidade(event, request, cacheName, validade) {
-  return caches.open(cacheName).then(function (cache) {
+  var cachePromise = caches.open(cacheName);
+  var networkPromise = cachePromise.then(function (cache) {
+    return fetch(request).then(function (response) {
+      return guardarComData(cache, request, response).then(function () { return response; });
+    });
+  });
+
+  // Regista a actualização durante o próprio evento; a resposta local não espera
+  // pela rede, mas o navegador mantém o Service Worker activo até terminar.
+  event.waitUntil(networkPromise.then(function () {}).catch(function () {}));
+
+  return cachePromise.then(function (cache) {
     return cache.match(request).then(function (guardada) {
       var valida = guardada && idadeDaResposta(guardada) < validade;
-      if (valida) {
-        // A cópia local é entregue imediatamente. A CDN pode responder à
-        // revalidação sem consultar a origem da aplicação.
-        event.waitUntil(actualizarEmSegundoPlano(request, cache).catch(function () {}));
-        return guardada;
-      }
-      return actualizarEmSegundoPlano(request, cache).catch(function () {
+      if (valida) return guardada;
+      return networkPromise.catch(function () {
         // Offline: conservar e utilizar a última cópia disponível.
         if (guardada) return guardada;
         throw new Error("Conteúdo indisponível na rede e sem cópia local.");
