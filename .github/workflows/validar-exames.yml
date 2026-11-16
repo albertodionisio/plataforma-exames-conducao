@@ -11,6 +11,7 @@ on:
       - 'scripts/build-netlify.js'
       - 'scripts/testar-cache.js'
       - 'netlify.toml'
+      - 'vercel.json'
       - 'index.html'
       - 'service-worker.js'
       - 'cache-bootstrap.js'
