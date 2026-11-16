@@ -12,6 +12,10 @@ Vale para **todos** os exames (APK ou conteúdo original). A regra de fundo est�
 
 O exame treina e ensina. Pergunta-se **a situação que o artigo trata**, nunca o artigo. O candidato lê uma cena concreta, decide o que fazer, e na revisão percebe porquê.
 
+## Modelo de estilo: as perguntas do APK (decisão do dono, 2026-11-16)
+
+Ao reformular os Exames 31–51, seguir a lógica das perguntas do aplicativo original (`original/extraido/exameN.json`, Exames 1–30): enunciados curtos e directos, quase sempre uma cena concreta («Como proceder se observar pelo espelho a aproximação de uma ambulância?», «Pode inverter o sentido de marcha nesta situação?», «O que indica o sinal?»), alternativas simples e naturais, como diria um instrutor. Antes de reescrever um exame, ler 2 ou 3 exames do APK para apanhar o tom.
+
 ## Pergunta (enunciado)
 
 - Abre com uma **situação do dia-a-dia**: quem, onde, o que acontece. Ex.: «Um camião avariado ocupa parte de uma estrada estreita e dois carros chegam de lados opostos. Quem deve dar passagem?»

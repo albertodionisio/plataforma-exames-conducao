@@ -343,7 +343,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 ## DADOS-064 — Reformular o Exame 37 (situações, sem artigos)
-- Estado: LIVRE
+- Estado: EM CURSO — Claude-DADOS005 — 2026-11-16 11:45 UTC+02 — ficheiros: data/exames/exame37.js, docs/referencias-exames/exame37-mapeamento.md
 - Pedido: reescrever as 25 perguntas e explicações do Exame 37 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
 - Onde mexer: `data/exames/exame37.js` e `docs/referencias-exames/exame37-mapeamento.md`.
 - Medir antes e depois: `node scripts/auditar-estilo.js 37`.
