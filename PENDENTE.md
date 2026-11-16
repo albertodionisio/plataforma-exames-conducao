@@ -4,6 +4,14 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
+## BE-002 — Migrar a aplicação para Firebase e preparar serviços complementares
+- Estado: EM CURSO — ChatGPT-ESTRADA-FB2 — 2026-11-16 — ficheiros: app.js, index.html, config.js, firebase.json, firestore.rules, firestore.indexes.json, docs/firebase/, scripts/, README.md, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-16
+- Autorização: o dono pediu expressamente a migração global do Supabase para Firebase e confirmou a execução. Esta autorização permite sobreposição estritamente limitada às alterações necessárias à migração, preservando as alterações já feitas por outras sessões; não autoriza apagar projectos ou dados externos.
+- Pedido: tornar Firebase a plataforma principal do ESTRADA, substituindo serviços anteriores usados no código e preparando serviços adicionais adequados. Migrar autenticação (email/palavra-passe, verificação, recuperação, Google, sessão e logout), perfil Firestore e segurança; preparar backend confiável para tentativas, assinaturas e pagamentos; avaliar App Check, FCM, Analytics, Remote Config, Crashlytics e Storage. Manter perguntas/imagens estáticas e cache/CDN fora do Firestore.
+- Pronto quando: não restarem dependências operacionais do fornecedor anterior no frontend/documentação activa; Firebase SDK e configuração estiverem integrados sem segredos; fluxo de autenticação preservar catálogo público e exame pendente; regras Firestore forem revistas; serviços adicionais estiverem classificados; testes e passos externos documentados; alterações publicadas numa branch e PR, sem merge/deploy sem autorização.
+- Cuidados: não alterar perguntas, imagens, cronómetro, pontuação, preços, planos nem modo temporário de acesso; não permitir ao cliente escrever resultados, assinaturas ou pagamentos; não activar SMS; não colocar service-account, tokens, secrets ou .env no GitHub; não apagar projectos/dados externos anteriores. Serviços que exijam Blaze, billing, domínios ou credenciais ficam preparados e assinalados, não falsamente activos.
+
+
 ## Interface (FE-)
 
 ## FE-012 — Exigir login ao seleccionar um exame e retomar a selecção após autenticação
