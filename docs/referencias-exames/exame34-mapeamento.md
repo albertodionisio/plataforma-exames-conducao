@@ -38,7 +38,7 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 | 9 | Ultrapassagem | Regra do lado de passagem | 43.º | 16 | Não |
 | 10 | Excepção | Ultrapassagem de veículos sobre carris | 43.º | 16 | Não |
 | 11 | Excepção | Veículo que sinaliza virar à direita | 43.º | 16 | Não |
-| 12 | Preparação | Verificação antes de iniciar | 43.º | 16 | Não |
+| 12 | Preparação | Esperar que o veículo da frente termine a ultrapassagem | 43.º, n.º 4 e 44.º, n.º 2 | 16 | Não |
 | 13 | Segurança | Espaço e risco de colisão | 43.º | 16 | Não |
 | 14 | Sinalização | Aviso da intenção | 43.º | 16 | Não |
 | 15 | Regresso à fila | Distância e sinalização | 43.º | 16 | Não |
@@ -62,3 +62,5 @@ Conteúdo original do ESTRADA (não vem do APK). Foco: ultrapassagem e cruzament
 - Pergunta 22: proibição de ultrapassagem na aproximação de uma paragem devidamente sinalizada com aglomerado de pessoas (art. 44.º, n.º 1, al. f).
 - Pergunta 25: excepção para duas ou mais filas no mesmo sentido (art. 44.º, n.º 3).
 - A pergunta 25 limita a excepção às condições do artigo 44.º, n.º 3; não afirma que todas as proibições deixam de existir em vias com várias filas.
+
+- Reformulação 2026-11-16 (Claude-DADOS005, a pedido do dono): enunciados e explicações reescritos em forma de situação, como nos Exames 1–30, sem citar artigos nem «Segundo o Código»; as referências ficam apenas neste mapa. A ordem e os temas das 25 perguntas mantêm-se, pelo que a tabela acima continua válida. A pergunta 12 passa a testar também o art. 44.º, n.º 2 (proibido ultrapassar quem já está a ultrapassar). Respostas correctas: A6/B7/C6/D6, em posições não cíclicas, e a certa nunca é a única mais longa.

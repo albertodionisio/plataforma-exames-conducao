@@ -1,378 +1,381 @@
+// Exame 35 (25 perguntas originais, conteúdo ESTRADA; não existe no APK).
+// Foco: sinalização, segurança e mudança de direcção, em situações do dia-a-dia.
+// Rastreabilidade e páginas do documento oficial: docs/referencias-exames/exame35-mapeamento.md.
 window.EXAMES = window.EXAMES || {};
 window.EXAMES[35] = [
   {
     "numero": 1,
     "tema": "Sinalização da manobra",
     "dificuldade": "fácil",
-    "enunciado": "Antes de mudar de direcção, qual é o dever do condutor em relação aos restantes utentes?",
+    "enunciado": "Um condutor vai virar à direita numa esquina. Quando deve indicar a sua intenção?",
     "imagem": null,
     "opcoes": [
-      "Sinalizar a intenção com a antecedência necessária.",
-      "Sinalizar apenas depois de começar a virar.",
-      "Usar sempre os sinais sonoros em vez dos indicadores de direcção.",
-      "Não precisa de sinalizar quando a estrada está livre."
+      "Só depois de começar a virar.",
+      "Só se vier algum carro atrás dele.",
+      "Com antecedência, antes de virar.",
+      "Nunca, se a rua estiver vazia."
     ],
-    "correta": 0,
-    "explicacao": "O condutor deve comunicar a intenção de mudar de direcção com antecedência, mantendo a sinalização durante a manobra e cessando-a depois. (Art. 23.º.)"
+    "correta": 2,
+    "explicacao": "O sinal serve para os outros perceberem o que o condutor vai fazer enquanto ainda podem reagir. Avisar depois de começar é tarde demais."
   },
   {
     "numero": 2,
     "tema": "Momento de sinalizar",
     "dificuldade": "fácil",
-    "enunciado": "Um condutor pretende mudar de via numa estrada com trânsito. Quando deve indicar essa intenção?",
+    "enunciado": "Numa avenida com muito trânsito, o condutor quer passar para a via da direita. Quando deve ligar o indicador?",
     "imagem": null,
     "opcoes": [
-      "Só quando já estiver parcialmente na outra via.",
-      "Com a antecedência necessária para os outros utentes perceberem a manobra.",
-      "Apenas se houver um veículo imediatamente atrás.",
-      "Depois de reduzir completamente a velocidade."
+      "Antes de mudar, a tempo de os outros perceberem.",
+      "Quando já tem as rodas na outra via.",
+      "Só se houver um veículo mesmo atrás dele.",
+      "Depois de ter reduzido completamente a velocidade e parado."
     ],
-    "correta": 1,
-    "explicacao": "A sinalização deve ser feita com a antecedência necessária, não apenas depois de iniciar a deslocação. (Art. 23.º.)"
+    "correta": 0,
+    "explicacao": "O indicador só ajuda quem vem atrás se for ligado com tempo. Se for ligado quando já se está a entrar na outra via, os outros não conseguem reagir."
   },
   {
     "numero": 3,
     "tema": "Duração do sinal",
     "dificuldade": "fácil",
-    "enunciado": "Durante uma mudança de direcção, por quanto tempo deve manter-se o sinal?",
+    "enunciado": "Depois de ligar o indicador para virar numa esquina, até quando deve mantê-lo ligado?",
     "imagem": null,
     "opcoes": [
-      "Até o veículo entrar no cruzamento.",
-      "Só durante o primeiro instante da manobra.",
-      "Durante a realização da manobra, cessando depois de concluída.",
-      "Até outro condutor responder com sinais luminosos."
+      "Até o carro entrar no cruzamento, sem esperar pelo fim da manobra.",
+      "Só durante o primeiro instante da manobra de viragem, e depois desliga-se.",
+      "Até outro condutor responder com as luzes.",
+      "Durante a manobra, desligando-o quando esta terminar."
     ],
-    "correta": 2,
-    "explicacao": "O sinal deve manter-se durante a manobra e ser cessado quando esta terminar. (Art. 23.º.)"
+    "correta": 3,
+    "explicacao": "O sinal mantém-se enquanto a manobra decorre, para quem vem atrás saber o que se passa. Quando a manobra acaba, deve cessar, para não induzir os outros em erro."
   },
   {
     "numero": 4,
     "tema": "Segurança da manobra",
     "dificuldade": "fácil",
-    "enunciado": "Mesmo depois de sinalizar uma mudança de via, o condutor deve:",
+    "enunciado": "O condutor ligou o indicador e o espaço na via ao lado parece livre. O que deve ainda fazer antes de mudar de via?",
     "imagem": null,
     "opcoes": [
-      "Avançar imediatamente, porque o sinal garante prioridade.",
+      "Mudar logo, porque o sinal garante a passagem ao condutor.",
+      "Verificar que pode mudar sem perigo nem embaraço.",
       "Confiar que os outros veículos vão parar.",
-      "Aumentar a velocidade para ocupar o espaço.",
-      "Certificar-se de que pode efectuar a manobra sem perigo ou embaraço."
+      "Aumentar a velocidade para ocupar o espaço."
     ],
-    "correta": 3,
-    "explicacao": "Sinalizar não substitui o dever geral de segurança. A manobra só deve ser feita sem criar perigo ou embaraço. (Art. 42.º.)"
+    "correta": 1,
+    "explicacao": "O sinal só avisa, não dá direito de passar. Antes de mudar, deve olhar pelos espelhos e pelo ângulo morto, e só avançar se ninguém tiver de travar por causa disso."
   },
   {
     "numero": 5,
     "tema": "Mudança à direita",
     "dificuldade": "média",
-    "enunciado": "Numa via de dois sentidos, ao preparar uma mudança de direcção para a direita num cruzamento, como deve posicionar-se o condutor?",
+    "enunciado": "Numa estrada de dois sentidos, o condutor vai virar à direita num cruzamento. Como deve posicionar-se?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se antecipadamente do eixo da via e efectuar a manobra deixando à sua esquerda a parte central do cruzamento ou entroncamento.",
-      "Aproximar-se sempre da margem esquerda e contornar a parte central pela direita.",
-      "Manter-se em qualquer posição, desde que ligue o indicador de direcção.",
-      "Passar para a faixa destinada ao sentido contrário antes de virar."
+      "Aproximar-se do eixo da via e virar deixando o centro do cruzamento à sua esquerda.",
+      "Encostar-se à margem esquerda e contornar o centro do cruzamento pela direita, fazendo uma curva larga.",
+      "Ficar em qualquer posição na via, desde que ligue o indicador de direcção.",
+      "Passar para a faixa do sentido contrário antes de começar a virar."
     ],
     "correta": 0,
-    "explicacao": "Numa via de dois sentidos, o artigo 45.º, n.º 2, determina que o condutor se aproxime antecipadamente do eixo da via e faça a manobra de modo a deixar à sua esquerda a parte central do cruzamento ou entroncamento."
+    "explicacao": "Com a circulação pela esquerda, quem vira à direita atravessa a frente do trânsito contrário. Por isso se aproxima do eixo e faz a curva à volta do centro do cruzamento, em vez de a fazer larga."
   },
   {
     "numero": 6,
     "tema": "Mudança à esquerda",
     "dificuldade": "média",
-    "enunciado": "Ao preparar uma mudança de direcção para a esquerda, qual é a regra geral de posicionamento indicada no Código?",
+    "enunciado": "Numa rua de dois sentidos, o condutor vai virar à esquerda. Como deve preparar a manobra?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se da margem direita e fazer a curva mais larga.",
-      "Aproximar-se antecipadamente da margem esquerda e efectuar o trajecto mais curto permitido.",
-      "Manter-se no centro da faixa até terminar a manobra.",
-      "Usar a berma para contornar o cruzamento."
+      "Encostar-se à margem direita e fazer uma curva larga, para ganhar espaço.",
+      "Ficar no centro da faixa até acabar a manobra.",
+      "Usar a berma para contornar o cruzamento por fora, sem ocupar a via.",
+      "Encostar-se com antecedência à esquerda e virar pelo caminho mais curto."
     ],
-    "correta": 1,
-    "explicacao": "O artigo 46.º determina a aproximação antecipada à margem esquerda e a execução do trajecto mais curto, respeitando a segurança. (Art. 46.º.)"
+    "correta": 3,
+    "explicacao": "Virar à esquerda, num país em que se circula pela esquerda, é a viragem mais simples: o condutor encosta à esquerda e vira logo. Fazer uma curva larga ou ir pelo centro atrapalha quem vem a seguir."
   },
   {
     "numero": 7,
     "tema": "Sinal não dá prioridade",
     "dificuldade": "média",
-    "enunciado": "Um condutor liga o indicador para mudar de via, mas outro veículo já ocupa o espaço pretendido. O que deve fazer?",
+    "enunciado": "O condutor ligou o indicador para mudar de via, mas um carro já ocupa o espaço onde ele queria entrar. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Mudar de via porque sinalizou primeiro.",
-      "Acelerar para obrigar o outro veículo a ceder.",
-      "Aguardar até poder efectuar a manobra sem perigo ou embaraço.",
-      "Desligar as luzes e entrar na via."
+      "Mudar, porque sinalizou primeiro e o outro carro vai ter de ceder.",
+      "Esperar até poder mudar sem perigo nem embaraço.",
+      "Acelerar para obrigar o outro carro a ceder.",
+      "Apagar as luzes e entrar na via."
     ],
-    "correta": 2,
-    "explicacao": "O indicador comunica a intenção, mas não concede automaticamente prioridade nem autoriza uma manobra perigosa. (Arts. 23.º e 42.º.)"
+    "correta": 1,
+    "explicacao": "Quem chegou primeiro ao espaço é quem o usa. Esperar uns instantes por uma abertura é muito mais barato do que bater ou obrigar alguém a travar a fundo."
   },
   {
     "numero": 8,
     "tema": "Sinalização esquecida",
     "dificuldade": "fácil",
-    "enunciado": "Um condutor muda de direcção sem indicar previamente a sua intenção. Qual é a avaliação correcta?",
+    "enunciado": "Um condutor vira numa esquina sem ter indicado nada, porque 'não vinha ninguém'. Está a proceder correctamente?",
     "imagem": null,
     "opcoes": [
-      "É aceitável se não houver peões.",
-      "É permitido durante o dia.",
-      "É permitido em estradas secundárias.",
-      "A manobra não respeita o dever de sinalização prévia."
+      "Sim, se não houver peões por perto.",
+      "Sim, durante o dia, com boa visibilidade e a estrada vazia.",
+      "Não, deve avisar sempre, mesmo com a rua livre.",
+      "Sim, nas estradas secundárias."
     ],
-    "correta": 3,
-    "explicacao": "O Código exige sinalizar com antecedência a mudança de direcção. A ausência de trânsito visível não elimina esse dever. (Art. 23.º.)"
+    "correta": 2,
+    "explicacao": "Pode haver alguém que o condutor não vê, como um motociclo no ângulo morto ou um peão atrás de um muro. Sinalizar sempre cria o hábito e protege nesses casos."
   },
   {
     "numero": 9,
     "tema": "Indicador ligado após a manobra",
     "dificuldade": "fácil",
-    "enunciado": "Depois de concluir uma mudança de direcção, o indicador continua ligado. O que deve fazer o condutor?",
+    "enunciado": "Acabou de virar numa esquina e o indicador continua a piscar. O que deve fazer o condutor?",
     "imagem": null,
     "opcoes": [
-      "Cessar a sinalização, porque a manobra já terminou.",
-      "Manter o indicador ligado até ao próximo cruzamento.",
-      "Ligar os quatro indicadores.",
-      "Parar imediatamente no meio da via."
+      "Desligá-lo, porque a manobra já terminou.",
+      "Mantê-lo ligado até à esquina seguinte.",
+      "Ligar também os quatro piscas ao mesmo tempo.",
+      "Parar a meio da via até ele se desligar."
     ],
     "correta": 0,
-    "explicacao": "A sinalização deve cessar depois de concluída a manobra, para não transmitir informação errada aos outros utentes. (Art. 23.º.)"
+    "explicacao": "Um indicador que continua a piscar depois da manobra engana quem vem atrás, que pode achar que o condutor vai virar outra vez. Quando a manobra termina, o sinal tem de terminar."
   },
   {
     "numero": 10,
     "tema": "Mudança de via com risco",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende mudar para a via ao lado, mas a distância disponível é insuficiente. Qual é a conduta correcta?",
+    "enunciado": "O condutor quer mudar para a via ao lado, mas o espaço entre os carros é curto. Qual é a atitude correcta?",
     "imagem": null,
     "opcoes": [
-      "Entrar lentamente e obrigar os outros a travar.",
-      "Adiar a manobra até existir espaço e condições de segurança.",
-      "Usar a buzina para ganhar espaço.",
-      "Deslocar-se para a via mesmo que outro veículo tenha de sair dela."
+      "Entrar devagar e obrigar os outros a travar.",
+      "Buzinar repetidamente para os outros carros lhe darem espaço à frente.",
+      "Entrar na via mesmo que outro carro tenha de sair dela.",
+      "Esperar até haver espaço e condições para mudar em segurança."
     ],
-    "correta": 1,
-    "explicacao": "As manobras devem ser realizadas sem perigo ou embaraço. Se não houver espaço seguro, o condutor deve aguardar. (Art. 42.º.)"
+    "correta": 3,
+    "explicacao": "Forçar a entrada num espaço curto cria travagens e choques em cadeia. Uma espera curta, com o indicador ligado, quase sempre dá uma abertura melhor."
   },
   {
     "numero": 11,
     "tema": "Mudança de direcção e peões",
     "dificuldade": "média",
-    "enunciado": "Ao aproximar-se do local onde pretende virar, o condutor vê peões cuja passagem pode ser afectada pela manobra. O que deve fazer?",
+    "enunciado": "Ao virar para uma rua lateral, o condutor vê peões a atravessá-la. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Concluir a viragem rapidamente antes de os peões avançarem.",
-      "Usar o sinal sonoro para os afastar.",
-      "Só efectuar a manobra quando puder fazê-la sem perigo ou embaraço para os outros utentes.",
-      "Virar sem reduzir, porque já sinalizou."
+      "Virar depressa, antes de os peões avançarem para a rua.",
+      "Só virar quando puder fazê-lo sem perigo para eles.",
+      "Buzinar para os afastar do caminho.",
+      "Virar sem abrandar, porque já sinalizou."
     ],
-    "correta": 2,
-    "explicacao": "O princípio geral das manobras exige que não se crie perigo ou embaraço aos restantes utentes. (Art. 42.º.)"
+    "correta": 1,
+    "explicacao": "Quem atravessa a rua lateral tem direito a passar e fica ainda mais exposto a um carro que vira. O condutor deve abrandar, esperar que acabem de atravessar e só depois completar a manobra."
   },
   {
     "numero": 12,
     "tema": "Definição de mudança de direcção",
     "dificuldade": "fácil",
-    "enunciado": "Segundo o Código da Estrada, em que consiste uma mudança de direcção?",
+    "enunciado": "Um condutor sai da estrada onde seguia e entra numa rua que a cruza. Que manobra fez?",
     "imagem": null,
     "opcoes": [
-      "Em mudar de faixa mantendo-se na mesma via.",
-      "Em parar junto ao limite da faixa de rodagem.",
-      "Em inverter o sentido de marcha na mesma via.",
-      "Em tomar outra via que se intersecta com aquela em que o veículo vinha a circular."
+      "Inversão do sentido de marcha.",
+      "Mudança de faixa na mesma via.",
+      "Mudança de direcção.",
+      "Paragem junto à berma."
     ],
-    "correta": 3,
-    "explicacao": "O Código define mudança de direcção como a manobra em que o condutor toma outra via que se intersecta com aquela em que vinha circulando. (Art. 45.º, n.º 1.)"
+    "correta": 2,
+    "explicacao": "Mudar de direcção é entrar noutra via que cruza aquela onde se seguia. Mudar de faixa continua na mesma via e inverter é voltar para trás."
   },
   {
     "numero": 13,
     "tema": "Mudança à direita",
     "dificuldade": "média",
-    "enunciado": "Numa via de sentido único, um condutor pretende mudar de direcção para a direita. Como deve preparar a manobra?",
+    "enunciado": "Numa rua de sentido único, o condutor vai virar à direita. Como deve preparar-se?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se obrigatoriamente do eixo da via e contornar a parte central pela esquerda.",
-      "Aproximar-se, com a necessária antecedência e quando possível, do limite direito da faixa de rodagem e efectuar a manobra pelo trajecto mais curto.",
-      "Utilizar a margem esquerda, independentemente da direcção pretendida.",
-      "Escolher qualquer posição, porque numa via de sentido único não existem regras de posicionamento."
+      "Aproximar-se do limite direito da faixa, se possível, e virar pelo caminho mais curto.",
+      "Aproximar-se do eixo da via e contornar o centro do cruzamento pela esquerda, como numa estrada de dois sentidos.",
+      "Usar a margem esquerda, seja qual for a direcção em que vai virar.",
+      "Ficar onde quiser, porque no sentido único não há regras de posição."
     ],
-    "correta": 1,
-    "explicacao": "Nas vias de sentido único, o artigo 45.º, n.º 3, manda aproximar-se, com antecedência e quando possível, do limite direito ou esquerdo conforme a direcção pretendida, efectuando a manobra pelo trajecto mais curto."
+    "correta": 0,
+    "explicacao": "Quando todos vão no mesmo sentido, ninguém vem de frente. O condutor encosta ao lado para onde vai virar e faz a curva pelo caminho mais curto."
   },
   {
     "numero": 14,
     "tema": "Sinalização em mudança de via",
     "dificuldade": "fácil",
-    "enunciado": "Qual é a finalidade principal de indicar uma mudança de via?",
+    "enunciado": "Para que serve ligar o indicador antes de mudar de via?",
     "imagem": null,
     "opcoes": [
-      "Garantir que os outros veículos parem.",
-      "Informar antecipadamente os outros utentes da intenção do condutor.",
-      "Permitir mudar de via sem verificar o trânsito.",
-      "Substituir a observação dos espelhos."
+      "Obrigar os outros carros a parar.",
+      "Poder mudar sem olhar para o trânsito que vem atrás.",
+      "Dispensar o uso dos retrovisores.",
+      "Avisar os outros da sua intenção a tempo."
     ],
-    "correta": 1,
-    "explicacao": "A sinalização comunica a intenção da manobra, permitindo aos outros utentes ajustar a sua condução. Não elimina a obrigação de verificar a segurança. (Arts. 23.º e 42.º.)"
+    "correta": 3,
+    "explicacao": "O indicador não substitui a observação nem dá prioridade. Serve apenas para os outros saberem o que se vai fazer e se prepararem."
   },
   {
     "numero": 15,
     "tema": "Manobra interrompida",
     "dificuldade": "média",
-    "enunciado": "Um condutor sinaliza uma mudança de direcção, mas percebe que surgiu um perigo antes de a iniciar. Qual deve ser a sua atitude?",
+    "enunciado": "O condutor ligou o indicador para virar, mas, antes de iniciar a manobra, uma criança corre para a rua. Qual deve ser a sua atitude?",
     "imagem": null,
     "opcoes": [
-      "Continuar porque já avisou os outros.",
-      "Acelerar para concluir antes do perigo.",
-      "Suspender ou adiar a manobra para evitar o perigo.",
-      "Desligar os faróis e avançar."
+      "Continuar, porque já avisou os outros.",
+      "Acelerar para acabar a manobra antes de a criança chegar à rua.",
+      "Adiar ou interromper a manobra para evitar o perigo.",
+      "Apagar os faróis e avançar."
     ],
     "correta": 2,
-    "explicacao": "O condutor não deve insistir numa manobra que possa criar perigo; o princípio geral exige segurança e permite suspendê-la para prevenir risco. (Art. 42.º.)"
+    "explicacao": "Mesmo com a manobra iniciada, o condutor deve parar quando surge um perigo maior. Um sinal já ligado não é razão para avançar."
   },
   {
     "numero": 16,
     "tema": "Antecedência do sinal",
     "dificuldade": "média",
-    "enunciado": "Um veículo circula numa fila movimentada e pretende entrar na via de saída à direita. Qual é a prática correcta quanto ao indicador?",
+    "enunciado": "Numa estrada movimentada, o condutor vai entrar na via de saída à direita. Quando deve ligar o indicador?",
     "imagem": null,
     "opcoes": [
-      "Ligá-lo apenas quando as rodas já atravessaram a linha.",
-      "Ligá-lo depois de entrar na saída.",
-      "Não usar indicador quando há muito trânsito.",
-      "Sinalizar com antecedência suficiente antes de executar a deslocação."
+      "Com tempo suficiente antes de se deslocar.",
+      "Só quando as rodas já passaram a linha.",
+      "Depois de já ter entrado na via de saída, para não avisar cedo.",
+      "Nunca, se houver muito trânsito."
     ],
-    "correta": 3,
-    "explicacao": "A intenção deve ser sinalizada com a antecedência necessária, mantendo o sinal durante a manobra. (Art. 23.º.)"
+    "correta": 0,
+    "explicacao": "Numa estrada movimentada os outros condutores precisam de tempo para perceber e fazer espaço. O aviso tardio apanha-os de surpresa."
   },
   {
     "numero": 17,
     "tema": "Sinalização manual de manobra",
     "dificuldade": "média",
-    "enunciado": "Os indicadores luminosos de direcção deixaram de funcionar. Se precisar de assinalar uma mudança de direcção, como deve proceder?",
+    "enunciado": "Os indicadores luminosos do carro avariaram e o condutor vai virar numa esquina. Como deve assinalar a manobra?",
     "imagem": null,
     "opcoes": [
-      "Utilizar o braço para transmitir o sinal regulamentar, na falta do dispositivo luminoso.",
-      "Continuar sem sinalizar, desde que reduza a velocidade.",
-      "Ligar os quatro indicadores e efectuar qualquer manobra.",
-      "Usar o sinal sonoro continuamente durante a mudança."
+      "Não assinalar, desde que abrande bastante.",
+      "Com o braço, usando o sinal regulamentar.",
+      "Ligar os quatro piscas e fazer qualquer manobra.",
+      "Usar a buzina o tempo todo durante a viragem."
     ],
-    "correta": 0,
-    "explicacao": "O artigo 23.º prevê a utilização do dispositivo mecânico luminoso ou sonoro e, na falta deste, do braço para indicar o sinal regulamentar correspondente, com a devida antecedência. (Art. 23.º, n.º 1.)"
+    "correta": 1,
+    "explicacao": "Quando as luzes falham, o braço serve de sinal. Assim os outros condutores continuam a saber o que o condutor vai fazer."
   },
   {
     "numero": 18,
     "tema": "Sinalização e observação",
     "dificuldade": "média",
-    "enunciado": "Antes de mudar de via, qual combinação de comportamentos é correcta?",
+    "enunciado": "Antes de mudar de via, que combinação de atitudes é a correcta?",
     "imagem": null,
     "opcoes": [
-      "Sinalizar e mudar imediatamente, sem observar.",
-      "Observar as condições de trânsito, sinalizar a intenção e só manobrar quando for seguro.",
-      "Olhar apenas para a frente e confiar no indicador.",
-      "Buzinar e atravessar a linha de separação."
+      "Sinalizar e mudar logo a seguir, sem olhar para o lado.",
+      "Olhar só para a frente e confiar no indicador.",
+      "Buzinar e atravessar a linha de separação.",
+      "Observar, sinalizar e só mudar quando for seguro."
     ],
-    "correta": 1,
-    "explicacao": "A sinalização deve ser acompanhada da verificação das condições de segurança. A manobra não pode criar perigo ou embaraço. (Arts. 23.º e 42.º.)"
+    "correta": 3,
+    "explicacao": "A mudança de via segura junta três passos: ver o que vem, avisar e mudar só se houver espaço. Falhar um deles deixa o condutor exposto a um acidente."
   },
   {
     "numero": 19,
     "tema": "Mudança de direcção sem perigo",
     "dificuldade": "fácil",
-    "enunciado": "Um condutor sinaliza correctamente e verifica que pode virar sem perigo ou embaraço. O que ainda deve respeitar?",
+    "enunciado": "Um condutor sinalizou correctamente e vê que a rua está livre para virar. Ainda tem de cumprir mais alguma regra?",
     "imagem": null,
     "opcoes": [
-      "Pode escolher qualquer trajectória.",
-      "Pode ignorar o posicionamento previsto para a direcção escolhida.",
-      "Deve cumprir também as regras específicas de posicionamento e trajecto da mudança de direcção.",
-      "Pode deixar o indicador ligado depois de terminar."
+      "Não, pode escolher qualquer trajecto.",
+      "Não, pode ignorar a posição própria da manobra se a rua estiver livre.",
+      "Sim, a posição e o trajecto próprios da viragem.",
+      "Sim, deve deixar o indicador ligado depois de terminar."
     ],
     "correta": 2,
-    "explicacao": "Além do dever de sinalização e segurança, as mudanças à direita e à esquerda têm regras específicas de posicionamento e trajecto. (Arts. 23.º, 45.º e 46.º.)"
+    "explicacao": "Sinalizar e ter a rua livre não dispensa a técnica: aproximar-se do lado certo e seguir o caminho mais curto. É essa disciplina que torna a manobra previsível."
   },
   {
     "numero": 20,
     "tema": "Sinalização de redução de velocidade e paragem",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende reduzir a velocidade e imobilizar o veículo junto à margem da via. Que regra deve observar quanto à sinalização?",
+    "enunciado": "Um condutor vai abrandar e parar junto à berma para deixar sair um passageiro. Que regra segue quanto à sinalização?",
     "imagem": null,
     "opcoes": [
-      "Só precisa de sinalizar se houver veículos pesados atrás.",
-      "Deve sinalizar apenas depois de começar a travar.",
-      "Pode dispensar o sinal se a paragem durar pouco tempo.",
-      "Deve indicar a intenção com a devida antecedência e manter o sinal enquanto executa a manobra."
+      "Só sinaliza se houver veículos pesados atrás dele, que travem mal.",
+      "Sinaliza com antecedência e mantém o sinal durante a manobra.",
+      "Sinaliza só depois de começar a travar.",
+      "Dispensa o sinal se a paragem for rápida e o passageiro já estiver pronto."
     ],
-    "correta": 3,
-    "explicacao": "O artigo 23.º exige sinalização com a devida antecedência quando o veículo diminui a velocidade ou pára; a indicação mantém-se durante a manobra e cessa quando esta termina. (Art. 23.º, n.os 1 e 2.)"
+    "correta": 1,
+    "explicacao": "Quem vem atrás precisa de saber que o carro vai parar para não bater nele. O sinal vale mesmo para paragens curtas e mantém-se até a manobra terminar."
   },
   {
     "numero": 21,
     "tema": "Mudança de via e embaraço",
     "dificuldade": "média",
-    "enunciado": "Um condutor muda de via de forma a obrigar bruscamente outro veículo a travar. Qual princípio foi desrespeitado?",
+    "enunciado": "Um condutor muda de via de repente e obriga outro a travar bruscamente. Que princípio desrespeitou?",
     "imagem": null,
     "opcoes": [
-      "O dever de efectuar manobras sem perigo ou embaraço.",
-      "A obrigação de manter velocidade máxima.",
-      "A regra de estacionamento.",
-      "A regra de utilização dos sinais sonoros."
+      "Não causar perigo ou embaraço aos outros.",
+      "Manter a velocidade máxima permitida da via em todo o percurso.",
+      "As regras do estacionamento.",
+      "As regras do uso da buzina."
     ],
     "correta": 0,
-    "explicacao": "O artigo 42.º estabelece que as manobras não devem criar perigo ou embaraço para o trânsito. (Art. 42.º.)"
+    "explicacao": "Qualquer manobra deve ser feita de forma a que ninguém tenha de travar a fundo ou desviar-se por causa dela. Se isso acontece, a manobra foi mal feita."
   },
   {
     "numero": 22,
     "tema": "Preparação para virar à direita",
     "dificuldade": "média",
-    "enunciado": "Antes de iniciar uma mudança de direcção para a direita num cruzamento, o que deve confirmar o condutor?",
+    "enunciado": "O condutor vai virar à direita num cruzamento. O que deve confirmar antes de iniciar a manobra?",
     "imagem": null,
     "opcoes": [
-      "Que pode executar a manobra sem perigo ou embaraço para o restante tráfego.",
-      "Que os veículos atrás são obrigados a parar por ter ligado o indicador.",
-      "Que pode ocupar temporariamente a faixa de sentido contrário, mesmo sem necessidade.",
-      "Que não existe qualquer peão nas proximidades, sendo dispensadas as restantes verificações."
+      "Que os carros de trás são obrigados a parar por ter ligado o indicador.",
+      "Que pode ocupar a faixa contrária, mesmo sem necessidade.",
+      "Que pode virar sem perigo nem embaraço para o restante trânsito.",
+      "Que não há peões por perto, dispensando as restantes verificações."
     ],
-    "correta": 0,
-    "explicacao": "O artigo 45.º, n.º 4, determina que o condutor não inicie a mudança de direcção sem se assegurar previamente de que dela não resulta perigo ou embaraço para o restante tráfego."
+    "correta": 2,
+    "explicacao": "Antes de virar, o condutor olha para todos os lados: peões, motociclos, carros de frente e de trás. Só avança quando ninguém é prejudicado."
   },
   {
     "numero": 23,
     "tema": "Mudança à esquerda em via de sentido único",
     "dificuldade": "média",
-    "enunciado": "Numa via de sentido único, um condutor pretende mudar de direcção para a esquerda. Como deve preparar a manobra?",
+    "enunciado": "Numa rua de sentido único, o condutor vai virar à esquerda. Como deve preparar-se?",
     "imagem": null,
     "opcoes": [
-      "Aproximar-se do limite direito e fazer a curva pelo trajecto mais longo.",
-      "Manter-se no centro da faixa até iniciar a mudança.",
-      "Aproximar-se, com antecedência e quando possível, do limite esquerdo e efectuar a manobra pelo trajecto mais curto.",
-      "Utilizar a faixa contrária para aumentar o espaço de viragem."
+      "Aproximar-se do limite esquerdo, se possível, e virar pelo caminho mais curto.",
+      "Aproximar-se do limite direito e fazer a curva mais longa, para ter mais espaço.",
+      "Ficar no centro da faixa até começar a virar.",
+      "Usar a faixa contrária para ter mais espaço."
     ],
-    "correta": 2,
-    "explicacao": "Nas vias de sentido único, o condutor deve aproximar-se com a necessária antecedência e, quando possível, do limite esquerdo para virar à esquerda, efectuando a manobra pelo trajecto mais curto. (Art. 45.º, n.º 3.)"
+    "correta": 0,
+    "explicacao": "Numa rua de sentido único, o condutor encosta ao lado para onde vai virar. Fazer a curva larga ou usar a faixa contrária só complica a manobra."
   },
   {
     "numero": 24,
     "tema": "Mudança de via em segurança",
     "dificuldade": "difícil",
-    "enunciado": "O condutor sinaliza a mudança de via e observa que um motociclo se aproxima rapidamente na via pretendida. Qual decisão respeita o Código?",
+    "enunciado": "O condutor ligou o indicador para mudar de via e vê um motociclo a aproximar-se depressa pela via que pretende. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Mudar porque o indicador já está ligado.",
-      "Avançar lentamente para obrigar o motociclo a ceder.",
-      "Mudar se o motociclo estiver ainda distante, sem avaliar a situação.",
-      "Esperar até a manobra poder ser feita sem perigo ou embaraço."
+      "Mudar, porque o indicador já está ligado.",
+      "Esperar até poder mudar sem perigo nem embaraço.",
+      "Avançar devagar para o motociclo ceder.",
+      "Mudar se ele ainda estiver longe, sem avaliar a velocidade."
     ],
-    "correta": 3,
-    "explicacao": "A sinalização não dá prioridade. O condutor deve avaliar o trânsito e só efectuar a manobra em condições seguras. (Arts. 23.º e 42.º.)"
+    "correta": 1,
+    "explicacao": "Os motociclos aproximam-se mais depressa do que parece. Esperar que passe custa poucos segundos, enquanto forçar a mudança pode causar uma queda."
   },
   {
     "numero": 25,
     "tema": "Manobras que exigem sinalização",
     "dificuldade": "fácil",
-    "enunciado": "Qual das seguintes opções reúne correctamente manobras que devem ser assinaladas com a devida antecedência?",
+    "enunciado": "Um instrutor pergunta aos alunos em que manobras é preciso sinalizar com antecedência. Qual é a resposta certa?",
     "imagem": null,
     "opcoes": [
-      "Iniciar a marcha, diminuir a velocidade, parar, mudar de direcção ou de via, ultrapassar e inverter o sentido de marcha.",
-      "Apenas mudar de direcção em cruzamentos com semáforos.",
-      "Somente ultrapassar fora das localidades.",
-      "Apenas parar quando exista uma viatura atrás."
+      "Apenas ao mudar de direcção em cruzamentos com semáforo, e em mais nenhuma situação.",
+      "Apenas ao ultrapassar numa estrada fora das localidades, e em mais nenhuma outra situação.",
+      "Apenas ao parar, quando há uma viatura atrás, e em mais nenhuma situação.",
+      "Iniciar a marcha, abrandar, parar, mudar de direcção ou de via, ultrapassar e inverter."
     ],
-    "correta": 0,
-    "explicacao": "O artigo 23.º determina a sinalização, com a devida antecedência, do início da marcha, redução de velocidade, paragem, mudança de direcção ou de via, início de ultrapassagem e inversão do sentido de marcha. (Art. 23.º, n.º 1.)"
+    "correta": 3,
+    "explicacao": "Sempre que o condutor vai fazer algo que os outros não esperam, deve avisar. Isto vale para todas estas manobras, dentro e fora das localidades."
   }
 ];

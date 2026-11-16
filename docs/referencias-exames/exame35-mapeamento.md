@@ -57,3 +57,5 @@ As perguntas foram confrontadas com os artigos 23.º, 42.º, 45.º e 46.º do PD
 O portal de legislação do INATRO apresenta o Decreto-Lei n.º 1/2011 como Código da Estrada. A conferência confirma correspondência com a republicação oficial consultada, mas não é uma pesquisa exaustiva de todos os Boletins da República nem um parecer jurídico sobre alterações posteriores.
 
 A comparação actualizada abrange os Exames 1 e 31–51. As reformulações acima reduzem a repetição de competências dentro do catálogo. Os Exames 2–30 serão comparados quando forem incorporados a partir do aplicativo original. Todas as perguntas têm imagem null. O script oficial não pôde ser executado por falha DNS; o teste no navegador continua pendente.
+
+- Reformulação 2026-11-16 (Claude-DADOS005, a pedido do dono): enunciados e explicações reescritos em forma de situação, como nos Exames 1–30, sem citar artigos nem «Segundo o Código»; as referências ficam apenas neste mapa. A ordem e os temas das 25 perguntas mantêm-se, pelo que a tabela acima continua válida. Respostas correctas redistribuídas: A7/B6/C6/D6, em posições não cíclicas, e a certa nunca é a única mais longa.

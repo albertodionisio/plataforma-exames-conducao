@@ -247,7 +247,7 @@ window.EXAMES[33] = [
     "numero": 17,
     "tema": "Inversão do sentido de marcha",
     "dificuldade": "difícil",
-    "enunciado": "Um condutor pretende inverter o sentido de marcha num cruzamento de visibilidade reduzida. O Código permite?",
+    "enunciado": "Um condutor pretende inverter o sentido de marcha num cruzamento de visibilidade reduzida. Pode fazê-lo?",
     "opcoes": [
       "Não: é proibido inverter em cruzamentos ou entroncamentos de visibilidade reduzida.",
       "Sim, se não houver veículos a circular atrás dele nesse momento.",
@@ -337,7 +337,7 @@ window.EXAMES[33] = [
     "numero": 23,
     "tema": "Ilhéu central da rotunda",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende imobilizar o veículo sobre a placa central de uma rotunda com trânsito giratório. O que determina o Código?",
+    "enunciado": "Um condutor pretende imobilizar o veículo sobre a placa central de uma rotunda com trânsito giratório. Pode fazê-lo?",
     "opcoes": [
       "É permitido por poucos minutos, desde que o veículo fique bem visível.",
       "É proibido parar ou estacionar na placa central de rotundas com trânsito.",

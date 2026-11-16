@@ -7,375 +7,375 @@ window.EXAMES[34] = [
     "numero": 1,
     "tema": "Cruzamento de veículos",
     "dificuldade": "fácil",
-    "enunciado": "Segundo o Código da Estrada, quando se considera que há cruzamento de veículos?",
+    "enunciado": "Numa estrada de dois sentidos, um autocarro vem de frente e passa ao lado do seu carro, os dois ao mesmo tempo, na mesma via. Como se chama este encontro?",
     "imagem": null,
     "opcoes": [
-      "Quando dois veículos seguem atrás um do outro na mesma faixa.",
-      "Quando dois veículos circulam na mesma via, em sentidos opostos, e passam um pelo outro.",
-      "Quando dois veículos entram simultaneamente numa rotunda.",
-      "Quando um veículo ultrapassa outro que circula lentamente."
+      "Cruzamento de veículos.",
+      "Ultrapassagem de um veículo lento.",
+      "Mudança de direcção.",
+      "Inversão de marcha."
     ],
-    "correta": 1,
-    "explicacao": "Há cruzamento quando dois veículos que circulam na mesma via e em sentidos opostos passam um pelo outro ao mesmo tempo. (Art. 41.º, n.º 1.)"
+    "correta": 0,
+    "explicacao": "Cruzar é passar por quem vem em sentido contrário. Na ultrapassagem, um veículo passa para a frente de outro que segue no mesmo sentido."
   },
   {
     "numero": 2,
     "tema": "Cruzamento de veículos",
     "dificuldade": "média",
-    "enunciado": "Dois veículos aproximam-se em sentidos opostos numa estrada estreita. Que cuidado devem ter ao cruzar?",
+    "enunciado": "Numa estrada estreita, dois carros vêm um de encontro ao outro. Que cuidado deve ter cada condutor ao cruzar?",
     "imagem": null,
     "opcoes": [
-      "Manter uma distância lateral suficiente para a passagem segura.",
-      "Aproximar-se ao máximo para reduzir o tempo de cruzamento.",
-      "Um deles deve ocupar a berma, mesmo sem necessidade.",
-      "Aumentar a velocidade para passarem ao mesmo tempo."
+      "Chegar-se o mais possível ao outro veículo para passar depressa.",
+      "Aumentar a velocidade para o cruzamento durar menos tempo.",
+      "Deixar uma distância lateral suficiente entre os dois veículos.",
+      "Passar sempre pela berma, mesmo que não seja preciso."
     ],
-    "correta": 0,
-    "explicacao": "Cada condutor deve deixar uma distância lateral suficiente entre o seu veículo e o veículo com que vai cruzar, para que a manobra seja segura. (Art. 41.º, n.º 2.)"
+    "correta": 2,
+    "explicacao": "Se os carros passam muito perto, um pequeno desvio ou um espelho ao alcance basta para raspar. Deixar folga dos dois lados torna o cruzamento seguro, mesmo a velocidade baixa."
   },
   {
     "numero": 3,
     "tema": "Obstáculo na via",
     "dificuldade": "média",
-    "enunciado": "Numa estrada estreita, um veículo encontra um obstáculo que ocupa parte da sua faixa e impede o cruzamento seguro. Quem deve ceder passagem?",
+    "enunciado": "Um camião avariado ocupa parte de uma estrada estreita e dois carros chegam de lados opostos, sem espaço para se cruzarem em segurança. Quem deve dar passagem?",
     "imagem": null,
     "opcoes": [
-      "O veículo que tiver maior dimensão.",
-      "O veículo que estiver a descer, em qualquer situação.",
-      "O condutor que precisa de contornar o obstáculo, reduzindo a velocidade ou parando.",
-      "O veículo que chegar primeiro, mesmo que não tenha obstáculo à sua frente."
+      "O condutor do veículo de maior dimensão, por ter mais dificuldade em manobrar.",
+      "Quem tem de contornar o camião, abrandando ou parando.",
+      "O condutor do veículo que vem a descer.",
+      "O condutor que chegou primeiro ao local."
     ],
-    "correta": 2,
-    "explicacao": "Quando a via está parcialmente obstruída e o cruzamento não pode ser feito com segurança, o condutor que tem de contornar o obstáculo deve reduzir a velocidade ou parar para dar passagem ao outro. (Art. 41.º, n.º 3.)"
+    "correta": 1,
+    "explicacao": "Quem tem o obstáculo à frente é quem precisa de sair da sua faixa, e por isso espera ou abranda para que o outro passe sem aperto. O tamanho do veículo ou a ordem de chegada não mudam isso."
   },
   {
     "numero": 4,
     "tema": "Obstáculo na via",
     "dificuldade": "média",
-    "enunciado": "Dois veículos não conseguem cruzar-se porque um obstáculo ocupa parte da estrada. Se nenhum puder resolver a situação apenas abrandando ou parando, qual deve recuar?",
+    "enunciado": "Numa rua de terra com uma vala, dois carros ficam frente a frente e nenhum consegue passar só abrandando ou parando. Quem deve recuar?",
     "imagem": null,
     "opcoes": [
-      "O veículo que tiver maior potência.",
-      "O veículo que tiver chegado primeiro à estrada.",
-      "O veículo que transportar menos passageiros.",
-      "O veículo que estiver mais próximo do local onde o cruzamento é possível."
+      "O que tiver o motor mais potente dos dois, por ter mais força para recuar.",
+      "O que levar menos passageiros a bordo.",
+      "O que tiver chegado primeiro àquela rua, por ter prioridade de passagem.",
+      "O que estiver mais perto de um ponto onde possam cruzar-se."
     ],
     "correta": 3,
-    "explicacao": "Se a situação não puder ser resolvida pela regra de cedência perante o obstáculo, recua o veículo que estiver mais próximo do local onde o cruzamento pode ser realizado. (Art. 41.º, n.º 4.)"
+    "explicacao": "Recua quem faz menos marcha-atrás para chegar a um sítio com largura suficiente. Assim a rua desbloqueia-se depressa e com menos risco."
   },
   {
     "numero": 5,
     "tema": "Cruzamento em inclinação",
     "dificuldade": "difícil",
-    "enunciado": "Numa via de inclinação acentuada, dois veículos em sentidos opostos não conseguem cruzar-se e é necessário que um recue. Qual é a regra?",
+    "enunciado": "Numa ladeira estreita e inclinada, um carro sobe e outro desce, e é preciso que um deles recue. Quem recua, em regra?",
     "imagem": null,
     "opcoes": [
-      "Recua o veículo que sobe, excepto se for manifestamente mais fácil o veículo que desce recuar.",
-      "Recua sempre o veículo que desce, por ter maior controlo da travagem.",
-      "Recua sempre o veículo mais pesado, independentemente da inclinação.",
-      "Os dois devem recuar ao mesmo tempo até encontrarem espaço."
+      "O que sobe, salvo se for muito mais fácil recuar a quem desce.",
+      "O que desce, porque tem mais controlo na travagem do veículo.",
+      "O mais pesado dos dois, qualquer que seja a inclinação da ladeira.",
+      "Os dois ao mesmo tempo, até um deles encontrar espaço para o outro."
     ],
     "correta": 0,
-    "explicacao": "Nas vias de inclinação acentuada, recua o veículo que está a subir. A excepção ocorre quando a manobra for manifestamente mais fácil para o veículo que desce. (Art. 41.º, n.º 4.)"
+    "explicacao": "Quem sobe tem a marcha-atrás mais curta e o carro tende a descer sozinho. Só quando a manobra for claramente mais fácil para quem vem a descer, por exemplo por haver um recanto logo atrás dele, é este que recua."
   },
   {
     "numero": 6,
     "tema": "Veículos de grandes dimensões",
     "dificuldade": "média",
-    "enunciado": "Um veículo ou conjunto articulado tem mais de 2 metros de largura ou mais de 8 metros de comprimento, incluindo a carga. Quando deve reduzir a velocidade ou parar durante um cruzamento?",
+    "enunciado": "Um camião articulado, com mais de 8 metros de comprimento, entra numa estrada estreita e esburacada onde vem um ligeiro de frente. O que deve fazer o camionista?",
     "imagem": null,
     "opcoes": [
-      "Sempre que encontre um veículo ligeiro, mesmo numa estrada larga.",
-      "Quando a via, o seu perfil ou o estado de conservação não permitirem cruzar com segurança.",
-      "Apenas quando circular dentro de uma localidade.",
-      "Só quando o outro condutor fizer sinal de luzes."
+      "Manter a marcha, porque o ligeiro é que tem de se desviar.",
+      "Buzinar e passar primeiro, por ser o veículo de maior porte.",
+      "Abrandar ou parar para facilitar o cruzamento.",
+      "Acender os máximos para o outro condutor parar de imediato."
     ],
-    "correta": 1,
-    "explicacao": "Os veículos com largura total superior a 2 m ou comprimento total superior a 8 m, incluindo a carga, devem diminuir a velocidade ou parar quando as condições da faixa, do perfil ou do pavimento não permitirem um cruzamento seguro. (Art. 41.º, n.º 6.)"
+    "correta": 2,
+    "explicacao": "Os veículos muito compridos ou largos têm menos margem de manobra, e por isso são eles que devem facilitar a passagem quando a estrada não dá folga. Parar um instante evita raspões e atolamentos."
   },
   {
     "numero": 7,
     "tema": "Segurança antes da manobra",
     "dificuldade": "média",
-    "enunciado": "Antes de entrar numa via lateral, um condutor percebe que a manobra obrigaria os veículos que nela circulam a travar bruscamente. O que deve fazer?",
+    "enunciado": "Um condutor vai virar para uma rua lateral, mas, se o fizer agora, os carros que vêm nessa rua terão de travar bruscamente. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Avançar, porque já indicou a mudança de direcção.",
-      "Entrar devagar e deixar que os outros condutores ajustem a marcha.",
-      "Usar o sinal sonoro para exigir espaço.",
-      "Adiar a manobra até a poder efectuar sem perigo ou embaraço para o trânsito."
+      "Virar, porque já ligou o indicador e avisou os outros condutores da sua intenção.",
+      "Esperar até poder virar sem perigo nem embaraço para os outros.",
+      "Virar devagar e deixar os outros ajustarem a sua marcha.",
+      "Buzinar para os outros condutores lhe darem espaço."
     ],
-    "correta": 3,
-    "explicacao": "O condutor só pode efectuar uma manobra em local e de forma que dela não resulte perigo ou embaraço para o trânsito. Deve esperar por condições seguras antes de iniciar a entrada na via. (Art. 42.º.)"
+    "correta": 1,
+    "explicacao": "O indicador avisa, mas não dá direito de passagem. Quem faz uma manobra tem de a fazer sem obrigar ninguém a travar de repente, e pode esperar uns segundos até o espaço estar livre."
   },
   {
     "numero": 8,
     "tema": "Conceito de ultrapassagem",
     "dificuldade": "fácil",
-    "enunciado": "Em que situação existe ultrapassagem, segundo o Código da Estrada?",
+    "enunciado": "Um motociclista, que seguia atrás de uma camioneta na mesma fila, passa para diante dela. Que manobra fez?",
     "imagem": null,
     "opcoes": [
-      "Quando um veículo estacionado volta a entrar na faixa de rodagem.",
-      "Quando dois veículos circulam em sentidos opostos e se cruzam.",
-      "Quando o veículo que segue atrás, na mesma fila, passa para diante do que o precede.",
-      "Quando dois veículos mudam de direcção no mesmo cruzamento."
+      "Cruzamento de veículos.",
+      "Mudança de direcção.",
+      "Inversão do sentido de marcha.",
+      "Ultrapassagem."
     ],
-    "correta": 2,
-    "explicacao": "O Código considera ultrapassagem a situação em que dois veículos circulam na mesma fila e o que se encontra atrás passa para diante do outro. (Art. 43.º, n.º 1.)"
+    "correta": 3,
+    "explicacao": "Ultrapassar é passar para a frente de um veículo que vai no mesmo sentido e na mesma fila. Obriga a invadir temporariamente o espaço de outra fila, e por isso exige mais cuidado do que seguir atrás."
   },
   {
     "numero": 9,
     "tema": "Regra geral da ultrapassagem",
     "dificuldade": "fácil",
-    "enunciado": "Numa via onde não se aplica nenhuma excepção legal, por que lado deve ser feita a ultrapassagem?",
+    "enunciado": "Numa estrada de dois sentidos, sem nenhuma situação especial, um condutor quer ultrapassar um carro lento. Por que lado deve passar?",
     "imagem": null,
     "opcoes": [
-      "Pela direita.",
-      "Pela esquerda.",
-      "Pela berma, se estiver livre.",
-      "Pelo lado que tiver maior espaço."
+      "Pela esquerda, pelo lado da berma.",
+      "Pela berma, se estiver livre naquele momento.",
+      "Pela direita do veículo que vai ultrapassar.",
+      "Pelo lado onde houver mais espaço naquele momento."
     ],
-    "correta": 0,
-    "explicacao": "A regra expressa do Código da Estrada moçambicano determina que a ultrapassagem de veículos ou animais se faça pela direita. As excepções legais estão previstas no n.º 3 do mesmo artigo. (Art. 43.º, n.os 2 e 3.)"
+    "correta": 2,
+    "explicacao": "Em Moçambique circula-se pela esquerda, e por isso a ultrapassagem faz-se pela direita, utilizando o espaço próximo do eixo da estrada. A berma não é lugar para ultrapassar."
   },
   {
     "numero": 10,
     "tema": "Excepção na ultrapassagem",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende ultrapassar um veículo que se desloca sobre carris. Em que condição pode fazê-lo pela esquerda?",
+    "enunciado": "Numa avenida, um veículo circula sobre carris, sem usar o lado da faixa por onde o condutor pretende passar. Em que condição este pode ultrapassá-lo pela esquerda?",
     "imagem": null,
     "opcoes": [
-      "Quando o veículo sobre carris estiver parado para receber passageiros.",
-      "Quando o veículo sobre carris não utilizar esse lado da faixa e não estiver parado para receber ou largar passageiros.",
-      "Sempre que o veículo sobre carris circular devagar.",
-      "Quando houver trânsito em sentido contrário, desde que se buzine."
+      "Quando não usa esse lado e não está parado para passageiros.",
+      "Quando está parado para receber passageiros naquele local.",
+      "Sempre que o veículo sobre carris vá a andar muito devagar na avenida.",
+      "Quando vem trânsito de frente, desde que se use a buzina."
     ],
-    "correta": 1,
-    "explicacao": "A ultrapassagem pela esquerda de veículos sobre carris é admitida se eles não utilizarem esse lado da faixa de rodagem e não estiverem parados para receber ou largar passageiros. (Art. 43.º, n.º 3, al. a.)"
+    "correta": 0,
+    "explicacao": "Os veículos sobre carris não saem do seu trajecto, por isso é possível passá-los pelo outro lado desde que esse lado esteja livre. Quando param para entrada e saída de pessoas, há gente a atravessar e a ultrapassagem é perigosa."
   },
   {
     "numero": 11,
     "tema": "Ultrapassagem e mudança de direcção",
     "dificuldade": "média",
-    "enunciado": "Um veículo à frente assinala que vai mudar de direcção para a direita e deixa livre a parte mais à esquerda da faixa. Como pode ser ultrapassado?",
+    "enunciado": "Um carro à frente liga o indicador para a direita e deixa livre o lado esquerdo da faixa. Como pode ser ultrapassado?",
     "imagem": null,
     "opcoes": [
-      "Pela direita, mesmo que o espaço esteja ocupado.",
-      "Pela berma, se o condutor considerar que é seguro.",
-      "Pela esquerda, desde que se cumpram as condições legais da manobra.",
-      "Por qualquer lado, porque o indicador de direcção dá prioridade."
+      "Pela direita, mesmo que o espaço esteja ocupado pelos outros.",
+      "Pela esquerda, desde que a manobra seja feita sem perigo.",
+      "Pela berma, se o condutor achar que é seguro fazê-lo.",
+      "Por qualquer lado, porque o indicador dá prioridade a quem passa."
     ],
-    "correta": 2,
-    "explicacao": "O Código admite ultrapassar pela esquerda o veículo cujo condutor assinalou a mudança de direcção para a direita e deixou livre a parte mais à esquerda da faixa, respeitando as condições do artigo seguinte. (Art. 43.º, n.º 3, al. b.)"
+    "correta": 1,
+    "explicacao": "Quem vai virar à direita aproxima-se do eixo da estrada e liberta o lado esquerdo, que fica livre para quem quer seguir em frente. Nesse caso a ultrapassagem pela esquerda é a excepção que se permite."
   },
   {
     "numero": 12,
     "tema": "Início da ultrapassagem",
     "dificuldade": "média",
-    "enunciado": "O veículo que segue à frente já sinalizou que pretende ultrapassar outro veículo. O condutor que vem atrás quer também ultrapassar. O que deve fazer?",
+    "enunciado": "O carro à sua frente já ligou o indicador e está a ultrapassar uma camioneta. Quer fazer o mesmo. O que deve fazer?",
     "imagem": null,
     "opcoes": [
-      "Iniciar a ultrapassagem imediatamente, aproveitando o espaço disponível.",
-      "Buzinar e passar, porque o veículo da frente já avisou.",
-      "Aproximar-se muito do veículo da frente para observar a manobra.",
-      "Não iniciar a ultrapassagem sem confirmar que o veículo da frente já sinalizou e que a manobra pode ser feita sem perigo."
+      "Avançar já, aproveitando o espaço que ele deixa livre à sua frente na faixa.",
+      "Buzinar e passar, porque o carro da frente já avisou.",
+      "Aproximar-se muito do carro da frente para ver a manobra.",
+      "Esperar que ele termine e só então ver se pode passar sem perigo."
     ],
     "correta": 3,
-    "explicacao": "O condutor não deve iniciar a ultrapassagem sem verificar se o veículo que o antecede já sinalizou a intenção de ultrapassar um terceiro ou contornar um obstáculo, e se existe espaço para realizar a manobra sem colisão. (Art. 43.º, n.º 4.)"
+    "explicacao": "Passar um carro que está a ultrapassar outro põe três veículos lado a lado na mesma faixa, sem margem de fuga se vier alguém de frente. É mais seguro esperar que a manobra acabe e só depois decidir."
   },
   {
     "numero": 13,
     "tema": "Segurança na ultrapassagem",
     "dificuldade": "média",
-    "enunciado": "Antes de ultrapassar, o condutor vê um veículo a aproximar-se em sentido contrário. Que condição deve confirmar?",
+    "enunciado": "Ao preparar uma ultrapassagem, o condutor vê um carro a aproximar-se em sentido contrário. O que deve confirmar antes de avançar?",
     "imagem": null,
     "opcoes": [
-      "Que consegue regressar à sua posição sem perigo de colisão com veículos ou animais que circulem no mesmo sentido ou no sentido contrário.",
-      "Que o veículo da frente está a circular abaixo do limite máximo.",
-      "Que o veículo que vem em sentido contrário consegue parar a tempo.",
-      "Que a ultrapassagem pode ser feita rapidamente, mesmo sem distância livre suficiente."
+      "Que o veículo da frente está a andar abaixo do limite de velocidade permitido naquela estrada.",
+      "Que o carro que vem em sentido contrário consegue parar a tempo.",
+      "Que consegue voltar à sua fila sem risco de choque com nenhum veículo.",
+      "Que a manobra pode ser rápida, mesmo sem muita distância livre."
     ],
-    "correta": 0,
-    "explicacao": "Antes de ultrapassar, o condutor deve certificar-se de que pode realizar toda a manobra sem perigo de colidir com veículos ou animais que circulem no mesmo sentido ou em sentido contrário. (Art. 43.º, n.º 4.)"
+    "correta": 2,
+    "explicacao": "Ultrapassar é só seguro se houver espaço para passar e voltar à fila antes de o outro chegar. Contar com o outro condutor para travar é arriscar-se a um choque frontal."
   },
   {
     "numero": 14,
     "tema": "Aviso da ultrapassagem",
     "dificuldade": "fácil",
-    "enunciado": "Ao iniciar a ultrapassagem, o condutor deve avisar o condutor do veículo que pretende ultrapassar?",
+    "enunciado": "Antes de passar para a direita de uma camioneta lenta, o que deve fazer o condutor que a vai ultrapassar?",
     "imagem": null,
     "opcoes": [
-      "Não, porque a ultrapassagem é sempre feita pela direita.",
-      "Sim, deve avisar da sua intenção antes de tomar a direita do veículo.",
-      "Só deve avisar se estiver fora de uma localidade.",
-      "Apenas deve avisar depois de já estar ao lado do outro veículo."
+      "Avisar o condutor da camioneta da sua intenção.",
+      "Nada, porque o aviso só é preciso à noite ou com mau tempo.",
+      "Avisar apenas depois de já estar ao lado dela, a passá-la.",
+      "Avisar só se estiver fora das localidades."
     ],
-    "correta": 1,
-    "explicacao": "O condutor não deve tomar a direita do veículo ou animal que pretende ultrapassar sem avisar previamente o respectivo condutor da sua intenção. (Art. 43.º, n.º 5.)"
+    "correta": 0,
+    "explicacao": "O condutor da camioneta pode não o ter visto e fechá-lo se não souber que ele vai passar. Avisar com antecedência, com o indicador e, se preciso, com um sinal, evita surpresas."
   },
   {
     "numero": 15,
     "tema": "Regresso à fila após ultrapassar",
     "dificuldade": "média",
-    "enunciado": "Depois de passar o veículo ultrapassado, quando pode o condutor retomar a sua posição à esquerda?",
+    "enunciado": "Acabou de passar uma camioneta e quer voltar à sua posição à esquerda. Quando o pode fazer?",
     "imagem": null,
     "opcoes": [
-      "Logo que a frente do seu veículo ultrapasse a traseira do outro.",
-      "Assim que o outro condutor reduzir a velocidade.",
-      "Quando tiver confirmado que o regresso não cria perigo e tiver sinalizado essa mudança.",
-      "Sempre que o veículo ultrapassado circular junto à berma."
+      "Logo que a frente do seu carro passe a traseira da camioneta, mesmo de raspão.",
+      "Quando confirmar que não cria perigo e assinalar o regresso.",
+      "Assim que o condutor da camioneta abrandar um pouco.",
+      "Sempre que a camioneta vá junto à berma."
     ],
-    "correta": 2,
-    "explicacao": "O condutor só deve retomar a esquerda depois de se assegurar de que daí não resulta perigo para o veículo ou animal ultrapassado, assinalando o regresso. (Art. 43.º, n.º 5.)"
+    "correta": 1,
+    "explicacao": "Voltar cedo demais corta a frente a quem foi ultrapassado. É preciso ver pelo retrovisor que há distância suficiente e avisar que vai regressar, para o outro não ser apanhado de surpresa."
   },
   {
     "numero": 16,
     "tema": "Dever do veículo ultrapassado",
     "dificuldade": "média",
-    "enunciado": "Um condutor percebe que outro veículo iniciou correctamente uma ultrapassagem. Não existe obstáculo que o impeça de facilitar a manobra. Como deve proceder?",
+    "enunciado": "Um taxista percebe pelo retrovisor que o carro de trás começou correctamente uma ultrapassagem, e nada o impede de facilitar. Como deve proceder?",
     "imagem": null,
     "opcoes": [
-      "Aumentar a velocidade para reduzir o tempo em que fica ao lado do outro.",
-      "Desviar-se o mais possível para a esquerda e não aumentar a velocidade enquanto é ultrapassado.",
-      "Deslocar-se para a direita e travar bruscamente.",
-      "Manter a posição e acelerar apenas quando o outro veículo estiver ao lado."
+      "Acelerar para reduzir o tempo em que os dois ficam lado a lado na estrada.",
+      "Chegar-se para a direita e travar bruscamente.",
+      "Manter a posição e acelerar só quando o outro estiver ao lado do seu carro, para o ajudar a passar.",
+      "Chegar-se o mais possível para a esquerda e não aumentar a velocidade."
     ],
-    "correta": 1,
-    "explicacao": "Sempre que não exista obstáculo que o impeça, o condutor deve facilitar imediatamente a ultrapassagem, desviando-se o mais possível para a esquerda e sem aumentar a velocidade enquanto é ultrapassado. (Art. 43.º, n.º 6.)"
+    "correta": 3,
+    "explicacao": "Quem é ultrapassado ajuda ao deixar espaço do seu lado e ao não acelerar, para que a manobra acabe depressa. Aumentar a velocidade prolonga a ultrapassagem e a travagem brusca pode causar um choque."
   },
   {
     "numero": 17,
     "tema": "Veículos de largura superior a 2 metros",
     "dificuldade": "difícil",
-    "enunciado": "Um veículo tem largura superior a 2 metros. A faixa disponível é estreita e o pavimento está degradado. Que comportamento exige o Código para permitir uma ultrapassagem segura?",
+    "enunciado": "Um camião com mais de 2 metros de largura segue numa estrada estreita e esburacada, com carros atrás a querer ultrapassá-lo. O que deve fazer o camionista quando não há largura para ultrapassarem em segurança?",
     "imagem": null,
     "opcoes": [
-      "Deve manter a velocidade, pois a responsabilidade é de quem ultrapassa.",
-      "Deve ocupar a berma para aumentar o espaço de passagem.",
-      "Deve buzinar e continuar sem alterar a marcha.",
-      "Deve reduzir a velocidade ou parar quando as condições não permitirem ultrapassagem segura."
+      "Manter a velocidade, pois a responsabilidade é de quem ultrapassa.",
+      "Ocupar a berma para aumentar o espaço de passagem.",
+      "Abrandar ou parar para permitir a ultrapassagem.",
+      "Buzinar e continuar sem alterar a marcha."
     ],
-    "correta": 3,
-    "explicacao": "Os veículos com largura superior a 2 m devem reduzir a velocidade ou parar quando a largura livre da faixa, o perfil ou o estado de conservação da via não permitirem a ultrapassagem com segurança. (Art. 43.º, n.º 7.)"
+    "correta": 2,
+    "explicacao": "Os veículos largos precisam de dar mais folga quando a estrada não chega para dois. Abrandar ou parar um instante, num sítio razoável, resolve o problema sem forçar ninguém a arriscar."
   },
   {
     "numero": 18,
     "tema": "Distância entre veículos pesados",
     "dificuldade": "média",
-    "enunciado": "Dois automóveis pesados circulam fora de uma localidade. Qual é o intervalo mínimo que devem guardar entre si, excepto durante o tempo necessário para ultrapassar?",
+    "enunciado": "Dois camiões de carga seguem um atrás do outro numa estrada nacional, fora da localidade. Que intervalo mínimo devem guardar entre si, excepto quando um ultrapassa o outro?",
     "imagem": null,
     "opcoes": [
+      "10 metros.",
       "50 metros.",
       "20 metros.",
-      "30 metros.",
-      "10 metros."
+      "30 metros."
     ],
-    "correta": 0,
-    "explicacao": "Os automóveis pesados que circulam fora das localidades devem guardar entre si um intervalo mínimo de 50 metros, excepto durante o tempo necessário para efectuar uma ultrapassagem. (Art. 43.º, n.º 8.)"
+    "correta": 1,
+    "explicacao": "Camiões carregados precisam de muito espaço para parar, e quem vai atrás deles não vê a estrada. O intervalo de 50 metros dá tempo para travar e também espaço para outros veículos os ultrapassarem."
   },
   {
     "numero": 19,
     "tema": "Locais de ultrapassagem proibida",
     "dificuldade": "fácil",
-    "enunciado": "Ao aproximar-se de uma lomba de estrada, o condutor pretende ultrapassar um veículo lento. O que determina o Código?",
+    "enunciado": "Numa subida, o condutor aproxima-se do cume (a lomba da estrada) e quer ultrapassar uma camioneta lenta. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
-      "Pode ultrapassar se utilizar a buzina antes de iniciar.",
-      "A ultrapassagem é proibida nas lombas de estrada.",
-      "Pode ultrapassar se o veículo da frente se aproximar da berma.",
-      "A ultrapassagem é permitida quando não houver passageiros."
+      "Não, é proibido ultrapassar nas lombas de estrada.",
+      "Sim, se buzinar antes de iniciar a manobra.",
+      "Sim, se a camioneta se chegar à berma para o deixar passar.",
+      "Sim, quando o condutor não leve passageiros no carro."
     ],
-    "correta": 1,
-    "explicacao": "A ultrapassagem é proibida nas lombas de estrada, independentemente de o veículo da frente circular devagar ou de o condutor utilizar a buzina. (Art. 44.º, n.º 1, al. a.)"
+    "correta": 0,
+    "explicacao": "Do outro lado da lomba não se vê quem vem em sentido contrário, e uma ultrapassagem pode acabar num choque de frente. Buzinar não faz aparecer visibilidade."
   },
   {
     "numero": 20,
     "tema": "Ultrapassagem em curvas",
     "dificuldade": "média",
-    "enunciado": "Numa curva em que a visibilidade é reduzida, o condutor consegue ver apenas uma pequena parte da estrada. Pode ultrapassar?",
+    "enunciado": "Numa curva fechada, onde só se vê um pequeno troço da estrada, o condutor quer ultrapassar um camião. Pode?",
     "imagem": null,
     "opcoes": [
-      "Sim, se acelerar o suficiente para concluir rapidamente.",
-      "Sim, desde que o veículo da frente seja ligeiro.",
-      "Não, a ultrapassagem é proibida nas curvas de visibilidade reduzida.",
-      "Não, excepto quando o veículo da frente estiver parado."
+      "Sim, se acelerar o suficiente para acabar a manobra depressa.",
+      "Sim, desde que o veículo da frente seja um ligeiro e não um camião.",
+      "Não, excepto quando o veículo da frente estiver parado na curva.",
+      "Não, é proibido ultrapassar em curvas de visibilidade reduzida."
     ],
-    "correta": 2,
-    "explicacao": "O Código proíbe a ultrapassagem nas curvas de visibilidade reduzida. O condutor não consegue avaliar com segurança o espaço disponível e a aproximação de outros veículos. (Art. 44.º, n.º 1, al. b.)"
+    "correta": 3,
+    "explicacao": "Numa curva fechada ninguém vê o que vem na faixa contrária. Acelerar não resolve, porque o risco está em não ver, e o tipo de veículo da frente também não muda isso."
   },
   {
     "numero": 21,
     "tema": "Passagens de nível",
     "dificuldade": "média",
-    "enunciado": "Um condutor aproxima-se de uma passagem de nível e vê um veículo lento à sua frente. Em que momento é proibido ultrapassá-lo?",
+    "enunciado": "Perto de uma passagem de nível, um condutor vê um camião lento à frente. Em que local é proibido ultrapassá-lo?",
     "imagem": null,
     "opcoes": [
-      "Apenas depois de o comboio passar.",
-      "Somente quando as barreiras estiverem fechadas.",
-      "Só quando houver um sinal sonoro ferroviário.",
-      "Imediatamente antes e na própria passagem de nível."
+      "Apenas depois de o comboio já ter passado pela passagem de nível.",
+      "Imediatamente antes e na própria passagem de nível.",
+      "Apenas quando as barreiras estiverem fechadas e a luz vermelha ligada.",
+      "Apenas quando ouvir o sinal sonoro do comboio."
     ],
-    "correta": 3,
-    "explicacao": "A ultrapassagem é proibida imediatamente antes e nas passagens de nível. A presença de um veículo lento não cria uma excepção. (Art. 44.º, n.º 1, al. c.)"
+    "correta": 1,
+    "explicacao": "Uma passagem de nível é um cruzamento com a linha férrea, com pouca visibilidade e risco de ficar preso. Ultrapassar ali, com o camião a esconder a vista, pode terminar num choque com o comboio."
   },
   {
     "numero": 22,
     "tema": "Proibição junto de paragens com aglomeração",
     "dificuldade": "média",
-    "enunciado": "Um condutor aproxima-se de uma paragem devidamente sinalizada onde se encontra um aglomerado de pessoas. Pode ultrapassar um veículo que segue à sua frente?",
+    "enunciado": "Junto a uma paragem de autocarros devidamente sinalizada, com muita gente à espera, o condutor quer ultrapassar o carro que segue à frente. Pode?",
     "imagem": null,
     "opcoes": [
-      "Não. A ultrapassagem é proibida na aproximação de uma paragem devidamente sinalizada com aglomerado de pessoas.",
-      "Sim, desde que buzine antes de iniciar a manobra.",
-      "Sim, se as pessoas permanecerem no passeio.",
-      "A proibição aplica-se apenas durante a noite."
+      "Sim, desde que buzine antes de iniciar a manobra e avise as pessoas que vai passar.",
+      "Sim, se as pessoas estiverem todas em cima do passeio e longe da estrada.",
+      "Não, é proibido ultrapassar ao aproximar-se de uma paragem cheia de gente.",
+      "Sim, porque a proibição só vale durante a noite."
     ],
-    "correta": 0,
-    "explicacao": "O Código proíbe a ultrapassagem na aproximação de uma paragem devidamente sinalizada quando exista um aglomerado de pessoas, para proteger os utentes que possam entrar na faixa de rodagem. (Art. 44.º, n.º 1, al. f).)"
+    "correta": 2,
+    "explicacao": "Junto de uma paragem cheia há quem atravesse a correr ou invada a estrada para apanhar o autocarro. Ultrapassar ali tira ao condutor a vista de quem sai de trás do veículo parado."
   },
   {
     "numero": 23,
     "tema": "Passagens para peões",
     "dificuldade": "média",
-    "enunciado": "Um veículo abranda junto de uma passagem assinalada para peões. O condutor que vem atrás pensa ultrapassá-lo. O que deve considerar?",
+    "enunciado": "Um carro abranda antes de uma passagem assinalada para peões, e o condutor que vem atrás pensa em ultrapassá-lo. O que deve ter em conta?",
     "imagem": null,
     "opcoes": [
-      "A ultrapassagem é permitida se não vir peões naquele instante.",
-      "A ultrapassagem é proibida imediatamente antes e nas passagens assinaladas para a travessia de peões.",
-      "Pode ultrapassar pela berma, desde que reduza a velocidade.",
-      "A ultrapassagem só é proibida durante a noite."
+      "Pode ultrapassar, se não vir peões naquele momento e a passagem estiver livre.",
+      "Pode ultrapassar pela berma, se abrandar.",
+      "A proibição só vale durante a noite.",
+      "É proibido ultrapassar antes e nas passagens de peões."
     ],
-    "correta": 1,
-    "explicacao": "O Código proíbe ultrapassar imediatamente antes e nas passagens assinaladas para a travessia de peões, protegendo quem possa atravessar. (Art. 44.º, n.º 1, al. e.)"
+    "correta": 3,
+    "explicacao": "O carro da frente pode estar a abrandar justamente porque há alguém a atravessar, e quem o ultrapassa não vê o peão. Por isso, ali não se ultrapassa mesmo que a estrada pareça livre."
   },
   {
     "numero": 24,
     "tema": "Visibilidade e risco de colisão",
     "dificuldade": "média",
-    "enunciado": "Numa estrada, a visibilidade é insuficiente e a largura disponível não permite passar com segurança. O condutor pode iniciar uma ultrapassagem?",
+    "enunciado": "Numa estrada estreita e com pouca visibilidade, o condutor pode iniciar uma ultrapassagem?",
     "imagem": null,
     "opcoes": [
-      "Sim, se avisar com sinais sonoros.",
-      "Sim, desde que o veículo ultrapassado reduza a velocidade.",
-      "Não, quando a visibilidade é insuficiente, há perigo de colisão ou a largura da via é insuficiente.",
-      "Pode iniciar, desde que regresse à sua fila antes de aparecer outro veículo."
+      "Não, se falta visibilidade, há risco de choque ou largura.",
+      "Sim, se avisar com a buzina antes de começar.",
+      "Sim, se o carro a ultrapassar abrandar.",
+      "Sim, desde que volte à sua fila antes de aparecer outro veículo."
     ],
-    "correta": 2,
-    "explicacao": "A ultrapassagem é proibida em locais de visibilidade insuficiente, quando exista perigo de colisão e quando a largura da via seja insuficiente. (Art. 44.º, n.º 1, als. g), h) e i.)"
+    "correta": 0,
+    "explicacao": "Para ultrapassar é preciso ver à frente, ter largura suficiente e não haver risco de choque. Basta falhar uma destas condições para ser proibido, e esperar por uma recta larga custa poucos segundos."
   },
   {
     "numero": 25,
     "tema": "Ultrapassagem em vias com várias filas",
     "dificuldade": "difícil",
-    "enunciado": "Numa faixa de rodagem existem duas ou mais filas de trânsito no mesmo sentido. Em que condição podem deixar de se aplicar algumas proibições de ultrapassagem previstas para lombas, curvas, passagens de nível e cruzamentos?",
+    "enunciado": "Num cruzamento de uma avenida com duas filas no mesmo sentido, um condutor passa o carro da fila ao lado, sem usar a parte da estrada reservada ao sentido contrário. Pode fazê-lo?",
     "imagem": null,
     "opcoes": [
-      "Quando o condutor utilizar a fila mais próxima do trânsito contrário.",
-      "Quando a manobra for feita sem sinalizar, para evitar travagens.",
-      "Quando o veículo ultrapassado circular a velocidade inferior à metade do limite.",
-      "Quando a manobra ocorrer entre filas do mesmo sentido, sem usar a parte reservada ao trânsito em sentido oposto."
+      "Não, é sempre proibido ultrapassar nos cruzamentos.",
+      "Sim, porque passa entre filas do mesmo sentido, sem usar a do sentido contrário.",
+      "Sim, se o carro da fila ao lado for a menos de metade do limite de velocidade da via.",
+      "Sim, se não sinalizar, para evitar travagens."
     ],
-    "correta": 3,
-    "explicacao": "O Código prevê que algumas proibições das alíneas a) a d) do n.º 1 e a proibição de ultrapassar um veículo que ultrapassa outro não se aplicam quando sejam possíveis duas ou mais filas no mesmo sentido, desde que a manobra não utilize a parte da faixa reservada ao sentido contrário. (Art. 44.º, n.º 3.)"
+    "correta": 1,
+    "explicacao": "Com duas ou mais filas no mesmo sentido, passar de uma fila para outra não obriga a usar o espaço de quem vem de frente. Por isso algumas proibições, como nos cruzamentos, deixam de se aplicar."
   }
 ];

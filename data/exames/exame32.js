@@ -6,7 +6,7 @@ window.EXAMES[32] = [
   "numero": 1,
   "tema": "Prioridade de passagem",
   "dificuldade": "fácil",
-  "enunciado": "Segundo o Código da Estrada, o que é a prioridade de passagem?",
+  "enunciado": "Dois condutores chegam ao mesmo tempo a um ponto da estrada e só um pode passar primeiro. O que é a prioridade de passagem?",
   "imagem": null,
   "opcoes": [
    "A obrigação de abrandar sempre que o condutor se aproxima de um cruzamento.",
@@ -54,7 +54,7 @@ window.EXAMES[32] = [
   "enunciado": "Num cruzamento, a sinalização especial define a prioridade de forma diferente da regra do veículo que vem pela direita. Que regra deve o condutor seguir?",
   "imagem": null,
   "opcoes": [
-   "A regra da direita, porque é a regra geral do Código da Estrada.",
+   "A regra da direita, porque é a regra geral nas estradas.",
    "A que resulta da sinalização, que prevalece sobre a regra geral.",
    "A do condutor que circula há mais tempo naquela estrada.",
    "A do condutor que fizer primeiro sinal com o pisca ou com a buzina."
@@ -186,7 +186,7 @@ window.EXAMES[32] = [
   "numero": 13,
   "tema": "Veículos prioritários",
   "dificuldade": "fácil",
-  "enunciado": "Segundo o Código da Estrada, consideram-se veículos prioritários:",
+  "enunciado": "Ouve-se uma sirene na estrada. Quais destes veículos são considerados prioritários?",
   "imagem": null,
   "opcoes": [
    "Os que transportam mercadorias perecíveis e circulam com o pisca-alerta ligado para chegarem depressa.",
