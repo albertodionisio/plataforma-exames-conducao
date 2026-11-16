@@ -19,8 +19,8 @@ Estado nesta branch: Firebase Authentication integrado no frontend; perfil míni
 | Firebase Authentication | Integrado no frontend | Email/palavra-passe, confirmação, recuperação, Google, sessão persistente e logout. Falta teste real em preview. |
 | Cloud Firestore | Preparado | Perfil mínimo em `users/{uid}`; regras ainda não publicadas. |
 | Firebase Hosting | Não adoptado | A aplicação continua alojada no Vercel. |
-| Cloud Storage | Adiado | Não existe requisito actual de uploads; avaliar billing/Blaze antes de activar. |
-| Cloud Functions | Adiado | Backend confiável poderá usar Cloud Functions (plano/billing compatível) ou endpoints Vercel com Firebase Admin SDK no servidor. Nunca usar Admin SDK no browser. |
+| Cloud Storage | Adiado | Não existe requisito actual de uploads. O Storage for Firebase exige Blaze; no Spark, buckets não ficam acessíveis. Como perguntas/imagens são estáticas, não há motivo para activar agora. |
+| Cloud Functions | Adiado | Deploy de Cloud Functions exige Blaze e billing. Backend confiável poderá usar Cloud Functions ou endpoints Vercel com Firebase Admin SDK no servidor. Nunca usar Admin SDK no browser. |
 | Firebase Cloud Messaging | Preparação documental | Push depende de service worker, chave VAPID, permissões e teste nos dispositivos. Não está activo. |
 | Analytics | Adiado | Não foi fornecido `measurementId`; não inventar nem enviar dados sem política de privacidade. |
 | Remote Config | Adiado | Activar quando existirem parâmetros concretos para gerir remotamente. |
