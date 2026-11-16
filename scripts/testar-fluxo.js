@@ -283,6 +283,11 @@ const vm = require("node:vm");
   app.click("auth-google");
   await new Promise(resolve=>setImmediate(resolve));
   assert.ok(authState.calls.some(c=>c.method==="google" && c.provider==="google"),"O botão deve iniciar Firebase Google Auth");
+  // Termina a sessão Google e selecciona novamente o exame para testar o fluxo email isoladamente.
+  app.click("auth-logout");
+  await new Promise(resolve=>setImmediate(resolve));
+  await navegar("#/exames");
+  await navegar("#/exame/42");
   app.click("auth-mode");
   assert.ok(app.innerHTML.includes("Criar conta"),"Deve existir modo de registo");
   const senhaCurta={"#auth-email":{value:"candidato@estrada.test"},"#auth-password":{value:"1234567"}};
