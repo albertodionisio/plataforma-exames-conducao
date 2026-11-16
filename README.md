@@ -38,4 +38,4 @@ A migração para Firebase está em curso na branch `feat/firebase-full-migratio
 
 A configuração Web pública fica em `config.js`. Não guardar credenciais Admin, service-account, tokens ou segredos no repositório. O domínio Vercel está preparado como `authDomain` através de rewrites `/__/auth/*`; requer teste em Preview Deployment e autorização do domínio no Firebase/Google OAuth antes de ser considerado activo.
 
-Ver `docs/firebase/README.md` para arquitectura, serviços adiados, activação e validação. Firestore não recebe perguntas nem imagens estáticas. Tentativas, resultados, assinaturas e pagamentos continuam bloqueados para escrita pelo cliente até existir backend confiável. A migração não apaga o projecto nem os dados antigos do Supabase.
+Ver `docs/firebase/README.md` para arquitectura, serviços adiados, activação e validação. Firestore não recebe perguntas nem imagens estáticas. Tentativas, resultados, assinaturas e pagamentos continuam bloqueados para escrita pelo cliente até existir backend confiável. Esta migração de código não elimina projectos nem dados externos antigos.
