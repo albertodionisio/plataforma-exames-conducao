@@ -69,3 +69,11 @@ O Spark não exige método de pagamento e inclui quotas gratuitas em vários pro
 ## Protecção de dados
 
 Antes de activar Analytics, FCM ou recolhas adicionais, definir política de privacidade, consentimento quando aplicável, retenção e minimização de dados. Não guardar passwords, tokens de sessão, dados completos de cartões ou segredos no Firestore.
+
+## Documentação oficial consultada
+
+- Firebase Authentication — reverse proxy e domínios de autenticação: https://firebase.google.com/docs/auth/web/redirect-best-practices
+- Firebase Authentication — domínios autorizados e erros de autenticação: https://firebase.google.com/docs/auth/faq-and-troubleshooting
+- Cloud Storage for Firebase — requisitos Blaze/Spark: https://firebase.google.com/docs/storage/faqs-storage-changes-announced-sept-2024
+- Cloud Functions for Firebase — requisitos de billing: https://firebase.google.com/docs/functions/faq-and-troubleshooting
+- Firebase pricing plans: https://firebase.google.com/pricing/
