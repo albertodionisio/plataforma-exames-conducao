@@ -212,3 +212,6 @@ table{
 
 .auth-google{display:inline-flex;align-items:center;justify-content:center;gap:10px}
 .auth-google-icon{display:block;flex:0 0 18px;width:18px;height:18px}
+
+/* Ajuste visual: manter o botão Google no tamanho compacto dos restantes botões */
+.auth-google{width:auto}
