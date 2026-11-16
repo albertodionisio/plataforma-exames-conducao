@@ -16,7 +16,7 @@ Estado nesta branch: Firebase Authentication integrado no frontend; perfil míni
 
 | Serviço | Estado | Observação |
 |---|---|---|
-| Firebase Authentication | Integrado no frontend | Email/palavra-passe, confirmação, recuperação, Google, sessão persistente e logout. Falta teste real em preview. |
+| Firebase Authentication | Integrado no frontend; testes automáticos no Emulator Suite | Email/palavra-passe, confirmação, recuperação, Google, sessão persistente e logout. Registo, verificação, recuperação e novo login são cobertos pelo Auth Emulator; a entrega real de emails e OAuth continuam a exigir validação no Preview. |
 | Cloud Firestore | Preparado | Perfil mínimo em `users/{uid}`; regras ainda não publicadas. |
 | Firebase Hosting | Não adoptado | A aplicação continua alojada no Vercel. |
 | Cloud Storage | Adiado | Não existe requisito actual de uploads. O Storage for Firebase exige Blaze; no Spark, buckets não ficam acessíveis. Como perguntas/imagens são estáticas, não há motivo para activar agora. |
@@ -57,10 +57,10 @@ Passos externos:
 
 1. Instalar Firebase CLI num ambiente confiável e autenticar na conta proprietária.
 2. Copiar `.firebaserc.example` para `.firebaserc` local e substituir o placeholder pelo Project ID correcto. Não commitar o ficheiro local.
-3. Executar Firebase Emulator Suite para Auth e Firestore e validar regras.
+3. Executar Firebase Emulator Suite para Auth e Firestore; o workflow `Validar integração Firebase` executa `scripts/testar-auth-firebase.js` e `scripts/testar-regras-firestore.js` num projecto isolado `demo-estrada`.
 4. Só após revisão e autorização, publicar: `firebase deploy --only firestore:rules --project plataforma-exames-conducao`.
 5. Não publicar índices até existir consulta que os exija.
-6. Completar testes reais de registo, verificação, recuperação, Google, logout e persistência no preview.
+6. No Preview, confirmar a recepção real do email de verificação, abrir o link e validar a conta; testar também o Google, logout e persistência. O fluxo de registo/verificação/recuperação já tem cobertura automatizada no Auth Emulator, mas o emulador não prova a entrega de email pelo serviço real.
 
 ## Custos e limites
 
