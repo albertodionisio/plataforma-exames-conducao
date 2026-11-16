@@ -10,6 +10,10 @@ service cloud.firestore {
       return signedIn() && request.auth.uid == uid;
     }
 
+    function verifiedEmail() {
+      return request.auth.token.email_verified == true;
+    }
+
     function validProfile(data, uid) {
       return data.keys().hasOnly([
           'uid',
@@ -37,8 +41,8 @@ service cloud.firestore {
     match /users/{uid} {
       allow get: if ownsUser(uid);
       allow list: if false;
-      allow create: if ownsUser(uid) && validProfile(request.resource.data, uid);
-      allow update: if ownsUser(uid)
+      allow create: if ownsUser(uid) && verifiedEmail() && validProfile(request.resource.data, uid);
+      allow update: if ownsUser(uid) && verifiedEmail()
         && validProfile(request.resource.data, uid)
         && request.resource.data.uid == resource.data.uid
         && request.resource.data.email == resource.data.email
