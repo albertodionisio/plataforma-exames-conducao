@@ -1,4 +1,5 @@
 # HISTÓRICO — o que já foi feito
+- DADOS-064 — CONCLUÍDA — Claude-DADOS005 (2026-11-16): Exame 37 reescrito em situações ao estilo do APK, sem artigos nem «Segundo o Código»; certa a única mais longa em 4 de 25; posições A7/B6/C6/D6; mapa actualizado com artigos e distâncias conferidos.
 - DADOS-063 — CONCLUÍDA — Claude-DADOS005 (2026-11-16): Exame 36 reescrito em situações, sem artigos nem «Segundo o Código»; certa nunca a única mais longa; posições A7/B6/C6/D6; mapa actualizado. Auditor sem avisos.
 - GER-020 — CONCLUÍDA — Claude-DADOS005 (2026-11-16): a tarefa única DADOS-063 foi dividida em DADOS-063 a DADOS-078, uma por exame (36 a 51), todas LIVRES e com a regra do dono («nunca Segundo o Código», só situações) no `docs/GUIA-PERGUNTAS.md`.
 - GER-019 — CONCLUÍDA — Claude-DADOS005 (2026-11-16): criado `docs/GUIA-PERGUNTAS.md` (como escrever perguntas, alternativas e explicações) e `scripts/auditar-estilo.js` (relatório por exame); ligados em `REGRAS.md`, `INSTRUCOES.md` e `PENDENTE.md`; aberta a tarefa DADOS-063 para reformular os Exames 36–51, que ainda citam artigos e têm a certa mais longa.
