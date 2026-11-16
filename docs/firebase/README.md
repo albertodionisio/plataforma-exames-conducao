@@ -27,6 +27,10 @@ Estado nesta branch: Firebase Authentication integrado no frontend; perfil míni
 | App Check | Preparação documental | Web usa reCAPTCHA; registar e monitorizar antes de impor enforcement. Não está activo. |
 | Crashlytics | Fase Android | Considerar na aplicação Android; não declarar recolha web activa. |
 
+## Contas existentes do fornecedor anterior
+
+As contas de utilizador que existiam no Supabase não são automaticamente reconhecidas pelo Firebase Authentication. Esta entrega não exporta nem importa utilizadores, passwords ou hashes. Para testar a nova autenticação, criar uma conta no ESTRADA com Firebase e confirmar o email; o mesmo endereço de email pode ser registado no Firebase independentemente da conta antiga. Uma migração em massa de utilizadores exigiria exportação/importação segura e validação do algoritmo de hash, fora do âmbito desta entrega. O projecto e os dados antigos não foram apagados.
+
 ## Modelo de dados e segurança
 
 - `users/{uid}`: perfil mínimo; cada utilizador só pode aceder ao próprio documento.
