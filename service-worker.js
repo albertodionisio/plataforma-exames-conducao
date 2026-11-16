@@ -6,6 +6,7 @@ var CACHE_EXAMES = CACHE_PREFIX + "exames-v1";
 var CACHE_MEDIA = CACHE_PREFIX + "media-v1";
 var CACHE_DIAS = 30 * 24 * 60 * 60 * 1000;
 var CACHE_MEDIA_DIAS = 365 * 24 * 60 * 60 * 1000;
+var CACHE_VERIFICACAO = 24 * 60 * 60 * 1000;
 var SHELL = [
   "/", "/index.html", "/config.js", "/app.js", "/styles.css",
   "/styles-resultados.css", "/manifest.webmanifest"
@@ -37,6 +38,7 @@ function guardarComData(cache, request, response) {
   if (!response || !response.ok || response.type === "opaque") return Promise.resolve();
   var headers = new Headers(response.headers);
   headers.set("x-estrada-cache-time", String(Date.now()));
+  headers.set("x-estrada-cache-checked-at", String(Date.now()));
   var copia = new Response(response.clone().body, {
     status: response.status,
     statusText: response.statusText,
@@ -52,23 +54,35 @@ function actualizarEmSegundoPlano(request, cache) {
 }
 
 function cacheComValidade(event, request, cacheName, validade) {
-  var cachePromise = caches.open(cacheName);
-  var networkPromise = cachePromise.then(function (cache) {
-    return fetch(request).then(function (response) {
-      return guardarComData(cache, request, response).then(function () { return response; });
-    });
-  });
-
-  // Regista a actualização durante o próprio evento; a resposta local não espera
-  // pela rede, mas o navegador mantém o Service Worker activo até terminar.
-  event.waitUntil(networkPromise.then(function () {}).catch(function () {}));
-
-  return cachePromise.then(function (cache) {
+  return caches.open(cacheName).then(function (cache) {
     return cache.match(request).then(function (guardada) {
-      var valida = guardada && idadeDaResposta(guardada) < validade;
-      if (valida) return guardada;
-      return networkPromise.catch(function () {
-        // Offline: conservar e utilizar a última cópia disponível.
+      var agora = Date.now();
+      var idade = guardada ? idadeDaResposta(guardada) : Infinity;
+      var ultimaVerificacao = guardada ?
+        Number(guardada.headers.get("x-estrada-cache-checked-at") || 0) : 0;
+      var valida = guardada && idade < validade;
+      var verificadaRecentemente = ultimaVerificacao &&
+        agora - ultimaVerificacao < CACHE_VERIFICACAO;
+
+      if (valida && verificadaRecentemente) {
+        // Reutiliza a cópia local sem fazer pedido à rede durante 24 horas.
+        return guardada;
+      }
+
+      var actualizacao = fetch(request).then(function (response) {
+        return guardarComData(cache, request, response).then(function () { return response; });
+      });
+
+      if (valida) {
+        // A cópia local é apresentada imediatamente; a verificação decorre
+        // em segundo plano, no máximo uma vez por dia por ficheiro/dispositivo.
+        event.waitUntil(actualizacao.then(function () {}).catch(function () {}));
+        return guardada;
+      }
+
+      event.waitUntil(actualizacao.then(function () {}).catch(function () {}));
+      return actualizacao.catch(function () {
+        // Offline: conservar e utilizar a última cópia, mesmo expirada.
         if (guardada) return guardada;
         throw new Error("Conteúdo indisponível na rede e sem cópia local.");
       });
