@@ -515,7 +515,11 @@
   }
   app.addEventListener("click", function (event) {
     var alvo = event.target;
-    if (!alvo || !alvo.getAttribute) return;
+    // Aceita cliques no texto, no SVG ou nos caminhos internos do ícone.
+    // O botão é o elemento que contém data-action.
+    if (!alvo || !alvo.closest) return;
+    alvo = alvo.closest("[data-action]");
+    if (!alvo || !app.contains(alvo)) return;
     var acao = alvo.getAttribute("data-action");
     if (!acao) return;
     if (acao === "auth-mode") {
