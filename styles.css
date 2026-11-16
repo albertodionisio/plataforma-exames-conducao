@@ -209,3 +209,6 @@ table{
 .link-button{padding:0;border:0;background:none;color:var(--azul);text-decoration:underline;font:inherit;cursor:pointer}
 .auth-google:disabled{opacity:.65;cursor:not-allowed}
 @media(max-width:600px){.conta-utilizador{width:100%;justify-content:flex-end;margin:0}.conta-email{max-width:125px}}
+
+.auth-google{display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.auth-google-icon{display:block;flex:0 0 18px;width:18px;height:18px}
