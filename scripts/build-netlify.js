@@ -14,12 +14,15 @@ const files = [
   "config.js",
   "styles.css",
   "styles-resultados.css",
-  "manifest.webmanifest",\n  "cache-bootstrap.js",\n  "service-worker.js"
+  "manifest.webmanifest",
+  "cache-bootstrap.js",
+  "service-worker.js"
 ];
 const dirs = ["icons", "public"];
 const required = [
   "index.html", "app.js", "config.js", "styles.css",
-  "styles-resultados.css", "manifest.webmanifest",\n  "cache-bootstrap.js", "service-worker.js",
+  "styles-resultados.css", "manifest.webmanifest",
+  "cache-bootstrap.js", "service-worker.js",
   "icons/icon-192.png", "icons/icon-512.png",
   "public/assinaturas/planos.js", "public/assinaturas/planos.css"
 ];
@@ -55,4 +58,4 @@ if (fs.existsSync(path.join(dist, "original", "Codigo_e_Sinais_de_Transito_1_1.a
   throw new Error("O APK original não pode ser incluído na publicação.");
 }
 
-console.log("Build Netlify concluído: aplicação e Exames 26–51 incluídos; APK e documentação interna excluídos.");
+console.log("Build Netlify concluído: aplicação, cache local e Exames 26–51 incluídos; APK e documentação interna excluídos.");
