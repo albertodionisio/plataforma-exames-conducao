@@ -40,7 +40,7 @@ Uma CDN pode reduzir pedidos à origem e transferência de origem, mas cada entr
 - Perguntas: TTL inicial de 30 dias.
 - Imagens/PDF: TTL inicial de 365 dias.
 - Os deployments Netlify invalidam/revalidam o conteúdo publicado; os nomes e URLs dos ficheiros devem manter-se estáveis e o deploy deve ser testado.
-- A revalidação em segundo plano permite obter conteúdo actualizado sem bloquear a abertura quando a cópia local ainda é válida.
+- A cache local é reutilizada sem qualquer pedido à rede durante 24 horas por ficheiro. Depois desse intervalo, a aplicação verifica a versão em segundo plano; se a cópia tiver expirado (30/365 dias), tenta obter a versão da CDN antes de abrir, mantendo a cópia antiga como alternativa offline. A revalidação em segundo plano permite obter conteúdo actualizado sem bloquear a abertura quando a cópia local ainda é válida.
 - Não colocar nesta cache tokens, sessões, dados de conta, respostas, notas ou histórico.
 
 ## Activação e validação
