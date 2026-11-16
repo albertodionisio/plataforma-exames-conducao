@@ -12,10 +12,10 @@ Este procedimento testa `firestore.rules` num emulador local/CI. Não liga ao pr
 
 ## Executar localmente
 
-Requer Node.js 20+ e Java 21+.
+Requer Node.js 24+ e Java 21+.
 
 ```sh
-npm install --no-save --package-lock=false firebase @firebase/rules-unit-testing firebase-tools
+npm install --no-save --package-lock=false 'firebase@^12' '@firebase/rules-unit-testing@^5' firebase-tools
 npx firebase-tools emulators:exec --only firestore --project demo-estrada --config firebase.emulator.json "node scripts/testar-regras-firestore.js"
 ```
 
