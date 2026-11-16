@@ -6,7 +6,7 @@ window.APP = {
   // O domínio Vercel é usado como authDomain através do proxy /__/auth configurado em vercel.json.
   firebase: {
     apiKey: "AIzaSyBTkZuf3RabULuWA9mFQDIqUBbvMHUBQSI",
-    authDomain: (window.location && /\.vercel\.app$/i.test(window.location.hostname)) ? window.location.hostname : "plataforma-exames-conducao.firebaseapp.com",
+    authDomain: (window.location && window.location.hostname === "plataforma-exames-conducao.vercel.app") ? "plataforma-exames-conducao.vercel.app" : "plataforma-exames-conducao.firebaseapp.com",
     projectId: "plataforma-exames-conducao",
     storageBucket: "plataforma-exames-conducao.firebasestorage.app",
     messagingSenderId: "779881429626",
