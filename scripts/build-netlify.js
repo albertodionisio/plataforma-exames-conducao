@@ -14,12 +14,12 @@ const files = [
   "config.js",
   "styles.css",
   "styles-resultados.css",
-  "manifest.webmanifest"
+  "manifest.webmanifest",\n  "cache-bootstrap.js",\n  "service-worker.js"
 ];
 const dirs = ["icons", "public"];
 const required = [
   "index.html", "app.js", "config.js", "styles.css",
-  "styles-resultados.css", "manifest.webmanifest",
+  "styles-resultados.css", "manifest.webmanifest",\n  "cache-bootstrap.js", "service-worker.js",
   "icons/icon-192.png", "icons/icon-512.png",
   "public/assinaturas/planos.js", "public/assinaturas/planos.css"
 ];
