@@ -9,7 +9,11 @@ on:
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
-      - 'netlify.toml'\n      - 'index.html'\n      - 'service-worker.js'\n      - 'cache-bootstrap.js'\n      - 'scripts/testar-cache.js'
+      - 'scripts/testar-cache.js'
+      - 'netlify.toml'
+      - 'index.html'
+      - 'service-worker.js'
+      - 'cache-bootstrap.js'
       - 'styles-resultados.css'
       - 'app.js'
       - 'config.js'
@@ -22,7 +26,11 @@ on:
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
-      - 'netlify.toml'\n      - 'index.html'\n      - 'service-worker.js'\n      - 'cache-bootstrap.js'\n      - 'scripts/testar-cache.js'
+      - 'scripts/testar-cache.js'
+      - 'netlify.toml'
+      - 'index.html'
+      - 'service-worker.js'
+      - 'cache-bootstrap.js'
       - 'app.js'
       - 'config.js'
       - 'public/assinaturas/planos.js'
@@ -46,8 +54,13 @@ jobs:
         run: |
           node --check app.js
           node --check config.js
-          node --check public/assinaturas/planos.js\n          node --check service-worker.js\n          node --check cache-bootstrap.js\n          node --check scripts/testar-cache.js
-      - name: Testar camadas de cache\n        run: node scripts/testar-cache.js\n      - name: Testar componente de assinaturas
+          node --check public/assinaturas/planos.js
+          node --check service-worker.js
+          node --check cache-bootstrap.js
+          node --check scripts/testar-cache.js
+      - name: Testar camadas de cache
+        run: node scripts/testar-cache.js
+      - name: Testar componente de assinaturas
         run: node scripts/testar-assinaturas.js
       - name: Testar fluxo completo dos exames
         run: node scripts/testar-fluxo.js
