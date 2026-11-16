@@ -4,6 +4,14 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
+
+## BE-002 — Migrar a aplicação para Firebase e preparar serviços complementares
+- Estado: EM CURSO — ChatGPT-ESTRADA-FB2 — 2026-11-16 — ficheiros: app.js, index.html, config.js, firebase.json, firestore.rules, firestore.indexes.json, docs/firebase/, scripts/, package.json, README.md, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-16
+- Autorização: o dono pediu expressamente a migração global do Supabase para Firebase e confirmou agora a execução. Esta autorização permite sobreposição estritamente limitada às alterações necessárias à migração, preservando as alterações já feitas por outras sessões; não autoriza apagar o projecto Supabase remoto nem dados existentes.
+- Pedido: tornar Firebase a plataforma principal do ESTRADA, substituindo serviços Supabase usados no código e preparando serviços adicionais quando forem adequados. Migrar autenticação (email/palavra-passe, verificação de email, recuperação, Google, sessão e logout), perfil Firestore e configuração/segurança; preparar backend confiável para tentativas, assinaturas e pagamentos; avaliar App Check, FCM, Analytics, Remote Config, Crashlytics e Storage segundo compatibilidade, plano/custo e necessidade real. Manter conteúdo estático de exames e cache/CDN fora do Firestore.
+- Pronto quando: não restarem dependências ou referências operacionais Supabase no frontend/documentação activa; Firebase SDK e configuração por ambiente estiverem integrados sem segredos; o fluxo de autenticação preservar catálogo público, exame pendente e regras de acesso; Firestore usar regras seguras; serviços adicionais estiverem documentados e classificados como implementados/preparados/adiados; testes automatizados e instruções de activação documentados; alterações publicadas numa branch e PR, sem merge/deploy sem autorização.
+- Cuidados: não alterar perguntas, imagens, cronómetro, pontuação, preços, planos nem o modo temporário de acesso; não mover ficheiros estáticos para Firestore; não permitir ao cliente escrever resultados, assinaturas ou pagamentos; não activar SMS; não colocar service-account, tokens, secrets ou .env no GitHub; não apagar o projecto/dados Supabase remotos. Qualquer serviço que exija Blaze, billing, domínio, chaves OAuth ou credenciais externas fica preparado e assinalado, não falsamente activo.
+
 ## Interface (FE-)
 
 ## FE-012 — Exigir login ao seleccionar um exame e retomar a selecção após autenticação
