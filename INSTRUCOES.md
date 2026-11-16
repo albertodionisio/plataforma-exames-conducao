@@ -10,6 +10,7 @@ e para que cada sessão saiba **o que já foi feito, o que está em curso e o qu
 | `PENDENTE.md` (raiz) e `data/exames/PENDENTE.md` | **O que falta** e **o que está em curso**, com ID | Sempre, antes de escolher trabalho |
 | `HISTORICO.md` | **O que já foi feito** (não é instrução) | Antes de criar uma tarefa nova, para ver se já existe |
 | `REGRAS.md` | Regras de negócio, decisões do dono (não reabrir) e regras do repositório | Antes de mexer em preços, planos, nota ou segredos |
+| `docs/GUIA-PERGUNTAS.md` | Como escrever perguntas, alternativas e explicações dos exames | Antes de criar ou rever qualquer exame |
 
 ## Áreas e IDs
 

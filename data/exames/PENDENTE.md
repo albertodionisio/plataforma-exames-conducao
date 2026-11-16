@@ -3,6 +3,8 @@
 Leia `INSTRUCOES.md` antes de reservar uma tarefa. Um ficheiro por exame: `data/exames/exameN.js`.
 Use `exame1.js` como modelo do formato e do nível de adaptação.
 
+> **Todos os exames seguem `docs/GUIA-PERGUNTAS.md`:** perguntas em forma de situação, explicações sem artigos (só no mapa), alternativas equilibradas. Verificar com `node scripts/auditar-estilo.js N`.
+
 ## Referência comum para a criação dos exames
 
 - **Exame 1:** concluído e já implementado em `data/exames/exame1.js`. É o modelo de como transformar as perguntas do aplicativo original para o ESTRADA.
@@ -338,6 +340,14 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Commits principais das substituições desta etapa: Exame 41 `56d33eb950ce3889024618c41347c6e18fcf4f59`; Exame 42 `7359bb385851316fc6e22b124cdecab90fc95e17`; Exame 43 `e117985d31bd1d98c4a086bcfc70b336c2cb76ce`; Exame 47 `6481826537c421c2905e7854e47f1c2839a534d5`; Exame 48 `a41349f933cb90dca3ddd4bc53b25cb087d8e32c`; Exame 49 `681465c7e972886c1849cfcbff6b69157eebca58`; Exame 50 `b62cb88311b74b94194b9d4463552280e152a876` e `3eef3c8ee700d0826e22bab00a9e8a7bafafbffb`. Os mapas pergunta-a-pergunta foram actualizados nos exames 41, 42, 43, 47, 48 e 49; os mapas do Exame 50 permanecem ligados à revisão já registada.
 - Os estados de CI para os commits mais recentes não foram devolvidos pelos endpoints de status consultados; por isso, não declarar CI aprovado nesta etapa. O teste visual no navegador permanece reservado ao dono.
 - Cuidados: não duplicar tarefas anteriores; não alterar questões sem base legal; manter as respostas equilibradas e sem padrão fixo.
+
+## DADOS-063 — Reformular os Exames 36 a 51 segundo o guia de perguntas
+- Estado: LIVRE (uma sessão por exame ou por pequeno grupo; reservar escrevendo o intervalo neste campo)
+- Pedido: os Exames 36–51 citam artigos em todas as explicações («(Art. 23.º.)»), têm vários enunciados «Segundo o Código…» e, em 13 a 22 de cada 25 perguntas, a resposta certa é a mais comprida. Reescrever as 25 perguntas e explicações de cada um em forma de situação, como os Exames 34 e 35 (modelos recentes) e os Exames 1–30.
+- Onde mexer: `data/exames/exameN.js` e `docs/referencias-exames/exameN-mapeamento.md`.
+- Regras: seguir `docs/GUIA-PERGUNTAS.md`; manter os mesmos temas e a ordem das perguntas para a tabela do mapa continuar válida (se mudar a regra de uma pergunta, actualizar a linha); confirmar cada resposta no Código; sem artigos nem multas nos textos; correcta não é a única mais longa em mais de 6 perguntas; posições equilibradas e não cíclicas.
+- Pronto quando: `node scripts/auditar-estilo.js N` sem «<-- rever», validador a passar, nota no mapa, e a tarefa removida deste ficheiro com linha CONCLUÍDA no `HISTORICO.md`.
+- Cuidados: antes de reescrever, ver se existe tarefa DADOS-039 a 061 reservada para o mesmo exame e coordenar; não alterar ficheiros partilhados.
 
 ## DADOS-062 — Equilibrar extensão das alternativas do Exame 1
 - Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 23:11 UTC+02 — ficheiros: data/exames/exame1.js, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:12 UTC+02
