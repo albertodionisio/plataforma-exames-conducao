@@ -82,10 +82,11 @@ async function main() {
   } finally {
     if (user) {
       try {
-        await signOut(auth);
-        await deleteUser(user);
+        if (auth.currentUser) await deleteUser(auth.currentUser);
+        else await deleteUser(user);
       } catch (_) {}
     }
+    try { await signOut(auth); } catch (_) {}
     await deleteApp(app);
   }
 
