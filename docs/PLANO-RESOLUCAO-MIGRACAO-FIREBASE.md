@@ -80,7 +80,7 @@ Este plano transforma as pendências da migração numa sequência de etapas ver
 - [ ] Confirmar que a branch não tem dependências operacionais Supabase no frontend nem em runtime.
 - [ ] Pesquisar referências restantes e classificar as que são apenas históricas/testes/documentação.
 - [x] Validar os Exames 36 e 37 após a integração: 25 perguntas cada, quatro alternativas por pergunta, índices de resposta válidos, explicações presentes, zero referências a artigos, zero enunciados «Segundo o Código», distribuição A7/B6/C6/D6; respostas correctas unicamente mais longas em 0/25 e 4/25 (abaixo do limite de 7 do auditor). Nenhum problema estrutural ou editorial detectado.
-- [ ] Confirmar o resultado dos workflows GitHub Actions no commit de sincronização. O conector devolveu zero status checks e não disponibiliza a listagem de execuções push; por isso, não declarar CI verde sem prova.
+- [x] Confirmar o Preview Vercel da branch após a sincronização: deployment `dpl_4MYDoZggRzm3y6LVXs31YUWHT2gS` em estado `READY`, associado ao commit `df9c0c8d82f0568a25d793eac98fb7dbea29bacf`. O resultado dos workflows GitHub Actions não é exposto pelas funções disponíveis do conector; não se declara CI verde sem prova.
 - [ ] Confirmar Preview e fluxos reais aprovados.
 - [ ] Rever regras Firestore e arquitectura backend.
 - [ ] Actualizar PR #3, descrição, evidências e lista de tarefas.
@@ -109,7 +109,7 @@ Não é necessário executar agora qualquer passo manual. Só será solicitada i
 | Etapa | Estado | Evidência / observação |
 |---|---|---|
 | 1. Estado-base | Concluída | Branch e PR localizadas; `main` HEAD `fc08c00`; merge-base `7cde108`; Firebase branch commit do plano `c0da8e2`; comparação: 69 à frente, 12 atrás, 26 ficheiros diferentes. Valores reconfirmados em 2026-11-16. |
-| 2. Sincronização | Conteúdo sincronizado; validação manual concluída; CI por confirmar | PR #6 integrada no commit `9b462c4`; branch 86 à frente / 0 atrás; Exames 34–37 e mapas reconciliados. Auditoria estrutural/editorial dos Exames 36–37 sem problemas. O conector não expôs o resultado dos workflows push. |
+| 2. Sincronização | Concluída | PR #6 integrada; branch 87 à frente / 0 atrás; Exames 34–37 e mapas reconciliados; auditoria dos Exames 36–37 aprovada; Preview Vercel READY. O resultado GitHub Actions não foi exposto pelo conector. |
 | 3. Testes de fluxo | Por fazer | Falha reportada em foco após resposta |
 | 4. Preview real | Por fazer | Preview reportado como antigo; validar commit e fluxos |
 | 5. Console Firebase/OAuth | Por fazer | Sem conector Firebase |
@@ -134,3 +134,5 @@ Não é necessário executar agora qualquer passo manual. Só será solicitada i
 - Exames 34 e 35 já eram iguais; Exames 36 e 37 e mapas foram actualizados para os blobs mais recentes de `main`. Foram também integrados `docs/GUIA-PERGUNTAS.md`, `scripts/auditar-estilo.js`, `data/exames/PENDENTE.md`, `INSTRUCOES.md`, `REGRAS.md` e o registo dos anexos.
 - Auditoria dos Exames 36 e 37 reproduzida a partir do script oficial `scripts/auditar-estilo.js`: ambos com 25 perguntas; artigos 0; «Segundo o Código» 0; respostas correctas únicas mais longas 0 e 4 (limite de revisão >7); posições A7/B6/C6/D6; enunciados curtos (≤90 caracteres) 6 e 7. Verificação estrutural adicional: quatro opções, índice correcto válido e explicação presente em todas as 50 perguntas.
 - O conector de status não devolveu verificações para o commit de merge e não disponibiliza listagem de execuções push. CI não declarado verde; falta apenas consultar a execução GitHub Actions quando estiver acessível.
+
+- Preview Vercel após a sincronização: `https://plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app` — deployment `READY`, commit `df9c0c8d82f0568a25d793eac98fb7dbea29bacf`.
