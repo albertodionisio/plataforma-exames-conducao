@@ -292,7 +292,7 @@ const vm = require("node:vm");
   app.listeners.submit({target:{id:"auth-form",querySelector:s=>registoValido[s]},preventDefault(){}});
   await new Promise(resolve=>setImmediate(resolve));
   await new Promise(resolve=>setImmediate(resolve));
-  assert.ok(app.innerHTML.includes("confirmes o teu email"),"O registo deve informar que a confirmação por email é necessária");
+  assert.ok(app.innerHTML.includes("confirmares o teu email"),"O registo deve informar que a confirmação por email é necessária");
   assert.ok(!app.innerHTML.includes("Pergunta 1 de 25"),"O registo sem confirmação não pode iniciar o exame");
   assert.ok(authState.calls.some(c=>c.method==="verification"),"O registo deve enviar verificação de email");
   app.click("auth-mode");
