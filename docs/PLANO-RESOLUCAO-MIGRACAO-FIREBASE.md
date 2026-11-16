@@ -27,9 +27,9 @@ Este plano transforma as pendências da migração numa sequência de etapas ver
 **Resultado esperado:** estado-base documentado, sem alteração destrutiva.
 
 ### ETAPA 2 — Reconciliar as branches sem perder os exames mais recentes
-- [ ] Obter a lista exacta dos 12 commits que estão em `main` e ainda não chegaram à branch Firebase.
-- [ ] Comparar os ficheiros de dados dos exames 34–37 e quaisquer outros dados alterados nas duas linhas de desenvolvimento.
-- [ ] Identificar conflitos em código, configuração, documentação e dados.
+- [ ] Obter a lista exacta dos 12 commits que estão em `main` e ainda não chegaram à branch Firebase. A comparação actual continua a indicar 12 commits atrás; o conector de comparação não expôs a lista individual de commits.
+- [x] Comparar os ficheiros de dados dos exames 34–37 e mapas de referência nas duas branches. Exames 34 e 35 e respectivos mapas têm os mesmos blobs. Exames 36 e 37 e respectivos mapas diferem: `main` tem versões mais recentes. SHAs em 2026-11-16: exame36 main `125a5cb691c724afc42ea853d6706d64dbe8e312` / branch `2603dee1d1c7fe4f6e0177d82beaafc35e79ed3b`; exame37 main `78e6fbb4e1a1a9d79c7763fff2c712d80707b25f` / branch `0f52bc77ea9d6a4c107082339e2e1607ba5ca311`; mapa36 main `b69c7d7ebeab9a03bc99a887a3f3fbc3ea8d6305` / branch `1d3d72a8a62d0ee9e9c245b1f3c3af64f5681091`; mapa37 main `2f3ce35e79806364ce35e973a7c8478078d985de` / branch `d1d6d54938930ff4b688f1129c799d13b6db3fb3`. A comparação geral reportou 26 ficheiros e não listou estes quatro ficheiros apesar dos blobs divergirem; discrepância do resultado da API a resolver antes de sincronizar.
+- [ ] Identificar conflitos em código, configuração, documentação e dados. A tarefa BE-002 continua marcada EM CURSO e os ficheiros centrais da migração estão reservados; não os alterar sem coordenação.
 - [ ] Integrar as alterações de `main` na branch Firebase numa operação controlada, preservando a migração e os dados mais recentes.
 - [ ] Confirmar que não houve duplicação, regressão ou perda de exames.
 - [ ] Registar o resultado e os commits de integração.
@@ -108,9 +108,19 @@ Não é necessário executar agora qualquer passo manual. Só será solicitada i
 | Etapa | Estado | Evidência / observação |
 |---|---|---|
 | 1. Estado-base | Concluída | Branch e PR localizadas; `main` HEAD `fc08c00`; merge-base `7cde108`; Firebase branch commit do plano `c0da8e2`; comparação: 69 à frente, 12 atrás, 26 ficheiros diferentes. Valores reconfirmados em 2026-11-16. |
-| 2. Sincronização | Por fazer | 68 à frente / 12 atrás; requer análise dos commits |
+| 2. Sincronização | Auditoria parcial; integração não iniciada | Comparação actual: 70 à frente / 12 atrás; Exames 34–35 iguais, Exames 36–37 e mapas diferentes (main mais recente). Não integrar até reconciliar o diff e as reservas BE-002/DADOS. |
 | 3. Testes de fluxo | Por fazer | Falha reportada em foco após resposta |
 | 4. Preview real | Por fazer | Preview reportado como antigo; validar commit e fluxos |
 | 5. Console Firebase/OAuth | Por fazer | Sem conector Firebase |
 | 6. Backend | Por fazer | Ainda não implementado |
 | 7. Lançamento | Bloqueado pelas etapas anteriores | Sem merge/deploy/publicação autorizados |
+
+
+### Registo adicional da ETAPA 2 — auditoria de 2026-11-16
+
+- PR #3 continua aberta e em rascunho; não foi feito merge.
+- Comparação actual `main...feat/firebase-full-migration`: divergente, 70 commits à frente e 12 atrás; merge-base `7cde108fe82f4544a9797289859c858e841f3fed`; HEAD de `main` `fc08c00ba0ca5e8efa5fc60e27892c1d93b1a25d`.
+- Os exames 34 e 35 e os seus mapas têm blobs idênticos nas duas branches.
+- Os exames 36 e 37 e os mapas correspondentes diferem. As versões de `main` incluem reformulações mais recentes; não copiar sem revisão do conteúdo e dos registos DADOS.
+- A comparação geral do GitHub não incluiu esses quatro caminhos na lista de ficheiros, apesar de `fetch_file` devolver SHAs diferentes. Este comportamento tem de ser esclarecido antes de uma integração automatizada.
+- `PENDENTE.md` da `main` indica BE-002 ainda EM CURSO, com ficheiros de autenticação e documentação reservados. Não editar esses ficheiros nesta etapa sem coordenação. Nenhum ficheiro de código/dados foi alterado nesta auditoria.
