@@ -6,43 +6,101 @@
   var A = window.APP || {}, EX = window.EXAMES || {};
   var app = document.getElementById("app");
   var estado = null, timer = null;
-  var supabaseClient = null, authUser = null, authReady = false, authAvailable = false;
+  var firebaseApp = null, firebaseAuth = null, firestoreDb = null;
+  var authUser = null, authReady = false, authAvailable = false;
   var authMode = "login", authFeedback = "";
 
   function iniciarAuth() {
+    var config = A.firebase;
+    if (!window.firebase || !config || !config.apiKey || !config.authDomain ||
+        !config.projectId || !config.appId) {
+      authReady = true;
+      authAvailable = false;
+      return Promise.resolve();
+    }
     try {
-      if (!window.supabase || typeof window.supabase.createClient !== "function" ||
-          !A.supabaseUrl || !A.supabasePublishableKey) {
-        authReady = true;
-        authAvailable = false;
-        return Promise.resolve();
-      }
-      supabaseClient = window.supabase.createClient(A.supabaseUrl, A.supabasePublishableKey, {
-        auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
-      });
+      firebaseApp = window.firebase.apps.length ? window.firebase.app() : window.firebase.initializeApp(config);
+      firebaseAuth = window.firebase.auth();
+      firestoreDb = window.firebase.firestore();
+      firebaseAuth.languageCode = "pt";
       authAvailable = true;
-      supabaseClient.auth.onAuthStateChange(function (event, session) {
-        authUser = session && session.user ? session.user : null;
-        renderConta();
-        if (event === "SIGNED_IN" && authUser) retomarExamePendente();
-        if (event === "SIGNED_OUT" && location.hash.indexOf("#/exame/") === 0) location.hash = "#/";
-      });
-      return supabaseClient.auth.getSession().then(function (resultado) {
-        authUser = resultado && resultado.data && resultado.data.session ?
-          resultado.data.session.user : null;
-        authReady = true;
-        renderConta();
+      return firebaseAuth.setPersistence(window.firebase.auth.Auth.Persistence.LOCAL).then(function () {
+        return new Promise(function (resolve) {
+          var initialised = false;
+          firebaseAuth.onAuthStateChanged(function (user) {
+            var passwordProvider = user && Array.isArray(user.providerData) &&
+              user.providerData.some(function (p) { return p.providerId === "password"; });
+            if (user && passwordProvider && !user.emailVerified) {
+              authUser = null;
+              authReady = true;
+              renderConta();
+              firebaseAuth.signOut().catch(function () {});
+              if (!initialised) { initialised = true; resolve(); }
+              return;
+            }
+            authUser = user || null;
+            authReady = true;
+            renderConta();
+            if (authUser) {
+              sincronizarPerfil(authUser).catch(function (error) {
+                console.warn("Perfil Firebase ainda não sincronizado:", error && error.code);
+              });
+              retomarExamePendente();
+            }
+            if (!initialised) { initialised = true; resolve(); }
+          }, function () {
+            authReady = true;
+            authAvailable = false;
+            if (!initialised) { initialised = true; resolve(); }
+          });
+          firebaseAuth.getRedirectResult().catch(function (error) {
+            authFeedback = mensagemAuth(error, "Não foi possível concluir o acesso com Google.");
+          });
+        });
       }).catch(function () {
         authReady = true;
         authAvailable = false;
       });
-    } catch (e) {
+    } catch (error) {
       authReady = true;
       authAvailable = false;
       return Promise.resolve();
     }
   }
 
+  function sincronizarPerfil(user) {
+    if (!firestoreDb || !user || !user.uid) return Promise.resolve();
+    var perfil = {
+      uid: user.uid,
+      email: user.email || "",
+      updatedAt: window.firebase.firestore.FieldValue.serverTimestamp()
+    };
+    if (user.displayName) perfil.displayName = user.displayName;
+    if (user.photoURL) perfil.photoURL = user.photoURL;
+    var ref = firestoreDb.collection("users").doc(user.uid);
+    return ref.get().then(function (snap) {
+      if (!snap.exists) perfil.createdAt = window.firebase.firestore.FieldValue.serverTimestamp();
+      return ref.set(perfil, { merge: true });
+    });
+  }
+
+  function mensagemAuth(error, fallback) {
+    var code = error && error.code ? error.code : "";
+    var mensagens = {
+      "auth/email-already-in-use": "Este email já está associado a uma conta.",
+      "auth/invalid-email": "O endereço de email não é válido.",
+      "auth/weak-password": "A palavra-passe deve ter pelo menos 8 caracteres.",
+      "auth/user-not-found": "Não existe uma conta com este email.",
+      "auth/wrong-password": "A palavra-passe está incorrecta.",
+      "auth/invalid-credential": "Email ou palavra-passe incorrectos.",
+      "auth/too-many-requests": "Demasiadas tentativas. Aguarda um pouco e tenta novamente.",
+      "auth/popup-closed-by-user": "A janela de autenticação foi fechada antes de concluir.",
+      "auth/popup-blocked": "O navegador bloqueou a janela de autenticação. Tenta novamente.",
+      "auth/unauthorized-domain": "Este domínio ainda não está autorizado no Firebase Authentication.",
+      "auth/network-request-failed": "Falha de ligação. Verifica a Internet e tenta novamente."
+    };
+    return mensagens[code] || (error && error.message) || fallback;
+  }
   function renderConta() {
     var el = document.getElementById("conta-utilizador");
     if (!el) return;
@@ -69,24 +127,24 @@
 
   function telaAutenticacao() {
     if (!authAvailable) {
-      app.innerHTML = "<h1>Entrar</h1><div class='card aviso'>O serviço de autenticação não está disponível neste momento. Tenta novamente mais tarde.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
+      app.innerHTML = "<h1>Entrar</h1><div class='card aviso'>O serviço Firebase ainda não está disponível. Verifica a configuração e os domínios autorizados.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
       return;
     }
     var registo = authMode === "registo";
     app.innerHTML = "<section class='auth-card card' aria-labelledby='auth-titulo'>" +
       "<h1 id='auth-titulo'>" + (registo ? "Criar conta" : "Entrar na tua conta") + "</h1>" +
-      "<p>" + (registo ? "Regista-te para começares a realizar exames." : "Inicia sessão para continuares para o exame seleccionado.") + "</p>" +
+      "<p>" + (registo ? "Regista-te para começares a realizar exames. Terás de confirmar o teu email." : "Inicia sessão para continuares para o exame seleccionado.") + "</p>" +
       "<form id='auth-form'>" +
       "<label for='auth-email'>Email</label><input id='auth-email' name='email' type='email' autocomplete='email' required maxlength='254'>" +
       "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' required>" +
       "<button class='btn auth-submit' type='submit'>" + (registo ? "Criar conta" : "Entrar") + "</button></form>" +
       (authFeedback ? "<p class='auth-feedback' role='status'>" + esc(authFeedback) + "</p>" : "") +
+      (!registo ? "<p><button class='link-button' type='button' data-action='auth-reset'>Esqueci-me da palavra-passe</button></p>" : "") +
       "<p class='auth-alternar'>" + (registo ? "Já tens conta?" : "Ainda não tens conta?") +
       " <button class='link-button' type='button' data-action='auth-mode'>" + (registo ? "Entrar" : "Criar conta") + "</button></p>" +
-      (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'>Continuar com Google</button>" : "<button class='btn sec auth-google' type='button' disabled aria-disabled='true'>Continuar com Google — brevemente</button>") +
+      (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'>Continuar com Google</button>" : "") +
       "<p><a href='#/exames' data-action='auth-cancel'>Voltar ao catálogo</a></p></section>";
   }
-
   function concluirAutenticacao(user) {
     authUser = user || authUser;
     authFeedback = "";
@@ -98,8 +156,8 @@
     var form = event.target;
     if (!form || form.id !== "auth-form") return;
     event.preventDefault();
-    if (!authAvailable || !supabaseClient) {
-      authFeedback = "Serviço de autenticação indisponível.";
+    if (!authAvailable || !firebaseAuth) {
+      authFeedback = "Serviço Firebase indisponível.";
       return telaAutenticacao();
     }
     var emailEl = form.querySelector("#auth-email");
@@ -112,62 +170,84 @@
     }
     authFeedback = "A processar...";
     telaAutenticacao();
-    var pedido = authMode === "registo" ?
-      supabaseClient.auth.signUp({ email: email, password: password,
-        options: { emailRedirectTo: location.origin + location.pathname } }) :
-      supabaseClient.auth.signInWithPassword({ email: email, password: password });
-    pedido.then(function (resultado) {
-      if (resultado.error) {
-        authFeedback = resultado.error.message || "Não foi possível autenticar.";
+    if (authMode === "registo") {
+      firebaseAuth.createUserWithEmailAndPassword(email, password).then(function (credential) {
+        return credential.user.sendEmailVerification({
+          url: location.origin + location.pathname + "#/entrar"
+        }).then(function () {
+          return firebaseAuth.signOut();
+        }).then(function () {
+          authFeedback = "Conta criada. Enviámos uma mensagem para confirmares o teu email. Depois da confirmação, já poderás entrar.";
+          telaAutenticacao();
+        });
+      }).catch(function (error) {
+        authFeedback = mensagemAuth(error, "Não foi possível criar a conta.");
         telaAutenticacao();
+      });
+      return;
+    }
+    firebaseAuth.signInWithEmailAndPassword(email, password).then(function (credential) {
+      if (!credential.user.emailVerified) {
+        return firebaseAuth.signOut().then(function () {
+          authFeedback = "Ainda não confirmaste o teu email. Abre a mensagem de verificação que enviámos antes de entrar.";
+          telaAutenticacao();
+        });
+      }
+      concluirAutenticacao(credential.user);
+    }).catch(function (error) {
+      authFeedback = mensagemAuth(error, "Não foi possível iniciar sessão.");
+      telaAutenticacao();
+    });
+  }
+
+  function recuperarPalavraPasse() {
+    var emailEl = document.getElementById("auth-email");
+    var email = emailEl ? emailEl.value.trim() : "";
+    if (!email) {
+      authFeedback = "Escreve primeiro o teu email no campo acima.";
+      telaAutenticacao();
+      return;
+    }
+    firebaseAuth.sendPasswordResetEmail(email, {
+      url: location.origin + location.pathname + "#/entrar"
+    }).then(function () {
+      authFeedback = "Se existir uma conta para este endereço, receberás uma mensagem com as instruções para redefinir a palavra-passe.";
+      telaAutenticacao();
+    }).catch(function (error) {
+      authFeedback = mensagemAuth(error, "Não foi possível enviar a mensagem de recuperação.");
+      telaAutenticacao();
+    });
+  }
+  function entrarComGoogle() {
+    if (!authAvailable || !firebaseAuth || A.googleOAuthEnabled !== true) return;
+    var provider = new window.firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    firebaseAuth.signInWithPopup(provider).then(function (resultado) {
+      concluirAutenticacao(resultado.user);
+    }).catch(function (error) {
+      if (error && error.code === "auth/popup-blocked") {
+        firebaseAuth.signInWithRedirect(provider).catch(function (redirectError) {
+          authFeedback = mensagemAuth(redirectError, "Não foi possível iniciar o acesso com Google.");
+          telaAutenticacao();
+        });
         return;
       }
-      if (resultado.data && resultado.data.session && resultado.data.user) {
-        concluirAutenticacao(resultado.data.user);
-      } else if (authMode === "registo") {
-        authFeedback = "Conta criada. Confirma o teu email através da mensagem enviada para concluir o registo.";
-        telaAutenticacao();
-      } else {
-        authFeedback = "Não foi possível iniciar sessão. Tenta novamente.";
-        telaAutenticacao();
-      }
-    }).catch(function () {
-      authFeedback = "Ocorreu um erro de ligação. Tenta novamente.";
+      authFeedback = mensagemAuth(error, "Não foi possível iniciar o acesso com Google.");
       telaAutenticacao();
     });
   }
-
-  function entrarComGoogle() {
-    if (!authAvailable || !supabaseClient || A.googleOAuthEnabled !== true) return;
-    supabaseClient.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: location.origin + location.pathname }
-    }).then(function (resultado) {
-      if (resultado && resultado.error) {
-        authFeedback = resultado.error.message || "Não foi possível iniciar o acesso com Google.";
-        telaAutenticacao();
-      }
-    }).catch(function () {
-      authFeedback = "Não foi possível iniciar o acesso com Google.";
-      telaAutenticacao();
-    });
-  }
-
   function sairDaConta() {
     try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {}
-    if (supabaseClient) supabaseClient.auth.signOut().then(function (resultado) {
-      if (resultado && resultado.error) {
-        authFeedback = "Não foi possível terminar a sessão.";
-      } else {
-        authUser = null;
-        estado = null;
-        pararRelogio();
-        renderConta();
-        location.hash = "#/";
-        rota();
-      }
+    if (!firebaseAuth) return;
+    firebaseAuth.signOut().then(function () {
+      authUser = null;
+      estado = null;
+      pararRelogio();
+      renderConta();
+      location.hash = "#/";
+      rota();
     }).catch(function () {
-      authFeedback = "Não foi possível terminar a sessão.";
+      authFeedback = "Não foi possível terminar a sessão. Tenta novamente.";
     });
   }
 
@@ -437,6 +517,7 @@
       return;
     }
     if (acao === "auth-logout") { sairDaConta(); return; }
+    if (acao === "auth-reset") { recuperarPalavraPasse(); return; }
     if (acao === "auth-cancel") { try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {} return; }
     if (acao === "auth-google") { entrarComGoogle(); return; }
     if (!estado || estado.res) return;
