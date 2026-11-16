@@ -110,7 +110,7 @@ O tempo, a pontuação e o limiar são regras internas de treino, não regras of
 
 ## 3. Arquitectura recomendada
 
-Frontend TypeScript em aplicação web/PWA, backend API modular, PostgreSQL e fornecedores externos para autenticação, SMS, email, pagamentos e anúncios. Para o primeiro lançamento, um backend modular único tende a ser mais simples e barato que microserviços.
+Frontend web/PWA, backend API modular e Firebase como plataforma principal de identidade e dados dinâmicos: Firebase Authentication, Cloud Firestore e serviços complementares seleccionados conforme necessidade. Conteúdos estáticos dos exames permanecem versionados e distribuídos por CDN/cache. Pagamentos e operações sensíveis dependem de backend confiável. Para o primeiro lançamento, um backend modular único tende a ser mais simples e barato que microserviços.
 
 ```
 [Browser / PWA]
@@ -124,7 +124,7 @@ Frontend TypeScript em aplicação web/PWA, backend API modular, PostgreSQL e fo
    | Subscriptions / Payments / Ads / Notifications / Admin / Audit
    |            |             |
    v            v             v
-[PostgreSQL] [SMS/Email] [Pagamento/Ads]
+[Cloud Firestore] [Email/FCM] [Pagamento/Ads]
    |
    v
 [Backups + logs + monitorização]
@@ -222,8 +222,8 @@ Proposta REST/JSON sob `/api/v1`. Documentar o contrato final com OpenAPI. Os en
 | Método/rota | Acesso | Finalidade |
 |---|---|---|
 | GET /me | Autenticado | Perfil e verificação. |
-| POST /auth/phone/start | Autenticado | Enviar código SMS. |
-| POST /auth/phone/confirm | Autenticado | Confirmar código. |
+| Firebase Auth — Email/Password | Público | Registo, login, verificação de email e recuperação de palavra-passe via SDK. |
+| Firebase Auth — Google | Público | Autenticação OAuth Google via SDK. |
 | GET /simulations | Público/autenticado | Catálogo e bloqueios. |
 | POST /attempts | Autenticado | Iniciar exame se autorizado. |
 | GET /attempts/{id} | Dono/admin | Estado e perguntas. |
@@ -262,16 +262,16 @@ O backend calcula o resultado a partir das respostas guardadas; nunca aceita a n
 
 ---
 
-## 7. Autenticação, SMS e permissões
+## 7. Autenticação e permissões
 
-- **Fornecedor seleccionado para a primeira fase:** Supabase Auth no projecto ESTRADA. O frontend usa o URL do projecto e a chave publishable, com sessão persistente e renovação automática.
-- Registo e login por email e palavra-passe estão implementados no frontend. A palavra-passe exige pelo menos 8 caracteres. O início de qualquer exame exige sessão autenticada; o catálogo continua público. O exame escolhido é preservado durante o redireccionamento e retomado depois do login.
-- O login Google está preparado no código, mas fica desactivado até configurar o fornecedor Google no Supabase e as credenciais OAuth no painel do fornecedor; nunca colocar o Client Secret no frontend.
-- As contas e credenciais são geridas pelo Supabase Auth. Tabelas de perfil, tentativas, resultados e assinaturas serão criadas em tarefas próprias, conforme os respectivos requisitos.
-- Recuperação de conta sem revelar se um email está registado.
-- Código SMS de utilização única, com expiração, limites de tentativas e limites por número/IP.
-- Administradores devem usar protecção adicional; SMS não deve ser o único factor administrativo.
-- Cookies seguros HttpOnly/Secure/SameSite quando aplicável; protecção CSRF se necessário.
+- **Fornecedor seleccionado para a primeira fase:** Firebase Authentication no projecto ESTRADA. A aplicação Web usa a configuração pública Firebase, persistência de sessão local e fornecedores Email/Password e Google.
+- Registo e login por email/palavra-passe, confirmação de email e recuperação de palavra-passe são tratados pelo Firebase Authentication. O início de qualquer exame exige utilizador autenticado; para contas Email/Password também exige email verificado. O catálogo continua público e o exame escolhido é preservado durante a autenticação.
+- O login Google usa Firebase Authentication com escolha explícita de conta. O domínio Vercel está preparado como authDomain através de proxy /__/auth; o funcionamento depende de validar o reverse proxy e actualizar os domínios/URIs autorizados no Firebase e Google Cloud.
+- O perfil mínimo fica em Cloud Firestore em users/{uid}. Subscrições, tentativas, resultados e pagamentos não podem ser escritos pelo cliente; dependem de backend confiável com Firebase Admin SDK.
+- Recuperação de conta por email. A resposta da interface deve evitar revelar se um endereço está registado.
+- **Não usar autenticação por SMS/OTP** nesta fase. O telefone, se recolhido, é apenas contacto.
+- Administradores devem usar protecção adicional; não confiar apenas no estado visual da interface.
+- A persistência de sessão é gerida pelo SDK Firebase. Operações sensíveis exigem verificação no backend e validação de tokens.
 - Autorização no backend em cada pedido; esconder botão no frontend não é segurança.
 
 | Papel | Permissões |
@@ -646,8 +646,8 @@ O calendário depende da equipa, revisão do conteúdo e fornecedores. Não é r
 | Categoria de carta | Determina conteúdo e dificuldade | Definir categoria e confirmar programa. |
 | Revisão legal | Perguntas erradas ensinam regras erradas | Revisor competente e referências verificadas. |
 | Nome/domínio | Marca e publicação | Escolher nome e verificar disponibilidade. |
-| Autenticação | Custo, segurança e exportação | Comparar fornecedores. |
-| SMS Moçambique | Cobertura e custo | Testar entrega, remetente e preço. |
+| Autenticação | Custo, segurança e exportação | Firebase Authentication seleccionado; validar exportação e migração de contas existentes. |
+| SMS Moçambique | Não aplicável à autenticação inicial | Não implementar SMS/OTP; telefone é apenas contacto. |
 | Pagamento (semanal e mensal) | Suporte local pode variar | Validar métodos do público-alvo. |
 | Publicidade | Receita e consentimento incertos | Escolher rede e rever políticas. |
 | Custos | Hospedagem, SMS e email têm custo | Orçamento e alertas de consumo. |

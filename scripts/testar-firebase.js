@@ -1,0 +1,39 @@
+"use strict";
+const fs = require("fs");
+const vm = require("vm");
+const assert = require("assert");
+const configSource = fs.readFileSync("config.js", "utf8");
+const context = { window: { location: { hostname: "plataforma-exames-conducao.vercel.app" } } };
+vm.runInNewContext(configSource, context);
+const app = context.window.APP;
+assert(app && app.firebase, "Configuração Firebase em falta.");
+["apiKey", "authDomain", "projectId", "appId"].forEach((key) => {
+  assert(typeof app.firebase[key] === "string" && app.firebase[key].length > 0, "Campo Firebase inválido: " + key);
+});
+assert.strictEqual(app.firebase.projectId, "plataforma-exames-conducao");
+assert.strictEqual(app.firebase.authDomain, "plataforma-exames-conducao.vercel.app");
+const previewHost = "plataforma-exames-conducao-git-feat-firebase-full-preview.vercel.app";
+const previewContext = { window: { location: { hostname: previewHost } } };
+vm.runInNewContext(configSource, previewContext);
+assert.strictEqual(previewContext.window.APP.firebase.authDomain, previewHost, "O preview Vercel deve usar o próprio domínio como authDomain.");
+const localContext = { window: { location: { hostname: "localhost" } } };
+vm.runInNewContext(configSource, localContext);
+assert.strictEqual(localContext.window.APP.firebase.authDomain, "plataforma-exames-conducao.firebaseapp.com", "Ambiente local deve usar o domínio Firebase padrão.");
+assert.strictEqual(app.googleOAuthEnabled, true);
+const html = fs.readFileSync("index.html", "utf8");
+assert(html.includes("firebase-app-compat.js"), "SDK Firebase App não carregado.");
+assert(html.includes("firebase-auth-compat.js"), "SDK Firebase Auth não carregado.");
+assert(html.includes("firebase-firestore-compat.js"), "SDK Firestore não carregado.");
+assert(!/supabase/i.test(html), "SDK Supabase ainda referenciado no HTML.");
+const appJs = fs.readFileSync("app.js", "utf8");
+assert(!/supabase/i.test(appJs), "Código Supabase ainda existe em app.js.");
+["createUserWithEmailAndPassword", "sendEmailVerification", "signInWithEmailAndPassword",
+ "sendPasswordResetEmail", "signInWithPopup", "signOut", "sincronizarPerfil"].forEach((needle) => {
+  assert(appJs.includes(needle), "Fluxo Firebase em falta: " + needle);
+});
+const rules = fs.readFileSync("firestore.rules", "utf8");
+assert(rules.includes("verifiedEmail()"), "As regras não exigem email verificado para escrever o perfil.");
+assert(rules.includes("allow create, update, delete: if false;"), "As colecções protegidas devem bloquear escrita do cliente.");
+const vercel = JSON.parse(fs.readFileSync("vercel.json", "utf8"));
+assert(vercel.rewrites.some((r) => r.source === "/__/auth/:path*"), "Proxy Firebase Auth Vercel em falta.");
+console.log("BE-002 Firebase: configuração, SDKs, autenticação, proxy e regras verificadas.");

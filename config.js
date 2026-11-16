@@ -2,9 +2,16 @@
 window.APP = {
   nome: "ESTRADA",
   slogan: "Exames de condução em Moçambique",
-  // Chave publishable: pode estar no frontend; nunca colocar aqui service_role/secret keys.
-  supabaseUrl: "https://ldtvbmmweqiaggmsicnu.supabase.co",
-  supabasePublishableKey: "sb_publishable_axaCm24ax4LASWUjezu-pQ_tgl1CXat",
+  // Configuração pública da aplicação Web Firebase (a apiKey do Firebase é identificador público).
+  // O domínio Vercel é usado como authDomain através do proxy /__/auth configurado em vercel.json.
+  firebase: {
+    apiKey: "AIzaSyBTkZuf3RabULuWA9mFQDIqUBbvMHUBQSI",
+    authDomain: (window.location && /\.vercel\.app$/i.test(window.location.hostname)) ? window.location.hostname : "plataforma-exames-conducao.firebaseapp.com",
+    projectId: "plataforma-exames-conducao",
+    storageBucket: "plataforma-exames-conducao.firebasestorage.app",
+    messagingSenderId: "779881429626",
+    appId: "1:779881429626:web:43dd5919d69995c72119c3"
+  },
   googleOAuthEnabled: true,
   totalExames: 51,
   gratuitos: 3,
