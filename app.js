@@ -504,6 +504,15 @@
     app.innerHTML = h;
   }
   app.addEventListener("submit", terminarAutenticacao);
+  // O botão Sair é renderizado em #conta-utilizador, fora de #app.
+  // Por isso, a delegação de cliques do conteúdo principal não o recebe.
+  var contaUtilizador = document.getElementById("conta-utilizador");
+  if (contaUtilizador) {
+    contaUtilizador.addEventListener("click", function (event) {
+      var botaoSair = event.target.closest ? event.target.closest("[data-action=\"auth-logout\"]") : null;
+      if (botaoSair) sairDaConta();
+    });
+  }
   app.addEventListener("click", function (event) {
     var alvo = event.target;
     if (!alvo || !alvo.getAttribute) return;
