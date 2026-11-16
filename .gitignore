@@ -1,4 +1,9 @@
 # Segredos e configuração local
+.firebaserc
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
 .env
 .env.*
 !.env.example

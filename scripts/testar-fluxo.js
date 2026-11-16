@@ -52,31 +52,58 @@ const vm = require("node:vm");
   let intervalCallback=null, agora=1700000000000, confirmar=true;
   const confirmacoes=[];
   class FakeDate extends Date { static now(){ return agora; } }
-  const authState={session:{user:{email:"candidato@estrada.test"}},listener:null,calls:[]};
+  const authState={user:null,listener:null,calls:[]};
+  function makeUser(email, verified, providerId) {
+    return {uid:"uid-teste",email,emailVerified:verified,displayName:"Candidato",
+      photoURL:null,providerData:[{providerId:providerId||"password"}],
+      sendEmailVerification(){authState.calls.push({method:"verification"});return Promise.resolve();}};
+  }
+  authState.user=makeUser("candidato@estrada.test",true,"password");
   const fakeAuth={
-    onAuthStateChange(fn){authState.listener=fn;return {data:{subscription:{unsubscribe(){}}}};},
-    getSession(){return Promise.resolve({data:{session:authState.session}});},
-    signInWithPassword({email,password}){
+    setPersistence(){return Promise.resolve();},
+    onAuthStateChanged(fn){authState.listener=fn;queueMicrotask(()=>fn(authState.user));return ()=>{};},
+    getRedirectResult(){return Promise.resolve(null);},
+    signInWithEmailAndPassword(email,password){
       authState.calls.push({method:"login",email,password});
-      authState.session={user:{email}};
-      if(authState.listener)authState.listener("SIGNED_IN",authState.session);
-      return Promise.resolve({data:{session:authState.session,user:authState.session.user},error:null});
+      authState.user=makeUser(email,true,"password");
+      if(authState.listener)queueMicrotask(()=>authState.listener(authState.user));
+      return Promise.resolve({user:authState.user});
     },
-    signUp({email,password}){
+    createUserWithEmailAndPassword(email,password){
       authState.calls.push({method:"registo",email,password});
-      return Promise.resolve({data:{session:null,user:{email}},error:null});
+      authState.user=makeUser(email,false,"password");
+      if(authState.listener)queueMicrotask(()=>authState.listener(authState.user));
+      return Promise.resolve({user:authState.user});
     },
-    signInWithOAuth({provider,options}){
-      authState.calls.push({method:"google",provider,options});
-      return Promise.resolve({data:{provider,url:"https://accounts.google.com/o/oauth2/auth"},error:null});
+    signInWithPopup(provider){
+      authState.calls.push({method:"google",provider:provider.providerId});
+      authState.user=makeUser("google@estrada.test",true,"google.com");
+      if(authState.listener)queueMicrotask(()=>authState.listener(authState.user));
+      return Promise.resolve({user:authState.user});
     },
+    signInWithRedirect(){return Promise.resolve();},
+    sendPasswordResetEmail(email){authState.calls.push({method:"reset",email});return Promise.resolve();},
     signOut(){
-      authState.session=null;
-      if(authState.listener)authState.listener("SIGNED_OUT",null);
-      return Promise.resolve({error:null});
+      authState.user=null;
+      if(authState.listener)queueMicrotask(()=>authState.listener(null));
+      return Promise.resolve();
     }
   };
-  const window={APP:null,EXAMES:{},supabase:{createClient:()=>({auth:fakeAuth})},addEventListener:(n,fn)=>{listeners[n]=fn;}};
+  const authFactory=()=>fakeAuth;
+  authFactory.Auth={Persistence:{LOCAL:"local"}};
+  authFactory.GoogleAuthProvider=class {
+    constructor(){this.providerId="google";}
+    setCustomParameters(){}
+  };
+  const fakeDb={collection(){return {doc(){return {
+    get(){return Promise.resolve({exists:false});},
+    set(){return Promise.resolve();}
+  };}};}};
+  function firestoreFactory(){return fakeDb;}
+  firestoreFactory.FieldValue={serverTimestamp(){return {__serverTimestamp:true};}};
+  const firebase={apps:[],initializeApp(){const a={};this.apps.push(a);return a;},
+    app(){return this.apps[0];},auth:authFactory,firestore:firestoreFactory};
+  const window={APP:null,EXAMES:{},firebase,addEventListener:(n,fn)=>{listeners[n]=fn;}};
   const fakeSetInterval=fn=>{intervalCallback=fn;return 1;};
   const fakeClearInterval=()=>{intervalCallback=null;};
   const context={
@@ -238,9 +265,9 @@ const vm = require("node:vm");
   assert.match(app.innerHTML,/bloqueado e requer um plano/);
   console.log("FE-002 PASSOU: hashchange assíncrono, cronómetro, foco, ausência de feedback, submissão automática/manual, confirmação de brancas, notas 20,0/18,4/17,6, semáforo, revisão e persistência após recarregar.");
 
-  // FE-012: visitante pode navegar, mas um acesso directo a exame exige autenticação.
-  authState.session=null;
-  if(authState.listener)authState.listener("SIGNED_OUT",null);
+  // BE-002: visitante pode navegar, mas precisa de autenticação Firebase antes de iniciar um exame.
+  authState.user=null;
+  if(authState.listener)authState.listener(null);
   await navegar("#/exames");
   assert.match(app.innerHTML,/<h1>Exames<\/h1>/,"O catálogo deve continuar público");
   await navegar("#/exame/42");
@@ -253,20 +280,21 @@ const vm = require("node:vm");
   await navegar("#/exame/42");
   assert.equal(localStorage.getItem("estrada.exame.pendente"),"42","Uma nova selecção deve ser guardada");
   assert.ok(app.innerHTML.includes("Continuar com Google"),"O botão Google deve estar disponível quando OAuth está activado");
-  assert.ok(!app.innerHTML.includes("Google — brevemente"),"O botão Google não deve aparecer como indisponível");
   app.click("auth-google");
   await new Promise(resolve=>setImmediate(resolve));
-  assert.ok(authState.calls.some(c=>c.method==="google" && c.provider==="google"),"O botão deve iniciar OAuth Google pelo Supabase");
+  assert.ok(authState.calls.some(c=>c.method==="google" && c.provider==="google"),"O botão deve iniciar Firebase Google Auth");
   app.click("auth-mode");
   assert.ok(app.innerHTML.includes("Criar conta"),"Deve existir modo de registo");
   const senhaCurta={"#auth-email":{value:"candidato@estrada.test"},"#auth-password":{value:"1234567"}};
   app.listeners.submit({target:{id:"auth-form",querySelector:s=>senhaCurta[s]},preventDefault(){}});
   assert.ok(app.innerHTML.includes("pelo menos 8 caracteres"),"O registo deve exigir palavra-passe com pelo menos 8 caracteres");
-  const registoValido={"#auth-email":{value:"candidato@estrada.test"},"#auth-password":{value:"senha-segura-123"}};
+  const registoValido={"#auth-email":{value:"novo@estrada.test"},"#auth-password":{value:"senha-segura-123"}};
   app.listeners.submit({target:{id:"auth-form",querySelector:s=>registoValido[s]},preventDefault(){}});
   await new Promise(resolve=>setImmediate(resolve));
-  assert.ok(app.innerHTML.includes("Confirma o teu email"),"O registo deve informar quando a confirmação por email é necessária");
-  assert.ok(!app.innerHTML.includes("Pergunta 1 de 25"),"O registo sem sessão não pode iniciar o exame");
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.ok(app.innerHTML.includes("confirmes o teu email"),"O registo deve informar que a confirmação por email é necessária");
+  assert.ok(!app.innerHTML.includes("Pergunta 1 de 25"),"O registo sem confirmação não pode iniciar o exame");
+  assert.ok(authState.calls.some(c=>c.method==="verification"),"O registo deve enviar verificação de email");
   app.click("auth-mode");
   const authInputs={"#auth-email":{value:"candidato@estrada.test"},"#auth-password":{value:"senha-segura-123"}};
   app.listeners.submit({target:{id:"auth-form",querySelector:s=>authInputs[s]},preventDefault(){}});
@@ -275,9 +303,9 @@ const vm = require("node:vm");
   assert.equal(location.hash,"#/exame/42","Após login deve retomar o exame seleccionado");
   assert.match(app.innerHTML,/Pergunta 1 de 25/,"O exame só deve começar depois do login");
   assert.equal(localStorage.getItem("estrada.exame.pendente"),null,"O destino pendente deve ser limpo após retomar");
-  assert.ok(authState.calls.some(c=>c.method==="login"),"O login deve usar o Supabase Auth");
+  assert.ok(authState.calls.some(c=>c.method==="login"),"O login deve usar Firebase Authentication");
   app.click("auth-logout");
   await new Promise(resolve=>setImmediate(resolve));
-  assert.equal(authState.session,null,"O logout deve terminar a sessão Supabase");
-  console.log("FE-012 PASSOU: acesso visitante bloqueado antes do exame, destino preservado, login Supabase e retoma automática, logout.");
+  assert.equal(authState.user,null,"O logout deve terminar a sessão Firebase");
+  console.log("BE-002 PASSOU: fluxo de exames preservado e autenticação Firebase simulada, incluindo visitante, email verificado, registo, Google, retoma e logout.");
 })().catch(error=>{console.error(error);process.exitCode=1;});
