@@ -8,6 +8,7 @@ const root = path.resolve(__dirname, "..");
 const sw = fs.readFileSync(path.join(root, "service-worker.js"), "utf8");
 const bootstrap = fs.readFileSync(path.join(root, "cache-bootstrap.js"), "utf8");
 const netlify = fs.readFileSync(path.join(root, "netlify.toml"), "utf8");
+const vercel = JSON.parse(fs.readFileSync(path.join(root, "vercel.json"), "utf8"));
 const build = fs.readFileSync(path.join(root, "scripts", "build-netlify.js"), "utf8");
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 
