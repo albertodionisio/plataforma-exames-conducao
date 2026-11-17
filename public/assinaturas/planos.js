@@ -96,6 +96,10 @@
       botao.type = "button";
       botao.addEventListener("click", function () {
         seleccionar(indice);
+        if (plano.nome === "Semanal Básico" && plano.preco === "50 MT") {
+          window.location.assign("https://checkout.epay.co.mz/c/loja-jr5qps-p507");
+          return;
+        }
         aviso.textContent = plano.preco === "0 MT"
           ? "O plano Free é gratuito. A adesão aos planos pagos ainda não está disponível nesta versão."
           : "O plano " + plano.nome + " foi seleccionado. A adesão e os pagamentos ainda não estão activos nesta versão.";

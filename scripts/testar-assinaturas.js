@@ -102,7 +102,7 @@ const document = {
   getElementById: (id) => id === "assinaturas-app" ? raiz : null,
   addEventListener() {}
 };
-const window = {};
+const window = { location: { navigatedTo: null, assign(url) { this.navigatedTo = url; } } };
 const contexto = { window, document, Array, String };
 
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../config.js"), "utf8"), contexto);
@@ -126,6 +126,12 @@ for (const cartao of cartoes) {
   assert.equal(cartao.querySelectorAll("button").length, 1, "cada plano deve ter um botão de adesão");
   assert.equal(cartao.querySelectorAll("li").length, 4, "cada plano deve apresentar quatro benefícios");
 }
+
+const botaoSemanal50 = cartoes[1].querySelector("button");
+botaoSemanal50.click();
+assert.equal(window.location.navigatedTo, "https://checkout.epay.co.mz/c/loja-jr5qps-p507", "o botão do plano Semanal Básico de 50 MT deve abrir o checkout EPay");
+assert.equal(cartoes[1].classList.contains("plano-escolhido"), true, "o plano de 50 MT deve ficar seleccionado antes do redireccionamento");
+window.location.navigatedTo = null;
 
 const radioMensal = raiz.querySelector("#estrada-plano-4");
 radioMensal.click();
@@ -151,4 +157,4 @@ for (const recurso of ["../../../config.js", "../../../public/assinaturas/planos
   assert.ok(preview.includes(recurso), "a demonstração deve carregar " + recurso);
 }
 
-console.log("FE-004 PASSOU: cinco planos, dados de config.js, benefícios, selecção, botões, aviso de pagamento inactivo, responsividade, foco de teclado e recursos da demonstração.");
+console.log("FE-004/GER-022 PASSOU: cinco planos, dados de config.js, benefícios, selecção, checkout EPay exclusivo do plano Semanal Básico de 50 MT, restantes botões sem alterações, responsividade, foco de teclado e recursos da demonstração.");
