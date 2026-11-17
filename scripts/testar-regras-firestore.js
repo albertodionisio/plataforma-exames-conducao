@@ -8,6 +8,7 @@ const {
 } = require("@firebase/rules-unit-testing");
 const {
   collection,
+  deleteDoc,
   doc,
   getDoc,
   getDocs,
@@ -94,6 +95,7 @@ async function main() {
       uid: "bob"
     }));
     await assertFails(getDocs(collection(alice, "users")));
+    await assertFails(deleteDoc(doc(alice, "users/alice")));
 
     // Perfil telefónico: só pode conter o número confirmado pela claim
     // assinada pelo backend; o cliente não pode falsificar nem trocar o número.
@@ -116,6 +118,10 @@ async function main() {
     await assertFails(updateDoc(doc(phoneUser, "users/phone-user"), {
       phone: "+258849999999"
     }));
+    await assertFails(updateDoc(doc(phoneUser, "users/phone-user"), {
+      phone: null
+    }));
+    await assertFails(deleteDoc(doc(phoneUser, "users/phone-user")));
     await assertFails(getDoc(doc(phoneUser, "users/alice")));
     await assertFails(setDoc(doc(alice, "users/alice"), {
       uid: "alice",
@@ -127,6 +133,16 @@ async function main() {
     // Credenciais e limites de autenticação são exclusivos do Admin SDK.
     await assertFails(getDoc(doc(phoneUser, "phone_auth_accounts/private")));
     await assertFails(getDoc(doc(phoneUser, "phone_auth_rate_limits/private")));
+    await assertFails(getDocs(collection(phoneUser, "phone_auth_accounts")));
+    await assertFails(getDocs(collection(phoneUser, "phone_auth_rate_limits")));
+    await assertFails(setDoc(doc(phoneUser, "phone_auth_accounts/fake"), {
+      uid: "phone-user",
+      phone: "+258841234567",
+      passwordHash: "forged"
+    }));
+    await assertFails(setDoc(doc(phoneUser, "phone_auth_rate_limits/fake"), {
+      count: 0
+    }));
 
     // Tentativas: só leitura do próprio registo; lista exige filtro pelo UID.
     await assertSucceeds(getDoc(doc(alice, "exam_attempts/alice-attempt")));
@@ -142,6 +158,11 @@ async function main() {
     await assertFails(updateDoc(doc(alice, "exam_attempts/alice-attempt"), {
       score: 20
     }));
+    await assertFails(deleteDoc(doc(alice, "exam_attempts/alice-attempt")));
+    await assertFails(getDocs(query(
+      collection(alice, "exam_attempts"),
+      where("uid", "==", "bob")
+    )));
 
     // Assinaturas e pagamentos: leitura própria, nenhuma escrita pelo cliente.
     await assertSucceeds(getDoc(doc(alice, "subscriptions/alice")));
@@ -149,11 +170,20 @@ async function main() {
     await assertFails(setDoc(doc(alice, "subscriptions/alice"), {
       uid: "alice", plan: "premium", active: true
     }));
+    await assertFails(getDocs(collection(alice, "subscriptions")));
+    await assertFails(updateDoc(doc(alice, "subscriptions/alice"), {
+      active: false
+    }));
+    await assertFails(deleteDoc(doc(alice, "subscriptions/alice")));
     await assertSucceeds(getDoc(doc(alice, "payment_transactions/alice-payment")));
     await assertFails(getDoc(doc(alice, "payment_transactions/bob-payment")));
     await assertFails(setDoc(doc(alice, "payment_transactions/fake"), {
       uid: "alice", status: "confirmed", amount: 999999
     }));
+    await assertFails(updateDoc(doc(alice, "payment_transactions/alice-payment"), {
+      amount: 1
+    }));
+    await assertFails(deleteDoc(doc(alice, "payment_transactions/alice-payment")));
 
     // Negação por omissão para colecções não previstas.
     await assertFails(getDoc(doc(alice, "admin/secrets")));
