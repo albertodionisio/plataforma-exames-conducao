@@ -110,7 +110,7 @@ Não é necessário executar agora qualquer passo manual. Só será solicitada i
 |---|---|---|
 | 1. Estado-base | Concluída | Branch e PR localizadas; `main` HEAD `fc08c00`; merge-base `7cde108`; Firebase branch commit do plano `c0da8e2`; comparação: 69 à frente, 12 atrás, 26 ficheiros diferentes. Valores reconfirmados em 2026-11-16. |
 | 2. Sincronização | Concluída | PR #6 integrada; verificação actual em 2026-11-17: `main` é ancestral, 89 commits à frente / 0 atrás, merge-base `fc08c00ba0ca5e8efa5fc60e27892c1d93b1a25d`; Exames 34–37 e mapas reconciliados; auditoria dos Exames 36–37 aprovada; Preview Vercel READY. CI push não confirmado pelo conector. |
-| 3. Testes de fluxo | Por fazer | Falha reportada em foco após resposta |
+| 3. Testes de fluxo | Concluída | GER-021: mock DOM corrigido para `closest()`/`contains()` e clique em descendente; workflow `Validar exames` run `43992938585` passou (FE-002, BE-002, validador oficial e build Netlify). Código de produção de autenticação não foi alterado. |
 | 4. Preview real | Por fazer | Preview reportado como antigo; validar commit e fluxos |
 | 5. Console Firebase/OAuth | Por fazer | Sem conector Firebase |
 | 6. Backend | Por fazer | Ainda não implementado |
