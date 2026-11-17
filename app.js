@@ -308,6 +308,43 @@
   function pararRelogio() {
     if (timer !== null) { clearInterval(timer); timer = null; }
   }
+  // Guarda apenas o estado necessário para retomar a tentativa no mesmo navegador.
+  // O prazo absoluto impede que uma actualização da página reinicie os 60 minutos.
+  var chaveExameEmCurso = "estrada.exame.em-curso";
+  function guardarEstadoExame() {
+    if (!estado || estado.res) return;
+    try {
+      localStorage.setItem(chaveExameEmCurso, JSON.stringify({
+        versao:1, n:estado.n, i:estado.i, fim:estado.fim, resp:estado.resp
+      }));
+    } catch (e) {
+      // A tentativa continua a funcionar mesmo se o navegador bloquear o armazenamento.
+    }
+  }
+  function limparEstadoExame() {
+    try { localStorage.removeItem(chaveExameEmCurso); } catch (e) {}
+  }
+  function lerEstadoExame(n, Q) {
+    try {
+      var salvo = JSON.parse(localStorage.getItem(chaveExameEmCurso) || "null");
+      if (!salvo || salvo.versao !== 1 || Number(salvo.n) !== Number(n) ||
+          !Number.isInteger(salvo.i) || salvo.i < 0 || salvo.i >= Q.length ||
+          !Number.isFinite(salvo.fim) || !salvo.resp || typeof salvo.resp !== "object" ||
+          Array.isArray(salvo.resp)) return null;
+      var resp = {};
+      Object.keys(salvo.resp).forEach(function (k) {
+        var indicePergunta = Number(k), alternativa = salvo.resp[k];
+        if (!Number.isInteger(indicePergunta) || indicePergunta < 0 || indicePergunta >= Q.length ||
+            !Number.isInteger(alternativa) || alternativa < 0 || alternativa > 3) {
+          throw new Error("Estado de exame inválido");
+        }
+        resp[indicePergunta] = alternativa;
+      });
+      return { n:Number(n), Q:Q, i:salvo.i, fim:salvo.fim, resp:resp, res:null };
+    } catch (e) {
+      return null;
+    }
+  }
   function restaurarUltimo() {
     if (estado !== null) return !!(estado && estado.res);
     try {
@@ -383,7 +420,18 @@
         "<a class='btn sec' href='#/exames'>Voltar</a></div>";
       return;
     }
-    estado = { n:n, Q:Q, i:0, fim:Date.now() + Number(A.minutos || 60) * 60000, resp:{}, res:null };
+    var recuperado = lerEstadoExame(n, Q);
+    if (recuperado) {
+      estado = recuperado;
+    } else {
+      // Estado incompatível/corrompido ou exame diferente: não reutilizar respostas antigas.
+      limparEstadoExame();
+      estado = { n:n, Q:Q, i:0, fim:Date.now() + Number(A.minutos || 60) * 60000, resp:{}, res:null };
+    }
+    if (restante() <= 0) {
+      terminar("tempo");
+      return;
+    }
     renderQuestao();
     timer = setInterval(tick, 1000);
   }
@@ -397,6 +445,7 @@
   }
   function renderQuestao(focoIndice) {
     if (!estado || estado.res) return;
+    guardarEstadoExame();
     var Q = estado.Q, q = Q[estado.i], sel = estado.resp[estado.i];
     var respondidas = Object.keys(estado.resp).length;
     var h = "<div class='estado'><span>Exame " + estado.n + " · Pergunta " +
@@ -430,6 +479,7 @@
   function terminar(motivo) {
     if (!estado || estado.res) return;
     pararRelogio();
+    limparEstadoExame();
     var certas = 0, respondidas = 0;
     estado.Q.forEach(function (q, i) {
       if (Object.prototype.hasOwnProperty.call(estado.resp, i)) {
