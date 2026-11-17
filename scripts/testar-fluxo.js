@@ -315,6 +315,18 @@ const vm = require("node:vm");
   assert.ok(app.innerHTML.includes("Em branco: <b>25</b>"));
   assert.equal(localStorage.getItem("estrada.exame.em-curso"),null,"A tentativa activa deve ser limpa após a submissão");
 
+  // Um estado corrompido não pode iniciar silenciosamente uma tentativa do zero.
+  localStorage.setItem("estrada.exame.em-curso","{estado-corrompido");
+  confirmar=false;
+  await navegar("#/exame/45");
+  assert.match(app.innerHTML,/Não foi possível recuperar o exame/);
+  assert.ok(!app.innerHTML.includes("Pergunta 1 de 25"),"Estado inválido não deve reiniciar o exame sem consentimento");
+  confirmar=true;
+  await navegar("#/exames");
+  await navegar("#/exame/45");
+  assert.match(app.innerHTML,/Pergunta 1 de 25/,"Depois de confirmar, deve ser possível iniciar uma nova tentativa");
+  assert.ok(localStorage.getItem("estrada.exame.em-curso"),"A nova tentativa deve ser guardada");
+
   context.window.APP.modoTesteAcessoPago=false;
   await navegar("#/exames");
   assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/39'><b>Exame 39</b>"),
