@@ -304,6 +304,9 @@ wrong       = answered_count - correct_count
 - Ao expirar, bloquear novas respostas e finalizar automaticamente.
 - A submissão deve ser transaccional e idempotente; repetir pedido não cria resultado duplicado.
 - Repetir um exame inicia uma nova tentativa, com novas respostas e acesso às explicações associadas.
+- Durante uma tentativa activa, o cliente guarda localmente um rascunho de continuidade (identificador do exame, pergunta actual, respostas seleccionadas e prazo absoluto). Ao recarregar ou reabrir a mesma rota no mesmo navegador, recupera esse estado sem reiniciar o prazo; o tempo continua a decorrer enquanto a página está fechada.
+- Se o prazo absoluto já tiver expirado quando a página for reaberta, a tentativa é finalizada automaticamente e as perguntas não respondidas contam como em branco.
+- O armazenamento local é apenas uma ajuda de continuidade da interface, não é fonte de verdade nem prova de tempo, respostas ou resultado. A implementação futura do backend deve validar e impor started_at/deadline_at no servidor e guardar respostas/resultados de forma autoritativa.
 - O sistema guarda o histórico das tentativas e os resultados, para o utilizador acompanhar a evolução e identificar o que precisa de estudar mais.
 
 | Certas | Nota | Resultado interno |
