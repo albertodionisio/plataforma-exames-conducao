@@ -96,6 +96,10 @@
       botao.type = "button";
       botao.addEventListener("click", function () {
         seleccionar(indice);
+        if (plano.preco === "0 MT") {
+          window.location.assign("#/exames");
+          return;
+        }
         if (plano.nome === "Semanal Básico" && plano.preco === "50 MT") {
           window.location.assign("https://checkout.epay.co.mz/c/loja-jr5qps-p507");
           return;
