@@ -299,6 +299,7 @@ const vm = require("node:vm");
   vm.runInContext(appSource,context);
   await new Promise(resolve=>setImmediate(resolve));
   assert.match(app.innerHTML,/Pergunta 2 de 25/,"Após reload deve retomar na pergunta actual");
+  intervalCallback();
   assert.equal(timerNodes.tempo.textContent,"29:59","Após 30 minutos decorridos, o cronómetro deve mostrar o tempo real restante, não 60:00");
   app.click("anterior");
   assert.ok(app.innerHTML.includes("aria-pressed='true'"),"A resposta já seleccionada deve continuar seleccionada após reload");
