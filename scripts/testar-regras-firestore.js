@@ -40,6 +40,9 @@ async function main() {
       email: "unverified@example.test",
       email_verified: false
     }).firestore();
+    const phoneUser = testEnv.authenticatedContext("phone-user", {
+      phoneAuth: true
+    }).firestore();
     const anonymous = testEnv.unauthenticatedContext().firestore();
 
     // Dados de servidor: a API privilegiada contorna as regras de cliente.
