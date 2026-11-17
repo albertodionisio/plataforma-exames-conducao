@@ -41,11 +41,11 @@ service cloud.firestore {
     match /users/{uid} {
       allow get: if ownsUser(uid);
       allow list: if false;
-      allow create: if ownsUser(uid) && verifiedEmail() && validProfile(request.resource.data, uid);
-      allow update: if ownsUser(uid) && verifiedEmail()
+      allow create: if ownsUser(uid) && (verifiedEmail() || request.auth.token.phoneAuth == true) && validProfile(request.resource.data, uid);
+      allow update: if ownsUser(uid) && (verifiedEmail() || request.auth.token.phoneAuth == true)
         && validProfile(request.resource.data, uid)
         && request.resource.data.uid == resource.data.uid
-        && request.resource.data.email == resource.data.email
+        && (!('email' in resource.data) || request.resource.data.email == resource.data.email)
         && request.resource.data.createdAt == resource.data.createdAt
         && request.resource.data.diff(resource.data).affectedKeys()
           .hasOnly(['displayName', 'phone', 'photoURL', 'updatedAt']);
