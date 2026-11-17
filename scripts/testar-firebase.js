@@ -31,6 +31,13 @@ assert(!/supabase/i.test(appJs), "Código Supabase ainda existe em app.js.");
  "sendPasswordResetEmail", "signInWithPopup", "signOut", "sincronizarPerfil"].forEach((needle) => {
   assert(appJs.includes(needle), "Fluxo Firebase em falta: " + needle);
 });
+assert(appJs.includes("/api/auth/phone"), "Endpoint de autenticação por telefone não integrado.");
+assert(appJs.includes("signInWithCustomToken"), "Login com custom token não integrado.");
+assert(appJs.includes("auth-confirm-password"), "Confirmação da palavra-passe em falta no registo por telefone.");
+assert(appJs.includes("auth-method"), "Alternância entre email e telefone em falta.");
+const phoneApi = fs.readFileSync("api/auth/phone.js", "utf8");
+assert(phoneApi.includes("FIREBASE_SERVICE_ACCOUNT_JSON"), "Credencial Admin não documentada no backend.");
+assert(phoneApi.includes("PHONE_AUTH_PEPPER"), "Segredo HMAC não configurado no backend.");
 const rules = fs.readFileSync("firestore.rules", "utf8");
 assert(rules.includes("verifiedEmail()"), "As regras não exigem email verificado para escrever o perfil.");
 assert(rules.includes("allow create, update, delete: if false;"), "As colecções protegidas devem bloquear escrita do cliente.");
