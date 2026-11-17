@@ -218,7 +218,7 @@
       authFeedback = "A palavra-passe deve ter entre 8 e 128 caracteres.";
       return telaAutenticacao();
     }
-    if (authMode === "registo" && password !== confirmar) {
+    if (authMode === "registo" && authMethod === "telefone" && password !== confirmar) {
       authFeedback = "As palavras-passe não coincidem.";
       return telaAutenticacao();
     }
