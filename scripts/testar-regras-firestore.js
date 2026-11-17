@@ -41,7 +41,8 @@ async function main() {
       email_verified: false
     }).firestore();
     const phoneUser = testEnv.authenticatedContext("phone-user", {
-      phoneAuth: true
+      phoneAuth: true,
+      phone: "+258841234567"
     }).firestore();
     const anonymous = testEnv.unauthenticatedContext().firestore();
 
@@ -94,6 +95,39 @@ async function main() {
     }));
     await assertFails(getDocs(collection(alice, "users")));
 
+    // Perfil telefónico: só pode conter o número confirmado pela claim
+    // assinada pelo backend; o cliente não pode falsificar nem trocar o número.
+    await assertSucceeds(setDoc(doc(phoneUser, "users/phone-user"), {
+      uid: "phone-user",
+      phone: "+258841234567",
+      displayName: "Conta telefónica",
+      createdAt: new Date()
+    }));
+    await assertSucceeds(getDoc(doc(phoneUser, "users/phone-user")));
+    await assertSucceeds(updateDoc(doc(phoneUser, "users/phone-user"), {
+      displayName: "Nome actualizado",
+      updatedAt: new Date()
+    }));
+    await assertFails(setDoc(doc(phoneUser, "users/fake-phone"), {
+      uid: "fake-phone",
+      phone: "+258849999999",
+      createdAt: new Date()
+    }));
+    await assertFails(updateDoc(doc(phoneUser, "users/phone-user"), {
+      phone: "+258849999999"
+    }));
+    await assertFails(getDoc(doc(phoneUser, "users/alice")));
+    await assertFails(setDoc(doc(alice, "users/alice"), {
+      uid: "alice",
+      email: "alice@example.test",
+      phone: "+258841234567",
+      createdAt: new Date()
+    }));
+
+    // Credenciais e limites de autenticação são exclusivos do Admin SDK.
+    await assertFails(getDoc(doc(phoneUser, "phone_auth_accounts/private")));
+    await assertFails(getDoc(doc(phoneUser, "phone_auth_rate_limits/private")));
+
     // Tentativas: só leitura do próprio registo; lista exige filtro pelo UID.
     await assertSucceeds(getDoc(doc(alice, "exam_attempts/alice-attempt")));
     await assertFails(getDoc(doc(alice, "exam_attempts/bob-attempt")));
@@ -124,7 +158,7 @@ async function main() {
     // Negação por omissão para colecções não previstas.
     await assertFails(getDoc(doc(alice, "admin/secrets")));
 
-    console.log("APROVADO: regras Firestore — perfis, tentativas, assinaturas, pagamentos e default-deny.");
+    console.log("APROVADO: regras Firestore — perfis email/telefone, número telefónico imutável, credenciais privadas, tentativas, assinaturas, pagamentos e default-deny.");
   } finally {
     await testEnv.cleanup();
   }
