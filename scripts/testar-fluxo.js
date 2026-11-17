@@ -286,7 +286,10 @@ const vm = require("node:vm");
   assert.match(app.innerHTML,/exame submetido automaticamente/);
   assert.ok(app.innerHTML.includes("Em branco: <b>25</b>"));
 
-  // FE-013: a tentativa activa deve sobreviver ao reload sem reiniciar o cronómetro.
+  // FE-013: isola o cenário de persistência de tentativas anteriores criadas nos testes de catálogo.
+  localStorage.removeItem("estrada.exame.em-curso.43");
+  localStorage.removeItem("estrada.exame.em-curso.46");
+  // A tentativa activa deve sobreviver ao reload sem reiniciar o cronómetro.
   await navegar("#/exame/43");
   const respostaGuardada=context.window.EXAMES[43][0].correta;
   app.click("responder",{"data-indice":String(respostaGuardada)});
