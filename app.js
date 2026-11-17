@@ -310,24 +310,43 @@
   }
   // Guarda apenas o estado necessário para retomar a tentativa no mesmo navegador.
   // O prazo absoluto impede que uma actualização da página reinicie os 60 minutos.
+  // Cada exame tem uma chave própria: uma tentativa nunca bloqueia outro exame.
   var chaveExameEmCurso = "estrada.exame.em-curso";
+  function chaveEstadoExame(n) { return chaveExameEmCurso + "." + Number(n); }
+  function migrarEstadoExameLegado(n) {
+    try {
+      var legado = localStorage.getItem(chaveExameEmCurso);
+      if (!legado) return;
+      var antigo = JSON.parse(legado);
+      if (antigo && Number.isInteger(Number(antigo.n)) && Number(antigo.n) > 0) {
+        var destino = chaveEstadoExame(antigo.n);
+        if (!localStorage.getItem(destino)) localStorage.setItem(destino, legado);
+        localStorage.removeItem(chaveExameEmCurso);
+      }
+    } catch (e) {
+      // Um registo legado sem número identificável não pode bloquear exames diferentes.
+      // Mantém-se intacto para não apagar dados que não conseguimos interpretar.
+    }
+  }
   function guardarEstadoExame() {
     if (!estado || estado.res) return;
     try {
-      localStorage.setItem(chaveExameEmCurso, JSON.stringify({
+      localStorage.setItem(chaveEstadoExame(estado.n), JSON.stringify({
         versao:1, n:estado.n, i:estado.i, fim:estado.fim, resp:estado.resp
       }));
     } catch (e) {
       // A tentativa continua a funcionar mesmo se o navegador bloquear o armazenamento.
     }
   }
-  function limparEstadoExame() {
-    try { localStorage.removeItem(chaveExameEmCurso); } catch (e) {}
+  function limparEstadoExame(n) {
+    try { localStorage.removeItem(chaveEstadoExame(n)); } catch (e) {}
   }
   function lerEstadoExame(n, Q) {
     var bruto;
-    try { bruto = localStorage.getItem(chaveExameEmCurso); }
-    catch (e) { return null; }
+    try {
+      migrarEstadoExameLegado(n);
+      bruto = localStorage.getItem(chaveEstadoExame(n));
+    } catch (e) { return null; }
     if (!bruto) return null;
     try {
       var salvo = JSON.parse(bruto);
@@ -426,11 +445,11 @@
     }
     var recuperado = lerEstadoExame(n, Q);
     if (recuperado && recuperado.invalido) {
-      if (!confirm("Não foi possível recuperar a tentativa anterior (dados inválidos ou de outro exame). Queres descartar esses dados e iniciar uma nova tentativa?")) {
+      if (!confirm("Não foi possível recuperar a tentativa anterior (dados inválidos ou de outro exame). Queres descartar os dados guardados deste exame e iniciar uma nova tentativa?")) {
         app.innerHTML = "<h1>Não foi possível recuperar o exame</h1><div class='card aviso'>A tentativa guardada não pôde ser recuperada com segurança. Não iniciámos outro exame automaticamente.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
         return;
       }
-      limparEstadoExame();
+      limparEstadoExame(n);
       recuperado = null;
     }
     if (recuperado) {
@@ -489,7 +508,7 @@
   function terminar(motivo) {
     if (!estado || estado.res) return;
     pararRelogio();
-    limparEstadoExame();
+    limparEstadoExame(estado.n);
     var certas = 0, respondidas = 0;
     estado.Q.forEach(function (q, i) {
       if (Object.prototype.hasOwnProperty.call(estado.resp, i)) {
