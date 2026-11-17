@@ -335,8 +335,8 @@ const vm = require("node:vm");
   confirmar=false;
   await navegar("#/exame/45");
   assert.match(app.innerHTML,/Pergunta 1 de 25/,"Estado inválido deve ser limpo automaticamente e o exame deve abrir");
-  assert.equal(localStorage.getItem("estrada.exame.em-curso.45"),null,"O estado corrompido deve ser descartado sem confirmação");
-  assert.ok(localStorage.getItem("estrada.exame.em-curso.45")===null,"Não deve ficar um registo corrompido após iniciar");
+  const estado45=JSON.parse(localStorage.getItem("estrada.exame.em-curso.45"));
+  assert.equal(estado45.n,45,"O novo estado válido do Exame 45 deve substituir o registo corrompido");
 
   context.window.APP.modoTesteAcessoPago=false;
   await navegar("#/exames");
