@@ -151,3 +151,10 @@ A verificação actual do GitHub confirma:
 - A consulta ao GitHub Actions para workflows push continua limitada pelo conector; por isso, não se declara CI global verde nesta verificação. A limitação fica registada e não impede a conclusão específica da reconciliação da Etapa 2.
 
 **Conclusão:** ETAPA 2 concluída. A ausência de confirmação de CI push é uma limitação de observabilidade, não uma pendência de sincronização. A ETAPA 3 permanece por iniciar e está fora do âmbito desta verificação.
+
+### Verificação independente da ETAPA 2 — 2026-11-17 (Claude-DADOS005)
+
+- Critérios da Etapa 2 confirmados no estado real do GitHub: `main` é ancestral da branch (`0 / 97`), PR auxiliar #6 integrada (`merged=true`), PR #3 aberta em rascunho (sem merge), nenhuma alteração em `main`.
+- Dados e mapas dos exames da branch idênticos aos da `main` (diferença vazia); Exames 1–51 presentes e ligados em `index.html`; `node scripts/validar-exames.js`: 51 ficheiros, 0 problemas; `node scripts/auditar-estilo.js 34 35 36 37`: artigos 0, «Segundo o Código» 0, respostas certas únicas mais longas 0/0/0/4; `node scripts/testar-firebase.js`: aprovado.
+- Checks GitHub do topo da branch: firebase, validar, validar-definicoes e Vercel Preview Comments em sucesso. Os testes de Auth/Firestore Emulator não foram repetidos localmente (sem rede para instalar `firebase-tools`); valem os runs da CI.
+- Pendência humana desta etapa: nenhuma.
