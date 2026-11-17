@@ -8,7 +8,7 @@
   var estado = null, timer = null;
   var firebaseApp = null, firebaseAuth = null, firestoreDb = null;
   var authUser = null, authReady = false, authAvailable = false;
-  var authMode = "login", authFeedback = "";
+  var authMode = "login", authMethod = "email", authFeedback = "";
 
   function iniciarAuth() {
     var config = A.firebase;
@@ -67,13 +67,14 @@
     }
   }
 
-  function sincronizarPerfil(user) {
+  function sincronizarPerfil(user, telefone) {
     if (!firestoreDb || !user || !user.uid) return Promise.resolve();
     var perfil = {
       uid: user.uid,
-      email: user.email || "",
       updatedAt: window.firebase.firestore.FieldValue.serverTimestamp()
     };
+    if (user.email) perfil.email = user.email;
+    if (telefone) perfil.phone = telefone;
     if (user.displayName) perfil.displayName = user.displayName;
     if (user.photoURL) perfil.photoURL = user.photoURL;
     var ref = firestoreDb.collection("users").doc(user.uid);
@@ -130,18 +131,27 @@
       return;
     }
     var registo = authMode === "registo";
+    var telefone = authMethod === "telefone";
+    var campoIdentificador = telefone ?
+      "<label for='auth-phone'>Número de telefone</label><input id='auth-phone' name='phone' type='tel' inputmode='tel' autocomplete='tel' placeholder='+258 84 000 0000' required maxlength='20'>" :
+      "<label for='auth-email'>Email</label><input id='auth-email' name='email' type='email' autocomplete='email' required maxlength='254'>";
     app.innerHTML = "<section class='auth-card card' aria-labelledby='auth-titulo'>" +
       "<h1 id='auth-titulo'>" + (registo ? "Criar conta" : "Entrar na tua conta") + "</h1>" +
-      "<p>" + (registo ? "Regista-te para começares a realizar exames. Terás de confirmar o teu email." : "Inicia sessão para continuares para o exame seleccionado.") + "</p>" +
-      "<form id='auth-form'>" +
-      "<label for='auth-email'>Email</label><input id='auth-email' name='email' type='email' autocomplete='email' required maxlength='254'>" +
-      "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' required>" +
+      "<p>" + (telefone ? "Usa o teu número de telefone e a palavra-passe para aceder à conta, sem confirmação por SMS." :
+        (registo ? "Regista-te para começares a realizar exames. Terás de confirmar o teu email." :
+        "Inicia sessão para continuares para o exame seleccionado.")) + "</p>" +
+      "<form id='auth-form'>" + campoIdentificador +
+      "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' maxlength='128' required>" +
+      (registo ? "<label for='auth-confirm-password'>Confirmar palavra-passe</label><input id='auth-confirm-password' name='confirmPassword' type='password' autocomplete='new-password' minlength='8' maxlength='128' required>" : "") +
       "<button class='btn auth-submit' type='submit'>" + (registo ? "Criar conta" : "Entrar") + "</button></form>" +
+      (telefone ? "<p class='auth-nota'>Não enviamos SMS nem códigos. Como o número não é verificado, confirma que o escreveste correctamente. Se perderes a palavra-passe, não existe recuperação automática desta conta.</p>" : "") +
       (authFeedback ? "<p class='auth-feedback' role='status'>" + esc(authFeedback) + "</p>" : "") +
-      (!registo ? "<p><button class='link-button' type='button' data-action='auth-reset'>Esqueci-me da palavra-passe</button></p>" : "") +
+      (!registo && !telefone ? "<p><button class='link-button' type='button' data-action='auth-reset'>Esqueci-me da palavra-passe</button></p>" : "") +
       "<p class='auth-alternar'>" + (registo ? "Já tens conta?" : "Ainda não tens conta?") +
       " <button class='link-button' type='button' data-action='auth-mode'>" + (registo ? "Entrar" : "Criar conta") + "</button></p>" +
-      (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'><svg class='auth-google-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path fill='#4285F4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/><path fill='#34A853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23z'/><path fill='#FBBC05' d='M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84z'/><path fill='#EA4335' d='M12 4.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.09 14.97 0 12 0a11 11 0 0 0-9.85 7.06l3.69 2.84C6.71 7.3 9.14 4.37 12 4.37z'/></svg><span>Continuar com Google</span></button>" : "") +
+      "<p><button class='link-button' type='button' data-action='auth-method'>" +
+      (telefone ? "Usar email" : "Entrar ou criar conta com telefone") + "</button></p>" +
+      (!telefone && A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'><svg class='auth-google-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path fill='#4285F4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/><path fill='#34A853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23z'/><path fill='#FBBC05' d='M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84z'/><path fill='#EA4335' d='M12 4.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.09 14.97 0 12 0a11 11 0 0 0-9.85 7.06l3.69 2.84C6.71 7.3 9.14 4.37 12 4.37z'/></svg><span>Continuar com Google</span></button>" : "") +
       "<p><a href='#/exames' data-action='auth-cancel'>Voltar ao catálogo</a></p></section>";
   }
   function concluirAutenticacao(user) {
@@ -151,6 +161,39 @@
     if (!retomarExamePendente() && location.hash === "#/entrar") { location.hash = "#/exames"; if (location.hash === "#/exames") rota(); }
   }
 
+  function normalizarTelefoneCliente(valor) {
+    var telefone = String(valor || "").trim().replace(/[\\s().-]/g, "");
+    if (/^00\\d+$/.test(telefone)) telefone = "+" + telefone.slice(2);
+    if (/^\\d{9}$/.test(telefone)) telefone = "+258" + telefone;
+    return /^\\+[1-9]\\d{7,14}$/.test(telefone) ? telefone : "";
+  }
+  function autenticarComTelefone(telefone, password, confirmar) {
+    fetch("/api/auth/phone", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "same-origin",
+      body: JSON.stringify({
+        action: authMode === "registo" ? "register" : "login",
+        phone: telefone,
+        password: password,
+        confirmPassword: confirmar
+      })
+    }).then(function (response) {
+      return response.json().then(function (data) {
+        if (!response.ok) throw new Error(data && data.error ? data.error : "Não foi possível autenticar.");
+        return data;
+      });
+    }).then(function (data) {
+      return firebaseAuth.signInWithCustomToken(data.token).then(function (credential) {
+        return sincronizarPerfil(credential.user, data.phone).then(function () {
+          concluirAutenticacao(credential.user);
+        });
+      });
+    }).catch(function (error) {
+      authFeedback = error && error.message ? error.message : "Não foi possível concluir o acesso por telefone.";
+      telaAutenticacao();
+    });
+  }
   function terminarAutenticacao(event) {
     var form = event.target;
     if (!form || form.id !== "auth-form") return;
@@ -159,12 +202,34 @@
       authFeedback = "Serviço Firebase indisponível.";
       return telaAutenticacao();
     }
-    var emailEl = form.querySelector("#auth-email");
     var passwordEl = form.querySelector("#auth-password");
-    var email = emailEl ? emailEl.value.trim() : "";
     var password = passwordEl ? passwordEl.value : "";
-    if (!email || password.length < 8) {
-      authFeedback = "Indica um email válido e uma palavra-passe com pelo menos 8 caracteres.";
+    var confirmarEl = form.querySelector("#auth-confirm-password");
+    var confirmar = confirmarEl ? confirmarEl.value : "";
+    if (password.length < 8 || password.length > 128) {
+      authFeedback = "A palavra-passe deve ter entre 8 e 128 caracteres.";
+      return telaAutenticacao();
+    }
+    if (authMode === "registo" && password !== confirmar) {
+      authFeedback = "As palavras-passe não coincidem.";
+      return telaAutenticacao();
+    }
+    if (authMethod === "telefone") {
+      var phoneEl = form.querySelector("#auth-phone");
+      var phone = normalizarTelefoneCliente(phoneEl ? phoneEl.value : "");
+      if (!phone) {
+        authFeedback = "Indica um número válido, incluindo o indicativo do país (por exemplo, +258).";
+        return telaAutenticacao();
+      }
+      authFeedback = "A processar...";
+      telaAutenticacao();
+      autenticarComTelefone(phone, password, confirmar);
+      return;
+    }
+    var emailEl = form.querySelector("#auth-email");
+    var email = emailEl ? emailEl.value.trim() : "";
+    if (!email) {
+      authFeedback = "Indica um email válido.";
       return telaAutenticacao();
     }
     authFeedback = "A processar...";
@@ -198,7 +263,6 @@
       telaAutenticacao();
     });
   }
-
   function recuperarPalavraPasse() {
     var emailEl = document.getElementById("auth-email");
     var email = emailEl ? emailEl.value.trim() : "";
@@ -605,6 +669,7 @@
       telaAutenticacao();
       return;
     }
+    if (acao === "auth-method") { authMethod = authMethod === "email" ? "telefone" : "email"; authFeedback = ""; telaAutenticacao(); return; }
     if (acao === "auth-logout") { sairDaConta(); return; }
     if (acao === "auth-reset") { recuperarPalavraPasse(); return; }
     if (acao === "auth-cancel") { try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {} return; }
