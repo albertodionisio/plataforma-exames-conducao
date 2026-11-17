@@ -163,9 +163,9 @@ const vm = require("node:vm");
     const alvo=/^#\/exame\/(\d+)$/.exec(destino);
     if(alvo){
       try{
-        const emCurso=JSON.parse(localStorage.getItem("estrada.exame.em-curso")||"null");
+        const emCurso=JSON.parse(localStorage.getItem("estrada.exame.em-curso.43")||"null");
         // Os cenários de exames diferentes são tentativas independentes no teste.
-        if(emCurso && Number(emCurso.n)!==Number(alvo[1]))localStorage.removeItem("estrada.exame.em-curso");
+        if(emCurso && Number(emCurso.n)!==Number(alvo[1]))localStorage.removeItem("estrada.exame.em-curso.43");
       }catch(e){}
     }
     location.hash=destino;
@@ -299,10 +299,22 @@ const vm = require("node:vm");
   const respostaGuardada=context.window.EXAMES[43][0].correta;
   app.click("responder",{"data-indice":String(respostaGuardada)});
   app.click("proxima");
-  const estadoGuardado=JSON.parse(localStorage.getItem("estrada.exame.em-curso"));
+  const estadoGuardado=JSON.parse(localStorage.getItem("estrada.exame.em-curso.43"));
   assert.equal(estadoGuardado.n,43,"O exame activo deve ser guardado");
   assert.equal(estadoGuardado.i,1,"A pergunta actual deve ser guardada");
   assert.equal(estadoGuardado.resp[0],respostaGuardada,"A resposta anterior deve ser guardada");
+
+  // Abrir outro exame não pode invalidar nem apagar a tentativa do Exame 43.
+  const prazo43=estadoGuardado.fim;
+  await navegar("#/exame/46");
+  assert.match(app.innerHTML,/Exame 46 · Pergunta 1 de 25/,"Outro exame deve abrir sem ser bloqueado pela tentativa anterior");
+  assert.ok(localStorage.getItem("estrada.exame.em-curso.43"),"A tentativa do Exame 43 deve continuar guardada ao abrir o Exame 46");
+  const estado46=JSON.parse(localStorage.getItem("estrada.exame.em-curso.46"));
+  assert.equal(estado46.n,46,"O Exame 46 deve ter uma chave de armazenamento independente");
+  await navegar("#/exame/43");
+  assert.match(app.innerHTML,/Exame 43 · Pergunta 2 de 25/,"Ao regressar ao Exame 43, deve recuperar a pergunta em que ficou");
+  assert.equal(JSON.parse(localStorage.getItem("estrada.exame.em-curso.43")).fim,prazo43,"Alternar de exame não pode reiniciar o prazo original");
+
   agora+=30*60*1000+1000;
   vm.runInContext(appSource,context);
   await new Promise(resolve=>setImmediate(resolve));
@@ -311,7 +323,7 @@ const vm = require("node:vm");
   assert.equal(timerNodes.tempo.textContent,"29:59","Após 30 minutos decorridos, o cronómetro deve mostrar o tempo real restante, não 60:00");
   app.click("anterior");
   assert.ok(app.innerHTML.includes("aria-pressed='true'"),"A resposta já seleccionada deve continuar seleccionada após reload");
-  assert.equal(JSON.parse(localStorage.getItem("estrada.exame.em-curso")).resp[0],respostaGuardada);
+  assert.equal(JSON.parse(localStorage.getItem("estrada.exame.em-curso.43")).resp[0],respostaGuardada);
 
   // Se o prazo terminar enquanto a página estiver fechada, o reload submete automaticamente.
   await navegar("#/exame/44");
@@ -321,10 +333,10 @@ const vm = require("node:vm");
   await new Promise(resolve=>setImmediate(resolve));
   assert.ok(app.innerHTML.includes("exame submetido automaticamente"),"Uma tentativa expirada durante o reload deve ser submetida automaticamente");
   assert.ok(app.innerHTML.includes("Em branco: <b>25</b>"));
-  assert.equal(localStorage.getItem("estrada.exame.em-curso"),null,"A tentativa activa deve ser limpa após a submissão");
+  assert.equal(localStorage.getItem("estrada.exame.em-curso.44"),null,"A tentativa do Exame 44 deve ser limpa após a submissão");
 
   // Um estado corrompido não pode iniciar silenciosamente uma tentativa do zero.
-  localStorage.setItem("estrada.exame.em-curso","{estado-corrompido");
+  localStorage.setItem("estrada.exame.em-curso.45","{estado-corrompido");
   confirmar=false;
   await navegar("#/exame/45");
   assert.match(app.innerHTML,/Não foi possível recuperar o exame/);
@@ -333,7 +345,7 @@ const vm = require("node:vm");
   await navegar("#/exames");
   await navegar("#/exame/45");
   assert.match(app.innerHTML,/Pergunta 1 de 25/,"Depois de confirmar, deve ser possível iniciar uma nova tentativa");
-  assert.ok(localStorage.getItem("estrada.exame.em-curso"),"A nova tentativa deve ser guardada");
+  assert.ok(localStorage.getItem("estrada.exame.em-curso.45"),"A nova tentativa deve ser guardada");
 
   context.window.APP.modoTesteAcessoPago=false;
   await navegar("#/exames");
