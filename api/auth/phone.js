@@ -184,3 +184,5 @@ module.exports = async function phoneAuth(req, res) {
     return response(res, 503, { error: "Não foi possível concluir o acesso neste momento. Tenta novamente mais tarde." });
   }
 };
+
+module.exports._test = { normalizarTelefone, hashPassword, igualSeguro };
