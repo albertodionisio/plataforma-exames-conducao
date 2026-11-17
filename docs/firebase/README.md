@@ -31,6 +31,22 @@ Estado nesta branch: Firebase Authentication integrado no frontend; perfil míni
 
 As contas de utilizador que existiam no Supabase não são automaticamente reconhecidas pelo Firebase Authentication. Esta entrega não exporta nem importa utilizadores, passwords ou hashes. Para testar a nova autenticação, criar uma conta no ESTRADA com Firebase e confirmar o email; o mesmo endereço de email pode ser registado no Firebase independentemente da conta antiga. Uma migração em massa de utilizadores exigiria exportação/importação segura e validação do algoritmo de hash, fora do âmbito desta entrega. O projecto e os dados antigos não foram apagados.
 
+## Autenticação por telefone e palavra-passe
+
+Foi preparado um fluxo adicional, separado do email/Google, em `/api/auth/phone` (Vercel Function). O registo e o login usam número em formato internacional E.164; números moçambicanos com nove algarismos são normalizados com o indicativo +258. O utilizador define e confirma a palavra-passe no registo. Não há SMS nem OTP e, por isso, o sistema não comprova a titularidade do número.
+
+A palavra-passe é processada no servidor com scrypt e salt aleatório; apenas o hash é guardado em `phone_auth_accounts`. O identificador do documento é um HMAC do número, não o número em texto simples. O servidor emite um Firebase custom token para a sessão. O acesso aos documentos de contas telefónicas é exclusivamente administrativo; as regras do Firestore continuam a negar acesso directo do cliente. O endpoint limita tentativas por telefone e endereço IP.
+
+**Configuração obrigatória antes de activar no Preview (não colocar no GitHub):**
+1. Criar uma service account com permissões mínimas necessárias para Firebase Authentication (criar custom tokens) e Cloud Firestore (ler/escrever apenas as colecções técnicas necessárias). Guardar o JSON completo como variável Vercel `FIREBASE_SERVICE_ACCOUNT_JSON`, no ambiente Preview da branch `feat/firebase-full-migration`.
+2. Criar um segredo aleatório com pelo menos 32 caracteres (por exemplo, `openssl rand -hex 32`) e guardá-lo como variável Vercel `PHONE_AUTH_PEPPER`, também apenas em Preview.
+3. Não enviar estes valores por chat, não os incluir em commits e não os colocar em `config.js`. A função devolve erro de serviço indisponível enquanto faltarem.
+4. Depois de configurar as variáveis, criar um novo Preview e testar registo, logout, login e persistência de sessão com um número de teste controlado pelo dono.
+
+Contas criadas só com telefone não têm recuperação automática de palavra-passe: sem email alternativo verificado, SMS ou códigos de recuperação previamente guardados, não existe forma segura de provar a identidade. O utilizador deve ser avisado antes de escolher este método. Como o número não é verificado, outra pessoa pode registar um número que não controla; esta limitação deve ser considerada antes de disponibilizar publicamente o método.
+
+A implementação não altera nem desactiva email/palavra-passe ou Google. O backend depende de credenciais Admin e de Firestore; a configuração de produção não é feita nesta etapa.
+
 ## Modelo de dados e segurança
 
 - `users/{uid}`: perfil mínimo; cada utilizador só pode aceder ao próprio documento.
