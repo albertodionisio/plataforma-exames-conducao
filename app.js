@@ -78,9 +78,17 @@
     if (user.displayName) perfil.displayName = user.displayName;
     if (user.photoURL) perfil.photoURL = user.photoURL;
     var ref = firestoreDb.collection("users").doc(user.uid);
-    return ref.get().then(function (snap) {
-      if (!snap.exists) perfil.createdAt = window.firebase.firestore.FieldValue.serverTimestamp();
-      return ref.set(perfil, { merge: true });
+    var claims = telefone ? Promise.resolve() :
+      (typeof user.getIdTokenResult === "function" ?
+        user.getIdTokenResult().then(function (resultado) {
+          if (resultado.claims && resultado.claims.phoneAuth === true &&
+              typeof resultado.claims.phone === "string") perfil.phone = resultado.claims.phone;
+        }) : Promise.resolve());
+    return claims.then(function () {
+      return ref.get().then(function (snap) {
+        if (!snap.exists) perfil.createdAt = window.firebase.firestore.FieldValue.serverTimestamp();
+        return ref.set(perfil, { merge: true });
+      });
     });
   }
 
