@@ -160,14 +160,6 @@ const vm = require("node:vm");
   }
   vm.runInContext(appSource,context);
   async function navegar(destino){
-    const alvo=/^#\/exame\/(\d+)$/.exec(destino);
-    if(alvo){
-      try{
-        const emCurso=JSON.parse(localStorage.getItem("estrada.exame.em-curso.43")||"null");
-        // Os cenários de exames diferentes são tentativas independentes no teste.
-        if(emCurso && Number(emCurso.n)!==Number(alvo[1]))localStorage.removeItem("estrada.exame.em-curso.43");
-      }catch(e){}
-    }
     location.hash=destino;
     await new Promise(resolve=>setImmediate(resolve));
   }
