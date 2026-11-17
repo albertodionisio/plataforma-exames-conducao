@@ -4,6 +4,13 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
+## GER-022 — Ligar o botão do plano Semanal Básico (50 MT) ao checkout EPay
+- Estado: EM CURSO — ChatGPT-ESTRADA-EPAY1 — 2026-11-17 — ficheiros: public/assinaturas/planos.js, scripts/testar-assinaturas.js, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-17
+- Pedido autorizado: ao clicar em «Aderir ao plano Semanal Básico» (50 MT), abrir https://checkout.epay.co.mz/c/loja-jr5qps-p507.
+- Âmbito: apenas encaminhar o botão de 50 MT para o checkout; manter os restantes quatro planos, preços, benefícios, acesso e autenticação inalterados. Não implementar confirmação automática, webhooks, activação de subscrição ou backend.
+- Pronto quando: CTA de 50 MT abre o URL indicado; outros CTAs mantêm comportamento anterior; teste automatizado cobre o URL e os restantes botões; histórico actualizado. Sem merge nem deploy de produção.
+- Nota: checkout aceita valor variável a partir de 50 MT; esta tarefa não confirma nem força o valor cobrado. O dono validará visualmente no Preview.
+
 ## BE-001 — Preparar fundação Firebase/Firestore sem activar migração da aplicação
 - Estado: EM CURSO — ChatGPT-ESTRADA-FB1 — 2026-11-16 — ficheiros: firebase.json, firestore.rules, firestore.indexes.json, .firebaserc.example, docs/firebase/README.md, PENDENTE.md — último sinal: 2026-11-16
 - Pedido: preparar no repositório os ficheiros versionados e documentação para o projecto Firebase já criado pelo dono, com Firestore Standard na região africa-south1 (Johannesburg), autenticação Google e E-mail/senha activadas no Console. Definir uma estrutura inicial mínima e segura para users, subscriptions, exam_attempts e payment_transactions, sem armazenar perguntas/imagens estáticas no Firestore.
