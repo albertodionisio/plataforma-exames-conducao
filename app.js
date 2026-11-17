@@ -445,10 +445,8 @@
     }
     var recuperado = lerEstadoExame(n, Q);
     if (recuperado && recuperado.invalido) {
-      if (!confirm("Não foi possível recuperar a tentativa anterior (dados inválidos ou de outro exame). Queres descartar os dados guardados deste exame e iniciar uma nova tentativa?")) {
-        app.innerHTML = "<h1>Não foi possível recuperar o exame</h1><div class='card aviso'>A tentativa guardada não pôde ser recuperada com segurança. Não iniciámos outro exame automaticamente.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
-        return;
-      }
+      // Dados inválidos deste exame não devem bloquear a abertura nem pedir confirmação.
+      // As tentativas válidas dos restantes exames permanecem intactas.
       limparEstadoExame(n);
       recuperado = null;
     }
