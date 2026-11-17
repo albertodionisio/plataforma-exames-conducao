@@ -48,7 +48,7 @@ service cloud.firestore {
         && (!('email' in resource.data) || request.resource.data.email == resource.data.email)
         && request.resource.data.createdAt == resource.data.createdAt
         && request.resource.data.diff(resource.data).affectedKeys()
-          .hasOnly(['displayName', 'phone', 'photoURL', 'updatedAt']);
+          .hasOnly(['displayName', 'photoURL', 'updatedAt']);
       allow delete: if false;
     }
 
