@@ -325,12 +325,16 @@
     try { localStorage.removeItem(chaveExameEmCurso); } catch (e) {}
   }
   function lerEstadoExame(n, Q) {
+    var bruto;
+    try { bruto = localStorage.getItem(chaveExameEmCurso); }
+    catch (e) { return null; }
+    if (!bruto) return null;
     try {
-      var salvo = JSON.parse(localStorage.getItem(chaveExameEmCurso) || "null");
+      var salvo = JSON.parse(bruto);
       if (!salvo || salvo.versao !== 1 || Number(salvo.n) !== Number(n) ||
           !Number.isInteger(salvo.i) || salvo.i < 0 || salvo.i >= Q.length ||
           !Number.isFinite(salvo.fim) || !salvo.resp || typeof salvo.resp !== "object" ||
-          Array.isArray(salvo.resp)) return null;
+          Array.isArray(salvo.resp)) return { invalido:true };
       var resp = {};
       Object.keys(salvo.resp).forEach(function (k) {
         var indicePergunta = Number(k), alternativa = salvo.resp[k];
@@ -342,7 +346,7 @@
       });
       return { n:Number(n), Q:Q, i:salvo.i, fim:salvo.fim, resp:resp, res:null };
     } catch (e) {
-      return null;
+      return { invalido:true };
     }
   }
   function restaurarUltimo() {
@@ -421,11 +425,17 @@
       return;
     }
     var recuperado = lerEstadoExame(n, Q);
+    if (recuperado && recuperado.invalido) {
+      if (!confirm("Não foi possível recuperar a tentativa anterior (dados inválidos ou de outro exame). Queres descartar esses dados e iniciar uma nova tentativa?")) {
+        app.innerHTML = "<h1>Não foi possível recuperar o exame</h1><div class='card aviso'>A tentativa guardada não pôde ser recuperada com segurança. Não iniciámos outro exame automaticamente.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
+        return;
+      }
+      limparEstadoExame();
+      recuperado = null;
+    }
     if (recuperado) {
       estado = recuperado;
     } else {
-      // Estado incompatível/corrompido ou exame diferente: não reutilizar respostas antigas.
-      limparEstadoExame();
       estado = { n:n, Q:Q, i:0, fim:Date.now() + Number(A.minutos || 60) * 60000, resp:{}, res:null };
     }
     if (restante() <= 0) {
