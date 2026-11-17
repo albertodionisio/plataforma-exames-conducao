@@ -175,7 +175,7 @@ module.exports = async function phoneAuth(req, res) {
       uid = account.uid;
     }
 
-    const token = await admin.auth(app).createCustomToken(uid, { phoneAuth: true });
+    const token = await admin.auth(app).createCustomToken(uid, { phoneAuth: true, phone });
     return response(res, 200, { token, phone });
   } catch (error) {
     if (error && error.status === 429) return response(res, 429, { error: error.message });
