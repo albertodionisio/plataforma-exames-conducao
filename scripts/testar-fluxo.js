@@ -25,9 +25,37 @@ const vm = require("node:vm");
       }
       return null;
     }
-    click(action, attrs={}) {
+    contains(node){
+      for(let actual=node;actual;actual=actual.parentElement){
+        if(actual===this)return true;
+      }
+      return false;
+    }
+    click(action, attrs={}, clickDescendant=false) {
       const values=Object.assign({"data-action":action},attrs);
-      this.listeners.click({target:{getAttribute:k=>values[k]===undefined?null:String(values[k])}});
+      const actionNode={
+        parentElement:this,
+        getAttribute(k){return values[k]===undefined?null:String(values[k]);},
+        matches(selector){
+          if(selector==="[data-action]")return values["data-action"]!==undefined;
+          const exact=selector.match(/^\\[data-action="([^"]+)"\\]$/);
+          return !!exact && String(values["data-action"])===exact[1];
+        },
+        closest(selector){
+          for(let actual=this;actual;actual=actual.parentElement){
+            if(typeof actual.matches==="function" && actual.matches(selector))return actual;
+          }
+          return null;
+        }
+      };
+      // Reproduz tanto o clique no próprio controlo como o clique num SVG/texto
+      // interno que deve subir até ao elemento que contém data-action.
+      const target=clickDescendant?{
+        parentElement:actionNode,
+        matches(){return false;},
+        closest:actionNode.closest
+      }:actionNode;
+      this.listeners.click({target});
     }
   }
   const app=new FakeApp(), name={textContent:""}, timerNodes={};
@@ -277,7 +305,7 @@ const vm = require("node:vm");
   assert.equal(location.hash,"#/entrar","Visitante deve ser encaminhado para autenticação");
   assert.equal(localStorage.getItem("estrada.exame.pendente"),"42","O exame seleccionado deve ficar preservado");
   assert.match(app.innerHTML,/id='auth-form'/,"O ecrã de autenticação deve apresentar formulário real");
-  app.click("auth-cancel");
+  app.click("auth-cancel",{},true); // clique num descendente: closest() deve encontrar o botão
   assert.equal(localStorage.getItem("estrada.exame.pendente"),null,"Cancelar deve limpar o exame pendente");
   await navegar("#/exames");
   await navegar("#/exame/42");
