@@ -38,8 +38,9 @@ const vm = require("node:vm");
         getAttribute(k){return values[k]===undefined?null:String(values[k]);},
         matches(selector){
           if(selector==="[data-action]")return values["data-action"]!==undefined;
-          const exact=selector.match(/^\\[data-action="([^"]+)"\\]$/);
-          return !!exact && String(values["data-action"])===exact[1];
+          const prefix='[data-action="';
+          return selector.startsWith(prefix) && selector.endsWith('"]') &&
+            String(values["data-action"])===selector.slice(prefix.length,-2);
         },
         closest(selector){
           for(let actual=this;actual;actual=actual.parentElement){
