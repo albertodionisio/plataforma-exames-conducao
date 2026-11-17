@@ -20,5 +20,7 @@ jobs:
         run: node scripts/testar-firebase.js
       - name: Instalar dependências temporárias do Emulator Suite
         run: npm install --no-save --package-lock=false 'firebase@^12' '@firebase/rules-unit-testing@^5' firebase-tools
+      - name: Testar autenticação por telefone
+        run: node scripts/testar-auth-telefone.js
       - name: Testar Authentication e Firestore nos emuladores isolados
         run: npx firebase-tools emulators:exec --only auth,firestore --project demo-estrada --config firebase.emulator.json "node scripts/testar-auth-firebase.js && node scripts/testar-regras-firestore.js"
