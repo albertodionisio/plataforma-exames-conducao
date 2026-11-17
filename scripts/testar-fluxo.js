@@ -286,13 +286,41 @@ const vm = require("node:vm");
   assert.match(app.innerHTML,/exame submetido automaticamente/);
   assert.ok(app.innerHTML.includes("Em branco: <b>25</b>"));
 
+  // FE-013: a tentativa activa deve sobreviver ao reload sem reiniciar o cronómetro.
+  await navegar("#/exame/43");
+  const respostaGuardada=context.window.EXAMES[43][0].correta;
+  app.click("responder",{"data-indice":String(respostaGuardada)});
+  app.click("proxima");
+  const estadoGuardado=JSON.parse(localStorage.getItem("estrada.exame.em-curso"));
+  assert.equal(estadoGuardado.n,43,"O exame activo deve ser guardado");
+  assert.equal(estadoGuardado.i,1,"A pergunta actual deve ser guardada");
+  assert.equal(estadoGuardado.resp[0],respostaGuardada,"A resposta anterior deve ser guardada");
+  agora+=30*60*1000+1000;
+  vm.runInContext(appSource,context);
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.match(app.innerHTML,/Pergunta 2 de 25/,"Após reload deve retomar na pergunta actual");
+  assert.equal(timerNodes.tempo.textContent,"29:59","Após 30 minutos decorridos, o cronómetro deve mostrar o tempo real restante, não 60:00");
+  app.click("anterior");
+  assert.ok(app.innerHTML.includes("aria-pressed='true'"),"A resposta já seleccionada deve continuar seleccionada após reload");
+  assert.equal(JSON.parse(localStorage.getItem("estrada.exame.em-curso")).resp[0],respostaGuardada);
+
+  // Se o prazo terminar enquanto a página estiver fechada, o reload submete automaticamente.
+  await navegar("#/exame/44");
+  app.click("proxima");
+  agora+=61*60*1000;
+  vm.runInContext(appSource,context);
+  await new Promise(resolve=>setImmediate(resolve));
+  assert.ok(app.innerHTML.includes("exame submetido automaticamente"),"Uma tentativa expirada durante o reload deve ser submetida automaticamente");
+  assert.ok(app.innerHTML.includes("Em branco: <b>25</b>"));
+  assert.equal(localStorage.getItem("estrada.exame.em-curso"),null,"A tentativa activa deve ser limpa após a submissão");
+
   context.window.APP.modoTesteAcessoPago=false;
   await navegar("#/exames");
   assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/39'><b>Exame 39</b>"),
     "O catálogo deve encaminhar todos os exames disponíveis para autenticação antes de verificar o acesso");
   await navegar("#/exame/39");
   assert.match(app.innerHTML,/bloqueado e requer um plano/);
-  console.log("FE-002 PASSOU: hashchange assíncrono, cronómetro, foco, ausência de feedback, submissão automática/manual, confirmação de brancas, notas 20,0/18,4/17,6, semáforo, revisão e persistência após recarregar.");
+  console.log("FE-002/FE-013 PASSOU: hashchange assíncrono, cronómetro, persistência da tentativa e do prazo após reload, respostas/pergunta restauradas, expiração durante ausência, submissão automática/manual, notas, semáforo, revisão e autenticação Firebase.");
 
   // BE-002: visitante pode navegar, mas precisa de autenticação Firebase antes de iniciar um exame.
   // Reabre temporariamente os exames no contexto isolado para testar a retoma após login.
