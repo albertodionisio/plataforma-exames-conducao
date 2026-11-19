@@ -40,7 +40,7 @@ module.exports = async function createPayment(req, res) {
       method: "POST",
       headers: { "Idempotency-Key": requestId },
       body: JSON.stringify({
-        amount: plan.amount, currency: "MZN", description: "Assinatura ESTRADA — " + plan.name,
+        amount: plan.amount, currency: "MZN", description: plan.description,
         external_reference: externalReference,
         return_url: origin + "/?payment=" + encodeURIComponent(requestId) + "#/planos",
         cancel_url: origin + "/#/planos", callback_url: origin + "/api/payments/callback"
