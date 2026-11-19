@@ -29,7 +29,7 @@ assert.match(vercel, /no-cache|no-store/, "HTML e Service Worker não devem fica
 assert.match(netlify, /service-worker\.js/, "Netlify deve enviar cabeçalhos próprios para o Service Worker");
 assert.match(netlify, /no-cache|no-store/, "HTML e Service Worker não devem ficar presos em cache");
 assert.match(build, /service-worker\.js/, "o build deve publicar o Service Worker");
-assert.match(app, /localStorage\\.setItem\\(chaveEstadoExame\\(estado\\.n\\)/, "a tentativa individual deve continuar guardada localmente");
+assert.ok(app.includes("localStorage.setItem(chaveEstadoExame(estado.n)"), "a tentativa individual deve continuar guardada localmente");
 assert.match(app, /localStorage\.setItem\("hist"/, "o histórico individual deve continuar local");
 assert.doesNotMatch(sw, /caches\.open\([^)]*api/i, "não pode existir cache de API");
 console.log("GER-023: testes estáticos de cache aprovados.");
