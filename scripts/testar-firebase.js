@@ -35,6 +35,11 @@ assert(appJs.includes("/api/auth/phone"), "Endpoint de autenticação por telefo
 assert(appJs.includes("signInWithCustomToken"), "Login com custom token não integrado.");
 assert(appJs.includes("auth-confirm-password"), "Confirmação da palavra-passe em falta no registo por telefone.");
 assert(appJs.includes("auth-identifier"), "Campo único de email ou telefone em falta.");
+assert(appJs.includes("auth-first-name") && appJs.includes("auth-last-name"), "O registo deve pedir primeiro nome e sobrenome/apelido.");
+assert(appJs.includes("var camposNome = registo"), "Os campos de nome devem aparecer apenas no registo.");
+assert(appJs.includes("updateProfile({ displayName: displayName })"), "O nome deve ser associado ao perfil Firebase Auth.");
+assert(appJs.includes("authDisplayName"), "O cabeçalho deve usar o nome guardado no perfil.");
+assert(phoneApi.includes("firstName") && phoneApi.includes("lastName") && phoneApi.includes("displayName"), "O backend de telefone deve guardar e devolver o nome do cadastro.");
 assert(appJs.includes("/^\\+258(?:84|85|86|87|88)\\d{7}$/"), "Cliente deve aceitar apenas prefixos móveis moçambicanos de nove algarismos.");
 assert(appJs.includes("/^\\d{9}$/"), "Cliente deve reconhecer números nacionais com exactamente nove algarismos.");
 assert(!appJs.includes("/^\\\\d{9}$/"), "Não pode existir regex com barras duplicadas no reconhecimento do número.");
@@ -51,6 +56,7 @@ assert(appJs.includes('authMode === "registo" && password !== confirmar'),
 const phoneApi = fs.readFileSync("api/auth/phone.js", "utf8");
 assert(phoneApi.includes("FIREBASE_SERVICE_ACCOUNT_JSON"), "Credencial Admin não documentada no backend.");
 assert(phoneApi.includes("PHONE_AUTH_PEPPER"), "Segredo HMAC não configurado no backend.");
+assert(phoneApi.includes("body.firstName") && phoneApi.includes("body.lastName"), "O registo por telefone deve validar os campos de nome.");
 const rules = fs.readFileSync("firestore.rules", "utf8");
 assert(rules.includes("verifiedEmail()"), "As regras não exigem email verificado para escrever o perfil.");
 assert(rules.includes("allow create, update, delete: if false;"), "As colecções protegidas devem bloquear escrita do cliente.");
