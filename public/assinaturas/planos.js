@@ -19,14 +19,6 @@
 
   var CODIGOS_PLANOS = ["free", "weekly_basic", "weekly_full", "monthly_basic", "monthly_full"];
 
-  function criarRequestId() {
-    if (window.crypto && typeof window.crypto.randomUUID === "function") return window.crypto.randomUUID();
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-      var r = Math.random() * 16 | 0;
-      return (c === "x" ? r : (r & 3 | 8)).toString(16);
-    });
-  }
-
   function iniciarCheckout(codigo, botao, aviso) {
     var utilizador = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
     if (!utilizador) {
@@ -40,7 +32,7 @@
       return fetch("/api/payments/create", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": "Bearer " + token },
-        body: JSON.stringify({ planCode: codigo, requestId: criarRequestId() })
+        body: JSON.stringify({ planCode: codigo })
       });
     }).then(function (resposta) {
       return resposta.json().then(function (dados) {
