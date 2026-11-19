@@ -98,8 +98,17 @@
         }) : Promise.resolve());
     return claims.then(function () {
       return ref.get().then(function (snap) {
+        var existente = snap.exists ? snap.data() : {};
+        if (!perfil.displayName && existente.displayName) {
+          authDisplayName = existente.displayName;
+        } else if (perfil.displayName) {
+          authDisplayName = perfil.displayName;
+        }
         if (!snap.exists) perfil.createdAt = window.firebase.firestore.FieldValue.serverTimestamp();
-        return ref.set(perfil, { merge: true });
+        return ref.set(perfil, { merge: true }).then(function () {
+          renderConta();
+          return perfil;
+        });
       });
     });
   }
@@ -141,11 +150,13 @@
     };
     return mensagens[code] || (error && error.message) || fallback;
   }
+  var authDisplayName = "";
   function renderConta() {
     var el = document.getElementById("conta-utilizador");
     if (!el) return;
+    var nome = authUser ? (authUser.displayName || authDisplayName || "Conta") : "";
     el.innerHTML = authUser ?
-      "<span class='conta-email'>" + esc(authUser.email || "Conta autenticada") +
+      "<span class='conta-email'>" + esc(nome) +
       "</span><button class='conta-sair' type='button' data-action='auth-logout'>Sair</button>" :
       "<a class='conta-entrar' href='#/entrar'>Entrar</a>";
   }
@@ -171,6 +182,9 @@
       return;
     }
     var registo = authMode === "registo";
+    var camposNome = registo ?
+      "<label for='auth-first-name'>Primeiro nome</label><input id='auth-first-name' name='firstName' type='text' autocomplete='given-name' maxlength='50' required>" +
+      "<label for='auth-last-name'>Sobrenome ou apelido</label><input id='auth-last-name' name='lastName' type='text' autocomplete='family-name' maxlength='60'>" : "";
     var campoIdentificador =
       "<label for='auth-identifier'>Email ou número de telefone</label>" +
       "<input id='auth-identifier' name='identifier' type='text' autocomplete='username' placeholder='Email ou número de telefone' required maxlength='254' autocapitalize='none' spellcheck='false'>";
@@ -178,7 +192,7 @@
       "<h1 id='auth-titulo'>" + (registo ? "Criar conta" : "Entrar na tua conta") + "</h1>" +
       "<p>" + (registo ? "Regista-te para começares a realizar exames. Podes usar o teu email ou número de telefone." :
         "Inicia sessão com o teu email ou número de telefone para continuares.") + "</p>" +
-      "<form id='auth-form'>" + campoIdentificador +
+      "<form id='auth-form'>" + camposNome + campoIdentificador +
       "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' maxlength='128' required>" +
       (registo ? "<label for='auth-confirm-password'>Confirmar palavra-passe</label><input id='auth-confirm-password' name='confirmPassword' type='password' autocomplete='new-password' minlength='8' maxlength='128' required>" : "") +
       "<button class='btn auth-submit' type='submit'>" + (registo ? "Criar conta" : "Entrar") + "</button></form>" +
@@ -203,7 +217,7 @@
     // Vodacom: 84/85. Movitel: 86/87/88. Sempre 9 algarismos nacionais.
     return /^\+258(?:84|85|86|87|88)\d{7}$/.test(telefone) ? telefone : "";
   }
-  function autenticarComTelefone(telefone, password, confirmar) {
+  function autenticarComTelefone(telefone, password, confirmar, nomeProprio, apelido) {
     fetch("/api/auth/phone", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -212,7 +226,9 @@
         action: authMode === "registo" ? "register" : "login",
         phone: telefone,
         password: password,
-        confirmPassword: confirmar
+        confirmPassword: confirmar,
+        firstName: authMode === "registo" ? nomeProprio : undefined,
+        lastName: authMode === "registo" ? apelido : undefined
       })
     }).then(function (response) {
       return response.json().then(function (data) {
@@ -221,7 +237,12 @@
       });
     }).then(function (data) {
       return firebaseAuth.signInWithCustomToken(data.token).then(function (credential) {
-        return sincronizarPerfil(credential.user, data.phone).then(function () {
+        var displayName = String(data.displayName || [data.firstName, data.lastName].filter(Boolean).join(" ")).trim();
+        var actualizarNome = displayName && typeof credential.user.updateProfile === "function" ?
+          credential.user.updateProfile({ displayName: displayName }) : Promise.resolve();
+        return actualizarNome.then(function () {
+          return sincronizarPerfil(credential.user, data.phone);
+        }).then(function () {
           concluirAutenticacao(credential.user);
         });
       });
@@ -242,6 +263,14 @@
     var password = passwordEl ? passwordEl.value : "";
     var confirmarEl = form.querySelector("#auth-confirm-password");
     var confirmar = confirmarEl ? confirmarEl.value : "";
+    var primeiroNomeEl = form.querySelector("#auth-first-name");
+    var apelidoEl = form.querySelector("#auth-last-name");
+    var nomeProprio = primeiroNomeEl ? primeiroNomeEl.value.trim().replace(/\\s+/g, " ") : "";
+    var apelido = apelidoEl ? apelidoEl.value.trim().replace(/\\s+/g, " ") : "";
+    if (authMode === "registo" && (!nomeProprio || nomeProprio.length > 50 || apelido.length > 60)) {
+      authFeedback = "Indica o primeiro nome (até 50 caracteres) e, se quiseres, um sobrenome ou apelido (até 60 caracteres).";
+      return telaAutenticacao();
+    }
     if (password.length < 8 || password.length > 128) {
       authFeedback = "A palavra-passe deve ter entre 8 e 128 caracteres.";
       return telaAutenticacao();
@@ -259,7 +288,7 @@
     } else if (telefone) {
       authFeedback = "A processar...";
       telaAutenticacao();
-      autenticarComTelefone(telefone, password, confirmar);
+      autenticarComTelefone(telefone, password, confirmar, nomeProprio, apelido);
       return;
     } else {
       authFeedback = "Indica um email válido ou um número de telefone válido (por exemplo, 84 123 4567 ou +258 84 123 4567).";
@@ -270,10 +299,13 @@
     telaAutenticacao();
     if (authMode === "registo") {
       firebaseAuth.createUserWithEmailAndPassword(email, password).then(function (credential) {
-        // Usa o handler padrão do Firebase. Não enviar o hostname temporário da
-        // Vercel como continue URL: Preview deployments variam e podem não estar
-        // autorizados no Firebase Authentication.
-        return credential.user.sendEmailVerification().then(function () {
+        var displayName = [nomeProprio, apelido].filter(Boolean).join(" ");
+        return credential.user.updateProfile({ displayName: displayName }).then(function () {
+          // Usa o handler padrão do Firebase. Não enviar o hostname temporário da
+          // Vercel como continue URL: Preview deployments variam e podem não estar
+          // autorizados no Firebase Authentication.
+          return credential.user.sendEmailVerification();
+        }).then(function () {
           return firebaseAuth.signOut();
         }).then(function () {
           authFeedback = "Conta criada. Enviámos uma mensagem para confirmares o teu email. Depois da confirmação, já poderás entrar.";
