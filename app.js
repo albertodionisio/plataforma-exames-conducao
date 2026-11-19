@@ -197,9 +197,11 @@
 
   function normalizarTelefoneCliente(valor) {
     var telefone = String(valor || "").trim().replace(/[\s().-]/g, "");
-    if (/^00\\d+$/.test(telefone)) telefone = "+" + telefone.slice(2);
-    if (/^\\d{9}$/.test(telefone)) telefone = "+258" + telefone;
-    return /^\\+[1-9]\\d{7,14}$/.test(telefone) ? telefone : "";
+    if (/^00258\d{9}$/.test(telefone)) telefone = "+258" + telefone.slice(5);
+    if (/^258\d{9}$/.test(telefone)) telefone = "+" + telefone;
+    if (/^\d{9}$/.test(telefone)) telefone = "+258" + telefone;
+    // Vodacom: 84/85. Movitel: 86/87/88. Sempre 9 algarismos nacionais.
+    return /^\+258(?:84|85|86|87|88)\d{7}$/.test(telefone) ? telefone : "";
   }
   function autenticarComTelefone(telefone, password, confirmar) {
     fetch("/api/auth/phone", {
