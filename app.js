@@ -29,15 +29,6 @@
         return new Promise(function (resolve) {
           var initialised = false;
           firebaseAuth.onAuthStateChanged(function (user) {
-            var passwordProvider = user && Array.isArray(user.providerData) &&
-              user.providerData.some(function (p) { return p.providerId === "password"; });
-            if (user && passwordProvider && !user.emailVerified) {
-              authUser = null;
-              authReady = true;
-              renderConta();
-              if (!initialised) { initialised = true; resolve(); }
-              return;
-            }
             if (!user || (authUser && authUser.uid !== user.uid)) authDisplayName = "";
             authUser = user || null;
             authReady = true;
@@ -303,15 +294,8 @@
       firebaseAuth.createUserWithEmailAndPassword(email, password).then(function (credential) {
         var displayName = [nomeProprio, apelido].filter(Boolean).join(" ");
         return credential.user.updateProfile({ displayName: displayName }).then(function () {
-          // Usa o handler padrão do Firebase. Não enviar o hostname temporário da
-          // Vercel como continue URL: Preview deployments variam e podem não estar
-          // autorizados no Firebase Authentication.
-          return credential.user.sendEmailVerification();
-        }).then(function () {
-          return firebaseAuth.signOut();
-        }).then(function () {
-          authFeedback = "Conta criada. Enviámos uma mensagem para confirmares o teu email. Depois da confirmação, já poderás entrar.";
-          telaAutenticacao();
+          authFeedback = "Conta criada com sucesso. Já podes utilizar o ESTRADA-JB.";
+          concluirAutenticacao(credential.user);
         });
       }).catch(function (error) {
         authFeedback = mensagemAuth(error, "Não foi possível criar a conta.");
@@ -320,12 +304,6 @@
       return;
     }
     firebaseAuth.signInWithEmailAndPassword(email, password).then(function (credential) {
-      if (!credential.user.emailVerified) {
-        return firebaseAuth.signOut().then(function () {
-          authFeedback = "Ainda não confirmaste o teu email. Abre a mensagem de verificação que enviámos antes de entrar.";
-          telaAutenticacao();
-        });
-      }
       concluirAutenticacao(credential.user);
     }).catch(function (error) {
       authFeedback = mensagemAuth(error, "Não foi possível iniciar sessão.");
