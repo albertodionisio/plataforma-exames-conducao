@@ -5,12 +5,19 @@ const endpoint = require("../api/auth/phone.js");
 const { normalizarTelefone, hashPassword, igualSeguro } = endpoint._test;
 
 async function main() {
-  assert.equal(normalizarTelefone("841234567"), "+258841234567");
-  assert.equal(normalizarTelefone("+258 84 123 4567"), "+258841234567");
-  assert.equal(normalizarTelefone("00258841234567"), "+258841234567");
-  assert.equal(normalizarTelefone("+447700900123"), "+447700900123");
-  assert.equal(normalizarTelefone("telefone-invalido"), null);
-  assert.equal(normalizarTelefone("123"), null);
+  for (const prefix of ["84", "85", "86", "87", "88"]) {
+    const national = prefix + "1234567";
+    assert.equal(normalizarTelefone(national), "+258" + national, "Prefixo " + prefix + " deve ser aceite.");
+    assert.equal(normalizarTelefone("+258 " + prefix + " 123 4567"), "+258" + national);
+    assert.equal(normalizarTelefone("00258" + national), "+258" + national);
+    assert.equal(normalizarTelefone("258" + national), "+258" + national);
+  }
+  for (const invalid of [
+    "831234567", "891234567", "801234567", "84123456", "8412345678",
+    "+258831234567", "+258891234567", "+447700900123", "telefone-invalido", "123"
+  ]) {
+    assert.equal(normalizarTelefone(invalid), null, "Número inválido deve ser rejeitado: " + invalid);
+  }
 
   const salt = "a1b2c3d4e5f60718293a4b5c6d7e8f90";
   const first = await hashPassword("Palavra-passe-segura-2026", salt);
