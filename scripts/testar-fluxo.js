@@ -78,7 +78,7 @@ const vm = require("node:vm");
   const storage={}, session={};
   const localStorage={getItem:k=>storage[k]||null,setItem:(k,v)=>{storage[k]=v;},removeItem:k=>{delete storage[k];}};
   const sessionStorage={getItem:k=>session[k]||null,setItem:(k,v)=>{session[k]=v;},removeItem:k=>{delete session[k];}};
-  let intervalCallback=null, agora=1700000000000;
+  let intervalCallback=null, agora=1700000000000, confirmar=true;
   const confirmacoes=[];
   class FakeDate extends Date { static now(){ return agora; } }
   const authState={user:null,listener:null,calls:[]};
