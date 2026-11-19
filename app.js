@@ -105,6 +105,7 @@
   }
 
   function carregarSubscricao(user) {
+    subscriptionData = null;
     subscriptionReady = false;
     if (!firestoreDb || !user || !user.uid) {
       subscriptionData = null;
@@ -116,7 +117,7 @@
       subscriptionReady = true;
       return subscriptionData;
     }).catch(function (error) {
-      subscriptionData = null;
+      if (authUser && authUser.uid === user.uid) subscriptionData = null;
       subscriptionReady = true;
       console.warn("Não foi possível carregar a assinatura:", error && error.code);
       return null;
@@ -408,7 +409,7 @@
   }
   function temAcesso(n) {
     if (n <= Number(A.gratuitos || 0) || testeAberto(n)) return true;
-    if (!subscriptionReady || !authUser || !subscriptionData || subscriptionData.status !== "active") return false;
+    if (!subscriptionReady || !authUser || !subscriptionData || subscriptionData.uid !== authUser.uid || subscriptionData.status !== "active") return false;
     var inicio = subscriptionData.startsAt;
     var fim = subscriptionData.graceUntil || subscriptionData.endsAt;
     var inicioMs = inicio && typeof inicio.toMillis === "function" ? inicio.toMillis() : Date.parse(inicio);
