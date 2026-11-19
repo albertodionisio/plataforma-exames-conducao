@@ -44,3 +44,8 @@ Ver `docs/firebase/README.md` para arquitectura, serviços adiados, activação 
 ### Autenticação por telefone (preparação)
 
 O frontend inclui registo/login por número de telefone e palavra-passe, sem SMS, através de uma Vercel Function e Firebase custom tokens. A palavra-passe é guardada como hash scrypt no Firestore, nunca em texto simples. Antes de testar o fluxo real, configurar `FIREBASE_SERVICE_ACCOUNT_JSON` e `PHONE_AUTH_PEPPER` como variáveis secretas do ambiente Preview Vercel. Ver `docs/firebase/README.md` para os requisitos, limitações e passos de activação. O número não é verificado e contas exclusivamente telefónicas não têm recuperação automática de palavra-passe.
+
+
+## Cache individual e cache partilhado
+
+A persistência individual das tentativas (pergunta, respostas e prazo absoluto) e das preferências fica no armazenamento local do navegador, por utilizador/dispositivo. O Service Worker e a Cache API guardam apenas recursos estáticos da própria origem, com versão e limpeza automática de versões antigas. API, Firebase, autenticação e pagamentos são excluídos. A configuração de cabeçalhos está em `vercel.json` e `netlify.toml`; o build inclui `service-worker.js`. Ver `docs/cache-estrada.md` e executar `node scripts/testar-cache.js`.
