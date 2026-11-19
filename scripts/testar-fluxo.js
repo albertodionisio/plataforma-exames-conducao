@@ -85,6 +85,7 @@ const vm = require("node:vm");
   function makeUser(email, verified, providerId) {
     return {uid:"uid-teste",email,emailVerified:verified,displayName:"Candidato",
       photoURL:null,providerData:[{providerId:providerId||"password"}],
+      updateProfile(data){this.displayName=data.displayName;return Promise.resolve();},
       sendEmailVerification(){authState.calls.push({method:"verification"});return Promise.resolve();}};
   }
   authState.user=makeUser("candidato@estrada.test",true,"password");
