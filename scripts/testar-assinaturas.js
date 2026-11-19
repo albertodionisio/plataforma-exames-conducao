@@ -102,7 +102,7 @@ const document = {
   getElementById: (id) => id === "assinaturas-app" ? raiz : null,
   addEventListener() {}
 };
-const window = { location: { navigatedTo: null, assign(url) { this.navigatedTo = url; } } };
+const window = { location: { navigatedTo: null, hash: "", search: "", assign(url) { this.navigatedTo = url; } }, firebase: { auth() { return { currentUser: null }; } } };
 const contexto = { window, document, Array, String };
 
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../config.js"), "utf8"), contexto);
@@ -129,20 +129,28 @@ for (const cartao of cartoes) {
 
 const botaoSemanal50 = cartoes[1].querySelector("button");
 botaoSemanal50.click();
-assert.equal(window.location.navigatedTo, "https://checkout.epay.co.mz/c/loja-jr5qps-p507", "o botão do plano Semanal Básico de 50 MT deve abrir o checkout EPay");
-assert.equal(cartoes[1].classList.contains("plano-escolhido"), true, "o plano de 50 MT deve ficar seleccionado antes do redireccionamento");
-window.location.navigatedTo = null;
+assert.equal(window.location.hash, "#/entrar", "um utilizador sem sessão deve ser encaminhado para autenticação antes de pagar");
+assert.equal(cartoes[1].classList.contains("plano-escolhido"), true, "o plano de 50 MT deve ficar seleccionado antes da autenticação");
+const codigoPlanos = fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8");
+assert.match(codigoPlanos, /weekly_basic/);
+assert.match(codigoPlanos, /weekly_full/);
+assert.match(codigoPlanos, /monthly_basic/);
+assert.match(codigoPlanos, /monthly_full/);
+assert.match(codigoPlanos, /fetch\("\/api\/payments\/create"/);
+assert.match(codigoPlanos, /fetch\("\/api\/payments\/status/);
+assert.doesNotMatch(codigoPlanos, /loja-jr5qps-p507/, "a interface não deve continuar a usar o checkout fixo");
+window.location.hash = "";
 
 const radioMensal = raiz.querySelector("#estrada-plano-4");
 radioMensal.click();
 assert.equal(cartoes[4].classList.contains("plano-escolhido"), true, "seleccionar o radio deve destacar o cartão correspondente");
 cartoes[4].querySelector("button").click();
 const aviso = raiz.querySelector("#assinaturas-aviso");
-assert.ok(aviso.textContent.includes("Mensal Completo foi seleccionado"), "o botão deve confirmar o plano escolhido");
-assert.ok(aviso.textContent.includes("pagamentos ainda não estão activos"), "o botão não pode simular um pagamento");
+assert.equal(window.location.hash, "#/entrar", "o plano mensal também exige autenticação antes do checkout");
 
 cartoes[0].querySelector("button").click();
 assert.ok(aviso.textContent.includes("O plano Free é gratuito"), "o plano gratuito deve apresentar o aviso próprio");
+assert.equal(window.location.hash, "#/exames", "o plano Free deve encaminhar para os exames");
 assert.equal(cartoes[0].classList.contains("plano-escolhido"), true, "o botão também deve actualizar a selecção visual");
 
 const css = fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.css"), "utf8");
@@ -157,4 +165,4 @@ for (const recurso of ["../../../config.js", "../../../public/assinaturas/planos
   assert.ok(preview.includes(recurso), "a demonstração deve carregar " + recurso);
 }
 
-console.log("FE-004/GER-022 PASSOU: cinco planos, dados de config.js, benefícios, selecção, checkout EPay exclusivo do plano Semanal Básico de 50 MT, restantes botões sem alterações, responsividade, foco de teclado e recursos da demonstração.");
+console.log("BE-002/FE-004 PASSOU: cinco planos, dados de config.js, benefícios, selecção, autenticação obrigatória antes do checkout, endpoints individuais e estado do pagamento, plano Free e recursos da demonstração.");
