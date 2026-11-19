@@ -136,6 +136,11 @@ module.exports = async function phoneAuth(req, res) {
   if (action === "register" && body.confirmPassword !== password) {
     return response(res, 400, { error: "As palavras-passe não coincidem." });
   }
+  const firstName = typeof body.firstName === "string" ? body.firstName.trim().replace(/\\s+/g, " ") : "";
+  const lastName = typeof body.lastName === "string" ? body.lastName.trim().replace(/\\s+/g, " ") : "";
+  if (action === "register" && (!firstName || firstName.length > 50 || lastName.length > 60)) {
+    return response(res, 400, { error: "Indica um primeiro nome válido. O sobrenome ou apelido pode ter até 60 caracteres." });
+  }
 
   try {
     const app = adminApp();
@@ -146,6 +151,7 @@ module.exports = async function phoneAuth(req, res) {
     const accountRef = db.collection("phone_auth_accounts").doc(phoneKey);
 
     let uid;
+    let displayName = "";
     if (action === "register") {
       const salt = crypto.randomBytes(16).toString("hex");
       const passwordHash = await hashPassword(password, salt);
@@ -160,12 +166,16 @@ module.exports = async function phoneAuth(req, res) {
         tx.create(accountRef, {
           uid,
           phone,
+          firstName,
+          lastName,
+          displayName: [firstName, lastName].filter(Boolean).join(" "),
           salt,
           passwordHash,
           passwordAlgorithm: "scrypt-N16384-r8-p1",
           createdAt: admin.firestore.FieldValue.serverTimestamp()
         });
       });
+      displayName = [firstName, lastName].filter(Boolean).join(" ");
     } else {
       const snap = await accountRef.get();
       const account = snap.exists ? snap.data() : null;
@@ -176,10 +186,12 @@ module.exports = async function phoneAuth(req, res) {
         return response(res, 401, { error: "Número ou palavra-passe incorrectos." });
       }
       uid = account.uid;
+      displayName = typeof account.displayName === "string" ? account.displayName :
+        [account.firstName, account.lastName].filter(Boolean).join(" ");
     }
 
     const token = await admin.auth(app).createCustomToken(uid, { phoneAuth: true, phone });
-    return response(res, 200, { token, phone });
+    return response(res, 200, { token, phone, displayName });
   } catch (error) {
     if (error && error.status === 429) return response(res, 429, { error: error.message });
     if (error && error.status === 409) return response(res, 409, { error: error.message });
