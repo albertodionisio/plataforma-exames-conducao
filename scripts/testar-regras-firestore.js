@@ -46,7 +46,8 @@ async function main() {
 
     await assertFails(getDoc(doc(anonymous, "users/alice")));
     await assertFails(getDoc(doc(bob, "users/alice")));
-    await assertFails(setDoc(doc(unverified, "users/unverified"), { uid: "unverified", email: "unverified@example.test" }));
+    await assertSucceeds(setDoc(doc(unverified, "users/unverified"), { uid: "unverified", email: "unverified@example.test", displayName: "Conta sem confirmação", createdAt: new Date() }));
+    await assertSucceeds(getDoc(doc(unverified, "users/unverified")));
     await assertSucceeds(setDoc(doc(alice, "users/alice"), { uid: "alice", email: "alice@example.test", displayName: "Alice", createdAt: new Date() }));
     await assertSucceeds(updateDoc(doc(alice, "users/alice"), { displayName: "Alice B.", updatedAt: new Date() }));
     await assertFails(updateDoc(doc(alice, "users/alice"), { email: "attacker@example.test" }));
