@@ -2,7 +2,7 @@
 "use strict";
 const assert = require("node:assert/strict");
 const crypto = require("node:crypto");
-const lib = require("../api/payments/_lib");
+const lib = require("../lib/epay");
 const raw = Buffer.from(JSON.stringify({ external_reference: "estrada_123e4567-e89b-12d3-a456-426614174000", status: "paid", amount: "50.00", currency: "MZN" }));
 const apiSecret = "sk_test_example_secret_for_unit_tests";
 const whSecret = "whsec_example_secret_for_unit_tests";
