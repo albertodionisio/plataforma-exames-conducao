@@ -1,7 +1,7 @@
 # Integração ePay — ESTRADA
 
 ## Estado
-Backend preparado na branch de desenvolvimento. Não está activo em produção e não confirma pagamentos reais. O checkout fixo anterior do plano Semanal Básico fica preservado como referência; os botões dos planos pagos passam a solicitar um checkout individual ao backend.
+Backend preparado na branch de desenvolvimento. Não está activo em produção e não confirma pagamentos reais. O checkout fixo anterior do plano Semanal Básico foi retirado dos botões da aplicação; os planos pagos passam a solicitar um checkout individual ao backend. O link continua no painel ePay, sem ser apagado nesta fase.
 
 ## Fluxo
 1. O utilizador inicia sessão no Firebase e escolhe um plano pago.
@@ -39,6 +39,10 @@ Guardar como Secrets apenas em Preview durante os testes:
 Nunca colocar estes valores no GitHub, frontend ou mensagens. Não usar a chave de produção em Preview.
 
 ## Configuração do painel ePay
+**Atenção ao ambiente:** a chave sk_test só protege pagamentos criados pela API. A documentação da ePay informa que produtos criados no painel e vendidos pelo checkout público são sempre cobrados em produção, mesmo quando a loja tem uma chave de teste. Por isso, não usar o link fixo do produto para testar nem o partilhar enquanto não for confirmado que se pretende vender em produção. O link foi retirado da aplicação, mas permanece no painel até à validação do novo fluxo.
+
+No sandbox da API, os valores 50, 80 e 150 MT estão fora dos intervalos de teste que simulam falha/recusa e, segundo a documentação, devem resultar em pagamento de teste aprovado, sem cobrança real. Não usar 250/500 MT (falha imediata) nem 300/400 MT (recusa simulada) para testar sucesso.
+
 O callback individual é enviado em cada pagamento. O webhook geral é opcional e só deve ser configurado depois de o endpoint estar publicado num Preview: https://<preview-vercel>/api/payments/webhook. Subscrever payment.paid e payment.failed.
 
 O checkout fixo https://checkout.epay.co.mz/c/loja-jr5qps-p507 não identifica, por si só, a conta Firebase que iniciou a compra. Por isso não deve activar assinaturas automaticamente. Não é necessário apagar o link no painel ePay: pode ficar como alternativa manual; o fluxo normal da aplicação passa a usar checkouts individuais da API.
