@@ -24,7 +24,8 @@ function getAdmin() {
 async function authenticatedUser(req) {
   const match = /^Bearer\s+(.+)$/i.exec(String(req.headers.authorization || ""));
   if (!match) { const e = new Error("Inicia sessão para continuar."); e.status = 401; throw e; }
-  return getAdmin().auth().verifyIdToken(match[1], true);
+  const admin = require("firebase-admin");
+  return admin.auth(getAdmin()).verifyIdToken(match[1], true);
 }
 function readRawBody(req) {
   return new Promise((resolve, reject) => {
@@ -74,7 +75,9 @@ function baseUrl(req) {
     if (u.protocol !== "https:" && u.hostname !== "localhost") throw new Error("APP_BASE_URL deve usar HTTPS.");
     return u.origin;
   }
-  const host = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL || req.headers.host;
+  const host = process.env.VERCEL_ENV === "production"
+    ? (process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL || req.headers.host)
+    : (process.env.VERCEL_URL || req.headers.host);
   if (!host || host.includes("/") || host.includes("@")) throw new Error("Host da aplicação inválido.");
   if (host === "localhost:3000" || host.startsWith("127.0.0.1:")) return "http://" + host;
   return "https://" + host;
@@ -142,7 +145,9 @@ async function applyProviderPayment(db, payment) {
     return { matched: true, duplicate: false, status: payment.status };
   });
 }
+function getDb() { const admin = require("firebase-admin"); return admin.firestore(getAdmin()); }
+function serverTimestamp() { const admin = require("firebase-admin"); return admin.firestore.FieldValue.serverTimestamp(); }
 function safeError(error) { return error && error.status ? error.status : 503; }
-module.exports = { PLANS, json, getAdmin, authenticatedUser, readRawBody, parseJson,
+module.exports = { PLANS, json, getAdmin, getDb, serverTimestamp, authenticatedUser, readRawBody, parseJson,
   verifyPaymentCallback, verifyStoreWebhook, amountToCents, baseUrl, epaySecret,
   epayRequest, txIdFromReference, applyProviderPayment, safeError };
