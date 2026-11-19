@@ -11,7 +11,12 @@ service cloud.firestore {
     }
 
     function verifiedEmail() {
-      return request.auth.token.email_verified == true;
+      return request.auth.token.get('email_verified', false) == true;
+    }
+
+    function phoneAuthUser() {
+      return request.auth.token.get('phoneAuth', false) == true
+        && request.auth.token.get('phone', null) is string;
     }
 
     function validProfile(data, uid) {
@@ -33,7 +38,7 @@ service cloud.firestore {
         && (!('phone' in data)
           || (data.phone is string
             && data.phone.size() <= 30
-            && request.auth.token.phoneAuth == true
+            && phoneAuthUser()
             && request.auth.token.phone == data.phone))
         && (!('photoURL' in data)
           || (data.photoURL is string && data.photoURL.size() <= 2048))
