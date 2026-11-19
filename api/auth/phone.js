@@ -136,8 +136,8 @@ module.exports = async function phoneAuth(req, res) {
   if (action === "register" && body.confirmPassword !== password) {
     return response(res, 400, { error: "As palavras-passe não coincidem." });
   }
-  const firstName = typeof body.firstName === "string" ? body.firstName.trim().replace(/\\s+/g, " ") : "";
-  const lastName = typeof body.lastName === "string" ? body.lastName.trim().replace(/\\s+/g, " ") : "";
+  const firstName = typeof body.firstName === "string" ? body.firstName.trim().replace(/\s+/g, " ") : "";
+  const lastName = typeof body.lastName === "string" ? body.lastName.trim().replace(/\s+/g, " ") : "";
   if (action === "register" && (!firstName || firstName.length > 50 || lastName.length > 60)) {
     return response(res, 400, { error: "Indica um primeiro nome válido. O sobrenome ou apelido pode ter até 60 caracteres." });
   }
