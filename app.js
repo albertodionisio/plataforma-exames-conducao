@@ -265,8 +265,8 @@
     var confirmar = confirmarEl ? confirmarEl.value : "";
     var primeiroNomeEl = form.querySelector("#auth-first-name");
     var apelidoEl = form.querySelector("#auth-last-name");
-    var nomeProprio = primeiroNomeEl ? primeiroNomeEl.value.trim().replace(/\\s+/g, " ") : "";
-    var apelido = apelidoEl ? apelidoEl.value.trim().replace(/\\s+/g, " ") : "";
+    var nomeProprio = primeiroNomeEl ? primeiroNomeEl.value.trim().replace(/\s+/g, " ") : "";
+    var apelido = apelidoEl ? apelidoEl.value.trim().replace(/\s+/g, " ") : "";
     if (authMode === "registo" && (!nomeProprio || nomeProprio.length > 50 || apelido.length > 60)) {
       authFeedback = "Indica o primeiro nome (até 50 caracteres) e, se quiseres, um sobrenome ou apelido (até 60 caracteres).";
       return telaAutenticacao();
