@@ -8,7 +8,7 @@ module.exports = async function paymentStatus(req, res) {
     if (!/^[a-f0-9-]{36}$/i.test(id)) return lib.json(res, 400, { error: "Referência inválida." });
     const db = lib.getDb(), ref = db.collection("payment_transactions").doc(id.toLowerCase());
     const snap = await ref.get();
-    if (!snap.exists || snap.data().uid !== user.uid) return lib.json(res, 404, { error: "Pagamento não encontrado." });
+    if (!snap.exists || lib.accountUidFromTransaction(snap.data()) !== user.uid) return lib.json(res, 404, { error: "Pagamento não encontrado." });
     let saved = snap.data();
     if (saved.status !== "paid" && saved.providerPaymentId) {
       const current = await lib.epayRequest("/payments/" + encodeURIComponent(saved.providerPaymentId), { method: "GET" });
