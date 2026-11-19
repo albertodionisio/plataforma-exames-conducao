@@ -90,6 +90,9 @@ async function main() {
     await assertFails(deleteDoc(doc(alice, "subscriptions/alice")));
     await assertSucceeds(getDoc(doc(alice, "payment_transactions/alice-payment")));
     await assertFails(getDoc(doc(alice, "payment_transactions/bob-payment")));
+    await assertSucceeds(getDocs(query(collection(alice, "payment_transactions"), where("uid", "==", "alice"))));
+    await assertFails(getDocs(collection(alice, "payment_transactions")));
+    await assertFails(getDocs(query(collection(alice, "payment_transactions"), where("uid", "==", "bob"))));
     await assertFails(setDoc(doc(alice, "payment_transactions/fake"), { uid: "alice", status: "confirmed", amount: 999999 }));
     await assertFails(updateDoc(doc(alice, "payment_transactions/alice-payment"), { amount: 1 }));
     await assertFails(deleteDoc(doc(alice, "payment_transactions/alice-payment")));
