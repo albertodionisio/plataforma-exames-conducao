@@ -14,7 +14,7 @@ module.exports = async function paymentStatus(req, res) {
       const current = await lib.epayRequest("/payments/" + encodeURIComponent(saved.providerPaymentId), { method: "GET" });
       const result = await lib.applyProviderPayment(db, current);
       saved = (await ref.get()).data();
-      if (!result.matched && result.reason === "valor ou moeda não correspondem")
+      if (!result.matched)
         return lib.json(res, 409, { error: "Os dados devolvidos pela ePay não correspondem ao pedido." });
     }
     return lib.json(res, 200, { transactionId: id, status: saved.status, planName: saved.planName,
