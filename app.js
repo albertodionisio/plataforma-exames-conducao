@@ -9,7 +9,7 @@
   var firebaseApp = null, firebaseAuth = null, firestoreDb = null;
   var authUser = null, authReady = false, authAvailable = false;
   var subscriptionData = null, subscriptionReady = false;
-  var authMode = "login", authMethod = "email", authFeedback = "";
+  var authMode = "login", authFeedback = "";
 
   function iniciarAuth() {
     var config = A.firebase;
@@ -171,27 +171,22 @@
       return;
     }
     var registo = authMode === "registo";
-    var telefone = authMethod === "telefone";
-    var campoIdentificador = telefone ?
-      "<label for='auth-phone'>Número de telefone</label><input id='auth-phone' name='phone' type='tel' inputmode='tel' autocomplete='tel' placeholder='+258 84 000 0000' required maxlength='20'>" :
-      "<label for='auth-email'>Email</label><input id='auth-email' name='email' type='email' autocomplete='email' required maxlength='254'>";
+    var campoIdentificador =
+      "<label for='auth-identifier'>Email ou número de telefone</label>" +
+      "<input id='auth-identifier' name='identifier' type='text' autocomplete='username' placeholder='Email ou número de telefone' required maxlength='254' autocapitalize='none' spellcheck='false'>";
     app.innerHTML = "<section class='auth-card card' aria-labelledby='auth-titulo'>" +
       "<h1 id='auth-titulo'>" + (registo ? "Criar conta" : "Entrar na tua conta") + "</h1>" +
-      "<p>" + (telefone ? "Usa o teu número de telefone e a palavra-passe para aceder à conta, sem confirmação por SMS." :
-        (registo ? "Regista-te para começares a realizar exames. Terás de confirmar o teu email." :
-        "Inicia sessão para continuares para o exame seleccionado.")) + "</p>" +
+      "<p>" + (registo ? "Regista-te para começares a realizar exames. Podes usar o teu email ou número de telefone." :
+        "Inicia sessão com o teu email ou número de telefone para continuares.") + "</p>" +
       "<form id='auth-form'>" + campoIdentificador +
       "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' maxlength='128' required>" +
       (registo ? "<label for='auth-confirm-password'>Confirmar palavra-passe</label><input id='auth-confirm-password' name='confirmPassword' type='password' autocomplete='new-password' minlength='8' maxlength='128' required>" : "") +
       "<button class='btn auth-submit' type='submit'>" + (registo ? "Criar conta" : "Entrar") + "</button></form>" +
-      (telefone ? "<p class='auth-nota'>Não enviamos SMS nem códigos. Como o número não é verificado, confirma que o escreveste correctamente. Se perderes a palavra-passe, não existe recuperação automática desta conta.</p>" : "") +
       (authFeedback ? "<p class='auth-feedback' role='status'>" + esc(authFeedback) + "</p>" : "") +
-      (!registo && !telefone ? "<p><button class='link-button' type='button' data-action='auth-reset'>Esqueci-me da palavra-passe</button></p>" : "") +
+      (!registo ? "<p><button class='link-button' type='button' data-action='auth-reset'>Esqueci-me da palavra-passe</button></p>" : "") +
       "<p class='auth-alternar'>" + (registo ? "Já tens conta?" : "Ainda não tens conta?") +
       " <button class='link-button' type='button' data-action='auth-mode'>" + (registo ? "Entrar" : "Criar conta") + "</button></p>" +
-      "<p><button class='link-button' type='button' data-action='auth-method'>" +
-      (telefone ? "Usar email" : "Entrar ou criar conta com telefone") + "</button></p>" +
-      (!telefone && A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'><svg class='auth-google-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path fill='#4285F4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/><path fill='#34A853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23z'/><path fill='#FBBC05' d='M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84z'/><path fill='#EA4335' d='M12 4.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.09 14.97 0 12 0a11 11 0 0 0-9.85 7.06l3.69 2.84C6.71 7.3 9.14 4.37 12 4.37z'/></svg><span>Continuar com Google</span></button>" : "") +
+      (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'><svg class='auth-google-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path fill='#4285F4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/><path fill='#34A853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23z'/><path fill='#FBBC05' d='M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84z'/><path fill='#EA4335' d='M12 4.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.09 14.97 0 12 0a11 11 0 0 0-9.85 7.06l3.69 2.84C6.71 7.3 9.14 4.37 12 4.37z'/></svg><span>Continuar com Google</span></button>" : "") +
       "<p><a href='#/exames' data-action='auth-cancel'>Voltar ao catálogo</a></p></section>";
   }
   function concluirAutenticacao(user) {
@@ -249,28 +244,26 @@
       authFeedback = "A palavra-passe deve ter entre 8 e 128 caracteres.";
       return telaAutenticacao();
     }
-    if (authMode === "registo" && authMethod === "telefone" && password !== confirmar) {
+    if (authMode === "registo" && password !== confirmar) {
       authFeedback = "As palavras-passe não coincidem.";
       return telaAutenticacao();
     }
-    if (authMethod === "telefone") {
-      var phoneEl = form.querySelector("#auth-phone");
-      var phone = normalizarTelefoneCliente(phoneEl ? phoneEl.value : "");
-      if (!phone) {
-        authFeedback = "Indica um número válido, incluindo o indicativo do país (por exemplo, +258).";
-        return telaAutenticacao();
-      }
+    var identificadorEl = form.querySelector("#auth-identifier");
+    var identificador = identificadorEl ? identificadorEl.value.trim() : "";
+    var emailValido = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(identificador);
+    var telefone = normalizarTelefoneCliente(identificador);
+    if (emailValido) {
+      // O Firebase Authentication valida o endereço de email.
+    } else if (telefone) {
       authFeedback = "A processar...";
       telaAutenticacao();
-      autenticarComTelefone(phone, password, confirmar);
+      autenticarComTelefone(telefone, password, confirmar);
       return;
-    }
-    var emailEl = form.querySelector("#auth-email");
-    var email = emailEl ? emailEl.value.trim() : "";
-    if (!email) {
-      authFeedback = "Indica um email válido.";
+    } else {
+      authFeedback = "Indica um email válido ou um número de telefone válido (por exemplo, 84 123 4567 ou +258 84 123 4567).";
       return telaAutenticacao();
     }
+    var email = identificador;
     authFeedback = "A processar...";
     telaAutenticacao();
     if (authMode === "registo") {
@@ -303,10 +296,10 @@
     });
   }
   function recuperarPalavraPasse() {
-    var emailEl = document.getElementById("auth-email");
-    var email = emailEl ? emailEl.value.trim() : "";
-    if (!email) {
-      authFeedback = "Escreve primeiro o teu email no campo acima.";
+    var identificadorEl = document.getElementById("auth-identifier");
+    var email = identificadorEl ? identificadorEl.value.trim() : "";
+    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+      authFeedback = "Para recuperar a palavra-passe, escreve primeiro o endereço de email no campo acima.";
       telaAutenticacao();
       return;
     }
@@ -718,7 +711,6 @@
       telaAutenticacao();
       return;
     }
-    if (acao === "auth-method") { authMethod = authMethod === "email" ? "telefone" : "email"; authFeedback = ""; telaAutenticacao(); return; }
     if (acao === "auth-logout") { sairDaConta(); return; }
     if (acao === "auth-reset") { recuperarPalavraPasse(); return; }
     if (acao === "auth-cancel") { try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {} return; }
