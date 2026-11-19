@@ -1,0 +1,44 @@
+name: Validar cache ESTRADA
+
+on:
+  push:
+    branches: ["feat/cache-individual-partilhado"]
+    paths:
+      - "service-worker.js"
+      - "public/cache-manager.js"
+      - "scripts/testar-cache.js"
+      - "scripts/build-netlify.js"
+      - "index.html"
+      - "vercel.json"
+      - "netlify.toml"
+      - ".github/workflows/validar-cache.yml"
+  pull_request:
+    paths:
+      - "service-worker.js"
+      - "public/cache-manager.js"
+      - "scripts/testar-cache.js"
+      - "scripts/build-netlify.js"
+      - "index.html"
+      - "vercel.json"
+      - "netlify.toml"
+      - ".github/workflows/validar-cache.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Verificar sintaxe
+        run: |
+          node --check service-worker.js
+          node --check public/cache-manager.js
+      - name: Testar políticas e isolamento
+        run: node scripts/testar-cache.js
+      - name: Validar build de publicação
+        run: node scripts/build-netlify.js
