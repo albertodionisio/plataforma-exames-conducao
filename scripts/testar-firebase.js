@@ -45,7 +45,7 @@ assert(!appJs.includes("/^\\\\d{9}$/"), "Não pode existir regex com barras dupl
 
 assert(appJs.includes("Email ou número de telefone"), "O campo deve identificar claramente os dois métodos.");
 assert(!appJs.includes("Entrar ou criar conta com telefone"), "Não deve existir um atalho separado para login por telefone.");
-assert(appJs.includes("sendEmailVerification().then"), "A verificação deve usar o handler padrão Firebase, sem continue URL temporário.");
+assert(appJs.includes("return credential.user.sendEmailVerification();"), "A verificação deve usar o handler padrão Firebase, sem continue URL temporário.");
 assert(appJs.includes("sendPasswordResetEmail(email).then"), "A recuperação deve usar o handler padrão Firebase, sem continue URL temporário.");
 assert(!appJs.includes("sendEmailVerification({"), "Não enviar hostname Preview como continue URL de verificação.");
 assert(!appJs.includes("sendPasswordResetEmail(email, {"), "Não enviar hostname Preview como continue URL de recuperação.");
@@ -56,7 +56,6 @@ const phoneApi = fs.readFileSync("api/auth/phone.js", "utf8");
 assert(phoneApi.includes("FIREBASE_SERVICE_ACCOUNT_JSON"), "Credencial Admin não documentada no backend.");
 assert(phoneApi.includes("PHONE_AUTH_PEPPER"), "Segredo HMAC não configurado no backend.");
 assert(phoneApi.includes("firstName") && phoneApi.includes("lastName") && phoneApi.includes("displayName"), "O backend de telefone deve guardar e devolver o nome do cadastro.");
-assert(phoneApi.includes("body.firstName") && phoneApi.includes("body.lastName"), "O registo por telefone deve validar os campos de nome.");
 assert(phoneApi.includes("body.firstName") && phoneApi.includes("body.lastName"), "O registo por telefone deve validar os campos de nome.");
 const rules = fs.readFileSync("firestore.rules", "utf8");
 assert(rules.includes("verifiedEmail()"), "As regras não exigem email verificado para escrever o perfil.");
