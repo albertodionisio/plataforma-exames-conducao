@@ -16,6 +16,15 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
+      - name: Verificar sintaxe da API de pagamentos
+        run: |
+          node --check api/payments/_lib.js
+          node --check api/payments/create.js
+          node --check api/payments/callback.js
+          node --check api/payments/webhook.js
+          node --check api/payments/status.js
+      - name: Testar integração ePay (sem chamadas externas)
+        run: node scripts/testar-epay.js
       - name: Validar configuração e integração Firebase
         run: node scripts/testar-firebase.js
       - name: Instalar dependências temporárias do Emulator Suite
