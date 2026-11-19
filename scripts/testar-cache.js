@@ -17,7 +17,7 @@ const app = read("app.js");
 assert.match(index, /public\/cache-manager\.js/, "index.html deve carregar o gestor de cache");
 assert.match(manager, /serviceWorker\.register\("\/service-worker\.js"/, "o gestor deve registar o Service Worker");
 assert.match(manager, /https:|localhost/, "o registo deve exigir contexto seguro");
-assert.match(sw, /estrada-static-v1-20261119/, "a cache deve ter versão explícita");
+assert.match(sw, /CACHE_VERSION = "v1-20261119"/, "a cache deve ter versão explícita");
 assert.match(sw, /request\.method !== "GET"/, "apenas pedidos GET podem ser considerados");
 assert.match(sw, /url\.origin !== self\.location\.origin/, "recursos externos não entram na cache local");
 assert.match(sw, /\/api\//, "API deve ser excluída");
