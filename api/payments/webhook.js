@@ -1,5 +1,5 @@
 "use strict";
-const lib = require("./_lib");
+const lib = require("../../lib/epay");
 module.exports = async function storeWebhook(req, res) {
   if (req.method !== "POST") { res.setHeader("Allow", "POST"); return lib.json(res, 405, { error: "Método não permitido." }); }
   try {
