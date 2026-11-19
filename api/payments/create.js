@@ -3,6 +3,7 @@ const crypto = require("node:crypto");
 const lib = require("./_lib");
 module.exports = async function createPayment(req, res) {
   let paymentRef = null;
+  let createdNew = false;
   if (req.method !== "POST") { res.setHeader("Allow", "POST"); return lib.json(res, 405, { error: "Método não permitido." }); }
   try {
     const user = await lib.authenticatedUser(req);
@@ -29,6 +30,7 @@ module.exports = async function createPayment(req, res) {
       });
       return { existing: false };
     });
+    createdNew = !created.existing;
     if (created.existing) {
       if (created.data.planCode !== body.planCode) return lib.json(res, 409, { error: "Este pedido já foi usado para outro plano." });
       if (created.data.paymentUrl) return lib.json(res, 200, { transactionId: requestId, payment_url: created.data.paymentUrl, status: created.data.status });
@@ -52,7 +54,7 @@ module.exports = async function createPayment(req, res) {
     if (payment.status === "paid") await lib.applyProviderPayment(db, payment);
     return lib.json(res, 201, { transactionId: requestId, payment_url: payment.payment_url, status: payment.status || "pending" });
   } catch (error) {
-    if (paymentRef) {
+    if (paymentRef && createdNew) {
       try { await paymentRef.update({ status: "failed", updatedAt: lib.serverTimestamp() }); } catch (_) {}
     }
     console.error("Falha ao criar checkout ESTRADA:", error && error.message);
