@@ -268,9 +268,10 @@
     telaAutenticacao();
     if (authMode === "registo") {
       firebaseAuth.createUserWithEmailAndPassword(email, password).then(function (credential) {
-        return credential.user.sendEmailVerification({
-          url: location.origin + location.pathname + "#/entrar"
-        }).then(function () {
+        // Usa o handler padrão do Firebase. Não enviar o hostname temporário da
+        // Vercel como continue URL: Preview deployments variam e podem não estar
+        // autorizados no Firebase Authentication.
+        return credential.user.sendEmailVerification().then(function () {
           return firebaseAuth.signOut();
         }).then(function () {
           authFeedback = "Conta criada. Enviámos uma mensagem para confirmares o teu email. Depois da confirmação, já poderás entrar.";
@@ -303,9 +304,9 @@
       telaAutenticacao();
       return;
     }
-    firebaseAuth.sendPasswordResetEmail(email, {
-      url: location.origin + location.pathname + "#/entrar"
-    }).then(function () {
+    // O handler padrão do Firebase evita depender da autorização de cada
+    // hostname temporário de Preview para links de recuperação.
+    firebaseAuth.sendPasswordResetEmail(email).then(function () {
       authFeedback = "Se existir uma conta para este endereço, receberás uma mensagem com as instruções para redefinir a palavra-passe.";
       telaAutenticacao();
     }).catch(function (error) {
