@@ -39,6 +39,7 @@ module.exports = async function createPayment(req, res) {
     const origin = lib.baseUrl(req);
     const payment = await lib.epayRequest("/payments", {
       method: "POST",
+      headers: { "Idempotency-Key": requestId },
       body: JSON.stringify({
         amount: plan.amount, currency: "MZN", description: "Assinatura ESTRADA — " + plan.name,
         external_reference: externalReference,
