@@ -17,9 +17,12 @@ function response(res, status, body) {
 function normalizarTelefone(value) {
   if (typeof value !== "string") return null;
   let phone = value.trim().replace(/[\s().-]/g, "");
-  if (/^00\d+$/.test(phone)) phone = "+" + phone.slice(2);
+  if (/^00258\d{9}$/.test(phone)) phone = "+258" + phone.slice(5);
+  if (/^258\d{9}$/.test(phone)) phone = "+" + phone;
   if (/^\d{9}$/.test(phone)) phone = "+258" + phone;
-  if (!/^\+[1-9]\d{7,14}$/.test(phone)) return null;
+  // Apenas números moçambicanos de 9 algarismos: Vodacom 84/85,
+  // Movitel 86/87/88. O formato interno é sempre E.164 (+258).
+  if (!/^\+258(?:84|85|86|87|88)\d{7}$/.test(phone)) return null;
   return phone;
 }
 
