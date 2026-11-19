@@ -4,6 +4,14 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
+## GER-023 — Cache individual e partilhado da aplicação
+- Estado: EM CURSO — ChatGPT-ESTRADA-CACHE1 — 2026-11-19 16:10 UTC+02 — ficheiros: public/cache-manager.js, service-worker.js, index.html, vercel.json, netlify.toml, scripts/build-netlify.js, scripts/testar-cache.js, README.md, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-19 16:10 UTC+02
+- Autorização do dono: implementação técnica expressamente autorizada em 2026-11-19, incluindo alterações estritamente necessárias de integração, preservando autenticação, navegação, exames, pagamentos, resultados e trabalho das outras sessões.
+- Pedido: concluir a cache individual e a cache partilhada sem exigir credenciais ou serviços pagos.
+- Âmbito: preservar e documentar a persistência individual existente (estado de exame e preferências no armazenamento do navegador); acrescentar gestão/versionamento da cache de recursos estáticos por Service Worker; excluir endpoints, dados pessoais, autenticação, Firestore, pagamentos e respostas privadas; configurar políticas HTTP coerentes para Vercel e Netlify; incluir Service Worker no build.
+- Pronto quando: registo do Service Worker funciona em HTTPS/localhost; recursos estáticos são reutilizados e actualizados com versão; HTML e Service Worker não ficam presos em cache antiga; dados privados/API nunca entram na cache partilhada; limpeza de versões antigas; testes automatizados verificam política, exclusões, build e registo; documentação explica limites (cache individual não sincroniza entre dispositivos; cache partilhada é local a cada navegador/CDN, não partilha dados privados entre contas).
+- Cuidados: não alterar app.js nem a lógica de persistência FE-013; não cachear endpoints de API, Firebase Auth/Firestore, ePay, respostas autenticadas ou documentos pessoais; não publicar/deployar em produção.
+
 
 ## BE-001 — Preparar fundação Firebase/Firestore sem activar migração da aplicação
 - Estado: EM CURSO — ChatGPT-ESTRADA-FB1 — 2026-11-16 — ficheiros: firebase.json, firestore.rules, firestore.indexes.json, .firebaserc.example, docs/firebase/README.md, PENDENTE.md — último sinal: 2026-11-16
