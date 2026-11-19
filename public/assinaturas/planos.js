@@ -178,10 +178,6 @@
       botao.addEventListener("click", function () {
         seleccionar(indice);
         if (plano.preco === "0 MT") {
-          window.location.assign("#/exames");
-          return;
-        }
-        if (plano.preco === "0 MT") {
           aviso.textContent = "O plano Free é gratuito. Podes consultar os exames disponíveis.";
           window.location.hash = "#/exames";
           return;
