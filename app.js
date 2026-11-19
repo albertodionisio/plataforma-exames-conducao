@@ -196,7 +196,7 @@
   }
 
   function normalizarTelefoneCliente(valor) {
-    var telefone = String(valor || "").trim().replace(/[\\s().-]/g, "");
+    var telefone = String(valor || "").trim().replace(/[\s().-]/g, "");
     if (/^00\\d+$/.test(telefone)) telefone = "+" + telefone.slice(2);
     if (/^\\d{9}$/.test(telefone)) telefone = "+258" + telefone;
     return /^\\+[1-9]\\d{7,14}$/.test(telefone) ? telefone : "";
@@ -250,7 +250,7 @@
     }
     var identificadorEl = form.querySelector("#auth-identifier");
     var identificador = identificadorEl ? identificadorEl.value.trim() : "";
-    var emailValido = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(identificador);
+    var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identificador);
     var telefone = normalizarTelefoneCliente(identificador);
     if (emailValido) {
       // O Firebase Authentication valida o endereço de email.
@@ -298,7 +298,7 @@
   function recuperarPalavraPasse() {
     var identificadorEl = document.getElementById("auth-identifier");
     var email = identificadorEl ? identificadorEl.value.trim() : "";
-    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       authFeedback = "Para recuperar a palavra-passe, escreve primeiro o endereço de email no campo acima.";
       telaAutenticacao();
       return;
