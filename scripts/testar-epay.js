@@ -28,4 +28,8 @@ assert.equal(lib.PLANS.monthly_basic.amount, 80);
 assert.equal(lib.PLANS.monthly_basic.graceDays, 5);
 assert.equal(lib.PLANS.monthly_full.amount, 150);
 assert.equal(lib.PLANS.monthly_full.graceDays, 5);
+assert.equal(lib.PLANS.weekly_basic.description, "ESTRADA-JB — Subscrição Semanal Básica");
+assert.equal(lib.PLANS.weekly_full.description, "ESTRADA-JB — Subscrição Semanal Completa");
+assert.equal(lib.PLANS.monthly_basic.description, "ESTRADA-JB — Subscrição Mensal Básica");
+assert.equal(lib.PLANS.monthly_full.description, "ESTRADA-JB — Subscrição Mensal Completa");
 console.log("APROVADO: ePay — HMAC, janela temporal, valores MZN, referências únicas e catálogo de planos.");
