@@ -69,6 +69,7 @@
       return;
     }
     var tentativas = 0;
+    var notificouActivacao = false;
     function consultar() {
       tentativas++;
       utilizador.getIdToken().then(function (token) {
@@ -83,6 +84,10 @@
       }).then(function (dados) {
         if (dados.status === "paid") {
           aviso.textContent = "Pagamento confirmado. O plano " + dados.planName + " já foi activado na tua conta.";
+          if (!notificouActivacao) {
+            notificouActivacao = true;
+            window.dispatchEvent(new Event("estrada:subscription-updated"));
+          }
         } else if (dados.status === "failed" || dados.status === "cancelled") {
           aviso.textContent = "O pagamento não foi concluído. Podes tentar novamente quando quiseres.";
         } else if (tentativas < 24) {
