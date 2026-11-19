@@ -1,0 +1,47 @@
+name: Validar fundação Firebase
+
+on:
+  push:
+    branches: [feat/firebase-firestore-foundation]
+    paths:
+      - 'firebase.json'
+      - 'firebase.emulator.json'
+      - 'firestore.rules'
+      - 'firestore.indexes.json'
+      - 'scripts/testar-regras-firestore.js'
+      - '.github/workflows/validar-firebase-foundation.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'firebase.json'
+      - 'firebase.emulator.json'
+      - 'firestore.rules'
+      - 'firestore.indexes.json'
+      - 'scripts/testar-regras-firestore.js'
+      - '.github/workflows/validar-firebase-foundation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  firestore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Validar ficheiros JSON
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('firebase.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('firebase.emulator.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('firestore.indexes.json','utf8'))"
+      - name: Instalar dependências temporárias do Emulator Suite
+        run: npm install --no-save --package-lock=false 'firebase@^12' '@firebase/rules-unit-testing@^5' firebase-tools
+      - name: Testar regras no Firestore Emulator isolado
+        run: npx firebase-tools emulators:exec --only firestore --project demo-estrada --config firebase.emulator.json "node scripts/testar-regras-firestore.js"
