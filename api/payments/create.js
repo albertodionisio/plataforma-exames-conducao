@@ -22,7 +22,8 @@ module.exports = async function createPayment(req, res) {
         return { existing: true, data: old };
       }
       tx.create(paymentRef, {
-        uid: user.uid, planCode: body.planCode, planName: plan.name, exams: plan.exams,
+        // A conta destinatária é fixada antes do checkout; o pagador pode ser terceiro.
+        uid: user.uid, accountUid: user.uid, planCode: body.planCode, planName: plan.name, exams: plan.exams,
         amount: plan.amount.toFixed(2), currency: "MZN", durationDays: plan.days, graceDays: plan.graceDays,
         status: "creating", provider: "epay", externalReference,
         createdAt: lib.serverTimestamp(), updatedAt: lib.serverTimestamp()
