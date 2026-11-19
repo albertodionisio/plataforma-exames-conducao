@@ -99,12 +99,13 @@ self.addEventListener("fetch", event => {
   }
 
   if (!isCacheableStatic(request, url)) return;
-  event.respondWith((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    const cached = await cache.match(request);
-    const isImageOrFont = ["image", "font"].includes(request.destination) ||
-      /\\.(?:png|jpe?g|webp|gif|svg|ico|woff2?|ttf|otf)$/i.test(url.pathname);
-    const network = async () => {
+
+  const cachePromise = caches.open(CACHE_NAME);
+  const isImageOrFont = ["image", "font"].includes(request.destination) ||
+    /\\.(?:png|jpe?g|webp|gif|svg|ico|woff2?|ttf|otf)$/i.test(url.pathname);
+
+  if (isImageOrFont) {
+    const refresh = cachePromise.then(async cache => {
       const response = await fetch(request);
       if (response.ok && response.type === "basic" &&
           !response.headers.has("Set-Cookie") &&
@@ -113,14 +114,38 @@ self.addEventListener("fetch", event => {
         await trimCache(cache);
       }
       return response;
-    };
+    });
+    // A imagem em cache é mostrada imediatamente e actualizada em segundo plano.
+    event.waitUntil(refresh.then(() => undefined).catch(() => undefined));
+    event.respondWith((async () => {
+      const cache = await cachePromise;
+      const cached = await cache.match(request);
+      if (cached) return cached;
+      try { return await refresh; }
+      catch (_) {
+        return new Response("", { status: 504, statusText: "Recurso indisponível offline" });
+      }
+    })());
+    return;
+  }
 
-    // Imagens/fontes: cache-first. Código/estilos: network-first para receber
-    // correcções recentes, mantendo uma cópia de contingência offline.
-    if (isImageOrFont && cached) return cached;
-    try { return await network(); }
-    catch (_) {
+  // Código e estilos: rede primeiro para não prender versões antigas; cache
+  // local funciona como contingência quando o dispositivo está offline.
+  event.respondWith((async () => {
+    const cache = await cachePromise;
+    const cached = await cache.match(request);
+    try {
+      const response = await fetch(request);
+      if (response.ok && response.type === "basic" &&
+          !response.headers.has("Set-Cookie") &&
+          !response.headers.get("Cache-Control")?.includes("no-store")) {
+        await cache.put(request, response.clone());
+        await trimCache(cache);
+      }
+      return response;
+    } catch (_) {
       if (cached) return cached;
       return new Response("", { status: 504, statusText: "Recurso indisponível offline" });
     }
-  })());});
+  })());
+});
