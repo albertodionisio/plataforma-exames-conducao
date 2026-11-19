@@ -14,7 +14,7 @@ Backend preparado na branch de desenvolvimento. Não está activo em produção 
 8. A activação é idempotente; avisos repetidos não duplicam a transacção.
 
 ## Endpoints
-- POST /api/payments/create — Firebase ID token e JSON { planCode, requestId }.
+- POST /api/payments/create — Firebase ID token e JSON { planCode }; a referência UUID é gerada exclusivamente no servidor.
 - GET /api/payments/status?transactionId=UUID — só permite consultar pagamentos do próprio utilizador.
 - POST /api/payments/callback — valida X-EducavelPay-Signature com HMAC-SHA256 do corpo bruto e a chave API.
 - POST /api/payments/webhook — opcional; valida X-Epay-Signature (t=unix,v1=hex) com EPAY_WEBHOOK_SECRET e aceita payment.paid/payment.failed.
@@ -51,7 +51,7 @@ O checkout fixo https://checkout.epay.co.mz/c/loja-jr5qps-p507 não identifica, 
 - Nunca activar pelo return_url.
 - Chaves e segredos só no servidor.
 - Callback usa corpo bruto, HMAC-SHA256 e comparação em tempo constante.
-- external_reference é aleatória e única.
+- external_reference é um UUID aleatório gerado exclusivamente no servidor e único por transacção.
 - O endpoint de estado verifica o dono e consulta a ePay.
 - O servidor verifica valor exacto em cêntimos e currency MZN.
 - Activação em transacção Firestore, com idempotência.
