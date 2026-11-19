@@ -2,6 +2,7 @@
 const crypto = require("node:crypto");
 const lib = require("./_lib");
 module.exports = async function createPayment(req, res) {
+  let paymentRef = null;
   if (req.method !== "POST") { res.setHeader("Allow", "POST"); return lib.json(res, 405, { error: "Método não permitido." }); }
   try {
     const user = await lib.authenticatedUser(req);
@@ -11,7 +12,7 @@ module.exports = async function createPayment(req, res) {
     const requestId = typeof body.requestId === "string" && /^[a-f0-9-]{36}$/i.test(body.requestId)
       ? body.requestId.toLowerCase() : crypto.randomUUID();
     const db = lib.getDb();
-    const paymentRef = db.collection("payment_transactions").doc(requestId);
+    paymentRef = db.collection("payment_transactions").doc(requestId);
     const externalReference = "estrada_" + requestId;
     const created = await db.runTransaction(async tx => {
       const snap = await tx.get(paymentRef);
@@ -48,8 +49,12 @@ module.exports = async function createPayment(req, res) {
       providerPaymentId: String(payment.id), paymentUrl: String(payment.payment_url),
       status: String(payment.status || "pending"), updatedAt: lib.serverTimestamp()
     });
+    if (payment.status === "paid") await lib.applyProviderPayment(db, payment);
     return lib.json(res, 201, { transactionId: requestId, payment_url: payment.payment_url, status: payment.status || "pending" });
   } catch (error) {
+    if (paymentRef) {
+      try { await paymentRef.update({ status: "failed", updatedAt: lib.serverTimestamp() }); } catch (_) {}
+    }
     console.error("Falha ao criar checkout ESTRADA:", error && error.message);
     return lib.json(res, lib.safeError(error), { error: error && [401,403].includes(error.status) ? error.message :
       "Não foi possível iniciar o pagamento. Tenta novamente mais tarde." });
