@@ -8,7 +8,7 @@ module.exports = async function paymentCallback(req, res) {
       return lib.json(res, 401, { error: "Assinatura do aviso inválida." });
     const payload = lib.parseJson(raw), payment = payload.payment || payload.data || payload;
     const result = await lib.applyProviderPayment(lib.getAdmin().firestore(), payment);
-    if (!result.matched && result.reason === "valor ou moeda não correspondem")
+    if (!result.matched)
       return lib.json(res, 400, { error: "Dados do pagamento não correspondem à transacção." });
     return lib.json(res, 200, { received: true, matched: result.matched, duplicate: !!result.duplicate });
   } catch (error) {
