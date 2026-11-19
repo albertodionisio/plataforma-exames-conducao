@@ -6,6 +6,8 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Backend e Firebase (BE-)
 
+- BE-001 — CONCLUÍDA (fundação versionada e testes CI aprovados; publicação no Firebase real reservada a autorização explícita do dono) — ChatGPT-FB-ETAPA1 — 2026-11-19 — branch `feat/firebase-firestore-foundation`, PR #2. Inclui configuração Firebase CLI, protecção de credenciais locais, regras Firestore, índices, Emulator Suite, testes automatizados e documentação. Não fazer merge/deploy/publicação sem revisão da branch e autorização.
+
 ## Interface (FE-)
 
 ## FE-012 — Exigir login ao seleccionar um exame e retomar a selecção após autenticação
