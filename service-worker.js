@@ -22,7 +22,7 @@ const MAX_ENTRIES = 300;
 
 function isPrivateOrDynamic(url) {
   const path = url.pathname.toLowerCase();
-  return path.startsWith("/api/") ||
+  return path.startsWith("/api") ||
     path.startsWith("/__/") ||
     path.includes("firestore") ||
     path.includes("identitytoolkit") ||
@@ -102,7 +102,10 @@ self.addEventListener("fetch", event => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
     const cached = await cache.match(request);
-    const network = fetch(request).then(async response => {
+    const isImageOrFont = ["image", "font"].includes(request.destination) ||
+      /\\.(?:png|jpe?g|webp|gif|svg|ico|woff2?|ttf|otf)$/i.test(url.pathname);
+    const network = async () => {
+      const response = await fetch(request);
       if (response.ok && response.type === "basic" &&
           !response.headers.has("Set-Cookie") &&
           !response.headers.get("Cache-Control")?.includes("no-store")) {
@@ -110,14 +113,14 @@ self.addEventListener("fetch", event => {
         await trimCache(cache);
       }
       return response;
-    });
-    if (cached) {
-      event.waitUntil(network.catch(() => undefined));
-      return cached;
-    }
-    try { return await network; }
+    };
+
+    // Imagens/fontes: cache-first. Código/estilos: network-first para receber
+    // correcções recentes, mantendo uma cópia de contingência offline.
+    if (isImageOrFont && cached) return cached;
+    try { return await network(); }
     catch (_) {
+      if (cached) return cached;
       return new Response("", { status: 504, statusText: "Recurso indisponível offline" });
     }
-  })());
-});
+  })());});
