@@ -12,7 +12,9 @@ module.exports = async function storeWebhook(req, res) {
     const payload = lib.parseJson(raw), payment = payload.payment || payload.data || payload;
     if (!payment.status) payment.status = event === "payment.paid" ? "paid" : "failed";
     const result = await lib.applyProviderPayment(lib.getAdmin().firestore(), payment);
-    return lib.json(res, 200, { received: true, matched: result.matched, duplicate: !!result.duplicate });
+    if (!result.matched && result.reason !== "external_reference inválida" && result.reason !== "transacção não encontrada")
+      return lib.json(res, 400, { error: "Dados do pagamento não correspondem à transacção." });
+    return lib.json(res, 200, { received: true, matched: result.matched, ignored: !result.matched, duplicate: !!result.duplicate });
   } catch (error) {
     console.error("Falha no webhook geral ePay:", error && error.message);
     return lib.json(res, lib.safeError(error), { error: "Não foi possível processar o webhook." });
