@@ -17,7 +17,7 @@ Estado nesta branch: Firebase Authentication integrado no frontend; perfil míni
 | Serviço | Estado | Observação |
 |---|---|---|
 | Firebase Authentication | Integrado no frontend; testes automáticos no Emulator Suite | Email/palavra-passe, confirmação, recuperação, Google, sessão persistente e logout. Registo, verificação, recuperação e novo login são cobertos pelo Auth Emulator; a entrega real de emails e OAuth continuam a exigir validação no Preview. |
-| Cloud Firestore | Preparado | Perfil mínimo em `users/{uid}`; regras ainda não publicadas. |
+| Cloud Firestore | Preparado e testado no Emulator Suite | Perfil mínimo em `users/{uid}`; regras default-deny e isolamento por UID; regras ainda não publicadas no projecto real. |
 | Firebase Hosting | Não adoptado | A aplicação continua alojada no Vercel. |
 | Cloud Storage | Adiado | Não existe requisito actual de uploads. O Storage for Firebase exige Blaze; no Spark, buckets não ficam acessíveis. Como perguntas/imagens são estáticas, não há motivo para activar agora. |
 | Cloud Functions | Adiado | Deploy de Cloud Functions exige Blaze e billing. Backend confiável poderá usar Cloud Functions ou endpoints Vercel com Firebase Admin SDK no servidor. Nunca usar Admin SDK no browser. |
@@ -35,7 +35,7 @@ As contas de utilizador que existiam no Supabase não são automaticamente recon
 
 Foi preparado um fluxo adicional, separado do email/Google, em `/api/auth/phone` (Vercel Function). O registo e o login usam número em formato internacional E.164; números moçambicanos com nove algarismos são normalizados com o indicativo +258. O utilizador define e confirma a palavra-passe no registo. Não há SMS nem OTP e, por isso, o sistema não comprova a titularidade do número.
 
-A palavra-passe é processada no servidor com scrypt e salt aleatório; apenas o hash é guardado em `phone_auth_accounts`. O identificador do documento é um HMAC do número, não o número em texto simples. O servidor emite um Firebase custom token para a sessão. O acesso aos documentos de contas telefónicas é exclusivamente administrativo; as regras do Firestore continuam a negar acesso directo do cliente. O endpoint limita tentativas por telefone e endereço IP.
+A palavra-passe é processada no servidor com scrypt e salt aleatório; apenas o hash é guardado em `phone_auth_accounts`. O identificador do documento é um HMAC do número, não o número em texto simples. O servidor emite um Firebase custom token para a sessão com as custom claims assinadas `phoneAuth: true` e `phone: +258...`; as regras só aceitam um perfil telefónico quando o número coincide exactamente com essas claims. O acesso aos documentos de contas telefónicas é exclusivamente administrativo; as regras do Firestore continuam a negar acesso directo do cliente. O endpoint limita tentativas por telefone e endereço IP.
 
 **Configuração obrigatória antes de activar no Preview (não colocar no GitHub):**
 1. Criar uma service account com permissões mínimas necessárias para Firebase Authentication (criar custom tokens) e Cloud Firestore (ler/escrever apenas as colecções técnicas necessárias). Guardar o JSON completo como variável Vercel `FIREBASE_SERVICE_ACCOUNT_JSON`, no ambiente Preview da branch `feat/firebase-full-migration`.
@@ -54,7 +54,7 @@ A implementação não altera nem desactiva email/palavra-passe ou Google. O bac
 - `exam_attempts/{attemptId}`: tentativas/resultados, escritos apenas por backend confiável.
 - `payment_transactions/{transactionId}`: transacções confirmadas por servidor/webhook.
 
-O cliente não pode criar nem alterar subscrições, resultados finais ou pagamentos. O resultado calculado no browser não é uma fonte confiável para conceder benefícios ou confirmar pagamentos; o servidor deverá validar a operação.
+As regras Firestore negam por omissão. O perfil `users/{uid}` só pode ser lido pelo próprio UID; a criação exige email verificado ou custom claim telefónica assinada pelo backend. O telefone fica imutável no perfil e tem de coincidir com a claim `phone`. Colecções `phone_auth_accounts` e `phone_auth_rate_limits` são privadas ao Admin SDK. O utilizador só pode ler as próprias subscrições, tentativas e transacções; não pode escrever, alterar ou eliminar esses registos. As consultas a tentativas e pagamentos devem filtrar por `uid == request.auth.uid`, porque as regras não são filtros. O cliente não pode criar nem alterar subscrições, resultados finais ou pagamentos. O resultado calculado no browser não é uma fonte confiável para conceder benefícios ou confirmar pagamentos; o servidor deverá validar a operação.
 
 Perguntas, alternativas, explicações e imagens estáticas permanecem em `data/exames/` e `public/`, servidas como conteúdo estático com a estratégia CDN/cache existente. Não duplicar estes dados no Firestore. Telefone, se recolhido, é apenas contacto; não activar SMS/OTP.
 
@@ -72,7 +72,7 @@ Passos externos:
 ## Activação e validação
 
 1. Instalar Firebase CLI num ambiente confiável e autenticar na conta proprietária.
-2. Copiar `.firebaserc.example` para `.firebaserc` local e substituir o placeholder pelo Project ID correcto. Não commitar o ficheiro local.
+2. Copiar `.firebaserc.example` para `.firebaserc` local e substituir o placeholder pelo Project ID correcto. Não commitar o ficheiro local; `.gitignore` protege `.firebaserc`, cache/logs locais e ficheiros comuns de service account/Admin SDK.
 3. Executar Firebase Emulator Suite para Auth e Firestore; o workflow `Validar integração Firebase` executa `scripts/testar-auth-firebase.js` e `scripts/testar-regras-firestore.js` num projecto isolado `demo-estrada`.
 4. Só após revisão e autorização, publicar: `firebase deploy --only firestore:rules --project plataforma-exames-conducao`.
 5. Não publicar índices até existir consulta que os exija.
