@@ -102,7 +102,7 @@ self.addEventListener("fetch", event => {
 
   const cachePromise = caches.open(CACHE_NAME);
   const isImageOrFont = ["image", "font"].includes(request.destination) ||
-    /\\.(?:png|jpe?g|webp|gif|svg|ico|woff2?|ttf|otf)$/i.test(url.pathname);
+    /\.(?:png|jpe?g|webp|gif|svg|ico|woff2?|ttf|otf)$/i.test(url.pathname);
 
   if (isImageOrFont) {
     const refresh = cachePromise.then(async cache => {
