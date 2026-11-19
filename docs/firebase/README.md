@@ -16,7 +16,7 @@ Estado nesta branch: Firebase Authentication integrado no frontend; perfil míni
 
 | Serviço | Estado | Observação |
 |---|---|---|
-| Firebase Authentication | Integrado no frontend; testes automáticos no Emulator Suite | Email/palavra-passe, confirmação, recuperação, Google, sessão persistente e logout. Registo, verificação, recuperação e novo login são cobertos pelo Auth Emulator; a entrega real de emails e OAuth continuam a exigir validação no Preview. |
+| Firebase Authentication | Integrado no frontend; testes automáticos no Emulator Suite | Email/palavra-passe sem confirmação obrigatória, recuperação por email, Google, sessão persistente e logout. Registo, verificação, recuperação e novo login são cobertos pelo Auth Emulator; a entrega real de emails e OAuth continuam a exigir validação no Preview. |
 | Cloud Firestore | Preparado e testado no Emulator Suite | Perfil mínimo em `users/{uid}`; regras default-deny e isolamento por UID; regras ainda não publicadas no projecto real. |
 | Firebase Hosting | Não adoptado | A aplicação continua alojada no Vercel. |
 | Cloud Storage | Adiado | Não existe requisito actual de uploads. O Storage for Firebase exige Blaze; no Spark, buckets não ficam acessíveis. Como perguntas/imagens são estáticas, não há motivo para activar agora. |
@@ -29,7 +29,7 @@ Estado nesta branch: Firebase Authentication integrado no frontend; perfil míni
 
 ## Contas existentes do fornecedor anterior
 
-As contas de utilizador que existiam no Supabase não são automaticamente reconhecidas pelo Firebase Authentication. Esta entrega não exporta nem importa utilizadores, passwords ou hashes. Para testar a nova autenticação, criar uma conta no ESTRADA com Firebase e confirmar o email; o mesmo endereço de email pode ser registado no Firebase independentemente da conta antiga. Uma migração em massa de utilizadores exigiria exportação/importação segura e validação do algoritmo de hash, fora do âmbito desta entrega. O projecto e os dados antigos não foram apagados.
+As contas de utilizador que existiam no Supabase não são automaticamente reconhecidas pelo Firebase Authentication. Esta entrega não exporta nem importa utilizadores, passwords ou hashes. Para testar a nova autenticação, criar uma conta no ESTRADA com Firebase; o acesso é imediato e não exige confirmar o email. O mesmo endereço pode ser registado no Firebase independentemente da conta antiga. Uma migração em massa de utilizadores exigiria exportação/importação segura e validação do algoritmo de hash, fora do âmbito desta entrega. O projecto e os dados antigos não foram apagados.
 
 ## Autenticação por telefone e palavra-passe
 
@@ -45,7 +45,7 @@ A palavra-passe é processada no servidor com scrypt e salt aleatório; apenas o
 
 Contas criadas só com telefone não têm recuperação automática de palavra-passe: sem email alternativo verificado, SMS ou códigos de recuperação previamente guardados, não existe forma segura de provar a identidade. O utilizador deve ser avisado antes de escolher este método. Como o número não é verificado, outra pessoa pode registar um número que não controla; esta limitação deve ser considerada antes de disponibilizar publicamente o método.
 
-A implementação não altera nem desactiva email/palavra-passe ou Google. O backend depende de credenciais Admin e de Firestore; a configuração de produção não é feita nesta etapa.
+O registo por email cria a conta e inicia sessão imediatamente, sem enviar confirmação obrigatória nem bloquear o acesso por `email_verified`. O utilizador pode usar um endereço que não controla; a validação de formato/domínio e os limites anti-abuso não comprovam a titularidade. A recuperação da palavra-passe continua a depender de acesso à caixa de correio. O registo por telefone continua sem SMS/OTP e usa palavra-passe + custom token; não se deve apresentar o número como verificado. A implementação não activa SMS. O backend depende de credenciais Admin e de Firestore; a configuração de produção não é feita nesta etapa.
 
 ## Modelo de dados e segurança
 
@@ -54,7 +54,7 @@ A implementação não altera nem desactiva email/palavra-passe ou Google. O bac
 - `exam_attempts/{attemptId}`: tentativas/resultados, escritos apenas por backend confiável.
 - `payment_transactions/{transactionId}`: transacções confirmadas por servidor/webhook.
 
-As regras Firestore negam por omissão. O perfil `users/{uid}` só pode ser lido pelo próprio UID; a criação exige email verificado ou custom claim telefónica assinada pelo backend. O telefone fica imutável no perfil e tem de coincidir com a claim `phone`. Colecções `phone_auth_accounts` e `phone_auth_rate_limits` são privadas ao Admin SDK. O utilizador só pode ler as próprias subscrições, tentativas e transacções; não pode escrever, alterar ou eliminar esses registos. As consultas a tentativas e pagamentos devem filtrar por `uid == request.auth.uid`, porque as regras não são filtros. O cliente não pode criar nem alterar subscrições, resultados finais ou pagamentos. O resultado calculado no browser não é uma fonte confiável para conceder benefícios ou confirmar pagamentos; o servidor deverá validar a operação.
+As regras Firestore negam por omissão. O perfil `users/{uid}` só pode ser lido pelo próprio UID; a criação exige apenas autenticação e correspondência do UID; para perfis telefónicos, o número tem de coincidir com a custom claim assinada pelo backend. O telefone fica imutável no perfil e tem de coincidir com a claim `phone`. Colecções `phone_auth_accounts` e `phone_auth_rate_limits` são privadas ao Admin SDK. O utilizador só pode ler as próprias subscrições, tentativas e transacções; não pode escrever, alterar ou eliminar esses registos. As consultas a tentativas e pagamentos devem filtrar por `uid == request.auth.uid`, porque as regras não são filtros. O cliente não pode criar nem alterar subscrições, resultados finais ou pagamentos. O resultado calculado no browser não é uma fonte confiável para conceder benefícios ou confirmar pagamentos; o servidor deverá validar a operação.
 
 Perguntas, alternativas, explicações e imagens estáticas permanecem em `data/exames/` e `public/`, servidas como conteúdo estático com a estratégia CDN/cache existente. Não duplicar estes dados no Firestore. Telefone, se recolhido, é apenas contacto; não activar SMS/OTP.
 
@@ -76,7 +76,7 @@ Passos externos:
 3. Executar Firebase Emulator Suite para Auth e Firestore; o workflow `Validar integração Firebase` executa `scripts/testar-auth-firebase.js` e `scripts/testar-regras-firestore.js` num projecto isolado `demo-estrada`.
 4. Só após revisão e autorização, publicar: `firebase deploy --only firestore:rules --project plataforma-exames-conducao`.
 5. Não publicar índices até existir consulta que os exija.
-6. No Preview, confirmar a recepção real do email de verificação, abrir o link e validar a conta; testar também o Google, logout e persistência. O fluxo de registo/verificação/recuperação já tem cobertura automatizada no Auth Emulator, mas o emulador não prova a entrega de email pelo serviço real.
+6. No Preview, testar registo por email com entrada imediata, login/logout, recuperação de palavra-passe e Google; testar também registo/login por telefone sem SMS/OTP. O Auth Emulator valida o comportamento de sessão e perfil, mas não prova entregabilidade de email de recuperação.
 
 ## Custos e limites
 
