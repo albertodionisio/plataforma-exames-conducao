@@ -376,7 +376,7 @@ const vm = require("node:vm");
   assert.ok(app.innerHTML.includes("Criar conta"),"Deve existir modo de registo");
   const senhaCurta={"#auth-email":{value:"candidato@estrada.test"},"#auth-password":{value:"1234567"}};
   app.listeners.submit({target:{id:"auth-form",querySelector:s=>senhaCurta[s]},preventDefault(){}});
-  assert.ok(app.innerHTML.includes("pelo menos 8 caracteres"),"O registo deve exigir palavra-passe com pelo menos 8 caracteres");
+  assert.ok(app.innerHTML.includes("entre 8 e 128 caracteres"),"O registo deve exigir palavra-passe com pelo menos 8 caracteres");
   const registoValido={"#auth-email":{value:"novo@estrada.test"},"#auth-password":{value:"senha-segura-123"}};
   app.listeners.submit({target:{id:"auth-form",querySelector:s=>registoValido[s]},preventDefault(){}});
   await new Promise(resolve=>setImmediate(resolve));
