@@ -4,14 +4,14 @@
 Backend preparado na branch de desenvolvimento. Não está activo em produção e não confirma pagamentos reais. O checkout fixo anterior do plano Semanal Básico foi retirado dos botões da aplicação; os planos pagos passam a solicitar um checkout individual ao backend. O link continua no painel ePay, sem ser apagado nesta fase.
 
 ## Fluxo
-1. O utilizador inicia sessão no Firebase e escolhe um plano pago.
+1. O utilizador inicia sessão no Firebase e escolhe um plano pago. A sessão identifica a conta destinatária; o meio de pagamento pode pertencer ao próprio ou a um familiar.
 2. O frontend envia planCode e requestId para POST /api/payments/create, com Firebase ID token.
-3. O servidor valida a identidade e escolhe preço/duração num catálogo fechado. Nunca aceita preço enviado pelo browser.
+3. O servidor valida a identidade e escolhe preço/duração num catálogo fechado. Nunca aceita preço enviado pelo browser. Fixa `uid` e `accountUid` no registo da transacção antes de criar o checkout.
 4. O servidor cria payment_transactions/{requestId} e chama POST https://checkout.epay.co.mz/api/v1/payments.
 5. A ePay devolve payment_url e o comprador é redireccionado.
 6. A ePay envia callback assinado para /api/payments/callback. O servidor valida HMAC-SHA256 do corpo bruto com EPAY_SECRET_KEY, referência, valor e moeda.
 7. O retorno do browser abre /#/planos com a referência; o frontend consulta GET /api/payments/status. O backend consulta a ePay e só activa após status paid.
-8. A activação é idempotente; avisos repetidos não duplicam a transacção.
+8. A activação é idempotente; avisos repetidos não duplicam a transacção. A subscrição é gravada em `subscriptions/{accountUid}` da conta que iniciou o checkout, independentemente do número/conta M-Pesa usado pelo pagador.
 
 ## Endpoints
 - POST /api/payments/create — Firebase ID token e JSON { planCode }; a referência UUID é gerada exclusivamente no servidor.
@@ -54,6 +54,8 @@ O checkout fixo https://checkout.epay.co.mz/c/loja-jr5qps-p507 não identifica, 
 - external_reference é um UUID aleatório gerado exclusivamente no servidor e único por transacção.
 - O endpoint de estado verifica o dono e consulta a ePay.
 - O servidor verifica valor exacto em cêntimos e currency MZN.
+- O UID autenticado é gravado antes do checkout como `uid` e `accountUid`; divergência posterior é rejeitada. O callback não usa número do pagador para escolher a conta.
+- O utilizador pode pagar com M-Pesa de familiar ou terceiro; a ePay confirma o pagamento, mas a conta beneficiária permanece a conta ESTRADA-JB que iniciou aquela transacção.
 - Activação em transacção Firestore, com idempotência.
 - Nova compra prolonga a validade a partir da data mais tardia entre agora e a expiração actual, aplicando imediatamente o novo plano, para não perder dias pagos.
 - O modo de acesso aberto para testes no config.js não foi alterado.
