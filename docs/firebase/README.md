@@ -1,75 +1,95 @@
-# Firebase — fundação inicial do ESTRADA
+# Firebase — fundação técnica do ESTRADA-JB
 
-Estado: preparação de configuração; **não significa que a aplicação já esteja ligada ao Firebase**.
+Estado desta entrega: configuração versionada e modelo inicial de segurança preparados; regras e testes automatizados executados no Firestore Emulator. **Isto não significa que as regras tenham sido publicadas no projecto Firebase real.** A migração da aplicação é acompanhada numa tarefa/branch separada.
 
-## Projecto criado no Console
+## Projecto Firebase existente
 
-- Project ID: `plataforma-exames-conducao`
-- Aplicação Web registada: ESTRADA Web
-- Authentication: fornecedores Google e E-mail/senha activados no Console, conforme configuração feita pelo dono.
-- Cloud Firestore: edição Standard, base `(default)`, região `africa-south1` (Johannesburg), criada no Console.
-- Plano observado no Console: Spark.
-- A configuração Web do SDK foi fornecida pelo dono na conversa. Não copiar a configuração completa, chaves, tokens ou credenciais para este documento.
+- Project ID: `plataforma-exames-conducao`.
+- Aplicação Web registada: ESTRADA Web.
+- Cloud Firestore: edição Standard, base `(default)`, região `africa-south1` (Johannesburg), conforme configuração comunicada pelo dono.
+- Plano observado durante a configuração: Spark.
+- Authentication: fornecedores Google e E-mail/palavra-passe activados no Console, conforme configuração comunicada pelo dono.
+- A chave Web do Firebase é um identificador público; service accounts, chaves privadas, tokens e segredos nunca devem entrar no repositório nem no browser.
 
-## Estado da integração
+A configuração real do Console deve ser confirmada no próprio Firebase Console antes de qualquer publicação. A branch e os ficheiros locais não provam, por si só, que as regras estejam activas no serviço.
 
-O frontend do repositório ainda contém integração Supabase. A tarefa BE-001 prepara apenas os ficheiros de configuração, regras e documentação do Firestore. Não substitui o fornecedor no frontend, não migra utilizadores e não activa o Firebase na aplicação. A migração deve ser uma tarefa própria, coordenada com a tarefa de autenticação FE-012, para evitar dois sistemas de identidade activos ou perda de sessões/dados.
+## Ficheiros desta fundação
 
-## Estrutura de dados proposta
+| Ficheiro | Responsabilidade |
+|---|---|
+| `firebase.json` | Liga Firebase CLI às regras e aos índices Firestore. |
+| `.firebaserc.example` | Exemplo com placeholder; não selecciona nenhum projecto real. |
+| `firestore.rules` | Regras de autorização por utilizador e negação por omissão. |
+| `firestore.indexes.json` | Índices compostos; começa vazio enquanto não houver consultas que os exijam. |
+| `firebase.emulator.json` | Configuração isolada para testar regras localmente/CI. |
+| `scripts/testar-regras-firestore.js` | Testes positivos e negativos das regras. |
+| `.github/workflows/validar-firebase-foundation.yml` | Valida JSON e executa os testes no Firestore Emulator. |
 
-As colecções seguintes são destinadas a dados dinâmicos e privados:
+O ficheiro local `.firebaserc` é ignorado pelo Git. Também são ignorados nomes comuns de ficheiros service-account/Admin SDK. Não guardar credenciais em qualquer outro ficheiro, issue, commit ou mensagem.
 
-| Colecção | Documento | Conteúdo | Escrita |
+## Modelo inicial de dados
+
+As colecções destinam-se a dados dinâmicos e privados:
+
+| Colecção | Documento | Conteúdo previsto | Escrita |
 |---|---|---|---|
-| `users` | `{uid}` | Perfil mínimo: UID, email, nome de apresentação, telefone de contacto, fotografia e datas | O próprio utilizador, apenas nos campos permitidos |
-| `subscriptions` | `{uid}` | Plano, estado, início e expiração | Apenas servidor |
+| `users` | `{uid}` | UID, email, nome, telefone validado por claim, fotografia e datas | O próprio utilizador, apenas nos campos permitidos |
+| `subscriptions` | `{uid}` | Plano, estado, início, fim e carência | Apenas servidor |
 | `exam_attempts` | `{attemptId}` | UID, exame, datas, estado, respostas e resultado | Apenas servidor |
-| `payment_transactions` | `{transactionId}` | UID, referência externa, valor, moeda, estado e datas | Apenas servidor/webhook validado |
+| `payment_transactions` | `{transactionId}` | UID, referência, valor, moeda, estado e datas | Apenas servidor/webhook validado |
 
-O telefone no perfil é um dado de contacto. A autenticação por telefone/SMS não está activada nem é necessária para esta primeira configuração.
+Perguntas, alternativas, explicações pedagógicas e imagens estáticas permanecem em `data/exames/` e `public/`, servidas como conteúdo estático e cache/CDN. Não duplicar esse catálogo no Firestore. Nunca guardar passwords, tokens de sessão, chaves privadas, JSON de service account ou dados completos de cartões.
 
-### Conteúdo que NÃO deve ir para o Firestore
+## Segurança Firestore
 
-Perguntas, alternativas, explicações pedagógicas e imagens estáticas dos exames permanecem nos ficheiros versionados/publicados da aplicação e na distribuição CDN/cache. Não duplicar esse catálogo no Firestore: isso evita leituras de documentos para cada consulta do conteúdo estático e mantém a estratégia de cache.
+As regras aplicam o princípio de negar por omissão:
 
-Nunca guardar passwords, tokens de sessão, chaves privadas, service-account JSON ou dados de cartão.
-
-## Regras de segurança
-
-O ficheiro `firestore.rules` aplica o princípio de negar por omissão:
-
-- Perfil: cada utilizador só pode ler o documento cujo ID é o seu UID. Pode criar o próprio perfil e alterar apenas nome, telefone de contacto, fotografia e data de actualização.
-- Subscrições: o utilizador só pode ler o documento próprio; não pode criar nem alterar o plano, preço, validade ou estado.
-- Tentativas: o cliente só pode ler tentativas próprias. Criação, respostas finais, pontuação e submissão ficam reservadas ao servidor.
-- Pagamentos: o cliente só pode ler registos próprios. Criação e alteração ficam reservadas ao servidor, depois de validar a notificação do fornecedor de pagamentos.
+- Perfil: o utilizador só pode ler o documento com o próprio UID. A criação exige email verificado ou uma custom claim de autenticação telefónica emitida pelo servidor. A actualização fica limitada aos campos de perfil permitidos; email, UID e data de criação não podem ser substituídos pelo cliente.
+- Telefone: só é aceite quando corresponde exactamente à claim assinada `phone` e `phoneAuth` do Firebase Authentication. O cliente não pode inventar ou trocar o número.
+- Credenciais e limites internos da autenticação telefónica: inacessíveis ao cliente.
+- Subscrições: o utilizador pode ler apenas o próprio documento; não pode criar, alterar ou eliminar.
+- Tentativas/resultados: o utilizador pode ler apenas registos próprios; criação, alteração e eliminação são reservadas ao servidor.
+- Pagamentos: o utilizador pode ler apenas registos próprios; criação, alteração e eliminação são reservadas ao servidor.
 - Qualquer outra colecção fica bloqueada.
 
-As regras pressupõem documentos com o campo `uid` nas colecções `exam_attempts` e `payment_transactions`. Consultas dessas colecções feitas pelo cliente terão de filtrar por `uid == request.auth.uid`; o Firestore não usa regras como filtros automáticos.
-
-**Consequência importante:** até existir backend confiável com Firebase Admin SDK, a aplicação não deve tentar gravar tentativas, resultados, subscrições ou pagamentos directamente no Firestore. O Admin SDK ignora estas regras e só pode ser usado em ambiente de servidor, com credenciais protegidas.
+As consultas de `exam_attempts` e `payment_transactions` devem filtrar por `uid == request.auth.uid`. As regras do Firestore não funcionam como filtros automáticos. O backend com Firebase Admin SDK contorna as regras e, por isso, só pode ser executado no servidor com credenciais protegidas e validações próprias.
 
 ## Índices
 
-A configuração começa sem índices compostos. O Firestore cria automaticamente índices de campo único. Só acrescentar índices compostos quando uma consulta concreta os exigir e o Console/erro de consulta indicar a combinação necessária. Evitar índices preventivos sem consultas implementadas.
+A configuração não cria índices compostos preventivos. O Firestore mantém automaticamente índices de campo único. Só acrescentar índices compostos quando uma consulta concreta os exigir; guardar no repositório a definição sugerida pelo erro/Console e testar a consulta antes de publicar.
 
-## Configuração local e validação
+## Testar sem tocar no projecto real
 
-1. Instalar a Firebase CLI num ambiente de desenvolvimento confiável: `npm install -g firebase-tools`.
-2. Copiar `.firebaserc.example` para `.firebaserc` e confirmar que o ID é exactamente `plataforma-exames-conducao`. O ficheiro local `.firebaserc` não deve ser commitado se contiver associações de ambiente pessoais.
-3. Autenticar a CLI com a conta Google proprietária do projecto: `firebase login`.
-4. Validar as regras com o Firebase Emulator Suite antes de publicar.
-5. Só depois de revisão e autorização explícita, publicar apenas as regras: `firebase deploy --only firestore:rules --project plataforma-exames-conducao`.
-6. Publicar índices separadamente apenas quando existirem consultas que os exijam: `firebase deploy --only firestore:indexes --project plataforma-exames-conducao`.
+Os testes usam o identificador isolado `demo-estrada` e o Emulator Suite. Não usam credenciais, não alteram dados reais e não publicam regras.
 
-Não executar deploy a partir desta tarefa. O dono deve confirmar o projecto/conta e autorizar a publicação. A criação do banco no Console não prova que estas regras locais já estejam activas no projecto.
+Requisitos locais: Node.js 24, Java 21 e dependências temporárias do Firebase:
 
-## Custos e limites
+```bash
+npm install --no-save --package-lock=false 'firebase@^12' '@firebase/rules-unit-testing@^5' firebase-tools
+npx firebase-tools emulators:exec --only firestore --project demo-estrada --config firebase.emulator.json "node scripts/testar-regras-firestore.js"
+```
 
-A utilização depende das quotas do plano, região, operações, armazenamento, tráfego e serviços activados. A cache/CDN dos ficheiros estáticos não é uma leitura Firestore; leituras de perfis, subscrições, tentativas e pagamentos continuam a consumir operações Firestore quando forem consultados. Não assumir capacidade ilimitada nem custo zero garantido. Monitorizar o uso no Console antes de abrir a plataforma a muitos utilizadores.
+O workflow `Validar fundação Firebase` executa estes passos automaticamente em cada alteração relevante e em Pull Requests para `main`. Os testes cobrem perfis email/telefone, utilizador não verificado, isolamento entre contas, imutabilidade do telefone, colecções privadas, tentativas, subscrições, pagamentos e negação por omissão.
 
-## Próximas tarefas (fora de BE-001)
+## Configuração local e publicação — requer autorização
 
-- Integrar Firebase Authentication no frontend e decidir a migração segura das contas actualmente geridas pelo Supabase.
-- Criar backend confiável para tentativas, cálculo de pontuação, subscrições e pagamentos.
-- Implementar testes das regras no Emulator Suite e validar acessos permitidos/negados.
-- Só então activar as operações correspondentes na aplicação.
+1. Instalar a Firebase CLI: `npm install -g firebase-tools`.
+2. Copiar `.firebaserc.example` para `.firebaserc` apenas no ambiente local e substituir o placeholder pelo Project ID confirmado no Console.
+3. Autenticar a CLI com a conta proprietária: `firebase login`.
+4. Antes de qualquer publicação, confirmar explicitamente o projecto seleccionado com `firebase projects:list` e `firebase use`.
+5. Depois de revisão e autorização do dono, publicar apenas as regras: `firebase deploy --only firestore:rules --project plataforma-exames-conducao`.
+6. Publicar índices separadamente apenas quando necessários: `firebase deploy --only firestore:indexes --project plataforma-exames-conducao`.
+
+**Esta entrega não executa deploy nem publica regras.** A publicação no Firebase real é uma acção externa com impacto nos acessos da aplicação e fica dependente de autorização explícita do dono. Não executar comandos de deploy como parte de CI.
+
+## Serviços e custos
+
+- Firebase Hosting não é necessário: o alojamento da aplicação continua no Vercel.
+- Cloud Storage fica adiado porque as imagens actuais são estáticas; não activar um bucket sem requisito concreto.
+- Cloud Functions não são necessárias para esta fundação; o backend Vercel pode usar Firebase Admin SDK no servidor. Avaliar a opção novamente se surgir uma necessidade real.
+- FCM, App Check, Analytics, Remote Config e Crashlytics ficam para fases próprias, com requisitos de privacidade, domínio, dispositivos e custos documentados.
+- Não assumir custo zero nem capacidade ilimitada. Leituras/escritas, armazenamento, tráfego e produtos activados podem gerar consumo; acompanhar quotas e preços no Console antes de abrir a plataforma a utilizadores.
+
+## Limites desta etapa
+
+Esta fundação não migra contas antigas, não activa frontend, não altera pagamentos, planos, exames ou cache e não apaga dados do fornecedor anterior. A integração funcional de Authentication, perfis e backend é acompanhada na etapa seguinte. O estado deve ser descrito sempre como preparado, testado no emulador ou activo no projecto real — nunca confundir estes estados.
