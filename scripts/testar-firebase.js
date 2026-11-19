@@ -27,7 +27,7 @@ assert(html.includes("firebase-firestore-compat.js"), "SDK Firestore não carreg
 assert(!/supabase/i.test(html), "SDK Supabase ainda referenciado no HTML.");
 const appJs = fs.readFileSync("app.js", "utf8");
 assert(!/supabase/i.test(appJs), "Código Supabase ainda existe em app.js.");
-["createUserWithEmailAndPassword", "sendEmailVerification", "signInWithEmailAndPassword",
+["createUserWithEmailAndPassword", "signInWithEmailAndPassword",
  "sendPasswordResetEmail", "signInWithPopup", "signOut", "sincronizarPerfil"].forEach((needle) => {
   assert(appJs.includes(needle), "Fluxo Firebase em falta: " + needle);
 });
@@ -45,7 +45,9 @@ assert(!appJs.includes("/^\\\\d{9}$/"), "Não pode existir regex com barras dupl
 
 assert(appJs.includes("Email ou número de telefone"), "O campo deve identificar claramente os dois métodos.");
 assert(!appJs.includes("Entrar ou criar conta com telefone"), "Não deve existir um atalho separado para login por telefone.");
-assert(appJs.includes("return credential.user.sendEmailVerification();"), "A verificação deve usar o handler padrão Firebase, sem continue URL temporário.");
+assert(!appJs.includes("sendEmailVerification"), "O registo não deve exigir nem enviar confirmação obrigatória por email.");
+assert(!appJs.includes("emailVerified"), "O acesso não deve depender da verificação do email.");
+assert(appJs.includes("Conta criada com sucesso. Já podes utilizar o ESTRADA-JB."), "O registo por email deve iniciar a utilização imediatamente.");
 assert(appJs.includes("sendPasswordResetEmail(email).then"), "A recuperação deve usar o handler padrão Firebase, sem continue URL temporário.");
 assert(!appJs.includes("sendEmailVerification({"), "Não enviar hostname Preview como continue URL de verificação.");
 assert(!appJs.includes("sendPasswordResetEmail(email, {"), "Não enviar hostname Preview como continue URL de recuperação.");
@@ -58,7 +60,8 @@ assert(phoneApi.includes("PHONE_AUTH_PEPPER"), "Segredo HMAC não configurado no
 assert(phoneApi.includes("firstName") && phoneApi.includes("lastName") && phoneApi.includes("displayName"), "O backend de telefone deve guardar e devolver o nome do cadastro.");
 assert(phoneApi.includes("body.firstName") && phoneApi.includes("body.lastName"), "O registo por telefone deve validar os campos de nome.");
 const rules = fs.readFileSync("firestore.rules", "utf8");
-assert(rules.includes("verifiedEmail()"), "As regras não exigem email verificado para escrever o perfil.");
+assert(!rules.includes("verifiedEmail()"), "As regras não devem exigir email verificado para criar o próprio perfil.");
+assert(rules.includes("allow create: if ownsUser(uid) && validProfile(request.resource.data, uid);"), "O próprio utilizador autenticado deve poder criar o perfil sem verificação de email.");
 assert(rules.includes("allow create, update, delete: if false;"), "As colecções protegidas devem bloquear escrita do cliente.");
 const vercel = JSON.parse(fs.readFileSync("vercel.json", "utf8"));
 assert(vercel.rewrites.some((r) => r.source === "/__/auth/:path*"), "Proxy Firebase Auth Vercel em falta.");
