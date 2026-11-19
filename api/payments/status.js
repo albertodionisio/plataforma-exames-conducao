@@ -1,5 +1,5 @@
 "use strict";
-const lib = require("./_lib");
+const lib = require("../../lib/epay");
 module.exports = async function paymentStatus(req, res) {
   if (req.method !== "GET") { res.setHeader("Allow", "GET"); return lib.json(res, 405, { error: "Método não permitido." }); }
   try {
