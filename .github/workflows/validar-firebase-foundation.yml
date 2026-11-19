@@ -41,6 +41,11 @@ jobs:
           node -e "JSON.parse(require('fs').readFileSync('firebase.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('firebase.emulator.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('firestore.indexes.json','utf8'))"
+      - name: Confirmar que associações e credenciais locais são ignoradas
+        run: |
+          git check-ignore -q .firebaserc
+          git check-ignore -q sample-service-account.json
+          git check-ignore -q plataforma-firebase-adminsdk-test.json
       - name: Instalar dependências temporárias do Emulator Suite
         run: npm install --no-save --package-lock=false 'firebase@^12' '@firebase/rules-unit-testing@^5' firebase-tools
       - name: Testar regras no Firestore Emulator isolado
