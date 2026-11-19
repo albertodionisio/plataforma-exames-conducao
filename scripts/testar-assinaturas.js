@@ -133,6 +133,7 @@ assert.equal(window.location.hash, "#/entrar", "um utilizador sem sessão deve s
 assert.equal(cartoes[1].classList.contains("plano-escolhido"), true, "o plano de 50 MT deve ficar seleccionado antes da autenticação");
 const codigoPlanos = fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8");
 assert.match(codigoPlanos, /weekly_basic/);
+assert.doesNotMatch(codigoPlanos, /criarRequestId|requestId:/, "a referência do pagamento deve ser gerada no servidor");
 assert.match(codigoPlanos, /weekly_full/);
 assert.match(codigoPlanos, /monthly_basic/);
 assert.match(codigoPlanos, /monthly_full/);
