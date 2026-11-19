@@ -1,0 +1,40 @@
+name: Validar autenticação por telefone moçambicano
+
+on:
+  push:
+    branches: ["fix/auth-telefone-mocambique"]
+    paths:
+      - "app.js"
+      - "api/auth/phone.js"
+      - "scripts/testar-auth-telefone.js"
+      - "scripts/testar-firebase.js"
+      - ".github/workflows/validar-auth-telefone.yml"
+  pull_request:
+    paths:
+      - "app.js"
+      - "api/auth/phone.js"
+      - "scripts/testar-auth-telefone.js"
+      - "scripts/testar-firebase.js"
+      - ".github/workflows/validar-auth-telefone.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  phone-auth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Instalar dependência Firebase Admin
+        run: npm install --no-save --package-lock=false firebase-admin
+      - name: Verificar sintaxe
+        run: |
+          node --check app.js
+          node --check api/auth/phone.js
+      - name: Testar normalização, prefixos e segurança da palavra-passe
+        run: node scripts/testar-auth-telefone.js
+      - name: Testar integração do formulário e Firebase
+        run: node scripts/testar-firebase.js
