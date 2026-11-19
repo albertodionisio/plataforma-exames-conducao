@@ -19,6 +19,9 @@ assert.match(manager, /serviceWorker\.register\("\/service-worker\.js"/, "o gest
 assert.match(manager, /https:|localhost/, "o registo deve exigir contexto seguro");
 assert.match(sw, /CACHE_VERSION = "v1-20261119"/, "a cache deve ter versão explícita");
 assert.match(sw, /request\.method !== "GET"/, "apenas pedidos GET podem ser considerados");
+assert.match(sw, /url\.search/, "URLs com parâmetros não devem entrar na cache");
+assert.match(sw, /MAX_ENTRIES = 800/, "a cache deve ter limite de entradas");
+assert.ok(app.includes("fim:estado.fim"), "o prazo absoluto da tentativa deve permanecer guardado");
 assert.match(sw, /url\.origin !== self\.location\.origin/, "recursos externos não entram na cache local");
 assert.ok(sw.includes('path.startsWith("/api")'), "API deve ser excluída");
 assert.match(sw, /firestore|identitytoolkit|securetoken|payment|callback|webhook|auth/, "serviços privados devem ser excluídos");
