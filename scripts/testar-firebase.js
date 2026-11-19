@@ -39,8 +39,8 @@ assert(appJs.includes("Email ou número de telefone"), "O campo deve identificar
 assert(!appJs.includes("Entrar ou criar conta com telefone"), "Não deve existir um atalho separado para login por telefone.");
 assert(appJs.includes("sendEmailVerification().then"), "A verificação deve usar o handler padrão Firebase, sem continue URL temporário.");
 assert(appJs.includes("sendPasswordResetEmail(email).then"), "A recuperação deve usar o handler padrão Firebase, sem continue URL temporário.");
-assert(!/sendEmailVerification\\(\\{\\s*url: location\\.origin/.test(appJs), "Não enviar hostname Preview como continue URL de verificação.");
-assert(!/sendPasswordResetEmail\\(email,\\s*\\{\\s*url: location\\.origin/.test(appJs), "Não enviar hostname Preview como continue URL de recuperação.");
+assert(!appJs.includes("sendEmailVerification({"), "Não enviar hostname Preview como continue URL de verificação.");
+assert(!appJs.includes("sendPasswordResetEmail(email, {"), "Não enviar hostname Preview como continue URL de recuperação.");
 assert(!appJs.includes("auth-method") && !appJs.includes("authMethod"), "Não deve existir alternância separada entre email e telefone.");
 assert(appJs.includes('authMode === "registo" && password !== confirmar'),
   "A confirmação da palavra-passe deve aplicar-se ao registo com qualquer identificador.");
