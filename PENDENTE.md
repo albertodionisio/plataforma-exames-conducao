@@ -6,14 +6,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Backend e Firebase (BE-)
 
-## BE-001 — Preparar fundação Firebase/Firestore sem activar migração da aplicação
-- Estado: EM CURSO — ChatGPT-FB-ETAPA1 — 2026-11-19 19:10 UTC — ficheiros: .gitignore, firebase.json, firestore.rules, firestore.indexes.json, .firebaserc.example, firebase.emulator.json, scripts/testar-regras-firestore.js, .github/workflows/validar-firebase-foundation.yml, docs/firebase/README.md, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-19 19:12 UTC — retomada autorizada pelo dono
-- Pedido: preparar no repositório os ficheiros versionados e documentação para o projecto Firebase já criado pelo dono, com Firestore Standard na região africa-south1 (Johannesburg), autenticação Google e E-mail/senha activadas no Console. Definir uma estrutura inicial mínima e segura para users, subscriptions, exam_attempts e payment_transactions, sem armazenar perguntas/imagens estáticas no Firestore.
-- Âmbito desta tarefa: apenas ficheiros novos de configuração, regras, índices e documentação, mais o registo desta tarefa. Não alterar app.js, index.html, config.js, dependências, integração Supabase existente, cache, exames, preços ou planos. Não publicar regras nem executar deploy. Não incluir apiKey, credenciais, tokens, service-account ou ficheiros .env.
-- Pronto quando: (1) firebase.json referencia regras e índices; (2) regras negam por omissão e permitem apenas acesso ao próprio perfil com campos limitados; subscrições e pagamentos são apenas legíveis pelo próprio e nunca graváveis pelo cliente; tentativas ficam protegidas contra gravação directa do resultado pelo cliente; (3) índices mínimos documentados sem criar índices desnecessários; (4) .firebaserc.example não selecciona automaticamente um projecto real; (5) documentação explica estrutura, limites, configuração local e passos de validação; (6) ficheiros são revistos e commitados numa branch separada com PR, sem merge nem deploy.
-- Cuidados: a aplicação ainda tem integração Supabase em curso (FE-012); esta tarefa não a substitui nem declara migração concluída. A activação real do Firebase Auth/Firestore no frontend fica para tarefa posterior, após revisão do dono e planeamento de migração. A configuração do Console foi feita manualmente pelo dono; não assumir que o projecto está ligado ao CLI nem que regras foram publicadas.
-
-
 ## Interface (FE-)
 
 ## FE-012 — Exigir login ao seleccionar um exame e retomar a selecção após autenticação
@@ -41,7 +33,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Pronto quando: ícones SVG inline, acessíveis e com traço/tamanho coerentes; navegação existente mantém os destinos correctos; menu móvel abre/fecha e fecha ao escolher um destino; sem controlos fictícios para pesquisa, perfil, definições ou resultados que ainda não tenham rotas/funcionalidade; testes de sintaxe/build e validação visual técnica concluídos.
 - Cuidados: o dono autorizou expressamente esta tarefa a trabalhar em paralelo nos ficheiros de interface reservados por FE-001, FE-002 e GER-012, sem alterar a lógica das tarefas concorrentes. GER-012 também reserva os ficheiros de controlo; a actualização desta reserva é a única alteração necessária a PENDENTE.md. Não alterar perguntas, respostas, pontuação, planos, preços ou pagamentos. A FE-003 foi uma auditoria de emojis e não implementou um sistema de ícones; esta tarefa é uma implementação distinta.
 
-
 - Parcial: SVGs adicionados à marca e aos links Exames/Planos; botão hambúrguer funcional em ecrãs pequenos, com estado ARIA e fecho após navegação. Alterações publicadas em d5f733559d2d2ca740283e3085834c2bbe37c8ba, 7dac4c6f7994add5e9ceb3a28baf2112c1899901 e 6a931b196c9eec5363e07c959a5e83219b881f25. GitHub Actions run 43498563745 aprovado (sintaxe JS, assinaturas, fluxo dos exames, validador oficial e build Netlify). Falta validação visual/interactiva em navegador móvel e desktop pelo dono; tentativa de clonar o repositório neste ambiente falhou por indisponibilidade de DNS.
 ## GER-012 — Uniformizar a nomenclatura oficial da plataforma
 - Estado: EM CURSO — ChatGPT-3 — 2026-11-13 — ficheiros: index.html, app.js, config.js, docs/, README.md, REGRAS.md, INSTRUCOES.md, PENDENTE.md, HISTORICO.md, data/exames/PENDENTE.md e restantes textos de interface — último sinal: 2026-11-13 14:09 UTC
@@ -67,7 +58,6 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Pronto quando: interface verificada em larguras móveis comuns; navegação, botões, alternativas, imagens, tabela de planos e cabeçalho não provocam cortes ou deslocamento horizontal; foco de teclado é visível e os controlos têm áreas de toque adequadas; alterações testadas no navegador.
 - Cuidados: não alterar `app.js`, `index.html` ou `config.js`; não mudar identidade visual, textos comerciais, preços ou planos. Se a correcção exigir ficheiros partilhados, parar e pedir ao dono para criar/autorizar tarefa separada.
 - Parcial: ajustes responsivos e de foco publicados em `styles.css`; relatório parcial em `docs/auditorias/interface-movel.md`. Falta validar visualmente no navegador nas larguras indicadas no relatório.
-
 
 ## FE-005 — Publicação web no Netlify dos Exames 31–51
 - Estado: EM CURSO — ChatGPT-6 — 2026-11-13 — ficheiros: netlify.toml, scripts/build-netlify.js, .github/workflows/validar-exames.yml, README.md — último sinal: preparação do build de publicação
