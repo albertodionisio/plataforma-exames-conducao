@@ -47,6 +47,7 @@ assert(appJs.includes("Email ou número de telefone"), "O campo deve identificar
 assert(!appJs.includes("Entrar ou criar conta com telefone"), "Não deve existir um atalho separado para login por telefone.");
 assert(!appJs.includes("sendEmailVerification"), "O registo não deve exigir nem enviar confirmação obrigatória por email.");
 assert(!appJs.includes("emailVerified"), "O acesso não deve depender da verificação do email.");
+assert(appJs.includes("/api/auth/email-check"), "O registo deve pré-validar o domínio do email.");
 assert(appJs.includes("Conta criada com sucesso. Já podes utilizar o ESTRADA-JB."), "O registo por email deve iniciar a utilização imediatamente.");
 assert(appJs.includes("sendPasswordResetEmail(email).then"), "A recuperação deve usar o handler padrão Firebase, sem continue URL temporário.");
 assert(!appJs.includes("sendEmailVerification({"), "Não enviar hostname Preview como continue URL de verificação.");
