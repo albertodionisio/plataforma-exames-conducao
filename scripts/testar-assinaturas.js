@@ -103,7 +103,7 @@ const document = {
   addEventListener() {}
 };
 const window = { location: { navigatedTo: null, hash: "", search: "", assign(url) { this.navigatedTo = url; } }, firebase: { auth() { return { currentUser: null }; } } };
-const contexto = { window, document, Array, String };
+const contexto = { window, document, Array, String, URLSearchParams };
 
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../config.js"), "utf8"), contexto);
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8"), contexto);
