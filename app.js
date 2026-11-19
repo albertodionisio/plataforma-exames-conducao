@@ -291,14 +291,23 @@
     authFeedback = "A processar...";
     telaAutenticacao();
     if (authMode === "registo") {
-      firebaseAuth.createUserWithEmailAndPassword(email, password).then(function (credential) {
+      fetch("/api/auth/email-check", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email })
+      }).then(function (response) {
+        return response.json().then(function (data) {
+          if (!response.ok || !data.valid) throw new Error(data.error || "Não foi possível validar o domínio do email.");
+        });
+      }).then(function () {
+        return firebaseAuth.createUserWithEmailAndPassword(email, password);
+      }).then(function (credential) {
         var displayName = [nomeProprio, apelido].filter(Boolean).join(" ");
         return credential.user.updateProfile({ displayName: displayName }).then(function () {
           authFeedback = "Conta criada com sucesso. Já podes utilizar o ESTRADA-JB.";
           concluirAutenticacao(credential.user);
         });
       }).catch(function (error) {
-        authFeedback = mensagemAuth(error, "Não foi possível criar a conta.");
+        authFeedback = error && !error.code && error.message ? error.message : mensagemAuth(error, "Não foi possível criar a conta.");
         telaAutenticacao();
       });
       return;
