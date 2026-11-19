@@ -20,7 +20,7 @@ assert.match(manager, /https:|localhost/, "o registo deve exigir contexto seguro
 assert.match(sw, /CACHE_VERSION = "v1-20261119"/, "a cache deve ter versão explícita");
 assert.match(sw, /request\.method !== "GET"/, "apenas pedidos GET podem ser considerados");
 assert.match(sw, /url\.origin !== self\.location\.origin/, "recursos externos não entram na cache local");
-assert.match(sw, /path\\.startsWith\\("\\/api"\\)/, "API deve ser excluída");
+assert.ok(sw.includes('path.startsWith("/api")'), "API deve ser excluída");
 assert.match(sw, /firestore|identitytoolkit|securetoken|payment|callback|webhook|auth/, "serviços privados devem ser excluídos");
 assert.match(sw, /request\.headers\.has\("authorization"\)/, "pedidos autenticados devem ser excluídos");
 assert.match(sw, /startsWith\(CACHE_PREFIX\).*name !== CACHE_NAME/s, "versões antigas devem ser removidas");
