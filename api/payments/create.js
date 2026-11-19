@@ -10,7 +10,7 @@ module.exports = async function createPayment(req, res) {
     if (!plan) return lib.json(res, 400, { error: "Escolhe um plano pago válido." });
     const requestId = typeof body.requestId === "string" && /^[a-f0-9-]{36}$/i.test(body.requestId)
       ? body.requestId.toLowerCase() : crypto.randomUUID();
-    const app = lib.getAdmin(), db = app.firestore();
+    const db = lib.getDb();
     const paymentRef = db.collection("payment_transactions").doc(requestId);
     const externalReference = "estrada_" + requestId;
     const created = await db.runTransaction(async tx => {
@@ -24,7 +24,7 @@ module.exports = async function createPayment(req, res) {
         uid: user.uid, planCode: body.planCode, planName: plan.name, exams: plan.exams,
         amount: plan.amount.toFixed(2), currency: "MZN", durationDays: plan.days, graceDays: plan.graceDays,
         status: "creating", provider: "epay", externalReference,
-        createdAt: app.firestore.FieldValue.serverTimestamp(), updatedAt: app.firestore.FieldValue.serverTimestamp()
+        createdAt: lib.serverTimestamp(), updatedAt: lib.serverTimestamp()
       });
       return { existing: false };
     });
@@ -46,7 +46,7 @@ module.exports = async function createPayment(req, res) {
     if (!payment || !payment.id || !payment.payment_url) throw new Error("Resposta incompleta da ePay.");
     await paymentRef.update({
       providerPaymentId: String(payment.id), paymentUrl: String(payment.payment_url),
-      status: String(payment.status || "pending"), updatedAt: app.firestore.FieldValue.serverTimestamp()
+      status: String(payment.status || "pending"), updatedAt: lib.serverTimestamp()
     });
     return lib.json(res, 201, { transactionId: requestId, payment_url: payment.payment_url, status: payment.status || "pending" });
   } catch (error) {
