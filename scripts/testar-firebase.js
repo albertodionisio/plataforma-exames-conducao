@@ -35,9 +35,9 @@ assert(appJs.includes("/api/auth/phone"), "Endpoint de autenticação por telefo
 assert(appJs.includes("signInWithCustomToken"), "Login com custom token não integrado.");
 assert(appJs.includes("auth-confirm-password"), "Confirmação da palavra-passe em falta no registo por telefone.");
 assert(appJs.includes("auth-identifier"), "Campo único de email ou telefone em falta.");
-assert(appJs.includes(String.raw`/^\\+258(?:84|85|86|87|88)\\d{7}$/`), "Cliente deve aceitar apenas prefixos móveis moçambicanos de nove algarismos.");
-assert(appJs.includes(String.raw`/^\\d{9}$/`), "Cliente deve reconhecer números nacionais com exactamente nove algarismos.");
-assert(!appJs.includes(String.raw`/^\\d\\\\d{9}$/`), "Não pode existir regex com barras duplicadas no reconhecimento do número.");
+assert(appJs.includes("/^\\+258(?:84|85|86|87|88)\\d{7}$/"), "Cliente deve aceitar apenas prefixos móveis moçambicanos de nove algarismos.");
+assert(appJs.includes("/^\\d{9}$/"), "Cliente deve reconhecer números nacionais com exactamente nove algarismos.");
+assert(!appJs.includes("/^\\\\d{9}$/"), "Não pode existir regex com barras duplicadas no reconhecimento do número.");
 
 assert(appJs.includes("Email ou número de telefone"), "O campo deve identificar claramente os dois métodos.");
 assert(!appJs.includes("Entrar ou criar conta com telefone"), "Não deve existir um atalho separado para login por telefone.");
