@@ -11,6 +11,12 @@ Não reabrir estas decisões sem o dono pedir.
 - As perguntas são reescritas; o site não usa o conteúdo do APK original (esse fica em `original/`, só para consulta).
 - **Documento técnico único:** `docs/ESTRADA_Especificacao_Tecnica.md` (especificação técnica com o modelo de assinaturas e monetização dentro). Não existe um segundo documento; qualquer alteração faz-se nele.
 
+## Contas, autenticação e assinaturas
+- O registo por email não exige confirmação obrigatória: depois de indicar nome, email e palavra-passe, a conta é criada e a sessão inicia imediatamente. O sistema não deve bloquear o acesso por `email_verified`. A recuperação da palavra-passe continua a depender do acesso à caixa de correio indicada.
+- O registo e login por número de telefone não exigem SMS/OTP. O utilizador pode usar um número de familiar ou de outra pessoa; o sistema não deve afirmar que o número pertence ao titular da conta. Aplicar validação de formato, limites anti-abuso e protecção das credenciais.
+- Para pagamentos, a conta beneficiária é sempre a conta ESTRADA-JB autenticada que iniciou o checkout. O utilizador pode pagar com M-Pesa ou outro meio pertencente a familiar/terceiro; não exigir correspondência entre o número/titular do meio de pagamento e o contacto da conta.
+- O backend deve fixar o UID da conta e o plano na transacção antes de encaminhar para a ePay. Só a confirmação válida do pagamento activa a assinatura em `subscriptions/{uid}` dessa mesma conta. O número do pagador nunca determina a conta beneficiária. Referências únicas, validação de valor/moeda/estado/assinatura do callback e idempotência são obrigatórias.
+
 ## Avaliação e revisão dos exames
 - O candidato deve concluir o exame completo antes de ver a classificação. Durante a realização, não revelar se cada alternativa está certa ou errada e não apresentar explicações.
 - Submeter quando o candidato terminar as 25 perguntas ou quando o cronómetro chegar a zero. Guardar as respostas seleccionadas e contabilizar também as perguntas em branco.
