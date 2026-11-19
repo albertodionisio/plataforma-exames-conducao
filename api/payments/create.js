@@ -1,6 +1,6 @@
 "use strict";
 const crypto = require("node:crypto");
-const lib = require("./_lib");
+const lib = require("../../lib/epay");
 module.exports = async function createPayment(req, res) {
   let paymentRef = null;
   let createdNew = false;
