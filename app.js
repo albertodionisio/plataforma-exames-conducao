@@ -8,6 +8,7 @@
   var estado = null, timer = null;
   var firebaseApp = null, firebaseAuth = null, firestoreDb = null;
   var authUser = null, authReady = false, authAvailable = false;
+  var subscriptionData = null, subscriptionReady = false;
   var authMode = "login", authMethod = "email", authFeedback = "";
 
   function iniciarAuth() {
@@ -44,7 +45,18 @@
               sincronizarPerfil(authUser).catch(function (error) {
                 console.warn("Perfil Firebase ainda não sincronizado:", error && error.code);
               });
-              retomarExamePendente();
+              carregarSubscricao(authUser).then(function () {
+                var retomou = retomarExamePendente();
+                if (!retomou && location.hash === "#/entrar") {
+                  location.hash = "#/exames";
+                  if (location.hash === "#/exames") rota();
+                } else if (!retomou) {
+                  rota();
+                }
+              });
+            } else {
+              subscriptionData = null;
+              subscriptionReady = true;
             }
             if (!initialised) { initialised = true; resolve(); }
           }, function () {
@@ -89,6 +101,25 @@
         if (!snap.exists) perfil.createdAt = window.firebase.firestore.FieldValue.serverTimestamp();
         return ref.set(perfil, { merge: true });
       });
+    });
+  }
+
+  function carregarSubscricao(user) {
+    subscriptionReady = false;
+    if (!firestoreDb || !user || !user.uid) {
+      subscriptionData = null;
+      subscriptionReady = true;
+      return Promise.resolve(null);
+    }
+    return firestoreDb.collection("subscriptions").doc(user.uid).get().then(function (snap) {
+      if (authUser && authUser.uid === user.uid) subscriptionData = snap.exists ? snap.data() : null;
+      subscriptionReady = true;
+      return subscriptionData;
+    }).catch(function (error) {
+      subscriptionData = null;
+      subscriptionReady = true;
+      console.warn("Não foi possível carregar a assinatura:", error && error.code);
+      return null;
     });
   }
 
@@ -166,7 +197,6 @@
     authUser = user || authUser;
     authFeedback = "";
     renderConta();
-    if (!retomarExamePendente() && location.hash === "#/entrar") { location.hash = "#/exames"; if (location.hash === "#/exames") rota(); }
   }
 
   function normalizarTelefoneCliente(valor) {
@@ -376,7 +406,17 @@
     return A.modoTesteAcessoPago === true && Array.isArray(intervalo) &&
       intervalo.length === 2 && n >= intervalo[0] && n <= intervalo[1];
   }
-  function temAcesso(n) { return n <= Number(A.gratuitos || 0) || testeAberto(n); }
+  function temAcesso(n) {
+    if (n <= Number(A.gratuitos || 0) || testeAberto(n)) return true;
+    if (!subscriptionReady || !authUser || !subscriptionData || subscriptionData.status !== "active") return false;
+    var inicio = subscriptionData.startsAt;
+    var fim = subscriptionData.graceUntil || subscriptionData.endsAt;
+    var inicioMs = inicio && typeof inicio.toMillis === "function" ? inicio.toMillis() : Date.parse(inicio);
+    var fimMs = fim && typeof fim.toMillis === "function" ? fim.toMillis() : Date.parse(fim);
+    return Number.isFinite(fimMs) && fimMs > Date.now() &&
+      (!Number.isFinite(inicioMs) || inicioMs <= Date.now()) &&
+      Number(subscriptionData.exams || 0) >= Number(n);
+  }
   function pararRelogio() {
     if (timer !== null) { clearInterval(timer); timer = null; }
   }
@@ -700,6 +740,12 @@
           " pergunta(s) sem resposta. Valem zero. Submeter mesmo assim?")) return;
       terminar("manual");
     }
+  });
+  window.addEventListener("estrada:subscription-updated", function () {
+    if (!authUser) return;
+    carregarSubscricao(authUser).then(function () {
+      if (location.hash !== "#/planos") rota();
+    });
   });
   window.addEventListener("hashchange", function () {
     fecharMenu();
