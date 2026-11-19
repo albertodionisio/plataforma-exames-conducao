@@ -38,6 +38,7 @@
               if (!initialised) { initialised = true; resolve(); }
               return;
             }
+            if (!user || (authUser && authUser.uid !== user.uid)) authDisplayName = "";
             authUser = user || null;
             authReady = true;
             renderConta();
@@ -205,6 +206,7 @@
   }
   function concluirAutenticacao(user) {
     authUser = user || authUser;
+    authDisplayName = authUser && authUser.displayName ? authUser.displayName : "";
     authFeedback = "";
     renderConta();
   }
@@ -371,6 +373,7 @@
     if (!firebaseAuth) return;
     firebaseAuth.signOut().then(function () {
       authUser = null;
+      authDisplayName = "";
       estado = null;
       pararRelogio();
       renderConta();
