@@ -18,7 +18,7 @@ const SHELL = [
   "/public/assinaturas/planos.js",
   "/public/assinaturas/planos.css"
 ];
-const MAX_ENTRIES = 300;
+const MAX_ENTRIES = 800;
 
 function isPrivateOrDynamic(url) {
   const path = url.pathname.toLowerCase();
@@ -34,7 +34,7 @@ function isPrivateOrDynamic(url) {
 }
 
 function isCacheableStatic(request, url) {
-  if (request.method !== "GET" || url.origin !== self.location.origin) return false;
+  if (request.method !== "GET" || url.origin !== self.location.origin || url.search) return false;
   if (isPrivateOrDynamic(url)) return false;
   if (request.headers.has("authorization")) return false;
   if (request.cache === "no-store") return false;
