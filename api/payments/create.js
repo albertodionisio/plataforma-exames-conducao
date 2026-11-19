@@ -10,8 +10,7 @@ module.exports = async function createPayment(req, res) {
     const body = req.body && typeof req.body === "object" ? req.body : {};
     const plan = lib.PLANS[body.planCode];
     if (!plan) return lib.json(res, 400, { error: "Escolhe um plano pago válido." });
-    const requestId = typeof body.requestId === "string" && /^[a-f0-9-]{36}$/i.test(body.requestId)
-      ? body.requestId.toLowerCase() : crypto.randomUUID();
+    const requestId = crypto.randomUUID();
     const db = lib.getDb();
     paymentRef = db.collection("payment_transactions").doc(requestId);
     const externalReference = "estrada_" + requestId;
