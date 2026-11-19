@@ -4,6 +4,14 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
+## GER-024 — Corrigir autenticação por número moçambicano e palavra-passe
+- Estado: EM CURSO — ChatGPT-ESTRADA-AUTH1 — 2026-11-19 16:30 UTC+02 — ficheiros: app.js, api/auth/phone.js, scripts/testar-auth-telefone.js, scripts/testar-firebase.js, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-19 16:30 UTC+02
+- Autorização do dono: pedido expresso em 2026-11-19 para agilizar e corrigir o login/registo por número e palavra-passe. Autoriza sobreposição estritamente limitada a este fluxo nos ficheiros partilhados listados, apesar de app.js estar incluído em BE-002; preservar integralmente checkout, ePay, perfil, Google/email, navegação e restantes alterações concorrentes.
+- Pedido: corrigir a autenticação por telefone que não aceita números, validar números moçambicanos de exactamente 9 algarismos e aceitar apenas prefixos Vodacom 84/85 e Movitel 86/87/88. Manter campo único email/número e palavra-passe na mesma página.
+- Pronto quando: normalização do cliente e servidor concordam; número de 9 algarismos ou +258 seguido dos mesmos 9 algarismos é aceite; prefixos fora da lista, comprimento diferente e números estrangeiros são rejeitados; login e registo usam a mesma validação; testes automatizados cobrem prefixos e comprimentos; CI passa.
+- Cuidados: não alterar credenciais nem criar contas reais; não alterar método email/Google, pagamentos, planos, resultados ou dados; não guardar palavras-passe em logs; verificar variáveis Vercel sem revelar valores; se faltar segredo Firebase Admin/PHONE_AUTH_PEPPER, documentar a dependência sem pedir que o dono exponha credenciais.
+
+
 
 ## BE-001 — Preparar fundação Firebase/Firestore sem activar migração da aplicação
 - Estado: EM CURSO — ChatGPT-ESTRADA-FB1 — 2026-11-16 — ficheiros: firebase.json, firestore.rules, firestore.indexes.json, .firebaserc.example, docs/firebase/README.md, PENDENTE.md — último sinal: 2026-11-16
