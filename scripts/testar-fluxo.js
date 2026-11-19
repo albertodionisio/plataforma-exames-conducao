@@ -82,6 +82,7 @@ const vm = require("node:vm");
   const confirmacoes=[];
   class FakeDate extends Date { static now(){ return agora; } }
   const authState={user:null,listener:null,calls:[]};
+  let emailCheckCalls=0;
   function makeUser(email, verified, providerId) {
     return {uid:"uid-teste",email,emailVerified:verified,displayName:"Candidato",
       photoURL:null,providerData:[{providerId:providerId||"password"}],
@@ -139,7 +140,15 @@ const vm = require("node:vm");
   const context={
     window,document,location,localStorage,sessionStorage,Date:FakeDate,Math,JSON,Object,Array,String,Number,
     setInterval:fakeSetInterval,clearInterval:fakeClearInterval,confirm:msg=>{confirmacoes.push(msg);return confirmar;},
-    queueMicrotask,console
+    queueMicrotask,console,
+    fetch(url, options){
+      if(url === "/api/auth/email-check"){
+        emailCheckCalls++;
+        const payload=JSON.parse(options.body);
+        return Promise.resolve({ok:true,json:()=>Promise.resolve({valid:payload.email==="novo@estrada.test"})});
+      }
+      return Promise.reject(new Error("Endpoint inesperado no teste: "+url));
+    }
   };
   vm.createContext(context);
   const root=path.join(__dirname,"..");
@@ -385,6 +394,7 @@ const vm = require("node:vm");
   await new Promise(resolve=>setImmediate(resolve));
   await new Promise(resolve=>setImmediate(resolve));
   assert.ok(!app.innerHTML.includes("confirmares o teu email"),"O registo não deve exigir confirmação por email");
+  assert.ok(emailCheckCalls>0,"O registo deve validar o domínio do email antes de criar a conta");
   assert.ok(authState.calls.some(c=>c.method==="registo"),"O Firebase deve criar a conta por email");
   assert.ok(authState.user && authState.user.emailVerified===false,"A conta não verificada deve continuar autenticada");
   assert.equal(authState.user.email,"novo@estrada.test","A sessão deve pertencer à conta criada sem confirmação");
