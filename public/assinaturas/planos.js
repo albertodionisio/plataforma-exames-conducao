@@ -17,6 +17,87 @@
     ];
   }
 
+  var CODIGOS_PLANOS = ["free", "weekly_basic", "weekly_full", "monthly_basic", "monthly_full"];
+
+  function criarRequestId() {
+    if (window.crypto && typeof window.crypto.randomUUID === "function") return window.crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0;
+      return (c === "x" ? r : (r & 3 | 8)).toString(16);
+    });
+  }
+
+  function iniciarCheckout(codigo, botao, aviso) {
+    var utilizador = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
+    if (!utilizador) {
+      aviso.textContent = "Inicia sessão para poderes aderir a um plano pago. Depois volta a esta página.";
+      window.location.hash = "#/entrar";
+      return;
+    }
+    botao.disabled = true;
+    botao.textContent = "A preparar pagamento...";
+    utilizador.getIdToken().then(function (token) {
+      return fetch("/api/payments/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Authorization": "Bearer " + token },
+        body: JSON.stringify({ planCode: codigo, requestId: criarRequestId() })
+      });
+    }).then(function (resposta) {
+      return resposta.json().then(function (dados) {
+        if (!resposta.ok) throw new Error(dados.error || "Não foi possível iniciar o pagamento.");
+        return dados;
+      });
+    }).then(function (dados) {
+      var destino = new URL(dados.payment_url);
+      if (destino.protocol !== "https:" || destino.hostname !== "checkout.epay.co.mz") {
+        throw new Error("A ePay devolveu um endereço de pagamento inválido.");
+      }
+      window.location.assign(destino.toString());
+    }).catch(function (erro) {
+      aviso.textContent = erro && erro.message ? erro.message : "Não foi possível iniciar o pagamento. Tenta novamente.";
+      botao.disabled = false;
+      botao.textContent = "Tentar novamente";
+    });
+  }
+
+  function verificarRetornoPagamento(aviso) {
+    var referencia = new URLSearchParams(window.location.search).get("payment");
+    var utilizador = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
+    if (!referencia) return;
+    if (!utilizador) {
+      aviso.textContent = "Entra na tua conta para consultar o estado do pagamento.";
+      return;
+    }
+    var tentativas = 0;
+    function consultar() {
+      tentativas++;
+      utilizador.getIdToken().then(function (token) {
+        return fetch("/api/payments/status?transactionId=" + encodeURIComponent(referencia), {
+          headers: { "Authorization": "Bearer " + token }, cache: "no-store"
+        });
+      }).then(function (resposta) {
+        return resposta.json().then(function (dados) {
+          if (!resposta.ok) throw new Error(dados.error || "Não foi possível consultar o pagamento.");
+          return dados;
+        });
+      }).then(function (dados) {
+        if (dados.status === "paid") {
+          aviso.textContent = "Pagamento confirmado. O plano " + dados.planName + " já foi activado na tua conta.";
+        } else if (dados.status === "failed" || dados.status === "cancelled") {
+          aviso.textContent = "O pagamento não foi concluído. Podes tentar novamente quando quiseres.";
+        } else if (tentativas < 24) {
+          aviso.textContent = "Estamos a confirmar o pagamento com a ePay. Aguarda, por favor...";
+          window.setTimeout(consultar, 5000);
+        } else {
+          aviso.textContent = "O pagamento ainda está pendente. Podes actualizar esta página daqui a pouco para consultar novamente.";
+        }
+      }).catch(function (erro) {
+        aviso.textContent = erro && erro.message ? erro.message : "Não foi possível consultar o pagamento.";
+      });
+    }
+    consultar();
+  }
+
   function renderizar() {
     var raiz = document.getElementById("assinaturas-app");
     if (!raiz) return;
@@ -100,13 +181,12 @@
           window.location.assign("#/exames");
           return;
         }
-        if (plano.nome === "Semanal Básico" && plano.preco === "50 MT") {
-          window.location.assign("https://checkout.epay.co.mz/c/loja-jr5qps-p507");
+        if (plano.preco === "0 MT") {
+          aviso.textContent = "O plano Free é gratuito. Podes consultar os exames disponíveis.";
+          window.location.hash = "#/exames";
           return;
         }
-        aviso.textContent = plano.preco === "0 MT"
-          ? "O plano Free é gratuito. A adesão aos planos pagos ainda não está disponível nesta versão."
-          : "O plano " + plano.nome + " foi seleccionado. A adesão e os pagamentos ainda não estão activos nesta versão.";
+        iniciarCheckout(CODIGOS_PLANOS[indice], botao, aviso);
       });
 
       cartao.appendChild(radio);
@@ -121,6 +201,7 @@
     formulario.appendChild(aviso);
     raiz.appendChild(formulario);
     raiz.appendChild(elemento("p", "assinaturas-nota", "Os preços e as condições apresentados correspondem aos planos actualmente definidos no ESTRADA."));
+    verificarRetornoPagamento(aviso);
   }
 
   window.renderizarPlanosEstrada = renderizar;
