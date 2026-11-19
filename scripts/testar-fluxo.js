@@ -78,7 +78,7 @@ const vm = require("node:vm");
   const storage={}, session={};
   const localStorage={getItem:k=>storage[k]||null,setItem:(k,v)=>{storage[k]=v;},removeItem:k=>{delete storage[k];}};
   const sessionStorage={getItem:k=>session[k]||null,setItem:(k,v)=>{session[k]=v;},removeItem:k=>{delete session[k];}};
-  let intervalCallback=null, agora=1700000000000, confirmar=true;
+  let intervalCallback=null, agora=1700000000000;
   const confirmacoes=[];
   class FakeDate extends Date { static now(){ return agora; } }
   const authState={user:null,listener:null,calls:[]};
@@ -86,7 +86,7 @@ const vm = require("node:vm");
     return {uid:"uid-teste",email,emailVerified:verified,displayName:"Candidato",
       photoURL:null,providerData:[{providerId:providerId||"password"}],
       updateProfile(data){this.displayName=data.displayName;return Promise.resolve();},
-      sendEmailVerification(){authState.calls.push({method:"verification"});return Promise.resolve();}};
+      };
   }
   authState.user=makeUser("candidato@estrada.test",true,"password");
   const fakeAuth={
