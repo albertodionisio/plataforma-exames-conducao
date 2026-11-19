@@ -113,6 +113,8 @@ async function applyProviderPayment(db, payment) {
   const saved = snapshot.data();
   if (amountToCents(payment.amount) !== amountToCents(saved.amount) || payment.currency !== "MZN")
     return { matched: false, reason: "valor ou moeda não correspondem" };
+  if (saved.providerPaymentId && payment.id && String(saved.providerPaymentId) !== String(payment.id))
+    return { matched: false, reason: "identificador do pagamento não corresponde" };
   if (!["paid", "failed", "pending", "cancelled"].includes(payment.status))
     return { matched: false, reason: "estado de pagamento desconhecido" };
   const admin = require("firebase-admin");
