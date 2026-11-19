@@ -2,6 +2,7 @@
 "use strict";
 const assert = require("node:assert/strict");
 const crypto = require("node:crypto");
+const fs = require("node:fs");
 const lib = require("../lib/epay");
 const raw = Buffer.from(JSON.stringify({ external_reference: "estrada_123e4567-e89b-12d3-a456-426614174000", status: "paid", amount: "50.00", currency: "MZN" }));
 const apiSecret = "sk_test_example_secret_for_unit_tests";
@@ -25,6 +26,11 @@ assert.equal(lib.accountUidFromTransaction({ uid: "conta-joao", accountUid: "con
 assert.equal(lib.accountUidFromTransaction({ uid: "conta-joao" }), "conta-joao", "transacções anteriores continuam compatíveis");
 assert.equal(lib.accountUidFromTransaction({ uid: "conta-joao", accountUid: "conta-irma" }), null, "a conta de destino não pode ser alterada para outra conta");
 assert.equal(lib.accountUidFromTransaction({ accountUid: "conta-joao" }), null, "a conta destinatária tem de ter UID autenticado");
+const paymentSource = fs.readFileSync(require.resolve("../lib/epay"), "utf8");
+const createSource = fs.readFileSync(require.resolve("../api/payments/create"), "utf8");
+assert.match(paymentSource, /subscriptions\\"\\)\\.doc\\(accountUid\\)/, "a assinatura deve ser gravada no UID da conta iniciadora");
+assert.match(createSource, /uid: user\\.uid, accountUid: user\\.uid/, "o UID da conta deve ser fixado antes do checkout");
+assert.doesNotMatch(paymentSource, /payment\\.phone|payer\\.phone|customer\\.phone/, "o telefone do pagador não pode determinar a conta beneficiária");
 assert.deepEqual(Object.keys(lib.PLANS).sort(), ["monthly_basic","monthly_full","weekly_basic","weekly_full"].sort());
 assert.equal(lib.PLANS.weekly_basic.amount, 50);
 assert.equal(lib.PLANS.weekly_full.amount, 80);
