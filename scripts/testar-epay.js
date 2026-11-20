@@ -71,3 +71,93 @@ assert.equal(lib.PLANS.weekly_full.description, "ESTRADA-JB — Subscrição Sem
 assert.equal(lib.PLANS.monthly_basic.description, "ESTRADA-JB — Subscrição Mensal Básica");
 assert.equal(lib.PLANS.monthly_full.description, "ESTRADA-JB — Subscrição Mensal Completa");
 console.log("APROVADO: ePay — HMAC, janela temporal, valores MZN, referências únicas e catálogo de planos.");
+
+
+// Regressão: a criação do checkout pode gravar status=paid antes de activar a subscrição.
+// Reprocessar esse pagamento tem de completar a activação, sem duplicar a validade.
+async function testarActivacaoDePagamentoJaPago() {
+  const id = "123e4567-e89b-12d3-a456-426614174000";
+  const externalReference = "estrada_" + id;
+  const docs = new Map();
+  const paymentPath = "payment_transactions/" + id;
+  docs.set(paymentPath, {
+    uid: "conta-teste", accountUid: "conta-teste", planCode: "monthly_full",
+    planName: "Mensal Completo", exams: 50, amount: "150.00", currency: "MZN",
+    durationDays: 30, graceDays: 5, status: "paid", providerPaymentId: "provider-123"
+  });
+  function snapshot(path) {
+    const value = docs.get(path);
+    return { exists: value !== undefined, data: () => value && { ...value } };
+  }
+  function reference(collection, documentId) {
+    const path = collection + "/" + documentId;
+    return {
+      path,
+      get: async () => snapshot(path)
+    };
+  }
+  const db = {
+    collection: name => ({ doc: id => reference(name, id) }),
+    runTransaction: async callback => {
+      const writes = [];
+      const tx = {
+        get: async ref => snapshot(ref.path),
+        set: (ref, value) => writes.push({ type: "set", path: ref.path, value }),
+        update: (ref, value) => writes.push({ type: "update", path: ref.path, value })
+      };
+      const result = await callback(tx);
+      for (const write of writes) {
+        const previous = docs.get(write.path) || {};
+        docs.set(write.path, write.type === "set" ? { ...write.value } : { ...previous, ...write.value });
+      }
+      return result;
+    }
+  };
+  class FakeTimestamp {
+    constructor(ms) { this.ms = ms; }
+    toMillis() { return this.ms; }
+    static fromMillis(ms) { return new FakeTimestamp(ms); }
+    static now() { return new FakeTimestamp(Date.now()); }
+  }
+  const adminPath = require.resolve("firebase-admin");
+  const previousAdmin = require.cache[adminPath];
+  require.cache[adminPath] = {
+    id: adminPath, filename: adminPath, loaded: true,
+    exports: { firestore: {
+      Timestamp: FakeTimestamp,
+      FieldValue: { serverTimestamp: () => ({ serverTimestamp: true }) }
+    } }
+  };
+  try {
+    const payment = {
+      id: "provider-123", external_reference: externalReference,
+      amount: "150.00", currency: "MZN", status: "paid"
+    };
+    const first = await lib.applyProviderPayment(db, payment);
+    assert.equal(first.matched, true, "o pagamento pago deve corresponder à transacção");
+    assert.equal(first.subscriptionActivated, true, "o estado paid anterior não pode impedir a activação");
+    assert.equal(first.duplicate, false, "a primeira activação em falta não é duplicada");
+    const subscription = docs.get("subscriptions/conta-teste");
+    assert.ok(subscription, "a subscrição tem de ser criada no UID que iniciou o checkout");
+    assert.equal(subscription.planCode, "monthly_full");
+    assert.equal(subscription.exams, 50);
+    assert.equal(subscription.status, "active");
+    const endBeforeDuplicate = subscription.endsAt.toMillis();
+    assert.equal(docs.get(paymentPath).subscriptionActivated, true);
+    const second = await lib.applyProviderPayment(db, payment);
+    assert.equal(second.matched, true);
+    assert.equal(second.duplicate, true, "repetir o callback após activação deve ser idempotente");
+    assert.equal(docs.get("subscriptions/conta-teste").endsAt.toMillis(), endBeforeDuplicate,
+      "o callback repetido não pode prolongar a validade duas vezes");
+  } finally {
+    if (previousAdmin) require.cache[adminPath] = previousAdmin;
+    else delete require.cache[adminPath];
+  }
+}
+
+testarActivacaoDePagamentoJaPago().then(() => {
+  console.log("APROVADO: pagamento já marcado paid activa a subscrição uma vez; callbacks repetidos são idempotentes.");
+}).catch(erro => {
+  console.error(erro);
+  process.exitCode = 1;
+});
