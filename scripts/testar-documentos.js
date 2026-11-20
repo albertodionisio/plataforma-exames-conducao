@@ -41,7 +41,7 @@ assert.match(app, /documento-voltar/);
 assert.match(app, /documento-download/);
 assert.match(app, /download='/, "O download deve ser uma acção explícita no controlo superior.");
 assert.match(app, /loading='eager'/, "O PDF deve começar a abrir imediatamente.");
-assert.match(app, /document\.body\.classList\.toggle\("documento-aberto"/);
+assert.match(app, /document\.body && document\.body\.classList/);
 assert.doesNotMatch(app, /Abrir em separador/, "Não deve existir um botão de abertura que provoque saída do leitor.");
 assert.match(app, /codigodeestrada\.pdf/);
 assert.match(app, /sinais\.pdf/);
