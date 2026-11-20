@@ -16,6 +16,10 @@ const previewHost = "plataforma-exames-conducao-git-feat-firebase-full-preview.v
 const previewContext = { window: { location: { hostname: previewHost } } };
 vm.runInNewContext(configSource, previewContext);
 assert.strictEqual(previewContext.window.APP.firebase.authDomain, "plataforma-exames-conducao.firebaseapp.com", "Previews Vercel devem usar o domínio Firebase padrão para evitar callbacks OAuth únicos por deployment.");
+assert.strictEqual(previewContext.window.APP.googleOAuthCanonicalHost,
+  "plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app",
+  "Google OAuth nos Previews deve usar o alias estável da branch.");
+
 const localContext = { window: { location: { hostname: "localhost" } } };
 vm.runInNewContext(configSource, localContext);
 assert.strictEqual(localContext.window.APP.firebase.authDomain, "plataforma-exames-conducao.firebaseapp.com", "Ambiente local deve usar o domínio Firebase padrão.");
@@ -26,6 +30,15 @@ assert(html.includes("firebase-auth-compat.js"), "SDK Firebase Auth não carrega
 assert(html.includes("firebase-firestore-compat.js"), "SDK Firestore não carregado.");
 assert(!/supabase/i.test(html), "SDK Supabase ainda referenciado no HTML.");
 const appJs = fs.readFileSync("app.js", "utf8");
+assert(appJs.includes("redireccionarPreviewGoogleParaAliasEstavel"),
+  "Google Login deve encaminhar Preview efémero para o alias estável.");
+assert(appJs.includes("window.location.replace(destino)"),
+  "O encaminhamento OAuth deve navegar para o alias sem abrir uma nova janela.");
+assert(appJs.includes("window.location.search + window.location.hash"),
+  "O encaminhamento OAuth deve preservar query e rota/hash.");
+assert(appJs.includes("window.location.hostname"),
+  "A mensagem de domínio não autorizado deve identificar o hostname em uso.");
+
 assert(!/supabase/i.test(appJs), "Código Supabase ainda existe em app.js.");
 ["createUserWithEmailAndPassword", "signInWithEmailAndPassword",
  "sendPasswordResetEmail", "signInWithPopup", "signOut", "sincronizarPerfil"].forEach((needle) => {

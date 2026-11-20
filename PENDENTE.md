@@ -4,6 +4,17 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 ## Geral (GER-)
 
+## GER-025 — Estabilizar o Google Login nos Preview deployments Vercel
+- Estado: EM CURSO — ChatGPT-ESTRADA-GOOGLE1 — 2026-11-20 — ficheiros: config.js, app.js, scripts/testar-firebase.js, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-20
+- Pedido: corrigir o fluxo de Google Login nos Preview deployments, evitando dependência de URLs temporários por commit.
+- Onde mexer: configuração do domínio estável da branch, redireccionamento transparente de URLs de Preview efémeras e mensagens de erro OAuth.
+- Pronto quando: URLs de deployment Preview desta branch são encaminhadas para o alias estável da branch antes do OAuth, preservando rota/query/hash; produção e localhost não são redireccionados; o authDomain Firebase mantém a configuração correcta por ambiente; testes cobrem a selecção do domínio e o fluxo; CI passa.
+- Cuidados: autorização expressa do dono nesta conversa para intervenção limitada em app.js e config.js apesar da reserva BE-002; não alterar outras partes da migração, contas, regras Firebase, providers, preços, exames, produção ou segredos. A autorização de domínio no Firebase continua a ser uma condição de segurança externa; não tentar contorná-la nem autorizar o domínio amplo vercel.app.
+- Parcial (2026-11-20): Vercel confirmou o alias estável da branch de integração `plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app`. `config.js` define esse host para OAuth nos Preview; `app.js` encaminha URLs efémeras de deployment para o alias, preservando caminho, query e hash, e identifica o hostname em `auth/unauthorized-domain`. `scripts/testar-firebase.js` recebeu asserts. CI run 44742371762 detectou que o mock de testes não fornece `window.location`; a detecção foi protegida no commit `85f735bc3f5498a6cb4aed0f7a2c125e7da4fea9`. Ainda falta uma execução CI posterior a essa correcção e validar o Google Login real no alias estável; se o Firebase não o tiver autorizado, será necessária a inclusão pontual desse hostname em Authorized domains. PR draft #8, sem merge nem deploy de produção.
+
+
+
+
 
 ## BE-001 — Preparar fundação Firebase/Firestore sem activar migração da aplicação
 - Estado: CONCLUÍDA / CONSOLIDADA NA BE-002 — ChatGPT-FB-ETAPA1 — 2026-11-19 — ficheiros: firebase.json, firestore.rules, firestore.indexes.json, .firebaserc.example, firebase.emulator.json, scripts/testar-regras-firestore.js, .github/workflows/validar-firebase.yml, docs/firebase/README.md, .gitignore, PENDENTE.md, HISTORICO.md — CI Firestore Emulator aprovado nos runs 44595940906 e 44602035026. Regras não publicadas no Firebase real; publicação continua dependente de revisão e autorização explícita do dono.

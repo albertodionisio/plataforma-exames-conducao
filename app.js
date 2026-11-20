@@ -137,7 +137,7 @@
       "auth/too-many-requests": "Demasiadas tentativas. Aguarda um pouco e tenta novamente.",
       "auth/popup-closed-by-user": "A janela de autenticação foi fechada antes de concluir.",
       "auth/popup-blocked": "O navegador bloqueou a janela de autenticação. Tenta novamente.",
-      "auth/unauthorized-domain": "Este domínio ainda não está autorizado no Firebase Authentication.",
+      "auth/unauthorized-domain": "O domínio desta página (" + window.location.hostname + ") não está autorizado para o Google Login no Firebase. Abre o endereço estável de testes: https://" + (A.googleOAuthCanonicalHost || "plataforma-exames-conducao.vercel.app") + ". Se o erro persistir nesse endereço, esse domínio precisa de ser autorizado uma única vez nas definições do Firebase Authentication.",
       "auth/network-request-failed": "Falha de ligação. Verifica a Internet e tenta novamente."
     };
     return mensagens[code] || (error && error.message) || fallback;
@@ -337,8 +337,27 @@
       telaAutenticacao();
     });
   }
+  function redireccionarPreviewGoogleParaAliasEstavel() {
+    var hostname = String(window.location && window.location.hostname || "").toLowerCase();
+    var alias = String(A.googleOAuthCanonicalHost || "").toLowerCase();
+    var sufixoEquipa = "-jjb18.vercel.app";
+    // Só encaminha URLs efémeras de deployment deste projecto. Não toca na
+    // produção, localhost ou URLs estáveis de branch.
+    var previewEfermero = hostname.indexOf("plataforma-exames-conducao-") === 0 &&
+      hostname.slice(-sufixoEquipa.length) === sufixoEquipa &&
+      hostname.indexOf("-git-") === -1;
+    if (!previewEfermero || !alias || hostname === alias) return false;
+    var destino = "https://" + alias + window.location.pathname +
+      window.location.search + window.location.hash;
+    window.location.replace(destino);
+    return true;
+  }
+
   function entrarComGoogle() {
     if (!authAvailable || !firebaseAuth || A.googleOAuthEnabled !== true) return;
+    // Os URLs por commit mudam a cada publicação e não devem ser usados para
+    // OAuth. A branch tem um alias Vercel estável que preserva o mesmo código.
+    if (redireccionarPreviewGoogleParaAliasEstavel()) return;
     var provider = new window.firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({ prompt: "select_account" });
     firebaseAuth.signInWithPopup(provider).then(function (resultado) {
