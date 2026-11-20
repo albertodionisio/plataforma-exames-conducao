@@ -35,18 +35,28 @@ assert.match(index, /class="luz-verde"/, "O sinal triangular deve conter a luz v
 
 assert.match(app, /if \(h === "\/codigo"\) return codigoDaEstrada\(\);/);
 assert.match(app, /if \(h === "\/sinais"\) return sinaisDeTransito\(\);/);
-assert.match(app, /visualizador-pdf/);
+assert.match(app, /pdf-paginas/);
+assert.match(app, /renderizarDocumentoPdf\\(caminho\\)/);
+assert.match(app, /pdfjsLib\\.getDocument/);
+assert.match(app, /pagina\\.render/);
+assert.match(app, /data-action=\\'documento-download\\'/);
+assert.match(app, /fetch\\(caminho, \\{ credentials: "same-origin" \\}\\)/);
+assert.match(app, /link\\.download = ficheiro/);
+assert.doesNotMatch(app, /<iframe class=\\'visualizador-pdf\\'/, "O leitor não deve depender do suporte PDF nativo do iframe.");
 assert.match(app, /documento-toolbar/);
 assert.match(app, /documento-voltar/);
 assert.match(app, /documento-download/);
 assert.match(app, /download='/, "O download deve ser uma acção explícita no controlo superior.");
-assert.match(app, /loading='eager'/, "O PDF deve começar a abrir imediatamente.");
+assert.match(index, /pdf\\.js\\/3\\.11\\.174\\/pdf\\.min\\.js/, "PDF.js deve estar carregado antes da aplicação.");
 assert.match(app, /document\.body && document\.body\.classList/);
 assert.doesNotMatch(app, /Abrir em separador/, "Não deve existir um botão de abertura que provoque saída do leitor.");
 assert.match(app, /codigodeestrada\.pdf/);
 assert.match(app, /sinais\.pdf/);
 assert.match(styles, /body\.documento-aberto \.barra-inferior/);
-assert.match(styles, /\.documento-toolbar/);
+assert.match(styles, /\\.documento-toolbar/);
+assert.match(styles, /\\.pdf-paginas/);
+assert.match(styles, /\\.pdf-pagina/);
+assert.match(styles, /\\.documento-download:disabled/);
 assert.match(headers, /Content-Disposition: inline/);
 assert.match(vercel.headers[0].headers.find(h => h.key === "Content-Disposition").value, /^inline$/);
 
