@@ -153,11 +153,18 @@
             return dados;
           });
         }).then(function (dados) {
-          if (dados.status === "paid") {
+          if (dados.status === "paid" && dados.subscriptionActivated === true) {
             aviso.textContent = "Pagamento confirmado. O plano " + dados.planName + " já foi activado na tua conta.";
             if (!notificouActivacao) {
               notificouActivacao = true;
               window.dispatchEvent(new Event("estrada:subscription-updated"));
+            }
+          } else if (dados.status === "paid") {
+            if (tentativas < 24) {
+              aviso.textContent = "Pagamento confirmado. Estamos a concluir a activação do plano " + dados.planName + ". Não faças outro pagamento.";
+              window.setTimeout(consultar, 5000);
+            } else {
+              aviso.textContent = "O pagamento foi confirmado, mas a activação ainda não foi validada. Não faças outro pagamento; contacta o suporte ou tenta consultar novamente mais tarde.";
             }
           } else if (dados.status === "failed" || dados.status === "cancelled") {
             aviso.textContent = "O pagamento não foi concluído. Podes tentar novamente quando quiseres.";
