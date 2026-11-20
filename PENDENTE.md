@@ -147,9 +147,3 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 
 - Actualização (2026-11-20): os três workflows associados ao HEAD `3645d395d942140988828e644bc34d0f73777f44` concluíram com sucesso: `Validar exames` (44703809913), `Validar definições` (44703809898) e `Validar integração Firebase` (44703809909). O job Firebase terminou com sucesso em todos os passos, incluindo validação da API de pagamentos, testes ePay sem chamadas externas, validação de email, configuração Firebase, autenticação por telefone, Auth Emulator e Firestore Emulator. O dono confirmou que `EPAY_SECRET_KEY` no Preview apresenta o prefixo `sk_test_`; fica autorizada a validação sandbox, sem usar chave de produção. Ainda falta checkout autenticado, callback real e activação da subscrição. Sem merge, deploy de produção ou publicação das regras.
-
-## GER-030 — Pulsação do indicador do plano activo
-- Estado: EM CURSO — ChatGPT-ESTRADA-UI1 — 2026-11-20 — ficheiros: public/assinaturas/planos.css, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-20
-- Pedido: animar suavemente a bolinha do selo «PLANO ACTIVO» com uma pulsação repetida, mantendo o texto imóvel; o selo «EM CARÊNCIA» não deve pulsar.
-- Pronto quando: apenas a bolinha do selo de plano actualmente activo pulsa com escala/brilho discretos; a animação respeita prefers-reduced-motion; os restantes selos e conteúdos não mudam.
-- Cuidados: não alterar a lógica de assinaturas, pagamentos, planos, preços ou estados; não tocar nos ficheiros reservados por GER-027/GER-029; não fazer merge para main nem deploy de produção.
