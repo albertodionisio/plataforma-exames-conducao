@@ -368,6 +368,26 @@ body.documento-aberto main{
   background:#fff;
   box-shadow:0 2px 8px rgba(0,0,0,.18);
 }
+.pdf-nativo{
+  display:block;
+  flex:1 1 auto;
+  width:100%;
+  min-height:0;
+  height:100%;
+  border:0;
+  background:#fff;
+}
+.documento-download.download-accionado{
+  background:rgba(255,255,255,.18);
+  transform:scale(.92);
+  box-shadow:0 0 0 3px rgba(255,255,255,.18);
+}
+.documento-download{
+  transition:transform .15s ease,background-color .15s ease,box-shadow .15s ease;
+}
+@media(prefers-reduced-motion:reduce){
+  .documento-download{transition:none}
+}
 @media(max-width:600px){
   body.documento-aberto main{padding:0}
   .documento-toolbar{flex-basis:56px;min-height:56px;padding:4px 8px}
