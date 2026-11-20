@@ -215,3 +215,74 @@ table{
 
 /* Ajuste visual: manter o botão Google no tamanho compacto dos restantes botões */
 .auth-google{width:auto}
+
+/* GER-029 — barra inferior e consulta dos documentos */
+main{padding-bottom:112px}
+.barra-inferior{
+  position:fixed;
+  z-index:20;
+  right:0;
+  bottom:0;
+  left:0;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  align-items:center;
+  min-height:68px;
+  padding:7px 10px calc(7px + env(safe-area-inset-bottom));
+  background:var(--azul);
+  color:var(--marfim);
+  border-top:1px solid rgba(255,255,255,.18);
+  box-shadow:0 -4px 16px rgba(20,40,75,.12);
+}
+.item-barra{
+  display:flex;
+  min-width:0;
+  min-height:48px;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  color:inherit;
+  text-decoration:none;
+  font:600 .7rem/1.2 Arial,sans-serif;
+  opacity:.96;
+}
+.item-barra:focus-visible{
+  outline:2px solid var(--ouro);
+  outline-offset:2px;
+  border-radius:7px;
+}
+.item-barra:hover{opacity:1}
+.icone-barra{
+  width:24px;
+  height:24px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.icone-barra .luz-vermelha{fill:#e35c5c;stroke:none}
+.icone-barra .luz-amarela{fill:#f2c94c;stroke:none}
+.icone-barra .luz-verde{fill:#55b879;stroke:none}
+.item-inactivo{opacity:.42;cursor:default}
+.documento-pagina{max-width:1120px;margin:0 auto}
+.documento-pagina h1{margin-bottom:4px}
+.documento-acoes{margin:12px 0}
+.visualizador-pdf{
+  display:block;
+  width:100%;
+  height:72vh;
+  min-height:480px;
+  border:1px solid var(--linha);
+  border-radius:9px;
+  background:#fff;
+}
+.documento-ajuda{color:var(--cinza);font-size:.88rem}
+@media(max-width:600px){
+  main{padding-bottom:112px}
+  .barra-inferior{min-height:66px;padding-right:5px;padding-left:5px}
+  .item-barra{font-size:.66rem}
+  .icone-barra{width:23px;height:23px}
+  .visualizador-pdf{height:calc(100dvh - 245px);min-height:360px}
+}
