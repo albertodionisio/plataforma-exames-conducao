@@ -270,6 +270,13 @@
       grupo.appendChild(cartao);
     });
 
+    raiz._estradaGrupoPlanos = grupo;
+    if (!raiz._estradaListenerPlanoActivo) {
+      raiz._estradaListenerPlanoActivo = function () {
+        if (raiz._estradaGrupoPlanos) carregarPlanoActivo(raiz._estradaGrupoPlanos);
+      };
+      window.addEventListener("estrada:subscription-updated", raiz._estradaListenerPlanoActivo);
+    }
     carregarPlanoActivo(grupo);
     formulario.appendChild(grupo);
     formulario.appendChild(aviso);
