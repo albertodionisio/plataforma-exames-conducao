@@ -10,6 +10,14 @@
       "destination": "https://plataforma-exames-conducao.firebaseapp.com/__/firebase/:path*"
     },
     {
+      "source": "/downloads/codigo-da-estrada.pdf",
+      "destination": "/original/referencia/codigodeestrada.pdf"
+    },
+    {
+      "source": "/downloads/sinais-de-transito.pdf",
+      "destination": "/original/referencia/sinais.pdf"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
