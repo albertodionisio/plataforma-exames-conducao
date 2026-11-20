@@ -40,19 +40,21 @@ for (const dir of dirs) {
   fs.cpSync(source, path.join(dist, dir), { recursive: true });
 }
 
-// Publicar apenas os dois PDFs de consulta; nunca copiar a pasta original inteira.
+// Publicar os PDFs de consulta e cópias com resposta HTTP de download explícito.
 const documentos = [
-  "original/referencia/codigodeestrada.pdf",
-  "original/referencia/sinais.pdf"
+  { origem: "original/referencia/codigodeestrada.pdf", destino: "original/referencia/codigodeestrada.pdf" },
+  { origem: "original/referencia/sinais.pdf", destino: "original/referencia/sinais.pdf" },
+  { origem: "original/referencia/codigodeestrada.pdf", destino: "downloads/codigo-da-estrada.pdf" },
+  { origem: "original/referencia/sinais.pdf", destino: "downloads/sinais-de-transito.pdf" }
 ];
-for (const file of documentos) {
-  const source = path.join(root, file);
-  if (!fs.existsSync(source)) throw new Error("PDF obrigatório em falta: " + file);
+for (const documento of documentos) {
+  const source = path.join(root, documento.origem);
+  if (!fs.existsSync(source)) throw new Error("PDF obrigatório em falta: " + documento.origem);
   const header = Buffer.alloc(5);
   const fd = fs.openSync(source, "r");
   try { fs.readSync(fd, header, 0, 5, 0); } finally { fs.closeSync(fd); }
-  if (header.toString("ascii") !== "%PDF-") throw new Error("Ficheiro não é um PDF válido: " + file);
-  const target = path.join(dist, file);
+  if (header.toString("ascii") !== "%PDF-") throw new Error("Ficheiro não é um PDF válido: " + documento.origem);
+  const target = path.join(dist, documento.destino);
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.copyFileSync(source, target);
 }
