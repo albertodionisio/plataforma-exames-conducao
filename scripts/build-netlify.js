@@ -21,7 +21,8 @@ const required = [
   "index.html", "app.js", "config.js", "styles.css",
   "styles-resultados.css", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png",
-  "public/assinaturas/planos.js", "public/assinaturas/planos.css"
+  "public/assinaturas/planos.js", "public/assinaturas/planos.css",
+  "original/referencia/codigodeestrada.pdf", "original/referencia/sinais.pdf"
 ];
 
 fs.rmSync(dist, { recursive: true, force: true });
@@ -36,6 +37,23 @@ for (const dir of dirs) {
   const source = path.join(root, dir);
   if (!fs.existsSync(source)) throw new Error("Pasta obrigatória em falta: " + dir);
   fs.cpSync(source, path.join(dist, dir), { recursive: true });
+}
+
+// Publicar apenas os dois PDFs de consulta; nunca copiar a pasta original inteira.
+const documentos = [
+  "original/referencia/codigodeestrada.pdf",
+  "original/referencia/sinais.pdf"
+];
+for (const file of documentos) {
+  const source = path.join(root, file);
+  if (!fs.existsSync(source)) throw new Error("PDF obrigatório em falta: " + file);
+  const header = Buffer.alloc(5);
+  const fd = fs.openSync(source, "r");
+  try { fs.readSync(fd, header, 0, 5, 0); } finally { fs.closeSync(fd); }
+  if (header.toString("ascii") !== "%PDF-") throw new Error("Ficheiro não é um PDF válido: " + file);
+  const target = path.join(dist, file);
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  fs.copyFileSync(source, target);
 }
 
 const dataSource = path.join(root, "data", "exames");
@@ -55,4 +73,4 @@ if (fs.existsSync(path.join(dist, "original", "Codigo_e_Sinais_de_Transito_1_1.a
   throw new Error("O APK original não pode ser incluído na publicação.");
 }
 
-console.log("Build Netlify concluído: aplicação e Exames 26–51 incluídos; APK e documentação interna excluídos.");
+console.log("Build Netlify concluído: aplicação, Exames 26–51 e PDFs de consulta incluídos; APK e restante documentação interna excluídos.");
