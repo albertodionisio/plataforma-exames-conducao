@@ -9,8 +9,11 @@
   }
 
   function beneficios(plano) {
+    var quantidade = Number.parseInt(String(plano.exames || ""), 10);
+    var faixa = Number.isInteger(quantidade) && quantidade > 0 ?
+      "Acesso aos Exames 1–" + quantidade : "Acesso conforme o plano";
     return [
-      { titulo: plano.exames + " exames", detalhe: "Acesso conforme o plano" },
+      { titulo: plano.exames + " exames", detalhe: faixa },
       { titulo: plano.anuncios === "Sim" ? "Com publicidade" : plano.anuncios === "Reduzida" ? "Publicidade reduzida" : "Sem anúncios", detalhe: "Condição durante a validade" },
       { titulo: plano.suporte === "Prioritário" ? "Atendimento prioritário" : "Atendimento normal", detalhe: "Apoio ao utilizador" },
       { titulo: plano.validade === "Sem limite" ? "Acesso sem limite de tempo" : "Válido por " + plano.validade, detalhe: "Tentativas ilimitadas nos exames disponíveis" }
@@ -27,15 +30,19 @@
     return Number.isFinite(convertido) ? convertido : NaN;
   }
 
-  function estadoDaAssinatura(assinatura) {
-    if (!assinatura || assinatura.status !== "active") return "";
+  function estadoDaAssinatura(assinatura, uid) {
+    if (!assinatura || assinatura.status !== "active" || (uid && assinatura.uid !== uid)) return "";
+    var limites = { weekly_basic: 25, monthly_basic: 25, weekly_full: 50, monthly_full: 50 };
+    var limite = limites[assinatura.planCode] || 0;
+    if (!limite || Number(assinatura.exams) !== limite) return "";
     var agora = Date.now();
     var inicio = dataEmMilissegundos(assinatura.startsAt);
     var fim = dataEmMilissegundos(assinatura.endsAt);
-    var acessoAte = dataEmMilissegundos(assinatura.graceUntil || assinatura.endsAt);
-    if (!Number.isFinite(acessoAte) || acessoAte <= agora ||
-        (Number.isFinite(inicio) && inicio > agora)) return "";
-    return Number.isFinite(fim) && fim <= agora ? "EM CARÊNCIA" : "PLANO ACTIVO";
+    var carencia = dataEmMilissegundos(assinatura.graceUntil);
+    if (!Number.isFinite(inicio) || !Number.isFinite(fim) || inicio > agora) return "";
+    var acessoAte = Number.isFinite(carencia) ? Math.max(fim, carencia) : fim;
+    if (acessoAte <= agora) return "";
+    return fim <= agora ? "EM CARÊNCIA" : "PLANO ACTIVO";
   }
 
   function assinalarPlanoActivo(grupo, codigo, estado) {
@@ -66,7 +73,7 @@
         .then(function (snap) {
           if (!snap || !snap.exists) return;
           var assinatura = typeof snap.data === "function" ? snap.data() : null;
-          var estado = estadoDaAssinatura(assinatura);
+          var estado = estadoDaAssinatura(assinatura, utilizador.uid);
           if (estado) assinalarPlanoActivo(grupo, assinatura.planCode, estado);
         })
         .catch(function () {
