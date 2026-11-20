@@ -58,10 +58,10 @@
     var primeiraNotificacao = false;
     var unsubscribe = null;
     function aoRestaurarSessao(utilizador) {
-      if (primeiraNotificacao) return;
+      if (primeiraNotificacao || !utilizador) return;
       primeiraNotificacao = true;
       if (unsubscribe) unsubscribe();
-      if (!utilizador || !window.firebase.firestore) return;
+      if (!window.firebase.firestore) return;
       window.firebase.firestore().collection("subscriptions").doc(utilizador.uid).get()
         .then(function (snap) {
           if (!snap || !snap.exists) return;
@@ -126,12 +126,12 @@
     var unsubscribe = null;
     function iniciarConsulta(utilizador) {
       if (iniciou) return;
-      iniciou = true;
-      if (unsubscribe) unsubscribe();
       if (!utilizador) {
         aviso.textContent = "Entra na tua conta para consultar o estado do pagamento. O pagamento não será repetido.";
         return;
       }
+      iniciou = true;
+      if (unsubscribe) unsubscribe();
       var tentativas = 0;
       var notificouActivacao = false;
       function consultar() {
