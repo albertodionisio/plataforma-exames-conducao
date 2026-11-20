@@ -169,7 +169,7 @@ const vm = require("node:vm");
     "A configuração não pode abrir exames pagos em modo de testes");
   assert.deepEqual(Array.from(context.window.APP.examesAbertosTeste),[],
     "Não deve existir uma lista de exames pagos abertos por excepção");
-  for(const n of [1,2,3,...Array.from({length:5},(_,i)=>i+26),...Array.from({length:21},(_,i)=>i+31)]){
+  for(const n of [1,2,3,4,...Array.from({length:5},(_,i)=>i+26),...Array.from({length:21},(_,i)=>i+31)]){
     const file=path.join(root,"data","exames","exame"+n+".js");
     if(fs.existsSync(file))vm.runInContext(fs.readFileSync(file,"utf8"),context);
   }
