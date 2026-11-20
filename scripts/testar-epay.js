@@ -121,14 +121,15 @@ async function testarActivacaoDePagamentoJaPago() {
     static fromMillis(ms) { return new FakeTimestamp(ms); }
     static now() { return new FakeTimestamp(Date.now()); }
   }
-  const adminPath = require.resolve("firebase-admin");
-  const previousAdmin = require.cache[adminPath];
-  require.cache[adminPath] = {
-    id: adminPath, filename: adminPath, loaded: true,
-    exports: { firestore: {
-      Timestamp: FakeTimestamp,
-      FieldValue: { serverTimestamp: () => ({ serverTimestamp: true }) }
-    } }
+  const Module = require("node:module");
+  const loadOriginal = Module._load;
+  const fakeAdmin = { firestore: {
+    Timestamp: FakeTimestamp,
+    FieldValue: { serverTimestamp: () => ({ serverTimestamp: true }) }
+  } };
+  Module._load = function (request, parent, isMain) {
+    if (request === "firebase-admin") return fakeAdmin;
+    return loadOriginal.call(this, request, parent, isMain);
   };
   try {
     const payment = {
@@ -152,8 +153,7 @@ async function testarActivacaoDePagamentoJaPago() {
     assert.equal(docs.get("subscriptions/conta-teste").endsAt.toMillis(), endBeforeDuplicate,
       "o callback repetido não pode prolongar a validade duas vezes");
   } finally {
-    if (previousAdmin) require.cache[adminPath] = previousAdmin;
-    else delete require.cache[adminPath];
+    Module._load = loadOriginal;
   }
 }
 
