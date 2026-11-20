@@ -15,6 +15,34 @@ assert.equal(lib.verifyPaymentCallback(raw, sig, "wrong"), false);
 assert.equal(lib.verifyStoreWebhook(raw, whSig, whSecret), true);
 assert.equal(lib.verifyStoreWebhook(raw, whSig, "wrong"), false);
 assert.equal(lib.verifyStoreWebhook(raw, whSig, whSecret, Number(t)+301), false);
+// O retorno do checkout deve preservar o hostname que o browser utilizou,
+ // e nunca confiar no hostname efémero VERCEL_URL quando existe Host estável.
+const envAnterior = {
+  APP_BASE_URL: process.env.APP_BASE_URL,
+  VERCEL_ENV: process.env.VERCEL_ENV,
+  VERCEL_URL: process.env.VERCEL_URL,
+  VERCEL_PROJECT_PRODUCTION_URL: process.env.VERCEL_PROJECT_PRODUCTION_URL
+};
+delete process.env.APP_BASE_URL;
+process.env.VERCEL_ENV = "preview";
+process.env.VERCEL_URL = "plataforma-exames-conducao-q5fj96ik1-jjb18.vercel.app";
+assert.equal(lib.baseUrl({ headers: { host: "plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app" } }),
+  "https://plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app",
+  "o retorno deve usar o alias estável da sessão, não o deployment efémero");
+assert.equal(lib.baseUrl({ headers: { host: "plataforma-exames-conducao-q5fj96ik1-jjb18.vercel.app" } }),
+  "https://plataforma-exames-conducao-q5fj96ik1-jjb18.vercel.app",
+  "os hosts de Preview do próprio projecto continuam permitidos");
+assert.throws(() => lib.baseUrl({ headers: { host: "dominio-malicioso.example" } }), /não autorizado/,
+  "um Host externo não pode controlar o return_url");
+process.env.VERCEL_ENV = "production";
+process.env.VERCEL_PROJECT_PRODUCTION_URL = "plataforma-exames-conducao.vercel.app";
+assert.equal(lib.baseUrl({ headers: { host: "plataforma-exames-conducao-git-feature-jjb18.vercel.app" } }),
+  "https://plataforma-exames-conducao.vercel.app",
+  "produção deve continuar a usar o domínio oficial configurado");
+for (const [key, value] of Object.entries(envAnterior)) {
+  if (value === undefined) delete process.env[key]; else process.env[key] = value;
+}
+
 assert.equal(lib.amountToCents("50"), 5000);
 assert.equal(lib.amountToCents("50.0"), 5000);
 assert.equal(lib.amountToCents("150.00"), 15000);
