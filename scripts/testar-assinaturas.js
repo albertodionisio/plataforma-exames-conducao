@@ -139,6 +139,10 @@ assert.match(codigoPlanos, /monthly_basic/);
 assert.match(codigoPlanos, /monthly_full/);
 assert.match(codigoPlanos, /fetch\("\/api\/payments\/create"/);
 assert.match(codigoPlanos, /fetch\("\/api\/payments\/status/);
+assert.match(codigoPlanos, /onAuthStateChanged/, "o retorno ePay deve aguardar a restauração da sessão Firebase");
+assert.match(codigoPlanos, /PLANO ACTIVO/, "a assinatura deve ser identificada no cartão do plano correspondente");
+assert.match(codigoPlanos, /O pagamento não será repetido/, "a interface deve desencorajar um segundo pagamento quando a sessão ainda não foi restaurada");
+
 assert.doesNotMatch(codigoPlanos, /loja-jr5qps-p507/, "a interface não deve continuar a usar o checkout fixo");
 window.location.hash = "";
 
@@ -158,6 +162,8 @@ const css = fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.c
 assert.ok(css.includes("@media(max-width:620px)"), "deve existir uma regra responsiva para telemóveis");
 assert.ok(css.includes(":focus-visible"), "os controlos devem ter foco visível por teclado");
 assert.ok(css.includes("prefers-reduced-motion"), "deve respeitar a preferência por movimento reduzido");
+assert.ok(css.includes(".plano-selo-activo"), "o selo do plano activo deve ter estilo próprio");
+
 assert.ok(css.includes(".plano-preco{display:block"), "o preço deve ocupar a sua própria linha");
 assert.ok(css.includes(".plano-periodicidade{display:block"), "a periodicidade deve ocupar a sua própria linha");
 
@@ -167,3 +173,74 @@ for (const recurso of ["../../../config.js", "../../../public/assinaturas/planos
 }
 
 console.log("BE-002/FE-004 PASSOU: cinco planos, dados de config.js, benefícios, selecção, autenticação obrigatória antes do checkout, endpoints individuais e estado do pagamento, plano Free e recursos da demonstração.");
+
+
+async function testarSeloPlanoActivo() {
+  const raizTeste = new Elemento("main");
+  const agora = Date.now();
+  const utilizador = { uid: "utilizador-teste" };
+  const authTeste = {
+    currentUser: null,
+    onAuthStateChanged(callback) { callback(utilizador); return function () {}; }
+  };
+  const windowTeste = {
+    location: { search: "", hash: "" },
+    firebase: {
+      auth() { return authTeste; },
+      firestore() {
+        return {
+          collection(nome) {
+            assert.equal(nome, "subscriptions");
+            return {
+              doc(uid) {
+                assert.equal(uid, utilizador.uid);
+                return {
+                  get() {
+                    return Promise.resolve({
+                      exists: true,
+                      data() {
+                        return {
+                          status: "active",
+                          planCode: "monthly_full",
+                          startsAt: { toMillis: () => agora - 1000 },
+                          endsAt: { toMillis: () => agora + 86400000 },
+                          graceUntil: { toMillis: () => agora + 86400000 }
+                        };
+                      }
+                    });
+                  }
+                };
+              }
+            };
+          }
+        };
+      }
+    }
+  };
+  const contextoTeste = {
+    window: windowTeste,
+    document: {
+      readyState: "complete",
+      createElement: (tag) => new Elemento(tag),
+      getElementById: (id) => id === "assinaturas-app" ? raizTeste : null,
+      addEventListener() {}
+    },
+    Array, String, URLSearchParams
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../config.js"), "utf8"), contextoTeste);
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8"), contextoTeste);
+  await new Promise((resolve) => setImmediate(resolve));
+  const cartaoActivo = raizTeste.querySelector("#estrada-plano-4").closest(".plano-cartao");
+  assert.ok(cartaoActivo.querySelector(".plano-selo-activo"), "o plano Mensal Completo activo deve receber o selo");
+  assert.equal(cartaoActivo.querySelector(".plano-selo-activo").textContent, "PLANO ACTIVO");
+  const outrosCartoes = raizTeste.querySelectorAll(".plano-cartao").filter((cartao) => cartao !== cartaoActivo);
+  assert.ok(outrosCartoes.every((cartao) => !cartao.querySelector(".plano-selo-activo")),
+    "o selo não pode aparecer nos planos que não pertencem à assinatura activa");
+}
+
+testarSeloPlanoActivo().then(() => {
+  console.log("APROVADO: o selo PLANO ACTIVO aparece apenas no pacote associado à subscrição activa.");
+}).catch((erro) => {
+  console.error(erro);
+  process.exitCode = 1;
+});
