@@ -14,12 +14,13 @@ const files = [
   "config.js",
   "styles.css",
   "styles-resultados.css",
-  "manifest.webmanifest"
+  "manifest.webmanifest",
+  "_headers"
 ];
 const dirs = ["icons", "public"];
 const required = [
   "index.html", "app.js", "config.js", "styles.css",
-  "styles-resultados.css", "manifest.webmanifest",
+  "styles-resultados.css", "manifest.webmanifest", "_headers",
   "icons/icon-192.png", "icons/icon-512.png",
   "public/assinaturas/planos.js", "public/assinaturas/planos.css",
   "original/referencia/codigodeestrada.pdf", "original/referencia/sinais.pdf"
