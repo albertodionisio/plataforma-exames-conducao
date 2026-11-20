@@ -10,6 +10,8 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 - Onde mexer: configuração do domínio estável da branch, redireccionamento transparente de URLs de Preview efémeras e mensagens de erro OAuth.
 - Pronto quando: URLs de deployment Preview desta branch são encaminhadas para o alias estável da branch antes do OAuth, preservando rota/query/hash; produção e localhost não são redireccionados; o authDomain Firebase mantém a configuração correcta por ambiente; testes cobrem a selecção do domínio e o fluxo; CI passa.
 - Cuidados: autorização expressa do dono nesta conversa para intervenção limitada em app.js e config.js apesar da reserva BE-002; não alterar outras partes da migração, contas, regras Firebase, providers, preços, exames, produção ou segredos. A autorização de domínio no Firebase continua a ser uma condição de segurança externa; não tentar contorná-la nem autorizar o domínio amplo vercel.app.
+- Parcial (2026-11-20): Vercel confirmou o alias estável da branch de integração `plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app`. `config.js` define esse host para OAuth nos Preview; `app.js` encaminha URLs efémeras de deployment para o alias, preservando caminho, query e hash, e identifica o hostname em `auth/unauthorized-domain`. `scripts/testar-firebase.js` recebeu asserts. CI run 44742371762 detectou que o mock de testes não fornece `window.location`; a detecção foi protegida no commit `85f735bc3f5498a6cb4aed0f7a2c125e7da4fea9`. Ainda falta uma execução CI posterior a essa correcção e validar o Google Login real no alias estável; se o Firebase não o tiver autorizado, será necessária a inclusão pontual desse hostname em Authorized domains. PR draft #8, sem merge nem deploy de produção.
+
 
 
 
