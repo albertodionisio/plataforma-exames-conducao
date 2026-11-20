@@ -64,6 +64,8 @@ assert.ok(styles.includes(".documento-download:disabled"));
 assert.match(headers, /Content-Disposition: inline/);
 assert.match(headers, /\/downloads\/\*\.pdf[\s\S]*Content-Disposition: attachment/);
 assert.match(vercel.headers.find(h => h.source === "/downloads/(.*)").headers.find(h => h.key === "Content-Disposition").value, /^attachment$/);
+assert.ok(vercel.rewrites.find(r => r.source === "/downloads/codigo-da-estrada.pdf" && r.destination === "/original/referencia/codigodeestrada.pdf"));
+assert.ok(vercel.rewrites.find(r => r.source === "/downloads/sinais-de-transito.pdf" && r.destination === "/original/referencia/sinais.pdf"));
 assert.match(vercel.headers[0].headers.find(h => h.key === "Content-Disposition").value, /^inline$/);
 
 verificarPdf("original/referencia/codigodeestrada.pdf");
