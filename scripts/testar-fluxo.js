@@ -126,8 +126,13 @@ const vm = require("node:vm");
     constructor(){this.providerId="google";}
     setCustomParameters(){}
   };
-  const fakeDb={collection(){return {doc(){return {
-    get(){return Promise.resolve({exists:false});},
+  let subscriptionFixture=null;
+  const fakeDb={collection(nome){return {doc(){return {
+    get(){
+      if(nome==="subscriptions" && subscriptionFixture)
+        return Promise.resolve({exists:true,data:()=>subscriptionFixture});
+      return Promise.resolve({exists:false});
+    },
     set(){return Promise.resolve();}
   };}};}};
   function firestoreFactory(){return fakeDb;}
@@ -160,11 +165,11 @@ const vm = require("node:vm");
     assert.ok(indexSource.indexOf(tag)<indexSource.indexOf('<script src="app.js"></script>'), "O Exame "+n+" deve carregar antes de app.js");
   }
   vm.runInContext(fs.readFileSync(path.join(root,"config.js"),"utf8"),context);
-  assert.equal(context.window.APP.modoTesteAcessoPago,true,
-    "A configuração actual de testes deve manter os exames abertos");
-  assert.deepEqual(Array.from(context.window.APP.examesAbertosTeste),[1,51],
-    "O intervalo de testes deve abranger os Exames 1 a 51");
-  for(const n of [1,...Array.from({length:5},(_,i)=>i+26),...Array.from({length:21},(_,i)=>i+31)]){
+  assert.equal(context.window.APP.modoTesteAcessoPago,false,
+    "A configuração não pode abrir exames pagos em modo de testes");
+  assert.deepEqual(Array.from(context.window.APP.examesAbertosTeste),[],
+    "Não deve existir uma lista de exames pagos abertos por excepção");
+  for(const n of [1,2,3,...Array.from({length:5},(_,i)=>i+26),...Array.from({length:21},(_,i)=>i+31)]){
     const file=path.join(root,"data","exames","exame"+n+".js");
     if(fs.existsSync(file))vm.runInContext(fs.readFileSync(file,"utf8"),context);
   }
@@ -173,20 +178,50 @@ const vm = require("node:vm");
     location.hash=destino;
     await new Promise(resolve=>setImmediate(resolve));
   }
+  const timestamp=ms=>({toMillis:()=>ms});
+  function assinatura(planCode,exams,fim,carencia,uid="uid-teste"){
+    return {uid,planCode,exams,status:"active",startsAt:timestamp(agora-60000),
+      endsAt:timestamp(fim),graceUntil:timestamp(carencia)};
+  }
+  async function definirSubscricao(dados){
+    subscriptionFixture=dados;
+    if(authState.listener)authState.listener(authState.user);
+    await new Promise(resolve=>setImmediate(resolve));
+    await new Promise(resolve=>setImmediate(resolve));
+  }
 
   assert.equal(name.textContent,"ESTRADA");
   assert.equal(typeof listeners.hashchange,"function");
+  await definirSubscricao(null);
   await navegar("#/exames");
-  for(let n=26;n<=30;n++)assert.ok(app.innerHTML.includes("Exame "+n) && app.innerHTML.includes("Aberto para testes"), "Exame "+n+" deve aparecer aberto no catálogo");
-  for(let n=31;n<=51;n++)assert.ok(app.innerHTML.includes("Exame "+n) && app.innerHTML.includes("Aberto para testes"));
+  for(let n=1;n<=3;n++)assert.ok(app.innerHTML.includes("<a class='sim livre' href='#/exame/"+n+"'><b>Exame "+n+"</b><small>Grátis</small>"),
+    "O Exame "+n+" deve estar sempre gratuito");
+  assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/4'><b>Exame 4</b><small>Bloqueado — requer plano</small>"),
+    "Sem assinatura, o Exame 4 deve aparecer bloqueado");
+  assert.ok(app.innerHTML.includes("Bloqueado — não incluído"),
+    "O Exame 51 deve aparecer como não incluído nos planos");
+  await navegar("#/exame/4");
+  assert.match(app.innerHTML,/bloqueado e requer um plano|exige um plano Básico ou Completo/,
+    "A rota directa não deve permitir abrir o Exame 4 sem plano");
+
+  await definirSubscricao(assinatura("monthly_full",50,agora+86400000,agora+86400000));
+  await navegar("#/exames");
+  assert.ok(app.innerHTML.includes("<a class='sim livre' href='#/exame/50'><b>Exame 50</b><small>Desbloqueado pelo plano</small>"),
+    "Um plano Completo deve desbloquear até ao Exame 50");
+  assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/51'>"),
+    "O Exame 51 continua bloqueado mesmo com plano Completo");
+  await navegar("#/exame/51");
+  assert.match(app.innerHTML,/não está incluído em nenhum dos planos/,
+    "A rota directa do Exame 51 deve permanecer bloqueada");
+
   for(let n=26;n<=30;n++){
     await navegar("#/exame/"+n);
     assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas");
     assert.ok(app.innerHTML.includes("public/exames/exame"+n+"/exame"+n+"_1.jpg"),"A imagem da primeira pergunta do Exame "+n+" deve ser apresentada");
   }
-  for(let n=31;n<=51;n++){
+  for(let n=31;n<=50;n++){
     await navegar("#/exame/"+n);
-    assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas");
+    assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas num plano Completo");
     assert.match(app.innerHTML,/id='tempo'/,"Exame "+n+" deve mostrar o cronómetro");
     assert.ok(timerNodes.tempo,"O elemento do cronómetro deve existir no DOM simulado");
     assert.equal(typeof intervalCallback,"function","O cronómetro deve estar activo");
@@ -348,18 +383,39 @@ const vm = require("node:vm");
   const estado45=JSON.parse(localStorage.getItem("estrada.exame.em-curso.45"));
   assert.equal(estado45.n,45,"O novo estado válido do Exame 45 deve substituir o registo corrompido");
 
-  context.window.APP.modoTesteAcessoPago=false;
+  // GER-027: os planos Básicos dão acesso até 25; os Completos até 50.
+  await definirSubscricao(assinatura("weekly_basic",25,agora+86400000,agora+86400000));
   await navegar("#/exames");
-  assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/39'><b>Exame 39</b>"),
-    "O catálogo deve encaminhar todos os exames disponíveis para autenticação antes de verificar o acesso");
-  await navegar("#/exame/39");
-  assert.match(app.innerHTML,/bloqueado e requer um plano/);
-  console.log("FE-002/FE-013 PASSOU: hashchange assíncrono, cronómetro, persistência da tentativa e do prazo após reload, respostas/pergunta restauradas, expiração durante ausência, submissão automática/manual, notas, semáforo, revisão e autenticação Firebase.");
+  assert.ok(app.innerHTML.includes("<a class='sim livre' href='#/exame/4'>"),
+    "O plano Básico deve desbloquear os Exames 4–25");
+  assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/26'>"),
+    "O plano Básico deve bloquear os Exames 26–50");
+  await navegar("#/exame/26");
+  assert.match(app.innerHTML,/exige um plano Completo/);
+
+  await definirSubscricao(assinatura("monthly_full",50,agora-1000,agora+86400000));
+  await navegar("#/exame/50");
+  assert.match(app.innerHTML,/Pergunta 1 de 25/,
+    "O plano Completo deve manter acesso durante a carência válida");
+
+  await definirSubscricao(assinatura("weekly_full",50,agora-86400000,agora-1000));
+  await navegar("#/exame/50");
+  assert.match(app.innerHTML,/bloqueado/,
+    "Uma assinatura expirada também depois da carência não pode abrir o Exame 50");
+
+  await definirSubscricao(assinatura("weekly_basic",25,agora+86400000,agora+86400000,"outro-uid"));
+  await navegar("#/exame/4");
+  assert.match(app.innerHTML,/bloqueado/,
+    "Uma assinatura pertencente a outro UID não pode desbloquear exames");
+
+  await definirSubscricao(assinatura("monthly_full",50,agora+86400000,agora+86400000));
+  await navegar("#/exames");
+  assert.ok(app.innerHTML.includes("<a class='sim bloq' href='#/exame/51'>"),
+    "Nenhum plano actual deve desbloquear o Exame 51");
+  console.log("GER-027/FE-002/FE-013 PASSOU: acesso gratuito 1–3, limites Básico 1–25 e Completo 1–50, carência, expiração, UID, Exame 51, rota directa, cronómetro, persistência, resultados e revisão.");
 
   // BE-002: visitante pode navegar, mas precisa de autenticação Firebase antes de iniciar um exame.
-  // Reabre temporariamente os exames no contexto isolado para testar a retoma após login.
-  context.window.APP.modoTesteAcessoPago=true;
-  context.window.APP.examesAbertosTeste=[1,51];
+  // Mantém uma subscrição Completa válida para testar a retoma do exame seleccionado após login.
   authState.user=null;
   if(authState.listener)authState.listener(null);
   await navegar("#/exames");
