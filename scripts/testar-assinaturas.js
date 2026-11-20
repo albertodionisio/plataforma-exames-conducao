@@ -119,7 +119,7 @@ for (const plano of planos) {
   assert.ok(texto.includes(plano.nome), "falta o plano " + plano.nome);
   assert.ok(texto.includes(plano.preco), "falta o preço de " + plano.nome);
 }
-for (const beneficio of ["Com publicidade", "Publicidade reduzida", "Sem anúncios", "Atendimento prioritário", "Acesso sem limite de tempo", "Válido por 30 dias"]) {
+for (const beneficio of ["Com publicidade", "Publicidade reduzida", "Sem anúncios", "Atendimento prioritário", "Acesso sem limite de tempo", "Válido por 30 dias", "Acesso aos Exames 1–3", "Acesso aos Exames 1–25", "Acesso aos Exames 1–50"]) {
   assert.ok(texto.includes(beneficio), "falta o benefício " + beneficio);
 }
 for (const cartao of cartoes) {
@@ -201,8 +201,10 @@ async function testarSeloPlanoActivo() {
                       exists: true,
                       data() {
                         return {
+                          uid: utilizador.uid,
                           status: "active",
                           planCode: "monthly_full",
+                          exams: 50,
                           startsAt: { toMillis: () => agora - 1000 },
                           endsAt: { toMillis: () => agora + 86400000 },
                           graceUntil: { toMillis: () => agora + 86400000 }
@@ -239,6 +241,53 @@ async function testarSeloPlanoActivo() {
     "o selo não pode aparecer nos planos que não pertencem à assinatura activa");
 }
 
+
+async function testarSeloEmCarencia() {
+  const raizTeste = new Elemento("main");
+  const agora = Date.now();
+  const utilizador = { uid: "utilizador-carencia" };
+  const authTeste = {
+    currentUser: null,
+    onAuthStateChanged(callback) { callback(null); callback(utilizador); return function () {}; }
+  };
+  const assinatura = {
+    uid: utilizador.uid,
+    status: "active",
+    planCode: "monthly_basic",
+    exams: 25,
+    startsAt: { toMillis: () => agora - 31 * 86400000 },
+    endsAt: { toMillis: () => agora - 1000 },
+    graceUntil: { toMillis: () => agora + 86400000 }
+  };
+  const windowTeste = {
+    addEventListener() {},
+    location: { search: "", hash: "" },
+    firebase: {
+      auth() { return authTeste; },
+      firestore() {
+        return { collection() { return { doc() { return {
+          get: () => Promise.resolve({ exists: true, data: () => assinatura })
+        }; } }; } };
+      }
+    }
+  };
+  const contextoTeste = {
+    window: windowTeste,
+    document: {
+      readyState: "complete",
+      createElement: (tag) => new Elemento(tag),
+      getElementById: (id) => id === "assinaturas-app" ? raizTeste : null,
+      addEventListener() {}
+    },
+    Array, String, URLSearchParams
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../config.js"), "utf8"), contextoTeste);
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8"), contextoTeste);
+  await new Promise((resolve) => setImmediate(resolve));
+  const cartaoCarencia = raizTeste.querySelector("#estrada-plano-3").closest(".plano-cartao");
+  assert.ok(cartaoCarencia.querySelector(".plano-selo-activo"), "o plano mensal Básico deve receber selo durante a carência");
+  assert.equal(cartaoCarencia.querySelector(".plano-selo-activo").textContent, "EM CARÊNCIA");
+}
 
 async function testarConsultaPagamentoAposLogin() {
   const raizTeste = new Elemento("main");
@@ -286,8 +335,9 @@ async function testarConsultaPagamentoAposLogin() {
     "depois do login restaurado, a aplicação deve consultar a transacção e reconhecer o pagamento");
 }
 
-testarSeloPlanoActivo().then(testarConsultaPagamentoAposLogin).then(() => {
-  console.log("APROVADO: o selo PLANO ACTIVO aparece apenas no pacote associado à subscrição activa.");
+testarSeloPlanoActivo().then(testarSeloEmCarencia).then(testarConsultaPagamentoAposLogin).then(() => {
+  console.log("APROVADO: o selo PLANO ACTIVO aparece apenas no pacote associado à subscrição válida.");
+  console.log("APROVADO: o selo EM CARÊNCIA aparece no plano correcto durante a carência válida.");
   console.log("APROVADO: o retorno ePay consulta o pagamento depois de a sessão Firebase ser restaurada.");
 }).catch((erro) => {
   console.error(erro);
