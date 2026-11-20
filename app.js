@@ -338,7 +338,7 @@
     });
   }
   function redireccionarPreviewGoogleParaAliasEstavel() {
-    var hostname = String(window.location.hostname || "").toLowerCase();
+    var hostname = String(window.location && window.location.hostname || "").toLowerCase();
     var alias = String(A.googleOAuthCanonicalHost || "").toLowerCase();
     var sufixoEquipa = "-jjb18.vercel.app";
     // Só encaminha URLs efémeras de deployment deste projecto. Não toca na
