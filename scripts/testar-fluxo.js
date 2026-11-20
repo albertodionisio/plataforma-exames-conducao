@@ -393,12 +393,15 @@ const vm = require("node:vm");
   await navegar("#/exame/26");
   assert.match(app.innerHTML,/exige um plano Completo/);
 
+  // Remove a tentativa antiga criada antes de avançar o relógio simulado.
+  localStorage.removeItem("estrada.exame.em-curso.50");
   await definirSubscricao(assinatura("monthly_full",50,agora-1000,agora+86400000));
   await navegar("#/exame/50");
   assert.match(app.innerHTML,/Pergunta 1 de 25/,
     "O plano Completo deve manter acesso durante a carência válida");
 
   await definirSubscricao(assinatura("weekly_full",50,agora-86400000,agora-1000));
+  await navegar("#/exames");
   await navegar("#/exame/50");
   assert.match(app.innerHTML,/bloqueado/,
     "Uma assinatura expirada também depois da carência não pode abrir o Exame 50");
