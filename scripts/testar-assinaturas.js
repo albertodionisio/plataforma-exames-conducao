@@ -239,8 +239,56 @@ async function testarSeloPlanoActivo() {
     "o selo não pode aparecer nos planos que não pertencem à assinatura activa");
 }
 
-testarSeloPlanoActivo().then(() => {
+
+async function testarConsultaPagamentoAposLogin() {
+  const raizTeste = new Elemento("main");
+  const observadores = [];
+  const utilizador = { uid: "utilizador-retorno", getIdToken: () => Promise.resolve("token-teste") };
+  const authTeste = {
+    currentUser: null,
+    onAuthStateChanged(callback) { observadores.push(callback); callback(null); return function () {}; }
+  };
+  const windowTeste = {
+    addEventListener() {},
+    dispatchEvent() {},
+    setTimeout() {},
+    location: { search: "?payment=123e4567-e89b-12d3-a456-426614174000", hash: "" },
+    firebase: {
+      auth() { return authTeste; },
+      firestore() {
+        return { collection() { return { doc() { return { get: () => Promise.resolve({ exists: false }) }; } }; } };
+      }
+    }
+  };
+  const contextoTeste = {
+    window: windowTeste,
+    document: {
+      readyState: "complete",
+      createElement: (tag) => new Elemento(tag),
+      getElementById: (id) => id === "assinaturas-app" ? raizTeste : null,
+      addEventListener() {}
+    },
+    Array, String, URLSearchParams,
+    Event: function Event(nome) { this.type = nome; },
+    fetch: () => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({ status: "paid", planName: "Semanal Básico", subscriptionActivated: true })
+    })
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../config.js"), "utf8"), contextoTeste);
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8"), contextoTeste);
+  assert.equal(observadores.length, 2, "o componente deve observar a restauração da assinatura e do retorno do pagamento");
+  observadores.forEach((observar) => observar(utilizador));
+  await new Promise((resolve) => setImmediate(resolve));
+  await new Promise((resolve) => setImmediate(resolve));
+  const aviso = raizTeste.querySelector("#assinaturas-aviso");
+  assert.ok(aviso.textContent.includes("Pagamento confirmado"),
+    "depois do login restaurado, a aplicação deve consultar a transacção e reconhecer o pagamento");
+}
+
+testarSeloPlanoActivo().then(testarConsultaPagamentoAposLogin).then(() => {
   console.log("APROVADO: o selo PLANO ACTIVO aparece apenas no pacote associado à subscrição activa.");
+  console.log("APROVADO: o retorno ePay consulta o pagamento depois de a sessão Firebase ser restaurada.");
 }).catch((erro) => {
   console.error(erro);
   process.exitCode = 1;
