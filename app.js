@@ -582,17 +582,108 @@
             "<svg viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M19 12H5m7 7-7-7 7-7'/></svg>" +
           "</a>" +
           "<h1>" + esc(titulo) + "</h1>" +
-          "<a class='documento-download' href='" + caminho + "' download='" + esc(ficheiro) +
+          "<button class='documento-download' type='button' data-action='documento-download' data-ficheiro='" + esc(ficheiro) +
             "' aria-label='Descarregar PDF' title='Descarregar PDF'>" +
             "<svg viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M12 3v12m-5-5 5 5 5-5M4 19v2h16v-2'/></svg>" +
-          "</a>" +
+          "</button>" +
         "</header>" +
-        "<iframe class='visualizador-pdf' title='" + esc(titulo) +
-          "' src='" + caminho + "#toolbar=0&navpanes=0&view=FitH' loading='eager' allowfullscreen>" +
-          "<p>Não foi possível mostrar o PDF neste navegador. <a href='" + caminho +
-            "' target='_blank' rel='noopener'>Abrir o documento</a>.</p>" +
-        "</iframe>" +
+        "<div class='pdf-estado' role='status' aria-live='polite'>A preparar o documento...</div>" +
+        "<div class='pdf-paginas' aria-label='Páginas do documento'></div>" +
+        "<noscript>É necessário activar JavaScript para visualizar este documento.</noscript>" +
       "</section>";
+    renderizarDocumentoPdf(caminho);
+  }
+
+  function renderizarDocumentoPdf(caminho) {
+    var estadoPdf = app.querySelector(".pdf-estado");
+    var paginas = app.querySelector(".pdf-paginas");
+    if (!window.pdfjsLib || !paginas) {
+      if (estadoPdf) estadoPdf.innerHTML = "O leitor não ficou disponível. <a href='" + caminho +
+        "' target='_blank' rel='noopener'>Abrir o PDF no navegador</a>.";
+      return;
+    }
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    window.pdfjsLib.getDocument({ url: caminho }).promise.then(function (pdf) {
+      if (!paginas.isConnected) return;
+      if (estadoPdf) estadoPdf.textContent = pdf.numPages + " página(s) carregada(s).";
+      var largura = Math.min((paginas.clientWidth || window.innerWidth || 360) - 20, 900);
+      var escalaDispositivo = Math.min(window.devicePixelRatio || 1, 1.5);
+      var tarefas = [];
+      for (var numero = 1; numero <= pdf.numPages; numero++) tarefas.push(numero);
+      return tarefas.reduce(function (fila, numero) {
+        return fila.then(function () {
+          if (!paginas.isConnected) return;
+          return pdf.getPage(numero).then(function (pagina) {
+            var base = pagina.getViewport({ scale: 1 });
+            var escala = Math.max(.5, largura / base.width);
+            var viewport = pagina.getViewport({ scale: escala });
+            var canvas = document.createElement("canvas");
+            canvas.className = "pdf-pagina";
+            canvas.setAttribute("role", "img");
+            canvas.setAttribute("aria-label", "Página " + numero + " de " + pdf.numPages);
+            canvas.width = Math.floor(viewport.width * escalaDispositivo);
+            canvas.height = Math.floor(viewport.height * escalaDispositivo);
+            canvas.style.width = Math.floor(viewport.width) + "px";
+            canvas.style.height = Math.floor(viewport.height) + "px";
+            paginas.appendChild(canvas);
+            var contexto = canvas.getContext("2d", { alpha: false });
+            return pagina.render({
+              canvasContext: contexto,
+              viewport: viewport,
+              transform: escalaDispositivo === 1 ? null : [escalaDispositivo, 0, 0, escalaDispositivo, 0, 0]
+            }).promise;
+          });
+        });
+      }, Promise.resolve()).then(function () {
+        if (estadoPdf && estadoPdf.isConnected) estadoPdf.textContent = "Documento pronto · " + pdf.numPages + " página(s).";
+      });
+    }).catch(function (erro) {
+      console.error("Falha ao abrir PDF:", erro);
+      if (estadoPdf && estadoPdf.isConnected) estadoPdf.innerHTML =
+        "Não foi possível carregar o documento. Verifica a ligação e tenta novamente. " +
+        "<a href='" + caminho + "' target='_blank' rel='noopener'>Abrir PDF no navegador</a>.";
+    });
+  }
+
+  function descarregarDocumento(ficheiro, botao) {
+    if (!/^(codigodeestrada|sinais)\.pdf$/.test(ficheiro || "")) return;
+    var caminho = "/original/referencia/" + ficheiro;
+    var textoOriginal = botao.innerHTML;
+    botao.disabled = true;
+    botao.setAttribute("aria-label", "A preparar o download");
+    fetch(caminho, { credentials: "same-origin" }).then(function (resposta) {
+      if (!resposta.ok) throw new Error("HTTP " + resposta.status);
+      return resposta.blob();
+    }).then(function (blob) {
+      var url = URL.createObjectURL(blob);
+      var link = document.createElement("a");
+      link.href = url;
+      link.download = ficheiro;
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(function () { URL.revokeObjectURL(url); }, 60000);
+    }).catch(function (erro) {
+      console.error("Falha no download do PDF:", erro);
+      var link = document.createElement("a");
+      link.href = caminho;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.download = ficheiro;
+      link.textContent = "Abrir o PDF para guardar";
+      var estadoPdf = app.querySelector(".pdf-estado");
+      if (estadoPdf) {
+        estadoPdf.textContent = "O download directo não foi aceite pelo navegador. Usa o link para guardar o documento.";
+        estadoPdf.appendChild(document.createTextNode(" "));
+        estadoPdf.appendChild(link);
+      }
+    }).finally(function () {
+      botao.disabled = false;
+      botao.innerHTML = textoOriginal;
+      botao.setAttribute("aria-label", "Descarregar PDF");
+    });
   }
 
   function codigoDaEstrada() {
@@ -796,6 +887,7 @@
     if (acao === "auth-reset") { recuperarPalavraPasse(); return; }
     if (acao === "auth-cancel") { try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {} return; }
     if (acao === "auth-google") { entrarComGoogle(); return; }
+    if (acao === "documento-download") { descarregarDocumento(alvo.getAttribute("data-ficheiro"), alvo); return; }
     if (!estado || estado.res) return;
     if (acao === "responder") {
       var indice = Number(alvo.getAttribute("data-indice"));
