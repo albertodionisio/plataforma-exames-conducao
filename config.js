@@ -13,6 +13,8 @@ window.APP = {
     appId: "1:779881429626:web:43dd5919d69995c72119c3"
   },
   googleOAuthEnabled: true,
+  // Alias estável da branch para autenticação nos Preview deployments efémeros.
+  googleOAuthCanonicalHost: "plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app",
   totalExames: 51,
   gratuitos: 3,
   perguntasPorExame: 25,
