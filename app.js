@@ -534,6 +534,8 @@
     if (h === "/entrar") return telaAutenticacao();
     if (h === "/exames") return catalogo();
     if (h === "/planos") return planos();
+    if (h === "/codigo") return codigoDaEstrada();
+    if (h === "/sinais") return sinaisDeTransito();
     if (h === "/resultado") return resultado();
     if (h === "/rever") return rever();
     if (h.indexOf("/exame/") === 0) return iniciar(parseInt(h.split("/")[2], 10));
@@ -567,6 +569,28 @@
     app.innerHTML = "<section id='assinaturas-app' class='assinaturas-pagina' aria-label='Planos de assinatura'></section>";
     if (typeof window.renderizarPlanosEstrada === "function") window.renderizarPlanosEstrada();
     else app.innerHTML = "<h1>Planos</h1><div class='aviso'>Não foi possível carregar os planos.</div>";
+  }
+
+  function documento(titulo, descricao, ficheiro) {
+    var caminho = "original/referencia/" + ficheiro;
+    app.innerHTML =
+      "<section class='documento-pagina'>" +
+        "<h1>" + esc(titulo) + "</h1>" +
+        "<p>" + esc(descricao) + "</p>" +
+        "<div class='documento-acoes'><a class='btn sec' href='" + caminho +
+          "' target='_blank' rel='noopener'>Abrir em separador</a></div>" +
+        "<iframe class='visualizador-pdf' title='" + esc(titulo) +
+          "' src='" + caminho + "#view=FitH' loading='lazy'></iframe>" +
+        "<p class='documento-ajuda'>Se o documento não aparecer no visualizador, usa «Abrir em separador».</p>" +
+      "</section>";
+  }
+
+  function codigoDaEstrada() {
+    documento("Código da Estrada", "Consulta o documento do Código da Estrada.", "codigodeestrada.pdf");
+  }
+
+  function sinaisDeTransito() {
+    documento("Sinais de Trânsito", "Consulta os sinais de trânsito e a respectiva sinalização.", "sinais.pdf");
   }
   function iniciar(n) {
     if (!n || n < 1 || n > Number(A.totalExames || 0)) return catalogo();
