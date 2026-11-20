@@ -181,7 +181,7 @@ async function testarSeloPlanoActivo() {
   const utilizador = { uid: "utilizador-teste" };
   const authTeste = {
     currentUser: null,
-    onAuthStateChanged(callback) { callback(utilizador); return function () {}; }
+    onAuthStateChanged(callback) { callback(null); callback(utilizador); return function () {}; }
   };
   const windowTeste = {
     addEventListener() {},
