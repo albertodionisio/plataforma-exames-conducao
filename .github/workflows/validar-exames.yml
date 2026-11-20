@@ -2,7 +2,7 @@ name: Validar exames
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat/firebase-full-migration]
     paths:
       - 'data/exames/**'
       - 'scripts/validar-exames.js'
@@ -14,6 +14,8 @@ on:
       - 'index.html'
       - 'styles.css'
       - 'netlify.toml'
+      - 'vercel.json'
+      - '_headers'
       - 'styles-resultados.css'
       - 'app.js'
       - 'config.js'
