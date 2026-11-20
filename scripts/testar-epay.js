@@ -56,6 +56,8 @@ assert.equal(lib.accountUidFromTransaction({ uid: "conta-joao", accountUid: "con
 assert.equal(lib.accountUidFromTransaction({ accountUid: "conta-joao" }), null, "a conta destinatária tem de ter UID autenticado");
 const paymentSource = fs.readFileSync(require.resolve("../lib/epay"), "utf8");
 const createSource = fs.readFileSync(require.resolve("../api/payments/create"), "utf8");
+const statusSource = fs.readFileSync(require.resolve("../api/payments/status"), "utf8");
+assert.ok(statusSource.includes("saved.subscriptionActivated !== true && saved.providerPaymentId"), "a consulta deve tentar reparar uma subscrição ainda não activada, mesmo quando o pagamento já está paid");
 assert.ok(paymentSource.includes('db.collection("subscriptions").doc(accountUid)'), "a assinatura deve ser gravada no UID da conta iniciadora");
 assert.ok(createSource.includes("uid: user.uid, accountUid: user.uid"), "o UID da conta deve ser fixado antes do checkout");
 assert.doesNotMatch(paymentSource, /payment\\.phone|payer\\.phone|customer\\.phone/, "o telefone do pagador não pode determinar a conta beneficiária");
