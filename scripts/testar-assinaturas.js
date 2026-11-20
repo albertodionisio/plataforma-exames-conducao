@@ -102,7 +102,7 @@ const document = {
   getElementById: (id) => id === "assinaturas-app" ? raiz : null,
   addEventListener() {}
 };
-const window = { location: { navigatedTo: null, hash: "", search: "", assign(url) { this.navigatedTo = url; } }, firebase: { auth() { return { currentUser: null }; } } };
+const window = { addEventListener() {}, location: { navigatedTo: null, hash: "", search: "", assign(url) { this.navigatedTo = url; } }, firebase: { auth() { return { currentUser: null }; } } };
 const contexto = { window, document, Array, String, URLSearchParams };
 
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, "../config.js"), "utf8"), contexto);
@@ -184,6 +184,7 @@ async function testarSeloPlanoActivo() {
     onAuthStateChanged(callback) { callback(utilizador); return function () {}; }
   };
   const windowTeste = {
+    addEventListener() {},
     location: { search: "", hash: "" },
     firebase: {
       auth() { return authTeste; },
