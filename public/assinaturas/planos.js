@@ -27,23 +27,27 @@
     return Number.isFinite(convertido) ? convertido : NaN;
   }
 
-  function assinaturaAindaActiva(assinatura) {
-    if (!assinatura || assinatura.status !== "active") return false;
+  function estadoDaAssinatura(assinatura) {
+    if (!assinatura || assinatura.status !== "active") return "";
     var agora = Date.now();
     var inicio = dataEmMilissegundos(assinatura.startsAt);
-    var fim = dataEmMilissegundos(assinatura.graceUntil || assinatura.endsAt);
-    return Number.isFinite(fim) && fim > agora && (!Number.isFinite(inicio) || inicio <= agora);
+    var fim = dataEmMilissegundos(assinatura.endsAt);
+    var acessoAte = dataEmMilissegundos(assinatura.graceUntil || assinatura.endsAt);
+    if (!Number.isFinite(acessoAte) || acessoAte <= agora ||
+        (Number.isFinite(inicio) && inicio > agora)) return "";
+    return Number.isFinite(fim) && fim <= agora ? "EM CARÊNCIA" : "PLANO ACTIVO";
   }
 
-  function assinalarPlanoActivo(grupo, codigo) {
+  function assinalarPlanoActivo(grupo, codigo, estado) {
     var indice = CODIGOS_PLANOS.indexOf(codigo);
-    if (indice < 1) return;
+    if (indice < 1 || !estado) return;
     var radio = grupo.querySelector("#estrada-plano-" + indice);
     var cartao = radio && radio.closest(".plano-cartao");
     var topo = cartao && cartao.querySelector(".plano-topo");
     if (!topo || topo.querySelector(".plano-selo-activo")) return;
-    var selo = elemento("span", "plano-selo-activo", "PLANO ACTIVO");
-    selo.setAttribute("aria-label", "Este é o plano actualmente activo na tua conta");
+    var selo = elemento("span", "plano-selo-activo", estado);
+    selo.setAttribute("aria-label", estado === "EM CARÊNCIA" ?
+      "Este plano está dentro do período de carência" : "Este é o plano actualmente activo na tua conta");
     topo.appendChild(selo);
     cartao.classList.add("plano-cartao-activo");
   }
@@ -62,7 +66,7 @@
         .then(function (snap) {
           if (!snap || !snap.exists) return;
           var assinatura = typeof snap.data === "function" ? snap.data() : null;
-          if (assinaturaAindaActiva(assinatura)) assinalarPlanoActivo(grupo, assinatura.planCode);
+          var estado = estadoDaAssinatura(assinatura);\n          if (estado) assinalarPlanoActivo(grupo, assinatura.planCode, estado);
         })
         .catch(function () {
           // A falha de leitura não deve impedir a consulta dos planos ou um novo checkout.
