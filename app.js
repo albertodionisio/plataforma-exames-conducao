@@ -530,6 +530,8 @@
   function rota() {
     pararRelogio();
     var h = location.hash.replace("#", "") || "/";
+    var documentoAberto = h === "/codigo" || h === "/sinais";
+    document.body.classList.toggle("documento-aberto", documentoAberto);
     if (!authReady) { app.innerHTML = "<p>A carregar...</p>"; return; }
     if (h === "/entrar") return telaAutenticacao();
     if (h === "/exames") return catalogo();
@@ -572,16 +574,24 @@
   }
 
   function documento(titulo, descricao, ficheiro) {
-    var caminho = "original/referencia/" + ficheiro;
+    var caminho = "/original/referencia/" + ficheiro;
     app.innerHTML =
-      "<section class='documento-pagina'>" +
-        "<h1>" + esc(titulo) + "</h1>" +
-        "<p>" + esc(descricao) + "</p>" +
-        "<div class='documento-acoes'><a class='btn sec' href='" + caminho +
-          "' target='_blank' rel='noopener'>Abrir em separador</a></div>" +
+      "<section class='documento-pagina' aria-label='" + esc(titulo) + "'>" +
+        "<header class='documento-toolbar'>" +
+          "<a class='documento-voltar' href='#/exames' aria-label='Voltar ao catálogo' title='Voltar'>" +
+            "<svg viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M19 12H5m7 7-7-7 7-7'/></svg>" +
+          "</a>" +
+          "<h1>" + esc(titulo) + "</h1>" +
+          "<a class='documento-download' href='" + caminho + "' download='" + esc(ficheiro) +
+            "' aria-label='Descarregar PDF' title='Descarregar PDF'>" +
+            "<svg viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M12 3v12m-5-5 5 5 5-5M4 19v2h16v-2'/></svg>" +
+          "</a>" +
+        "</header>" +
         "<iframe class='visualizador-pdf' title='" + esc(titulo) +
-          "' src='" + caminho + "#view=FitH' loading='lazy'></iframe>" +
-        "<p class='documento-ajuda'>Se o documento não aparecer no visualizador, usa «Abrir em separador».</p>" +
+          "' src='" + caminho + "#toolbar=0&navpanes=0&view=FitH' loading='eager' allowfullscreen>" +
+          "<p>Não foi possível mostrar o PDF neste navegador. <a href='" + caminho +
+            "' target='_blank' rel='noopener'>Abrir o documento</a>.</p>" +
+        "</iframe>" +
       "</section>";
   }
 
