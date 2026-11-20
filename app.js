@@ -583,9 +583,9 @@
     }
     if (!temAcesso(n)) {
       var explicacaoBloqueio = n > 50 ?
-        "O Exame " + n + " ainda não está incluído em nenhum dos planos disponíveis." :
-        (n > 25 ? "Este exame exige um plano Completo, com acesso aos Exames 1–50." :
-          "Este exame exige um plano Básico ou Completo, com acesso aos Exames 1–25 ou 1–50.");
+        "Este exame está bloqueado e ainda não está incluído em nenhum dos planos disponíveis." :
+        (n > 25 ? "Este exame está bloqueado e exige um plano Completo, com acesso aos Exames 1–50." :
+          "Este exame está bloqueado e exige um plano Básico ou Completo, com acesso aos Exames 1–25 ou 1–50.");
       app.innerHTML = "<h1>Exame " + n + "</h1><div class='card aviso'><p>" + explicacaoBloqueio + "</p>" +
         "<p><a class='btn' href='#/planos'>Consultar planos</a> <a class='btn sec' href='#/exames'>Voltar aos exames</a></p></div>";
       return;
