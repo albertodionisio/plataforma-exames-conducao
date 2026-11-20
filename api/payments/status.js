@@ -10,7 +10,7 @@ module.exports = async function paymentStatus(req, res) {
     const snap = await ref.get();
     if (!snap.exists || lib.accountUidFromTransaction(snap.data()) !== user.uid) return lib.json(res, 404, { error: "Pagamento não encontrado." });
     let saved = snap.data();
-    if (saved.status !== "paid" && saved.providerPaymentId) {
+    if (saved.subscriptionActivated !== true && saved.providerPaymentId) {
       const current = await lib.epayRequest("/payments/" + encodeURIComponent(saved.providerPaymentId), { method: "GET" });
       const result = await lib.applyProviderPayment(db, current);
       saved = (await ref.get()).data();
@@ -18,7 +18,7 @@ module.exports = async function paymentStatus(req, res) {
         return lib.json(res, 409, { error: "Os dados devolvidos pela ePay não correspondem ao pedido." });
     }
     return lib.json(res, 200, { transactionId: id, status: saved.status, planName: saved.planName,
-      subscriptionActivated: saved.subscriptionActivated === true });
+      subscriptionActivated: saved.subscriptionActivated === true, activationPending: saved.status === "paid" && saved.subscriptionActivated !== true });
   } catch (error) {
     console.error("Falha ao consultar pagamento ESTRADA:", error && error.message);
     return lib.json(res, lib.safeError(error), { error: error && error.status === 401 ? error.message :
