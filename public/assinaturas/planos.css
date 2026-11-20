@@ -33,3 +33,15 @@
 .assinaturas-nota{margin:18px 0 0;color:#737b86;text-align:center;font-size:.8rem}
 @media(max-width:620px){.assinaturas-pagina{padding:22px 12px 34px}.assinaturas-lista{grid-template-columns:1fr;gap:12px}.plano-cartao{padding:17px}.plano-cartao.plano-escolhido{padding:16px}.plano-cartao>input{top:18px;right:18px}.plano-preco{font-size:1.75rem}.plano-periodicidade{min-height:0}}
 @media(prefers-reduced-motion:reduce){.plano-cartao{transition:none}}
+
+/* A pulsação pertence apenas à bolinha do plano dentro da validade. */
+@media(prefers-reduced-motion:no-preference){
+  .plano-selo-activo[aria-label="Este é o plano actualmente activo na tua conta"]:before{
+    transform-origin:center;
+    animation:plano-selo-pulso 2.4s ease-in-out infinite;
+  }
+  @keyframes plano-selo-pulso{
+    0%,10%,25%,40%,55%,70%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(63,107,79,0)}
+    15%,45%,65%{transform:scale(1.45);box-shadow:0 0 0 3px rgba(63,107,79,.18)}
+  }
+}
