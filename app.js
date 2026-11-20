@@ -531,7 +531,7 @@
     pararRelogio();
     var h = location.hash.replace("#", "") || "/";
     var documentoAberto = h === "/codigo" || h === "/sinais";
-    document.body.classList.toggle("documento-aberto", documentoAberto);
+    if (document.body && document.body.classList) document.body.classList.toggle("documento-aberto", documentoAberto);
     if (!authReady) { app.innerHTML = "<p>A carregar...</p>"; return; }
     if (h === "/entrar") return telaAutenticacao();
     if (h === "/exames") return catalogo();
