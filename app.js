@@ -420,21 +420,39 @@
       localStorage.setItem("hist", JSON.stringify(h.slice(0, 20)));
     } catch (e) {}
   }
-  function testeAberto(n) {
-    var intervalo = A.examesAbertosTeste;
-    return A.modoTesteAcessoPago === true && Array.isArray(intervalo) &&
-      intervalo.length === 2 && n >= intervalo[0] && n <= intervalo[1];
+  function dataAssinaturaMs(valor) {
+    if (valor && typeof valor.toMillis === "function") return valor.toMillis();
+    if (valor instanceof Date) return valor.getTime();
+    if (typeof valor === "number") return valor;
+    var convertido = Date.parse(valor);
+    return Number.isFinite(convertido) ? convertido : NaN;
+  }
+  function limiteDoPlano(assinatura) {
+    if (!assinatura) return 0;
+    var limites = {
+      weekly_basic: 25,
+      monthly_basic: 25,
+      weekly_full: 50,
+      monthly_full: 50
+    };
+    var limite = limites[assinatura.planCode] || 0;
+    return limite && Number(assinatura.exams) === limite ? limite : 0;
   }
   function temAcesso(n) {
-    if (n <= Number(A.gratuitos || 0) || testeAberto(n)) return true;
-    if (!subscriptionReady || !authUser || !subscriptionData || subscriptionData.uid !== authUser.uid || subscriptionData.status !== "active") return false;
-    var inicio = subscriptionData.startsAt;
-    var fim = subscriptionData.graceUntil || subscriptionData.endsAt;
-    var inicioMs = inicio && typeof inicio.toMillis === "function" ? inicio.toMillis() : Date.parse(inicio);
-    var fimMs = fim && typeof fim.toMillis === "function" ? fim.toMillis() : Date.parse(fim);
-    return Number.isFinite(fimMs) && fimMs > Date.now() &&
-      (!Number.isFinite(inicioMs) || inicioMs <= Date.now()) &&
-      Number(subscriptionData.exams || 0) >= Number(n);
+    // Os planos actuais nunca incluem o Exame 51, mesmo que exista uma assinatura.
+    if (!Number.isInteger(n) || n < 1 || n > 50) return false;
+    if (n <= Number(A.gratuitos || 0)) return true;
+    if (!subscriptionReady || !authUser || !subscriptionData ||
+        subscriptionData.uid !== authUser.uid || subscriptionData.status !== "active") return false;
+    var limite = limiteDoPlano(subscriptionData);
+    if (!limite || n > limite) return false;
+    var agora = Date.now();
+    var inicioMs = dataAssinaturaMs(subscriptionData.startsAt);
+    var fimMs = dataAssinaturaMs(subscriptionData.endsAt);
+    var carenciaMs = dataAssinaturaMs(subscriptionData.graceUntil);
+    if (!Number.isFinite(inicioMs) || !Number.isFinite(fimMs) || inicioMs > agora) return false;
+    var acessoAte = Number.isFinite(carenciaMs) ? Math.max(fimMs, carenciaMs) : fimMs;
+    return acessoAte > agora;
   }
   function pararRelogio() {
     if (timer !== null) { clearInterval(timer); timer = null; }
@@ -534,11 +552,11 @@
   }
   function catalogo() {
     var html = "<h1>Exames</h1><p>Os " + esc(A.gratuitos) +
-      " primeiros são gratuitos. Durante a fase de testes, os Exames 1–51 estão temporariamente abertos.</p><div class='grelha'>";
+      " primeiros exames são gratuitos. Os Exames 4–25 exigem um plano Básico ou Completo; os Exames 26–50 exigem um plano Completo. O Exame 51 ainda não está incluído nos planos disponíveis.</p><div class='grelha'>";
     for (var n = 1; n <= Number(A.totalExames || 0); n++) {
-      var pronto = Array.isArray(EX[n]), livre = temAcesso(n);
-      var rotulo = !pronto ? "Em preparação" : (n <= A.gratuitos ? "Grátis" :
-        (testeAberto(n) ? "Aberto para testes" : "Acesso por plano"));
+      var pronto = Array.isArray(EX[n]), livre = pronto && temAcesso(n);
+      var rotulo = !pronto ? "Em preparação" : (n <= Number(A.gratuitos || 0) ? "Grátis" :
+        (livre ? "Desbloqueado pelo plano" : (n > 50 ? "Bloqueado — não incluído" : "Bloqueado — requer plano")));
       var destino = pronto ? "#/exame/" + n : "#/exames";
       html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='" + destino +
         "'><b>Exame " + n + "</b><small>" + rotulo + "</small></a>";
@@ -564,7 +582,11 @@
       return;
     }
     if (!temAcesso(n)) {
-      app.innerHTML = "<h1>Exame " + n + "</h1><div class='card'><p>Este exame está bloqueado e requer um plano de acesso.</p>" +
+      var explicacaoBloqueio = n > 50 ?
+        "O Exame " + n + " ainda não está incluído em nenhum dos planos disponíveis." :
+        (n > 25 ? "Este exame exige um plano Completo, com acesso aos Exames 1–50." :
+          "Este exame exige um plano Básico ou Completo, com acesso aos Exames 1–25 ou 1–50.");
+      app.innerHTML = "<h1>Exame " + n + "</h1><div class='card aviso'><p>" + explicacaoBloqueio + "</p>" +
         "<p><a class='btn' href='#/planos'>Consultar planos</a> <a class='btn sec' href='#/exames'>Voltar aos exames</a></p></div>";
       return;
     }
