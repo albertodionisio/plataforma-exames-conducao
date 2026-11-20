@@ -1,5 +1,13 @@
 # PENDENTE — geral e interface
 
+## GER-029 — Barra inferior e integração dos PDFs de consulta
+- Estado: EM CURSO — ChatGPT-ESTRADA-NAV1 — 2026-11-20 21:31 UTC+02 — ficheiros: index.html, app.js, styles.css, scripts/build-netlify.js, scripts de teste, public/documentos/, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-20 21:31 UTC+02
+- Autorização expressa do dono (2026-11-20): autorizou implementar a barra inferior e integrar os documentos nos ficheiros partilhados, apesar das reservas activas. A sobreposição é estritamente limitada à barra inferior, aos destinos de consulta e à publicação dos dois PDFs; preservar integralmente o trabalho concorrente fora deste âmbito.
+- Pedido: implementar barra inferior com quatro posições na ordem acordada: (1) troféu — catálogo de exames; (2) prancheta — visível mas sem acção/função definida, não inventar destino; (3) livro aberto — abrir o PDF do Código da Estrada; (4) sinal triangular com semáforo no interior, sem ponto de exclamação — abrir o PDF dos Sinais de Trânsito. Os PDFs de origem já existem em original/referencia/codigodeestrada.pdf e original/referencia/sinais.pdf, extraídos anteriormente do APK.
+- Pronto quando: PDFs copiados sem alteração para a pasta pública de documentos; barra inferior responsiva e acessível; ícones SVG coerentes; cada destino funcional; segundo item claramente inactivo sem acção; PDFs abrem dentro da aplicação em leitor/visualizador incorporado, com alternativa para abrir em separador; build de publicação inclui os PDFs mas nunca o APK; testes verificam rotas, recursos, links e build.
+- Cuidados: não alterar autenticação, exames, resultados, subscrições, preços, pagamentos, regras Firebase nem conteúdo dos PDFs. Não fazer merge para main nem deploy de produção. Validar a build Preview apenas. A autorização do dono não abrange alterações às tarefas concorrentes fora dos ficheiros/linhas estritamente necessários à barra e documentos.
+
+
 Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão lá.
 
 ## Geral (GER-)
