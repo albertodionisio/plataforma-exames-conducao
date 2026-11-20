@@ -66,7 +66,8 @@
         .then(function (snap) {
           if (!snap || !snap.exists) return;
           var assinatura = typeof snap.data === "function" ? snap.data() : null;
-          var estado = estadoDaAssinatura(assinatura);\n          if (estado) assinalarPlanoActivo(grupo, assinatura.planCode, estado);
+          var estado = estadoDaAssinatura(assinatura);
+          if (estado) assinalarPlanoActivo(grupo, assinatura.planCode, estado);
         })
         .catch(function () {
           // A falha de leitura não deve impedir a consulta dos planos ou um novo checkout.
