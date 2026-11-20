@@ -597,9 +597,25 @@
   function renderizarDocumentoPdf(caminho) {
     var estadoPdf = app.querySelector(".pdf-estado");
     var paginas = app.querySelector(".pdf-paginas");
-    if (!window.pdfjsLib || !paginas) {
-      if (estadoPdf) estadoPdf.innerHTML = "O leitor não ficou disponível. <a href='" + caminho +
-        "' target='_blank' rel='noopener'>Abrir o PDF no navegador</a>.";
+    if (!paginas) return;
+    function fallbackNativo(mensagem) {
+      if (estadoPdf) estadoPdf.textContent = mensagem || "A abrir o visualizador PDF do navegador...";
+      paginas.innerHTML = "<object class='pdf-nativo' data='" + caminho +
+        "#toolbar=1&navpanes=0' type='application/pdf' aria-label='Documento PDF'>" +
+        "<iframe class='pdf-nativo' src='" + caminho +
+        "#toolbar=1' title='Documento PDF'></iframe></object>";
+      if (estadoPdf) {
+        var link = document.createElement("a");
+        link.href = caminho;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "Abrir o PDF no navegador";
+        estadoPdf.appendChild(document.createTextNode(" "));
+        estadoPdf.appendChild(link);
+      }
+    }
+    if (!window.pdfjsLib) {
+      fallbackNativo("O leitor avançado não ficou disponível; a usar o visualizador PDF do navegador.");
       return;
     }
     window.pdfjsLib.GlobalWorkerOptions.workerSrc =
@@ -640,52 +656,41 @@
       });
     }).catch(function (erro) {
       console.error("Falha ao abrir PDF:", erro);
-      if (estadoPdf && estadoPdf.isConnected) estadoPdf.innerHTML =
-        "Não foi possível carregar o documento. Verifica a ligação e tenta novamente. " +
-        "<a href='" + caminho + "' target='_blank' rel='noopener'>Abrir PDF no navegador</a>.";
+      if (paginas && paginas.isConnected) {
+        paginas.innerHTML = "";
+        fallbackNativo("O leitor avançado não conseguiu processar o ficheiro; a usar o visualizador PDF do navegador.");
+      }
     });
   }
 
   function descarregarDocumento(ficheiro, botao) {
-    if (!/^(codigodeestrada|sinais)\.pdf$/.test(ficheiro || "")) return;
-    var caminho = "/original/referencia/" + ficheiro;
-    var textoOriginal = botao.innerHTML;
-    botao.disabled = true;
-    botao.setAttribute("aria-label", "A preparar o download");
-    fetch(caminho, { credentials: "same-origin" }).then(function (resposta) {
-      if (!resposta.ok) throw new Error("HTTP " + resposta.status);
-      return resposta.blob();
-    }).then(function (blob) {
-      var url = URL.createObjectURL(blob);
-      var link = document.createElement("a");
-      link.href = url;
-      link.download = ficheiro;
-      link.style.display = "none";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      window.setTimeout(function () { URL.revokeObjectURL(url); }, 60000);
-    }).catch(function (erro) {
-      console.error("Falha no download do PDF:", erro);
-      var link = document.createElement("a");
-      link.href = caminho;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.download = ficheiro;
-      link.textContent = "Abrir o PDF para guardar";
-      var estadoPdf = app.querySelector(".pdf-estado");
-      if (estadoPdf) {
-        estadoPdf.textContent = "O download directo não foi aceite pelo navegador. Usa o link para guardar o documento.";
-        estadoPdf.appendChild(document.createTextNode(" "));
-        estadoPdf.appendChild(link);
-      }
-    }).finally(function () {
-      botao.disabled = false;
-      botao.innerHTML = textoOriginal;
+    var destinos = {
+      "codigodeestrada.pdf": "/downloads/codigo-da-estrada.pdf",
+      "sinais.pdf": "/downloads/sinais-de-transito.pdf"
+    };
+    var destino = destinos[ficheiro];
+    if (!destino || !botao) return;
+    var estadoPdf = app.querySelector(".pdf-estado");
+    var link = document.createElement("a");
+    link.href = destino;
+    link.download = ficheiro;
+    link.style.display = "none";
+    link.setAttribute("aria-hidden", "true");
+    document.body.appendChild(link);
+    if (estadoPdf) estadoPdf.textContent = "A solicitar o download de " +
+      (ficheiro === "codigodeestrada.pdf" ? "Código da Estrada" : "Sinais de Trânsito") + "...";
+    botao.classList.add("download-accionado");
+    botao.setAttribute("aria-label", "Download solicitado");
+    link.click();
+    link.remove();
+    window.setTimeout(function () {
+      botao.classList.remove("download-accionado");
       botao.setAttribute("aria-label", "Descarregar PDF");
-    });
+      if (estadoPdf && estadoPdf.isConnected) {
+        estadoPdf.textContent = "Se o download não começou automaticamente, verifica as transferências do navegador.";
+      }
+    }, 1800);
   }
-
   function codigoDaEstrada() {
     documento("Código da Estrada", "Consulta o documento do Código da Estrada.", "codigodeestrada.pdf");
   }
