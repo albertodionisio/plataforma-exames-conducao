@@ -9,6 +9,10 @@ on:
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
+      - 'scripts/testar-documentos.js'
+      - 'original/referencia/*.pdf'
+      - 'index.html'
+      - 'styles.css'
       - 'netlify.toml'
       - 'styles-resultados.css'
       - 'app.js'
@@ -53,5 +57,7 @@ jobs:
         run: node scripts/testar-fluxo.js
       - name: Executar validador oficial
         run: node scripts/validar-exames.js
+      - name: Testar barra inferior e PDFs de consulta
+        run: node scripts/testar-documentos.js
       - name: Testar pacote de publicação Netlify
         run: node scripts/build-netlify.js
