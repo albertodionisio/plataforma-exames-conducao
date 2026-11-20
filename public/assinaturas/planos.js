@@ -19,6 +19,63 @@
 
   var CODIGOS_PLANOS = ["free", "weekly_basic", "weekly_full", "monthly_basic", "monthly_full"];
 
+  function dataEmMilissegundos(valor) {
+    if (valor && typeof valor.toMillis === "function") return valor.toMillis();
+    if (valor instanceof Date) return valor.getTime();
+    if (typeof valor === "number") return valor;
+    var convertido = Date.parse(valor);
+    return Number.isFinite(convertido) ? convertido : NaN;
+  }
+
+  function assinaturaAindaActiva(assinatura) {
+    if (!assinatura || assinatura.status !== "active") return false;
+    var agora = Date.now();
+    var inicio = dataEmMilissegundos(assinatura.startsAt);
+    var fim = dataEmMilissegundos(assinatura.graceUntil || assinatura.endsAt);
+    return Number.isFinite(fim) && fim > agora && (!Number.isFinite(inicio) || inicio <= agora);
+  }
+
+  function assinalarPlanoActivo(grupo, codigo) {
+    var indice = CODIGOS_PLANOS.indexOf(codigo);
+    if (indice < 1) return;
+    var radio = grupo.querySelector("#estrada-plano-" + indice);
+    var cartao = radio && radio.closest(".plano-cartao");
+    var topo = cartao && cartao.querySelector(".plano-topo");
+    if (!topo || topo.querySelector(".plano-selo-activo")) return;
+    var selo = elemento("span", "plano-selo-activo", "PLANO ACTIVO");
+    selo.setAttribute("aria-label", "Este é o plano actualmente activo na tua conta");
+    topo.appendChild(selo);
+    cartao.classList.add("plano-cartao-activo");
+  }
+
+  function carregarPlanoActivo(grupo) {
+    var auth = window.firebase && window.firebase.auth && window.firebase.auth();
+    if (!auth) return;
+    var primeiraNotificacao = false;
+    var unsubscribe = null;
+    function aoRestaurarSessao(utilizador) {
+      if (primeiraNotificacao) return;
+      primeiraNotificacao = true;
+      if (unsubscribe) unsubscribe();
+      if (!utilizador || !window.firebase.firestore) return;
+      window.firebase.firestore().collection("subscriptions").doc(utilizador.uid).get()
+        .then(function (snap) {
+          if (!snap || !snap.exists) return;
+          var assinatura = typeof snap.data === "function" ? snap.data() : null;
+          if (assinaturaAindaActiva(assinatura)) assinalarPlanoActivo(grupo, assinatura.planCode);
+        })
+        .catch(function () {
+          // A falha de leitura não deve impedir a consulta dos planos ou um novo checkout.
+        });
+    }
+    if (typeof auth.onAuthStateChanged === "function") {
+      unsubscribe = auth.onAuthStateChanged(aoRestaurarSessao);
+      if (primeiraNotificacao && unsubscribe) unsubscribe();
+    } else {
+      aoRestaurarSessao(auth.currentUser || null);
+    }
+  }
+
   function iniciarCheckout(codigo, botao, aviso) {
     var utilizador = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
     if (!utilizador) {
@@ -54,45 +111,63 @@
 
   function verificarRetornoPagamento(aviso) {
     var referencia = new URLSearchParams(window.location.search).get("payment");
-    var utilizador = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
     if (!referencia) return;
-    if (!utilizador) {
+    var auth = window.firebase && window.firebase.auth && window.firebase.auth();
+    if (!auth) {
       aviso.textContent = "Entra na tua conta para consultar o estado do pagamento.";
       return;
     }
-    var tentativas = 0;
-    var notificouActivacao = false;
-    function consultar() {
-      tentativas++;
-      utilizador.getIdToken().then(function (token) {
-        return fetch("/api/payments/status?transactionId=" + encodeURIComponent(referencia), {
-          headers: { "Authorization": "Bearer " + token }, cache: "no-store"
-        });
-      }).then(function (resposta) {
-        return resposta.json().then(function (dados) {
-          if (!resposta.ok) throw new Error(dados.error || "Não foi possível consultar o pagamento.");
-          return dados;
-        });
-      }).then(function (dados) {
-        if (dados.status === "paid") {
-          aviso.textContent = "Pagamento confirmado. O plano " + dados.planName + " já foi activado na tua conta.";
-          if (!notificouActivacao) {
-            notificouActivacao = true;
-            window.dispatchEvent(new Event("estrada:subscription-updated"));
+    var iniciou = false;
+    var unsubscribe = null;
+    function iniciarConsulta(utilizador) {
+      if (iniciou) return;
+      iniciou = true;
+      if (unsubscribe) unsubscribe();
+      if (!utilizador) {
+        aviso.textContent = "Entra na tua conta para consultar o estado do pagamento. O pagamento não será repetido.";
+        return;
+      }
+      var tentativas = 0;
+      var notificouActivacao = false;
+      function consultar() {
+        tentativas++;
+        utilizador.getIdToken().then(function (token) {
+          return fetch("/api/payments/status?transactionId=" + encodeURIComponent(referencia), {
+            headers: { "Authorization": "Bearer " + token }, cache: "no-store"
+          });
+        }).then(function (resposta) {
+          return resposta.json().then(function (dados) {
+            if (!resposta.ok) throw new Error(dados.error || "Não foi possível consultar o pagamento.");
+            return dados;
+          });
+        }).then(function (dados) {
+          if (dados.status === "paid") {
+            aviso.textContent = "Pagamento confirmado. O plano " + dados.planName + " já foi activado na tua conta.";
+            if (!notificouActivacao) {
+              notificouActivacao = true;
+              window.dispatchEvent(new Event("estrada:subscription-updated"));
+            }
+          } else if (dados.status === "failed" || dados.status === "cancelled") {
+            aviso.textContent = "O pagamento não foi concluído. Podes tentar novamente quando quiseres.";
+          } else if (tentativas < 24) {
+            aviso.textContent = "Estamos a confirmar o pagamento com a ePay. Aguarda, por favor...";
+            window.setTimeout(consultar, 5000);
+          } else {
+            aviso.textContent = "O pagamento ainda está pendente. Não precisas de pagar novamente; actualiza esta página mais tarde para consultar o estado.";
           }
-        } else if (dados.status === "failed" || dados.status === "cancelled") {
-          aviso.textContent = "O pagamento não foi concluído. Podes tentar novamente quando quiseres.";
-        } else if (tentativas < 24) {
-          aviso.textContent = "Estamos a confirmar o pagamento com a ePay. Aguarda, por favor...";
-          window.setTimeout(consultar, 5000);
-        } else {
-          aviso.textContent = "O pagamento ainda está pendente. Podes actualizar esta página daqui a pouco para consultar novamente.";
-        }
-      }).catch(function (erro) {
-        aviso.textContent = erro && erro.message ? erro.message : "Não foi possível consultar o pagamento.";
-      });
+        }).catch(function (erro) {
+          aviso.textContent = erro && erro.message ? erro.message : "Não foi possível consultar o pagamento.";
+        });
+      }
+      consultar();
     }
-    consultar();
+    // O observador só entrega null depois de restaurar a persistência local do Firebase.
+    if (typeof auth.onAuthStateChanged === "function") {
+      unsubscribe = auth.onAuthStateChanged(iniciarConsulta);
+      if (iniciou && unsubscribe) unsubscribe();
+    } else {
+      iniciarConsulta(auth.currentUser || null);
+    }
   }
 
   function renderizar() {
@@ -190,6 +265,7 @@
       grupo.appendChild(cartao);
     });
 
+    carregarPlanoActivo(grupo);
     formulario.appendChild(grupo);
     formulario.appendChild(aviso);
     raiz.appendChild(formulario);
