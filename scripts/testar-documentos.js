@@ -10,6 +10,9 @@ const ler = file => fs.readFileSync(path.join(root, file), "utf8");
 const index = ler("index.html");
 const app = ler("app.js");
 const build = ler("scripts/build-netlify.js");
+const styles = ler("styles.css");
+const vercel = JSON.parse(ler("vercel.json"));
+const headers = ler("_headers");
 
 function verificarPdf(file) {
   const caminho = path.join(root, file);
@@ -33,14 +36,26 @@ assert.match(index, /class="luz-verde"/, "O sinal triangular deve conter a luz v
 assert.match(app, /if \(h === "\/codigo"\) return codigoDaEstrada\(\);/);
 assert.match(app, /if \(h === "\/sinais"\) return sinaisDeTransito\(\);/);
 assert.match(app, /visualizador-pdf/);
+assert.match(app, /documento-toolbar/);
+assert.match(app, /documento-voltar/);
+assert.match(app, /documento-download/);
+assert.match(app, /download='/, "O download deve ser uma acção explícita no controlo superior.");
+assert.match(app, /loading='eager'/, "O PDF deve começar a abrir imediatamente.");
+assert.match(app, /document\.body\.classList\.toggle\("documento-aberto"/);
+assert.doesNotMatch(app, /Abrir em separador/, "Não deve existir um botão de abertura que provoque saída do leitor.");
 assert.match(app, /codigodeestrada\.pdf/);
 assert.match(app, /sinais\.pdf/);
+assert.match(styles, /body\.documento-aberto \.barra-inferior/);
+assert.match(styles, /\.documento-toolbar/);
+assert.match(headers, /Content-Disposition: inline/);
+assert.match(vercel.headers[0].headers.find(h => h.key === "Content-Disposition").value, /^inline$/);
 
 verificarPdf("original/referencia/codigodeestrada.pdf");
 verificarPdf("original/referencia/sinais.pdf");
 
 assert.match(build, /original\/referencia\/codigodeestrada\.pdf/);
 assert.match(build, /original\/referencia\/sinais\.pdf/);
+assert.match(build, /"_headers"/);
 assert.match(build, /PDF obrigatório em falta/);
 assert.match(build, /O APK original não pode ser incluído/);
 
