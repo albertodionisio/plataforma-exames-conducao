@@ -313,8 +313,8 @@ window.EXAMES[24] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 18 do Exame 24",
-      "src": "public/exames/exame24/exame24_18.jpg"
+      "descricao": "Sinal A46 de passagem de peões, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A46-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Travessia de peões.",
