@@ -281,10 +281,12 @@ def main() -> None:
     if args.extract_crops:
         SIGNAL_DIR.mkdir(parents=True, exist_ok=True)
         for filename, page_number, box, code, designation in CROPS:
-            target = SIGNAL_DIR / filename
+            target = SIGNAL_DIR / filename.replace(".png", "-600dpi.png")
             if target.exists() and not args.overwrite_crops:
                 raise SystemExit(f"Recusa de sobrescrita: {target}")
-            image = render_crop_points(doc[page_number - 1], box, args.crop_dpi)
+            # CROPS stores coordinates measured on the 160-DPI page preview.
+            # Convert those pixel coordinates to PDF points before rendering.
+            image = render_crop(doc[page_number - 1], box, args.crop_dpi)
             image.save(target, "PNG", optimize=True)
             manifest["crops"].append({
                 "file": f"public/sinais/{filename}",
