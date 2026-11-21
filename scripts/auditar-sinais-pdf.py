@@ -51,7 +51,7 @@ CROPS = [
     ("sem-codigo-parque-estacionamento-substancias-perigosas.png", 14, (85, 1445, 223, 1630), None, "Parque de estacionamento para veículos que transportam substâncias perigosas"),
     ("sem-codigo-parque-estacionamento-veiculos-policia.png", 14, (1025, 1452, 1165, 1635), None, "Parque de estacionamento para veículos da polícia"),
     ("sem-codigo-parque-estacionamento-pesados-mercadorias-10t.png", 14, (985, 1125, 1115, 1308), None, "Parque de estacionamento para automóveis pesados de mercadorias de peso total superior a 10 toneladas"),
-    ("E28-proibicao-inversao-noite.png", 18, (550, 600, 820, 950), "E28", "Proibição de inversão do sentido de marcha de noite (painel adicional)"),
+    ("E28-proibicao-inversao-noite.png", 18, (530, 620, 850, 1060), "E28", "Proibição de inversão do sentido de marcha de noite (painel adicional)"),
     ("sem-codigo-limite-120-km-dia.png", 18, (880, 640, 1240, 1080), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
 ]
 
