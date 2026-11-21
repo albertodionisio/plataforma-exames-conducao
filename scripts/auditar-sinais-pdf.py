@@ -57,12 +57,13 @@ CROPS = [
 
 
 # Confirmed DADOS-079 replacements. Separate names keep older shared assets intact.
+# Exact vector-object bounds in PDF points: page, (x0, y0, x1, y1), code, designation.
 DADOS079_CROPS = [
-    ("A19-sinal-pdf-600dpi.png", 4, (665, 30, 946, 235), "A19", "Congestionamento de tráfego"),
-    ("D79-sinal-pdf-600dpi.png", 24, (900, 1420, 1245, 1660), "D79", "Local de passagem de nível sem guarda com duas ou mais vias"),
-    ("E12-sinal-pdf-600dpi.png", 26, (936, 995, 1219, 1250), "E12", "Proibição de exceder a velocidade de 80 km/h"),
-    ("G62-sinal-pdf-600dpi.png", 37, (335, 1385, 465, 1557), "G62", "Área reservada para veículos de emergência"),
-    ("E50-sinal-pdf-600dpi.png", 29, (365, 216, 647, 460), "E50", "Estacionamento proibido"),
+    ("A19-sinal-pdf-600dpi.png", 4, (300.08, 15.07, 424.61, 119.61), "A19", "Congestionamento de tráfego"),
+    ("D79-sinal-pdf-600dpi.png", 24, (412.67, 638.91, 541.75, 746.12), "D79", "Local de passagem de nível sem guarda com duas ou mais vias"),
+    ("E12-sinal-pdf-600dpi.png", 26, (422.34, 448.79, 547.54, 574.00), "E12", "Proibição de exceder a velocidade de 80 km/h"),
+    ("G62-sinal-pdf-600dpi.png", 37, (151.83, 623.66, 208.52, 699.68), "G62", "Área reservada para veículos de emergência"),
+    ("E50-sinal-pdf-600dpi.png", 29, (165.18, 98.25, 290.39, 223.46), "E50", "Estacionamento proibido"),
 ]
 
 
@@ -80,6 +81,13 @@ def render_crop(page: fitz.Page, box_px: tuple[int, int, int, int], dpi: int) ->
         box_px[2] * factor,
         box_px[3] * factor,
     ) & page.rect
+    scale = dpi / 72.0
+    pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), clip=clip, alpha=False)
+    return Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+
+def render_crop_points(page: fitz.Page, box_points: tuple[float, float, float, float], dpi: int) -> Image.Image:
+    """Render a crop using exact PDF-point bounds, not preview-pixel estimates."""
+    clip = (fitz.Rect(*box_points) + (-1.5, -1.5, 1.5, 1.5)) & page.rect
     scale = dpi / 72.0
     pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), clip=clip, alpha=False)
     return Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
@@ -262,7 +270,7 @@ def main() -> None:
             target = SIGNAL_DIR / filename
             if target.exists() and not args.overwrite_crops:
                 raise SystemExit(f"Recusa de sobrescrita: {target}")
-            image = render_crop(doc[page_number - 1], box, args.crop_dpi)
+            image = render_crop_points(doc[page_number - 1], box, args.crop_dpi)
             image.save(target, "PNG", optimize=True)
             manifest["crops"].append({
                 "file": f"public/sinais/{filename}",
