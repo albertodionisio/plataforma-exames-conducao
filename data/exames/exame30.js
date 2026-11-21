@@ -367,8 +367,8 @@ window.EXAMES[30] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal triangular?",
     "imagem": {
-      "src": "public/exames/exame30/exame30_21.jpg",
-      "descricao": "Imagem original da pergunta 21 do Exame 30"
+      "src": "public/sinais/A48-passagem-de-nivel.png",
+      "descricao": "Sinal A48 de passagem de nível, extraído do PDF oficial de sinais"
     },
     "opcoes": [
       "Local de passagem de nível com cancela.",
