@@ -10,7 +10,7 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 
 | Nº | Tema | Enunciado de origem | Chave APK | Imagem de origem | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
-| 1 | Sinalização e regras da via | A que grupo pertence o sinal triangular? | A | imagens/exame23/exame23_1.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. |
+| 1 | Sinalização e regras da via | A que grupo pertence o sinal triangular? | A | `public/sinais/A1-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A1 de trabalhos na estrada, página 3 do PDF oficial, recorte vectorial a 600 DPI; substitui a fotografia de baixa resolução. |
 | 2 | Comportamento, prevenção e segurança | Em situação de chuva forte: | A | imagens/exame23/exame23_2.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. |
 | 3 | Comportamento, prevenção e segurança | A definição de estacionamento é: | D | imagens/exame23/exame23_3.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 4 | Comportamento, prevenção e segurança | Os peões podem transitar pela faixa de rodagem nesta estrada? | B | imagens/exame23/exame23_4.jpg | Pendente | Quatro alternativas disponíveis na fonte. |

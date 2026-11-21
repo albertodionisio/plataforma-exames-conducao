@@ -209,3 +209,195 @@ table{
 .link-button{padding:0;border:0;background:none;color:var(--azul);text-decoration:underline;font:inherit;cursor:pointer}
 .auth-google:disabled{opacity:.65;cursor:not-allowed}
 @media(max-width:600px){.conta-utilizador{width:100%;justify-content:flex-end;margin:0}.conta-email{max-width:125px}}
+
+.auth-google{display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.auth-google-icon{display:block;flex:0 0 18px;width:18px;height:18px}
+
+/* Ajuste visual: manter o botão Google no tamanho compacto dos restantes botões */
+.auth-google{width:auto}
+
+/* GER-029 — barra inferior e consulta dos documentos */
+main{padding-bottom:112px}
+.barra-inferior{
+  position:fixed;
+  z-index:20;
+  right:0;
+  bottom:0;
+  left:0;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  align-items:center;
+  min-height:68px;
+  padding:7px 10px calc(7px + env(safe-area-inset-bottom));
+  background:var(--azul);
+  color:var(--marfim);
+  border-top:1px solid rgba(255,255,255,.18);
+  box-shadow:0 -4px 16px rgba(20,40,75,.12);
+}
+.item-barra{
+  display:flex;
+  min-width:0;
+  min-height:48px;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  color:inherit;
+  text-decoration:none;
+  font:600 .7rem/1.2 Arial,sans-serif;
+  opacity:.96;
+}
+.item-barra:focus-visible{
+  outline:2px solid var(--ouro);
+  outline-offset:2px;
+  border-radius:7px;
+}
+.item-barra:hover{opacity:1}
+.icone-barra{
+  width:24px;
+  height:24px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.icone-barra .luz-vermelha{fill:#e35c5c;stroke:none}
+.icone-barra .luz-amarela{fill:#f2c94c;stroke:none}
+.icone-barra .luz-verde{fill:#55b879;stroke:none}
+.item-inactivo{opacity:.42;cursor:default}
+body.documento-aberto{overflow:hidden;background:#fff}
+body.documento-aberto .topo,
+body.documento-aberto .barra-inferior,
+body.documento-aberto .rodape{display:none!important}
+body.documento-aberto main{
+  width:100%;
+  max-width:none;
+  height:100vh;
+  height:100dvh;
+  min-height:0;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+.documento-pagina{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  max-width:none;
+  height:100vh;
+  height:100dvh;
+  margin:0;
+  overflow:hidden;
+  background:#fff;
+}
+.documento-toolbar{
+  display:grid;
+  grid-template-columns:48px minmax(0,1fr) 48px;
+  align-items:center;
+  gap:8px;
+  flex:0 0 58px;
+  min-height:58px;
+  padding:5px 12px;
+  background:var(--azul);
+  color:var(--marfim);
+  box-shadow:0 2px 8px rgba(0,0,0,.16);
+}
+.documento-toolbar h1{
+  min-width:0;
+  margin:0;
+  overflow:hidden;
+  color:var(--marfim);
+  font:700 1.05rem/1.2 Arial,sans-serif;
+  text-align:center;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.documento-voltar,.documento-download{
+  display:flex;
+  width:44px;
+  height:44px;
+  align-items:center;
+  justify-content:center;
+  color:var(--marfim);
+  border-radius:8px;
+  text-decoration:none;
+}
+.documento-download{
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+}
+.documento-download:disabled{opacity:.55;cursor:wait}
+.documento-voltar:focus-visible,.documento-download:focus-visible{
+  outline:2px solid var(--ouro);
+  outline-offset:2px;
+}
+.documento-voltar svg,.documento-download svg{
+  width:25px;
+  height:25px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.pdf-estado{
+  flex:0 0 auto;
+  padding:8px 12px;
+  color:var(--cinza);
+  background:var(--cartao);
+  font: .85rem/1.35 Arial,sans-serif;
+  text-align:center;
+}
+.pdf-paginas{
+  flex:1 1 auto;
+  min-height:0;
+  overflow:auto;
+  overscroll-behavior:contain;
+  padding:12px 8px 28px;
+  background:#e8e8e8;
+  -webkit-overflow-scrolling:touch;
+}
+.pdf-pagina{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:0 auto 14px;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);
+}
+.pdf-nativo{
+  display:block;
+  flex:1 1 auto;
+  width:100%;
+  min-height:0;
+  height:100%;
+  border:0;
+  background:#fff;
+}
+.documento-download.download-accionado{
+  background:rgba(255,255,255,.18);
+  transform:scale(.92);
+  box-shadow:0 0 0 3px rgba(255,255,255,.18);
+}
+.documento-download{
+  transition:transform .15s ease,background-color .15s ease,box-shadow .15s ease;
+}
+@media(prefers-reduced-motion:reduce){
+  .documento-download{transition:none}
+}
+@media(max-width:600px){
+  body.documento-aberto main{padding:0}
+  .documento-toolbar{flex-basis:56px;min-height:56px;padding:4px 8px}
+  .documento-toolbar h1{font-size:1rem}
+  .pdf-paginas{padding:8px 4px 24px}
+}
+@media(max-width:600px){
+  main{padding-bottom:112px}
+  .barra-inferior{min-height:66px;padding-right:5px;padding-left:5px}
+  .item-barra{font-size:.66rem}
+  .icone-barra{width:23px;height:23px}
+
+}

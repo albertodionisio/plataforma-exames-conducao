@@ -97,8 +97,8 @@ window.EXAMES[20] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 6 do Exame 20",
-      "src": "public/exames/exame20/exame20_6.jpg"
+      "descricao": "Sinal A37 de subida de inclinação acentuada, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A37-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Descida de inclinação acentuada.",
@@ -115,8 +115,8 @@ window.EXAMES[20] = [
     "dificuldade": "média",
     "enunciado": "Que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 7 do Exame 20",
-      "src": "public/exames/exame20/exame20_7.jpg"
+      "descricao": "Sinal A18 de visibilidade reduzida, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A18-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pavimento escorregadio.",
@@ -277,8 +277,8 @@ window.EXAMES[20] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 16 do Exame 20",
-      "src": "public/sinais/A19-sinal-pdf.png"
+      "descricao": "Sinal A19 de congestionamento de tráfego, extraído do PDF oficial de sinais a 600 DPI",
+      "src": "public/sinais/A19-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Congestionamento de tráfego.",

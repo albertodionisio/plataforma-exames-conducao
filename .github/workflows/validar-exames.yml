@@ -2,14 +2,20 @@ name: Validar exames
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat/firebase-full-migration]
     paths:
       - 'data/exames/**'
       - 'scripts/validar-exames.js'
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
+      - 'scripts/testar-documentos.js'
+      - 'original/referencia/*.pdf'
+      - 'index.html'
+      - 'styles.css'
       - 'netlify.toml'
+      - 'vercel.json'
+      - '_headers'
       - 'styles-resultados.css'
       - 'app.js'
       - 'config.js'
@@ -22,6 +28,10 @@ on:
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
+      - 'scripts/testar-documentos.js'
+      - 'original/referencia/*.pdf'
+      - 'index.html'
+      - 'styles.css'
       - 'netlify.toml'
       - 'app.js'
       - 'config.js'
@@ -53,5 +63,7 @@ jobs:
         run: node scripts/testar-fluxo.js
       - name: Executar validador oficial
         run: node scripts/validar-exames.js
+      - name: Testar barra inferior e PDFs de consulta
+        run: node scripts/testar-documentos.js
       - name: Testar pacote de publicação Netlify
         run: node scripts/build-netlify.js

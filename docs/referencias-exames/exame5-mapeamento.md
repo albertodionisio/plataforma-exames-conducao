@@ -327,9 +327,15 @@ Exame de origem: Exame 5 do aplicativo original (`original/Codigo_e_Sinais_de_Tr
 
 Os recortes foram feitos a 300 dpi a partir das páginas do PDF, sem a legenda e sem redesenhar. A pág. 5 e a pág. 27 são de quadros diferentes: A54 pertence ao Quadro II (sinais temporários) e E25 ao Quadro V.
 
+## Integração e validação na aplicação
+
+- **Carregamento:** `index.html` inclui `data/exames/exame5.js` antes de `app.js`; o módulo principal usa `window.EXAMES` para obter os exames. A integração já está presente na branch consultada; não foi necessário alterar ficheiros partilhados.
+- **Dados:** 25 perguntas; as 11 imagens referenciadas existem no repositório (8 sinais em `public/sinais/` e 3 fotografias em `public/cenas/`).
+- **Validação estrutural e CI:** o validador oficial e o workflow `Validar exames` passaram no commit `73589e2` (run 44934353829); `Validar definições` também passou (run 44934353814). O build Preview Vercel do mesmo commit ficou READY.
+- **Limitação de teste:** `scripts/testar-fluxo.js` não carrega actualmente o Exame 5 na sua lista de exames de fluxo. Assim, o CI confirma a validação estrutural, mas não demonstra, por si só, o percurso específico do Exame 5 até ao resultado e à revisão. Falta uma validação ponta a ponta específica no navegador (iniciar, responder, submeter, resultado e revisão).
+
 ## Limites e pontos por confirmar
 
-- **Teste no navegador e registo na aplicação:** o exame ainda não está registado em `index.html` e `app.js`, ficheiros reservados pela DADOS-001. O ficheiro `exame5.js` segue o mesmo formato do Exame 1 e passa na validação automática, mas **não foi testado no navegador**.
 - **Perguntas sem base no Código** (1, 6, 7, 15, 17): vêm do original e são orientações técnicas ou gerais. A validade legal não foi confirmada.
 - **Pergunta 25:** a imagem E25 (fim de proibição) é ilustrativa e pode induzir em erro; ficou como no original. Decisão do dono: manter, trocar pelo sinal E24 («Proibição de sinais sonoros») ou retirar a imagem.
 - **Pergunta 3:** a designação certa foi alinhada com o PDF («Local de passagem de nível...»); o APK dizia «Passagem de nível...».

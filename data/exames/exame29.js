@@ -25,8 +25,8 @@ window.EXAMES[29] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame29/exame29_2.jpg",
-      "descricao": "Imagem original da pergunta 2 do Exame 29"
+      "src": "public/sinais/E51-sinal-pdf-600dpi.png",
+      "descricao": "Sinal E51 de paragem e estacionamento proibidos, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Estacionamento proibido.",
@@ -115,8 +115,8 @@ window.EXAMES[29] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal vertical?",
     "imagem": {
-      "src": "public/exames/exame29/exame29_7.jpg",
-      "descricao": "Imagem original da pergunta 7 do Exame 29"
+      "src": "public/sinais/E9-sinal-pdf-600dpi.png",
+      "descricao": "Sinal E9 de fim da proibição de ultrapassar, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Fim da proibição de ultrapassagem.",
@@ -223,8 +223,8 @@ window.EXAMES[29] = [
     "dificuldade": "média",
     "enunciado": "A que grupo pertence o sinal?",
     "imagem": {
-      "src": "public/exames/exame29/exame29_13.jpg",
-      "descricao": "Imagem original da pergunta 13 do Exame 29"
+      "src": "public/sinais/J5-sinal-pdf-600dpi.png",
+      "descricao": "Sinal J5 de praia, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Sinais de direcção para áreas turísticas.",

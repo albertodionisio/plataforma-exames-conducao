@@ -8,7 +8,7 @@ window.EXAMES[30] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "src": "public/exames/exame30/exame30_1.jpg",
-      "descricao": "Imagem original da pergunta 1 do Exame 30"
+      "descricao": "Sinal E5 de trânsito proibido a veículos automóveis e motociclos com carro, extraído do PDF oficial"
     },
     "opcoes": [
       "Trânsito proibido a veículos automóveis e motociclos com carro.",
@@ -223,8 +223,8 @@ window.EXAMES[30] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame30/exame30_13.jpg",
-      "descricao": "Imagem original da pergunta 13 do Exame 30"
+      "src": "public/sinais/A19-sinal-pdf-600dpi.png",
+      "descricao": "Sinal A19 de congestionamento de tráfego, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Terreno falso à direita.",
@@ -367,8 +367,8 @@ window.EXAMES[30] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal triangular?",
     "imagem": {
-      "src": "public/exames/exame30/exame30_21.jpg",
-      "descricao": "Imagem original da pergunta 21 do Exame 30"
+      "src": "public/sinais/A48-passagem-de-nivel.png",
+      "descricao": "Sinal A48 de passagem de nível, extraído do PDF oficial de sinais"
     },
     "opcoes": [
       "Local de passagem de nível com cancela.",
@@ -385,8 +385,8 @@ window.EXAMES[30] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame30/exame30_22.jpg",
-      "descricao": "Imagem original da pergunta 22 do Exame 30"
+      "src": "public/sinais/G26-sinal-pdf-600dpi.png",
+      "descricao": "Sinal G26 de área reservada para autocarros e autocarros médios, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Parque de estacionamento para autocarros e autocarros médios.",

@@ -169,8 +169,8 @@ window.EXAMES[24] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 10 do Exame 24",
-      "src": "public/exames/exame24/exame24_10.jpg"
+      "descricao": "Sinal E51 de paragem e estacionamento proibidos, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/E51-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Paragem e estacionamento proibidos.",
@@ -295,8 +295,8 @@ window.EXAMES[24] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 17 do Exame 24",
-      "src": "public/exames/exame24/exame24_17.jpg"
+      "descricao": "Sinal A19 de congestionamento de tráfego, extraído do PDF oficial de sinais",
+      "src": "public/sinais/A19-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Terreno falso à direita.",
@@ -313,8 +313,8 @@ window.EXAMES[24] = [
     "dificuldade": "média",
     "enunciado": "O significado deste sinal é:",
     "imagem": {
-      "descricao": "Imagem original da pergunta 18 do Exame 24",
-      "src": "public/exames/exame24/exame24_18.jpg"
+      "descricao": "Sinal A46 de passagem de peões, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A46-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Travessia de peões.",

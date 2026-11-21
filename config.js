@@ -2,9 +2,16 @@
 window.APP = {
   nome: "ESTRADA",
   slogan: "Exames de condução em Moçambique",
-  // Chave publishable: pode estar no frontend; nunca colocar aqui service_role/secret keys.
-  supabaseUrl: "https://ldtvbmmweqiaggmsicnu.supabase.co",
-  supabasePublishableKey: "sb_publishable_axaCm24ax4LASWUjezu-pQ_tgl1CXat",
+  // Configuração pública da aplicação Web Firebase (a apiKey do Firebase é identificador público).
+  // O domínio Vercel é usado como authDomain através do proxy /__/auth configurado em vercel.json.
+  firebase: {
+    apiKey: "AIzaSyBTkZuf3RabULuWA9mFQDIqUBbvMHUBQSI",
+    authDomain: (window.location && window.location.hostname === "plataforma-exames-conducao.vercel.app") ? "plataforma-exames-conducao.vercel.app" : "plataforma-exames-conducao.firebaseapp.com",
+    projectId: "plataforma-exames-conducao",
+    storageBucket: "plataforma-exames-conducao.firebasestorage.app",
+    messagingSenderId: "779881429626",
+    appId: "1:779881429626:web:43dd5919d69995c72119c3"
+  },
   googleOAuthEnabled: true,
   totalExames: 51,
   gratuitos: 3,
@@ -12,10 +19,9 @@ window.APP = {
   minutos: 60,
   valorPorResposta: 0.8,
   limiar: 18,
-  // Modo temporário: todos os exames disponíveis ficam abertos para testes, sem pagamentos.
-  // Desactivar apenas com autorização do dono antes da abertura comercial.
-  modoTesteAcessoPago: true,
-  examesAbertosTeste: [1, 51],
+  // O acesso aos exames pagos depende sempre de uma subscrição válida; não existe bypass de testes.
+  modoTesteAcessoPago: false,
+  examesAbertosTeste: [],
   planos: [
     { nome: "Free", preco: "0 MT", validade: "Sem limite", exames: "3 fixos", anuncios: "Sim", suporte: "Normal" },
     { nome: "Semanal Básico", preco: "50 MT", validade: "7 dias", exames: "25", anuncios: "Reduzida", suporte: "Normal" },

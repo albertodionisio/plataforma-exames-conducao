@@ -11,7 +11,7 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 | Nº | Tema | Enunciado de origem | Chave APK | Imagem de origem | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
 | 1 | Veículos, ocupantes e deveres do condutor | Os sistemas de segurança passiva dos veículos, têm a função de: | B | imagens/exame22/exame22_1.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. |
-| 2 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame22/exame22_2.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. |
+| 2 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/G62-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal G62 de área reservada para veículos de emergência, extraído do PDF oficial, página física 37, recorte vectorial a 600 DPI; substitui a fotografia de baixa resolução. |
 | 3 | Comportamento, prevenção e segurança | A sonolência provocada pela fadiga provoca o aumento: | C | imagens/exame22/exame22_3.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. |
 | 4 | Veículos, ocupantes e deveres do condutor | Num veículo equipado com motor Diesel em aceleração, a liberação de muito fumo negro pelo tubo de escape, significa: | A | imagens/exame22/exame22_4.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 5 | Comportamento, prevenção e segurança | Para combater a fadiga e o sono, o melhor remédio é: | A | imagens/exame22/exame22_5.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
@@ -44,3 +44,8 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 - Imagens pendentes; o conteúdo usa `imagem: null`.
 - Não integrado no catálogo nem testado no navegador nesta tarefa.
 - Nenhuma regra de acesso, assinatura, cronómetro ou ficheiro de integração foi alterado.
+
+
+## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
+
+- Pergunta 2: a fotografia mostrava o sinal G62 (área reservada para veículos de emergência). Substituída pela imagem isolada de alta qualidade extraída do PDF oficial.

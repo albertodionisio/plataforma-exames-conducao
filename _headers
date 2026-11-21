@@ -1,0 +1,10 @@
+/original/referencia/*.pdf
+  Content-Type: application/pdf
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+
+/downloads/*.pdf
+  Content-Type: application/pdf
+  Content-Disposition: attachment
+  X-Content-Type-Options: nosniff
+  Cache-Control: private, no-store

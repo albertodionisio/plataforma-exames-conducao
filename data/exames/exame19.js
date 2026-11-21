@@ -26,7 +26,7 @@ window.EXAMES[19] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 2 do Exame 19",
-      "src": "public/sinais/A19-sinal-pdf.png"
+      "src": "public/sinais/A19-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Zona onde só podem passar três carros de cada vez.",
@@ -295,8 +295,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 17 do Exame 19",
-      "src": "public/exames/exame19/exame19_17.jpg"
+      "descricao": "Sinal E37 de proibição de trânsito a veículos de peso por eixo múltiplo superior a 10 t, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/E37-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido ao conjunto de veículos de mercadorias, de peso total superior a 10t.",
@@ -313,8 +313,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de perigo?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 18 do Exame 19",
-      "src": "public/exames/exame19/exame19_18.jpg"
+      "descricao": "Sinal A8 de sinalização luminosa, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A8-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Controle policial por pirilampos.",
@@ -349,8 +349,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "Que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 20 do Exame 19",
-      "src": "public/exames/exame19/exame19_20.jpg"
+      "descricao": "Sinal A19 de congestionamento de tráfego, extraído do PDF oficial de sinais",
+      "src": "public/sinais/A19-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Terreno falso à direita.",
@@ -403,8 +403,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 23 do Exame 19",
-      "src": "public/exames/exame19/exame19_23.jpg"
+      "descricao": "Sinal E50 de estacionamento proibido, extraído do PDF oficial a 600 DPI; a chave original apresenta divergência por indicar paragem e estacionamento proibidos",
+      "src": "public/sinais/E50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Paragem e estacionamento proibidos.",

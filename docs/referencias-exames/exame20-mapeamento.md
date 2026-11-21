@@ -15,8 +15,8 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 3 | Comportamento e segurança do condutor | Que entende-se por consciência moral? | B | imagens/exame20/exame20_3.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 4 | Circulação, velocidade e manobras | Os condutores não podem exceder as seguintes velocidades instantâneas (em km/h) | B | imagens/exame20/exame20_4.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 5 | Comportamento e segurança do condutor | Os sinais sonoros: | A | imagens/exame20/exame20_5.jpg | Pendente | Quatro alternativas existentes na fonte. |
-| 6 | Sinalização e regras da via | O significado deste sinal é: | B | imagens/exame20/exame20_6.jpg | Pendente | Quatro alternativas existentes na fonte. |
-| 7 | Sinalização e regras da via | Que indica o sinal? | B | imagens/exame20/exame20_7.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 6 | Sinalização e regras da via | O significado deste sinal é: | B | `public/sinais/A37-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A37 de subida de inclinação acentuada, página 4 do PDF oficial, recorte vectorial a 600 DPI. |
+| 7 | Sinalização e regras da via | Que indica o sinal? | B | `public/sinais/A18-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A18 de visibilidade reduzida, página 4 do PDF oficial, recorte vectorial a 600 DPI. |
 | 8 | Veículos, ocupantes e carga | É necessário regular e ajustar o encosto de cabeça para a altura dos ocupantes? | C | imagens/exame20/exame20_8.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 9 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame20/exame20_9.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 10 | Condução e segurança rodoviária | As pessoas que são encontradas a conduzir sem possuir a carta de condução | A | imagens/exame20/exame20_10.jpg | Pendente | Quatro alternativas existentes na fonte. |
@@ -25,7 +25,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 13 | Veículos, ocupantes e carga | O condutor selecciona o acto motor a realizar em que momento? | C | imagens/exame20/exame20_13.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 14 | Sinalização e regras da via | As luzes de máximos, com nevoeiro (cacimba): | B | imagens/exame20/exame20_14.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 15 | Álcool, substâncias e comportamento | Se o condutor consome álcool, em que momento aumenta o risco de acidente? | A | imagens/exame20/exame20_15.jpg | Pendente | Quatro alternativas existentes na fonte. |
-| 16 | Sinalização e regras da via | O significado deste sinal é: | A | imagens/exame20/exame20_16.jpg | Pendente | Quatro alternativas existentes na fonte. |
+| 16 | Sinalização e regras da via | O significado deste sinal é: | A | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, página 4 do PDF oficial; substitui a imagem antiga. |
 | 17 | Comportamento e segurança do condutor | Os jovens, têm mais possibilidades de ter acidentes rodoviários | C | imagens/exame20/exame20_17.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 18 | Circulação, velocidade e manobras | Qual é a velocidade instantânea que não devem exceder os automóveis ligeiros de passageiros e mistos dentro das localidades? | B | imagens/exame20/exame20_18.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 19 | Veículos, ocupantes e carga | A definição de estacionamento é: | C | imagens/exame20/exame20_19.jpg | Pendente | Quatro alternativas existentes na fonte. |

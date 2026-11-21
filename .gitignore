@@ -1,4 +1,12 @@
 # Segredos e configuração local
+.firebaserc
+.firebase/
+service-account*.json
+*-service-account*.json
+*firebase-adminsdk*.json
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
 .env
 .env.*
 !.env.example

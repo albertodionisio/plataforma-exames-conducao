@@ -9,12 +9,184 @@
   }
 
   function beneficios(plano) {
+    var quantidade = Number.parseInt(String(plano.exames || ""), 10);
+    var faixa = Number.isInteger(quantidade) && quantidade > 0 ?
+      "Acesso aos Exames 1–" + quantidade : "Acesso conforme o plano";
     return [
-      { titulo: plano.exames + " exames", detalhe: "Acesso conforme o plano" },
+      { titulo: plano.exames + " exames", detalhe: faixa },
       { titulo: plano.anuncios === "Sim" ? "Com publicidade" : plano.anuncios === "Reduzida" ? "Publicidade reduzida" : "Sem anúncios", detalhe: "Condição durante a validade" },
       { titulo: plano.suporte === "Prioritário" ? "Atendimento prioritário" : "Atendimento normal", detalhe: "Apoio ao utilizador" },
       { titulo: plano.validade === "Sem limite" ? "Acesso sem limite de tempo" : "Válido por " + plano.validade, detalhe: "Tentativas ilimitadas nos exames disponíveis" }
     ];
+  }
+
+  var CODIGOS_PLANOS = ["free", "weekly_basic", "weekly_full", "monthly_basic", "monthly_full"];
+
+  function dataEmMilissegundos(valor) {
+    if (valor && typeof valor.toMillis === "function") return valor.toMillis();
+    if (valor instanceof Date) return valor.getTime();
+    if (typeof valor === "number") return valor;
+    var convertido = Date.parse(valor);
+    return Number.isFinite(convertido) ? convertido : NaN;
+  }
+
+  function estadoDaAssinatura(assinatura, uid) {
+    if (!assinatura || assinatura.status !== "active" || (uid && assinatura.uid !== uid)) return "";
+    var limites = { weekly_basic: 25, monthly_basic: 25, weekly_full: 50, monthly_full: 50 };
+    var limite = limites[assinatura.planCode] || 0;
+    if (!limite || Number(assinatura.exams) !== limite) return "";
+    var agora = Date.now();
+    var inicio = dataEmMilissegundos(assinatura.startsAt);
+    var fim = dataEmMilissegundos(assinatura.endsAt);
+    var carencia = dataEmMilissegundos(assinatura.graceUntil);
+    if (!Number.isFinite(inicio) || !Number.isFinite(fim) || inicio > agora) return "";
+    var acessoAte = Number.isFinite(carencia) ? Math.max(fim, carencia) : fim;
+    if (acessoAte <= agora) return "";
+    return fim <= agora ? "EM CARÊNCIA" : "PLANO ACTIVO";
+  }
+
+  function assinalarPlanoActivo(grupo, codigo, estado) {
+    var indice = CODIGOS_PLANOS.indexOf(codigo);
+    if (indice < 1 || !estado) return;
+    var radio = grupo.querySelector("#estrada-plano-" + indice);
+    var cartao = radio && radio.closest(".plano-cartao");
+    var topo = cartao && cartao.querySelector(".plano-topo");
+    if (!topo || topo.querySelector(".plano-selo-activo")) return;
+    var selo = elemento("span", "plano-selo-activo", estado);
+    selo.setAttribute("aria-label", estado === "EM CARÊNCIA" ?
+      "Este plano está dentro do período de carência" : "Este é o plano actualmente activo na tua conta");
+    topo.appendChild(selo);
+    cartao.classList.add("plano-cartao-activo");
+  }
+
+  function carregarPlanoActivo(grupo) {
+    var auth = window.firebase && window.firebase.auth && window.firebase.auth();
+    if (!auth) return;
+    var primeiraNotificacao = false;
+    var unsubscribe = null;
+    function aoRestaurarSessao(utilizador) {
+      if (primeiraNotificacao || !utilizador) return;
+      primeiraNotificacao = true;
+      if (unsubscribe) unsubscribe();
+      if (!window.firebase.firestore) return;
+      window.firebase.firestore().collection("subscriptions").doc(utilizador.uid).get()
+        .then(function (snap) {
+          if (!snap || !snap.exists) return;
+          var assinatura = typeof snap.data === "function" ? snap.data() : null;
+          var estado = estadoDaAssinatura(assinatura, utilizador.uid);
+          if (estado) assinalarPlanoActivo(grupo, assinatura.planCode, estado);
+        })
+        .catch(function () {
+          // A falha de leitura não deve impedir a consulta dos planos ou um novo checkout.
+        });
+    }
+    if (typeof auth.onAuthStateChanged === "function") {
+      unsubscribe = auth.onAuthStateChanged(aoRestaurarSessao);
+      if (primeiraNotificacao && unsubscribe) unsubscribe();
+    } else {
+      aoRestaurarSessao(auth.currentUser || null);
+    }
+  }
+
+  function iniciarCheckout(codigo, botao, aviso) {
+    var utilizador = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
+    if (!utilizador) {
+      aviso.textContent = "Inicia sessão para poderes aderir a um plano pago. Depois volta a esta página.";
+      window.location.hash = "#/entrar";
+      return;
+    }
+    botao.disabled = true;
+    botao.textContent = "A preparar pagamento...";
+    utilizador.getIdToken().then(function (token) {
+      return fetch("/api/payments/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Authorization": "Bearer " + token },
+        body: JSON.stringify({ planCode: codigo })
+      });
+    }).then(function (resposta) {
+      return resposta.json().then(function (dados) {
+        if (!resposta.ok) throw new Error(dados.error || "Não foi possível iniciar o pagamento.");
+        return dados;
+      });
+    }).then(function (dados) {
+      var destino = new URL(dados.payment_url);
+      if (destino.protocol !== "https:" || destino.hostname !== "checkout.epay.co.mz") {
+        throw new Error("A ePay devolveu um endereço de pagamento inválido.");
+      }
+      window.location.assign(destino.toString());
+    }).catch(function (erro) {
+      aviso.textContent = erro && erro.message ? erro.message : "Não foi possível iniciar o pagamento. Tenta novamente.";
+      botao.disabled = false;
+      botao.textContent = "Tentar novamente";
+    });
+  }
+
+  function verificarRetornoPagamento(aviso) {
+    var referencia = new URLSearchParams(window.location.search).get("payment");
+    if (!referencia) return;
+    var auth = window.firebase && window.firebase.auth && window.firebase.auth();
+    if (!auth) {
+      aviso.textContent = "Entra na tua conta para consultar o estado do pagamento.";
+      return;
+    }
+    var iniciou = false;
+    var unsubscribe = null;
+    function iniciarConsulta(utilizador) {
+      if (iniciou) return;
+      if (!utilizador) {
+        aviso.textContent = "Entra na tua conta para consultar o estado do pagamento. O pagamento não será repetido.";
+        return;
+      }
+      iniciou = true;
+      if (unsubscribe) unsubscribe();
+      var tentativas = 0;
+      var notificouActivacao = false;
+      function consultar() {
+        tentativas++;
+        utilizador.getIdToken().then(function (token) {
+          return fetch("/api/payments/status?transactionId=" + encodeURIComponent(referencia), {
+            headers: { "Authorization": "Bearer " + token }, cache: "no-store"
+          });
+        }).then(function (resposta) {
+          return resposta.json().then(function (dados) {
+            if (!resposta.ok) throw new Error(dados.error || "Não foi possível consultar o pagamento.");
+            return dados;
+          });
+        }).then(function (dados) {
+          if (dados.status === "paid" && dados.subscriptionActivated === true) {
+            aviso.textContent = "Pagamento confirmado. O plano " + dados.planName + " já foi activado na tua conta.";
+            if (!notificouActivacao) {
+              notificouActivacao = true;
+              window.dispatchEvent(new Event("estrada:subscription-updated"));
+            }
+          } else if (dados.status === "paid") {
+            if (tentativas < 24) {
+              aviso.textContent = "Pagamento confirmado. Estamos a concluir a activação do plano " + dados.planName + ". Não faças outro pagamento.";
+              window.setTimeout(consultar, 5000);
+            } else {
+              aviso.textContent = "O pagamento foi confirmado, mas a activação ainda não foi validada. Não faças outro pagamento; contacta o suporte ou tenta consultar novamente mais tarde.";
+            }
+          } else if (dados.status === "failed" || dados.status === "cancelled") {
+            aviso.textContent = "O pagamento não foi concluído. Podes tentar novamente quando quiseres.";
+          } else if (tentativas < 24) {
+            aviso.textContent = "Estamos a confirmar o pagamento com a ePay. Aguarda, por favor...";
+            window.setTimeout(consultar, 5000);
+          } else {
+            aviso.textContent = "O pagamento ainda está pendente. Não precisas de pagar novamente; actualiza esta página mais tarde para consultar o estado.";
+          }
+        }).catch(function (erro) {
+          aviso.textContent = erro && erro.message ? erro.message : "Não foi possível consultar o pagamento.";
+        });
+      }
+      consultar();
+    }
+    // O observador só entrega null depois de restaurar a persistência local do Firebase.
+    if (typeof auth.onAuthStateChanged === "function") {
+      unsubscribe = auth.onAuthStateChanged(iniciarConsulta);
+      if (iniciou && unsubscribe) unsubscribe();
+    } else {
+      iniciarConsulta(auth.currentUser || null);
+    }
   }
 
   function renderizar() {
@@ -96,9 +268,12 @@
       botao.type = "button";
       botao.addEventListener("click", function () {
         seleccionar(indice);
-        aviso.textContent = plano.preco === "0 MT"
-          ? "O plano Free é gratuito. A adesão aos planos pagos ainda não está disponível nesta versão."
-          : "O plano " + plano.nome + " foi seleccionado. A adesão e os pagamentos ainda não estão activos nesta versão.";
+        if (plano.preco === "0 MT") {
+          aviso.textContent = "O plano Free é gratuito. Podes consultar os exames disponíveis.";
+          window.location.hash = "#/exames";
+          return;
+        }
+        iniciarCheckout(CODIGOS_PLANOS[indice], botao, aviso);
       });
 
       cartao.appendChild(radio);
@@ -109,10 +284,19 @@
       grupo.appendChild(cartao);
     });
 
+    raiz._estradaGrupoPlanos = grupo;
+    if (!raiz._estradaListenerPlanoActivo) {
+      raiz._estradaListenerPlanoActivo = function () {
+        if (raiz._estradaGrupoPlanos) carregarPlanoActivo(raiz._estradaGrupoPlanos);
+      };
+      window.addEventListener("estrada:subscription-updated", raiz._estradaListenerPlanoActivo);
+    }
+    carregarPlanoActivo(grupo);
     formulario.appendChild(grupo);
     formulario.appendChild(aviso);
     raiz.appendChild(formulario);
     raiz.appendChild(elemento("p", "assinaturas-nota", "Os preços e as condições apresentados correspondem aos planos actualmente definidos no ESTRADA."));
+    verificarRetornoPagamento(aviso);
   }
 
   window.renderizarPlanosEstrada = renderizar;

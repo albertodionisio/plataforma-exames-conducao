@@ -313,8 +313,8 @@ window.EXAMES[25] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Sinal circular de proibição com bordo vermelho, junto a uma ponte",
-      "src": "public/exames/exame25/exame25_18.jpg"
+      "descricao": "Sinal E19 de proibição de trânsito a veículos com peso por eixo superior a 2 t, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/E19-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido a veículos de peso total superior a 2 toneladas.",

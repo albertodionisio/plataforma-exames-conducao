@@ -6,48 +6,149 @@
   var A = window.APP || {}, EX = window.EXAMES || {};
   var app = document.getElementById("app");
   var estado = null, timer = null;
-  var supabaseClient = null, authUser = null, authReady = false, authAvailable = false;
+  var firebaseApp = null, firebaseAuth = null, firestoreDb = null;
+  var authUser = null, authReady = false, authAvailable = false;
+  var subscriptionData = null, subscriptionReady = false;
   var authMode = "login", authFeedback = "";
 
   function iniciarAuth() {
+    var config = A.firebase;
+    if (!window.firebase || !config || !config.apiKey || !config.authDomain ||
+        !config.projectId || !config.appId) {
+      authReady = true;
+      authAvailable = false;
+      return Promise.resolve();
+    }
     try {
-      if (!window.supabase || typeof window.supabase.createClient !== "function" ||
-          !A.supabaseUrl || !A.supabasePublishableKey) {
-        authReady = true;
-        authAvailable = false;
-        return Promise.resolve();
-      }
-      supabaseClient = window.supabase.createClient(A.supabaseUrl, A.supabasePublishableKey, {
-        auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
-      });
+      firebaseApp = window.firebase.apps.length ? window.firebase.app() : window.firebase.initializeApp(config);
+      firebaseAuth = window.firebase.auth();
+      firestoreDb = window.firebase.firestore();
+      firebaseAuth.languageCode = "pt";
       authAvailable = true;
-      supabaseClient.auth.onAuthStateChange(function (event, session) {
-        authUser = session && session.user ? session.user : null;
-        renderConta();
-        if (event === "SIGNED_IN" && authUser) retomarExamePendente();
-        if (event === "SIGNED_OUT" && location.hash.indexOf("#/exame/") === 0) location.hash = "#/";
-      });
-      return supabaseClient.auth.getSession().then(function (resultado) {
-        authUser = resultado && resultado.data && resultado.data.session ?
-          resultado.data.session.user : null;
-        authReady = true;
-        renderConta();
+      return firebaseAuth.setPersistence(window.firebase.auth.Auth.Persistence.LOCAL).then(function () {
+        return new Promise(function (resolve) {
+          var initialised = false;
+          firebaseAuth.onAuthStateChanged(function (user) {
+            if (!user || (authUser && authUser.uid !== user.uid)) authDisplayName = "";
+            authUser = user || null;
+            authReady = true;
+            renderConta();
+            if (authUser) {
+              sincronizarPerfil(authUser).catch(function (error) {
+                console.warn("Perfil Firebase ainda não sincronizado:", error && error.code);
+              });
+              carregarSubscricao(authUser).then(function () {
+                var retomou = retomarExamePendente();
+                if (!retomou && location.hash === "#/entrar") {
+                  location.hash = "#/exames";
+                  if (location.hash === "#/exames") rota();
+                } else if (!retomou) {
+                  rota();
+                }
+              });
+            } else {
+              subscriptionData = null;
+              subscriptionReady = true;
+            }
+            if (!initialised) { initialised = true; resolve(); }
+          }, function () {
+            authReady = true;
+            authAvailable = false;
+            if (!initialised) { initialised = true; resolve(); }
+          });
+          firebaseAuth.getRedirectResult().catch(function (error) {
+            authFeedback = mensagemAuth(error, "Não foi possível concluir o acesso com Google.");
+          });
+        });
       }).catch(function () {
         authReady = true;
         authAvailable = false;
       });
-    } catch (e) {
+    } catch (error) {
       authReady = true;
       authAvailable = false;
       return Promise.resolve();
     }
   }
 
+  function sincronizarPerfil(user, telefone) {
+    if (!firestoreDb || !user || !user.uid) return Promise.resolve();
+    var perfil = {
+      uid: user.uid,
+      updatedAt: window.firebase.firestore.FieldValue.serverTimestamp()
+    };
+    if (user.email) perfil.email = user.email;
+    if (telefone) perfil.phone = telefone;
+    if (user.displayName) perfil.displayName = user.displayName;
+    if (user.photoURL) perfil.photoURL = user.photoURL;
+    var ref = firestoreDb.collection("users").doc(user.uid);
+    var claims = telefone ? Promise.resolve() :
+      (typeof user.getIdTokenResult === "function" ?
+        user.getIdTokenResult().then(function (resultado) {
+          if (resultado.claims && resultado.claims.phoneAuth === true &&
+              typeof resultado.claims.phone === "string") perfil.phone = resultado.claims.phone;
+        }) : Promise.resolve());
+    return claims.then(function () {
+      return ref.get().then(function (snap) {
+        var existente = snap.exists ? snap.data() : {};
+        if (!perfil.displayName && existente.displayName) {
+          authDisplayName = existente.displayName;
+        } else if (perfil.displayName) {
+          authDisplayName = perfil.displayName;
+        }
+        if (!snap.exists) perfil.createdAt = window.firebase.firestore.FieldValue.serverTimestamp();
+        return ref.set(perfil, { merge: true }).then(function () {
+          renderConta();
+          return perfil;
+        });
+      });
+    });
+  }
+
+  function carregarSubscricao(user) {
+    subscriptionData = null;
+    subscriptionReady = false;
+    if (!firestoreDb || !user || !user.uid) {
+      subscriptionData = null;
+      subscriptionReady = true;
+      return Promise.resolve(null);
+    }
+    return firestoreDb.collection("subscriptions").doc(user.uid).get().then(function (snap) {
+      if (authUser && authUser.uid === user.uid) subscriptionData = snap.exists ? snap.data() : null;
+      subscriptionReady = true;
+      return subscriptionData;
+    }).catch(function (error) {
+      if (authUser && authUser.uid === user.uid) subscriptionData = null;
+      subscriptionReady = true;
+      console.warn("Não foi possível carregar a assinatura:", error && error.code);
+      return null;
+    });
+  }
+
+  function mensagemAuth(error, fallback) {
+    var code = error && error.code ? error.code : "";
+    var mensagens = {
+      "auth/email-already-in-use": "Este email já está associado a uma conta.",
+      "auth/invalid-email": "O endereço de email não é válido.",
+      "auth/weak-password": "A palavra-passe deve ter pelo menos 8 caracteres.",
+      "auth/user-not-found": "Não existe uma conta com este email.",
+      "auth/wrong-password": "A palavra-passe está incorrecta.",
+      "auth/invalid-credential": "Email ou palavra-passe incorrectos.",
+      "auth/too-many-requests": "Demasiadas tentativas. Aguarda um pouco e tenta novamente.",
+      "auth/popup-closed-by-user": "A janela de autenticação foi fechada antes de concluir.",
+      "auth/popup-blocked": "O navegador bloqueou a janela de autenticação. Tenta novamente.",
+      "auth/unauthorized-domain": "Este domínio ainda não está autorizado no Firebase Authentication.",
+      "auth/network-request-failed": "Falha de ligação. Verifica a Internet e tenta novamente."
+    };
+    return mensagens[code] || (error && error.message) || fallback;
+  }
+  var authDisplayName = "";
   function renderConta() {
     var el = document.getElementById("conta-utilizador");
     if (!el) return;
+    var nome = authUser ? (authUser.displayName || authDisplayName || "Conta") : "";
     el.innerHTML = authUser ?
-      "<span class='conta-email'>" + esc(authUser.email || "Conta autenticada") +
+      "<span class='conta-email'>" + esc(nome) +
       "</span><button class='conta-sair' type='button' data-action='auth-logout'>Sair</button>" :
       "<a class='conta-entrar' href='#/entrar'>Entrar</a>";
   }
@@ -69,105 +170,204 @@
 
   function telaAutenticacao() {
     if (!authAvailable) {
-      app.innerHTML = "<h1>Entrar</h1><div class='card aviso'>O serviço de autenticação não está disponível neste momento. Tenta novamente mais tarde.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
+      app.innerHTML = "<h1>Entrar</h1><div class='card aviso'>O serviço Firebase ainda não está disponível. Verifica a configuração e os domínios autorizados.</div><p><a class='btn sec' href='#/exames'>Voltar aos exames</a></p>";
       return;
     }
     var registo = authMode === "registo";
+    var camposNome = registo ?
+      "<label for='auth-first-name'>Primeiro nome</label><input id='auth-first-name' name='firstName' type='text' autocomplete='given-name' maxlength='50' required>" +
+      "<label for='auth-last-name'>Sobrenome ou apelido</label><input id='auth-last-name' name='lastName' type='text' autocomplete='family-name' maxlength='60'>" : "";
+    var campoIdentificador =
+      "<label for='auth-identifier'>Email ou número de telefone</label>" +
+      "<input id='auth-identifier' name='identifier' type='text' autocomplete='username' placeholder='Email ou número de telefone' required maxlength='254' autocapitalize='none' spellcheck='false'>";
     app.innerHTML = "<section class='auth-card card' aria-labelledby='auth-titulo'>" +
       "<h1 id='auth-titulo'>" + (registo ? "Criar conta" : "Entrar na tua conta") + "</h1>" +
-      "<p>" + (registo ? "Regista-te para começares a realizar exames." : "Inicia sessão para continuares para o exame seleccionado.") + "</p>" +
-      "<form id='auth-form'>" +
-      "<label for='auth-email'>Email</label><input id='auth-email' name='email' type='email' autocomplete='email' required maxlength='254'>" +
-      "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' required>" +
+      "<p>" + (registo ? "Regista-te para começares a realizar exames. Podes usar o teu email ou número de telefone." :
+        "Inicia sessão com o teu email ou número de telefone para continuares.") + "</p>" +
+      "<form id='auth-form'>" + camposNome + campoIdentificador +
+      "<label for='auth-password'>Palavra-passe</label><input id='auth-password' name='password' type='password' autocomplete='" + (registo ? "new-password" : "current-password") + "' minlength='8' maxlength='128' required>" +
+      (registo ? "<label for='auth-confirm-password'>Confirmar palavra-passe</label><input id='auth-confirm-password' name='confirmPassword' type='password' autocomplete='new-password' minlength='8' maxlength='128' required>" : "") +
       "<button class='btn auth-submit' type='submit'>" + (registo ? "Criar conta" : "Entrar") + "</button></form>" +
       (authFeedback ? "<p class='auth-feedback' role='status'>" + esc(authFeedback) + "</p>" : "") +
+      (!registo ? "<p><button class='link-button' type='button' data-action='auth-reset'>Esqueci-me da palavra-passe</button></p>" : "") +
       "<p class='auth-alternar'>" + (registo ? "Já tens conta?" : "Ainda não tens conta?") +
       " <button class='link-button' type='button' data-action='auth-mode'>" + (registo ? "Entrar" : "Criar conta") + "</button></p>" +
-      (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'>Continuar com Google</button>" : "<button class='btn sec auth-google' type='button' disabled aria-disabled='true'>Continuar com Google — brevemente</button>") +
+      (A.googleOAuthEnabled ? "<button class='btn sec auth-google' type='button' data-action='auth-google'><svg class='auth-google-icon' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path fill='#4285F4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/><path fill='#34A853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.15v2.84A11 11 0 0 0 12 23z'/><path fill='#FBBC05' d='M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.15a11 11 0 0 0 0 9.88l3.69-2.84z'/><path fill='#EA4335' d='M12 4.37c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.09 14.97 0 12 0a11 11 0 0 0-9.85 7.06l3.69 2.84C6.71 7.3 9.14 4.37 12 4.37z'/></svg><span>Continuar com Google</span></button>" : "") +
       "<p><a href='#/exames' data-action='auth-cancel'>Voltar ao catálogo</a></p></section>";
   }
-
   function concluirAutenticacao(user) {
     authUser = user || authUser;
+    authDisplayName = authUser && authUser.displayName ? authUser.displayName : "";
     authFeedback = "";
     renderConta();
-    if (!retomarExamePendente() && location.hash === "#/entrar") { location.hash = "#/exames"; if (location.hash === "#/exames") rota(); }
   }
 
+  function normalizarTelefoneCliente(valor) {
+    var telefone = String(valor || "").trim().replace(/[\s().-]/g, "");
+    if (/^00258\d{9}$/.test(telefone)) telefone = "+258" + telefone.slice(5);
+    if (/^258\d{9}$/.test(telefone)) telefone = "+" + telefone;
+    if (/^\d{9}$/.test(telefone)) telefone = "+258" + telefone;
+    // Vodacom: 84/85. Movitel: 86/87/88. Sempre 9 algarismos nacionais.
+    return /^\+258(?:84|85|86|87|88)\d{7}$/.test(telefone) ? telefone : "";
+  }
+  function autenticarComTelefone(telefone, password, confirmar, nomeProprio, apelido) {
+    fetch("/api/auth/phone", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "same-origin",
+      body: JSON.stringify({
+        action: authMode === "registo" ? "register" : "login",
+        phone: telefone,
+        password: password,
+        confirmPassword: confirmar,
+        firstName: authMode === "registo" ? nomeProprio : undefined,
+        lastName: authMode === "registo" ? apelido : undefined
+      })
+    }).then(function (response) {
+      return response.json().then(function (data) {
+        if (!response.ok) throw new Error(data && data.error ? data.error : "Não foi possível autenticar.");
+        return data;
+      });
+    }).then(function (data) {
+      return firebaseAuth.signInWithCustomToken(data.token).then(function (credential) {
+        var displayName = String(data.displayName || [data.firstName, data.lastName].filter(Boolean).join(" ")).trim();
+        var actualizarNome = displayName && typeof credential.user.updateProfile === "function" ?
+          credential.user.updateProfile({ displayName: displayName }) : Promise.resolve();
+        return actualizarNome.then(function () {
+          return sincronizarPerfil(credential.user, data.phone);
+        }).then(function () {
+          concluirAutenticacao(credential.user);
+        });
+      });
+    }).catch(function (error) {
+      authFeedback = error && error.message ? error.message : "Não foi possível concluir o acesso por telefone.";
+      telaAutenticacao();
+    });
+  }
   function terminarAutenticacao(event) {
     var form = event.target;
     if (!form || form.id !== "auth-form") return;
     event.preventDefault();
-    if (!authAvailable || !supabaseClient) {
-      authFeedback = "Serviço de autenticação indisponível.";
+    if (!authAvailable || !firebaseAuth) {
+      authFeedback = "Serviço Firebase indisponível.";
       return telaAutenticacao();
     }
-    var emailEl = form.querySelector("#auth-email");
     var passwordEl = form.querySelector("#auth-password");
-    var email = emailEl ? emailEl.value.trim() : "";
     var password = passwordEl ? passwordEl.value : "";
-    if (!email || password.length < 8) {
-      authFeedback = "Indica um email válido e uma palavra-passe com pelo menos 8 caracteres.";
+    var confirmarEl = form.querySelector("#auth-confirm-password");
+    var confirmar = confirmarEl ? confirmarEl.value : "";
+    var primeiroNomeEl = form.querySelector("#auth-first-name");
+    var apelidoEl = form.querySelector("#auth-last-name");
+    var nomeProprio = primeiroNomeEl ? primeiroNomeEl.value.trim().replace(/\s+/g, " ") : "";
+    var apelido = apelidoEl ? apelidoEl.value.trim().replace(/\s+/g, " ") : "";
+    if (authMode === "registo" && (!nomeProprio || nomeProprio.length > 50 || apelido.length > 60)) {
+      authFeedback = "Indica o primeiro nome (até 50 caracteres) e, se quiseres, um sobrenome ou apelido (até 60 caracteres).";
       return telaAutenticacao();
     }
+    if (password.length < 8 || password.length > 128) {
+      authFeedback = "A palavra-passe deve ter entre 8 e 128 caracteres.";
+      return telaAutenticacao();
+    }
+    if (authMode === "registo" && password !== confirmar) {
+      authFeedback = "As palavras-passe não coincidem.";
+      return telaAutenticacao();
+    }
+    var identificadorEl = form.querySelector("#auth-identifier");
+    var identificador = identificadorEl ? identificadorEl.value.trim() : "";
+    var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(identificador);
+    var telefone = normalizarTelefoneCliente(identificador);
+    if (emailValido) {
+      // O Firebase Authentication valida o endereço de email.
+    } else if (telefone) {
+      authFeedback = "A processar...";
+      telaAutenticacao();
+      autenticarComTelefone(telefone, password, confirmar, nomeProprio, apelido);
+      return;
+    } else {
+      authFeedback = "Indica um email válido ou um número de telefone válido (por exemplo, 84 123 4567 ou +258 84 123 4567).";
+      return telaAutenticacao();
+    }
+    var email = identificador;
     authFeedback = "A processar...";
     telaAutenticacao();
-    var pedido = authMode === "registo" ?
-      supabaseClient.auth.signUp({ email: email, password: password,
-        options: { emailRedirectTo: location.origin + location.pathname } }) :
-      supabaseClient.auth.signInWithPassword({ email: email, password: password });
-    pedido.then(function (resultado) {
-      if (resultado.error) {
-        authFeedback = resultado.error.message || "Não foi possível autenticar.";
+    if (authMode === "registo") {
+      fetch("/api/auth/email-check", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email })
+      }).then(function (response) {
+        return response.json().then(function (data) {
+          if (!response.ok || !data.valid) throw new Error(data.error || "Não foi possível validar o domínio do email.");
+        });
+      }).then(function () {
+        return firebaseAuth.createUserWithEmailAndPassword(email, password);
+      }).then(function (credential) {
+        var displayName = [nomeProprio, apelido].filter(Boolean).join(" ");
+        return credential.user.updateProfile({ displayName: displayName }).then(function () {
+          authFeedback = "Conta criada com sucesso. Já podes utilizar o ESTRADA-JB.";
+          concluirAutenticacao(credential.user);
+        });
+      }).catch(function (error) {
+        authFeedback = error && !error.code && error.message ? error.message : mensagemAuth(error, "Não foi possível criar a conta.");
         telaAutenticacao();
+      });
+      return;
+    }
+    firebaseAuth.signInWithEmailAndPassword(email, password).then(function (credential) {
+      concluirAutenticacao(credential.user);
+    }).catch(function (error) {
+      authFeedback = mensagemAuth(error, "Não foi possível iniciar sessão.");
+      telaAutenticacao();
+    });
+  }
+  function recuperarPalavraPasse() {
+    var identificadorEl = document.getElementById("auth-identifier");
+    var email = identificadorEl ? identificadorEl.value.trim() : "";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      authFeedback = "Para recuperar a palavra-passe, escreve primeiro o endereço de email no campo acima.";
+      telaAutenticacao();
+      return;
+    }
+    // O handler padrão do Firebase evita depender da autorização de cada
+    // hostname temporário de Preview para links de recuperação.
+    firebaseAuth.sendPasswordResetEmail(email).then(function () {
+      authFeedback = "Se existir uma conta para este endereço, receberás uma mensagem com as instruções para redefinir a palavra-passe.";
+      telaAutenticacao();
+    }).catch(function (error) {
+      authFeedback = mensagemAuth(error, "Não foi possível enviar a mensagem de recuperação.");
+      telaAutenticacao();
+    });
+  }
+  function entrarComGoogle() {
+    if (!authAvailable || !firebaseAuth || A.googleOAuthEnabled !== true) return;
+    var provider = new window.firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    firebaseAuth.signInWithPopup(provider).then(function (resultado) {
+      concluirAutenticacao(resultado.user);
+    }).catch(function (error) {
+      if (error && error.code === "auth/popup-blocked") {
+        firebaseAuth.signInWithRedirect(provider).catch(function (redirectError) {
+          authFeedback = mensagemAuth(redirectError, "Não foi possível iniciar o acesso com Google.");
+          telaAutenticacao();
+        });
         return;
       }
-      if (resultado.data && resultado.data.session && resultado.data.user) {
-        concluirAutenticacao(resultado.data.user);
-      } else if (authMode === "registo") {
-        authFeedback = "Conta criada. Confirma o teu email através da mensagem enviada para concluir o registo.";
-        telaAutenticacao();
-      } else {
-        authFeedback = "Não foi possível iniciar sessão. Tenta novamente.";
-        telaAutenticacao();
-      }
-    }).catch(function () {
-      authFeedback = "Ocorreu um erro de ligação. Tenta novamente.";
+      authFeedback = mensagemAuth(error, "Não foi possível iniciar o acesso com Google.");
       telaAutenticacao();
     });
   }
-
-  function entrarComGoogle() {
-    if (!authAvailable || !supabaseClient || A.googleOAuthEnabled !== true) return;
-    supabaseClient.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: location.origin + location.pathname }
-    }).then(function (resultado) {
-      if (resultado && resultado.error) {
-        authFeedback = resultado.error.message || "Não foi possível iniciar o acesso com Google.";
-        telaAutenticacao();
-      }
-    }).catch(function () {
-      authFeedback = "Não foi possível iniciar o acesso com Google.";
-      telaAutenticacao();
-    });
-  }
-
   function sairDaConta() {
     try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {}
-    if (supabaseClient) supabaseClient.auth.signOut().then(function (resultado) {
-      if (resultado && resultado.error) {
-        authFeedback = "Não foi possível terminar a sessão.";
-      } else {
-        authUser = null;
-        estado = null;
-        pararRelogio();
-        renderConta();
-        location.hash = "#/";
-        rota();
-      }
+    if (!firebaseAuth) return;
+    firebaseAuth.signOut().then(function () {
+      authUser = null;
+      authDisplayName = "";
+      estado = null;
+      pararRelogio();
+      renderConta();
+      location.hash = "#/";
+      rota();
     }).catch(function () {
-      authFeedback = "Não foi possível terminar a sessão.";
+      authFeedback = "Não foi possível terminar a sessão. Tenta novamente.";
     });
   }
 
@@ -220,14 +420,102 @@
       localStorage.setItem("hist", JSON.stringify(h.slice(0, 20)));
     } catch (e) {}
   }
-  function testeAberto(n) {
-    var intervalo = A.examesAbertosTeste;
-    return A.modoTesteAcessoPago === true && Array.isArray(intervalo) &&
-      intervalo.length === 2 && n >= intervalo[0] && n <= intervalo[1];
+  function dataAssinaturaMs(valor) {
+    if (valor && typeof valor.toMillis === "function") return valor.toMillis();
+    if (valor instanceof Date) return valor.getTime();
+    if (typeof valor === "number") return valor;
+    var convertido = Date.parse(valor);
+    return Number.isFinite(convertido) ? convertido : NaN;
   }
-  function temAcesso(n) { return n <= Number(A.gratuitos || 0) || testeAberto(n); }
+  function limiteDoPlano(assinatura) {
+    if (!assinatura) return 0;
+    var limites = {
+      weekly_basic: 25,
+      monthly_basic: 25,
+      weekly_full: 50,
+      monthly_full: 50
+    };
+    var limite = limites[assinatura.planCode] || 0;
+    return limite && Number(assinatura.exams) === limite ? limite : 0;
+  }
+  function temAcesso(n) {
+    // Os planos actuais nunca incluem o Exame 51, mesmo que exista uma assinatura.
+    if (!Number.isInteger(n) || n < 1 || n > 50) return false;
+    if (n <= Number(A.gratuitos || 0)) return true;
+    if (!subscriptionReady || !authUser || !subscriptionData ||
+        subscriptionData.uid !== authUser.uid || subscriptionData.status !== "active") return false;
+    var limite = limiteDoPlano(subscriptionData);
+    if (!limite || n > limite) return false;
+    var agora = Date.now();
+    var inicioMs = dataAssinaturaMs(subscriptionData.startsAt);
+    var fimMs = dataAssinaturaMs(subscriptionData.endsAt);
+    var carenciaMs = dataAssinaturaMs(subscriptionData.graceUntil);
+    if (!Number.isFinite(inicioMs) || !Number.isFinite(fimMs) || inicioMs > agora) return false;
+    var acessoAte = Number.isFinite(carenciaMs) ? Math.max(fimMs, carenciaMs) : fimMs;
+    return acessoAte > agora;
+  }
   function pararRelogio() {
     if (timer !== null) { clearInterval(timer); timer = null; }
+  }
+  // Guarda apenas o estado necessário para retomar a tentativa no mesmo navegador.
+  // O prazo absoluto impede que uma actualização da página reinicie os 60 minutos.
+  // Cada exame tem uma chave própria: uma tentativa nunca bloqueia outro exame.
+  var chaveExameEmCurso = "estrada.exame.em-curso";
+  function chaveEstadoExame(n) { return chaveExameEmCurso + "." + Number(n); }
+  function migrarEstadoExameLegado(n) {
+    try {
+      var legado = localStorage.getItem(chaveExameEmCurso);
+      if (!legado) return;
+      var antigo = JSON.parse(legado);
+      if (antigo && Number.isInteger(Number(antigo.n)) && Number(antigo.n) > 0) {
+        var destino = chaveEstadoExame(antigo.n);
+        if (!localStorage.getItem(destino)) localStorage.setItem(destino, legado);
+        localStorage.removeItem(chaveExameEmCurso);
+      }
+    } catch (e) {
+      // Um registo legado sem número identificável não pode bloquear exames diferentes.
+      // Mantém-se intacto para não apagar dados que não conseguimos interpretar.
+    }
+  }
+  function guardarEstadoExame() {
+    if (!estado || estado.res) return;
+    try {
+      localStorage.setItem(chaveEstadoExame(estado.n), JSON.stringify({
+        versao:1, n:estado.n, i:estado.i, fim:estado.fim, resp:estado.resp
+      }));
+    } catch (e) {
+      // A tentativa continua a funcionar mesmo se o navegador bloquear o armazenamento.
+    }
+  }
+  function limparEstadoExame(n) {
+    try { localStorage.removeItem(chaveEstadoExame(n)); } catch (e) {}
+  }
+  function lerEstadoExame(n, Q) {
+    var bruto;
+    try {
+      migrarEstadoExameLegado(n);
+      bruto = localStorage.getItem(chaveEstadoExame(n));
+    } catch (e) { return null; }
+    if (!bruto) return null;
+    try {
+      var salvo = JSON.parse(bruto);
+      if (!salvo || salvo.versao !== 1 || Number(salvo.n) !== Number(n) ||
+          !Number.isInteger(salvo.i) || salvo.i < 0 || salvo.i >= Q.length ||
+          !Number.isFinite(salvo.fim) || !salvo.resp || typeof salvo.resp !== "object" ||
+          Array.isArray(salvo.resp)) return { invalido:true };
+      var resp = {};
+      Object.keys(salvo.resp).forEach(function (k) {
+        var indicePergunta = Number(k), alternativa = salvo.resp[k];
+        if (!Number.isInteger(indicePergunta) || indicePergunta < 0 || indicePergunta >= Q.length ||
+            !Number.isInteger(alternativa) || alternativa < 0 || alternativa > 3) {
+          throw new Error("Estado de exame inválido");
+        }
+        resp[indicePergunta] = alternativa;
+      });
+      return { n:Number(n), Q:Q, i:salvo.i, fim:salvo.fim, resp:resp, res:null };
+    } catch (e) {
+      return { invalido:true };
+    }
   }
   function restaurarUltimo() {
     if (estado !== null) return !!(estado && estado.res);
@@ -242,10 +530,14 @@
   function rota() {
     pararRelogio();
     var h = location.hash.replace("#", "") || "/";
+    var documentoAberto = h === "/codigo" || h === "/sinais";
+    if (document.body && document.body.classList) document.body.classList.toggle("documento-aberto", documentoAberto);
     if (!authReady) { app.innerHTML = "<p>A carregar...</p>"; return; }
     if (h === "/entrar") return telaAutenticacao();
     if (h === "/exames") return catalogo();
     if (h === "/planos") return planos();
+    if (h === "/codigo") return codigoDaEstrada();
+    if (h === "/sinais") return sinaisDeTransito();
     if (h === "/resultado") return resultado();
     if (h === "/rever") return rever();
     if (h.indexOf("/exame/") === 0) return iniciar(parseInt(h.split("/")[2], 10));
@@ -264,11 +556,11 @@
   }
   function catalogo() {
     var html = "<h1>Exames</h1><p>Os " + esc(A.gratuitos) +
-      " primeiros são gratuitos. Durante a fase de testes, os Exames 1–51 estão temporariamente abertos.</p><div class='grelha'>";
+      " primeiros exames são gratuitos. Os Exames 4–25 exigem um plano Básico ou Completo; os Exames 26–50 exigem um plano Completo. O Exame 51 ainda não está incluído nos planos disponíveis.</p><div class='grelha'>";
     for (var n = 1; n <= Number(A.totalExames || 0); n++) {
-      var pronto = Array.isArray(EX[n]), livre = temAcesso(n);
-      var rotulo = !pronto ? "Em preparação" : (n <= A.gratuitos ? "Grátis" :
-        (testeAberto(n) ? "Aberto para testes" : "Acesso por plano"));
+      var pronto = Array.isArray(EX[n]), livre = pronto && temAcesso(n);
+      var rotulo = !pronto ? "Em preparação" : (n <= Number(A.gratuitos || 0) ? "Grátis" :
+        (livre ? "Desbloqueado pelo plano" : (n > 50 ? "Bloqueado — não incluído" : "Bloqueado — requer plano")));
       var destino = pronto ? "#/exame/" + n : "#/exames";
       html += "<a class='sim " + (livre ? "livre" : "bloq") + "' href='" + destino +
         "'><b>Exame " + n + "</b><small>" + rotulo + "</small></a>";
@@ -279,6 +571,132 @@
     app.innerHTML = "<section id='assinaturas-app' class='assinaturas-pagina' aria-label='Planos de assinatura'></section>";
     if (typeof window.renderizarPlanosEstrada === "function") window.renderizarPlanosEstrada();
     else app.innerHTML = "<h1>Planos</h1><div class='aviso'>Não foi possível carregar os planos.</div>";
+  }
+
+  function documento(titulo, descricao, ficheiro) {
+    var caminho = "/original/referencia/" + ficheiro;
+    app.innerHTML =
+      "<section class='documento-pagina' aria-label='" + esc(titulo) + "'>" +
+        "<header class='documento-toolbar'>" +
+          "<a class='documento-voltar' href='#/exames' aria-label='Voltar ao catálogo' title='Voltar'>" +
+            "<svg viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M19 12H5m7 7-7-7 7-7'/></svg>" +
+          "</a>" +
+          "<h1>" + esc(titulo) + "</h1>" +
+          "<button class='documento-download' type='button' data-action='documento-download' data-ficheiro='" + esc(ficheiro) +
+            "' aria-label='Descarregar PDF' title='Descarregar PDF'>" +
+            "<svg viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M12 3v12m-5-5 5 5 5-5M4 19v2h16v-2'/></svg>" +
+          "</button>" +
+        "</header>" +
+        "<div class='pdf-estado' role='status' aria-live='polite'>A preparar o documento...</div>" +
+        "<div class='pdf-paginas' aria-label='Páginas do documento'></div>" +
+        "<noscript>É necessário activar JavaScript para visualizar este documento.</noscript>" +
+      "</section>";
+    renderizarDocumentoPdf(caminho);
+  }
+
+  function renderizarDocumentoPdf(caminho) {
+    var estadoPdf = app.querySelector(".pdf-estado");
+    var paginas = app.querySelector(".pdf-paginas");
+    if (!paginas) return;
+    function fallbackNativo(mensagem) {
+      if (estadoPdf) estadoPdf.textContent = mensagem || "A abrir o visualizador PDF do navegador...";
+      paginas.innerHTML = "<object class='pdf-nativo' data='" + caminho +
+        "#toolbar=1&navpanes=0' type='application/pdf' aria-label='Documento PDF'>" +
+        "<iframe class='pdf-nativo' src='" + caminho +
+        "#toolbar=1' title='Documento PDF'></iframe></object>";
+      if (estadoPdf) {
+        var link = document.createElement("a");
+        link.href = caminho;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "Abrir o PDF no navegador";
+        estadoPdf.appendChild(document.createTextNode(" "));
+        estadoPdf.appendChild(link);
+      }
+    }
+    if (!window.pdfjsLib) {
+      fallbackNativo("O leitor avançado não ficou disponível; a usar o visualizador PDF do navegador.");
+      return;
+    }
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    window.pdfjsLib.getDocument({ url: caminho }).promise.then(function (pdf) {
+      if (!paginas.isConnected) return;
+      if (estadoPdf) estadoPdf.textContent = pdf.numPages + " página(s) carregada(s).";
+      var largura = Math.min((paginas.clientWidth || window.innerWidth || 360) - 20, 900);
+      var escalaDispositivo = Math.min(window.devicePixelRatio || 1, 1.5);
+      var tarefas = [];
+      for (var numero = 1; numero <= pdf.numPages; numero++) tarefas.push(numero);
+      return tarefas.reduce(function (fila, numero) {
+        return fila.then(function () {
+          if (!paginas.isConnected) return;
+          return pdf.getPage(numero).then(function (pagina) {
+            var base = pagina.getViewport({ scale: 1 });
+            var escala = Math.max(.5, largura / base.width);
+            var viewport = pagina.getViewport({ scale: escala });
+            var canvas = document.createElement("canvas");
+            canvas.className = "pdf-pagina";
+            canvas.setAttribute("role", "img");
+            canvas.setAttribute("aria-label", "Página " + numero + " de " + pdf.numPages);
+            canvas.width = Math.floor(viewport.width * escalaDispositivo);
+            canvas.height = Math.floor(viewport.height * escalaDispositivo);
+            canvas.style.width = Math.floor(viewport.width) + "px";
+            canvas.style.height = Math.floor(viewport.height) + "px";
+            paginas.appendChild(canvas);
+            var contexto = canvas.getContext("2d", { alpha: false });
+            return pagina.render({
+              canvasContext: contexto,
+              viewport: viewport,
+              transform: escalaDispositivo === 1 ? null : [escalaDispositivo, 0, 0, escalaDispositivo, 0, 0]
+            }).promise;
+          });
+        });
+      }, Promise.resolve()).then(function () {
+        if (estadoPdf && estadoPdf.isConnected) estadoPdf.textContent = "Documento pronto · " + pdf.numPages + " página(s).";
+      });
+    }).catch(function (erro) {
+      console.error("Falha ao abrir PDF:", erro);
+      if (paginas && paginas.isConnected) {
+        paginas.innerHTML = "";
+        fallbackNativo("O leitor avançado não conseguiu processar o ficheiro; a usar o visualizador PDF do navegador.");
+      }
+    });
+  }
+
+  function descarregarDocumento(ficheiro, botao) {
+    var destinos = {
+      "codigodeestrada.pdf": "/downloads/codigo-da-estrada.pdf",
+      "sinais.pdf": "/downloads/sinais-de-transito.pdf"
+    };
+    var destino = destinos[ficheiro];
+    if (!destino || !botao) return;
+    var estadoPdf = app.querySelector(".pdf-estado");
+    var link = document.createElement("a");
+    link.href = destino;
+    link.download = ficheiro;
+    link.style.display = "none";
+    link.setAttribute("aria-hidden", "true");
+    document.body.appendChild(link);
+    if (estadoPdf) estadoPdf.textContent = "A solicitar o download de " +
+      (ficheiro === "codigodeestrada.pdf" ? "Código da Estrada" : "Sinais de Trânsito") + "...";
+    botao.classList.add("download-accionado");
+    botao.setAttribute("aria-label", "Download solicitado");
+    link.click();
+    link.remove();
+    window.setTimeout(function () {
+      botao.classList.remove("download-accionado");
+      botao.setAttribute("aria-label", "Descarregar PDF");
+      if (estadoPdf && estadoPdf.isConnected) {
+        estadoPdf.textContent = "Se o download não começou automaticamente, verifica as transferências do navegador.";
+      }
+    }, 1800);
+  }
+  function codigoDaEstrada() {
+    documento("Código da Estrada", "Consulta o documento do Código da Estrada.", "codigodeestrada.pdf");
+  }
+
+  function sinaisDeTransito() {
+    documento("Sinais de Trânsito", "Consulta os sinais de trânsito e a respectiva sinalização.", "sinais.pdf");
   }
   function iniciar(n) {
     if (!n || n < 1 || n > Number(A.totalExames || 0)) return catalogo();
@@ -294,7 +712,11 @@
       return;
     }
     if (!temAcesso(n)) {
-      app.innerHTML = "<h1>Exame " + n + "</h1><div class='card'><p>Este exame está bloqueado e requer um plano de acesso.</p>" +
+      var explicacaoBloqueio = n > 50 ?
+        "Este exame está bloqueado e ainda não está incluído em nenhum dos planos disponíveis." :
+        (n > 25 ? "Este exame está bloqueado e exige um plano Completo, com acesso aos Exames 1–50." :
+          "Este exame está bloqueado e exige um plano Básico ou Completo, com acesso aos Exames 1–25 ou 1–50.");
+      app.innerHTML = "<h1>Exame " + n + "</h1><div class='card aviso'><p>" + explicacaoBloqueio + "</p>" +
         "<p><a class='btn' href='#/planos'>Consultar planos</a> <a class='btn sec' href='#/exames'>Voltar aos exames</a></p></div>";
       return;
     }
@@ -304,7 +726,22 @@
         "<a class='btn sec' href='#/exames'>Voltar</a></div>";
       return;
     }
-    estado = { n:n, Q:Q, i:0, fim:Date.now() + Number(A.minutos || 60) * 60000, resp:{}, res:null };
+    var recuperado = lerEstadoExame(n, Q);
+    if (recuperado && recuperado.invalido) {
+      // Dados inválidos deste exame não devem bloquear a abertura nem pedir confirmação.
+      // As tentativas válidas dos restantes exames permanecem intactas.
+      limparEstadoExame(n);
+      recuperado = null;
+    }
+    if (recuperado) {
+      estado = recuperado;
+    } else {
+      estado = { n:n, Q:Q, i:0, fim:Date.now() + Number(A.minutos || 60) * 60000, resp:{}, res:null };
+    }
+    if (restante() <= 0) {
+      terminar("tempo");
+      return;
+    }
     renderQuestao();
     timer = setInterval(tick, 1000);
   }
@@ -318,6 +755,7 @@
   }
   function renderQuestao(focoIndice) {
     if (!estado || estado.res) return;
+    guardarEstadoExame();
     var Q = estado.Q, q = Q[estado.i], sel = estado.resp[estado.i];
     var respondidas = Object.keys(estado.resp).length;
     var h = "<div class='estado'><span>Exame " + estado.n + " · Pergunta " +
@@ -351,6 +789,7 @@
   function terminar(motivo) {
     if (!estado || estado.res) return;
     pararRelogio();
+    limparEstadoExame(estado.n);
     var certas = 0, respondidas = 0;
     estado.Q.forEach(function (q, i) {
       if (Object.prototype.hasOwnProperty.call(estado.resp, i)) {
@@ -425,9 +864,22 @@
     app.innerHTML = h;
   }
   app.addEventListener("submit", terminarAutenticacao);
+  // O botão Sair é renderizado em #conta-utilizador, fora de #app.
+  // Por isso, a delegação de cliques do conteúdo principal não o recebe.
+  var contaUtilizador = document.getElementById("conta-utilizador");
+  if (contaUtilizador) {
+    contaUtilizador.addEventListener("click", function (event) {
+      var botaoSair = event.target.closest ? event.target.closest("[data-action=\"auth-logout\"]") : null;
+      if (botaoSair) sairDaConta();
+    });
+  }
   app.addEventListener("click", function (event) {
     var alvo = event.target;
-    if (!alvo || !alvo.getAttribute) return;
+    // Aceita cliques no texto, no SVG ou nos caminhos internos do ícone.
+    // O botão é o elemento que contém data-action.
+    if (!alvo || !alvo.closest) return;
+    alvo = alvo.closest("[data-action]");
+    if (!alvo || !app.contains(alvo)) return;
     var acao = alvo.getAttribute("data-action");
     if (!acao) return;
     if (acao === "auth-mode") {
@@ -437,8 +889,10 @@
       return;
     }
     if (acao === "auth-logout") { sairDaConta(); return; }
+    if (acao === "auth-reset") { recuperarPalavraPasse(); return; }
     if (acao === "auth-cancel") { try { localStorage.removeItem("estrada.exame.pendente"); } catch (e) {} return; }
     if (acao === "auth-google") { entrarComGoogle(); return; }
+    if (acao === "documento-download") { descarregarDocumento(alvo.getAttribute("data-ficheiro"), alvo); return; }
     if (!estado || estado.res) return;
     if (acao === "responder") {
       var indice = Number(alvo.getAttribute("data-indice"));
@@ -457,6 +911,12 @@
           " pergunta(s) sem resposta. Valem zero. Submeter mesmo assim?")) return;
       terminar("manual");
     }
+  });
+  window.addEventListener("estrada:subscription-updated", function () {
+    if (!authUser) return;
+    carregarSubscricao(authUser).then(function () {
+      if (location.hash !== "#/planos") rota();
+    });
   });
   window.addEventListener("hashchange", function () {
     fecharMenu();

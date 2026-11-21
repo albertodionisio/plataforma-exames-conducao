@@ -10,20 +10,20 @@ As 25 imagens originais foram copiadas para `public/exames/exame28/` e associada
 
 | Nº | Tema | Enunciado | Chave APK | Imagem original | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
-| 1 | Sinalização e regras da via | O que indica o sinal de perigo? | C | imagens/exame28/exame28_1.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
+| 1 | Sinalização e regras da via | O que indica o sinal de perigo? | C | `public/sinais/D79-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal D79 de passagem de nível sem guarda com duas ou mais vias, página 24, recorte vectorial a 600 DPI. |
 | 2 | Comportamento, prevenção e segurança | A carta de condução, tem tempo de validade? | C | imagens/exame28/exame28_2.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 3 | Comportamento, prevenção e segurança | Transitar em sentido oposto ao estabelecido, constitui contravenção: | A | imagens/exame28/exame28_3.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
-| 4 | Sinalização e regras da via | O que deve fazer o condutor perante o sinal? | B | imagens/exame28/exame28_4.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
+| 4 | Sinalização e regras da via | O que deve fazer o condutor perante o sinal? | B | `public/sinais/E12-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal E12 de limite máximo de 80 km/h, página 26, recorte vectorial a 600 DPI. |
 | 5 | Circulação e manobras | Entende-se por prioridade de passagem: | B | imagens/exame28/exame28_5.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 6 | Veículos, ocupantes e deveres do condutor | Salvo no caso de perigo iminente, que deve fazer o condutor se tem que diminuir subitamente a velocidade do veículo? | C | imagens/exame28/exame28_6.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 7 | Circulação e manobras | Pode ultrapassar veículos que estejam a ultrapassar outros? | C | imagens/exame28/exame28_7.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 8 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame28/exame28_8.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 8 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/G63-parque-estacionamento-veiculos-emergencia.png` | CONFIRMADO | Sinal G63 de parque de estacionamento para veículos de emergência, página 37. |
 | 9 | Sinalização e regras da via | O agente regulador de trânsito, manda: | C | imagens/exame28/exame28_9.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 10 | Veículos, ocupantes e deveres do condutor | Num automóvel é obrigatório a utilização de cintos de segurança: | A | imagens/exame28/exame28_10.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 11 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame28/exame28_11.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 12 | Comportamento, prevenção e segurança | O estado emocional do condutor, é um factor de ordem interna, que influência: | C | imagens/exame28/exame28_12.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 13 | Comportamento, prevenção e segurança | O que entende-se por dever? | C | imagens/exame28/exame28_13.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
-| 14 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame28/exame28_14.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 14 | Sinalização e regras da via | O que indica o sinal? | C | `public/sinais/M3-dar-prioridade-passagens-estreitas.png` | CONFIRMADO | Sinal M3 de obrigação de dar prioridade nas passagens estreitas, página 38. |
 | 15 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame28/exame28_15.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 16 | Comportamento, prevenção e segurança | A maioria dos acidentes de trânsito são devidos... | B | imagens/exame28/exame28_16.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 17 | Circulação e manobras | Nesta estrada de duplo sentido de circulação, como deve circular? | C | imagens/exame28/exame28_17.jpg | Copiada e associada | Alternativas da fonte preservadas. |

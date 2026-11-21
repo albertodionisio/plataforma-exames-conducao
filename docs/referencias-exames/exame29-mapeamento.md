@@ -11,18 +11,18 @@ As 25 imagens originais foram copiadas para `public/exames/exame29/` e associada
 | Nº | Tema | Enunciado | Chave APK | Imagem original | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
 | 1 | Veículos, ocupantes e deveres do condutor | Que veículos podem conduzir as pessoas que só possuam a carta de condução da categoria B | C | imagens/exame29/exame29_1.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 2 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame29/exame29_2.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 2 | Sinalização e regras da via | O que indica o sinal? | C | `public/sinais/E51-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal E51 de paragem e estacionamento proibidos, página 29, recorte vectorial a 600 DPI. |
 | 3 | Circulação e manobras | Em curvas de visibilidade reduzida, pode ultrapassar? | A | imagens/exame29/exame29_3.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 4 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame29/exame29_4.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 5 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame29/exame29_5.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 6 | Sinalização e regras da via | Os condutores devem utilizar as luzes de presença (mínimos)... | B | imagens/exame29/exame29_6.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 7 | Sinalização e regras da via | O que indica o sinal vertical? | A | imagens/exame29/exame29_7.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
+| 7 | Sinalização e regras da via | O que indica o sinal vertical? | A | `public/sinais/E9-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal E9 de fim da proibição de ultrapassar, página 26, recorte vectorial a 600 DPI. |
 | 8 | Sinalização e regras da via | Perante uma passagem de nível que não dispuser de protecção ou sinalização, o condutor... | C | imagens/exame29/exame29_8.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 9 | Circulação e manobras | Circular com os pneus do veículo velhos... | C | imagens/exame29/exame29_9.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 10 | Comportamento, prevenção e segurança | A fadiga, é um estado que pode influenciar a recolha de informação durante a condução? | A | imagens/exame29/exame29_10.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 11 | Veículos, ocupantes e deveres do condutor | Ao transitar, é necessário manter entre os veículos uma distância de segurança? | B | imagens/exame29/exame29_11.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 12 | Circulação e manobras | Os acidentes de viação são um problema que afecta... | B | imagens/exame29/exame29_12.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 13 | Sinalização e regras da via | A que grupo pertence o sinal? | C | imagens/exame29/exame29_13.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
+| 13 | Sinalização e regras da via | A que grupo pertence o sinal? | C | `public/sinais/J5-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal J5 de praia, página 47, recorte vectorial a 600 DPI. |
 | 14 | Veículos, ocupantes e deveres do condutor | Que veículos consideram-se prioritários? | A | imagens/exame29/exame29_14.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 15 | Circulação e manobras | A luz indicadora de mudança de direcção à direita accionada ao iniciar uma ultrapassagem, só deve ser desligada... | A | imagens/exame29/exame29_15.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 16 | Sinalização e regras da via | O agente regulador de trânsito da fotografia manda: | A | imagens/exame29/exame29_16.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
