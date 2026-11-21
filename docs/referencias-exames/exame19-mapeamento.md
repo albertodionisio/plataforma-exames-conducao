@@ -32,7 +32,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 20 | Sinalização e regras da via | Que indica o sinal? | C | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, extraído do PDF oficial; imagem antiga de baixa resolução substituída. |
 | 21 | Sinalização e regras da via | O sinal, pertence ao grupo de sinais de: | C | imagens/exame19/exame19_21.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 22 | Veículos, ocupantes e carga | A definição de tractor é: | B | imagens/exame19/exame19_22.jpg | Pendente | Quatro alternativas existentes na fonte. |
-| 23 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame19/exame19_23.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 23 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/E50-sinal-pdf-600dpi.png` | CONFIRMADO COM DIVERGÊNCIA | A imagem corresponde visualmente ao sinal E50 (estacionamento proibido), página 29 do PDF oficial. A chave actual assinala a opção A («Paragem e estacionamento proibidos»), que corresponderia a E51; a chave não foi alterada e a divergência fica registada para revisão de conteúdo. |
 | 24 | Comportamento e segurança do condutor | A condução em dias de chuva provoca um aumento do risco de acidente, por causa de factores como: | A | imagens/exame19/exame19_24.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 25 | Circulação, velocidade e manobras | Como deve actuar o condutor quando tem que fazer uma curva? | C | imagens/exame19/exame19_25.jpg | Pendente | Quatro alternativas existentes na fonte. |
 
