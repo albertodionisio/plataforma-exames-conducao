@@ -386,7 +386,7 @@ window.EXAMES[6] = [
     "enunciado": "De noite, na estrada, o condutor vê o sinal reflector da imagem, com duas cruzes de aspa sobrepostas. O que indica?",
     "imagem": {
       "descricao": "Sinal D79 de passagem de nível sem guarda com duas ou mais vias, extraído do PDF oficial de sinais",
-      "src": "public/sinais/D79-local-passagem-nivel-sem-guarda-duas-ou-mais-vias.png"
+      "src": "public/sinais/D79-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Local de passagem de nível sem guarda com duas ou mais vias.",
