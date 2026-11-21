@@ -44,7 +44,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p /tmp/dados079-crops
-          for code in A19 D79 E12 G62 E50 E37 A51 A18 A37 E19 G26 A1 A8 A46 E51; do
+          for code in A19 D79 E12 G62 E50 E37 A51 A18 A37 E19 G26 A1 A8 A46 E51 D8; do
             file="public/sinais/${code}-sinal-pdf-600dpi.png"
             if [ -f "$file" ]; then cp "$file" /tmp/dados079-crops/; fi
           done
