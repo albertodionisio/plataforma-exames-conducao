@@ -10,6 +10,10 @@ on:
       - original/referencia/sinais.pdf
   workflow_dispatch:
 
+concurrency:
+  group: auditar-sinais-pdf-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
