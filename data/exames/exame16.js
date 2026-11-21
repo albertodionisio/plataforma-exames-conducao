@@ -403,8 +403,8 @@ window.EXAMES[16] = [
     "dificuldade": "fácil",
     "enunciado": "O que indica o sinal apresentado?",
     "imagem": {
-      "descricao": "Sinal F50 de pistas obrigatórias para peões e velocípedes, extraído do PDF oficial de sinais",
-      "src": "public/sinais/F50-pistas-obrigatorias-peoes-velocipedes.png"
+      "descricao": "Sinal azul de obrigação relativo à circulação de peões e velocípedes.",
+      "src": "public/exames/exame16/exame16_23.jpg"
     },
     "opcoes": [
       "Pista obrigatória para veículos de tracção manual.",
