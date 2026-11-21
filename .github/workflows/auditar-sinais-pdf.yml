@@ -34,19 +34,33 @@ jobs:
       - name: Renderizar páginas e extrair sinais confirmados
         run: python scripts/auditar-sinais-pdf.py --dpi 160 --contact-dpi 100 --crop-dpi 600 --extract-dados079-crops --overwrite-crops --extract-vector-review
 
-      - name: Publicar novos recortes no ramo de trabalho
+      - name: Publicar recortes sem perder alterações concorrentes
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/sinais/
-          if git diff --cached --quiet; then
-            echo "Nenhum recorte novo."
-          else
-            git commit -m "DADOS-079: extrair sinais confirmados do PDF a 600 DPI"
+          mkdir -p /tmp/dados079-crops
+          for code in A19 D79 E12 G62 E50 E37 A51 A18 A37; do
+            file="public/sinais/${code}-sinal-pdf-600dpi.png"
+            if [ -f "$file" ]; then cp "$file" /tmp/dados079-crops/; fi
+          done
+          for attempt in 1 2 3; do
             git fetch origin feat/firebase-full-migration
-            git rebase origin/feat/firebase-full-migration
-            git push origin HEAD:feat/firebase-full-migration
-          fi
+            git reset --hard origin/feat/firebase-full-migration
+            cp /tmp/dados079-crops/*.png public/sinais/
+            git add public/sinais/*-sinal-pdf-600dpi.png
+            if git diff --cached --quiet; then
+              echo "Os recortes já estão actualizados no ramo."
+              exit 0
+            fi
+            git commit -m "DADOS-079: extrair sinais confirmados do PDF a 600 DPI"
+            if git push origin HEAD:feat/firebase-full-migration; then
+              exit 0
+            fi
+            echo "O ramo avançou durante o push; repetir sobre o HEAD mais recente (tentativa $attempt)."
+          done
+          echo "Não foi possível publicar os recortes após três tentativas."
+          exit 1
 
       - name: Publicar material de revisão
         uses: actions/upload-artifact@v4
