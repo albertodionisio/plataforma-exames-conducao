@@ -25,7 +25,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 13 | Comportamento e segurança do condutor | Como pode ser definido o stress? | C | imagens/exame18/exame18_13.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 14 | Circulação, velocidade e manobras | Ao circular com a velocidade excessiva... | A | imagens/exame18/exame18_14.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 15 | Comportamento e segurança do condutor | O que deve fazer o condutor quando a intensidade do tráfego é grande? | B | imagens/exame18/exame18_15.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
-| 16 | Sinalização e regras da via | A que grupo pertence o sinal triangular? | C | imagens/exame18/exame18_16.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 16 | Sinalização e regras da via | A que grupo pertence o sinal triangular? | C | `public/sinais/A1-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A1 de trabalhos na estrada, página 3 do PDF oficial; identifica os sinais temporários de perigo. |
 | 17 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame18/exame18_17.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 18 | Sinalização e regras da via | Perante um obstáculo imprevisto que o obriga a reduzir subitamente a velocidade, o condutor deve? | C | imagens/exame18/exame18_18.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 19 | Prevenção e assistência em acidentes | Quais são os princípios gerais do socorrismo? | C | imagens/exame18/exame18_19.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
