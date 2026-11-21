@@ -23,7 +23,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Nota (Claude-DADOS005, 2026-11-15, por ordem do dono): imagens dos Exames 9–14 e 17–24 associadas (`public/exames/exameN/`) e Exames 9–14 e 16–24 ligados em `index.html`; sinais de pouca qualidade a substituir pelos do PDF numa etapa seguinte. Estas tarefas mantêm as suas reservas, mas as imagens e a integração já estão feitas — não repetir.
 
 ## DADOS-001 — Exame 2 (grátis)
-- Estado: EM CURSO (integrado no site) — dados, mapa, imagens e integração concluídos; falta a revisão de duplicações com os Exames 3 e 4 — último sinal: 2026-11-13.
+- Estado: EM CURSO — ChatGPT-ESTRADA-SIGNALS1 — 2026-11-21 — ficheiros: data/exames/exame2.js, docs/referencias-exames/exame2-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-21 — assumida com autorização expressa do dono; dados, mapa, imagens e integração já concluídos; falta revisão de duplicações com os Exames 3 e 4.
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame2.js` (novo) e `docs/referencias-exames/exame2-mapeamento.md`. Se for preciso registar o ficheiro, `index.html`/`app.js` (confirmar que nenhuma outra tarefa EM CURSO os usa).
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 2 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta para a revisão após submissão; abre no ESTRADA com cronómetro de 60 minutos, sem feedback durante a realização, resultado final e revisão comentada; mapa completo; validação automática e teste no navegador sem erros.
