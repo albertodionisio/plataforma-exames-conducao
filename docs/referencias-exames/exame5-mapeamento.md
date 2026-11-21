@@ -49,7 +49,7 @@ Exame de origem: Exame 5 do aplicativo original (`original/Codigo_e_Sinais_de_Tr
 
 - **APK:** «O que indica o sinal de perigo?» (exame5, pergunta 3).
 - **Imagem no APK:** Fotografia: sinal de passagem de nível com dois X e painel luminoso, ao fundo (exame5_3.jpg).
-- **Imagem no ESTRADA:** public/sinais/D79-local-passagem-nivel-sem-guarda-duas-ou-mais-vias.png (PDF, pág. 24, Quadro IV)
+- **Imagem no ESTRADA:** public/sinais/D79-sinal-pdf-600dpi.png (PDF, pág. 24, Quadro IV)
 - **Resposta certa no APK:** B) Passagem de nível sem guarda com duas ou mais vias.
 - **Resposta certa no ESTRADA:** D) Local de passagem de nível sem guarda com duas ou mais vias.
 - **Alternativas:** as 3 do APK, com adaptação leve, e uma 4.ª acrescentada (ver nota).
@@ -119,7 +119,7 @@ Exame de origem: Exame 5 do aplicativo original (`original/Codigo_e_Sinais_de_Tr
 
 - **APK:** «O que deve fazer o condutor perante o sinal?» (exame5, pergunta 9).
 - **Imagem no APK:** Fotografia: sinal circular com «80» à beira da estrada (exame5_9.jpg).
-- **Imagem no ESTRADA:** public/sinais/E12-proibicao-exceder-velocidade.png (PDF, pág. 26, Quadro V)
+- **Imagem no ESTRADA:** public/sinais/E12-sinal-pdf-600dpi.png (PDF, pág. 26, Quadro V)
 - **Resposta certa no APK:** C) Circular a uma velocidade que vá até os 80 km/h.
 - **Resposta certa no ESTRADA:** B) Circular a uma velocidade que vá até aos 80 km/h.
 - **Alternativas:** as 3 do APK, com adaptação leve, e uma 4.ª acrescentada (ver nota).
@@ -154,7 +154,7 @@ Exame de origem: Exame 5 do aplicativo original (`original/Codigo_e_Sinais_de_Tr
 
 - **APK:** «O que indica o sinal?» (exame5, pergunta 12).
 - **Imagem no APK:** Fotografia: sinal azul com «R» e símbolo, à frente de um edifício (exame5_12.jpg).
-- **Imagem no ESTRADA:** public/sinais/G62-area-reservada-veiculos-emergencia.png (PDF, pág. 37, Quadro VII)
+- **Imagem no ESTRADA:** public/sinais/G62-sinal-pdf-600dpi.png (PDF, pág. 37, Quadro VII)
 - **Resposta certa no APK:** B) Área reservada para veículos de emergência.
 - **Resposta certa no ESTRADA:** B) Área reservada para veículos de emergência.
 - **Alternativas:** as 3 do APK, com adaptação leve, e uma 4.ª acrescentada (ver nota).
@@ -317,9 +317,9 @@ Exame de origem: Exame 5 do aplicativo original (`original/Codigo_e_Sinais_de_Tr
 | Pergunta | Código | Designação (como no PDF) | Pág. PDF | Ficheiro |
 |---|---|---|---|---|
 | 2 | J12 | Cascata | 47 | `public/sinais/J12-cascata.png` |
-| 3 | D79 | Local de passagem de nível sem guarda com duas ou mais vias | 24 | `public/sinais/D79-local-passagem-nivel-sem-guarda-duas-ou-mais-vias.png` |
-| 9 | E12 | Proibição de exceder a velocidade de....Km/h | 26 | `public/sinais/E12-proibicao-exceder-velocidade.png` |
-| 12 | G62 | Área reservada para veículos de emergência | 37 | `public/sinais/G62-area-reservada-veiculos-emergencia.png` |
+| 3 | D79 | Local de passagem de nível sem guarda com duas ou mais vias | 24 | `public/sinais/D79-sinal-pdf-600dpi.png` |
+| 9 | E12 | Proibição de exceder a velocidade de....Km/h | 26 | `public/sinais/E12-sinal-pdf-600dpi.png` |
+| 12 | G62 | Área reservada para veículos de emergência | 37 | `public/sinais/G62-sinal-pdf-600dpi.png` |
 | 14 | E52 | Paragem proibida | 29 | `public/sinais/E52-paragem-proibida.png` |
 | 19 | M3 | Dar prioridade nas passagens estreitas | 52 | `public/sinais/M3-dar-prioridade-passagens-estreitas.png` |
 | 24 | A54 | Acidente | 5 | `public/sinais/A54-acidente.png` |
@@ -341,3 +341,8 @@ Os recortes foram feitos a 300 dpi a partir das páginas do PDF, sem a legenda e
 - **Pergunta 3:** a designação certa foi alinhada com o PDF («Local de passagem de nível...»); o APK dizia «Passagem de nível...».
 - **Respostas legais:** a pergunta 16 foi completada com a condição do art. 44.º, n.º 3 do Código. O APK tinha uma versão mais curta da mesma resposta.
 - **Fotografias não usadas:** 14 imagens do APK ficaram de fora por serem ilustrativas (perguntas 1, 4, 5, 6, 7, 10, 11, 13, 15, 16, 17, 18, 22 e 23). Continuam no APK; se o dono quiser fotografias em todas as perguntas, é uma tarefa à parte.
+
+
+### Actualização DADOS-079 — recortes a 600 DPI (2026-11-21)
+
+As perguntas 3 (D79), 9 (E12) e 12 (G62) passaram a utilizar os recortes vectoriais `*-sinal-pdf-600dpi.png`, extraídos directamente do PDF oficial. As imagens anteriores foram comparadas visualmente com os novos recortes: os três representam exactamente os mesmos sinais; a substituição melhora a resolução sem alterar o conteúdo visual nem o significado das perguntas. Não foram alterados enunciados, alternativas, respostas ou explicações.
