@@ -7,8 +7,8 @@ window.EXAMES[28] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de perigo?",
     "imagem": {
-      "src": "public/exames/exame28/exame28_1.jpg",
-      "descricao": "Imagem original da pergunta 1 do Exame 28"
+      "src": "public/sinais/D79-sinal-pdf-600dpi.png",
+      "descricao": "Sinal D79 de passagem de nível sem guarda com duas ou mais vias, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Passagem de nível com guarda.",
@@ -61,8 +61,8 @@ window.EXAMES[28] = [
     "dificuldade": "média",
     "enunciado": "O que deve fazer o condutor perante o sinal?",
     "imagem": {
-      "src": "public/exames/exame28/exame28_4.jpg",
-      "descricao": "Imagem original da pergunta 4 do Exame 28"
+      "src": "public/sinais/E12-sinal-pdf-600dpi.png",
+      "descricao": "Sinal E12 de proibição de exceder 80 km/h, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Circular acima de 80 km/h.",
@@ -133,8 +133,8 @@ window.EXAMES[28] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame28/exame28_8.jpg",
-      "descricao": "Imagem original da pergunta 8 do Exame 28"
+      "src": "public/sinais/G63-parque-estacionamento-veiculos-emergencia.png",
+      "descricao": "Sinal G63 de parque de estacionamento para veículos de emergência, extraído do PDF oficial"
     },
     "opcoes": [
       "Área reservada para mini-autocarros.",
@@ -241,8 +241,8 @@ window.EXAMES[28] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame28/exame28_14.jpg",
-      "descricao": "Imagem original da pergunta 14 do Exame 28"
+      "src": "public/sinais/M3-dar-prioridade-passagens-estreitas.png",
+      "descricao": "Sinal M3 de obrigação de dar prioridade nas passagens estreitas, extraído do PDF oficial"
     },
     "opcoes": [
       "Prioridade nas passagens estreitas.",
