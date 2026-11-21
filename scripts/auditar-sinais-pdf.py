@@ -74,8 +74,8 @@ DADOS079_CROPS = [
     ("A8-sinal-pdf-600dpi.png", 3, (427.5, 318.0, 562.5, 416.25), "A8", "Sinalização luminosa"),
     ("A46-sinal-pdf-600dpi.png", 5, (153.0, 153.0, 283.5, 249.5), "A46", "Passagem de peões"),
     ("E51-sinal-pdf-600dpi.png", 29, (292.5, 94.5, 416.25, 220.5), "E51", "Paragem e estacionamento proibidos"),
-    ("D45-sinal-pdf-600dpi.png", 23, (38.0, 210.0, 155.0, 311.0), "D45", "Intersecção com sentido giratório"),
-    ("E14-sinal-pdf-600dpi.png", 26, (157.5, 630.0, 288.0, 735.0), "E14", "Proibição de ultrapassar para motociclos simples"),
+    ("D45-sinal-pdf-600dpi.png", 23, (36.0, 202.5, 157.5, 308.0), "D45", "Intersecção com sentido giratório"),
+    ("E14-sinal-pdf-600dpi.png", 26, (157.5, 630.0, 279.0, 715.0), "E14", "Proibição de ultrapassar para motociclos simples"),
     ("E9-sinal-pdf-600dpi.png", 26, (31.5, 441.0, 153.0, 558.0), "E9", "Fim de proibição de ultrapassar"),
     ("J5-sinal-pdf-600dpi.png", 47, (463.0, 98.0, 572.0, 190.0), "J5", "Praia"),
 ]
