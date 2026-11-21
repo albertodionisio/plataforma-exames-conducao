@@ -24,7 +24,7 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 | 4 | Cidadania | Conhecimento geral de cidadania (sem artigo do Código) | A | B | exame6_4.jpg. Cidadania 4.ª alternativa vazia no APK; distrator novo. |
 | 5 | Prioridade nos cruzamentos | Regra geral de prioridade; geometria da imagem verificada (circulação pela esquerda) | B | A | exame6_5.jpg. Prioridade de passagem (regra da direita) 4.ª alternativa vazia no APK; distrator novo. |
 | 6 | Paragem e estacionamento | CE, art. 50.º, n.º 1, al. d) | B | C | exame6_6.jpg. Paragem e estacionamento |
-| 7 | Sinais de estacionamento | Regulamento de Sinais, sinal E50 | A | D | `public/sinais/E50-sinal-pdf.png` — sinal de estacionamento proibido, isolado e extraído do PDF oficial; substitui a fotografia de baixa resolução. A imagem da pergunta mostra o sinal de uma só barra (não o sinal de paragem proibida, com barras cruzadas). |
+| 7 | Sinais de estacionamento | Regulamento de Sinais, sinal E50 | A | D | `public/sinais/E50-sinal-pdf-600dpi.png` — sinal de estacionamento proibido, isolado e extraído do PDF oficial; substitui a fotografia de baixa resolução. A imagem da pergunta mostra o sinal de uma só barra (não o sinal de paragem proibida, com barras cruzadas). |
 | 8 | Atenção e reacção | Segurança geral | C | B | exame6_8.jpg. Segurança geral — reacção 4.ª alternativa vazia no APK; distrator novo. |
 | 9 | Obstáculos na faixa de rodagem | CE, art. 22.º, n.º 2 | C | A | exame6_9.jpg. Obstáculos na via |
 | 10 | Uso da buzina | CE, art. 24.º, n.º 4 | A | D | exame6_10.jpg. Sinais sonoros |
@@ -32,14 +32,14 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 | 12 | Condução nocturna | Segurança geral | B | B | exame6_12.jpg. Segurança geral — condução nocturna |
 | 13 | Contravenções | CE, art. 147.º, n.º 1, al. d), i) | C | A | exame6_13.jpg. Omissão de socorro 4.ª alternativa vazia no APK; distrator novo. |
 | 14 | Luzes e estacionamento | CE, art. 146.º, al. e) | A | D | exame6_14.jpg. Chave do APK (A, «é proibido») reformulada: a regra exige manter acesas as luzes de presença. |
-| 15 | Sinais de limite de velocidade | Regulamento de Sinais, sinal E12 | A | C | `public/sinais/E12-proibicao-exceder-velocidade.png`, recorte vectorial/alta resolução extraído do PDF oficial; mostra 80 km/h. |
+| 15 | Sinais de limite de velocidade | Regulamento de Sinais, sinal E12 | A | C | `public/sinais/E12-sinal-pdf-600dpi.png`, recorte vectorial/alta resolução extraído do PDF oficial; mostra 80 km/h. |
 | 16 | Marcas rodoviárias | Regulamento de Sinais (marcas longitudinais) | A | B | exame6_16.jpg. Marcas rodoviárias 4.ª alternativa vazia no APK; distrator novo. |
 | 17 | Primeiros socorros | Segurança geral — conduta em acidentes | C | A | exame6_17.jpg. Primeiros socorros 4.ª alternativa vazia no APK; distrator novo. |
 | 18 | Velocidade excessiva | CE, art. 33.º | C | C | exame6_18.jpg. Velocidade excessiva |
 | 19 | Sinais dos agentes | Regulamento de Sinais (sinais dos agentes) | B | D | exame6_19.jpg. Sinais dos agentes reguladores 4.ª alternativa vazia no APK; distrator novo. |
 | 20 | Sinais de prioridade | Código/sinal por confirmar; o mapa antigo identificava M3 | C | B | Mantida `public/exames/exame6/exame6_20.jpg`: a fotografia mostra um painel quadrado azul com seta branca para cima e seta vermelha para baixo, diferente do sinal M3 circular do PDF (`M3-dar-prioridade-passagens-estreitas.png`). Não substituir por M3; confirmar código e correspondência exacta. |
 | 21 | Cruzamentos com semáforos | CE, art. 69.º, n.º 2 | A | D | exame6_21.jpg. Cruzamentos regulados por semáforos |
-| 22 | Passagens de nível | Regulamento de Sinais, sinal D79 | B | A | `public/sinais/D79-local-passagem-nivel-sem-guarda-duas-ou-mais-vias.png`, sinal isolado extraído do PDF oficial; corresponde à dupla cruz de Santo André mostrada na imagem antiga. |
+| 22 | Passagens de nível | Regulamento de Sinais, sinal D79 | B | A | `public/sinais/D79-sinal-pdf-600dpi.png`, sinal isolado extraído do PDF oficial; corresponde à dupla cruz de Santo André mostrada na imagem antiga. |
 | 23 | Ultrapassagem | CE, art. 44.º, n.º 3 | C | C | exame6_23.jpg. Resposta «Sim» do APK mantida, justificação reformulada (a razão não é «ter prioridade no cruzamento»). |
 | 24 | Manutenção do veículo | Segurança geral | A | B | exame6_24.jpg. Segurança geral — manutenção |
 | 25 | Sinais de informação | Regulamento de Sinais (G63) | C | A | G63-parque-estacionamento-veiculos-emergencia.png. Sinal G63 4.ª alternativa vazia no APK; distrator novo. |
