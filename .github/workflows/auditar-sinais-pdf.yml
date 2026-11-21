@@ -44,12 +44,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p /tmp/dados079-crops
-          find public/sinais -maxdepth 1 -type f -name '*-600dpi.png' -exec cp {} /tmp/dados079-crops/ ;
+          for file in public/sinais/*-600dpi.png; do
+            if [ -f "$file" ]; then cp "$file" /tmp/dados079-crops/; fi
+          done
           for attempt in 1 2 3; do
             git fetch origin feat/firebase-full-migration
             git reset --hard origin/feat/firebase-full-migration
             cp /tmp/dados079-crops/*.png public/sinais/
-            git add public/sinais/*-sinal-pdf-600dpi.png public/exames/exame30/exame30_1.jpg
+            git add public/sinais/*-600dpi.png public/exames/exame30/exame30_1.jpg
             if git diff --cached --quiet; then
               echo "Os recortes já estão actualizados no ramo."
               exit 0
