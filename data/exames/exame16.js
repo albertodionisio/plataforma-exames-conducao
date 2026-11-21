@@ -403,8 +403,8 @@ window.EXAMES[16] = [
     "dificuldade": "fácil",
     "enunciado": "O que indica o sinal apresentado?",
     "imagem": {
-      "descricao": "Sinal azul de obrigação relativo à circulação de peões e velocípedes.",
-      "src": "public/exames/exame16/exame16_23.jpg"
+      "descricao": "Sinal F13 de pista obrigatória para velocípedes e peões, extraído do PDF oficial de sinais",
+      "src": "public/sinais/F13-sinal-pdf.png"
     },
     "opcoes": [
       "Pista obrigatória para veículos de tracção manual.",
