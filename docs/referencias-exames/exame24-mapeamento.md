@@ -19,7 +19,7 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 | 7 | Comportamento, prevenção e segurança | Considera-se 'condução defensiva': | B | imagens/exame24/exame24_7.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 8 | Comportamento, prevenção e segurança | Que entende-se por liberdade? | C | imagens/exame24/exame24_8.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 9 | Comportamento, prevenção e segurança | O condutor deve ter atenção que, se tem problemas de sono... | C | imagens/exame24/exame24_9.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
-| 10 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame24/exame24_10.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. Enunciado repetido assinalado na extracção. |
+| 10 | Sinalização e regras da via | O que indica o sinal? | A | `public/sinais/E51-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal E51 de paragem e estacionamento proibidos, página 29 do PDF oficial; substitui a fotografia de baixa resolução. |
 | 11 | Circulação e manobras | O condutor do veículo amarelo ao mudar de direcção para a direita, a quem deve ceder a passagem? | B | imagens/exame24/exame24_11.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 12 | Comportamento, prevenção e segurança | Muitas tarefas que são necessárias à condução, exigem que o condutor retire os olhos da estrada: | B | imagens/exame24/exame24_12.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. |
 | 13 | Circulação e manobras | Que veículos devem ter o seguro de responsabilidade civil para transitar na via pública? | C | imagens/exame24/exame24_13.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
@@ -27,7 +27,7 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 | 15 | Comportamento, prevenção e segurança | Uma das partes importantes para praticar uma condução defensiva é: | A | imagens/exame24/exame24_15.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 16 | Veículos, ocupantes e deveres do condutor | A definição de tara é: | A | imagens/exame24/exame24_16.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 17 | Sinalização e regras da via | O que indica o sinal? | C | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, extraído do PDF oficial; substitui a fotografia de baixa resolução. |
-| 18 | Sinalização e regras da via | O significado deste sinal é: | B | imagens/exame24/exame24_18.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
+| 18 | Sinalização e regras da via | O significado deste sinal é: | B | `public/sinais/A46-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A46 de passagem de peões, página 5 do PDF oficial; substitui a imagem de baixa resolução. |
 | 19 | Comportamento, prevenção e segurança | A força centrípeta e centrífuga: | C | imagens/exame24/exame24_19.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 20 | Comportamento, prevenção e segurança | Quem exceder mais de 3o Km/h de velocidade (automóveis ligeiros e motociclos) os limites, fora das localidades é punido: | C | imagens/exame24/exame24_20.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 21 | Comportamento, prevenção e segurança | Como pode definir derrapagem? | A | imagens/exame24/exame24_21.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. |
