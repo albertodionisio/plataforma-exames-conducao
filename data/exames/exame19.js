@@ -350,7 +350,7 @@ window.EXAMES[19] = [
     "enunciado": "Que indica o sinal?",
     "imagem": {
       "descricao": "Sinal A19 de congestionamento de tráfego, extraído do PDF oficial de sinais",
-      "src": "public/sinais/A19-sinal-pdf.png"
+      "src": "public/sinais/A19-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Terreno falso à direita.",
