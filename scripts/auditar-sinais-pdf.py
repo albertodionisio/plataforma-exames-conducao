@@ -75,6 +75,88 @@ def render_crop(page: fitz.Page, box_px: tuple[int, int, int, int], dpi: int) ->
     return Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
 
 
+def vector_clusters(page: fitz.Page, gap: float = 1.5) -> list[fitz.Rect]:
+    """Group overlapping/nearby vector paths into individual visual objects."""
+    drawings = [d["rect"] for d in page.get_drawings()
+                if d["rect"].width >= 2 and d["rect"].height >= 2]
+    parents = list(range(len(drawings)))
+
+    def root(i: int) -> int:
+        while parents[i] != i:
+            parents[i] = parents[parents[i]]
+            i = parents[i]
+        return i
+
+    def join(a: int, b: int) -> None:
+        a, b = root(a), root(b)
+        if a != b:
+            parents[b] = a
+
+    for i, a in enumerate(drawings):
+        for j in range(i):
+            b = drawings[j]
+            dx = max(b.x0 - a.x1, a.x0 - b.x1, 0)
+            dy = max(b.y0 - a.y1, a.y0 - b.y1, 0)
+            if dx <= gap and dy <= gap:
+                join(i, j)
+
+    groups: dict[int, list[fitz.Rect]] = {}
+    for i, rect in enumerate(drawings):
+        groups.setdefault(root(i), []).append(rect)
+
+    result = []
+    for group in groups.values():
+        box = fitz.Rect(group[0])
+        for rect in group[1:]:
+            box |= rect
+        if box.width >= 12 and box.height >= 12:
+            result.append(box)
+    return sorted(result, key=lambda r: (round(r.y0, 1), round(r.x0, 1)))
+
+
+def extract_vector_review(doc: fitz.Document, out_dir: Path, dpi: int) -> list[dict]:
+    """Render vector-object clusters directly from the PDF for manual matching."""
+    review_dir = out_dir / "vector-crops"
+    review_dir.mkdir(parents=True, exist_ok=True)
+    records = []
+    font = ImageFont.load_default()
+    cell_w, cell_h, columns = 360, 300, 4
+
+    for page_number in [3, 4, 5, 11, 14, 18, 21, 22, 24, 26, 27, 28, 29, 31, 35, 36]:
+        page = doc[page_number - 1]
+        page_dir = review_dir / f"page-{page_number:02d}"
+        page_dir.mkdir(parents=True, exist_ok=True)
+        boxes = vector_clusters(page)
+        thumbs = []
+        for index, box in enumerate(boxes, 1):
+            clip = (box + (-3, -3, 3, 3)) & page.rect
+            pix = page.get_pixmap(matrix=fitz.Matrix(dpi / 72, dpi / 72),
+                                  clip=clip, alpha=False)
+            crop = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+            filename = f"p{page_number:02d}-vector-{index:02d}.png"
+            crop.save(page_dir / filename, "PNG", optimize=True)
+            records.append({
+                "page": page_number, "cluster": index, "file": str((page_dir / filename).relative_to(ROOT)),
+                "bbox_points": [round(v, 2) for v in clip],
+                "dpi": dpi, "width": crop.width, "height": crop.height,
+            })
+            thumb = crop.copy()
+            thumb.thumbnail((cell_w - 16, cell_h - 44), Image.Resampling.LANCZOS)
+            thumbs.append((index, thumb))
+
+        rows = (len(thumbs) + columns - 1) // columns
+        sheet = Image.new("RGB", (columns * cell_w, max(1, rows) * cell_h), "white")
+        draw = ImageDraw.Draw(sheet)
+        for pos, (index, thumb) in enumerate(thumbs):
+            x, y = (pos % columns) * cell_w, (pos // columns) * cell_h
+            draw.text((x + 8, y + 6), f"P{page_number:02d} · OBJECTO {index:02d}", fill="black", font=font)
+            sheet.paste(thumb, (x + (cell_w - thumb.width) // 2, y + 34))
+            draw.rectangle((x, y, x + cell_w - 1, y + cell_h - 1), outline="#bbbbbb", width=1)
+        sheet.save(out_dir / f"vectors-page-{page_number:02d}.jpg", "JPEG", quality=92, optimize=True)
+
+    return records
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dpi", type=int, default=160, help="DPI for individual page previews")
@@ -84,6 +166,7 @@ def main() -> None:
     parser.add_argument("--rows", type=int, default=3)
     parser.add_argument("--extract-crops", action="store_true", help="Extract confirmed crops into public/sinais")
     parser.add_argument("--overwrite-crops", action="store_true", help="Overwrite only the explicitly listed DADOS-079 crop files")
+    parser.add_argument("--extract-vector-review", action="store_true", help="Render vector-object crops for visual matching")
     args = parser.parse_args()
 
     if not PDF.is_file():
@@ -104,6 +187,7 @@ def main() -> None:
         "crop_dpi": args.crop_dpi,
         "pages": [],
         "crops": [],
+        "vector_review": [],
     }
 
     for index, page in enumerate(doc):
@@ -158,6 +242,9 @@ def main() -> None:
                 })
         layout.append({"page": page_number, "page_rect": [round(float(v), 2) for v in page.rect], "text_spans": spans, "drawing_rects": drawings})
     (OUT / "layout.json").write_text(json.dumps(layout, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    if args.extract_vector_review:
+        manifest["vector_review"] = extract_vector_review(doc, OUT, args.crop_dpi)
+
     if args.extract_crops:
         SIGNAL_DIR.mkdir(parents=True, exist_ok=True)
         for filename, page_number, box, code, designation in CROPS:
