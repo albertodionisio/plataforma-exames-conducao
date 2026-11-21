@@ -58,10 +58,10 @@ CROPS = [
 
 # Confirmed DADOS-079 replacements. Separate names keep older shared assets intact.
 DADOS079_CROPS = [
-    ("A19-sinal-pdf-600dpi.png", 4, (650, 20, 930, 245), "A19", "Congestionamento de tráfego"),
-    ("D79-sinal-pdf-600dpi.png", 24, (910, 1435, 1245, 1675), "D79", "Local de passagem de nível sem guarda com duas ou mais vias"),
-    ("E12-sinal-pdf-600dpi.png", 26, (930, 970, 1235, 1285), "E12", "Proibição de exceder a velocidade de 80 km/h"),
-    ("G62-sinal-pdf-600dpi.png", 37, (330, 1380, 480, 1620), "G62", "Área reservada para veículos de emergência"),
+    ("A19-sinal-pdf-600dpi.png", 4, (680, 15, 970, 270), "A19", "Congestionamento de tráfego"),
+    ("D79-sinal-pdf-600dpi.png", 24, (900, 1420, 1245, 1615), "D79", "Local de passagem de nível sem guarda com duas ou mais vias"),
+    ("E12-sinal-pdf-600dpi.png", 26, (930, 960, 1235, 1260), "E12", "Proibição de exceder a velocidade de 80 km/h"),
+    ("G62-sinal-pdf-600dpi.png", 37, (330, 1380, 480, 1590), "G62", "Área reservada para veículos de emergência"),
 ]
 
 
