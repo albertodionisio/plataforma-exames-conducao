@@ -24,35 +24,35 @@ PREVIEW_DPI = 160
 # filename, physical PDF page, crop box in pixels on a 160-DPI page preview,
 # code (None when the PDF prints no code), and exact PDF designation.
 CROPS = [
-    ("A1-sinal-pdf.png", 3, (85, 315, 310, 560), "A1", "Trabalhos na estrada"),
-    ("A18-sinal-pdf.png", 4, (335, 60, 620, 320), "A18", "Visibilidade reduzida"),
-    ("A37-sinal-pdf.png", 4, (75, 1560, 335, 1770), "A37", "Subida de inclinação acentuada"),
-    ("A45-sinal-pdf.png", 5, (60, 340, 280, 580), "A45", "Travessia de peões"),
-    ("A46-sinal-pdf.png", 5, (350, 345, 570, 580), "A46", "Passagem de peões"),
-    ("A51-sinal-pdf.png", 5, (675, 640, 890, 880), "A51", "Ponte estreita"),
-    ("D1-sinal-pdf.png", 21, (90, 110, 320, 340), "D1", "Sinalização luminosa"),
-    ("D14-sinal-pdf.png", 21, (350, 1070, 610, 1320), "D14", "Descida de inclinação acentuada"),
-    ("D27-sinal-pdf.png", 22, (650, 425, 900, 640), "D27", "Cruzamento com estrada sem prioridade"),
+    ("A1-sinal-pdf.png", 3, (60, 270, 370, 550), "A1", "Trabalhos na estrada"),
+    ("A18-sinal-pdf.png", 4, (335, 60, 620, 260), "A18", "Visibilidade reduzida"),
+    ("A37-sinal-pdf.png", 4, (75, 1560, 335, 1740), "A37", "Subida de inclinação acentuada"),
+    ("A45-sinal-pdf.png", 5, (60, 340, 280, 540), "A45", "Travessia de peões"),
+    ("A46-sinal-pdf.png", 5, (350, 345, 570, 540), "A46", "Passagem de peões"),
+    ("A51-sinal-pdf.png", 5, (675, 640, 890, 820), "A51", "Ponte estreita"),
+    ("D1-sinal-pdf.png", 21, (90, 110, 320, 320), "D1", "Sinalização luminosa"),
+    ("D14-sinal-pdf.png", 21, (350, 1070, 610, 1350), "D14", "Descida de inclinação acentuada"),
+    ("D27-sinal-pdf.png", 22, (650, 400, 900, 680), "D27", "Cruzamento com estrada sem prioridade"),
     ("D62-sinal-pdf.png", 24, (335, 90, 605, 320), "D62", "Visibilidade reduzida"),
     ("D63-sinal-pdf.png", 24, (650, 90, 925, 320), "D63", "Congestionamento de tráfego"),
-    ("D68-sinal-pdf.png", 24, (1000, 380, 1270, 650), "D68", "Passagem de nível"),
-    ("E3-sinal-pdf.png", 26, (660, 270, 910, 530), "E3", "Trânsito proibido a automóveis ligeiros"),
-    ("E19-sinal-pdf.png", 27, (660, 260, 910, 520), "E19", "Trânsito proibido a veículos de peso por eixo superior a ... t"),
-    ("E24-sinal-pdf.png", 27, (1010, 590, 1270, 850), "E24", "Proibição de sinais sonoros"),
-    ("E36-sinal-pdf.png", 28, (1010, 260, 1270, 520), "E36", "Trânsito proibido a veículos que transportam substâncias perigosas"),
-    ("E37-sinal-pdf.png", 28, (60, 580, 310, 840), "E37", "Trânsito proibido a veículos de peso por eixo múltiplo superior a ... t"),
-    ("E50-sinal-pdf.png", 29, (340, 260, 590, 520), "E50", "Estacionamento proibido"),
-    ("E51-sinal-pdf.png", 29, (660, 260, 910, 520), "E51", "Paragem e estacionamento proibidos"),
+    ("D68-sinal-pdf.png", 24, (1000, 450, 1270, 630), "D68", "Passagem de nível"),
+    ("E3-sinal-pdf.png", 26, (650, 230, 920, 520), "E3", "Trânsito proibido a automóveis ligeiros"),
+    ("E19-sinal-pdf.png", 27, (660, 200, 910, 480), "E19", "Trânsito proibido a veículos de peso por eixo superior a ... t"),
+    ("E24-sinal-pdf.png", 27, (1010, 560, 1270, 760), "E24", "Proibição de sinais sonoros"),
+    ("E36-sinal-pdf.png", 28, (1010, 180, 1270, 440), "E36", "Trânsito proibido a veículos que transportam substâncias perigosas"),
+    ("E37-sinal-pdf.png", 28, (40, 560, 350, 850), "E37", "Trânsito proibido a veículos de peso por eixo múltiplo superior a ... t"),
+    ("E50-sinal-pdf.png", 29, (340, 180, 590, 450), "E50", "Estacionamento proibido"),
+    ("E51-sinal-pdf.png", 29, (660, 180, 910, 470), "E51", "Paragem e estacionamento proibidos"),
     ("F13-sinal-pdf.png", 31, (125, 1420, 355, 1660), "F13", "Pista obrigatória para velocípedes e peões"),
-    ("G1-sinal-pdf.png", 35, (80, 230, 220, 390), "G1", "Área reservada para autocarros"),
-    ("G27-sinal-pdf.png", 36, (330, 230, 480, 400), "G27", "Parque de estacionamento para autocarros e autocarros médios"),
+    ("G1-sinal-pdf.png", 35, (80, 230, 220, 420), "G1", "Área reservada para autocarros"),
+    ("G27-sinal-pdf.png", 36, (330, 230, 480, 420), "G27", "Parque de estacionamento para autocarros e autocarros médios"),
     ("sem-codigo-area-reservada-veiculos-dimensoes-anormais.png", 14, (318, 1450, 453, 1634), None, "Área reservada para veículos de dimensões anormais"),
     ("sem-codigo-area-reservada-autocarros-excursao.png", 14, (805, 1452, 942, 1635), None, "Área reservada para autocarros de excursão"),
     ("sem-codigo-parque-estacionamento-substancias-perigosas.png", 14, (85, 1445, 223, 1630), None, "Parque de estacionamento para veículos que transportam substâncias perigosas"),
     ("sem-codigo-parque-estacionamento-veiculos-policia.png", 14, (1025, 1452, 1165, 1635), None, "Parque de estacionamento para veículos da polícia"),
     ("sem-codigo-parque-estacionamento-pesados-mercadorias-10t.png", 14, (985, 1125, 1115, 1308), None, "Parque de estacionamento para automóveis pesados de mercadorias de peso total superior a 10 toneladas"),
     ("E28-proibicao-inversao-noite.png", 18, (550, 600, 820, 950), "E28", "Proibição de inversão do sentido de marcha de noite (painel adicional)"),
-    ("sem-codigo-limite-120-km-dia.png", 18, (900, 610, 1200, 1000), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
+    ("sem-codigo-limite-120-km-dia.png", 18, (880, 640, 1240, 1080), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
 ]
 
 
@@ -83,6 +83,7 @@ def main() -> None:
     parser.add_argument("--columns", type=int, default=4)
     parser.add_argument("--rows", type=int, default=3)
     parser.add_argument("--extract-crops", action="store_true", help="Extract confirmed crops into public/sinais")
+    parser.add_argument("--overwrite-crops", action="store_true", help="Overwrite only the explicitly listed DADOS-079 crop files")
     args = parser.parse_args()
 
     if not PDF.is_file():
@@ -138,7 +139,7 @@ def main() -> None:
         SIGNAL_DIR.mkdir(parents=True, exist_ok=True)
         for filename, page_number, box, code, designation in CROPS:
             target = SIGNAL_DIR / filename
-            if target.exists():
+            if target.exists() and not args.overwrite_crops:
                 raise SystemExit(f"Recusa de sobrescrita: {target}")
             image = render_crop(doc[page_number - 1], box, args.crop_dpi)
             image.save(target, "PNG", optimize=True)
