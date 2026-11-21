@@ -260,7 +260,7 @@ window.EXAMES[6] = [
     "enunciado": "Numa estrada larga, o condutor vê o sinal de limite de velocidade da imagem. A velocidade indicada é:",
     "imagem": {
       "descricao": "Sinal E12 de proibição de exceder 80 km/h, extraído do PDF oficial de sinais",
-      "src": "public/sinais/E12-proibicao-exceder-velocidade.png"
+      "src": "public/sinais/E12-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "A velocidade mínima que o condutor é obrigado a manter naquele troço.",
