@@ -24,7 +24,7 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 | 4 | Cidadania | Conhecimento geral de cidadania (sem artigo do Código) | A | B | exame6_4.jpg. Cidadania 4.ª alternativa vazia no APK; distrator novo. |
 | 5 | Prioridade nos cruzamentos | Regra geral de prioridade; geometria da imagem verificada (circulação pela esquerda) | B | A | exame6_5.jpg. Prioridade de passagem (regra da direita) 4.ª alternativa vazia no APK; distrator novo. |
 | 6 | Paragem e estacionamento | CE, art. 50.º, n.º 1, al. d) | B | C | exame6_6.jpg. Paragem e estacionamento |
-| 7 | Sinais de estacionamento | Regulamento de Sinais (prescrição absoluta) | A | D | exame6_7.jpg. Chave do APK (A, condicionado) rejeitada: o sinal da fotografia é o de estacionamento proibido. 4.ª alternativa vazia no APK; distrator novo. |
+| 7 | Sinais de estacionamento | Regulamento de Sinais, sinal E50 | A | D | `public/sinais/E50-sinal-pdf.png` — sinal de estacionamento proibido, isolado e extraído do PDF oficial; substitui a fotografia de baixa resolução. A imagem da pergunta mostra o sinal de uma só barra (não o sinal de paragem proibida, com barras cruzadas). |
 | 8 | Atenção e reacção | Segurança geral | C | B | exame6_8.jpg. Segurança geral — reacção 4.ª alternativa vazia no APK; distrator novo. |
 | 9 | Obstáculos na faixa de rodagem | CE, art. 22.º, n.º 2 | C | A | exame6_9.jpg. Obstáculos na via |
 | 10 | Uso da buzina | CE, art. 24.º, n.º 4 | A | D | exame6_10.jpg. Sinais sonoros |
@@ -46,6 +46,8 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 
 
 ## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
+
+- Pergunta 7: fotografia contextual substituída pelo sinal E50 isolado do PDF (página física 29), porque o enunciado pergunta especificamente pelo significado do sinal circular azul com uma barra vermelha. A explicação já distingue correctamente estacionamento proibido de paragem proibida.
 
 - Pergunta 15: a fotografia original mostrava um sinal circular de limite de 80 km/h; substituída pelo sinal E12 extraído do PDF, sem alterar enunciado, alternativas ou resposta.
 - Pergunta 20: detectada divergência entre a identificação antiga M3 e a imagem. O painel da fotografia é quadrado azul, com setas branca e vermelha; o M3 do PDF é circular, com setas vermelha e preta. A imagem original foi preservada até ser confirmada a correspondência correcta.
