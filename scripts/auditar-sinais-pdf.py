@@ -306,6 +306,22 @@ def main() -> None:
             })
 
 
+    if args.extract_dados079_crops:
+        # Preserve the existing first-question asset path used by the E2E smoke test.
+        source = SIGNAL_DIR / "pdf-p26-x22-y192.png"
+        legacy_target = ROOT / "public" / "exames" / "exame30" / "exame30_1.jpg"
+        with Image.open(source) as original:
+            original.convert("RGB").save(legacy_target, "JPEG", quality=96, subsampling=0, optimize=True)
+        manifest["crops"].append({
+            "file": "public/exames/exame30/exame30_1.jpg",
+            "page": 26,
+            "code": "E5",
+            "designation": "Trânsito proibido a veículos automóveis e motociclos com carro",
+            "source": "public/sinais/pdf-p26-x22-y192.png",
+            "format": "JPEG quality 96 for existing E2E-compatible path",
+        })
+
+
     (OUT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
