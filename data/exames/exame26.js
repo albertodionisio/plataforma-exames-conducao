@@ -79,8 +79,8 @@ window.EXAMES[26] = [
     "dificuldade": "média",
     "enunciado": "Diante do sinal, o condutor deve:",
     "imagem": {
-      "src": "public/exames/exame26/exame26_5.jpg",
-      "descricao": "Imagem original da pergunta 5 do Exame 26"
+      "src": "public/sinais/D45-sinal-pdf-600dpi.png",
+      "descricao": "Sinal D45 de intersecção com sentido giratório, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Inverter o sentido de marcha.",
@@ -169,8 +169,8 @@ window.EXAMES[26] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal circular?",
     "imagem": {
-      "src": "public/exames/exame26/exame26_10.jpg",
-      "descricao": "Imagem original da pergunta 10 do Exame 26"
+      "src": "public/sinais/E14-sinal-pdf-600dpi.png",
+      "descricao": "Sinal E14 de proibição de ultrapassar para motociclos simples, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Trânsito proibido para todos os veículos automóveis.",
@@ -331,8 +331,8 @@ window.EXAMES[26] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame26/exame26_19.jpg",
-      "descricao": "Imagem original da pergunta 19 do Exame 26"
+      "src": "public/sinais/G63-parque-estacionamento-veiculos-emergencia.png",
+      "descricao": "Sinal G63 de parque de estacionamento para veículos de emergência, extraído do PDF oficial"
     },
     "opcoes": [
       "Indica a existência de um parque de estacionamento para veículos da policia.",
