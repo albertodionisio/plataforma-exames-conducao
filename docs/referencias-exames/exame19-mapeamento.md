@@ -29,7 +29,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 17 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame19/exame19_17.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 18 | Sinalização e regras da via | O que indica o sinal de perigo? | C | imagens/exame19/exame19_18.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 19 | Álcool, substâncias e comportamento | Depois de ter tomado bebidas alcoólicas: | A | imagens/exame19/exame19_19.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
-| 20 | Sinalização e regras da via | Que indica o sinal? | C | `public/sinais/A19-sinal-pdf.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, extraído do PDF oficial; imagem antiga de baixa resolução substituída. |
+| 20 | Sinalização e regras da via | Que indica o sinal? | C | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, extraído do PDF oficial; imagem antiga de baixa resolução substituída. |
 | 21 | Sinalização e regras da via | O sinal, pertence ao grupo de sinais de: | C | imagens/exame19/exame19_21.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 22 | Veículos, ocupantes e carga | A definição de tractor é: | B | imagens/exame19/exame19_22.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 23 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame19/exame19_23.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
@@ -48,4 +48,4 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 
 ## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
 
-- Pergunta 20: o sinal triangular com veículos em fila corresponde ao sinal A19 («Congestionamento de tráfego»). A imagem de baixa resolução foi substituída por `public/sinais/A19-sinal-pdf.png`, extraído do PDF oficial.
+- Pergunta 20: o sinal triangular com veículos em fila corresponde ao sinal A19 («Congestionamento de tráfego»). A imagem de baixa resolução foi substituída por `public/sinais/A19-sinal-pdf-600dpi.png`, extraído do PDF oficial.
