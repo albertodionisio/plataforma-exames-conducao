@@ -56,6 +56,15 @@ CROPS = [
 ]
 
 
+# Confirmed DADOS-079 replacements. Separate names keep older shared assets intact.
+DADOS079_CROPS = [
+    ("A19-sinal-pdf-600dpi.png", 4, (650, 20, 930, 245), "A19", "Congestionamento de tráfego"),
+    ("D79-sinal-pdf-600dpi.png", 24, (910, 1435, 1245, 1675), "D79", "Local de passagem de nível sem guarda com duas ou mais vias"),
+    ("E12-sinal-pdf-600dpi.png", 26, (930, 970, 1235, 1285), "E12", "Proibição de exceder a velocidade de 80 km/h"),
+    ("G62-sinal-pdf-600dpi.png", 37, (330, 1380, 480, 1620), "G62", "Área reservada para veículos de emergência"),
+]
+
+
 def render_page(page: fitz.Page, dpi: int) -> Image.Image:
     scale = dpi / 72.0
     pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
@@ -164,7 +173,8 @@ def main() -> None:
     parser.add_argument("--crop-dpi", type=int, default=600, help="DPI for signal crops")
     parser.add_argument("--columns", type=int, default=4)
     parser.add_argument("--rows", type=int, default=3)
-    parser.add_argument("--extract-crops", action="store_true", help="Extract confirmed crops into public/sinais")
+    parser.add_argument("--extract-crops", action="store_true", help="Extract the legacy confirmed crop list into public/sinais")
+    parser.add_argument("--extract-dados079-crops", action="store_true", help="Extract only the four confirmed DADOS-079 crops")
     parser.add_argument("--overwrite-crops", action="store_true", help="Overwrite only the explicitly listed DADOS-079 crop files")
     parser.add_argument("--extract-vector-review", action="store_true", help="Render vector-object crops for visual matching")
     args = parser.parse_args()
@@ -262,6 +272,24 @@ def main() -> None:
                 "width": image.width,
                 "height": image.height,
             })
+    if args.extract_dados079_crops:
+        SIGNAL_DIR.mkdir(parents=True, exist_ok=True)
+        for filename, page_number, box, code, designation in DADOS079_CROPS:
+            target = SIGNAL_DIR / filename
+            if target.exists() and not args.overwrite_crops:
+                raise SystemExit(f"Recusa de sobrescrita: {target}")
+            image = render_crop(doc[page_number - 1], box, args.crop_dpi)
+            image.save(target, "PNG", optimize=True)
+            manifest["crops"].append({
+                "file": f"public/sinais/{filename}",
+                "page": page_number,
+                "code": code,
+                "designation": designation,
+                "dpi": args.crop_dpi,
+                "width": image.width,
+                "height": image.height,
+            })
+
 
     (OUT / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
