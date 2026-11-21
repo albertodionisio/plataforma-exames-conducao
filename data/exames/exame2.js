@@ -5,19 +5,19 @@ window.EXAMES[2] = [
     "numero": 1,
     "tema": "Veículos prioritários",
     "dificuldade": "média",
-    "enunciado": "Uma ambulância em missão urgente chega a um cruzamento com o semáforo vermelho. O que deve fazer o condutor antes de prosseguir?",
+    "enunciado": "Uma ambulância devidamente sinalizada aproxima-se numa via congestionada que não é uma auto-estrada. Como devem proceder os condutores para lhe facilitar a passagem?",
     "imagem": {
       "descricao": "Veículo em missão prioritária, com sinalização luminosa",
       "src": "public/exames/exame2/exame2_1.jpg"
     },
     "opcoes": [
-      "Pode avançar de imediato, porque a missão urgente lhe dá prioridade absoluta.",
-      "Deve parar, confirmar que a passagem é segura e só depois avançar, mesmo sem o sinal mudar.",
-      "Tem de aguardar sempre pelo verde, mesmo quando a via está livre e segura.",
-      "Só pode avançar depois de outro condutor lhe indicar que pode passar."
+      "Encostar-se o mais possível à direita, deixando a passagem livre pelo lado esquerdo.",
+      "Deixar livre uma passagem à direita, chegando-se o mais possível à esquerda e, se necessário, usando a berma.",
+      "Manter-se na faixa de rodagem e reduzir a velocidade, sem alterar a posição do veículo.",
+      "Avançar para a faixa de sentido contrário, mesmo sem visibilidade, para abrir espaço."
     ],
     "correta": 1,
-    "explicacao": "Mesmo em missão urgente, o condutor deve parar perante a luz vermelha ou o sinal de paragem obrigatória. Depois de confirmar que não coloca ninguém em perigo, pode prosseguir sem esperar que o sinal mude."
+    "explicacao": "Numa via congestionada, os condutores devem facilitar a passagem do veículo prioritário, deixando livre o lado direito da faixa destinada ao seu sentido e chegando-se o mais possível à esquerda. Se necessário, podem utilizar a berma; esta regra não se aplica nas auto-estradas."
   },
   {
     "numero": 2,
