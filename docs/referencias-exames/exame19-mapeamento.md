@@ -27,7 +27,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 15 | Condução e segurança rodoviária | Nas pontes, túneis e passagens de nível: | A | imagens/exame19/exame19_15.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 16 | Comportamento e segurança do condutor | Se conduz muito tempo sem descansar... | B | imagens/exame19/exame19_16.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 17 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame19/exame19_17.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
-| 18 | Sinalização e regras da via | O que indica o sinal de perigo? | C | imagens/exame19/exame19_18.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 18 | Sinalização e regras da via | O que indica o sinal de perigo? | C | `public/sinais/A8-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A8 de sinalização luminosa, página 3 do PDF oficial; substitui a fotografia de baixa resolução. |
 | 19 | Álcool, substâncias e comportamento | Depois de ter tomado bebidas alcoólicas: | A | imagens/exame19/exame19_19.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 20 | Sinalização e regras da via | Que indica o sinal? | C | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, extraído do PDF oficial; imagem antiga de baixa resolução substituída. |
 | 21 | Sinalização e regras da via | O sinal, pertence ao grupo de sinais de: | C | imagens/exame19/exame19_21.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
