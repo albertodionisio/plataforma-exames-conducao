@@ -259,8 +259,8 @@ window.EXAMES[6] = [
     "dificuldade": "fácil",
     "enunciado": "Numa estrada larga, o condutor vê o sinal de limite de velocidade da imagem. A velocidade indicada é:",
     "imagem": {
-      "descricao": "Sinal circular de limite de velocidade com o número 80, à beira de uma estrada",
-      "src": "public/exames/exame6/exame6_15.jpg"
+      "descricao": "Sinal E12 de proibição de exceder 80 km/h, extraído do PDF oficial de sinais",
+      "src": "public/sinais/E12-proibicao-exceder-velocidade.png"
     },
     "opcoes": [
       "A velocidade mínima que o condutor é obrigado a manter naquele troço.",
@@ -385,8 +385,8 @@ window.EXAMES[6] = [
     "dificuldade": "média",
     "enunciado": "De noite, na estrada, o condutor vê o sinal reflector da imagem, com duas cruzes de aspa sobrepostas. O que indica?",
     "imagem": {
-      "descricao": "Sinal reflector branco e vermelho com cruz de Santo André dupla, de noite",
-      "src": "public/exames/exame6/exame6_22.jpg"
+      "descricao": "Sinal D79 de passagem de nível sem guarda com duas ou mais vias, extraído do PDF oficial de sinais",
+      "src": "public/sinais/D79-local-passagem-nivel-sem-guarda-duas-ou-mais-vias.png"
     },
     "opcoes": [
       "Local de passagem de nível sem guarda com duas ou mais vias.",
