@@ -10,7 +10,7 @@ As 25 imagens originais foram copiadas para `public/exames/exame30/` e associada
 
 | Nº | Tema | Enunciado | Chave APK | Imagem original | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
-| 1 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame30/exame30_1.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 1 | Sinalização e regras da via | O que indica o sinal? | A | `public/sinais/pdf-p26-x22-y192.png` | CONFIRMADO | Sinal E5, trânsito proibido a veículos automóveis e motociclos com carro, página 26 do PDF oficial; substitui a fotografia de baixa resolução. |
 | 2 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame30/exame30_2.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 3 | Sinalização e regras da via | Ao mudar de direcção num cruzamento, como o deve sinalizar para os outros utentes da via? | B | imagens/exame30/exame30_3.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 4 | Sinalização e regras da via | Durante a noite, quando deve o condutor utilizar as luzes de cruzamento? | C | imagens/exame30/exame30_4.jpg | Copiada e associada | Alternativas da fonte preservadas. |
