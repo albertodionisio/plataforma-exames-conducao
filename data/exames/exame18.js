@@ -43,8 +43,8 @@ window.EXAMES[18] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 3 do Exame 18",
-      "src": "public/exames/exame18/exame18_3.jpg"
+      "descricao": "Sinal E37 de proibição de veículos de peso por eixo múltiplo superior a 10 t, extraído do PDF oficial",
+      "src": "public/sinais/E37-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido ao conjunto de veículos de mercadoria, de peso total superior a 10t.",
@@ -205,8 +205,8 @@ window.EXAMES[18] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 12 do Exame 18",
-      "src": "public/exames/exame18/exame18_12.jpg"
+      "descricao": "Sinal A51 de ponte estreita, extraído do PDF oficial",
+      "src": "public/sinais/A51-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Passagem estreita.",
