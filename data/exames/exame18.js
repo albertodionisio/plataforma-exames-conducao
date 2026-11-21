@@ -277,8 +277,8 @@ window.EXAMES[18] = [
     "dificuldade": "média",
     "enunciado": "A que grupo pertence o sinal triangular?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 16 do Exame 18",
-      "src": "public/exames/exame18/exame18_16.jpg"
+      "descricao": "Sinal A1 de trabalhos na estrada, pertencente ao grupo de sinais temporários de perigo, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A1-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Sinalização temporários de obrigação.",
