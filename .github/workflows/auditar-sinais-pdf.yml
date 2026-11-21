@@ -1,0 +1,41 @@
+name: Auditar PDF de sinais
+
+on:
+  push:
+    branches:
+      - feat/firebase-full-migration
+    paths:
+      - scripts/auditar-sinais-pdf.py
+      - .github/workflows/auditar-sinais-pdf.yml
+      - original/referencia/sinais.pdf
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  renderizar-pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências de auditoria
+        run: python -m pip install --disable-pip-version-check PyMuPDF Pillow
+
+      - name: Renderizar páginas e folhas de contacto
+        run: python scripts/auditar-sinais-pdf.py --dpi 160 --contact-dpi 100
+
+      - name: Publicar material de revisão
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-pdf-sinais
+          path: artifacts/sinais-pdf/
+          if-no-files-found: error
+          retention-days: 7
