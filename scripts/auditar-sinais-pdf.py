@@ -135,6 +135,29 @@ def main() -> None:
         name = f"contact-{first + 1:03d}-{last:03d}.jpg"
         sheet.save(OUT / name, "JPEG", quality=90, optimize=True)
 
+    layout_pages = [3, 4, 5, 11, 14, 18, 21, 22, 24, 26, 27, 28, 29, 31, 35, 36]
+    layout = []
+    for page_number in layout_pages:
+        page = doc[page_number - 1]
+        spans = []
+        for block in page.get_text("dict").get("blocks", []):
+            for line in block.get("lines", []):
+                for span in line.get("spans", []):
+                    text_value = span.get("text", "").strip()
+                    if text_value:
+                        spans.append({"text": text_value, "bbox": [round(float(v), 2) for v in span["bbox"]]})
+        drawings = []
+        for drawing in page.get_drawings():
+            rect = drawing["rect"]
+            if rect.width >= 18 and rect.height >= 18:
+                drawings.append({
+                    "bbox": [round(float(v), 2) for v in rect],
+                    "fill": drawing.get("fill"),
+                    "color": drawing.get("color"),
+                    "width": round(float(drawing.get("width") or 0), 2),
+                })
+        layout.append({"page": page_number, "page_rect": [round(float(v), 2) for v in page.rect], "text_spans": spans, "drawing_rects": drawings})
+    (OUT / "layout.json").write_text(json.dumps(layout, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     if args.extract_crops:
         SIGNAL_DIR.mkdir(parents=True, exist_ok=True)
         for filename, page_number, box, code, designation in CROPS:
