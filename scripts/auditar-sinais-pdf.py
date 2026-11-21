@@ -67,13 +67,13 @@ DADOS079_CROPS = [
     ("E37-sinal-pdf-600dpi.png", 28, (39.78, 263.12, 164.99, 388.33), "E37", "Proibição de veículos de peso por eixo múltiplo superior a 10 t"),
     ("A51-sinal-pdf-600dpi.png", 5, (291.38, 277.76, 416.58, 383.06), "A51", "Ponte estreita"),
     ("A18-sinal-pdf-600dpi.png", 4, (180.0, 9.0, 301.5, 112.5), "A18", "Visibilidade reduzida"),
-    ("A37-sinal-pdf-600dpi.png", 4, (36.0, 690.75, 175.5, 803.25), "A37", "Subida de inclinação acentuada"),
+    ("A37-sinal-pdf-600dpi.png", 4, (31.5, 697.5, 171.0, 796.5), "A37", "Subida de inclinação acentuada"),
     ("E19-sinal-pdf-600dpi.png", 27, (292.5, 33.75, 416.25, 144.0), "E19", "Trânsito proibido a veículos de peso por eixo superior a 2 t"),
     ("G26-sinal-pdf-600dpi.png", 36, (38.0, 120.0, 100.0, 198.0), "G26", "Área reservada para autocarros e autocarros médios"),
-    ("A1-sinal-pdf-600dpi.png", 3, (30.0, 126.0, 162.0, 270.0), "A1", "Trabalhos na estrada"),
-    ("A8-sinal-pdf-600dpi.png", 3, (435.0, 235.0, 555.0, 355.0), "A8", "Sinalização luminosa"),
-    ("A46-sinal-pdf-600dpi.png", 5, (155.0, 150.0, 278.0, 280.0), "A46", "Passagem de peões"),
-    ("E51-sinal-pdf-600dpi.png", 29, (292.0, 31.0, 419.0, 190.0), "E51", "Paragem e estacionamento proibidos"),
+    ("A1-sinal-pdf-600dpi.png", 3, (31.5, 162.0, 171.0, 259.0), "A1", "Trabalhos na estrada"),
+    ("A8-sinal-pdf-600dpi.png", 3, (427.5, 324.0, 562.5, 416.25), "A8", "Sinalização luminosa"),
+    ("A46-sinal-pdf-600dpi.png", 5, (153.0, 153.0, 283.5, 258.75), "A46", "Passagem de peões"),
+    ("E51-sinal-pdf-600dpi.png", 29, (292.5, 94.5, 416.25, 220.5), "E51", "Paragem e estacionamento proibidos"),
 ]
 
 
