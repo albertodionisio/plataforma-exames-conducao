@@ -2,7 +2,7 @@
 
 ## Origem e âmbito
 
-Conteúdo adaptado de `original/extraido/exame19.json`, com 25 perguntas na ordem da fonte. Nesta publicação, as imagens foram deliberadamente deixadas de fora, conforme orientação do responsável; serão associadas numa etapa posterior por outra sessão.
+Conteúdo adaptado de `original/extraido/exame19.json`, com 25 perguntas na ordem da fonte. As imagens foram associadas posteriormente; a presente auditoria actualiza o registo das correspondências com o PDF oficial de sinais. As fotografias de cenas e os sinais sem correspondência exacta permanecem referenciados separadamente.
 
 A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracção do APK. Não foi feita revisão jurídica independente nesta etapa, pelo que não se declara validação legal das respostas.
 
@@ -29,7 +29,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 17 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame19/exame19_17.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 18 | Sinalização e regras da via | O que indica o sinal de perigo? | C | imagens/exame19/exame19_18.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 19 | Álcool, substâncias e comportamento | Depois de ter tomado bebidas alcoólicas: | A | imagens/exame19/exame19_19.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
-| 20 | Sinalização e regras da via | Que indica o sinal? | C | imagens/exame19/exame19_20.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 20 | Sinalização e regras da via | Que indica o sinal? | C | `public/sinais/A19-sinal-pdf.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, extraído do PDF oficial; imagem antiga de baixa resolução substituída. |
 | 21 | Sinalização e regras da via | O sinal, pertence ao grupo de sinais de: | C | imagens/exame19/exame19_21.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 22 | Veículos, ocupantes e carga | A definição de tractor é: | B | imagens/exame19/exame19_22.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 23 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame19/exame19_23.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
@@ -44,3 +44,8 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 - Imagens: pendentes; os dados usam `imagem: null` para não apresentar imagens inexistentes.
 - Integração no catálogo/aplicação e teste funcional no navegador: não realizados nesta tarefa.
 - Não foram alteradas regras de acesso, assinaturas, cronómetro ou ficheiros de integração.
+
+
+## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
+
+- Pergunta 20: o sinal triangular com veículos em fila corresponde ao sinal A19 («Congestionamento de tráfego»). A imagem de baixa resolução foi substituída por `public/sinais/A19-sinal-pdf.png`, extraído do PDF oficial.
