@@ -10,17 +10,17 @@ As 25 imagens originais foram copiadas para `public/exames/exame27/` e associada
 
 | Nº | Tema | Enunciado | Chave APK | Imagem original | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
-| 1 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame27/exame27_1.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 1 | Sinalização e regras da via | O que indica o sinal? | C | `public/sinais/D79-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal D79 de passagem de nível sem guarda com duas ou mais vias, página 24, recorte vectorial a 600 DPI. |
 | 2 | Circulação e manobras | Em acidente de viação com vitima, deixar de prestar ou providenciar socorro, constitui contravenção: | C | imagens/exame27/exame27_2.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 3 | Veículos, ocupantes e deveres do condutor | Quando os pneus têm uma pressão incorrecta: | A | imagens/exame27/exame27_3.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 4 | Circulação e manobras | São evitáveis os acidentes de viação? | B | imagens/exame27/exame27_4.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 5 | Sinalização e regras da via | Desde o anoitecer até o amanhecer, pode deixar as luzes de cruzamento acesas quando o veículo estiver estacionado | B | imagens/exame27/exame27_5.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 6 | Comportamento, prevenção e segurança | Quando na faixa de rodagem existam placas, postes, ilhéus, direccionais ou dispositivos semelhantes, como deve transitar? | C | imagens/exame27/exame27_6.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 7 | Sinalização e regras da via | O agente regulador de trânsito que aparece na fotografia, manda | C | imagens/exame27/exame27_7.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
-| 8 | Sinalização e regras da via | A velocidade controlada pelo sinal, é: | B | imagens/exame27/exame27_8.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
+| 8 | Sinalização e regras da via | A velocidade controlada pelo sinal, é: | B | `public/sinais/E12-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal E12 de limite máximo de 80 km/h, página 26, recorte vectorial a 600 DPI. |
 | 9 | Veículos, ocupantes e deveres do condutor | Se os ocupantes do veículo não utilizarem o cinto de segurança, o airbag é eficaz? | C | imagens/exame27/exame27_9.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 10 | Circulação e manobras | Nesta situação, posso ultrapassar? | A | imagens/exame27/exame27_10.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 11 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame27/exame27_11.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 11 | Sinalização e regras da via | O que indica o sinal? | A | `public/sinais/E50-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal E50 de estacionamento proibido, página 29, recorte vectorial a 600 DPI. |
 | 12 | Sinalização e regras da via | O que indica o sinal de interesse turístico? | C | imagens/exame27/exame27_12.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 13 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame27/exame27_13.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 14 | Circulação e manobras | Devem utilizar os cintos de segurança os passageiros que viajam no veículo?? | C | imagens/exame27/exame27_14.jpg | Copiada e associada | Alternativas da fonte preservadas. |
