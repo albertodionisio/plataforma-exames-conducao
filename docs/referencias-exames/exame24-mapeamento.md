@@ -26,7 +26,7 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 | 14 | Veículos, ocupantes e deveres do condutor | Pode conduzir um automóvel ligeiro com reboque com a carta de condução da categoria B? | B | imagens/exame24/exame24_14.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 15 | Comportamento, prevenção e segurança | Uma das partes importantes para praticar uma condução defensiva é: | A | imagens/exame24/exame24_15.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 16 | Veículos, ocupantes e deveres do condutor | A definição de tara é: | A | imagens/exame24/exame24_16.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
-| 17 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame24/exame24_17.jpg | Pendente | Foi criado um distrator para completar a quarta alternativa. Enunciado repetido assinalado na extracção. |
+| 17 | Sinalização e regras da via | O que indica o sinal? | C | `public/sinais/A19-sinal-pdf.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, extraído do PDF oficial; substitui a fotografia de baixa resolução. |
 | 18 | Sinalização e regras da via | O significado deste sinal é: | B | imagens/exame24/exame24_18.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 19 | Comportamento, prevenção e segurança | A força centrípeta e centrífuga: | C | imagens/exame24/exame24_19.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
 | 20 | Comportamento, prevenção e segurança | Quem exceder mais de 3o Km/h de velocidade (automóveis ligeiros e motociclos) os limites, fora das localidades é punido: | C | imagens/exame24/exame24_20.jpg | Pendente | Quatro alternativas disponíveis na fonte. |
@@ -44,3 +44,8 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 - Imagens pendentes; o conteúdo usa `imagem: null`.
 - Não integrado no catálogo nem testado no navegador nesta tarefa.
 - Nenhuma regra de acesso, assinatura, cronómetro ou ficheiro de integração foi alterado.
+
+
+## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
+
+- Pergunta 17: a fotografia mostrava o sinal A19 de congestionamento de tráfego. Substituída pela imagem isolada de alta qualidade extraída do PDF oficial.
