@@ -68,6 +68,8 @@ DADOS079_CROPS = [
     ("A51-sinal-pdf-600dpi.png", 5, (291.38, 277.76, 416.58, 383.06), "A51", "Ponte estreita"),
     ("A18-sinal-pdf-600dpi.png", 4, (180.0, 9.0, 301.5, 112.5), "A18", "Visibilidade reduzida"),
     ("A37-sinal-pdf-600dpi.png", 4, (36.0, 690.75, 175.5, 803.25), "A37", "Subida de inclinação acentuada"),
+    ("E19-sinal-pdf-600dpi.png", 27, (292.5, 33.75, 416.25, 144.0), "E19", "Trânsito proibido a veículos de peso por eixo superior a 2 t"),
+    ("G26-sinal-pdf-600dpi.png", 36, (38.0, 120.0, 100.0, 198.0), "G26", "Área reservada para autocarros e autocarros médios"),
 ]
 
 
