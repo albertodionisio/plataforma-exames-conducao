@@ -26,7 +26,7 @@ window.EXAMES[22] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Sinal G62 de área reservada para veículos de emergência, extraído do PDF oficial de sinais",
-      "src": "public/sinais/G62-area-reservada-veiculos-emergencia.png"
+      "src": "public/sinais/G62-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Área reservada para mini-autocarros.",
