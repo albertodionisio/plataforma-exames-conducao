@@ -349,8 +349,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "Que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 20 do Exame 19",
-      "src": "public/exames/exame19/exame19_20.jpg"
+      "descricao": "Sinal A19 de congestionamento de tráfego, extraído do PDF oficial de sinais",
+      "src": "public/sinais/A19-sinal-pdf.png"
     },
     "opcoes": [
       "Terreno falso à direita.",
