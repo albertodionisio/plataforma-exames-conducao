@@ -43,6 +43,8 @@ jobs:
             echo "Nenhum recorte novo."
           else
             git commit -m "DADOS-079: extrair sinais confirmados do PDF a 600 DPI"
+            git fetch origin feat/firebase-full-migration
+            git rebase origin/feat/firebase-full-migration
             git push origin HEAD:feat/firebase-full-migration
           fi
 
