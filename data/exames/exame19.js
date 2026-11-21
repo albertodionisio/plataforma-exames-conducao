@@ -295,8 +295,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 17 do Exame 19",
-      "src": "public/exames/exame19/exame19_17.jpg"
+      "descricao": "Sinal E37 de proibição de trânsito a veículos de peso por eixo múltiplo superior a 10 t, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/E37-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido ao conjunto de veículos de mercadorias, de peso total superior a 10t.",
