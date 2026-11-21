@@ -52,7 +52,7 @@ jobs:
             git fetch origin feat/firebase-full-migration
             git reset --hard origin/feat/firebase-full-migration
             cp /tmp/dados079-crops/*.png public/sinais/
-            git add public/sinais/*-sinal-pdf-600dpi.png
+            git add public/sinais/ public/exames/exame30/exame30_1.jpg*-sinal-pdf-600dpi.png
             if git diff --cached --quiet; then
               echo "Os recortes já estão actualizados no ramo."
               exit 0
