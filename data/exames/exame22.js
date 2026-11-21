@@ -25,8 +25,8 @@ window.EXAMES[22] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 2 do Exame 22",
-      "src": "public/exames/exame22/exame22_2.jpg"
+      "descricao": "Sinal G62 de área reservada para veículos de emergência, extraído do PDF oficial de sinais",
+      "src": "public/sinais/G62-area-reservada-veiculos-emergencia.png"
     },
     "opcoes": [
       "Área reservada para mini-autocarros.",
