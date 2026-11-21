@@ -115,8 +115,8 @@ window.EXAMES[6] = [
     "dificuldade": "média",
     "enunciado": "À porta de um edifício, o condutor vê o sinal da imagem, redondo e azul com bordo vermelho. O que indica?",
     "imagem": {
-      "descricao": "Sinal circular azul com bordo vermelho e uma barra oblíqua, à porta de um edifício",
-      "src": "public/exames/exame6/exame6_7.jpg"
+      "descricao": "Sinal E50 de estacionamento proibido, extraído do PDF oficial de sinais",
+      "src": "public/sinais/E50-sinal-pdf.png"
     },
     "opcoes": [
       "Estacionamento condicionado.",
