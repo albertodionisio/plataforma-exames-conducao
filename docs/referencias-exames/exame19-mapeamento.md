@@ -11,7 +11,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | Nº | Tema | Enunciado de origem | Chave APK | Imagem de origem | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
 | 1 | Veículos, ocupantes e carga | O que é a ergonomia de um veículo? | A | imagens/exame19/exame19_1.jpg | Pendente | Quatro alternativas existentes na fonte. |
-| 2 | Sinalização e regras da via | O significado deste sinal é: | B | imagens/exame19/exame19_2.jpg | Pendente | Quatro alternativas existentes na fonte. |
+| 2 | Sinalização e regras da via | O significado deste sinal é: | B | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, página 4 do PDF oficial; substitui a imagem antiga de baixa resolução. |
 | 3 | Veículos, ocupantes e carga | A definição de tara é: | B | imagens/exame19/exame19_3.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 4 | Sinalização e regras da via | O significado deste sinal é: | C | imagens/exame19/exame19_4.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 5 | Sinalização e regras da via | As luzes de travagem dos automóveis tem a cor: | C | imagens/exame19/exame19_5.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
