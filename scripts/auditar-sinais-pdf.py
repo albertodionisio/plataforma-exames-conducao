@@ -66,6 +66,8 @@ DADOS079_CROPS = [
     ("E50-sinal-pdf-600dpi.png", 29, (165.18, 98.25, 290.39, 223.46), "E50", "Estacionamento proibido"),
     ("E37-sinal-pdf-600dpi.png", 28, (39.78, 263.12, 164.99, 388.33), "E37", "Proibição de veículos de peso por eixo múltiplo superior a 10 t"),
     ("A51-sinal-pdf-600dpi.png", 5, (291.38, 277.76, 416.58, 383.06), "A51", "Ponte estreita"),
+    ("A18-sinal-pdf-600dpi.png", 4, (180.0, 9.0, 301.5, 112.5), "A18", "Visibilidade reduzida"),
+    ("A37-sinal-pdf-600dpi.png", 4, (36.0, 690.75, 175.5, 803.25), "A37", "Subida de inclinação acentuada"),
 ]
 
 
@@ -289,7 +291,7 @@ def main() -> None:
             target = SIGNAL_DIR / filename
             if target.exists() and not args.overwrite_crops:
                 raise SystemExit(f"Recusa de sobrescrita: {target}")
-            image = render_crop(doc[page_number - 1], box, args.crop_dpi)
+            image = render_crop_points(doc[page_number - 1], box, args.crop_dpi)
             image.save(target, "PNG", optimize=True)
             manifest["crops"].append({
                 "file": f"public/sinais/{filename}",
