@@ -169,8 +169,8 @@ window.EXAMES[24] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 10 do Exame 24",
-      "src": "public/exames/exame24/exame24_10.jpg"
+      "descricao": "Sinal E51 de paragem e estacionamento proibidos, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/E51-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Paragem e estacionamento proibidos.",
