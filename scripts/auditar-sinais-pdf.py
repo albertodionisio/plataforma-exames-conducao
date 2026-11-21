@@ -58,12 +58,12 @@ CROPS = [
 
 # Confirmed DADOS-079 replacements. Separate names keep older shared assets intact.
 DADOS079_CROPS = [
-    ("A19-sinal-pdf-600dpi.png", 4, (690, 15, 950, 270), "A19", "Congestionamento de tráfego"),
+    ("A19-sinal-pdf-600dpi.png", 4, (665, 30, 946, 267), "A19", "Congestionamento de tráfego"),
     ("D79-sinal-pdf-600dpi.png", 24, (900, 1420, 1245, 1660), "D79", "Local de passagem de nível sem guarda com duas ou mais vias"),
-    ("E12-sinal-pdf-600dpi.png", 26, (930, 960, 1235, 1290), "E12", "Proibição de exceder a velocidade de 80 km/h"),
+    ("E12-sinal-pdf-600dpi.png", 26, (936, 995, 1219, 1277), "E12", "Proibição de exceder a velocidade de 80 km/h"),
     ("G62-sinal-pdf-600dpi.png", 37, (320, 1380, 490, 1570), "G62", "Área reservada para veículos de emergência"),
     ("E50-sinal-pdf-600dpi.png", 29, (360, 210, 650, 470), "E50", "Estacionamento proibido"),
-    ("E50-sinal-pdf-600dpi.png", 29, (360, 210, 650, 505), "E50", "Estacionamento proibido"),
+    ("E50-sinal-pdf-600dpi.png", 29, (365, 216, 647, 498), "E50", "Estacionamento proibido"),
 ]
 
 
@@ -231,7 +231,7 @@ def main() -> None:
         name = f"contact-{first + 1:03d}-{last:03d}.jpg"
         sheet.save(OUT / name, "JPEG", quality=90, optimize=True)
 
-    layout_pages = [3, 4, 5, 11, 14, 18, 21, 22, 24, 26, 27, 28, 29, 31, 35, 36]
+    layout_pages = [3, 4, 5, 11, 14, 18, 21, 22, 24, 26, 27, 28, 29, 31, 35, 36, 37]
     layout = []
     for page_number in layout_pages:
         page = doc[page_number - 1]
