@@ -313,8 +313,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de perigo?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 18 do Exame 19",
-      "src": "public/exames/exame19/exame19_18.jpg"
+      "descricao": "Sinal A8 de sinalização luminosa, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A8-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Controle policial por pirilampos.",
