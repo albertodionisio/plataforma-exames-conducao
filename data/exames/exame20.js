@@ -115,8 +115,8 @@ window.EXAMES[20] = [
     "dificuldade": "média",
     "enunciado": "Que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 7 do Exame 20",
-      "src": "public/exames/exame20/exame20_7.jpg"
+      "descricao": "Sinal A18 de visibilidade reduzida, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A18-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pavimento escorregadio.",
