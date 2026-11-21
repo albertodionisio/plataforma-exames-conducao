@@ -25,7 +25,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 13 | Veículos, ocupantes e carga | O condutor selecciona o acto motor a realizar em que momento? | C | imagens/exame20/exame20_13.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 14 | Sinalização e regras da via | As luzes de máximos, com nevoeiro (cacimba): | B | imagens/exame20/exame20_14.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 15 | Álcool, substâncias e comportamento | Se o condutor consome álcool, em que momento aumenta o risco de acidente? | A | imagens/exame20/exame20_15.jpg | Pendente | Quatro alternativas existentes na fonte. |
-| 16 | Sinalização e regras da via | O significado deste sinal é: | A | imagens/exame20/exame20_16.jpg | Pendente | Quatro alternativas existentes na fonte. |
+| 16 | Sinalização e regras da via | O significado deste sinal é: | A | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, página 4 do PDF oficial; substitui a imagem antiga. |
 | 17 | Comportamento e segurança do condutor | Os jovens, têm mais possibilidades de ter acidentes rodoviários | C | imagens/exame20/exame20_17.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 18 | Circulação, velocidade e manobras | Qual é a velocidade instantânea que não devem exceder os automóveis ligeiros de passageiros e mistos dentro das localidades? | B | imagens/exame20/exame20_18.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 19 | Veículos, ocupantes e carga | A definição de estacionamento é: | C | imagens/exame20/exame20_19.jpg | Pendente | Quatro alternativas existentes na fonte. |
