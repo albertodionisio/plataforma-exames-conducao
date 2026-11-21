@@ -403,8 +403,8 @@ window.EXAMES[19] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 23 do Exame 19",
-      "src": "public/exames/exame19/exame19_23.jpg"
+      "descricao": "Sinal E50 de estacionamento proibido, extraído do PDF oficial a 600 DPI; a chave original apresenta divergência por indicar paragem e estacionamento proibidos",
+      "src": "public/sinais/E50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Paragem e estacionamento proibidos.",
