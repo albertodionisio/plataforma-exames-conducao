@@ -61,7 +61,7 @@ DADOS079_CROPS = [
     ("A19-sinal-pdf-600dpi.png", 4, (665, 30, 946, 235), "A19", "Congestionamento de tráfego"),
     ("D79-sinal-pdf-600dpi.png", 24, (900, 1420, 1245, 1660), "D79", "Local de passagem de nível sem guarda com duas ou mais vias"),
     ("E12-sinal-pdf-600dpi.png", 26, (936, 995, 1219, 1250), "E12", "Proibição de exceder a velocidade de 80 km/h"),
-    ("G62-sinal-pdf-600dpi.png", 37, (320, 1380, 490, 1550), "G62", "Área reservada para veículos de emergência"),
+    ("G62-sinal-pdf-600dpi.png", 37, (335, 1385, 465, 1557), "G62", "Área reservada para veículos de emergência"),
     ("E50-sinal-pdf-600dpi.png", 29, (365, 216, 647, 460), "E50", "Estacionamento proibido"),
 ]
 
