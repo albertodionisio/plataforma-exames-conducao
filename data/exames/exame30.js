@@ -385,8 +385,8 @@ window.EXAMES[30] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame30/exame30_22.jpg",
-      "descricao": "Imagem original da pergunta 22 do Exame 30"
+      "src": "public/sinais/G26-sinal-pdf-600dpi.png",
+      "descricao": "Sinal G26 de área reservada para autocarros e autocarros médios, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Parque de estacionamento para autocarros e autocarros médios.",
