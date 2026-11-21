@@ -32,13 +32,13 @@ Conteúdo adaptado das 25 perguntas de `original/extraido/exame16.json`. As 25 i
 | 15 | Condução defensiva e antecipação | C | C | exame16_15.jpg — D vazia no APK; distrator criado. |
 | 16 | Limites de velocidade fora das localidades | C | C | exame16_16.jpg — Resposta preservada conforme chave do APK; sem validação legal independente nesta fase. |
 | 17 | Condução defensiva pró-activa | C | C | exame16_17.jpg |
-| 18 | Sinal de paragem obrigatória | B | B | exame16_18.jpg — D vazia no APK; distrator criado. Enunciado repetido; imagem essencial. |
+| 18 | Sinal de paragem obrigatória | B | B | `public/sinais/pdf-p52-x87-y319.png` — sinal STOP com painel adicional, extraído do PDF oficial. |
 | 19 | Condução em dias quentes | A | A | exame16_19.jpg |
 | 20 | Sinal amarelo e preto de obstáculo | C | C | exame16_20.jpg — D vazia no APK; distrator criado. Imagem essencial para identificar o sinal. |
 | 21 | Sinalização de redução de velocidade | A | A | exame16_21.jpg — D vazia no APK; distrator criado. Imagem essencial para identificar o gesto. |
 | 22 | Distracção durante a condução | C | C | exame16_22.jpg |
-| 23 | Pista obrigatória para peões e velocípedes | B | B | exame16_23.jpg — Enunciado repetido na fonte; imagem essencial. |
-| 24 | Sinal de estreitamento ou fim de via | C | C | exame16_24.jpg — Enunciado repetido na fonte; imagem essencial. |
+| 23 | Pista obrigatória para peões e velocípedes | B | B | `public/sinais/F50-pistas-obrigatorias-peoes-velocipedes.png` — sinal F50 isolado, extraído do PDF oficial; substitui a fotografia de baixa resolução que o mostrava à beira da estrada. |
+| 24 | Sinal de estreitamento ou fim de via | C | C | `public/sinais/A36-sinal-pdf.png` — sinal A36 isolado, extraído do PDF oficial. |
 | 25 | Álcool e tempo de reacção | B | B | exame16_25.jpg |
 
 ## Estado
@@ -48,3 +48,10 @@ Conteúdo adaptado das 25 perguntas de `original/extraido/exame16.json`. As 25 i
 - Imagens: 25 ficheiros originais copiados e associados (25/25); correspondência por número de pergunta.
 - Integração na aplicação: não realizada.
 - Validação automática: pendente de reexecução global após publicação das imagens. Teste no navegador: pendente.
+
+
+## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
+
+- Pergunta 18: já usa o sinal STOP com painel adicional extraído do PDF (`pdf-p52-x87-y319.png`); registo alinhado com a implementação existente.
+- Pergunta 23: fotografia de um sinal azul dividido entre peões e velocípedes substituída pelo sinal F50 isolado, de alta qualidade, extraído do PDF.
+- Pergunta 24: o sinal A36 já estava substituído pela versão extraída do PDF; registo alinhado com a implementação existente.
