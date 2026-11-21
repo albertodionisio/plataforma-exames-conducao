@@ -5,19 +5,19 @@ window.EXAMES[2] = [
     "numero": 1,
     "tema": "Veículos prioritários",
     "dificuldade": "média",
-    "enunciado": "Um veículo prioritário circula em missão urgente de socorro. Em que condições pode o condutor deixar de cumprir algumas regras ou sinais de trânsito?",
+    "enunciado": "Uma ambulância em missão urgente chega a um cruzamento com o semáforo vermelho. O que deve fazer o condutor antes de prosseguir?",
     "imagem": {
       "descricao": "Veículo em missão prioritária, com sinalização luminosa",
       "src": "public/exames/exame2/exame2_1.jpg"
     },
     "opcoes": [
-      "Sempre que esteja em serviço, mesmo perante uma ordem de um agente regulador e sem adoptar precauções adicionais.",
-      "Quando a missão o exigir, sem desobedecer aos agentes nem pôr outros utentes em perigo.",
-      "Só quando o semáforo estiver verde e a via estiver completamente livre.",
-      "Nunca, porque os veículos prioritários devem cumprir todas as regras sem excepção."
+      "Pode avançar de imediato, porque a missão urgente lhe dá prioridade absoluta.",
+      "Deve parar, confirmar que a passagem é segura e só depois avançar, mesmo sem o sinal mudar.",
+      "Tem de aguardar sempre pelo verde, mesmo quando a via está livre e segura.",
+      "Só pode avançar depois de outro condutor lhe indicar que pode passar."
     ],
     "correta": 1,
-    "explicacao": "Os veículos prioritários podem não observar certas regras quando a missão urgente o exigir, mas devem respeitar as ordens dos agentes e não colocar ninguém em perigo. Mesmo perante luz vermelha ou STOP, devem parar e só avançar depois de verificar que é seguro."
+    "explicacao": "Mesmo em missão urgente, o condutor deve parar perante a luz vermelha ou o sinal de paragem obrigatória. Depois de confirmar que não coloca ninguém em perigo, pode prosseguir sem esperar que o sinal mude."
   },
   {
     "numero": 2,
