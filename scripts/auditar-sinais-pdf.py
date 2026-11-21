@@ -74,6 +74,7 @@ DADOS079_CROPS = [
     ("A8-sinal-pdf-600dpi.png", 3, (427.5, 318.0, 562.5, 416.25), "A8", "Sinalização luminosa"),
     ("A46-sinal-pdf-600dpi.png", 5, (153.0, 153.0, 283.5, 249.5), "A46", "Passagem de peões"),
     ("E51-sinal-pdf-600dpi.png", 29, (292.5, 94.5, 416.25, 220.5), "E51", "Paragem e estacionamento proibidos"),
+    ("D8-sinal-pdf-600dpi.png", 21, (414.0, 207.0, 558.0, 315.0), "D8", "Animais"),
 ]
 
 
