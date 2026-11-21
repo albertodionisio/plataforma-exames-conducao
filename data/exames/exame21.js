@@ -241,8 +241,8 @@ window.EXAMES[21] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal de informação?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 14 do Exame 21",
-      "src": "public/exames/exame21/exame21_14.jpg"
+      "descricao": "Sinal G11 de área reservada para automóveis ligeiros, extraído do PDF oficial",
+      "src": "public/sinais/G11-area-reservada-automoveis-ligeiros.png"
     },
     "opcoes": [
       "Área reservada para automóveis ligeiros.",
