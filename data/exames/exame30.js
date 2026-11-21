@@ -7,7 +7,7 @@ window.EXAMES[30] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/sinais/pdf-p26-x22-y192.png",
+      "src": "public/exames/exame30/exame30_1.jpg",
       "descricao": "Sinal E5 de trânsito proibido a veículos automóveis e motociclos com carro, extraído do PDF oficial"
     },
     "opcoes": [
