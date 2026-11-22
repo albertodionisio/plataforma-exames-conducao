@@ -26,7 +26,7 @@ window.EXAMES[2] = [
     "enunciado": "Perante o sinal F13 da imagem, quais utentes são obrigados a utilizar a pista indicada?",
     "imagem": {
       "descricao": "Sinal F13 de pista obrigatória para velocípedes e peões, extraído do PDF oficial (página 31)",
-      "src": "public/sinais/F13-sinal-pdf.png"
+      "src": "public/sinais/F13-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Todos os veículos automóveis e motociclos, sem distinção.",
@@ -134,7 +134,7 @@ window.EXAMES[2] = [
     "enunciado": "O que significa o sinal circular apresentado na imagem?",
     "imagem": {
       "descricao": "Sinal E3 de trânsito proibido a automóveis ligeiros, extraído do PDF oficial (página 26)",
-      "src": "public/sinais/E3-sinal-pdf.png"
+      "src": "public/sinais/E3-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido a automóveis ligeiros.",
@@ -152,7 +152,7 @@ window.EXAMES[2] = [
     "enunciado": "O sinal da imagem estabelece um limite de 120 km/h durante que período?",
     "imagem": {
       "descricao": "Sinal combinado de limite de 120 km/h durante o dia, extraído do PDF oficial (página 18)",
-      "src": "public/sinais/sem-codigo-limite-120-km-dia.png"
+      "src": "public/sinais/sem-codigo-limite-120-km-dia-600dpi.png"
     },
     "opcoes": [
       "Durante a noite.",
@@ -350,7 +350,7 @@ window.EXAMES[2] = [
     "enunciado": "O que adverte o sinal triangular apresentado na imagem?",
     "imagem": {
       "descricao": "Sinal D27 de cruzamento com estrada sem prioridade, extraído do PDF oficial (página 22)",
-      "src": "public/sinais/D27-sinal-pdf.png"
+      "src": "public/sinais/D27-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "A aproximação de um cruzamento onde todas as vias têm prioridade igual.",
@@ -386,7 +386,7 @@ window.EXAMES[2] = [
     "enunciado": "O que indica o sinal triangular temporário colocado junto à estrada na imagem?",
     "imagem": {
       "descricao": "Sinal D62 de visibilidade reduzida, extraído do PDF oficial (página 24)",
-      "src": "public/sinais/D62-sinal-pdf.png"
+      "src": "public/sinais/D62-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pavimento escorregadio.",
@@ -404,7 +404,7 @@ window.EXAMES[2] = [
     "enunciado": "Depois do sinal de estacionamento proibido apresentado na imagem, o condutor:",
     "imagem": {
       "descricao": "Sinal E50 de estacionamento proibido, extraído do PDF oficial (página 29)",
-      "src": "public/sinais/E50-sinal-pdf.png"
+      "src": "public/sinais/E50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pode parar, mas não pode estacionar.",
