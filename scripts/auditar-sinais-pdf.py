@@ -79,6 +79,7 @@ DADOS079_CROPS = [
     ("E9-sinal-pdf-600dpi.png", 26, (31.5, 441.0, 153.0, 558.0), "E9", "Fim de proibição de ultrapassar"),
     ("J5-sinal-pdf-600dpi.png", 47, (463.0, 98.0, 572.0, 190.0), "J5", "Praia"),
     ("G13-sinal-pdf-600dpi.png", 35, (264.04, 386.66, 326.73, 468.68), "G13", "Área reservada para táxis"),
+    ("sem-codigo-indicacao-aproximacao-saida-auto-estrada-600dpi.png", 14, (39.62, 238.74, 119.57, 337.5), None, "Indicação de aproximação de saída de auto-estrada (N4)"),
     ("sem-codigo-limite-120-km-dia-600dpi.png", 18, (391.06, 264.3, 517.73, 475.04), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
 ]
 
