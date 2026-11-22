@@ -46,3 +46,6 @@ As 25 imagens originais foram copiadas para `public/exames/exame30/` e associada
 ## Sinais de melhor qualidade (2026-11-15, Claude-DADOS005)
 
 Pergunta 2 (F54); a pergunta 1 (carro de frente) mantém a imagem do APK por não existir esse desenho no PDF: imagem do APK (~440 px, com contorno desfocado e ruído) substituída pelo sinal vectorial do `original/referencia/sinais.pdf`, desenhado a 600 ppp e guardado em `public/sinais/` com o código no nome. Desenho confirmado igual ao do APK.
+
+
+DADOS-079 (2026-11-22): a pergunta 1 passou a usar o recorte vectorial do sinal E5 directamente do PDF oficial, em substituição da fotografia de baixa resolução. Correspondência confirmada visualmente; conteúdo da pergunta mantido.
