@@ -57,3 +57,5 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 ## Actualização de qualidade visual (DADOS-079, 2026-11-22)
 
 A pergunta 25 (G63 — parque de estacionamento para veículos de emergência) passou a usar recorte directo do PDF oficial, página 37, a 600 DPI. A imagem corresponde ao painel azul P com o símbolo A do veículo de emergência. Enunciado, opções, resposta e explicação mantidos.
+
+Nota de publicação: o recorte vectorial G63 da página 37 foi definido no extractor, mas ainda não foi publicado no repositório; mantém-se a imagem existente até o novo ficheiro estar disponível.
