@@ -88,6 +88,7 @@ DADOS079_CROPS = [
     ("A47-sinal-pdf-600dpi.png", 5, (293.8, 150.1, 413.0, 247.5), "A47", "Um veículo de cada vez"),
     ("E1-sinal-pdf-600dpi.png", 26, (161.65, 105.36, 281.1, 221.8), "E1", "Trânsito proibido"),
     ("E47-sinal-pdf-600dpi.png", 28, (300.8, 619.5, 416.0, 736.8), "E47", "Trânsito proibido a peões, animais e veículos não automóveis"),
+    ("E36-sinal-pdf-600dpi.png", 28, (405.0, 49.5, 594.0, 234.0), "E36", "Trânsito proibido a veículos que transportam substâncias perigosas"),
     ("sem-codigo-area-reservada-veiculos-emergencia-600dpi.png", 14, (262.82, 652.84, 325.51, 734.86), None, "Área reservada para veículos de emergência"),
     ("sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png", 14, (38.16, 650.94, 100.85, 732.96), None, "Parque de estacionamento para veículos de alta tonelagem com indicação 12"),
     ("sem-codigo-parque-estacionamento-limitado-60-min-600dpi.png", 35, (264.04, 256.38, 326.73, 338.4), None, "Parque de estacionamento com duração limitada a 60 minutos"),
