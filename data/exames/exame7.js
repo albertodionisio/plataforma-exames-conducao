@@ -386,7 +386,7 @@ window.EXAMES[7] = [
     "enunciado": "À entrada de uma ponte, o condutor vê o sinal triangular da imagem, com um veículo entre duas margens. O que indica?",
     "imagem": {
       "descricao": "Sinal triangular com um camião entre dois obstáculos laterais",
-      "src": "public/sinais/A47-sinal-pdf.png"
+      "src": "public/sinais/A47-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Um veículo de cada vez.",
