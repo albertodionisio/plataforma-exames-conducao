@@ -242,7 +242,7 @@ window.EXAMES[21] = [
     "enunciado": "O que indica o sinal de informação?",
     "imagem": {
       "descricao": "Sinal G11 de área reservada para automóveis ligeiros, extraído do PDF oficial",
-      "src": "public/sinais/G11-area-reservada-automoveis-ligeiros.png"
+      "src": "public/sinais/G11-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Área reservada para automóveis ligeiros.",
