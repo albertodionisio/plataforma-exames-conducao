@@ -36,6 +36,7 @@ CROPS = [
     ("D27-sinal-pdf.png", 22, (650, 400, 900, 680), "D27", "Cruzamento com estrada sem prioridade"),
     ("D62-sinal-pdf.png", 24, (335, 90, 605, 320), "D62", "Visibilidade reduzida"),
     ("D63-sinal-pdf.png", 24, (650, 90, 925, 320), "D63", "Congestionamento de tráfego"),
+    ("D64-sinal-pdf.png", 24, (940, 80, 1235, 295), "D64", "Cruzamento com trânsito nos dois sentidos"),
     ("D68-sinal-pdf.png", 24, (950, 420, 1265, 660), "D68", "Passagem de nível"),
     ("E3-sinal-pdf.png", 26, (650, 230, 920, 480), "E3", "Trânsito proibido a automóveis ligeiros"),
     ("E19-sinal-pdf.png", 27, (660, 140, 910, 450), "E19", "Trânsito proibido a veículos de peso por eixo superior a ... t"),
