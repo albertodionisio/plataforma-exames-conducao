@@ -36,7 +36,9 @@ jobs:
         run: python -m pip install --disable-pip-version-check PyMuPDF Pillow
 
       - name: Renderizar páginas e extrair sinais confirmados
-        run: python scripts/auditar-sinais-pdf.py --dpi 160 --contact-dpi 100 --crop-dpi 600 --extract-crops --extract-dados079-crops --overwrite-crops --extract-vector-review
+        run: |
+          echo "DADOS-079: gerar e publicar os recortes exactos do PDF oficial a 600 DPI"
+          python scripts/auditar-sinais-pdf.py --dpi 160 --contact-dpi 100 --crop-dpi 600 --extract-crops --extract-dados079-crops --overwrite-crops --extract-vector-review
 
       - name: Publicar recortes sem perder alterações concorrentes
         run: |
