@@ -62,7 +62,7 @@ window.EXAMES[1] = [
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
    "descricao": "Sinal azul com a letra R branca e o símbolo de um automóvel branco, apresentado isolado",
-   "src": "public/sinais/G11-area-reservada-automoveis-ligeiros.png"
+   "src": "public/sinais/G11-sinal-pdf-600dpi.png"
   },
   "opcoes": [
    "Área reservada para motociclos.",
@@ -158,7 +158,7 @@ window.EXAMES[1] = [
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
    "descricao": "Círculo de borda vermelha e fundo branco, sem nenhum símbolo",
-   "src": "public/sinais/E1-transito-proibido.png"
+   "src": "public/sinais/E1-sinal-pdf-600dpi.png"
   },
   "opcoes": [
    "Estacionamento proibido.",
@@ -338,7 +338,7 @@ window.EXAMES[1] = [
   "enunciado": "O que indica o sinal da imagem?",
   "imagem": {
    "descricao": "Círculo vermelho cortado por um X, com os símbolos de peão, ciclomotor/bicicleta, animal (vaca) e carroça",
-   "src": "public/sinais/E47-transito-proibido-peoes-animais-veiculos-nao-automoveis.png"
+   "src": "public/sinais/E47-sinal-pdf-600dpi.png"
   },
   "opcoes": [
    "Trânsito proibido a peões, animais e a todos os veículos automóveis.",
