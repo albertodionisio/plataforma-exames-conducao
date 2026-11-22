@@ -474,3 +474,11 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Resultado da análise (50 perguntas lidas): precisam de sinal o Exame 32 (P9 paragem obrigatória; P14, P17 e P21 semáforo; P19 cancela de passagem de nível) e o Exame 33 (P4 paragem obrigatória; P9 e P10 semáforo). Perguntas opcionais, a decidir pelo dono e que esta tarefa não toca: Exame 32 P4, P5, P8, P16, P18, P22, P25; Exame 33 P11, P18, P24, P25. As restantes não precisam de sinal.
 - Pronto quando: as 8 perguntas têm `imagem` com o sinal do PDF (reutilizando os ficheiros já extraídos em DADOS-079: `M2-paragem-obrigatoria-pdf.png`, `temp-semaforo-tres-luzes.png`, `D67-cancela-pdf.png`), o validador e o auditor de estilo não pioram, o mapa de cada exame regista pergunta, sinal, página do PDF e ficheiro, e as imagens carregam no teste de fluxo.
 - Cuidados: não alterar enunciados, alternativas, respostas nem explicações. A reserva DADOS-034 (Exame 33) está desactualizada (o exame foi publicado no commit `277ea65` e já foi editado por DADOS-060 e DADOS-036); esta tarefa só altera o campo `imagem` desse ficheiro.
+
+
+## DADOS-082 — Ilustrações contextuais do Exame 31 para revisão visual
+- Estado: EM REVISÃO — ChatGPT — 2026-11-22
+- Pedido autorizado pelo dono: trabalhar exclusivamente no Exame 31, criar ilustrações de contexto seguindo o padrão visual dos exames existentes e preparar preview antes de generalizar aos outros exames.
+- Alterações nesta proposta: imagens SVG para as perguntas 7, 10, 14, 21, 22 e 24; actualizar apenas os campos `imagem` dessas perguntas e o mapa de rastreabilidade.
+- Limite: nenhuma pergunta, alternativa, resposta correcta ou explicação deve ser alterada. A substituição de sinal de baixa qualidade não foi feita porque a versão actual do Exame 31 não tem nenhuma imagem/sinal associado a substituir; confirmar com o dono se se referia a outra pergunta ou a outra versão publicada.
+- Pronto quando: os caminhos carregam no preview, o validador passa e o dono aprova visualmente as seis imagens.
