@@ -28,14 +28,14 @@ Conteúdo adaptado das 25 perguntas do Exame 2 extraído do APK de referência e
 | Nº | Tema / competência avaliada | Fonte principal | Resposta APK | Resposta ESTRADA | Imagem preservada / nota |
 |---|---|---|---|---|---|
 | 1 | Facilitar a passagem de veículo prioritário numa via congestionada | CE, art. 39.º, n.º 2 | — (reformulada para eliminar duplicação) | B | Veículo em missão prioritária; competência diferente das perguntas sobre excepções às regras e ordens dos agentes |
-| 2 | Identificar os utentes obrigados a utilizar a pista indicada pelo sinal F13 | RST, art. 28.º, F13 | B | C | `public/sinais/F13-sinal-pdf.png` — PDF oficial, p. 31; recorte isolado a 600 DPI. |
+| 2 | Identificar os utentes obrigados a utilizar a pista indicada pelo sinal F13 | RST, art. 28.º, F13 | B | C | `public/sinais/F13-sinal-pdf-600dpi.png` — PDF oficial, p. 31; recorte isolado a 600 DPI. |
 | 3 | Prioridade pela direita quando a intersecção não está sinalizada | CE, art. 38.º, n.º 3, al. a) | C | B | Semáforo/intersecção; alternativas duplicadas no APK foram normalizadas |
 | 4 | Identificar o factor humano como factor central de sinistralidade | Conhecimento geral de segurança rodoviária | A | D | Colisão entre veículos pesados; não é uma regra legal específica |
 | 5 | Classificação da falta de sinalização antecipada de manobras | CE, art. 23.º, n.º 1; art. 146.º, al. b) | A | A | Gesto de braço |
 | 6 | Uso de luzes de presença durante estacionamento nocturno em local mal iluminado | CE, art. 61.º, n.º 1, al. a) | A | D | Painel de instrumentos; associação visual original preservada |
 | 7 | Dever de deixar passar peões que já iniciaram a travessia | CE, art. 106.º, n.os 2–3 | A | C | Passagem para peões |
-| 8 | Interpretar o sinal E3 — trânsito proibido a automóveis ligeiros | RST, art. 26.º, sinal E3 | C | A | `public/sinais/E3-sinal-pdf.png` — PDF oficial, p. 26; distinto do E5, que inclui motociclos com carro lateral. |
-| 9 | Aplicação diurna de limite de velocidade indicado em sinal | RST, quadro de sinais combinados, painel N22 | B | D | `public/sinais/sem-codigo-limite-120-km-dia.png` — PDF oficial, p. 18; sinal de 120 km/h com painel diurno. |
+| 8 | Interpretar o sinal E3 — trânsito proibido a automóveis ligeiros | RST, art. 26.º, sinal E3 | C | A | `public/sinais/E3-sinal-pdf-600dpi.png` — PDF oficial, p. 26; distinto do E5, que inclui motociclos com carro lateral. |
+| 9 | Aplicação diurna de limite de velocidade indicado em sinal | RST, quadro de sinais combinados, painel N22 | B | D | `public/sinais/sem-codigo-limite-120-km-dia-600dpi.png` — PDF oficial, p. 18; sinal de 120 km/h com painel diurno. |
 | 10 | Instalação segura de sistema de retenção infantil | CE, art. 87.º, n.os 4–5; recomendação complementar de segurança | C | B | Sistemas de retenção infantil; ver ressalva legal acima |
 | 11 | Definição de automóvel ligeiro | CE, art. 109.º, n.º 1, al. a) | B | A | Automóveis ligeiros |
 | 12 | Identificar a carta de condução como título habilitante | CE, art. 127.º | A | A | Documento de carta de condução |
@@ -46,10 +46,10 @@ Conteúdo adaptado das 25 perguntas do Exame 2 extraído do APK de referência e
 | 17 | Reconhecer sinal de direcção para destinos/localidades | RST, art. 31.º, n.os 2–3 | A | C | Placa verde de direcção em Nampula; chave do APK corrigida |
 | 18 | Excepções à regra da via mais à esquerda fora das localidades | CE, art. 18.º, n.º 1 | B | B | Trânsito com várias filas |
 | 19 | Aplicar a excepção de utilização temporária da via adjacente para ultrapassar | CE, art. 18.º, n.º 1 | C | B | Estrada com várias vias; cenário de ultrapassagem, distinto da regra geral |
-| 20 | Reconhecer cruzamento com estrada sem prioridade (D27) | RST, art. 24.º, sinal D27 | B | D | `public/sinais/D27-sinal-pdf.png` — PDF oficial, p. 22; recorte isolado a 600 DPI. |
+| 20 | Reconhecer cruzamento com estrada sem prioridade (D27) | RST, art. 24.º, sinal D27 | B | D | `public/sinais/D27-sinal-pdf-600dpi.png` — PDF oficial, p. 22; recorte isolado a 600 DPI. |
 | 21 | Utilizar o gesto manual para indicar redução de velocidade quando o indicador está avariado | RST, art. 46.º, n.º 3, al. a) | B | C | Braço estendido, palma para baixo, movimento vertical; cenário diferente do Exame 1 |
-| 22 | Reconhecer o sinal de visibilidade reduzida (D62) | RST, art. 24.º, sinal D62 | B | C | `public/sinais/D62-sinal-pdf.png` — PDF oficial, p. 24; recorte isolado a 600 DPI. |
-| 23 | Distinguir proibição de estacionamento de proibição de paragem | RST, art. 26.º, sinal E50; CE, art. 49.º, n.os 1–2 | A | A | `public/sinais/E50-sinal-pdf.png` — PDF oficial, p. 29; distinto do E51 (paragem e estacionamento proibidos). |
+| 22 | Reconhecer o sinal de visibilidade reduzida (D62) | RST, art. 24.º, sinal D62 | B | C | `public/sinais/D62-sinal-pdf-600dpi.png` — PDF oficial, p. 24; recorte isolado a 600 DPI. |
+| 23 | Distinguir proibição de estacionamento de proibição de paragem | RST, art. 26.º, sinal E50; CE, art. 49.º, n.os 1–2 | A | A | `public/sinais/E50-sinal-pdf-600dpi.png` — PDF oficial, p. 29; distinto do E51 (paragem e estacionamento proibidos). |
 | 24 | Verificar regularmente a pressão dos pneus | Recomendação de manutenção e segurança rodoviária | C | D | Verificação da pressão de um pneu; sem artigo específico indicado |
 | 25 | Reconhecer que doenças e medicamentos podem afectar a condução | CE, arts. 132.º e 135.º (aptidão); orientação geral de segurança | A | A | Medicamentos; o Código não enumera todos os efeitos de cada medicamento |
 
@@ -83,4 +83,4 @@ O ficheiro `data/exames/exame2.js` já é copiado pelo build estático, que reco
 
 ## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
 
-As perguntas 2, 8, 9, 13, 20, 22 e 23 foram ligadas a recortes isolados do PDF oficial, renderizados a 600 DPI. A pergunta 13 foi confirmada como G13 (táxi + R), e não G14 (P + táxi). A pergunta 17 mantém a fotografia da situação rodoviária e o painel direccional específico, pois o contexto/destinos não têm correspondência integral num sinal isolado.
+As perguntas 2 (F13, p. 31), 8 (E3, p. 26), 9 (sinal combinado de 120 km/h durante o dia, p. 18), 20 (D27, p. 22), 22 (D62, p. 24) e 23 (E50, p. 29) foram substituídas por recortes isolados do PDF oficial, renderizados directamente a 600 DPI. As imagens mantêm o desenho, as cores e as proporções do documento; não houve ampliação artificial nem redesenho. A pergunta 13 foi confirmada como G13 (táxi + R), e não G14 (P + táxi), mas o respectivo recorte de alta resolução ainda não está incluído na lista de extracção confirmada, pelo que a imagem não foi alterada. A pergunta 17 mantém a fotografia da situação rodoviária e o painel direccional específico, pois o contexto/destinos não têm correspondência integral num sinal isolado.
