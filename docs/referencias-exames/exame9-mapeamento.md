@@ -6,7 +6,7 @@ Conteúdo elaborado a partir de `original/extraido/exame9.json`. Por decisão do
 - 25 perguntas estruturadas, com quatro alternativas preenchidas.
 - Distratores novos acrescentados às alternativas D vazias da extracção.
 - Explicações pedagógicas incluídas.
-- Imagens pendentes para uma etapa posterior; ainda não associadas no JavaScript.
+- Imagens associadas no JavaScript; a pergunta 6 usa o recorte oficial D64 extraído do PDF de sinais (página 24).
 - Exame ainda não ligado à aplicação, conforme a sequência definida.
 
 ## Respostas
@@ -43,4 +43,4 @@ Conteúdo elaborado a partir de `original/extraido/exame9.json`. Por decisão do
 - As perguntas 1 e 18 usam o mesmo enunciado genérico, mas têm imagens e conteúdos de sinalização distintos na fonte.
 - As perguntas 3, 5, 6, 7, 10, 12, 13, 17, 19, 21 e 25 tinham a alternativa D vazia; foi acrescentado um distrator.
 - Não foram acrescentados artigos nem valores de coimas.
-- Fonte: `original/extraido/exame9.json`; imagens originais previstas em `original/extraido/imagens/exame9/`.
+- Fonte: `original/extraido/exame9.json`; o recorte D64 da pergunta 6 está em `public/sinais/D64-sinal-pdf-600dpi.png` (PDF oficial, p. 24).
