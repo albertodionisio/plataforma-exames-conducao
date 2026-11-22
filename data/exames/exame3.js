@@ -98,7 +98,7 @@ window.EXAMES[3] = [
     "enunciado": "O que indica o sinal D63 apresentado na imagem?",
     "imagem": {
       "descricao": "Sinal temporário D63 de congestionamento de tráfego",
-      "src": "public/exames/exame3/exame3_6.jpg"
+      "src": "public/sinais/D63-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pavimento escorregadio.",
@@ -206,7 +206,7 @@ window.EXAMES[3] = [
     "enunciado": "O que indica o sinal D68 apresentado junto à passagem ferroviária?",
     "imagem": {
       "descricao": "Sinal triangular de aproximação de passagem de nível",
-      "src": "public/exames/exame3/exame3_12.jpg"
+      "src": "public/sinais/D68-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Local de passagem de nível com cancela.",
