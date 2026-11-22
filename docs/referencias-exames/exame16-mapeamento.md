@@ -48,3 +48,6 @@ Conteúdo adaptado das 25 perguntas de `original/extraido/exame16.json`. As 25 i
 - Imagens: 25 ficheiros originais copiados e associados (25/25); correspondência por número de pergunta.
 - Integração na aplicação: não realizada.
 - Validação automática: pendente de reexecução global após publicação das imagens. Teste no navegador: pendente.
+
+
+DADOS-079 (2026-11-22): a pergunta 23 passou a usar a versão vectorial extraída directamente do PDF oficial a 600 DPI para o sinal F13. Correspondência visual confirmada; a pergunta e as respostas foram preservadas.
