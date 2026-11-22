@@ -62,7 +62,7 @@ window.EXAMES[19] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Imagem original da pergunta 4 do Exame 19",
-      "src": "public/sinais/A47-sinal-pdf.png"
+      "src": "public/sinais/A47-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Passagem estreita.",
