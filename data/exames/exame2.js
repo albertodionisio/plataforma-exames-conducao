@@ -224,7 +224,7 @@ window.EXAMES[2] = [
     "enunciado": "O que indica o sinal de informação colocado junto à zona de estacionamento?",
     "imagem": {
       "descricao": "Sinal G13 de área reservada para táxis, extraído do PDF oficial (página 35)",
-      "src": "public/sinais/G13-area-reservada-taxis.png"
+      "src": "public/sinais/G13-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Área reservada exclusivamente à circulação de táxis.",
