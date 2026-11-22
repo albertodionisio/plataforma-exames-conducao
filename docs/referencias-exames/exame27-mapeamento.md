@@ -46,3 +46,6 @@ As 25 imagens originais foram copiadas para `public/exames/exame27/` e associada
 ## Sinais de melhor qualidade (2026-11-15, Claude-DADOS005)
 
 Perguntas 12 (J17) e 25 (G63): imagem do APK (~440 px, com contorno desfocado e ruído) substituída pelo sinal vectorial do `original/referencia/sinais.pdf`, desenhado a 600 ppp e guardado em `public/sinais/` com o código no nome. Desenho confirmado igual ao do APK.
+
+
+DADOS-079 (2026-11-22): a imagem G63 foi substituída pelo recorte vectorial do PDF oficial, página 37, a 600 DPI; corresponde ao parque de estacionamento para veículos de emergência.
