@@ -97,7 +97,10 @@ window.EXAMES[31] = [
   "tema": "Condução defensiva",
   "dificuldade": "média",
   "enunciado": "Numa estrada molhada pela chuva, o condutor segue atrás de um camião. Que distância deve manter em relação a ele?",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Estrada molhada com um camião à frente e um automóvel a manter distância",
+   "src": "public/cenas/exame31-pergunta-07-chuva-distancia.svg"
+  },
   "opcoes": [
    "A mesma que mantém com o piso seco, porque a distância não depende do estado da estrada.",
    "A suficiente para evitar acidente se o camião parar ou abrandar de repente.",
@@ -142,7 +145,10 @@ window.EXAMES[31] = [
   "tema": "Cruzamentos e rotundas",
   "dificuldade": "média",
   "enunciado": "Ao circular numa rotunda, o condutor deve fazê-lo de modo que a parte central da rotunda fique:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Vista superior de uma rotunda com veículos a circular à volta da ilha central",
+   "src": "public/cenas/exame31-pergunta-10-rotunda.svg"
+  },
   "opcoes": [
    "Do seu lado esquerdo.",
    "Do lado que for mais conveniente ao condutor, em cada momento.",
@@ -202,7 +208,10 @@ window.EXAMES[31] = [
   "tema": "Hierarquia da sinalização",
   "dificuldade": "média",
   "enunciado": "Num cruzamento, o semáforo está vermelho para o condutor, mas um agente regulador do trânsito faz-lhe sinal para avançar. O condutor deve:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Cruzamento com semáforo vermelho e agente a orientar o trânsito",
+   "src": "public/cenas/exame31-pergunta-14-agente-cruzamento.svg"
+  },
   "opcoes": [
    "Esperar pelo verde, porque o semáforo prevalece sobre as ordens do agente regulador.",
    "Esperar pelo verde, a menos que outros condutores já estejam a avançar no cruzamento.",
@@ -307,7 +316,10 @@ window.EXAMES[31] = [
   "tema": "Cruzamento de veículos",
   "dificuldade": "difícil",
   "enunciado": "Um carro avariado ocupa parte da faixa do condutor. Para o contornar, este terá de invadir parcialmente a faixa contrária, onde vem outro veículo. O que deve fazer?",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Carro avariado ocupa parte da faixa e outro veículo aproxima-se em sentido contrário",
+   "src": "public/cenas/exame31-pergunta-21-obstaculo.svg"
+  },
   "opcoes": [
    "Reduzir a velocidade ou parar, dando passagem ao veículo que vem em sentido contrário.",
    "Contornar o obstáculo, porque é o outro condutor que tem de parar para o deixar passar.",
@@ -322,7 +334,10 @@ window.EXAMES[31] = [
   "tema": "Cruzamento de veículos",
   "dificuldade": "difícil",
   "enunciado": "Um camião com carga, de 9 metros de comprimento no total, aproxima-se de uma ponte estreita onde o cruzamento com outros veículos não é seguro. O condutor deve:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Camião e automóvel aproximam-se de uma ponte estreita onde o cruzamento é difícil",
+   "src": "public/cenas/exame31-pergunta-22-ponte-estreita.svg"
+  },
   "opcoes": [
    "Entrar primeiro na ponte, porque os veículos maiores têm sempre prioridade.",
    "Diminuir a velocidade ou parar, para facilitar o cruzamento com os outros.",
@@ -352,7 +367,10 @@ window.EXAMES[31] = [
   "tema": "Mudança de direção",
   "dificuldade": "média",
   "enunciado": "Para virar à esquerda num cruzamento, o condutor deve aproximar-se, com a devida antecedência:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Vista superior de um veículo a aproximar-se de um cruzamento para virar à esquerda",
+   "src": "public/cenas/exame31-pergunta-24-virar-esquerda.svg"
+  },
   "opcoes": [
    "Do eixo da via, e fazer a manobra pelo trajeto mais longo.",
    "Da margem direita da faixa de rodagem, para ter melhor visibilidade.",
