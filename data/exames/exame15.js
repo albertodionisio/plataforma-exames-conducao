@@ -404,7 +404,7 @@ window.EXAMES[15] = [
     "enunciado": "O que indica o sinal da imagem?",
     "imagem": {
       "descricao": "Sinal E36 (trânsito proibido a veículos que transportam substâncias perigosas)",
-      "src": "public/exames/exame15/exame15_23.jpg"
+      "src": "public/sinais/E36-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido a veículos que levam reboque.",
