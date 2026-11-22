@@ -49,3 +49,6 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 ## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
 
 - Pergunta 20: o sinal triangular com veículos em fila corresponde ao sinal A19 («Congestionamento de tráfego»). A imagem de baixa resolução foi substituída por `public/sinais/A19-sinal-pdf-600dpi.png`, extraído do PDF oficial.
+
+
+DADOS-079 (2026-11-22): a imagem A47 foi substituída pelo recorte vectorial do PDF oficial, página 5, a 600 DPI; correspondência confirmada visualmente.
