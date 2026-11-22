@@ -383,15 +383,6 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
-## DADOS-079 — Imagens de sinais nos Exames 45–51 (extraídas do PDF de sinais)
-- Estado: EM CURSO — Claude-SINAIS-47 — 2026-11-22 — ficheiros: data/exames/exame47.js, public/sinais/ (ficheiros novos `temp-*`), docs/referencias-exames/exame47-mapeamento.md — último sinal: 2026-11-22
-- Pedido do dono: nas perguntas dos Exames 45 a 51 que precisam de um sinal (ou que o mostrariam melhor), extrair o sinal de `original/referencia/sinais.pdf` e integrá-lo na pergunta certa.
-- Levantamento (2026-11-22): nenhum dos Exames 45–51 tem imagem hoje. 45, 46 e 50 não precisam. Exame 47: Q17 raqueta A64, Q18 baias A65, Q19 balizas A66–A68, Q20 cones A69, Q23 perfil móvel A73, Q24 robot A74, Q25 atrelado A75 e seta luminosa A76 (PDF págs. 6 e 7); a ver: Q15, Q16. Exame 51: Q2/Q15/Q16 semáforo (Quadro III), Q19 passagem de nível (D67/D68), Q14 cedência, Q24 paragem obrigatória. Exame 49: Q10–Q14 auto-estrada (por confirmar no PDF). Exame 48: Q5–Q9 e Q11 triângulo de pré-sinalização (por encontrar no PDF).
-- Parcial (2026-11-22): **Exame 47 feito** (Q17, 18, 19, 20, 23, 24 e 25 com imagem do PDF; 7 ficheiros `temp-*` em `public/sinais/`; mapa actualizado). Falta: 47 Q12/Q15/Q16 (a decidir), depois 51, 49 e 48. Cada exame vai num commit próprio.
-- A rever (DADOS-074): Exame 47 Q25, a opção certa diz que o A75 «assinala mudança brusca de direcção», mas o PDF chama-lhe «Atrelado de balizamento».
-- Nota para DADOS-074 a 078: ao reformular o texto, **manter** as imagens e os `src` já integrados.
-- Pronto quando: cada pergunta listada tem a imagem certa do PDF, com descrição, o validador passa, e as imagens têm nome que não colide com `public/sinais/` existente (prefixo `temp-` nos sinais temporários, por exemplo `A69` já existe como «cancela motorizada»).
-
 ## DADOS-070 — Reformular o Exame 43 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 43 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.

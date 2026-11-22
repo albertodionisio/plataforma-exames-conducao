@@ -59,3 +59,13 @@ Perguntas redigidas de forma original e não copiadas do APK.
 - Todas as imagens são `null`.
 - GitHub Actions run 43488179416 aprovado no commit 4a8aa66802006617da714da138c06b0090d13377 (sintaxe, testes de fluxo/assinaturas e validador oficial). A revisão de sobreposições do bloco 45–51 continua em curso.
 - Teste no navegador adiado para verificação conjunta após o Exame 51.
+
+## Imagens dos sinais (DADOS-079, 2026-11-22)
+
+Extraída de `original/referencia/sinais.pdf`, a 600 ppp e sem a legenda (a legenda diz «Auto-estrada» e daria a resposta).
+
+| Pergunta | Sinal (designação no PDF) | Página | Imagem |
+|---|---|---|---|
+| 10, 11 | G74 Auto-estrada (Quadro VII, sinais de indicação) | 38 | `public/sinais/G74-auto-estrada-pdf.png` |
+
+Nos enunciados das perguntas 10 e 11, «auto-estrada» passou a «uma via com o sinal da imagem». As perguntas 12, 13 e 14 são de manobra e não levam sinal.
