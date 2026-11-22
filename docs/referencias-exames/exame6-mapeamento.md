@@ -42,7 +42,7 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 | 22 | Passagens de nível | Regulamento de Sinais, sinal D79 | B | A | `public/sinais/D79-sinal-pdf-600dpi.png`, sinal isolado extraído do PDF oficial; corresponde à dupla cruz de Santo André mostrada na imagem antiga. |
 | 23 | Ultrapassagem | CE, art. 44.º, n.º 3 | C | C | exame6_23.jpg. Resposta «Sim» do APK mantida, justificação reformulada (a razão não é «ter prioridade no cruzamento»). |
 | 24 | Manutenção do veículo | Segurança geral | A | B | exame6_24.jpg. Segurança geral — manutenção |
-| 25 | Sinais de informação | Regulamento de Sinais (G63) | C | A | G63-parque-estacionamento-veiculos-emergencia.png. Sinal G63 4.ª alternativa vazia no APK; distrator novo. |
+| 25 | Sinais de informação | Regulamento de Sinais (G63) | C | A | G63-sinal-pdf-600dpi.png. Sinal G63 4.ª alternativa vazia no APK; distrator novo. |
 
 
 ## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
@@ -58,4 +58,4 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 
 A pergunta 25 (G63 — parque de estacionamento para veículos de emergência) passou a usar recorte directo do PDF oficial, página 37, a 600 DPI. A imagem corresponde ao painel azul P com o símbolo A do veículo de emergência. Enunciado, opções, resposta e explicação mantidos.
 
-Nota de publicação: o recorte vectorial G63 da página 37 foi definido no extractor, mas ainda não foi publicado no repositório; mantém-se a imagem existente até o novo ficheiro estar disponível.
+O recorte vectorial G63 da página 37 foi publicado e associado à pergunta 25. Correspondência confirmada visualmente; conteúdo da pergunta mantido.
