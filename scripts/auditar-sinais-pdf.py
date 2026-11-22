@@ -46,6 +46,7 @@ CROPS = [
     ("E51-sinal-pdf.png", 29, (660, 180, 910, 470), "E51", "Paragem e estacionamento proibidos"),
     ("F13-sinal-pdf.png", 31, (125, 1420, 355, 1660), "F13", "Pista obrigatória para velocípedes e peões"),
     ("G1-sinal-pdf.png", 35, (80, 230, 220, 500), "G1", "Área reservada para autocarros"),
+    ("G86-sinal-pdf.png", 39, (250, 160, 455, 410), "G86", "Via de sentido único"),
     ("G27-sinal-pdf.png", 36, (345, 260, 480, 450), "G27", "Parque de estacionamento para autocarros e autocarros médios"),
     ("sem-codigo-area-reservada-veiculos-dimensoes-anormais.png", 14, (318, 1450, 453, 1634), None, "Área reservada para veículos de dimensões anormais"),
     ("sem-codigo-area-reservada-autocarros-excursao.png", 14, (805, 1452, 942, 1635), None, "Área reservada para autocarros de excursão"),
