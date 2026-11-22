@@ -86,6 +86,9 @@ DADOS079_CROPS = [
     ("G11-sinal-pdf-600dpi.png", 35, (153.49, 386.66, 216.18, 468.68), "G11", "Área reservada para automóveis ligeiros"),
     ("E1-sinal-pdf-600dpi.png", 26, (158.77, 102.36, 283.98, 227.57), "E1", "Trânsito proibido"),
     ("E47-sinal-pdf-600dpi.png", 28, (289.87, 612.19, 425.33, 753.29), "E47", "Trânsito proibido a peões, animais e veículos não automóveis"),
+    ("sem-codigo-area-reservada-veiculos-emergencia-600dpi.png", 14, (262.82, 652.84, 325.51, 734.86), None, "Área reservada para veículos de emergência"),
+    ("sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png", 14, (38.16, 650.94, 100.85, 732.96), None, "Parque de estacionamento para veículos de alta tonelagem com indicação 12"),
+    ("sem-codigo-parque-estacionamento-limitado-60-min-600dpi.png", 35, (264.04, 256.38, 326.73, 338.4), None, "Parque de estacionamento com duração limitada a 60 minutos"),
     ("sem-codigo-limite-120-km-dia-600dpi.png", 18, (391.06, 264.3, 517.73, 475.04), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
 ]
 
