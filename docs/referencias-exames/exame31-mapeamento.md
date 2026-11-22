@@ -30,26 +30,31 @@ Conteúdo **original** do ESTRADA (não vem do APK). Foco: regras gerais de circ
 | 4 | Posição na via | média | Escolher a via de trânsito em estradas com várias vias no mesmo sentido | art. 18.º, n.º 1 | 6 | regra | nenhuma |
 | 5 | Posição na via | média | Distinguir a regra de utilização das vias dentro das localidades | art. 18.º, n.º 2 | 6 | regra | nenhuma |
 | 6 | Manobras | fácil | Sinalizar e tomar precauções ao iniciar ou retomar a marcha | art. 19.º, n.º 1 | 6 | situação prática | nenhuma |
-| 7 | Condução defensiva | média | Manter distância de segurança adaptada às condições da via | art. 20.º, n.º 1 | 7 | situação prática | nenhuma |
+| 7 | Condução defensiva | média | Manter distância de segurança adaptada às condições da via | art. 20.º, n.º 1 | 7 | situação prática | Ilustração de estrada molhada, camião à frente e distância de segurança (public/cenas/exame31-pergunta-07-chuva-distancia.svg) |
 | 8 | Posição na via | média | Manter distância lateral de segurança em relação a outros veículos | art. 20.º, n.º 2 | 7 | situação prática | nenhuma |
 | 9 | Posição na via | difícil | Conhecer a única situação em que se atravessa a berma ou o passeio | art. 21.º, n.º 1 | 7 | regra | nenhuma |
-| 10 | Cruzamentos e rotundas | média | Saber como se circula numa rotunda | art. 22.º, n.º 1 (com o art. 17.º, n.º 1) | 7 | regra | nenhuma |
+| 10 | Cruzamentos e rotundas | média | Saber como se circula numa rotunda | art. 22.º, n.º 1 (com o art. 17.º, n.º 1) | 7 | regra | Vista superior de uma rotunda com veículos a circular (public/cenas/exame31-pergunta-10-rotunda.svg) |
 | 11 | Cruzamentos e rotundas | fácil | Adotar comportamento prudente na aproximação de intersecções | art. 22.º, n.º 3 | 7 | situação prática | nenhuma |
 | 12 | Sinalização da manobra | média | Saber em que manobras é obrigatório sinalizar | art. 23.º, n.º 1 | 8 | regra | nenhuma |
 | 13 | Sinalização da manobra | fácil | Cessar o sinal depois da manobra | art. 23.º, n.º 2 | 8 | regra | nenhuma |
-| 14 | Hierarquia da sinalização | média | Conhecer a hierarquia entre agentes, sinais e regras de trânsito | art. 14.º, n.º 3 | 5 | situação prática | nenhuma |
+| 14 | Hierarquia da sinalização | média | Conhecer a hierarquia entre agentes, sinais e regras de trânsito | art. 14.º, n.º 3 | 5 | situação prática | Cruzamento com semáforo vermelho e agente regulador (public/cenas/exame31-pergunta-14-agente-cruzamento.svg) |
 | 15 | Velocidade | média | Adaptar a velocidade às circunstâncias | art. 29.º, n.º 1 | 10 | situação prática | nenhuma |
 | 16 | Velocidade | média | Evitar travagens bruscas que ponham em perigo quem vem atrás | art. 29.º, n.º 2 | 10 | regra | nenhuma |
 | 17 | Velocidade | média | Reconhecer o que torna a velocidade excessiva | art. 30.º, n.º 1 | 10 | regra | nenhuma |
 | 18 | Velocidade | média | Evitar a marcha lenta injustificada | art. 31.º, n.º 1 | 10 | situação prática | nenhuma |
 | 19 | Velocidade | fácil | Identificar locais que exigem velocidade especialmente moderada | art. 32.º, n.º 1, al. i) | 10 | regra | nenhuma |
 | 20 | Veículos pesados | média | Conhecer a regra de condução de pesados em descidas | art. 32.º, n.º 2 | 10 | regra | nenhuma |
-| 21 | Cruzamento de veículos | difícil | Dar passagem ao contornar um obstáculo na via | art. 41.º, n.º 3 | 15 | situação prática | nenhuma |
-| 22 | Cruzamento de veículos | difícil | Facilitar o cruzamento com veículos de grandes dimensões | art. 41.º, n.º 6 | 15 | situação prática | nenhuma |
+| 21 | Cruzamento de veículos | difícil | Dar passagem ao contornar um obstáculo na via | art. 41.º, n.º 3 | 15 | situação prática | Carro avariado a ocupar parte da faixa e veículo em sentido contrário (public/cenas/exame31-pergunta-21-obstaculo.svg) |
+| 22 | Cruzamento de veículos | difícil | Facilitar o cruzamento com veículos de grandes dimensões | art. 41.º, n.º 6 | 15 | situação prática | Camião e automóvel junto a uma ponte estreita (public/cenas/exame31-pergunta-22-ponte-estreita.svg) |
 | 23 | Manobras | média | Suspender uma manobra quando ela se torna perigosa | art. 42.º | 16 | regra | nenhuma |
-| 24 | Mudança de direção | média | Posicionar o veículo para virar à esquerda | art. 46.º, n.º 1 (com o art. 45.º, n.º 4) | 18 | regra | nenhuma |
+| 24 | Mudança de direção | média | Posicionar o veículo para virar à esquerda | art. 46.º, n.º 1 (com o art. 45.º, n.º 4) | 18 | regra | Vista superior de veículo a preparar uma mudança de direção à esquerda (public/cenas/exame31-pergunta-24-virar-esquerda.svg) |
 | 25 | Manobras | média | Saber onde a marcha-atrás é proibida | art. 48.º, n.os 2 e 4 | 18 | regra | nenhuma |
 
 ## Resposta correcta por posição
 
 Posições (A=1.ª … D=4.ª): A=7, B=6, C=6, D=6.
+
+
+## Registo visual — revisão para preview
+
+Foram adicionadas ilustrações contextuais próprias às perguntas 7, 10, 14, 21, 22 e 24. Os enunciados, alternativas, índices das respostas correctas e explicações foram preservados. As ilustrações não incluem texto que revele a resposta. Não foi substituído nenhum sinal de trânsito: na versão do Exame 31 consultada nesta tarefa, todas as 25 perguntas tinham `imagem: null` e nenhuma pergunta pedia a identificação de um sinal específico. A extração do PDF de sinais deve ser aplicada quando existir uma pergunta deste exame que realmente utilize esse sinal.
