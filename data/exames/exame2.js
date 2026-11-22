@@ -152,7 +152,7 @@ window.EXAMES[2] = [
     "enunciado": "O sinal da imagem estabelece um limite de 120 km/h durante que período?",
     "imagem": {
       "descricao": "Sinal combinado de limite de 120 km/h durante o dia, extraído do PDF oficial (página 18)",
-      "src": "public/sinais/sem-codigo-limite-120-km-dia.png"
+      "src": "public/sinais/sem-codigo-limite-120-km-dia-600dpi.png"
     },
     "opcoes": [
       "Durante a noite.",
