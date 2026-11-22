@@ -440,7 +440,7 @@ window.EXAMES[6] = [
     "enunciado": "Num parque, o condutor vê o sinal azul da imagem, com a letra P e uma ambulância. Que tipo de estacionamento indica?",
     "imagem": {
       "descricao": "Sinal azul com a letra P e um veículo com o símbolo A",
-      "src": "public/sinais/G63-sinal-pdf-600dpi.png"
+      "src": "public/sinais/G63-parque-estacionamento-veiculos-emergencia.png"
     },
     "opcoes": [
       "Parque de estacionamento para veículos de emergência.",
