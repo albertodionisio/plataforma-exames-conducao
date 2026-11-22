@@ -133,7 +133,7 @@ window.EXAMES[28] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/sinais/G63-parque-estacionamento-veiculos-emergencia.png",
+      "src": "public/sinais/G63-sinal-pdf-600dpi.png",
       "descricao": "Sinal G63 de parque de estacionamento para veículos de emergência, extraído do PDF oficial"
     },
     "opcoes": [
