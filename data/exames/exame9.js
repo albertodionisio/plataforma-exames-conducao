@@ -106,7 +106,7 @@ window.EXAMES[9] = [
     "explicacao": "A sinalização vertical representada corresponde à indicação de cruzamento com trânsito nos dois sentidos. O condutor deve adaptar a condução à configuração da intersecção.",
     "imagem": {
       "descricao": "Imagem original da pergunta 6 do Exame 9",
-      "src": "public/exames/exame9/exame9_6.jpg"
+      "src": "public/sinais/D64-sinal-pdf-600dpi.png"
     }
   },
   {
