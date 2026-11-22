@@ -440,7 +440,7 @@ window.EXAMES[3] = [
     "enunciado": "Qual é a finalidade do sinal G27 apresentado junto à zona de estacionamento?",
     "imagem": {
       "descricao": "Sinal G27 de parque de estacionamento para autocarros e autocarros médios",
-      "src": "public/exames/exame3/exame3_25.jpg"
+      "src": "public/sinais/G27-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Parque de estacionamento para autocarros e autocarros médios.",
