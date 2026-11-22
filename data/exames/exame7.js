@@ -26,7 +26,7 @@ window.EXAMES[7] = [
     "enunciado": "Num parque, o condutor vê o sinal amarelo da imagem, com a letra R e o desenho de uma ambulância. Qual é o seu significado?",
     "imagem": {
       "descricao": "Sinal amarelo com a letra R e o desenho de uma carrinha com um círculo vermelho com a letra A",
-      "src": "public/sinais/sem-codigo-area-reservada-veiculos-emergencia.png"
+      "src": "public/sinais/sem-codigo-area-reservada-veiculos-emergencia-600dpi.png"
     },
     "opcoes": [
       "Área reservada para veículos de polícia.",
@@ -314,7 +314,7 @@ window.EXAMES[7] = [
     "enunciado": "Junto a uma rua, o condutor vê o sinal amarelo da imagem, com a letra P e a indicação 60 min. O que significa?",
     "imagem": {
       "descricao": "Sinal amarelo com a letra P e a indicação 60 min",
-      "src": "public/sinais/sem-codigo-parque-estacionamento-limitado-60-min.png"
+      "src": "public/sinais/sem-codigo-parque-estacionamento-limitado-60-min-600dpi.png"
     },
     "opcoes": [
       "Parque de estacionamento com tempo limitado a 60 minutos.",
@@ -350,7 +350,7 @@ window.EXAMES[7] = [
     "enunciado": "Num parque de camiões, o condutor vê o sinal amarelo da imagem, com a letra P e um losango com o número 12. O que indica?",
     "imagem": {
       "descricao": "Sinal amarelo com a letra P e um losango com o número 12",
-      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png"
+      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png"
     },
     "opcoes": [
       "Parque de estacionamento para veículos de 12 toneladas exactas.",
