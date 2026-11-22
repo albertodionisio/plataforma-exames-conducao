@@ -206,7 +206,7 @@ window.EXAMES[15] = [
     "enunciado": "O que informa o sinal da imagem?",
     "imagem": {
       "descricao": "Sinal G86 (via de sentido único), rectângulo azul com seta em frente, numa rua",
-      "src": "public/exames/exame15/exame15_12.jpg"
+      "src": "public/sinais/G86-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Que o sentido é obrigatório em frente.",
