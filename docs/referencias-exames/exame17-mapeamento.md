@@ -52,7 +52,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 2 | `public/sinais/G13-sinal-pdf-600dpi.png` | G13 | Área reservada para táxis | 35 |
 | 12 | `public/sinais/sem-codigo-indicacao-aproximacao-saida-auto-estrada-600dpi.png` | — | Indicação de aproximação de saída de auto-estrada | 14 |
 | 20 | `public/sinais/A50-sinal-pdf-600dpi.png (GER-018)` | A50 | Animais | 5 |
-| 23 | `public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png` | — | Parque de estacionamento para veículos de alta tonelagem | 15 |
+| 23 | `public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png` | — | Parque de estacionamento para veículos de alta tonelagem | 15 |
 | 24 | `public/sinais/F50-sinal-pdf-600dpi.png` | F50 | Pistas obrigatórias para peões e velocípedes | 34 |
 | 25 | `public/sinais/A9-sinal-pdf-600dpi.png (GER-018)` | A9 | Paragem obrigatória (pré-sinalização) | 3 |
 
@@ -64,3 +64,4 @@ As perguntas 20 e 25 já tinham sido tratadas por GER-018; as perguntas 2, 12, 2
 As imagens das perguntas 2 (G13 — Área reservada para táxis, PDF p. 35) e 12 (painel N4 — indicação de aproximação de saída de auto-estrada, PDF p. 14) foram substituídas por recortes vectoriais extraídos directamente do PDF oficial a 600 DPI. As duas correspondências foram confirmadas visualmente nos objectos 15 da página 35 e 6 da página 14. Não foram alterados enunciados, opções, respostas ou explicações.
 
 As perguntas 17 (A50 — animais, PDF p. 5), 24 (F50 — pistas obrigatórias para peões e velocípedes, PDF p. 31) e 25 (A9 — paragem obrigatória em pré-sinalização, PDF p. 21) também passaram a usar recortes vectoriais oficiais a 600 DPI, confirmados visualmente. Não houve alterações ao conteúdo das perguntas ou às respostas.
+A pergunta 23 (painel de estacionamento para veículos de alta tonelagem, PDF p. 14, objecto vectorial 23) foi também actualizada para o recorte oficial a 600 DPI. O painel com o número 12 usado no Exame 7 foi preservado, pois é uma variante diferente e não corresponde a este recorte.
