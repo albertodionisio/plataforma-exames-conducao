@@ -26,7 +26,7 @@ window.EXAMES[17] = [
     "enunciado": "O que indica o sinal de informação?",
     "imagem": {
       "descricao": "Sinal G13 do PDF oficial: Área reservada para táxis.",
-      "src": "public/sinais/G13-area-reservada-taxis.png"
+      "src": "public/sinais/G13-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Inicio da faixa reservada para táxis do lado esquerdo.",
@@ -206,7 +206,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Painel amarelo do PDF oficial: Indicação de aproximação de saída de auto-estrada.",
-      "src": "public/sinais/sem-codigo-indicacao-aproximacao-saida-auto-estrada.png"
+      "src": "public/sinais/sem-codigo-indicacao-aproximacao-saida-auto-estrada-600dpi.png"
     },
     "opcoes": [
       "Indicação de aproximação de entrada de auto-estrada.",
@@ -350,7 +350,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Sinal A50 do PDF oficial: Animais.",
-      "src": "public/sinais/A50-sinal-pdf.png"
+      "src": "public/sinais/A50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Bois ou vacas.",
@@ -422,7 +422,7 @@ window.EXAMES[17] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Sinal F50 do PDF oficial: Pistas obrigatórias para peões e velocípedes.",
-      "src": "public/sinais/F50-pistas-obrigatorias-peoes-velocipedes.png"
+      "src": "public/sinais/F50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pista obrigatória para veículos de tracção manual.",
@@ -440,7 +440,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Sinal A9 do PDF oficial: Paragem obrigatória (pré-sinalização).",
-      "src": "public/sinais/A9-sinal-pdf.png"
+      "src": "public/sinais/A9-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Obrigação de ceder passagem no próximo cruzamento.",
