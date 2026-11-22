@@ -26,7 +26,7 @@ window.EXAMES[17] = [
     "enunciado": "O que indica o sinal de informação?",
     "imagem": {
       "descricao": "Sinal G13 do PDF oficial: Área reservada para táxis.",
-      "src": "public/sinais/G13-area-reservada-taxis.png"
+      "src": "public/sinais/G13-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Inicio da faixa reservada para táxis do lado esquerdo.",
@@ -206,7 +206,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Painel amarelo do PDF oficial: Indicação de aproximação de saída de auto-estrada.",
-      "src": "public/sinais/sem-codigo-indicacao-aproximacao-saida-auto-estrada.png"
+      "src": "public/sinais/sem-codigo-indicacao-aproximacao-saida-auto-estrada-600dpi.png"
     },
     "opcoes": [
       "Indicação de aproximação de entrada de auto-estrada.",
