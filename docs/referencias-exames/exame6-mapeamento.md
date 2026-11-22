@@ -52,3 +52,8 @@ Conteúdo adaptado das 25 perguntas do Exame 6 extraído do APK de referência (
 - Pergunta 15: a fotografia original mostrava um sinal circular de limite de 80 km/h; substituída pelo sinal E12 extraído do PDF, sem alterar enunciado, alternativas ou resposta.
 - Pergunta 20: detectada divergência entre a identificação antiga M3 e a imagem. O painel da fotografia é quadrado azul, com setas branca e vermelha; o M3 do PDF é circular, com setas vermelha e preta. A imagem original foi preservada até ser confirmada a correspondência correcta.
 - Pergunta 22: a fotografia nocturna mostrava a dupla cruz de Santo André; substituída pelo sinal D79 isolado de alta qualidade extraído do PDF.
+
+
+## Actualização de qualidade visual (DADOS-079, 2026-11-22)
+
+A pergunta 25 (G63 — parque de estacionamento para veículos de emergência) passou a usar recorte directo do PDF oficial, página 37, a 600 DPI. A imagem corresponde ao painel azul P com o símbolo A do veículo de emergência. Enunciado, opções, resposta e explicação mantidos.
