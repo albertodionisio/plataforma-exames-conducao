@@ -404,7 +404,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Painel amarelo do PDF oficial: Parque de estacionamento para veículos de alta tonelagem.",
-      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png"
+      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png"
     },
     "opcoes": [
       "Parque de estacionamento para veículos de 12 toneladas.",
