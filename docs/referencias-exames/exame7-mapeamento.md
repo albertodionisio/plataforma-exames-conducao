@@ -39,7 +39,7 @@ Conteúdo adaptado das 25 perguntas do Exame 7 extraído do APK de referência (
 | 19 | Limites de velocidade | CE, art. 33.º (quadro de velocidades) | C | C | exame7_19.jpg. Chave do APK mantida (confirmada contra a tabela do Código) |
 | 20 | Sinais de estacionamento | Regulamento de Sinais (informação) | B | B | sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png (ficheiro já existente; PDF de sinais, pág. 15, variante amarela de G61). Chave do APK mantida; legenda do PDF «de alta tonelagem». |
 | 21 | Drogas e condução | Segurança geral — drogas (enquadramento: CE, art. 81.º, n.º 2, proibição de conduzir sob influência de substâncias psicotrópicas) | B | D | exame7_21.jpg. Segurança geral — drogas |
-| 22 | Sinais de perigo | Regulamento de Sinais (A47) | B | A | A47-sinal-pdf.png. Sinal A47 (PDF) |
+| 22 | Sinais de perigo | Regulamento de Sinais (A47) | B | A | A47-sinal-pdf-600dpi.png. Sinal A47 (PDF) |
 | 23 | Sistema rodoviário | Segurança geral — sistema rodoviário | A | C | exame7_23.jpg. Pergunta de resposta «falsa» (A do APK) mantida |
 | 24 | Distância de segurança | CE, art. 20.º, n.º 1 (Distância entre veículos) | C | B | exame7_24.jpg. Chave do APK (C «Certo») mantida; pergunta Certo/Errado convertida em escolha com razão. 4.ª alternativa vazia no APK; distrator novo. A referência anterior («art. 36.º») estava errada: o art. 36.º é «Limites especiais de velocidade». |
 | 25 | Segurança passiva | Segurança geral | A | A | exame7_25.jpg. Chave do APK mantida; pergunta repetida no Exame 25 do APK |
@@ -66,3 +66,5 @@ Feito sobre o Exame 7 já concluído na DADOS-008, sem alterar alternativas, ín
 ## Actualização de qualidade visual (DADOS-079, 2026-11-22)
 
 As perguntas 2 (área reservada para veículos de emergência, painel amarelo com A e R, PDF p. 14), 18 (parque com duração limitada a 60 minutos, PDF p. 35) passaram a usar recortes vectoriais extraídos directamente do PDF oficial a 600 DPI. Correspondências conferidas visualmente; conteúdo e respostas mantidos.
+
+A pergunta 22 (A47 — um veículo de cada vez) passou a usar o recorte vectorial extraído directamente do PDF oficial, página 5, a 600 DPI. Recorte confirmado visualmente, sem a legenda adjacente; pergunta, alternativas, resposta e explicação preservadas.
