@@ -439,7 +439,7 @@ window.EXAMES[27] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/sinais/G63-parque-estacionamento-veiculos-emergencia.png",
+      "src": "public/sinais/G63-sinal-pdf-600dpi.png",
       "descricao": "Imagem original da pergunta 25 do Exame 27"
     },
     "opcoes": [
