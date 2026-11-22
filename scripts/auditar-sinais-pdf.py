@@ -83,6 +83,9 @@ DADOS079_CROPS = [
     ("A50-sinal-pdf-600dpi.png", 5, (153.13, 276.14, 278.33, 381.44), "A50", "Animais"),
     ("F50-sinal-pdf-600dpi.png", 31, (52.1, 637.44, 165.34, 750.68), "F50", "Pistas obrigatórias para peões e velocípedes"),
     ("A9-sinal-pdf-600dpi.png", 21, (167.25, 60.12, 292.45, 165.42), "A9", "Paragem obrigatória (pré-sinalização)"),
+    ("G11-sinal-pdf-600dpi.png", 35, (153.49, 386.66, 216.18, 468.68), "G11", "Área reservada para automóveis ligeiros"),
+    ("E1-sinal-pdf-600dpi.png", 26, (158.77, 102.36, 283.98, 227.57), "E1", "Trânsito proibido"),
+    ("E47-sinal-pdf-600dpi.png", 28, (289.87, 612.19, 425.33, 753.29), "E47", "Trânsito proibido a peões, animais e veículos não automóveis"),
     ("sem-codigo-limite-120-km-dia-600dpi.png", 18, (391.06, 264.3, 517.73, 475.04), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
 ]
 
