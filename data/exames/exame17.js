@@ -350,7 +350,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Sinal A50 do PDF oficial: Animais.",
-      "src": "public/sinais/A50-sinal-pdf.png"
+      "src": "public/sinais/A50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Bois ou vacas.",
@@ -422,7 +422,7 @@ window.EXAMES[17] = [
     "enunciado": "O que indica o sinal?",
     "imagem": {
       "descricao": "Sinal F50 do PDF oficial: Pistas obrigatórias para peões e velocípedes.",
-      "src": "public/sinais/F50-pistas-obrigatorias-peoes-velocipedes.png"
+      "src": "public/sinais/F50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pista obrigatória para veículos de tracção manual.",
@@ -440,7 +440,7 @@ window.EXAMES[17] = [
     "enunciado": "O significado deste sinal é:",
     "imagem": {
       "descricao": "Sinal A9 do PDF oficial: Paragem obrigatória (pré-sinalização).",
-      "src": "public/sinais/A9-sinal-pdf.png"
+      "src": "public/sinais/A9-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Obrigação de ceder passagem no próximo cruzamento.",
