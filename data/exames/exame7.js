@@ -350,7 +350,7 @@ window.EXAMES[7] = [
     "enunciado": "Num parque de camiões, o condutor vê o sinal amarelo da imagem, com a letra P e um losango com o número 12. O que indica?",
     "imagem": {
       "descricao": "Sinal amarelo com a letra P e um losango com o número 12",
-      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png"
+      "src": "public/sinais/sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png"
     },
     "opcoes": [
       "Parque de estacionamento para veículos de 12 toneladas exactas.",
