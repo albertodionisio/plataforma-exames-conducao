@@ -188,7 +188,7 @@ window.EXAMES[15] = [
     "enunciado": "O que indica o sinal da imagem?",
     "imagem": {
       "descricao": "Sinal D12 (túnel), triângulo de bordo vermelho com a entrada de um túnel e dois veículos",
-      "src": "public/exames/exame15/exame15_11.jpg"
+      "src": "public/sinais/D12-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Visibilidade reduzida.",
