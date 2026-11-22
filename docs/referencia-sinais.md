@@ -34,9 +34,9 @@
 |---|---|---|---|---|---|---|
 | A17 | Controlo policial por pirilampos | 4 | II — Sinais temporários, Perigo (título na pág. 3) | `public/sinais/A17-controlo-policial-por-pirilampos.svg` (existe também `.png` no mesmo nome) | 1 | CONFIRMADO COM NOTA (D4) |
 | D16 | Ponte móvel | 21 | IV — Sinais de perigo | `public/sinais/D16-ponte-movel.png` | 16 | CONFIRMADO |
-| E1 | Trânsito proibido | 26 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E1-transito-proibido.png` | 10 | CONFIRMADO |
-| E47 | Trânsito proibido a peões, animais e veículos não automóveis | 28 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E47-transito-proibido-peoes-animais-veiculos-nao-automoveis.png` | 21 | CONFIRMADO |
-| G11 | Área reservada para automóveis ligeiros | 35 | VII — Sinais de indicação, Sinais de informação | `public/sinais/G11-area-reservada-automoveis-ligeiros.png` | 4 | CONFIRMADO (D3 corrigido) |
+| E1 | Trânsito proibido | 26 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E1-sinal-pdf-600dpi.png` | 10 | CONFIRMADO |
+| E47 | Trânsito proibido a peões, animais e veículos não automóveis | 28 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E47-sinal-pdf-600dpi.png` | 21 | CONFIRMADO |
+| G11 | Área reservada para automóveis ligeiros | 35 | VII — Sinais de indicação, Sinais de informação | `public/sinais/G11-sinal-pdf-600dpi.png` | 4 | CONFIRMADO (D3 corrigido) |
 | H4 | Pré-advertência da direcção de saída | 41 | VIII — Sinais de simples indicação (título na pág. 40); a pág. 41 tem o subtítulo «Sinais de direcção» | `public/sinais/H4-pre-advertencia-direccao-de-saida.png` | 17 | CONFIRMADO COM NOTA (D5) |
 | N34 | Via com portagem a....m | 56 | XIII — Sinais combinados | `public/sinais/N34-via-com-portagem.png` | 25 | CORRIGIDO (D2) |
 | N21 | Paragem proibida a veículos que transportam substâncias perigosas | 55 (como **N21**) e 57 (como **N’5**) | XIII — Sinais combinados (pág. 55); «Sinais com painéis adicionais» (pág. 57) | `public/sinais/N21-paragem-proibida-substancias-perigosas.png` | 14 | CORRIGIDO (D1) |
@@ -158,3 +158,8 @@ Os recortes vectoriais de 600 DPI estão em `public/sinais/*-600dpi.png`. Para o
 - Placas direccionais compostas, fotografias de cenas e sinais sem correspondência exacta foram preservados.
 
 Esta auditoria ainda não encerra todos os Exames 1–30. Os exames com reservas activas (1, 3 e 8–16) não foram alterados por DADOS-079; serão verificados quando as respectivas tarefas libertarem os ficheiros. O CI `Validar exames` e `Validar definições` passou no commit 9f345920.
+
+
+## DADOS-079 — qualidade visual (2026-11-22)
+
+As imagens das perguntas 4 (G11 — área reservada para automóveis ligeiros, PDF p. 35), 10 (E1 — trânsito proibido, PDF p. 26) e 21 (E47 — trânsito proibido a peões, animais e veículos não automóveis, PDF p. 28) foram substituídas por recortes directos do PDF oficial a 600 DPI. As imagens foram conferidas visualmente; os recortes foram afinados para manter apenas o sinal, sem legendas ou objectos adjacentes. Não houve alterações às perguntas, opções, respostas ou explicações.
