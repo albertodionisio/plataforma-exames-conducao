@@ -37,7 +37,7 @@ Conteúdo adaptado das 25 perguntas do Exame 7 extraído do APK de referência (
 | 17 | Filas de trânsito | CE, art. 18.º, n.º 2 | A | D | exame7_17.jpg. Chave do APK mantida |
 | 18 | Sinais de estacionamento | Regulamento de Sinais (informação) | C | A | sem-codigo-parque-estacionamento-limitado-60-min-600dpi.png (PDF de sinais, pág. 14, 600 ppp; DADOS-063). Variante amarela de G8 «Parque de estacionamento limitado» (azul, pág. 35). Chave genérica «limitado» do APK mantida, enunciado especificado com os 60 minutos do sinal. |
 | 19 | Limites de velocidade | CE, art. 33.º (quadro de velocidades) | C | C | exame7_19.jpg. Chave do APK mantida (confirmada contra a tabela do Código) |
-| 20 | Sinais de estacionamento | Regulamento de Sinais (informação) | B | B | sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png (ficheiro já existente; PDF de sinais, pág. 15, variante amarela de G61). Chave do APK mantida; legenda do PDF «de alta tonelagem». |
+| 20 | Sinais de estacionamento | Regulamento de Sinais (informação) | B | B | sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png (ficheiro já existente; PDF de sinais, pág. 15, variante amarela de G61). Chave do APK mantida; legenda do PDF «de alta tonelagem». |
 | 21 | Drogas e condução | Segurança geral — drogas (enquadramento: CE, art. 81.º, n.º 2, proibição de conduzir sob influência de substâncias psicotrópicas) | B | D | exame7_21.jpg. Segurança geral — drogas |
 | 22 | Sinais de perigo | Regulamento de Sinais (A47) | B | A | A47-sinal-pdf.png. Sinal A47 (PDF) |
 | 23 | Sistema rodoviário | Segurança geral — sistema rodoviário | A | C | exame7_23.jpg. Pergunta de resposta «falsa» (A do APK) mantida |
@@ -65,4 +65,4 @@ Feito sobre o Exame 7 já concluído na DADOS-008, sem alterar alternativas, ín
 
 ## Actualização de qualidade visual (DADOS-079, 2026-11-22)
 
-As perguntas 2 (área reservada para veículos de emergência, painel amarelo com A e R, PDF p. 14), 18 (parque com duração limitada a 60 minutos, PDF p. 35) e 20 (parque para veículos de alta tonelagem com losango 12, PDF p. 14) passaram a usar recortes vectoriais extraídos directamente do PDF oficial a 600 DPI. Correspondências conferidas visualmente; conteúdo e respostas mantidos.
+As perguntas 2 (área reservada para veículos de emergência, painel amarelo com A e R, PDF p. 14), 18 (parque com duração limitada a 60 minutos, PDF p. 35) passaram a usar recortes vectoriais extraídos directamente do PDF oficial a 600 DPI. Correspondências conferidas visualmente; conteúdo e respostas mantidos.
