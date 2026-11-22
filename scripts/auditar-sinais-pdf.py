@@ -80,16 +80,16 @@ DADOS079_CROPS = [
     ("J5-sinal-pdf-600dpi.png", 47, (463.0, 98.0, 572.0, 190.0), "J5", "Praia"),
     ("G13-sinal-pdf-600dpi.png", 35, (264.04, 386.66, 326.73, 468.68), "G13", "Área reservada para táxis"),
     ("sem-codigo-indicacao-aproximacao-saida-auto-estrada-600dpi.png", 14, (39.62, 238.74, 119.57, 337.5), None, "Indicação de aproximação de saída de auto-estrada (N4)"),
-    ("A50-sinal-pdf-600dpi.png", 5, (153.13, 276.14, 278.33, 381.44), "A50", "Animais"),
+    ("A50-sinal-pdf-600dpi.png", 5, (157.9, 280.2, 274.5, 378.4), "A50", "Animais"),
     ("F50-sinal-pdf-600dpi.png", 31, (52.1, 637.44, 165.34, 750.68), "F50", "Pistas obrigatórias para peões e velocípedes"),
-    ("A9-sinal-pdf-600dpi.png", 21, (167.25, 60.12, 292.45, 165.42), "A9", "Paragem obrigatória (pré-sinalização)"),
+    ("A9-sinal-pdf-600dpi.png", 21, (171.95, 64.22, 288.55, 162.32), "A9", "Paragem obrigatória (pré-sinalização)"),
     ("G11-sinal-pdf-600dpi.png", 35, (153.49, 386.66, 216.18, 468.68), "G11", "Área reservada para automóveis ligeiros"),
-    ("E1-sinal-pdf-600dpi.png", 26, (158.77, 102.36, 283.98, 227.57), "E1", "Trânsito proibido"),
-    ("E47-sinal-pdf-600dpi.png", 28, (289.87, 612.19, 425.33, 753.29), "E47", "Trânsito proibido a peões, animais e veículos não automóveis"),
+    ("E1-sinal-pdf-600dpi.png", 26, (161.65, 105.36, 281.1, 224.57), "E1", "Trânsito proibido"),
+    ("E47-sinal-pdf-600dpi.png", 28, (297.2, 619.5, 418.0, 740.2), "E47", "Trânsito proibido a peões, animais e veículos não automóveis"),
     ("sem-codigo-area-reservada-veiculos-emergencia-600dpi.png", 14, (262.82, 652.84, 325.51, 734.86), None, "Área reservada para veículos de emergência"),
     ("sem-codigo-parque-estacionamento-veiculos-alta-tonelagem-600dpi.png", 14, (38.16, 650.94, 100.85, 732.96), None, "Parque de estacionamento para veículos de alta tonelagem com indicação 12"),
     ("sem-codigo-parque-estacionamento-limitado-60-min-600dpi.png", 35, (264.04, 256.38, 326.73, 338.4), None, "Parque de estacionamento com duração limitada a 60 minutos"),
-    ("sem-codigo-limite-120-km-dia-600dpi.png", 18, (391.06, 264.3, 517.73, 475.04), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
+    ("sem-codigo-limite-120-km-dia-600dpi.png", 18, (391.2, 268.0, 517.6, 474.9), None, "Proibição de exceder a velocidade de 120 km/h durante o dia (sinal combinado)"),
 ]
 
 
