@@ -404,7 +404,7 @@ window.EXAMES[16] = [
     "enunciado": "O que indica o sinal apresentado?",
     "imagem": {
       "descricao": "Sinal F13 de pista obrigatória para velocípedes e peões, extraído do PDF oficial de sinais",
-      "src": "public/sinais/F13-sinal-pdf.png"
+      "src": "public/sinais/F13-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pista obrigatória para veículos de tracção manual.",
