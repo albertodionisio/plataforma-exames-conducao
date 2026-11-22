@@ -28,7 +28,7 @@ As 25 imagens originais foram copiadas para `public/exames/exame26/` e associada
 | 16 | Circulação e manobras | O que deve fazer o condutor se a fila da esquerda estiver a circular mais rapidamente? | C | imagens/exame26/exame26_16.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 17 | Veículos, ocupantes e deveres do condutor | O sistema de iluminação dos veículos automóveis... | D | imagens/exame26/exame26_17.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 18 | Circulação e manobras | Dentro das localidades, é proibido parar ou estacionar? | B | imagens/exame26/exame26_18.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 19 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/G63-parque-estacionamento-veiculos-emergencia.png` | CONFIRMADO | Sinal G63 de parque de estacionamento para veículos de emergência, página 37. |
+| 19 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/G63-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal G63 de parque de estacionamento para veículos de emergência, página 37. |
 | 20 | Sinalização e regras da via | Que deve fazer o condutor perante a marca rodoviária de cor branca? | A | imagens/exame26/exame26_20.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 21 | Veículos, ocupantes e deveres do condutor | Os sistemas de segurança activa de um veículo... | B | imagens/exame26/exame26_21.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 22 | Sinalização e regras da via | O que indica o sinal complementar de perigo? | C | imagens/exame26/exame26_22.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
@@ -46,3 +46,6 @@ As 25 imagens originais foram copiadas para `public/exames/exame26/` e associada
 ## Sinais de melhor qualidade (2026-11-15, Claude-DADOS005)
 
 Pergunta 14 (J28): imagem do APK (~440 px, com contorno desfocado e ruído) substituída pelo sinal vectorial do `original/referencia/sinais.pdf`, desenhado a 600 ppp e guardado em `public/sinais/` com o código no nome. Desenho confirmado igual ao do APK.
+
+
+DADOS-079 (2026-11-22): a imagem G63 foi substituída pelo recorte vectorial do PDF oficial, página 37, a 600 DPI; corresponde ao parque de estacionamento para veículos de emergência.
