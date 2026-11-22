@@ -44,7 +44,7 @@ window.EXAMES[3] = [
     "enunciado": "O sinal E50 apresentado na imagem significa o quê?",
     "imagem": {
       "descricao": "Sinal E50 de estacionamento proibido",
-      "src": "public/exames/exame3/exame3_3.jpg"
+      "src": "public/sinais/E50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Estacionamento proibido.",
