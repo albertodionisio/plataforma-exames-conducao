@@ -61,7 +61,10 @@ window.EXAMES[33] = [
     ],
     "correta": 3,
     "explicacao": "Quando todas as vias do cruzamento têm sinal de paragem obrigatória, todos os condutores param e passam pela ordem em que chegaram. Nesta situação a regra da direita não decide.",
-    "imagem": null
+    "imagem": {
+      "descricao": "Sinal octogonal vermelho com a palavra STOP",
+      "src": "public/sinais/M2-paragem-obrigatoria-pdf.png"
+    }
   },
   {
     "numero": 5,
@@ -136,7 +139,10 @@ window.EXAMES[33] = [
     ],
     "correta": 1,
     "explicacao": "Mesmo com semáforo verde ou com prioridade, o condutor não deve entrar num cruzamento se for previsível que vai ficar parado lá dentro. Ao fazê-lo, bloqueia o trânsito das outras vias e pode provocar um engarrafamento ou um acidente.",
-    "imagem": null
+    "imagem": {
+      "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+      "src": "public/sinais/temp-semaforo-tres-luzes.png"
+    }
   },
   {
     "numero": 10,
@@ -151,7 +157,10 @@ window.EXAMES[33] = [
     ],
     "correta": 1,
     "explicacao": "Quem ficou parado dentro de um cruzamento com semáforos pode sair, mesmo que o sinal já não o autorize a avançar. Só não deve atrapalhar os condutores que passam no sentido em que o trânsito está aberto.",
-    "imagem": null
+    "imagem": {
+      "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+      "src": "public/sinais/temp-semaforo-tres-luzes.png"
+    }
   },
   {
     "numero": 11,

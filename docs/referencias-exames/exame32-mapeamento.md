@@ -41,19 +41,19 @@ Conteúdo **original** do ESTRADA (não vem do APK). Foco: prioridade de passage
 | 6 | Cedência de passagem | fácil | Ceder passagem ao sair de parque, bomba de combustível, prédio ou caminho particular | art. 39.º, n.º 1, al. a) | 14 | situação prática | nenhuma |
 | 7 | Cedência de passagem | difícil | Ceder passagem ao virar à direita perante quem vem em sentido contrário | art. 39.º, n.º 1, al. c) | 14 | situação prática | nenhuma |
 | 8 | Rotundas | média | Ceder passagem ao entrar numa rotunda | art. 39.º, n.º 1, al. d) | 14 | situação prática | nenhuma |
-| 9 | Cruzamentos com paragem obrigatória | média | Aplicar a ordem de chegada quando há stop em todas as direcções | art. 39.º, n.º 3 | 14 | situação prática | nenhuma |
+| 9 | Cruzamentos com paragem obrigatória | média | Aplicar a ordem de chegada quando há stop em todas as direcções | art. 39.º, n.º 3 | 14 | situação prática | `public/sinais/M2-paragem-obrigatoria-pdf.png` |
 | 10 | Cedência de passagem | média | Saber quem cede perante os veículos a motor | art. 40.º, n.º 2 (com art. 39.º, n.º 1, al. a) e e)) | 15 e 14 | regra | nenhuma |
 | 11 | Veículos sobre carris | média | Ceder passagem a veículos sobre carris em cruzamentos, entroncamentos e rotundas | art. 40.º, n.º 3 | 15 | regra | nenhuma |
 | 12 | Colunas militares | média | Ceder passagem às colunas militares ou militarizadas | art. 40.º, n.º 1 e n.º 4 (com art. 38.º, n.º 3, al. d)) | 14, 15 e 13 | situação prática | nenhuma |
 | 13 | Veículos prioritários | fácil | Saber o que são veículos prioritários | art. 15.º, n.º 3 | 5 | regra | nenhuma |
-| 14 | Veículos prioritários | difícil | Saber o que um veículo prioritário tem de fazer perante o vermelho | art. 15.º, n.º 2 (com art. 65.º, n.º 2) | 5 e 27 | situação prática | nenhuma |
+| 14 | Veículos prioritários | difícil | Saber o que um veículo prioritário tem de fazer perante o vermelho | art. 15.º, n.º 2 (com art. 65.º, n.º 2) | 5 e 27 | situação prática | `public/sinais/temp-semaforo-tres-luzes.png` |
 | 15 | Veículos prioritários | média | Dar passagem a veículo de urgência em via congestionada | art. 39.º, n.º 2 e art. 66.º, n.º 2 | 14 e 27 | situação prática | nenhuma |
 | 16 | Veículos prioritários | difícil | Saber a regra da berma na auto-estrada ao dar passagem a veículo de urgência | art. 66.º, n.º 3 (com art. 39.º, n.º 2) | 27 e 14 | situação prática | nenhuma |
-| 17 | Cruzamentos | média | Não entrar em cruzamento se for previsível ficar parado lá dentro | art. 38.º, n.º 5 (com art. 69.º, n.º 1) | 14 e 28 | situação prática | nenhuma |
+| 17 | Cruzamentos | média | Não entrar em cruzamento se for previsível ficar parado lá dentro | art. 38.º, n.º 5 (com art. 69.º, n.º 1) | 14 e 28 | situação prática | `public/sinais/temp-semaforo-tres-luzes.png` |
 | 18 | Passagens de nível | média | Não imobilizar o veículo sobre a passagem de nível | art. 67.º, n.º 1 | 27 | situação prática | nenhuma |
-| 19 | Passagens de nível | média | Não entrar com as protecções atravessadas ou em movimento | art. 67.º, n.º 2 | 27 | situação prática | nenhuma |
+| 19 | Passagens de nível | média | Não entrar com as protecções atravessadas ou em movimento | art. 67.º, n.º 2 | 27 | situação prática | `public/sinais/D67-cancela-pdf.png` |
 | 20 | Passagens de nível | difícil | Atravessar passagem sem protecção nem sinalização só depois de verificar | art. 67.º, n.º 3 | 27 | situação prática | nenhuma |
-| 21 | Peões | média | Deixar passar peões que já iniciaram a travessia, com o sinal verde | art. 106.º, n.º 2 | 42 | situação prática | nenhuma |
+| 21 | Peões | média | Deixar passar peões que já iniciaram a travessia, com o sinal verde | art. 106.º, n.º 2 | 42 | situação prática | `public/sinais/temp-semaforo-tres-luzes.png` |
 | 22 | Peões | média | Parar para peões numa passagem não regulada | art. 106.º, n.º 3 | 42 | situação prática | nenhuma |
 | 23 | Peões | média | Reduzir ou parar para peões ao mudar de direcção | art. 106.º, n.º 4 (com art. 39.º, n.º 1, al. f)) | 43 e 14 | situação prática | nenhuma |
 | 24 | Peões | média | Dar prioridade a peão com deficiência visual e bengala | art. 106.º, n.º 1 (com art. 39.º, n.º 1, al. g)) | 42 e 14 | situação prática | nenhuma |
@@ -67,3 +67,19 @@ Posições (A=1.ª … D=4.ª): A=7, B=6, C=6, D=6. Em 7 das 25 perguntas a alte
 
 - `node scripts/validar-exames.js`: sem problemas (exames 1, 31 e 32).
 - Tema e dificuldade são campos internos (não aparecem no ecrã).
+
+## Imagens dos sinais (DADOS-081, 2026-11-22)
+
+Extraídas de `original/referencia/sinais.pdf`, a 600 ppp e sem a legenda (a legenda dá o nome do sinal e a resposta). Os ficheiros já existiam: foram extraídos na DADOS-079 e aqui só se reutilizam, sem criar cópias. Páginas físicas do PDF, conferidas visualmente nesta tarefa.
+
+| Pergunta | Sinal (designação no PDF) | Página | Imagem |
+|---|---|---|---|
+| 9 | M2 Paragem obrigatória (Quadro XII, sinais de cedência de passagem) | 52 | `public/sinais/M2-paragem-obrigatoria-pdf.png` |
+| 14, 17, 21 | Semáforo de três luzes (Quadro III, sinais luminosos) | 20 | `public/sinais/temp-semaforo-tres-luzes.png` |
+| 19 | D67 Cancela (Quadro IV, sinais de perigo) | 24 | `public/sinais/D67-cancela-pdf.png` |
+
+Critério: recebem imagem as perguntas que nomeiam o sinal ou o semáforo de que depende a resposta, como no Exame 51 (DADOS-079). Enunciados, alternativas, respostas e explicações não foram alterados.
+
+**Perguntas opcionais (não tocadas; a decidir pelo dono):** P4 (sinalização especial, sem sinal concreto); P5 e P16 (auto-estrada; existe o sinal G74); P8 (entrada em rotunda; existe o sinal M6 «Dar prioridade na rotunda»); P18 (sinalização de passagem de nível, sem sinal concreto); P22 (passagem de peões; existe o sinal G79); P25 (sinalização temporária contra sinal permanente, sem sinal concreto). As restantes perguntas não precisam de sinal.
+
+**Nota de enunciado:** a P9 continua a dizer «sinais de paragem obrigatória». Na DADOS-079 (Exame 51, P14 e P24) a expressão passou a «o sinal da imagem». Cabe ao dono decidir se se faz o mesmo aqui.
