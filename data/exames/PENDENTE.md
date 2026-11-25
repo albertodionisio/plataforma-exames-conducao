@@ -467,3 +467,11 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Resultado da análise: Exame 35 e Exame 38 não precisam de sinal; precisam o Exame 36 (P13), o Exame 37 (P11, P15, P20) e o Exame 39 (P05, P06, P08, P09, P10, P11, P12, P13, P21, P22).
 - Pronto quando: as 14 perguntas têm `imagem` com o sinal do PDF, o validador passa, o mapa de cada exame regista a pergunta, o sinal (código, designação, página) e o ficheiro, e as imagens carregam no navegador.
 - Cuidados: não alterar enunciados, alternativas nem respostas; não mexer nas perguntas opcionais sem autorização do dono.
+
+## DADOS-082 — Sinais do PDF nos Exames 40, 41 e 42
+- Estado: EM CURSO — Claude-SINAIS-40-42 — 2026-11-25 01:30 UTC — ficheiros: só o campo `imagem` em data/exames/exame40.js, exame41.js e exame42.js, docs/referencias-exames/exame40-mapeamento.md, exame41-mapeamento.md e exame42-mapeamento.md, public/sinais/ (ficheiros novos) — último sinal: 2026-11-25 01:30 UTC — pedido pelo dono (24/11/2026)
+- Pedido: dos Exames 39 a 44, dizer quais perguntas têm ou deviam ter um sinal de trânsito e não têm, e integrar o sinal extraído de `original/referencia/sinais.pdf`, sem legenda, como em DADOS-079 a DADOS-081.
+- Resultado da análise (150 perguntas lidas): o Exame 39 já está na DADOS-080 (reserva de outra sessão, sem movimento desde 22/11; não é tocado aqui); os Exames 43 (luzes do veículo) e 44 (passageiros, carga e animais) não precisam de sinal; precisam os Exames 40, 41 e 42, que não têm nenhuma imagem.
+- Pronto quando: as perguntas que precisam de sinal têm `imagem` com o sinal do PDF, o validador passa, o mapa de cada exame regista pergunta, sinal (código, designação, página) e ficheiro, e as imagens carregam no navegador.
+- Cuidados: não alterar enunciados, alternativas, respostas nem explicações; reutilizar ficheiros já existentes em `public/sinais/` em vez de criar cópias; quando o número do sinal do PDF não coincidir com o da pergunta, não inventar imagem e assinalar no mapa.
+
