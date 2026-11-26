@@ -23,13 +23,13 @@ Conteúdo original do ESTRADA, elaborado a partir do Código da Estrada de Moça
 | 1 | Intersecções sem sinalização | Aplicar a prioridade de quem se apresenta pela direita | Art. 38.º, n.º 3, al. a) | 13 | Regra/situação | Nenhuma |
 | 2 | Efeito da prioridade | Identificar o dever dos restantes condutores | Art. 38.º, n.º 2 | 13 | Regra/situação | Nenhuma |
 | 3 | Sinalização nas intersecções | Reconhecer a prevalência da sinalização especial | Art. 38.º, n.º 4; 14.º, n.º 1 | 13; 5 | Regra/situação | Nenhuma |
-| 4 | Paragem obrigatória em todas as vias | Aplicar a ordem sucessiva de chegada | Art. 39.º, n.º 3 | 14 | Regra/situação | Nenhuma |
+| 4 | Paragem obrigatória em todas as vias | Aplicar a ordem sucessiva de chegada | Art. 39.º, n.º 3 | 14 | Regra/situação | `public/sinais/M2-paragem-obrigatoria-pdf.png` |
 | 5 | Entrada numa rotunda | Ceder passagem ao entrar na rotunda | Art. 39.º, n.º 1, al. d) | 14 | Regra/situação | Nenhuma |
 | 6 | Ilhéu central | Dar a direita à parte central da rotunda | Art. 22.º, n.º 1 | 7 | Regra/situação | Nenhuma |
 | 7 | Ilhéu em via de sentido único | Escolher o lado do dispositivo conforme o destino | Art. 22.º, n.º 2 | 7 | Regra/situação | Nenhuma |
 | 8 | Velocidade na aproximação | Moderar especialmente a velocidade em intersecções | Art. 32.º, n.º 1, al. b) | 10 | Regra/situação | Nenhuma |
-| 9 | Cruzamento congestionado | Não entrar se for previsível ficar imobilizado | Art. 38.º, n.º 5; 69.º, n.º 1 | 14; 28 | Regra/situação | Nenhuma |
-| 10 | Saída de cruzamento regulado por semáforos | Sair de cruzamento bloqueado sem embaraçar o sentido aberto | Art. 69.º, n.º 2 | 28 | Regra/situação | Nenhuma |
+| 9 | Cruzamento congestionado | Não entrar se for previsível ficar imobilizado | Art. 38.º, n.º 5; 69.º, n.º 1 | 14; 28 | Regra/situação | `public/sinais/temp-semaforo-tres-luzes.png` |
+| 10 | Saída de cruzamento regulado por semáforos | Sair de cruzamento bloqueado sem embaraçar o sentido aberto | Art. 69.º, n.º 2 | 28 | Regra/situação | `public/sinais/temp-semaforo-tres-luzes.png` |
 | 11 | Intersecção e peões | Aproximar-se com prudência e capacidade de parar | Art. 22.º, n.º 3 | 7 | Regra/situação | Nenhuma |
 | 12 | Ultrapassagem em cruzamentos | Reconhecer a proibição geral e as excepções legais | Art. 44.º, n.º 1, al. d); n.os 3 e 4 | 16 | Regra/situação | Nenhuma |
 | 13 | Mudança à direita no cruzamento | Ceder ao tráfego contrário que segue em frente ou vira à esquerda | Art. 39.º, n.º 1, al. c) | 14 | Regra/situação | Nenhuma |
@@ -55,3 +55,18 @@ Posições A=1.ª, B=2.ª, C=3.ª e D=4.ª: A=7, B=6, C=6, D=6. Não foi aplicad
 - Estrutura interna: 25 perguntas, quatro alternativas, índice correcto válido e explicação normativa em todas.
 - Revisão normativa confrontada com o PDF oficial do INATRO, em particular os artigos e números indicados no mapa.
 - Validador oficial `node scripts/validar-exames.js`, execução no navegador e revisão por instrutor/profissional jurídico ainda pendentes; a tarefa permanece parcial até essas verificações.
+
+## Imagens dos sinais (DADOS-081, 2026-11-22)
+
+Extraídas de `original/referencia/sinais.pdf`, a 600 ppp e sem a legenda (a legenda dá o nome do sinal e a resposta). Os ficheiros já existiam: foram extraídos na DADOS-079 e aqui só se reutilizam, sem criar cópias. Páginas físicas do PDF, conferidas visualmente nesta tarefa.
+
+| Pergunta | Sinal (designação no PDF) | Página | Imagem |
+|---|---|---|---|
+| 4 | M2 Paragem obrigatória (Quadro XII, sinais de cedência de passagem) | 52 | `public/sinais/M2-paragem-obrigatoria-pdf.png` |
+| 9, 10 | Semáforo de três luzes (Quadro III, sinais luminosos) | 20 | `public/sinais/temp-semaforo-tres-luzes.png` |
+
+Critério: recebem imagem as perguntas que nomeiam o sinal ou o semáforo de que depende a resposta, como no Exame 51 (DADOS-079). Enunciados, alternativas, respostas e explicações não foram alterados. Na P4, o mesmo quadro tem o sinal M10 «Paragem obrigatória em 4 vias»; usou-se o M2 para manter a coerência com a DADOS-079.
+
+**Perguntas opcionais (não tocadas; a decidir pelo dono):** P11 (peão junto à zona de travessia; existe o sinal G79); P18 (inversão de marcha e «sinal a proibir a inversão», sem sinal concreto); P24 (semáforo encoberto por veículo alto, a pergunta é sobre a distância e não sobre a indicação do semáforo); P25 (anúncio que se pode confundir com um sinal, sem sinal concreto). As restantes perguntas não precisam de sinal.
+
+**Nota de enunciado:** a P4 continua a dizer «sinal de paragem obrigatória». Na DADOS-079 (Exame 51, P14 e P24) a expressão passou a «o sinal da imagem». Cabe ao dono decidir se se faz o mesmo aqui.

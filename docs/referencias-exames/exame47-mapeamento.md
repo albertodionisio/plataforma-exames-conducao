@@ -46,3 +46,21 @@ O exame foi reformulado porque a versão anterior repetia extensamente conteúdo
 
 ## Limitação
 A comparação integral com os Exames 1–30 depende da extracção estruturada do APK original. A revisão acima elimina as sobreposições concretas já identificadas no catálogo ESTRADA disponível.
+
+## Imagens dos sinais (DADOS-079, 2026-11-22)
+
+Extraídas de `original/referencia/sinais.pdf` (Quadro II, sinais temporários, págs. 6 e 7), a 600 ppp e **sem a legenda** (a legenda do PDF diz o nome e o código, e daria a resposta). Os nomes dos ficheiros em `public/sinais/` levam o prefixo `temp-` porque os códigos A64–A76 do Quadro II repetem códigos já usados noutros quadros (por exemplo `A69-cancela-motorizada-a-direita.png`).
+
+| Pergunta | Sinal (código e designação no PDF) | Página do PDF | Imagem |
+|---|---|---|---|
+| 17 | A64 Raquetas e bandeirola de sinalização | 6 | `public/sinais/temp-A64-raquetas-e-bandeirola.png` |
+| 18 | A65 Baias direccionais | 6 | `public/sinais/temp-A65-baias-direccionais.png` |
+| 19 | A66 Baliza de posição, A67 Baliza de alinhamento, A68 Balizas de posição | 6 | `public/sinais/temp-A66-A67-A68-balizas.png` (montagem das três) |
+| 20 | A69 Cones | 6 | `public/sinais/temp-A69-cones.png` |
+| 23 | A73 Perfil móvel de plástico ou de betão | 7 | `public/sinais/temp-A73-perfil-movel.png` |
+| 24 | A74 Robot | 7 | `public/sinais/temp-A74-robot.png` |
+| 25 | A75 Atrelado de balizamento, A76 Seta luminosa | 7 | `public/sinais/temp-A75-A76-atrelado-e-seta-luminosa.png` (montagem das duas) |
+
+Nos enunciados, os códigos («A64», «A65», …) foram trocados por «da imagem». Perguntas 12, 15 e 16 ficam sem imagem por agora.
+
+**A rever na reformulação (DADOS-074):** a opção certa da pergunta 25 diz que o A75 «assinala mudança brusca de direcção», mas o PDF designa o A75 como «Atrelado de balizamento» (um atrelado com sinais e luzes). Confirmar no Regulamento antes de manter essa resposta.

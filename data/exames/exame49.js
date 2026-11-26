@@ -143,8 +143,11 @@ window.EXAMES[49] = [
     "numero": 10,
     "tema": "Veículos proibidos em auto-estradas",
     "dificuldade": "média",
-    "enunciado": "Numa auto-estrada devidamente sinalizada, qual dos seguintes veículos está expressamente incluído entre os que não podem transitar?",
-    "imagem": null,
+    "enunciado": "Numa via com o sinal da imagem, qual dos seguintes veículos está expressamente incluído entre os que não podem transitar?",
+    "imagem": {
+      "descricao": "Sinal de auto-estrada: rectângulo azul com o desenho de uma estrada de duas faixas",
+      "src": "public/sinais/G74-auto-estrada-pdf.png"
+    },
     "opcoes": [
       "Um automóvel ligeiro capaz de atingir a velocidade regulamentar.",
       "Um autocarro de transporte colectivo.",
@@ -158,8 +161,11 @@ window.EXAMES[49] = [
     "numero": 11,
     "tema": "Paragem e estacionamento em auto-estrada",
     "dificuldade": "média",
-    "enunciado": "Um condutor pretende parar numa auto-estrada fora de uma área de serviço ou de outro local especialmente destinado a esse fim. O que determina o Código?",
-    "imagem": null,
+    "enunciado": "Um condutor pretende parar numa via com o sinal da imagem fora de uma área de serviço ou de outro local especialmente destinado a esse fim. O que determina o Código?",
+    "imagem": {
+      "descricao": "Sinal de auto-estrada: rectângulo azul com o desenho de uma estrada de duas faixas",
+      "src": "public/sinais/G74-auto-estrada-pdf.png"
+    },
     "opcoes": [
       "A paragem é permitida se durar menos de cinco minutos.",
       "A paragem e o estacionamento são proibidos, mesmo fora da faixa de rodagem, salvo nos locais especialmente destinados.",

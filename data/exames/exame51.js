@@ -24,7 +24,10 @@ window.EXAMES[51] = [
     "tema": "Ambulância perante sinal vermelho",
     "dificuldade": "difícil",
     "enunciado": "Uma ambulância em missão urgente, com sinais regulamentares activos, aproxima-se de um semáforo vermelho. Pode atravessar sem parar?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+      "src": "public/sinais/temp-semaforo-tres-luzes.png"
+    },
     "opcoes": [
       "Deve suspender a marcha perante o vermelho e só pode prosseguir depois de tomar as devidas precauções.",
       "Pode atravessar à velocidade máxima.",
@@ -203,8 +206,11 @@ window.EXAMES[51] = [
     "numero": 14,
     "tema": "Sinal de cedência e peões",
     "dificuldade": "difícil",
-    "enunciado": "O condutor aproxima-se de uma intersecção com sinal de cedência e vê um peão a atravessar a via em que vai entrar. O que deve fazer?",
-    "imagem": null,
+    "enunciado": "O condutor aproxima-se de uma intersecção com o sinal da imagem e vê um peão a atravessar a via em que vai entrar. O que deve fazer?",
+    "imagem": {
+      "descricao": "Sinal de cedência de passagem: triângulo invertido com borda vermelha",
+      "src": "public/sinais/M1-cedencia-de-passagem-pdf.png"
+    },
     "opcoes": [
       "Ceder passagem ao peão e aos veículos com prioridade, avançando apenas em segurança.",
       "Avançar porque o sinal só se refere a veículos.",
@@ -219,7 +225,10 @@ window.EXAMES[51] = [
     "tema": "Ordem do agente e semáforo",
     "dificuldade": "difícil",
     "enunciado": "O semáforo apresenta verde, mas o agente manda parar o trânsito. Qual é a indicação a cumprir?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+      "src": "public/sinais/temp-semaforo-tres-luzes.png"
+    },
     "opcoes": [
       "A luz verde, porque é automática.",
       "A ordem do agente regulador, que prevalece sobre os sinais.",
@@ -234,7 +243,10 @@ window.EXAMES[51] = [
     "tema": "Amarelo e distância de paragem",
     "dificuldade": "difícil",
     "enunciado": "A luz amarela acende quando o veículo está tão próximo que não consegue parar sem perigo. O que pode fazer?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+      "src": "public/sinais/temp-semaforo-tres-luzes.png"
+    },
     "opcoes": [
       "Parar bruscamente dentro do cruzamento.",
       "Fazer marcha atrás.",
@@ -279,7 +291,10 @@ window.EXAMES[51] = [
     "tema": "Passagem de nível",
     "dificuldade": "difícil",
     "enunciado": "As barreiras de uma passagem de nível estão em movimento para fechar a via. O condutor deve:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal de perigo de cancela: triângulo com borda vermelha e o desenho de uma barreira de passagem de nível",
+      "src": "public/sinais/D67-cancela-pdf.png"
+    },
     "opcoes": [
       "Acelerar para passar antes de fecharem.",
       "Parar e não entrar na passagem enquanto os meios de protecção estiverem atravessados ou em movimento.",
@@ -353,8 +368,11 @@ window.EXAMES[51] = [
     "numero": 24,
     "tema": "Paragem em todas as direcções",
     "dificuldade": "difícil",
-    "enunciado": "Num cruzamento, todas as vias têm sinal de paragem obrigatória. Dois veículos chegam em momentos diferentes. Como se determina a prioridade?",
-    "imagem": null,
+    "enunciado": "Num cruzamento, todas as vias têm o sinal da imagem. Dois veículos chegam em momentos diferentes. Como se determina a prioridade?",
+    "imagem": {
+      "descricao": "Sinal de paragem obrigatória: octógono vermelho com a palavra STOP",
+      "src": "public/sinais/M2-paragem-obrigatoria-pdf.png"
+    },
     "opcoes": [
       "Pelo tamanho dos veículos.",
       "Pela velocidade máxima de cada veículo.",

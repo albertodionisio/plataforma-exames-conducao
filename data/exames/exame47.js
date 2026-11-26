@@ -248,8 +248,11 @@ window.EXAMES[47] = [
     "numero": 17,
     "tema": "Raqueta A64 — significados das duas faces",
     "dificuldade": "média",
-    "enunciado": "Um operador de trânsito numa zona de obras utiliza a raqueta A64. Que significado têm, respectivamente, as faces verde e vermelha?",
-    "imagem": null,
+    "enunciado": "Um operador de trânsito numa zona de obras utiliza a raqueta da imagem. Que significado têm, respectivamente, as faces verde e vermelha?",
+    "imagem": {
+      "descricao": "Raquetas verde e vermelha e bandeirola de sinalização usadas por um operador de trânsito em obras",
+      "src": "public/sinais/temp-A64-raquetas-e-bandeirola.png"
+    },
     "opcoes": [
       "A face verde indica paragem e a vermelha autoriza a passagem.",
       "A face verde indica sentido autorizado e a vermelha sentido não autorizado.",
@@ -263,8 +266,11 @@ window.EXAMES[47] = [
     "numero": 18,
     "tema": "Baias direccionais A65",
     "dificuldade": "média",
-    "enunciado": "Para que servem as baias direccionais A65 previstas entre os dispositivos complementares de sinalização temporária?",
-    "imagem": null,
+    "enunciado": "Para que servem as baias direccionais da imagem previstas entre os dispositivos complementares de sinalização temporária?",
+    "imagem": {
+      "descricao": "Duas baias direccionais, uma com setas para a esquerda e outra para a direita",
+      "src": "public/sinais/temp-A65-baias-direccionais.png"
+    },
     "opcoes": [
       "Para orientar visualmente os condutores no percurso ou desvio imposto na zona de trabalhos.",
       "Para medir a velocidade dos veículos.",
@@ -278,8 +284,11 @@ window.EXAMES[47] = [
     "numero": 19,
     "tema": "Balizas A66, A67 e A68",
     "dificuldade": "média",
-    "enunciado": "Qual é a função geral das balizas A66, A67 e A68 na sinalização temporária?",
-    "imagem": null,
+    "enunciado": "Qual é a função geral das balizas da imagem na sinalização temporária?",
+    "imagem": {
+      "descricao": "Baliza de posição horizontal, baliza de alinhamento e duas balizas de posição verticais, com listas vermelhas e brancas",
+      "src": "public/sinais/temp-A66-A67-A68-balizas.png"
+    },
     "opcoes": [
       "Indicar o peso máximo permitido aos veículos.",
       "Assinalar posição e alinhamento dos limites ou trajecto da zona de trabalhos.",
@@ -293,8 +302,11 @@ window.EXAMES[47] = [
     "numero": 20,
     "tema": "Cones A69",
     "dificuldade": "média",
-    "enunciado": "Numa obra, são colocados cones A69 ao longo de uma faixa. Qual é a sua função no conjunto de dispositivos complementares?",
-    "imagem": null,
+    "enunciado": "Numa obra, são colocados cones da imagem ao longo de uma faixa. Qual é a sua função no conjunto de dispositivos complementares?",
+    "imagem": {
+      "descricao": "Dois cones de sinalização vermelhos e brancos",
+      "src": "public/sinais/temp-A69-cones.png"
+    },
     "opcoes": [
       "Servir de iluminação permanente para a via.",
       "Substituir o colete reflectivo dos trabalhadores.",
@@ -338,8 +350,11 @@ window.EXAMES[47] = [
     "numero": 23,
     "tema": "Perfil móvel A73",
     "dificuldade": "média",
-    "enunciado": "Qual é a utilização prevista para o perfil móvel A73 na sinalização temporária?",
-    "imagem": null,
+    "enunciado": "Qual é a utilização prevista para o perfil móvel da imagem na sinalização temporária?",
+    "imagem": {
+      "descricao": "Perfil móvel de plástico ou betão, com faixa vermelha e branca",
+      "src": "public/sinais/temp-A73-perfil-movel.png"
+    },
     "opcoes": [
       "Indicar o nome do adjudicatário da obra.",
       "Assinalar a posição e os limites dos trabalhos, podendo ser de plástico ou de betão.",
@@ -353,8 +368,11 @@ window.EXAMES[47] = [
     "numero": 24,
     "tema": "Robot A74",
     "dificuldade": "média",
-    "enunciado": "O Regulamento inclui o robot A74 entre os dispositivos complementares de sinalização temporária. Em que contexto deve ser entendido?",
-    "imagem": null,
+    "enunciado": "O Regulamento inclui o robot da imagem entre os dispositivos complementares de sinalização temporária. Em que contexto deve ser entendido?",
+    "imagem": {
+      "descricao": "Robot de sinalização: figura com capa amarela a segurar um disco vermelho",
+      "src": "public/sinais/temp-A74-robot.png"
+    },
     "opcoes": [
       "Como equipamento de medição da pressão dos pneus.",
       "Como dispositivo destinado a transportar trabalhadores.",
@@ -368,8 +386,11 @@ window.EXAMES[47] = [
     "numero": 25,
     "tema": "Atrelado de balizamento A75 e seta luminosa A76",
     "dificuldade": "média",
-    "enunciado": "Uma obra utiliza um atrelado A75 e uma seta luminosa A76. Qual é a função regulamentar associada a estes dispositivos?",
-    "imagem": null,
+    "enunciado": "Uma obra utiliza o atrelado de balizamento e a seta luminosa da imagem. Qual é a função regulamentar associada a estes dispositivos?",
+    "imagem": {
+      "descricao": "Atrelado de balizamento com luzes e sinais, e seta luminosa feita de luzes amarelas",
+      "src": "public/sinais/temp-A75-A76-atrelado-e-seta-luminosa.png"
+    },
     "opcoes": [
       "Aumentar a velocidade máxima permitida no troço.",
       "Autorizar o estacionamento de veículos particulares.",

@@ -127,7 +127,10 @@ window.EXAMES[32] = [
   "tema": "Cruzamentos com paragem obrigatória",
   "dificuldade": "média",
   "enunciado": "Num cruzamento, há sinais de paragem obrigatória em todas as direcções. Vários carros chegam em momentos diferentes. Quem passa primeiro?",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Sinal octogonal vermelho com a palavra STOP",
+   "src": "public/sinais/M2-paragem-obrigatoria-pdf.png"
+  },
   "opcoes": [
    "O que vem pela direita, como nos cruzamentos sem sinais.",
    "O que chegou primeiro, e depois os outros pela ordem de chegada.",
@@ -202,7 +205,10 @@ window.EXAMES[32] = [
   "tema": "Veículos prioritários",
   "dificuldade": "difícil",
   "enunciado": "Uma ambulância em missão urgente, com os sinais ligados, chega a um semáforo vermelho. O condutor da ambulância deve:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+   "src": "public/sinais/temp-semaforo-tres-luzes.png"
+  },
   "opcoes": [
    "Passar sem abrandar, porque as regras e os sinais não se aplicam aos veículos prioritários.",
    "Parar e só avançar depois de tomar as devidas precauções, sem esperar que o sinal mude.",
@@ -247,7 +253,10 @@ window.EXAMES[32] = [
   "tema": "Cruzamentos",
   "dificuldade": "média",
   "enunciado": "O semáforo está verde, mas do outro lado do cruzamento há uma fila de carros parada e não há espaço para o seu veículo sair. O condutor deve:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+   "src": "public/sinais/temp-semaforo-tres-luzes.png"
+  },
   "opcoes": [
    "Avançar até ao meio do cruzamento e esperar ali, porque o sinal está verde.",
    "Avançar devagar, buzinando para os da frente andarem mais depressa.",
@@ -277,7 +286,10 @@ window.EXAMES[32] = [
   "tema": "Passagens de nível",
   "dificuldade": "média",
   "enunciado": "Numa passagem de nível, as cancelas estão a descer. O condutor deve:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Sinal triangular com borda vermelha e o desenho de uma cancela de passagem de nível",
+   "src": "public/sinais/D67-cancela-pdf.png"
+  },
   "opcoes": [
    "Acelerar para atravessar a linha antes de as cancelas fecharem por completo na via.",
    "Contornar as cancelas pelo lado, se não vir nenhum comboio a aproximar-se.",
@@ -307,7 +319,10 @@ window.EXAMES[32] = [
   "tema": "Peões",
   "dificuldade": "média",
   "enunciado": "O semáforo está verde para os veículos junto a uma passagem de peões, mas ainda há peões a acabar de atravessar. O condutor deve:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+   "src": "public/sinais/temp-semaforo-tres-luzes.png"
+  },
   "opcoes": [
    "Deixar passar os peões que já iniciaram a travessia, mesmo com o sinal verde.",
    "Avançar devagar, buzinando, porque o sinal verde lhe dá prioridade.",

@@ -59,3 +59,16 @@ Perguntas redigidas de forma original, com ênfase em cenários que combinam mai
 - Todas as imagens são `null`.
 - GitHub Actions run 43488270259 aprovado no commit 55a36d93a838b69556dab5f1c78a568c8fbdfb7e (sintaxe, testes de fluxo/assinaturas e validador oficial). A revisão de sobreposições do bloco 45–51 continua em curso.
 - Teste funcional no navegador reservado à verificação conjunta após a conclusão deste exame, conforme decisão do dono.
+
+## Imagens dos sinais (DADOS-079, 2026-11-22)
+
+Extraídas de `original/referencia/sinais.pdf`, a 600 ppp e sem a legenda (a legenda dá o nome do sinal e a resposta). Páginas físicas do PDF.
+
+| Pergunta | Sinal (designação no PDF) | Página | Imagem |
+|---|---|---|---|
+| 2, 15, 16 | Semáforo de três luzes (Quadro III, sinais luminosos) | 20 | `public/sinais/temp-semaforo-tres-luzes.png` |
+| 14 | M1 Aproximação de estrada com prioridade (Quadro XII, sinais de cedência de passagem) | 52 | `public/sinais/M1-cedencia-de-passagem-pdf.png` |
+| 19 | D67 Cancela (Quadro IV, sinais de perigo) | 24 | `public/sinais/D67-cancela-pdf.png` |
+| 24 | M2 Paragem obrigatória (Quadro XII) | 52 | `public/sinais/M2-paragem-obrigatoria-pdf.png` |
+
+Nos enunciados das perguntas 14 e 24 a expressão «sinal de cedência» e «sinal de paragem obrigatória» passou a «o sinal da imagem».
