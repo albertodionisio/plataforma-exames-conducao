@@ -9,7 +9,12 @@ on:
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
+      - 'scripts/testar-cache.js'
       - 'netlify.toml'
+      - 'vercel.json'
+      - 'index.html'
+      - 'service-worker.js'
+      - 'cache-bootstrap.js'
       - 'styles-resultados.css'
       - 'app.js'
       - 'config.js'
@@ -22,7 +27,11 @@ on:
       - 'scripts/testar-assinaturas.js'
       - 'scripts/testar-fluxo.js'
       - 'scripts/build-netlify.js'
+      - 'scripts/testar-cache.js'
       - 'netlify.toml'
+      - 'index.html'
+      - 'service-worker.js'
+      - 'cache-bootstrap.js'
       - 'app.js'
       - 'config.js'
       - 'public/assinaturas/planos.js'
@@ -47,6 +56,11 @@ jobs:
           node --check app.js
           node --check config.js
           node --check public/assinaturas/planos.js
+          node --check service-worker.js
+          node --check cache-bootstrap.js
+          node --check scripts/testar-cache.js
+      - name: Testar camadas de cache
+        run: node scripts/testar-cache.js
       - name: Testar componente de assinaturas
         run: node scripts/testar-assinaturas.js
       - name: Testar fluxo completo dos exames

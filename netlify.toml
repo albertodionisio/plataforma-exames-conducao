@@ -9,3 +9,34 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+
+# Cache partilhada (CDN): perguntas/alternativas durante 30 dias.
+[[headers]]
+  for = "/data/exames/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, s-maxage=2592000, stale-while-revalidate=86400"
+
+# Imagens e PDFs públicos: até 365 dias na CDN; o navegador revalida via Service Worker.
+[[headers]]
+  for = "/public/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Netlify-CDN-Cache-Control = "public, s-maxage=31536000, stale-while-revalidate=86400"
+
+# O HTML e o Service Worker devem poder verificar novas versões.
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/service-worker.js"
+  [headers.values]
+    Cache-Control = "no-cache"
