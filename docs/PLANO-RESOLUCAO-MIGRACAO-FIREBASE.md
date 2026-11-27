@@ -67,7 +67,7 @@ A falha antiga `45833068139` foi resolvida; não foi removida a verificação da
 - [ ] Publicar regras apenas após autorização expressa. Não copiar secrets Preview para Production.
 
 ### ETAPA 6 — Backend, assinaturas e pagamentos
-**Estado: IMPLEMENTAÇÃO E FLUXO SANDBOX COMPROVADOS; robustez adicional em revisão.**
+**Estado: CONCLUÍDA na branch; Sandbox comprovado e idempotência adicional aprovada em CI.**
 
 - [x] Firebase ID token validado pelo backend.
 - [x] Catálogo fechado de planos/preços no servidor.
@@ -86,8 +86,7 @@ A falha antiga `45833068139` foi resolvida; não foi removida a verificação da
 **Estado: FORA DO FECHO DA BE-002; bloqueada até autorização de lançamento.**
 
 - [x] Testes automáticos da migração e do fluxo de exames aprovados na branch.
-- [ ] Auditoria adicional de lançamento, desempenho, acessibilidade e compatibilidade Android.
-- [ ] Auditoria integral de segurança, desempenho, acessibilidade e compatibilidade Android.
+- [ ] Auditoria de lançamento, desempenho, acessibilidade e compatibilidade Android.
 - [ ] Preparar empacotamento e instalação Android de produção.
 - [ ] Rever privacidade, termos, suporte e requisitos operacionais.
 - [ ] Apresentar riscos e pedir autorização explícita para regras, merge e deploy.
