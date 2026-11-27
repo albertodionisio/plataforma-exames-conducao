@@ -18,7 +18,7 @@ Conteúdo **original** do ESTRADA (não vem do APK). Foco: regras gerais de circ
 
 - Comparado só com o Exame 1, o único publicado no repositório. Os restantes (2–7) estão em curso e não puderam ser comparados.
 - O Exame 1 já tem perguntas sobre o sentido de marcha (art. 17.º, n.º 1), a visibilidade reduzida (art. 28.º), quem recua numa passagem estreita (art. 41.º, n.º 4) e a inversão em autoestrada. Não foram repetidas; as perguntas 21 e 22 usam os n.ºs 3 e 6 do art. 41.º, que são regras diferentes.
-- Sem imagens: todas as perguntas são só de texto (`imagem: null`).
+- Imagens: só a pergunta 14 tem imagem (semáforo, ver a secção «Imagens dos sinais»). As outras 24 perguntas são só de texto (`imagem: null`).
 
 ## Mapa das 25 perguntas
 
@@ -37,7 +37,7 @@ Conteúdo **original** do ESTRADA (não vem do APK). Foco: regras gerais de circ
 | 11 | Cruzamentos e rotundas | fácil | Adotar comportamento prudente na aproximação de intersecções | art. 22.º, n.º 3 | 7 | situação prática | nenhuma |
 | 12 | Sinalização da manobra | média | Saber em que manobras é obrigatório sinalizar | art. 23.º, n.º 1 | 8 | regra | nenhuma |
 | 13 | Sinalização da manobra | fácil | Cessar o sinal depois da manobra | art. 23.º, n.º 2 | 8 | regra | nenhuma |
-| 14 | Hierarquia da sinalização | média | Conhecer a hierarquia entre agentes, sinais e regras de trânsito | art. 14.º, n.º 3 | 5 | situação prática | nenhuma |
+| 14 | Hierarquia da sinalização | média | Conhecer a hierarquia entre agentes, sinais e regras de trânsito | art. 14.º, n.º 3 | 5 | situação prática | `public/sinais/temp-semaforo-tres-luzes.png` |
 | 15 | Velocidade | média | Adaptar a velocidade às circunstâncias | art. 29.º, n.º 1 | 10 | situação prática | nenhuma |
 | 16 | Velocidade | média | Evitar travagens bruscas que ponham em perigo quem vem atrás | art. 29.º, n.º 2 | 10 | regra | nenhuma |
 | 17 | Velocidade | média | Reconhecer o que torna a velocidade excessiva | art. 30.º, n.º 1 | 10 | regra | nenhuma |
@@ -53,3 +53,15 @@ Conteúdo **original** do ESTRADA (não vem do APK). Foco: regras gerais de circ
 ## Resposta correcta por posição
 
 Posições (A=1.ª … D=4.ª): A=7, B=6, C=6, D=6.
+
+## Imagens dos sinais (DADOS-083, 2026-11-27)
+
+Extraída de `original/referencia/sinais.pdf`, sem a legenda (a legenda dá o nome do sinal e a resposta). O ficheiro já existia (extraído na DADOS-079 e usado na DADOS-081): aqui só se reutiliza, sem criar cópia. Página física do PDF conferida visualmente nesta tarefa, comparando o ficheiro com a página renderizada.
+
+| Pergunta | Sinal (designação no PDF) | Página | Imagem |
+|---|---|---|---|
+| 14 | Semáforo de três luzes (Quadro III, sinais luminosos) | 20 | `public/sinais/temp-semaforo-tres-luzes.png` |
+
+Critério: recebem imagem as perguntas que nomeiam o sinal ou o semáforo de que depende a resposta, como em DADOS-079 e DADOS-081, e só quando a pergunta o pede ou o indica (indicação do dono, 26/11/2026). Enunciado, alternativas, resposta e explicação não foram alterados.
+
+**Perguntas opcionais (não tocadas; a decidir pelo dono):** P10 (rotunda, parte central à direita) e P22 (ponte estreita), sem sinal concreto identificado; P19 (passagem de peões assinalada; o mapa do Exame 32 regista o sinal G79). São regras e não pedem o sinal. As restantes perguntas não precisam de sinal.

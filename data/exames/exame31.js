@@ -202,7 +202,10 @@ window.EXAMES[31] = [
   "tema": "Hierarquia da sinalização",
   "dificuldade": "média",
   "enunciado": "Num cruzamento, o semáforo está vermelho para o condutor, mas um agente regulador do trânsito faz-lhe sinal para avançar. O condutor deve:",
-  "imagem": null,
+  "imagem": {
+   "descricao": "Semáforo de três luzes: vermelha em cima, amarela ao meio e verde em baixo",
+   "src": "public/sinais/temp-semaforo-tres-luzes.png"
+  },
   "opcoes": [
    "Esperar pelo verde, porque o semáforo prevalece sobre as ordens do agente regulador.",
    "Esperar pelo verde, a menos que outros condutores já estejam a avançar no cruzamento.",
