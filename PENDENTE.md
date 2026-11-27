@@ -7,15 +7,6 @@
 
 ## Interface (FE-)
 
-## FE-014 — Coerência dos cartões e acções de subscrição
-- Estado: IMPLEMENTAÇÃO E VALIDAÇÃO VISUAL CONCLUÍDAS pelo proprietário em 2026-11-27; CI automatizado ainda por confirmar.
-- Aplicada aos cinco planos existentes (Free, Semanal Básico, Semanal Completo, Mensal Básico e Mensal Completo), sem alterar preços, benefícios ou durações.
-- Comportamento confirmado visualmente pelo proprietário: plano pago activo mantém círculo seleccionado, selo «PLANO ACTIVO» e botão «Plano activo»; restantes planos pagos apresentam «Mudar para [plano]»; Free apresenta «Aceder aos exames gratuitos»; estado de carência tem indicação própria.
-- Antes de mudar de plano, a aplicação pede confirmação com plano actual, destino, preço, duração e efeito da alteração. A confirmação informa que a mudança só ocorre após pagamento aprovado e que o período restante é preservado e acrescentado à duração contratada, conforme a lógica actual do backend.
-- Ficheiros: `public/assinaturas/planos.js`, `scripts/testar-assinaturas.js`.
-- Testes automatizados actualizados; aguarda-se confirmação do resultado CI no commit funcional.
-- Cuidados respeitados: sem alterações a preços, catálogo, regras de acesso, backend de pagamentos, `main` ou produção.
-
 ## FE-001 — Auditoria de experiência móvel e acessibilidade
 - Estado: EM CURSO — ChatGPT-7 — 2026-11-27 11:03 UTC+02 — ficheiros: styles.css, docs/auditorias/interface-movel.md — último sinal: 2026-11-27 11:05 UTC+02 — reserva assumida com autorização expressa do dono; verificações estáticas concluídas, falta validação visual no navegador.
 - Pedido: melhorar a utilização da versão actual em telemóveis, sem alterar as regras de negócio nem o funcionamento dos exames.
