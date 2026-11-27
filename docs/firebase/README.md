@@ -3,6 +3,7 @@
 **Actualizado:** 27 de Novembro de 2026  
 **Project ID:** `plataforma-exames-conducao`  
 **Branch de trabalho:** `feat/firebase-full-migration`  
+**BE-002:** CONCLUÍDA na branch.  
 **Produção:** não integrada; regras Firestore ainda não publicadas.
 
 Consultar [Estado actual do projecto](../ESTADO-ATUAL.md) para o resumo consolidado. Este documento descreve a integração actual e separa testes automatizados, validação manual no Preview e activação em produção.
@@ -14,7 +15,7 @@ Consultar [Estado actual do projecto](../ESTADO-ATUAL.md) para o resumo consolid
 | Firebase Authentication — Google | Validado manualmente no Preview pelo proprietário | Domínios Preview/alias foram autorizados no Firebase Console. |
 | Email/palavra-passe | Implementação e testes de emulador presentes | Não afirmar que todos os fluxos reais de email foram manualmente validados no Preview. |
 | Telefone/palavra-passe | Backend custom token e testes automatizados presentes | Não usa SMS/OTP e não comprova titularidade do número. |
-| Cloud Firestore | Perfil, colecções e regras preparados; testes no Emulator Suite passaram | Regras ainda não publicadas no projecto real. |
+| Cloud Firestore | Perfil, colecções e regras revistas; testes no Emulator Suite passaram | Regras ainda não publicadas no projecto real. |
 | Firebase Admin SDK | Utilizado no backend para operações privilegiadas | Service account apenas em secret do ambiente servidor. |
 | Firebase Hosting | Não adoptado | A aplicação continua alojada no Vercel. |
 | Cloud Storage | Não adoptado | Perguntas e imagens são recursos estáticos no repositório. |
@@ -42,7 +43,7 @@ Colecções utilizadas/preparadas:
 
 As regras seguem princípio default-deny e isolamento por UID. O cliente não deve escrever directamente pagamentos, assinaturas ou resultados finais. Consultas de dados do utilizador devem filtrar pelo UID autenticado; as regras Firestore não funcionam como filtros.
 
-**Importante:** testes de regras no Emulator Suite passaram no workflow indicado abaixo, mas as regras ainda não foram publicadas no Firebase real. Rever regras e índices antes de qualquer publicação. Não publicar sem autorização expressa.
+**Importante:** `firestore.rules` e `firestore.indexes.json` foram revistos contra o modelo actual e os testes no Emulator Suite passaram no run `45949604987`. As regras continuam apenas na branch e **não foram publicadas** no Firebase real. A publicação exige autorização expressa.
 
 ## Autenticação telefónica
 
@@ -57,11 +58,11 @@ Variáveis sensíveis são configuradas apenas como secrets no ambiente apropria
 - `PHONE_AUTH_PEPPER`
 - segredos da ePay descritos em [docs/epay/README.md](../epay/README.md)
 
-Nunca guardar valores secretos neste repositório, nem copiar secrets Preview para Production.
+Na configuração Vercel consultada, `FIREBASE_SERVICE_ACCOUNT_JSON`, `PHONE_AUTH_PEPPER`, `EPAY_SECRET_KEY` e `EPAY_WEBHOOK_SECRET` estão limitadas ao Preview da branch `feat/firebase-full-migration`; não foram encontradas variáveis de Production nessa consulta. Os valores não foram lidos nem expostos. Antes de produção, confirmar directamente no Firebase/IAM as permissões mínimas da service account. Nunca guardar valores secretos neste repositório, nem copiar secrets Preview para Production.
 
 ## Testes e evidências
 
-No commit `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`, o GitHub Actions **Validar integração Firebase**, run `45833068199`, terminou com sucesso. Incluiu:
+No commit `b3e72828c9e74c0b1102f671bac62b8b881224a7`, o GitHub Actions **Validar integração Firebase**, run `45949604987`, terminou com sucesso. Incluiu:
 - verificação de sintaxe das funções backend;
 - testes ePay sem chamadas externas;
 - testes de validação de email;
@@ -69,7 +70,7 @@ No commit `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`, o GitHub Actions **Validar
 - testes de autenticação telefónica;
 - testes Authentication e Firestore no Emulator Suite, incluindo regras.
 
-O proprietário confirmou manualmente no Preview o login Google. Isto complementa, mas não substitui, os testes automatizados.
+O proprietário confirmou manualmente no Preview o login Google. Isto complementa, mas não substitui, os testes automatizados. O Preview Vercel do commit validado está READY: `https://plataforma-exames-conducao-2my0yn28k-jjb18.vercel.app`.
 
 ## Activação futura
 
