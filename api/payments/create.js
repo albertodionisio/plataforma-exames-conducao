@@ -25,14 +25,19 @@ module.exports = async function createPayment(req, res) {
         if (old.uid !== user.uid) { const e = new Error("Referência de pagamento inválida."); e.status = 403; throw e; }
         if (old.planCode !== body.planCode)
           return { existing: true, conflict: true, data: old };
-        if (old.paymentUrl || old.status === "creating" ||
-            old.status === "pending" || old.status === "paid" || old.status === "cancelled")
+        const updatedAtMs = old.updatedAt && typeof old.updatedAt.toMillis === "function"
+          ? old.updatedAt.toMillis()
+          : old.updatedAt instanceof Date ? old.updatedAt.getTime() : NaN;
+        const creatingExpired = old.status === "creating" &&
+          (!Number.isFinite(updatedAtMs) || Date.now() - updatedAtMs > 120000);
+        if (old.paymentUrl || old.status === "pending" || old.status === "paid" ||
+            old.status === "cancelled" || (old.status === "creating" && !creatingExpired))
           return { existing: true, data: old };
 
-        // Um pedido que falhou pode ser repetido com a mesma chave. A ePay
-        // recebe a mesma Idempotency-Key, evitando criar uma cobrança duplicada
-        // se a resposta anterior se perdeu depois de a ePay processar o pedido.
-        if (old.status === "failed") {
+        // Um pedido que falhou ou ficou preso em "creating" por mais de dois
+        // minutos pode ser repetido com a mesma chave. A ePay recebe a mesma
+        // Idempotency-Key, evitando uma cobrança duplicada após timeout/crash.
+        if (old.status === "failed" || creatingExpired) {
           tx.update(paymentRef, { status: "creating", updatedAt: lib.serverTimestamp() });
           return { existing: false, retry: true };
         }
