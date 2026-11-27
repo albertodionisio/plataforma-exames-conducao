@@ -26,10 +26,11 @@ A integração individual ePay está implementada e os testes automatizados pass
 
 ## CI e Preview conhecidos
 
-- GitHub Actions **Validar integração Firebase**, run `45833068199`: sucesso no commit `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`.
-- GitHub Actions **Validar exames**, run `45833068139`: falha na asserção do caminho da imagem do Exame 27 em `scripts/testar-fluxo.js:220`; a imagem actual está em `public/sinais/D79-sinal-pdf-600dpi.png`. A falha não deve ser escondida: corrigir a expectativa e preservar a validação da imagem.
-- Preview Vercel: [deployment de validação](https://plataforma-exames-conducao-r6givqbf2-jjb18.vercel.app), associado ao commit acima.
-- A validação manual do proprietário no Preview confirmou autenticação Google, planos Free/Semanal, pagamento Sandbox e execução do Exame 27.
+- GitHub Actions **Validar integração Firebase**, run [45949604987](https://github.com/albertodionisio/plataforma-exames-conducao/actions/runs/45949604987): SUCCESS no commit `b3e72828`; inclui ePay/idempotência, validação de email, configuração Firebase, telefone e emuladores Auth/Firestore.
+- GitHub Actions **Validar exames**, run [45949323808](https://github.com/albertodionisio/plataforma-exames-conducao/actions/runs/45949323808): SUCCESS; a asserção das imagens dos Exames 26–30 foi corrigida para validar o caminho real, existência do ficheiro e renderização.
+- Preview Vercel READY: [deployment actual](https://plataforma-exames-conducao-2my0yn28k-jjb18.vercel.app), commit `b3e72828`; [alias estável da branch](https://plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app).
+- O proprietário já confirmou no Preview autenticação Google, planos Free/Semanal, pagamento Sandbox e execução do Exame 27. Não repetir estes testes.
+- A migração BE-002 está concluída na branch, mas não publicada em produção. Regras Firestore continuam sem publicação e ePay live não está configurada.
 
 ## Desenvolvimento
 
