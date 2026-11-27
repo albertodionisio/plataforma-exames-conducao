@@ -29,3 +29,11 @@ A revisão dos estilos e do HTML identificou que os controlos de sessão da cont
 
 ## Validação ainda necessária
 A validação visual e interactiva num navegador real continua pendente. Verificar as larguras de 320, 360, 390 e 600 px, incluindo Início, catálogo, pergunta com imagem, alternativas, cabeçalho/menu, conta e cartões de Planos. Confirmar ausência de deslocamento horizontal da página, legibilidade, áreas de toque e foco por teclado. Testar também orientação horizontal e zoom do navegador. Não declarar FE-001 concluída antes dessa confirmação.
+
+## Verificações estáticas após a correcção
+- CSS com 145 chavetas de abertura e 145 de fecho.
+- Regras de adaptação presentes para 600 px e 360 px.
+- Foco de teclado visível e áreas mínimas de 44 px nos controlos principais, incluindo entrar/sair e alternância de autenticação.
+- Botões dos planos mantêm altura mínima de 48 px em `public/assinaturas/planos.css`.
+- Tabelas limitadas à largura do contentor, com deslocamento horizontal próprio; a página deixa de herdar a largura mínima de 560 px da tabela.
+- Estas verificações são estáticas; não substituem a validação visual e interactiva em navegador real.
