@@ -61,12 +61,39 @@
     });
     cartao.classList.add("plano-escolhido");
 
-    if (topo.querySelector(".plano-selo-activo")) return;
-    var selo = elemento("span", "plano-selo-activo", estado);
-    selo.setAttribute("aria-label", estado === "EM CARÊNCIA" ?
-      "Este plano está dentro do período de carência" : "Este é o plano actualmente activo na tua conta");
-    topo.appendChild(selo);
+    if (!topo.querySelector(".plano-selo-activo")) {
+      var selo = elemento("span", "plano-selo-activo", estado);
+      selo.setAttribute("aria-label", estado === "EM CARÊNCIA" ?
+        "Este plano está dentro do período de carência" : "Este é o plano actualmente activo na tua conta");
+      topo.appendChild(selo);
+    }
     cartao.classList.add("plano-cartao-activo");
+    grupo._estradaPlanoActivo = {
+      codigo: codigo,
+      nome: radio.getAttribute("data-plano-nome") || "plano actual",
+      estado: estado
+    };
+    grupo.querySelectorAll(".plano-cartao").forEach(function (item, indiceCartao) {
+      var acao = item.querySelector("button");
+      if (!acao) return;
+      if (indiceCartao === indice) {
+        acao.textContent = estado === "EM CARÊNCIA" ? "Plano em carência" : "Plano activo";
+        acao.disabled = true;
+        acao.setAttribute("aria-label", estado === "EM CARÊNCIA" ?
+          "O plano " + grupo._estradaPlanoActivo.nome + " está em carência" :
+          "O plano " + grupo._estradaPlanoActivo.nome + " já está activo");
+      } else {
+        acao.disabled = false;
+        if (indiceCartao === 0) {
+          acao.textContent = "Aceder aos exames gratuitos";
+          acao.setAttribute("aria-label", "Aceder aos exames gratuitos sem alterar a subscrição actual");
+        } else {
+          var nomeDestino = acao.getAttribute("data-plano-nome") || "plano";
+          acao.textContent = "Mudar para " + nomeDestino;
+          acao.setAttribute("aria-label", "Mudar para " + nomeDestino);
+        }
+      }
+    });
   }
 
   function carregarPlanoActivo(grupo) {
@@ -293,6 +320,7 @@
       radio.value = String(indice);
       radio.checked = indice === 0;
       radio.setAttribute("aria-label", "Seleccionar plano " + plano.nome);
+      radio.setAttribute("data-plano-nome", plano.nome);
       radio.addEventListener("change", function () { seleccionar(indice); });
 
       var conteudo = elemento("label", "plano-conteudo");
@@ -321,10 +349,22 @@
 
       var botao = elemento("button", "assinaturas-botao", "Aderir ao plano " + plano.nome);
       botao.type = "button";
+      botao.setAttribute("data-plano-nome", plano.nome);
+      botao.setAttribute("data-plano-codigo", CODIGOS_PLANOS[indice]);
       botao.addEventListener("click", function () {
+        if (botao.disabled) return;
+        var assinaturaActual = grupo._estradaPlanoActivo;
+        if (plano.preco !== "0 MT" && assinaturaActual && assinaturaActual.codigo !== CODIGOS_PLANOS[indice]) {
+          var mensagem = "Tens actualmente o plano " + assinaturaActual.nome + ".\\n\\n" +
+            "O plano " + plano.nome + " custa " + plano.preco + " e é válido por " + plano.validade + ".\\n\\n" +
+            "Se confirmares e o pagamento for aprovado, o novo plano será activado imediatamente. " +
+            "O período que ainda resta da subscrição actual será preservado e acrescentado à duração deste novo plano.\\n\\n" +
+            "Queres continuar para o pagamento?";
+          if (typeof window.confirm === "function" && !window.confirm(mensagem)) return;
+        }
         seleccionar(indice);
         if (plano.preco === "0 MT") {
-          aviso.textContent = "O plano Free é gratuito. Podes consultar os exames disponíveis.";
+          aviso.textContent = "O plano Free é gratuito. Podes consultar os exames disponíveis sem alterar a subscrição paga.";
           window.location.hash = "#/exames";
           return;
         }
