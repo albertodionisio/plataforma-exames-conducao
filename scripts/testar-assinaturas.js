@@ -188,8 +188,10 @@ async function testarSeloPlanoActivo() {
     currentUser: null,
     onAuthStateChanged(callback) { callback(null); callback(utilizador); return function () {}; }
   };
+  const confirmacoes = [];
   const windowTeste = {
     addEventListener() {},
+    confirm(mensagem) { confirmacoes.push(mensagem); return false; },
     location: { search: "", hash: "" },
     firebase: {
       auth() { return authTeste; },
@@ -245,10 +247,31 @@ async function testarSeloPlanoActivo() {
     "o radio do plano com subscrição activa deve ficar seleccionado");
   assert.equal(cartaoActivo.classList.contains("plano-escolhido"), true,
     "o cartão com subscrição activa deve receber o destaque de selecção");
+  assert.equal(cartaoActivo.querySelector("button").textContent, "Plano activo",
+    "o botão do plano activo deve deixar de pedir uma nova adesão");
+  assert.equal(cartaoActivo.querySelector("button").disabled, true,
+    "não deve ser possível iniciar outro pagamento para o mesmo plano activo");
+  const botoesAlternativos = outrosCartoes.map((cartao) => cartao.querySelector("button"));
+  assert.ok(botoesAlternativos.every((botao) => botao.textContent.startsWith("Mudar para ") || botao.textContent === "Aceder aos exames gratuitos"),
+    "os restantes cartões devem indicar mudança de plano ou acesso gratuito, sem pedir adesão como se não houvesse subscrição");
+  assert.equal(raizTeste.querySelector("#estrada-plano-0").closest(".plano-cartao").querySelector("button").textContent,
+    "Aceder aos exames gratuitos",
+    "o cartão Free deve permitir consultar exames gratuitos sem sugerir cancelamento do plano pago");
   assert.equal(raizTeste.querySelector("#estrada-plano-0").checked, false,
     "o plano Free não pode continuar seleccionado quando existe uma subscrição paga activa");
   assert.equal(raizTeste.querySelector("#estrada-plano-0").closest(".plano-cartao").classList.contains("plano-escolhido"), false,
     "o cartão Free deve perder o destaque quando outro plano está activo");
+  const botaoMudanca = raizTeste.querySelector("#estrada-plano-1").closest(".plano-cartao").querySelector("button");
+  botaoMudanca.click();
+  assert.equal(confirmacoes.length, 1, "a mudança para outro plano deve pedir confirmação antes do checkout");
+  assert.ok(confirmacoes[0].includes("Mensal Completo") && confirmacoes[0].includes("Semanal Básico") &&
+    confirmacoes[0].includes("150 MT") && confirmacoes[0].includes("30 dias") &&
+    confirmacoes[0].includes("período que ainda resta"),
+    "a confirmação deve explicar plano actual, destino, preço, duração e preservação do período pago");
+  assert.equal(botaoMudanca.textContent, "Mudar para Semanal Básico",
+    "cancelar a confirmação deve manter a acção de mudança e não iniciar checkout");
+  assert.equal(raizTeste.querySelector("#estrada-plano-4").checked, true,
+    "cancelar a mudança não pode retirar a selecção do plano activo");
   const outrosCartoes = raizTeste.querySelectorAll(".plano-cartao").filter((cartao) => cartao !== cartaoActivo);
   assert.ok(outrosCartoes.every((cartao) => !cartao.querySelector(".plano-selo-activo")),
     "o selo não pode aparecer nos planos que não pertencem à assinatura activa");
@@ -300,6 +323,8 @@ async function testarSeloEmCarencia() {
   const cartaoCarencia = raizTeste.querySelector("#estrada-plano-3").closest(".plano-cartao");
   assert.ok(cartaoCarencia.querySelector(".plano-selo-activo"), "o plano mensal Básico deve receber selo durante a carência");
   assert.equal(cartaoCarencia.querySelector(".plano-selo-activo").textContent, "EM CARÊNCIA");
+  assert.equal(cartaoCarencia.querySelector("button").textContent, "Plano em carência",
+    "o botão do plano em carência deve explicar o estado e impedir novo checkout do mesmo plano");
 }
 
 async function testarConsultaPagamentoAposLogin() {
