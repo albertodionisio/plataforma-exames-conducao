@@ -401,3 +401,13 @@ body.documento-aberto main{
   .icone-barra{width:23px;height:23px}
 
 }
+
+/* FE-001 — áreas de toque da conta e alternância de autenticação */
+.conta-entrar,.conta-sair,.link-button{
+  display:inline-flex;
+  min-height:44px;
+  align-items:center;
+  justify-content:center;
+  padding:6px 10px;
+  line-height:1.3;
+}
