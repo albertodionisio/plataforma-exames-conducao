@@ -3,7 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.classList.add("splash-ativo");</script>
+  <script>
+    (() => {
+      let apresentar = true;
+      try {
+        const chave = "estrada.splash.v1";
+        if (window.sessionStorage.getItem(chave) === "1") apresentar = false;
+        else window.sessionStorage.setItem(chave, "1");
+      } catch (_) {}
+      if (apresentar) document.documentElement.classList.add("splash-ativo");
+    })();
+  </script>
   <meta name="theme-color" content="#14284b">
   <title>Exames de condução</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -161,7 +171,8 @@
   <script>
     (() => {
       const splash = document.getElementById("splash-abertura");
-      if (!splash) {
+      if (!splash || !document.documentElement.classList.contains("splash-ativo")) {
+        if (splash) splash.remove();
         document.documentElement.classList.remove("splash-ativo");
         return;
       }
