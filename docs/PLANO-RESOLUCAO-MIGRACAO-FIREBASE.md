@@ -1,160 +1,101 @@
-# Plano de resolução — migração Supabase → Firebase (ESTRADA)
+# Plano de estabilização e conclusão da migração Firebase — ESTRADA-JB
 
-Actualizado: 2026-11-16  
-Branch de trabalho: `feat/firebase-full-migration`  
-PR: #3 (rascunho)
+**Actualizado:** 27 de Novembro de 2026  
+**Branch de trabalho:** `feat/firebase-full-migration`  
+**Commit-base validado:** `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`  
+**Produção:** bloqueada até autorização expressa.
 
-Este plano transforma as pendências da migração numa sequência de etapas verificáveis. A ordem é intencional: preservar o trabalho e estabilizar a branch antes de publicar qualquer alteração.
+Este plano substitui os estados e previsões antigas deste ficheiro. Os registos anteriores foram substituídos porque descreviam a migração como divergente, a autenticação Preview como não testada e o backend de pagamentos como inexistente. Essas descrições já não correspondem ao estado actual.
 
 ## Regras de segurança
 
-- Não fazer merge para `main`, não publicar regras Firestore e não fazer deploy de produção sem autorização expressa.
-- Não apagar, pausar ou alterar o projecto Supabase. As contas existentes foram confirmadas pelo proprietário como contas de teste; não há contas reais antigas a migrar.
+- Não fazer merge para `main`, publicar regras Firestore ou fazer deploy de produção sem autorização expressa.
+- Não apagar, pausar ou alterar o projecto Supabase.
 - Não expor credenciais, tokens, service accounts ou variáveis secretas.
-- Não alterar perguntas, imagens, cronómetro, pontuação, planos ou preços durante a migração.
-- Antes de editar ficheiros reservados por outra tarefa/sessão, verificar `PENDENTE.md` e coordenar para não sobrepor trabalho.
-- Distinguir sempre testes de emulador, preview, produção e testes manuais do proprietário.
+- Distinguir testes de emulador, Preview, Sandbox e produção.
+- Consultar `PENDENTE.md`, `HISTORICO.md` e `INSTRUCOES.md) antes de alterar tarefas reservadas.
 
-## Sequência de execução
+## Etapas e estado actual
 
-### ETAPA 1 — Congelar o estado e confirmar os pontos de partida
-- [x] Confirmar branch `feat/firebase-full-migration` e PR #3.
-- [x] Comparar `main` com a branch Firebase: a comparação consultada indica 68 commits à frente e 12 atrás; as branches divergiram.
-- [x] Confirmar que a migração Firebase está na branch, enquanto a `main` ainda contém integração Supabase.
-- [x] Registar que as contas Supabase existentes eram apenas contas de teste; não é necessária migração de contas.
-- [x] Actualizar este plano com os SHAs e estados mais recentes após a sincronização (revisão documental final de 2026-11-17).
+### ETAPA 1 — Autenticação
+**Estado: CONCLUÍDA na validação Preview acordada.**
 
-**Resultado esperado:** estado-base documentado, sem alteração destrutiva.
+- [x] Firebase Authentication integrado na branch.
+- [x] Testes automatizados Auth/Firestore Emulator aprovados no workflow Firebase.
+- [x] Proprietário confirmou login Google funcional no Preview após autorizar os domínios do deployment e alias da branch.
+- [x] Não voltar a solicitar a autorização dos mesmos domínios como pendência.
+- [ ] A validação de todos os fluxos reais de email/telefone deve ser considerada separadamente; os testes de emulador não provam, por si só, entrega real de emails ou titularidade telefónica.
 
-### ETAPA 2 — Reconciliar as branches sem perder os exames mais recentes
-- [x] Recuperar os 12 commits que estavam apenas em `main`: PR auxiliar #6 (`main` → `feat/firebase-full-migration`) integrada com sucesso no commit `9b462c492a8743210ad606446a8057273d12daad`. A lista de commits foi confirmada pela PR (12 commits); todos os ficheiros afectados foram reconciliados antes do merge.
-- [x] Comparar os ficheiros de dados dos exames 34–37 e mapas de referência nas duas branches. Exames 34 e 35 e respectivos mapas têm os mesmos blobs. Exames 36 e 37 e respectivos mapas diferem: `main` tem versões mais recentes. SHAs em 2026-11-16: exame36 main `125a5cb691c724afc42ea853d6706d64dbe8e312` / branch `2603dee1d1c7fe4f6e0177d82beaafc35e79ed3b`; exame37 main `78e6fbb4e1a1a9d79c7763fff2c712d80707b25f` / branch `0f52bc77ea9d6a4c107082339e2e1607ba5ca311`; mapa36 main `b69c7d7ebeab9a03bc99a887a3f3fbc3ea8d6305` / branch `1d3d72a8a62d0ee9e9c245b1f3c3af64f5681091`; mapa37 main `2f3ce35e79806364ce35e973a7c8478078d985de` / branch `d1d6d54938930ff4b688f1129c799d13b6db3fb3`. A comparação geral reportou 26 ficheiros e não listou estes quatro ficheiros apesar dos blobs divergirem; discrepância do resultado da API a resolver antes de sincronizar.
-- [x] Identificar e resolver os conflitos de sincronização. A PR #6 só ficou mergeable depois de alinhar os ficheiros editoriais partilhados; a integração foi feita exclusivamente na branch Firebase. Os ficheiros centrais da migração não foram substituídos.
-- [x] Integrar as alterações de `main` na branch Firebase numa operação controlada, preservando a migração e os dados mais recentes (PR auxiliar #6).
-- [x] Confirmar que não houve duplicação, regressão ou perda dos exames 34–37 na reconciliação; Exames 34/35 já eram idênticos e 36/37 foram alinhados com `main`.
-- [x] Registar o resultado e os commits de integração no histórico e neste plano.
+### ETAPA 2 — Sincronização e preservação das branches
+**Estado: CONCLUÍDA.**
 
-**Programação necessária:** resolução de conflitos e eventual adaptação de código/dados, apenas nos ficheiros em conflito. Não fazer merge da PR para `main`.
+- [x] Integradas as alterações da `main` na branch Firebase sem alterar a `main`.
+- [x] Commit de merge: `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`.
+- [x] PR #10 fechada como merged; a sincronização ocorreu na branch de migração.
+- [x] Documentos partilhados reconciliados sem eliminar registos independentes.
 
-### ETAPA 3 — Corrigir e estabilizar os testes de fluxo
-- [ ] Reproduzir a falha actual de `scripts/testar-fluxo.js` na branch.
-- [ ] Determinar se o comportamento correcto é focar a alternativa escolhida ou o título da pergunta, tendo em conta acessibilidade e a navegação real.
-- [ ] Alinhar teste e implementação; não alterar a experiência do utilizador só para silenciar um teste.
-- [ ] Verificar separadamente a falha de fluxo existente em `main`, sem misturar essa correcção com a migração.
-- [ ] Executar o conjunto completo: sintaxe, fluxo, validação de exames, Auth Emulator e Firestore Emulator.
-- [ ] Confirmar CI verde na branch.
+### ETAPA 3 — Testes automáticos e estabilização do fluxo de exames
+**Estado: PARCIAL — existe uma falha conhecida por corrigir.**
 
-**Programação necessária:** provável ajuste em `app.js` e/ou `scripts/testar-fluxo.js`, após reproduzir a falha e decidir qual comportamento é correcto.
+- [x] Sintaxe JavaScript e componente de assinaturas passaram no workflow de exames.
+- [x] Validação de integração Firebase passou.
+- [ ] Corrigir a asserção em `scripts/testar-fluxo.js:220`: o teste espera o caminho antigo `public/exames/exameN/exameN_1.jpg`, mas a primeira pergunta do Exame 27 usa `public/sinais/D79-sinal-pdf-600dpi.png`.
+- [ ] Confirmar que o teste valida a imagem actual e o comportamento de carregamento, em vez de simplesmente remover a asserção.
+- [ ] Reexecutar o workflow completo de exames, incluindo validador oficial, documentos e build Netlify.
 
-### ETAPA 4 — Confirmar Firebase no ambiente real de Preview
-- [ ] Confirmar que o Preview aponta para o commit mais recente da branch (o relatório anterior identificou um Preview antigo).
-- [ ] Verificar variáveis/configuração do ambiente Preview sem revelar valores secretos.
-- [ ] Validar registo por email, envio de verificação, confirmação do endereço, login, recuperação, logout e persistência.
-- [ ] Validar login Google e retorno ao exame seleccionado.
-- [ ] Testar proxy Vercel para `/__/auth/*` e `/__/firebase/*`.
-- [ ] Registar separadamente resultados do emulador e do serviço Firebase real.
+Evidência actual: GitHub Actions run `45833068139` falhou no passo “Testar fluxo completo dos exames”; os passos posteriores foram skipped. O ficheiro de imagem apontado pelo Exame 27 existe no repositório.
 
-**Programação necessária:** corrigir configuração ou proxy apenas se os testes reais identificarem falhas.
+### ETAPA 4 — Validação funcional no Preview
+**Estado: CONCLUÍDA para os fluxos que o proprietário testou.**
 
-### ETAPA 5 — Fechar configuração Firebase externa
-- [ ] Confirmar domínios autorizados no Firebase Authentication.
-- [ ] Confirmar o OAuth redirect/callback `/__/auth/handler` no cliente OAuth Google correcto.
-- [ ] Confirmar os domínios de Preview e produção que serão realmente utilizados.
-- [ ] Rever `firestore.rules` e `firestore.indexes.json` antes de qualquer publicação.
-- [ ] Só publicar regras depois de autorização expressa do proprietário.
+- [x] Preview Vercel READY no commit-base: deployment `dpl_ALFzFnbZbmMvmoZCmragfPcQRaQt`.
+- [x] Login Google validado.
+- [x] Proprietário confirmou os três exames gratuitos no plano Free.
+- [x] Proprietário confirmou escolha do plano semanal e checkout Sandbox.
+- [x] Proprietário confirmou processamento/confirmacão, activação da assinatura e desbloqueio dos exames.
+- [x] Proprietário executou o Exame 27 e confirmou imagens, navegação, cronómetro, avaliação e resultado.
+- [x] Não pedir para repetir os mesmos testes funcionais.
 
-**Acção do proprietário quando chegar esta etapa:** abrir o Firebase Console/Google Cloud para aprovar ou corrigir domínios e callback OAuth, caso a configuração não possa ser feita por acesso técnico disponível. Não pedir esta acção antes de termos os valores exactos e evidência do que falta.
+### ETAPA 5 — Revisão de segurança e configuração Firestore
+**Estado: PENDENTE.**
 
-### ETAPA 6 — Implementar backend confiável para operações protegidas
-- [ ] Definir arquitectura backend compatível com Firebase e com o alojamento aprovado.
-- [ ] Implementar endpoint/serviço seguro para criação e consulta de tentativas.
-- [ ] Implementar lógica de subscrições e estado de acesso, sem confiar em valores enviados pelo cliente.
-- [ ] Implementar integração de pagamentos apenas depois de escolher fornecedor, credenciais e fluxo de confirmação.
-- [ ] Validar Firebase ID tokens no servidor e aplicar autorização por utilizador.
-- [ ] Criar testes de segurança para impedir que o cliente altere resultados, pagamentos ou subscrições.
-- [ ] Documentar segredos necessários como nomes de variáveis, nunca os seus valores.
+- [ ] Rever `firestore.rules` e `firestore.indexes.json` contra o modelo actual.
+- [ ] Confirmar isolamento por UID e que o cliente não pode escrever pagamentos, subscrições ou resultados finais.
+- [ ] Rever permissões da service account e secrets por ambiente.
+- [ ] Só publicar regras após revisão e autorização expressa.
+- [ ] Não copiar secrets Preview para Production.
 
-**Programação necessária:** sim. O backend de tentativas, subscrições e pagamentos ainda não existe. Esta etapa exige decisões de produto e credenciais do fornecedor de pagamentos antes da integração final.
+### ETAPA 6 — Backend, assinaturas e pagamentos
+**Estado: IMPLEMENTAÇÃO E FLUXO SANDBOX COMPROVADOS; robustez adicional em revisão.**
 
-### ETAPA 7 — Verificação final e decisão de lançamento
-- [ ] Confirmar que a branch não tem dependências operacionais Supabase no frontend nem em runtime.
-- [ ] Pesquisar referências restantes e classificar as que são apenas históricas/testes/documentação.
-- [x] Validar os Exames 36 e 37 após a integração: 25 perguntas cada, quatro alternativas por pergunta, índices de resposta válidos, explicações presentes, zero referências a artigos, zero enunciados «Segundo o Código», distribuição A7/B6/C6/D6; respostas correctas unicamente mais longas em 0/25 e 4/25 (abaixo do limite de 7 do auditor). Nenhum problema estrutural ou editorial detectado.
-- [x] Confirmar o Preview Vercel da branch após a sincronização: deployment `dpl_4MYDoZggRzm3y6LVXs31YUWHT2gS` em estado `READY`, associado ao commit `df9c0c8d82f0568a25d793eac98fb7dbea29bacf`. O resultado dos workflows GitHub Actions não é exposto pelas funções disponíveis do conector; não se declara CI verde sem prova.
-- [ ] Confirmar Preview e fluxos reais aprovados.
-- [ ] Rever regras Firestore e arquitectura backend.
-- [ ] Actualizar PR #3, descrição, evidências e lista de tarefas.
-- [ ] Apresentar ao proprietário um resumo de riscos e pedir autorização explícita para publicar regras, fazer merge e/ou deploy de produção.
+- [x] Firebase ID token validado pelo backend.
+- [x] Catálogo fechado de planos/preços no servidor.
+- [x] UID beneficiário fixado antes do checkout; o telefone/titular do meio de pagamento não altera a conta beneficiária.
+- [x] Referência UUID gerada no servidor.
+- [x] Checkout individual ePay implementado.
+- [x] Callback HMAC, validação de referência/valor/moeda e consulta de estado implementados.
+- [x] Activação Firestore transaccional e idempotente coberta por testes.
+- [x] Proprietário comprovou o fluxo Sandbox completo, incluindo desbloqueio.
+- [ ] Avaliar chave de idempotência estável para pedidos repetidos de criação do checkout.
+- [ ] Preparar ambiente live apenas depois de aprovação comercial e autorização expressa. Não há cobrança real activa nesta fase.
 
-## O que depende do proprietário
+### ETAPA 7 — Auditoria final e lançamento
+**Estado: BLOQUEADA — não iniciar publicação.**
 
-Não é necessário executar agora qualquer passo manual. Só será solicitada intervenção quando:
-1. for necessária aprovação/autenticação na conta Vercel ou Google Cloud/Firebase Console;
-2. for necessário testar uma caixa de email ou dispositivo real;
-3. for preciso escolher/fornecer credenciais de um fornecedor de pagamentos;
-4. for tomada uma decisão irreversível ou de lançamento (publicar regras, merge, deploy de produção ou apagar serviços).
+- [ ] Concluir testes automáticos e resolver falhas.
+- [ ] Auditoria integral de segurança, desempenho, acessibilidade e compatibilidade Android.
+- [ ] Preparar empacotamento e instalação Android de produção.
+- [ ] Rever privacidade, termos, suporte e requisitos operacionais.
+- [ ] Apresentar riscos e pedir autorização explícita para regras, merge e deploy.
 
-## Estado conhecido na criação deste plano
+## Evidências de referência
 
-- Firebase Auth e perfil Firestore estão implementados na branch Firebase.
-- Regras Firestore e testes de Auth/Firestore Emulator existem no repositório; a existência dos ficheiros e os testes do emulador não provam publicação no projecto real.
-- O relatório técnico de 2026-11-16 indicou CI Firebase aprovado e uma falha no teste de fluxo.
-- A comparação GitHub consultada indica `main` e `feat/firebase-full-migration` divergentes: 68 commits à frente e 12 atrás.
-- A `main` continua a conter integração Supabase; a migração não está concluída em produção.
-- O proprietário confirmou que as contas Supabase existentes eram contas de teste, sem utilizadores reais antigos a migrar.
-- Não foi feito merge, deploy de produção, publicação de regras ou alteração destrutiva no Supabase.
+| Evidência | Resultado |
+|---|---|
+| Commit de sincronização | `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4` |
+| Validar integração Firebase — run `45833068199` | SUCCESS |
+| Validar exames — run `45833068139` | FAILURE na asserção da imagem do Exame 27 |
+| Preview Vercel — `dpl_ALFzFnbZbmMvmoZCmragfPcQRaQt` | READY |
+| Teste manual de autenticação, planos, pagamento Sandbox e Exame 27 | Confirmado pelo proprietário |
 
-## Registo de execução
-
-| Etapa | Estado | Evidência / observação |
-|---|---|---|
-| 1. Estado-base | Concluída | Branch e PR localizadas; `main` HEAD `fc08c00`; merge-base `7cde108`; Firebase branch commit do plano `c0da8e2`; comparação: 69 à frente, 12 atrás, 26 ficheiros diferentes. Valores reconfirmados em 2026-11-16. |
-| 2. Sincronização | Concluída | PR #6 integrada; verificação actual em 2026-11-17: `main` é ancestral, 89 commits à frente / 0 atrás, merge-base `fc08c00ba0ca5e8efa5fc60e27892c1d93b1a25d`; Exames 34–37 e mapas reconciliados; auditoria dos Exames 36–37 aprovada; Preview Vercel READY. CI push não confirmado pelo conector. |
-| 3. Testes de fluxo | Concluída | GER-021: mock DOM corrigido para `closest()`/`contains()` e clique em descendente; workflow `Validar exames` run `43992938585` passou (FE-002, BE-002, validador oficial e build Netlify). Código de produção de autenticação não foi alterado. |
-| 4. Preview real | Por fazer | Preview reportado como antigo; validar commit e fluxos |
-| 5. Console Firebase/OAuth | Por fazer | Sem conector Firebase |
-| 6. Backend | Por fazer | Ainda não implementado |
-| 7. Lançamento | Bloqueado pelas etapas anteriores | Sem merge/deploy/publicação autorizados |
-
-
-### Registo adicional da ETAPA 2 — auditoria de 2026-11-16
-
-- PR #3 continua aberta e em rascunho; não foi feito merge.
-- Comparação actual `main...feat/firebase-full-migration`: divergente, 70 commits à frente e 12 atrás; merge-base `7cde108fe82f4544a9797289859c858e841f3fed`; HEAD de `main` `fc08c00ba0ca5e8efa5fc60e27892c1d93b1a25d`.
-- Os exames 34 e 35 e os seus mapas têm blobs idênticos nas duas branches.
-- Os exames 36 e 37 e os mapas correspondentes diferem. As versões de `main` incluem reformulações mais recentes; não copiar sem revisão do conteúdo e dos registos DADOS.
-- A comparação geral do GitHub não incluiu esses quatro caminhos na lista de ficheiros, apesar de `fetch_file` devolver SHAs diferentes. Este comportamento tem de ser esclarecido antes de uma integração automatizada.
-- `PENDENTE.md` da `main` indica BE-002 ainda EM CURSO, com ficheiros de autenticação e documentação reservados. Não editar esses ficheiros nesta etapa sem coordenação. Nenhum ficheiro de código/dados foi alterado nesta auditoria.
-
-
-### Registo final da ETAPA 2 — 2026-11-16
-
-- PR auxiliar #6, `main` → `feat/firebase-full-migration`, integrada: commit `9b462c492a8743210ad606446a8057273d12daad`. A `main` não foi alterada; PR principal #3 continua aberta em rascunho.
-- Comparação após integração: `main` é ancestral da branch; `ahead_by=86`, `behind_by=0`, merge-base `fc08c00ba0ca5e8efa5fc60e27892c1d93b1a25d`.
-- Exames 34 e 35 já eram iguais; Exames 36 e 37 e mapas foram actualizados para os blobs mais recentes de `main`. Foram também integrados `docs/GUIA-PERGUNTAS.md`, `scripts/auditar-estilo.js`, `data/exames/PENDENTE.md`, `INSTRUCOES.md`, `REGRAS.md` e o registo dos anexos.
-- Auditoria dos Exames 36 e 37 reproduzida a partir do script oficial `scripts/auditar-estilo.js`: ambos com 25 perguntas; artigos 0; «Segundo o Código» 0; respostas correctas únicas mais longas 0 e 4 (limite de revisão >7); posições A7/B6/C6/D6; enunciados curtos (≤90 caracteres) 6 e 7. Verificação estrutural adicional: quatro opções, índice correcto válido e explicação presente em todas as 50 perguntas.
-- O conector de status não devolveu verificações para o commit de merge e não disponibiliza listagem de execuções push. CI não declarado verde; falta apenas consultar a execução GitHub Actions quando estiver acessível.
-
-- Preview Vercel após a sincronização: `https://plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app` — deployment `READY`, commit `df9c0c8d82f0568a25d793eac98fb7dbea29bacf`.
-
-
-### Fecho documental da ETAPA 2 — verificação independente de 2026-11-17
-
-A verificação actual do GitHub confirma:
-
-- Branch activa: `feat/firebase-full-migration`.
-- Comparação `main...feat/firebase-full-migration`: estado `ahead`, 89 commits à frente e 0 atrás.
-- HEAD de `main` e merge-base: `fc08c00ba0ca5e8efa5fc60e27892c1d93b1a25d`. Portanto, a branch Firebase contém a história actual de `main`; não há commits de `main` por recuperar.
-- A reconciliação foi feita pela PR auxiliar #6, integrada no commit `9b462c492a8743210ad606446a8057273d12daad`; a PR principal #3 permanece aberta em Draft. Não foi feito merge da PR #3.
-- Os Exames 36 e 37 foram auditados com 25 perguntas cada, quatro alternativas, índices válidos e explicações presentes; a auditoria editorial não identificou bloqueios. Os Exames 34 e 35 não precisaram de alteração.
-- O Preview Vercel foi reportado READY no commit `df9c0c8d82f0568a25d793eac98fb7dbea29bacf`. Isto não significa que o Preview corresponda ao último commit documental.
-- A consulta ao GitHub Actions para workflows push continua limitada pelo conector; por isso, não se declara CI global verde nesta verificação. A limitação fica registada e não impede a conclusão específica da reconciliação da Etapa 2.
-
-**Conclusão:** ETAPA 2 concluída. A ausência de confirmação de CI push é uma limitação de observabilidade, não uma pendência de sincronização. A ETAPA 3 permanece por iniciar e está fora do âmbito desta verificação.
-
-### Verificação independente da ETAPA 2 — 2026-11-17 (Claude-DADOS005)
-
-- Critérios da Etapa 2 confirmados no estado real do GitHub: `main` é ancestral da branch (`0 / 97`), PR auxiliar #6 integrada (`merged=true`), PR #3 aberta em rascunho (sem merge), nenhuma alteração em `main`.
-- Dados e mapas dos exames da branch idênticos aos da `main` (diferença vazia); Exames 1–51 presentes e ligados em `index.html`; `node scripts/validar-exames.js`: 51 ficheiros, 0 problemas; `node scripts/auditar-estilo.js 34 35 36 37`: artigos 0, «Segundo o Código» 0, respostas certas únicas mais longas 0/0/0/4; `node scripts/testar-firebase.js`: aprovado.
-- Checks GitHub do topo da branch: firebase, validar, validar-definicoes e Vercel Preview Comments em sucesso. Os testes de Auth/Firestore Emulator não foram repetidos localmente (sem rede para instalar `firebase-tools`); valem os runs da CI.
-- Pendência humana desta etapa: nenhuma.
+Para o estado global e as limitações, consultar [docs/ESTADO-ATUAL.md](ESTADO-ATUAL.md).
