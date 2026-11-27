@@ -61,3 +61,13 @@ A validação estrutural foi reproduzida sobre os dados remotos segundo os crit�
 - Temas e ordem mantidos. Distâncias conferidas com o texto dos arts. 49.º a 51.º: 5 m de passagens de peões e velocípedes; 3 m à frente e 15 m para cada lado de paragens de transporte colectivo; 10 m de passagens de nível para veículos com explosivos; 5 m de postos de combustível; 3 m livres até à linha contínua.
 - Pergunta 14: reformulada para o sentido real da norma (deixar pelo menos 3 m livres entre o veículo e a linha contínua).
 - Respostas correctas: A7/B6/C6/D6, sem padrão cíclico.
+
+## Sinais extraídos do PDF oficial (`original/referencia/sinais.pdf`) — DADOS-080
+
+Sinais recortados do PDF oficial a 600 ppp, sem legenda, e ligados ao campo `imagem` das perguntas abaixo. Os enunciados, as alternativas e as respostas não foram alterados.
+
+| Pergunta | Ficheiro | Código | Designação (como no PDF) | Pág. PDF | Nota |
+|---:|---|---|---|---:|---|
+| 11 | `public/sinais/J109-paragem-de-autocarros.png` | J109 | Paragem de autocarros | 50 | Único sinal «Paragem de autocarros» encontrado no PDF: pictograma castanho. A CONFIRMAR se é o sinal que o dono quer. |
+| 15 | `public/sinais/M5-estrada-com-prioridade.png` | M5 | Estrada com prioridade | 52 | Legenda do PDF: «Estrada com prioridade» (triângulo de cedência com painel de peão). |
+| 20 | `public/sinais/G66-area-reservada-veiculos-deficientes.png` | G66 | Área reservada para veículos de deficientes | 38 | O enunciado diz «reservado a certos veículos» sem especificar; escolhido este sinal R como exemplo. A CONFIRMAR. |

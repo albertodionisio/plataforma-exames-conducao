@@ -69,7 +69,10 @@ window.EXAMES[39] = [
     "tema": "D3 — estrada com prioridade",
     "dificuldade": "difícil",
     "enunciado": "Para o sinal de perigo D3, «Estrada com prioridade», qual é a distância máxima de colocação indicada fora das localidades em relação ao cruzamento?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal triangular de perigo com um triângulo de ponta para baixo e bordo vermelho no centro.",
+      "src": "public/sinais/D3-estrada-com-prioridade.png"
+    },
     "opcoes": [
       "400 metros.",
       "50 metros.",
@@ -84,7 +87,10 @@ window.EXAMES[39] = [
     "tema": "Leitura do sinal de perigo",
     "dificuldade": "média",
     "enunciado": "Um sinal triangular anuncia uma curva perigosa. O que deve o condutor fazer ao aproximar-se?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal triangular de perigo com uma seta preta a curvar para a direita.",
+      "src": "public/sinais/D46-curva-a-direita.png"
+    },
     "opcoes": [
       "Manter a velocidade e travar apenas dentro da curva.",
       "Ultrapassar antes de chegar à curva.",
@@ -114,7 +120,10 @@ window.EXAMES[39] = [
     "tema": "M1 — aproximação de estrada com prioridade",
     "dificuldade": "média",
     "enunciado": "O sinal M1, de aproximação de estrada com prioridade, indica ao condutor que:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal triangular de ponta para baixo, com bordo vermelho e fundo branco.",
+      "src": "public/sinais/M1-cedencia-de-passagem-pdf.png"
+    },
     "opcoes": [
       "Tem sempre prioridade sobre todos os veículos, incluindo os que circulam sobre carris.",
       "Deve parar obrigatoriamente em qualquer circunstância.",
@@ -129,7 +138,10 @@ window.EXAMES[39] = [
     "tema": "M2 — paragem obrigatória",
     "dificuldade": "fácil",
     "enunciado": "Ao encontrar o sinal M2 de paragem obrigatória, o condutor deve:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal octogonal vermelho com a palavra STOP.",
+      "src": "public/sinais/M2-paragem-obrigatoria-pdf.png"
+    },
     "opcoes": [
       "Abranda apenas se observar outro veículo.",
       "Parar antes de entrar no cruzamento e só avançar quando for seguro.",
@@ -144,7 +156,10 @@ window.EXAMES[39] = [
     "tema": "M3 — passagem estreita",
     "dificuldade": "média",
     "enunciado": "O sinal M3, «Dar prioridade nas passagens estreitas», determina que o condutor:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal redondo com bordo vermelho e duas setas verticais, uma vermelha pequena para cima e uma preta grande para baixo.",
+      "src": "public/sinais/M3-dar-prioridade-passagens-estreitas.png"
+    },
     "opcoes": [
       "Tem prioridade sobre os veículos que vêm em sentido contrário.",
       "Deve acelerar para entrar primeiro na passagem.",
@@ -159,7 +174,10 @@ window.EXAMES[39] = [
     "tema": "M4 — prioridade na passagem estreita",
     "dificuldade": "média",
     "enunciado": "Qual é a indicação transmitida pelo sinal M4, «Prioridade nas passagens estreitas»?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal azul quadrado com duas setas verticais, uma branca para cima e uma vermelha para baixo.",
+      "src": "public/sinais/M4-prioridade-passagens-estreitas.png"
+    },
     "opcoes": [
       "O condutor tem prioridade na passagem estreita, sem deixar de actuar com prudência.",
       "O condutor deve inverter o sentido de marcha.",
@@ -174,7 +192,10 @@ window.EXAMES[39] = [
     "tema": "M5 — estrada com prioridade",
     "dificuldade": "média",
     "enunciado": "O sinal M5, «Estrada com prioridade», informa que:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Triângulo de ponta para baixo com bordo vermelho e, por baixo, um pequeno painel vermelho com um peão.",
+      "src": "public/sinais/M5-estrada-com-prioridade.png"
+    },
     "opcoes": [
       "A estrada está encerrada ao trânsito.",
       "A velocidade máxima deixa de se aplicar.",
@@ -189,7 +210,10 @@ window.EXAMES[39] = [
     "tema": "M6 — prioridade na rotunda",
     "dificuldade": "fácil",
     "enunciado": "Ao aproximar-se de uma rotunda sinalizada com M6, o condutor deve:",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal triangular de ponta para baixo com bordo vermelho e três setas pretas em círculo.",
+      "src": "public/sinais/M6-dar-prioridade-na-rotunda.png"
+    },
     "opcoes": [
       "Entrar sem observar o trânsito porque a rotunda dá prioridade a quem chega.",
       "Dar prioridade aos veículos que já circulam na rotunda.",
@@ -309,7 +333,10 @@ window.EXAMES[39] = [
     "tema": "M11 — paragem obrigatória com particularidade para virar à esquerda",
     "dificuldade": "difícil",
     "enunciado": "Num cruzamento com o sinal M11, o condutor pretende mudar de direcção para a esquerda. Qual é a particularidade prevista no regulamento?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal octogonal vermelho com STOP e, por baixo, um triângulo de ponta para baixo com uma seta preta a virar à esquerda.",
+      "src": "public/sinais/M11-paragem-obrigatoria-viragem-esquerda.png"
+    },
     "opcoes": [
       "Pode seguir em frente sem parar, desde que buzine.",
       "Deve parar sempre e ceder passagem apenas aos veículos que vêm da esquerda.",
@@ -324,7 +351,10 @@ window.EXAMES[39] = [
     "tema": "M7/M8 — paragem obrigatória e avance em obras",
     "dificuldade": "média",
     "enunciado": "Numa zona de obras, o condutor encontra o sinal M7/M8 de «Paragem obrigatória e avance». Como deve proceder?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Dois sinais octogonais lado a lado: um vermelho liso e outro amarelo com a palavra AVANCE.",
+      "src": "public/sinais/M7-M8-paragem-obrigatoria-e-avance.png"
+    },
     "opcoes": [
       "Passar imediatamente, porque o sinal é apenas informativo.",
       "Parar antes de entrar na zona protegida e avançar apenas quando o operador autorizar o seu sentido.",

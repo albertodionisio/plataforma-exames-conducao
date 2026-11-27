@@ -60,3 +60,11 @@ A validação estrutural foi reproduzida sobre os dados remotos segundo os crit�
 - A pedido do dono, as 25 perguntas e explicações foram reescritas em forma de situação, sem artigos nem «Segundo o Código» (ver `docs/GUIA-PERGUNTAS.md`). Os artigos ficam só neste mapa.
 - A ordem e os temas mantêm-se. As linhas 14, 22, 23 e 24 foram corrigidas para reflectir o conteúdo real (limite com reboque; sinais de perigo; velocidade mínima em auto-estrada; condutores há menos de um ano), com os artigos e números exactos.
 - Respostas correctas: A7/B6/C6/D6, sem padrão cíclico. Valores de limites conferidos com o quadro do art. 33.º do Código.
+
+## Sinais extraídos do PDF oficial (`original/referencia/sinais.pdf`) — DADOS-080
+
+Sinais recortados do PDF oficial a 600 ppp, sem legenda, e ligados ao campo `imagem` das perguntas abaixo. Os enunciados, as alternativas e as respostas não foram alterados.
+
+| Pergunta | Ficheiro | Código | Designação (como no PDF) | Pág. PDF | Nota |
+|---:|---|---|---|---:|---|
+| 13 | `public/sinais/E12-proibicao-exceder-velocidade.png` | E12 | Proibição de exceder a velocidade | — | Ficheiro já existente em `public/sinais/`; o enunciado fala de «um sinal» de limite máximo sem indicar o valor, e o sinal mostra 80 como exemplo. |

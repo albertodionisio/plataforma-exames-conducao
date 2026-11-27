@@ -188,7 +188,10 @@ window.EXAMES[36] = [
     "tema": "Limite máximo",
     "dificuldade": "fácil",
     "enunciado": "Um sinal fixa o limite máximo de velocidade, e a estrada está vazia e seca. O que deve fazer o condutor?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal redondo com bordo vermelho e o número 80 a preto sobre fundo branco.",
+      "src": "public/sinais/E12-proibicao-exceder-velocidade.png"
+    },
     "opcoes": [
       "Passar o limite, porque a estrada está vazia e seca e não se vê ninguém por perto.",
       "Ignorar o limite, se o carro tiver bons travões.",

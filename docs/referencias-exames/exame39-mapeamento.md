@@ -68,3 +68,20 @@ A comparação com os Exames 31–51 identificou sobreposições nas antigas per
 - Validação estrutural interna: aprovada nesta preparação.
 - Validador oficial `node scripts/validar-exames.js` e GitHub Actions: aprovado no run 43467123529 (sintaxe JavaScript, teste de assinaturas e validador oficial).
 - Teste funcional em navegador: adiado por decisão do dono para uma verificação conjunta depois do Exame 51.
+
+## Sinais extraídos do PDF oficial (`original/referencia/sinais.pdf`) — DADOS-080
+
+Sinais recortados do PDF oficial a 600 ppp, sem legenda, e ligados ao campo `imagem` das perguntas abaixo. Os enunciados, as alternativas e as respostas não foram alterados.
+
+| Pergunta | Ficheiro | Código | Designação (como no PDF) | Pág. PDF | Nota |
+|---:|---|---|---|---:|---|
+| 5 | `public/sinais/D3-estrada-com-prioridade.png` | D3 | Estrada com prioridade | 21 |  |
+| 6 | `public/sinais/D46-curva-a-direita.png` | D46 | Curva à direita | 23 | O enunciado fala de «uma curva perigosa» sem direcção; usado o sinal de curva à direita como exemplo. |
+| 8 | `public/sinais/M1-cedencia-de-passagem-pdf.png` | M1 | Aproximação de estrada com prioridade | 52 | Ficheiro já existente (DADOS-079). |
+| 9 | `public/sinais/M2-paragem-obrigatoria-pdf.png` | M2 | Paragem obrigatória | 52 | Ficheiro já existente (DADOS-079). |
+| 10 | `public/sinais/M3-dar-prioridade-passagens-estreitas.png` | M3 | Dar prioridade nas passagens estreitas | 52 | Ficheiro já existente (DADOS-079). |
+| 11 | `public/sinais/M4-prioridade-passagens-estreitas.png` | M4 | Prioridade nas passagens estreitas | 52 |  |
+| 12 | `public/sinais/M5-estrada-com-prioridade.png` | M5 | Estrada com prioridade | 52 |  |
+| 13 | `public/sinais/M6-dar-prioridade-na-rotunda.png` | M6 | Dar prioridade na rotunda | 52 |  |
+| 21 | `public/sinais/M11-paragem-obrigatoria-viragem-esquerda.png` | M11 | Paragem obrigatória | 52 | STOP com triângulo de cedência e seta à esquerda. |
+| 22 | `public/sinais/M7-M8-paragem-obrigatoria-e-avance.png` | M7 e M8 | Paragem obrigatória / Avance | 52 | Montagem dos dois sinais lado a lado, com a mesma técnica de outras sessões. |

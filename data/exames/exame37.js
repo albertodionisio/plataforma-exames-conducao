@@ -158,7 +158,10 @@ window.EXAMES[37] = [
     "tema": "Paragem de transporte colectivo",
     "dificuldade": "difícil",
     "enunciado": "Um condutor particular quer parar perto de um sinal de paragem de autocarros. A que distância é proibido parar?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Pictograma branco de um autocarro sobre fundo castanho.",
+      "src": "public/sinais/J109-paragem-de-autocarros.png"
+    },
     "opcoes": [
       "Só vale para autocarros e outros transportes colectivos, e não para automóveis particulares.",
       "A menos de 5 metros do sinal, em todos os lados.",
@@ -218,7 +221,10 @@ window.EXAMES[37] = [
     "tema": "Estacionamento em via com prioridade",
     "dificuldade": "média",
     "enunciado": "Fora da localidade, uma estrada está assinalada como «via com prioridade». Pode estacionar-se na faixa?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Triângulo de ponta para baixo com bordo vermelho e, por baixo, um pequeno painel vermelho com um peão.",
+      "src": "public/sinais/M5-estrada-com-prioridade.png"
+    },
     "opcoes": [
       "Sim, se o carro ficar bem encostado junto à margem da faixa, sem a ocupar toda.",
       "Sim, de dia e com boa visibilidade na estrada.",
@@ -293,7 +299,10 @@ window.EXAMES[37] = [
     "tema": "Lugar reservado",
     "dificuldade": "fácil",
     "enunciado": "Um lugar de estacionamento tem o sinal de reservado a certos veículos. Um carro particular pode estacionar ali?",
-    "imagem": null,
+    "imagem": {
+      "descricao": "Sinal azul com o símbolo de uma cadeira de rodas e a letra R.",
+      "src": "public/sinais/G66-area-reservada-veiculos-deficientes.png"
+    },
     "opcoes": [
       "Sim, depois do horário de fiscalização do lugar.",
       "Não, é proibido a veículos que não são abrangidos pela reserva.",
