@@ -1,5 +1,6 @@
 # PENDENTE — geral e interface
 
+> **Nota de estado — 27/11/2026:** consultar [docs/ESTADO-ATUAL.md](docs/ESTADO-ATUAL.md) antes de interpretar as descrições antigas abaixo. O proprietário já validou no Preview o login Google, o plano Free (3 exames), a assinatura semanal em Sandbox, a confirmação/activação e o desbloqueio dos exames, além do fluxo funcional do Exame 27. A integração Firebase CI passou no run `45833068199`. O workflow de exames run `45833068139` ainda falha numa asserção desactualizada do caminho da imagem do Exame 27 (`scripts/testar-fluxo.js:220`). Não repetir os testes manuais já confirmados. As tarefas EM CURSO mantêm as reservas existentes: esta nota não as conclui nem autoriza outra sessão a editar os respectivos ficheiros.
 
 ## GER-029 — Barra inferior e integração dos PDFs de consulta
 - Estado: EM CURSO — ChatGPT-ESTRADA-NAV1 — 2026-11-20 — ficheiros: index.html, app.js, styles.css, scripts/build-netlify.js, scripts/testar-documentos.js, .github/workflows/validar-exames.yml, vercel.json, _headers, PENDENTE.md, HISTORICO.md — último sinal: 2026-11-20T22:40:15.589Z
