@@ -50,6 +50,17 @@ assert.equal(lib.amountToCents("1.005"), null);
 assert.equal(lib.amountToCents("-1.00"), null);
 assert.equal(lib.txIdFromReference("estrada_123e4567-e89b-12d3-a456-426614174000"), "123e4567-e89b-12d3-a456-426614174000");
 assert.equal(lib.txIdFromReference("estrada_bad"), null);
+const chaveCheckout = "123e4567-e89b-42d3-a456-426614174000";
+const idCheckout = lib.checkoutTransactionId("uid-conta-a", chaveCheckout);
+assert.match(idCheckout, /^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/);
+assert.equal(lib.checkoutTransactionId("uid-conta-a", chaveCheckout), idCheckout,
+  "repetir o mesmo pedido da mesma conta deve produzir a mesma referência");
+assert.notEqual(lib.checkoutTransactionId("uid-conta-b", chaveCheckout), idCheckout,
+  "a mesma chave usada por outra conta deve produzir outra referência");
+assert.notEqual(lib.checkoutTransactionId("uid-conta-a", "123e4567-e89b-42d3-a456-426614174001"), idCheckout,
+  "uma nova chave de pedido deve produzir outra referência");
+assert.throws(() => lib.checkoutTransactionId("uid-conta-a", "chave-inválida"), /idempotência inválida/);
+
 assert.equal(lib.accountUidFromTransaction({ uid: "conta-joao", accountUid: "conta-joao" }), "conta-joao");
 assert.equal(lib.accountUidFromTransaction({ uid: "conta-joao" }), "conta-joao", "transacções anteriores continuam compatíveis");
 assert.equal(lib.accountUidFromTransaction({ uid: "conta-joao", accountUid: "conta-irma" }), null, "a conta de destino não pode ser alterada para outra conta");
@@ -60,6 +71,15 @@ const statusSource = fs.readFileSync(require.resolve("../api/payments/status"), 
 assert.ok(statusSource.includes("saved.subscriptionActivated !== true && saved.providerPaymentId"), "a consulta deve tentar reparar uma subscrição ainda não activada, mesmo quando o pagamento já está paid");
 assert.ok(paymentSource.includes('db.collection("subscriptions").doc(accountUid)'), "a assinatura deve ser gravada no UID da conta iniciadora");
 assert.ok(createSource.includes("uid: user.uid, accountUid: user.uid"), "o UID da conta deve ser fixado antes do checkout");
+assert.ok(createSource.includes('req.headers["idempotency-key"]'), "o endpoint deve exigir a chave estável enviada pelo browser");
+assert.ok(createSource.includes("lib.checkoutTransactionId(user.uid, idempotencyKey)"), "a referência deve ser determinística por UID e chave");
+assert.ok(createSource.includes('"Idempotency-Key": requestId'), "a mesma referência deve ser enviada à ePay como chave idempotente");
+assert.ok(createSource.includes('cancel_url: origin + "/?payment="'), "o retorno de cancelamento deve permitir consultar e libertar a chave do pedido");
+const plansSource = fs.readFileSync(require.resolve("../public/assinaturas/planos"), "utf8");
+assert.ok(plansSource.includes('"Idempotency-Key": chaveIdempotencia'), "o browser deve reutilizar a chave no checkout");
+assert.ok(plansSource.includes("PREFIXO_CHAVE_CHECKOUT"), "a chave deve sobreviver a recarregamentos da sessão");
+assert.ok(plansSource.includes("limparChavesCheckout()"), "a chave deve ser libertada após confirmação, falha ou cancelamento");
+
 assert.doesNotMatch(paymentSource, /payment\\.phone|payer\\.phone|customer\\.phone/, "o telefone do pagador não pode determinar a conta beneficiária");
 assert.deepEqual(Object.keys(lib.PLANS).sort(), ["monthly_basic","monthly_full","weekly_basic","weekly_full"].sort());
 assert.equal(lib.PLANS.weekly_basic.amount, 50);
