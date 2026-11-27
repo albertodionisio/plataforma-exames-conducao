@@ -45,6 +45,7 @@ A integração individual ePay está implementada e os testes automatizados pass
 1. [Estado actual](docs/ESTADO-ATUAL.md) — fonte rápida do estado real.
 2. [Instruções para sessões](INSTRUCOES.md) e [Regras do projecto](REGRAS.md).
 3. [Pendências](PENDENTE.md) e [Histórico](HISTORICO.md).
+5. [Guia de nomenclatura oficial](docs/GUIA-NOMENCLATURA.md) — nomes da interface e regra «exame/exames».
 4. [Especificação técnica](docs/ESTRADA_Especificacao_Tecnica.md).
 5. [Firebase](docs/firebase/README.md) e [ePay](docs/epay/README.md).
 
