@@ -241,6 +241,14 @@ async function testarSeloPlanoActivo() {
   const cartaoActivo = raizTeste.querySelector("#estrada-plano-4").closest(".plano-cartao");
   assert.ok(cartaoActivo.querySelector(".plano-selo-activo"), "o plano Mensal Completo activo deve receber o selo");
   assert.equal(cartaoActivo.querySelector(".plano-selo-activo").textContent, "PLANO ACTIVO");
+  assert.equal(raizTeste.querySelector("#estrada-plano-4").checked, true,
+    "o radio do plano com subscrição activa deve ficar seleccionado");
+  assert.equal(cartaoActivo.classList.contains("plano-escolhido"), true,
+    "o cartão com subscrição activa deve receber o destaque de selecção");
+  assert.equal(raizTeste.querySelector("#estrada-plano-0").checked, false,
+    "o plano Free não pode continuar seleccionado quando existe uma subscrição paga activa");
+  assert.equal(raizTeste.querySelector("#estrada-plano-0").closest(".plano-cartao").classList.contains("plano-escolhido"), false,
+    "o cartão Free deve perder o destaque quando outro plano está activo");
   const outrosCartoes = raizTeste.querySelectorAll(".plano-cartao").filter((cartao) => cartao !== cartaoActivo);
   assert.ok(outrosCartoes.every((cartao) => !cartao.querySelector(".plano-selo-activo")),
     "o selo não pode aparecer nos planos que não pertencem à assinatura activa");
