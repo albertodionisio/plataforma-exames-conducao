@@ -2,9 +2,10 @@ name: Validar definições
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat/firebase-full-migration]
     paths:
       - 'index.html'
+      - 'app.js'
       - 'public/definicoes/**'
       - 'public/ajuda/**'
       - 'docs/GUIA-NOMENCLATURA.md'
