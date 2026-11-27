@@ -8,14 +8,13 @@
 ## Interface (FE-)
 
 ## FE-014 — Coerência dos cartões e acções de subscrição
-- Estado: EM CURSO — ChatGPT — 2026-11-27 — implementação na branch; falta validar o CI do componente e a experiência visual no Preview pelo proprietário.
-- Pedido: aplicar a mesma lógica aos cinco planos existentes (Free, Semanal Básico, Semanal Completo, Mensal Básico e Mensal Completo), sem alterar preços, benefícios ou durações.
-- Comportamento: o plano pago actual apresenta «PLANO ACTIVO» e botão «Plano activo» desactivado; os restantes planos pagos apresentam «Mudar para [plano]»; o Free permite «Aceder aos exames gratuitos» sem cancelar nem desmarcar a subscrição paga. Durante a carência, o botão indica «Plano em carência».
-- Antes de mudar de plano, pedir confirmação com plano actual, destino, preço, duração e efeito da alteração. A confirmação informa que a mudança só ocorre após pagamento aprovado e que o período restante é preservado e acrescentado à duração contratada, conforme a lógica actual do backend.
+- Estado: IMPLEMENTAÇÃO E VALIDAÇÃO VISUAL CONCLUÍDAS pelo proprietário em 2026-11-27; CI automatizado ainda por confirmar.
+- Aplicada aos cinco planos existentes (Free, Semanal Básico, Semanal Completo, Mensal Básico e Mensal Completo), sem alterar preços, benefícios ou durações.
+- Comportamento confirmado visualmente pelo proprietário: plano pago activo mantém círculo seleccionado, selo «PLANO ACTIVO» e botão «Plano activo»; restantes planos pagos apresentam «Mudar para [plano]»; Free apresenta «Aceder aos exames gratuitos»; estado de carência tem indicação própria.
+- Antes de mudar de plano, a aplicação pede confirmação com plano actual, destino, preço, duração e efeito da alteração. A confirmação informa que a mudança só ocorre após pagamento aprovado e que o período restante é preservado e acrescentado à duração contratada, conforme a lógica actual do backend.
 - Ficheiros: `public/assinaturas/planos.js`, `scripts/testar-assinaturas.js`.
-- Pronto quando: testes automatizados do componente passarem; Preview READY; proprietário confirmar visualmente os botões e a selecção do plano activo nos cenários Free, semanal e mensal.
-- Cuidados: não alterar preços, catálogo, regras de acesso, backend de pagamentos ou duração dos planos; sem merge para `main` ou deploy de produção.
-
+- Testes automatizados actualizados; aguarda-se confirmação do resultado CI no commit funcional.
+- Cuidados respeitados: sem alterações a preços, catálogo, regras de acesso, backend de pagamentos, `main` ou produção.
 
 ## FE-010 — Ecrã de abertura (splash) com assinatura «From BORJA»
 - Estado: EM CURSO — ChatGPT-7 — 2026-11-27 — ficheiros: `index.html`, `splash.css`; integração funcional na branch de Preview, validação CI e visual ainda pendentes.
