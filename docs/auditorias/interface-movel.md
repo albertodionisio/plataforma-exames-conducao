@@ -22,5 +22,10 @@ A revisão dos estilos e do HTML identificou que os controlos de sessão da cont
 - Confirmado que a barra inferior e os controlos do leitor de PDF têm áreas de toque próprias; o layout do leitor usa altura dinâmica e respeita a área segura inferior.
 - Confirmado que a FE-001 não alterou `app.js`, `index.html`, `config.js`, preços, planos ou regras dos exames.
 
+## Correcção adicional — tabelas em ecrãs estreitos
+- A tabela genérica tinha `min-width:560px` sem um contentor de deslocamento próprio, o que podia alargar o documento e provocar scroll horizontal da página em telemóveis.
+- Em `styles.css`, a tabela passou a limitar-se à largura disponível e a gerir o seu próprio deslocamento horizontal (`overflow-x:auto`), preservando a largura mínima do conteúdo sem empurrar o viewport.
+- A alteração ficou limitada a `styles.css`; não foram alterados HTML, JavaScript, autenticação, exames, planos ou preços.
+
 ## Validação ainda necessária
 A validação visual e interactiva num navegador real continua pendente. Verificar as larguras de 320, 360, 390 e 600 px, incluindo Início, catálogo, pergunta com imagem, alternativas, cabeçalho/menu, conta e cartões de Planos. Confirmar ausência de deslocamento horizontal da página, legibilidade, áreas de toque e foco por teclado. Testar também orientação horizontal e zoom do navegador. Não declarar FE-001 concluída antes dessa confirmação.
