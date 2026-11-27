@@ -110,4 +110,4 @@ A tarefa de migração foi concluída na branch `feat/firebase-full-migration`: 
 
 A branch está 663 commits à frente e 2 atrás da `main`; os dois commits em falta são da DADOS-083 (Exames 31/34) e devem ser preservados/reconciliados antes de eventual integração. Não foi alterada a `main`.
 
-O fecho da BE-002 não declara a aplicação pronta para produção: regras Firestore não publicadas, permissões IAM da service account ainda por confirmar directamente no Firebase, serviços complementares opcionais não activos, ePay live não configurada e lançamento Android/Web ainda por autorizar.
+A estrutura e as regras de `exam_attempts` estão preparadas, mas não existe ainda endpoint Admin para sincronizar tentativas/resultados; a tentativa permanece local no browser e o histórico multi-dispositivo exige tarefa própria. O fecho da BE-002 não declara a aplicação pronta para produção: regras Firestore não publicadas, permissões IAM da service account ainda por confirmar directamente no Firebase, serviços complementares opcionais não activos, ePay live não configurada e lançamento Android/Web ainda por autorizar.
