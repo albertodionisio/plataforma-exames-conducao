@@ -52,7 +52,7 @@ assert.equal(lib.txIdFromReference("estrada_123e4567-e89b-12d3-a456-426614174000
 assert.equal(lib.txIdFromReference("estrada_bad"), null);
 const chaveCheckout = "123e4567-e89b-42d3-a456-426614174000";
 const idCheckout = lib.checkoutTransactionId("uid-conta-a", chaveCheckout);
-assert.match(idCheckout, /^[a-f0-9]{8}-[a-f0-9]{4}-5[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/);
+assert.match(idCheckout, /^[a-f0-9]{8}-[a-f0-9]{4}-8[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/);
 assert.equal(lib.checkoutTransactionId("uid-conta-a", chaveCheckout), idCheckout,
   "repetir o mesmo pedido da mesma conta deve produzir a mesma referência");
 assert.notEqual(lib.checkoutTransactionId("uid-conta-b", chaveCheckout), idCheckout,
