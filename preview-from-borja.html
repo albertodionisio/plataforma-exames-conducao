@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="description" content="Pré-visualização independente da assinatura From BORJA do ESTRADA-JB.">
+  <title>Pré-visualização — From BORJA</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --fundo: #1a1a1a;
+      --principal: #c0c0c0;
+      --secundario: #a5a5a5;
+      --discreto: #858585;
+    }
+    * { box-sizing: border-box; }
+    html, body { min-width: 320px; min-height: 100%; margin: 0; }
+    body {
+      min-height: 100svh;
+      overflow: hidden;
+      background: var(--fundo);
+      color: var(--principal);
+      font-family: "Montserrat", "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .palco {
+      position: relative;
+      display: grid;
+      min-height: 100svh;
+      place-items: center;
+      padding: 28px 20px calc(180px + env(safe-area-inset-bottom));
+    }
+    .marca {
+      width: clamp(104px, 22vw, 154px);
+      height: auto;
+      opacity: 0;
+      transform: translateY(22px) scale(.82);
+      filter: blur(8px);
+      animation: revelar-marca 1.05s cubic-bezier(.2,.75,.25,1) .12s forwards;
+    }
+    .assinatura {
+      position: fixed;
+      z-index: 2;
+      right: 16px;
+      bottom: calc(27px + env(safe-area-inset-bottom));
+      left: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      pointer-events: none;
+    }
+    .from, .borja, .tagline, .legal {
+      display: block;
+      margin: 0;
+      opacity: 0;
+      will-change: transform, opacity, filter;
+    }
+    .from {
+      color: var(--secundario);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: .04em;
+      animation: subir-e-revelar .65s ease-out .72s forwards;
+    }
+    .borja {
+      margin-top: 3px;
+      color: var(--principal);
+      font-size: clamp(25px, 6vw, 31px);
+      font-weight: 850;
+      letter-spacing: .34em;
+      padding-left: .34em;
+      line-height: 1.2;
+      animation: revelar-borja 1.05s cubic-bezier(.16,.8,.2,1) 1.02s forwards;
+    }
+    .tagline {
+      margin-top: 5px;
+      color: var(--secundario);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .015em;
+      animation: subir-e-revelar .7s ease-out 1.72s forwards;
+    }
+    .legal {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      margin-top: 10px;
+      color: var(--discreto);
+      font-size: 10.5px;
+      line-height: 1.4;
+      letter-spacing: .01em;
+      animation: revelar-linha .9s cubic-bezier(.2,.7,.2,1) 2.25s forwards;
+    }
+    .produto { color: #a0a0a0; font-weight: 650; }
+    .separador { color: #777; }
+    .direitos { color: var(--discreto); font-weight: 400; }
+    .repetir {
+      position: fixed;
+      top: max(18px, env(safe-area-inset-top));
+      right: 18px;
+      z-index: 5;
+      min-height: 40px;
+      padding: 8px 13px;
+      border: 1px solid #555;
+      border-radius: 999px;
+      background: transparent;
+      color: #aaa;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .repetir:hover, .repetir:focus-visible {
+      border-color: #888;
+      background: #292929;
+      color: #ddd;
+    }
+    .repetir:focus-visible { outline: 2px solid #aaa; outline-offset: 3px; }
+    @keyframes revelar-marca {
+      0% { opacity: 0; transform: translateY(22px) scale(.82); filter: blur(8px); }
+      65% { opacity: 1; filter: blur(0); }
+      100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    }
+    @keyframes subir-e-revelar {
+      from { opacity: 0; transform: translateY(15px); filter: blur(3px); }
+      to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    @keyframes revelar-borja {
+      0% { opacity: 0; transform: translateY(17px) scale(.94); letter-spacing: .58em; filter: blur(5px); }
+      65% { opacity: 1; filter: blur(0); }
+      100% { opacity: 1; transform: translateY(0) scale(1); letter-spacing: .34em; filter: blur(0); }
+    }
+    @keyframes revelar-linha {
+      from { opacity: 0; clip-path: inset(0 50% 0 50%); transform: translateY(7px); }
+      to { opacity: 1; clip-path: inset(0 0 0 0); transform: translateY(0); }
+    }
+    .reiniciar .marca, .reiniciar .from, .reiniciar .borja,
+    .reiniciar .tagline, .reiniciar .legal { animation: none; }
+    .reiniciar .marca { opacity: 0; transform: translateY(22px) scale(.82); filter: blur(8px); }
+    .reiniciar .from, .reiniciar .borja, .reiniciar .tagline, .reiniciar .legal {
+      opacity: 0; transform: translateY(15px); filter: blur(4px);
+    }
+    @media (max-width: 380px) {
+      .assinatura { bottom: calc(22px + env(safe-area-inset-bottom)); }
+      .legal { gap: 5px; font-size: 9.5px; }
+      .borja { font-size: 25px; letter-spacing: .27em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; transition-duration: .01ms !important; }
+      .marca, .from, .borja, .tagline, .legal { opacity: 1; transform: none; filter: none; clip-path: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="palco" id="palco">
+    <img class="marca" src="/icons/icon-512.png" alt="Símbolo da plataforma ESTRADA" width="512" height="512">
+  </main>
+
+  <div class="assinatura" aria-label="from BORJA, Technology and Innovation, ESTRADA-JB, direitos reservados">
+    <span class="from">from</span>
+    <p class="borja">B O R J A</p>
+    <p class="tagline">Technology &amp; Innovation</p>
+    <div class="legal">
+      <span class="produto">ESTRADA-JB</span>
+      <span class="separador" aria-hidden="true">|</span>
+      <span class="direitos">© Todos Direitos Reservados</span>
+    </div>
+  </div>
+
+  <button class="repetir" id="repetir" type="button">Repetir animação</button>
+
+  <script>
+    const palco = document.getElementById("palco");
+    const botao = document.getElementById("repetir");
+    botao.addEventListener("click", () => {
+      document.body.classList.add("reiniciar");
+      void document.body.offsetWidth;
+      document.body.classList.remove("reiniciar");
+    });
+  </script>
+</body>
+</html>
