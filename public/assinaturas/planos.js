@@ -88,6 +88,44 @@
     }
   }
 
+  var chavesCheckoutMemoria = {};
+  var PREFIXO_CHAVE_CHECKOUT = "estrada.epay.idempotency.";
+
+  function novaChaveCheckout() {
+    if (window.crypto && typeof window.crypto.randomUUID === "function") return window.crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0;
+      return (c === "x" ? r : (r & 3 | 8)).toString(16);
+    });
+  }
+
+  function obterChaveCheckout(codigo) {
+    var storageKey = PREFIXO_CHAVE_CHECKOUT + codigo;
+    try {
+      if (window.sessionStorage) {
+        var guardada = window.sessionStorage.getItem(storageKey);
+        if (guardada) return guardada;
+        var criada = novaChaveCheckout();
+        window.sessionStorage.setItem(storageKey, criada);
+        return criada;
+      }
+    } catch (_) {}
+    if (!chavesCheckoutMemoria[codigo]) chavesCheckoutMemoria[codigo] = novaChaveCheckout();
+    return chavesCheckoutMemoria[codigo];
+  }
+
+  function limparChavesCheckout() {
+    Object.keys(chavesCheckoutMemoria).forEach(function (codigo) { delete chavesCheckoutMemoria[codigo]; });
+    try {
+      var storage = window.sessionStorage;
+      if (!storage) return;
+      for (var i = storage.length - 1; i >= 0; i--) {
+        var key = storage.key(i);
+        if (key && key.indexOf(PREFIXO_CHAVE_CHECKOUT) === 0) storage.removeItem(key);
+      }
+    } catch (_) {}
+  }
+
   function iniciarCheckout(codigo, botao, aviso) {
     var utilizador = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
     if (!utilizador) {
@@ -97,10 +135,15 @@
     }
     botao.disabled = true;
     botao.textContent = "A preparar pagamento...";
+    var chaveIdempotencia = obterChaveCheckout(codigo);
     utilizador.getIdToken().then(function (token) {
       return fetch("/api/payments/create", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": "Bearer " + token },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + token,
+          "Idempotency-Key": chaveIdempotencia
+        },
         body: JSON.stringify({ planCode: codigo })
       });
     }).then(function (resposta) {
@@ -154,6 +197,7 @@
           });
         }).then(function (dados) {
           if (dados.status === "paid" && dados.subscriptionActivated === true) {
+            limparChavesCheckout();
             aviso.textContent = "Pagamento confirmado. O plano " + dados.planName + " já foi activado na tua conta.";
             if (!notificouActivacao) {
               notificouActivacao = true;
@@ -167,6 +211,7 @@
               aviso.textContent = "O pagamento foi confirmado, mas a activação ainda não foi validada. Não faças outro pagamento; contacta o suporte ou tenta consultar novamente mais tarde.";
             }
           } else if (dados.status === "failed" || dados.status === "cancelled") {
+            limparChavesCheckout();
             aviso.textContent = "O pagamento não foi concluído. Podes tentar novamente quando quiseres.";
           } else if (tentativas < 24) {
             aviso.textContent = "Estamos a confirmar o pagamento com a ePay. Aguarda, por favor...";
