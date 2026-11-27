@@ -362,7 +362,7 @@
             "Queres continuar para o pagamento?";
           if (typeof window.confirm === "function" && !window.confirm(mensagem)) return;
         }
-        seleccionar(indice);
+        if (!grupo._estradaPlanoActivo) seleccionar(indice);
         if (plano.preco === "0 MT") {
           aviso.textContent = "O plano Free é gratuito. Podes consultar os exames disponíveis sem alterar a subscrição paga.";
           window.location.hash = "#/exames";
