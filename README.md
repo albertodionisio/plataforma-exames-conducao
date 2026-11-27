@@ -2,62 +2,53 @@
 
 Aplicação de preparação para exames de condução em Moçambique.
 
-## Estado da versão de testes
+> **Estado actualizado (27/11/2026):** consultar primeiro [Estado actual do projecto](docs/ESTADO-ATUAL.md). Esse documento consolida o estado validado do código, autenticação, exames, pagamentos Sandbox, CI, Preview e pendências. Notas antigas são registos históricos, não necessariamente o estado actual.
 
-- O catálogo está estruturado para 51 exames.
-- Os Exames 31–51 estão integrados nesta versão de testes e permanecem temporariamente acessíveis sem pagamento.
-- O acesso temporário é apenas para validação; não representa a política comercial final.
-- Cada exame contém 25 perguntas e tem cronómetro de 60 minutos.
-- Cada resposta certa vale 0,8 valores; a aprovação exige pelo menos 18 valores.
-- A correcção é apresentada no resultado e na revisão pedagógica, depois da submissão.
+## Versão de validação
 
-## Autenticação
+- 51 exames integrados nesta branch; 25 perguntas por exame.
+- 3 exames gratuitos. A disponibilidade temporária dos Exames 31–51 nesta versão de validação não define a política comercial final.
+- 60 minutos por exame; 0,8 valores por resposta certa; aprovação a partir de 18 valores.
+- A correcção e a explicação pedagógica são apresentadas depois da submissão, na revisão.
+- O modo de bypass de acesso pago está desligado em `config.js`.
 
-A migração para Firebase está em curso na branch `feat/firebase-full-migration`.
+## Autenticação e dados
 
-- Email e palavra-passe: registo cria a conta e inicia sessão imediatamente; não exige confirmação do email.
-- Google: autenticação integrada no frontend; requer validação no Preview.
-- Telefone moçambicano e palavra-passe: fluxo backend com Firebase custom token, sem SMS/OTP. O número não é tratado como prova de titularidade.
-- Recuperação da palavra-passe por email.
-- Perfil mínimo associado ao UID autenticado no Cloud Firestore.
-- O registo por email faz uma pré-validação de formato e domínio, incluindo detecção de domínios temporários conhecidos. Sem confirmação, essa verificação não prova que a caixa existe ou pertence ao utilizador.
+A migração para Firebase está integrada na branch `feat/firebase-full-migration`. O proprietário confirmou o login Google no Preview depois de autorizar os domínios correspondentes no Firebase Authentication. O código inclui também email/palavra-passe, recuperação por email e autenticação telefónica por palavra-passe/custom token sem SMS/OTP.
 
-Os fluxos reais de autenticação ainda precisam de validação no Preview. As regras Firestore passaram nos testes do Emulator Suite, mas ainda não foram publicadas no projecto Firebase real.
+Os testes automáticos de Auth/Firestore Emulator passaram no workflow Firebase. Isto não significa que as regras Firestore estejam publicadas: continuam por rever/publicar no projecto real. A publicação exige autorização expressa.
 
-## Assinaturas e pagamentos
+## Planos, pagamentos e assinaturas
 
-A integração ePay está preparada na branch de migração:
+A integração individual ePay está implementada e os testes automatizados passaram. O proprietário comprovou o fluxo completo em Sandbox: selecção do plano, checkout, confirmação, activação da assinatura e desbloqueio dos exames. A assinatura é associada ao UID autenticado que iniciou o checkout, mesmo quando o meio de pagamento pertence a familiar/terceiro.
 
-- O servidor define os planos, preços, duração e referência de pagamento.
-- O checkout é individual e associado à conta ESTRADA-JB autenticada que o iniciou.
-- O pagador pode utilizar um meio de pagamento pertencente a outra pessoa; a assinatura beneficia sempre a conta que iniciou o checkout.
-- A confirmação depende da validação do pagamento pela ePay e da activação no backend.
+**Sandbox não é produção.** Não há cobrança comercial activa, não foram autorizadas chaves live e não foi feito deploy de produção. Consultar [documentação ePay](epay/README.md).
 
-O fluxo ainda aguarda um pagamento sandbox real de ponta a ponta. Não declarar pagamentos ou assinaturas activos em produção. Não usar o link de produto criado no painel ePay para testes: esse checkout pode cobrar em produção.
+## CI e Preview conhecidos
 
-## Publicação no Netlify
+- GitHub Actions **Validar integração Firebase**, run `45833068199`: sucesso no commit `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`.
+- GitHub Actions **Validar exames**, run `45833068139`: falha na asserção do caminho da imagem do Exame 27 em `scripts/testar-fluxo.js:220`; a imagem actual está em `public/sinais/D79-sinal-pdf-600dpi.png`. A falha não deve ser escondida: corrigir a expectativa e preservar a validação da imagem.
+- Preview Vercel: [deployment de validação](https://plataforma-exames-conducao-r6givqbf2-jjb18.vercel.app), associado ao commit acima.
+- A validação manual do proprietário no Preview confirmou autenticação Google, planos Free/Semanal, pagamento Sandbox e execução do Exame 27.
 
-O ficheiro `netlify.toml` configura a publicação estática:
+## Desenvolvimento
 
-- Comando de build: `node scripts/build-netlify.js`
-- Pasta publicada: `dist/`
-- Node.js: versão 20.
+- `node scripts/validar-exames.js` — valida os dados dos exames.
+- `node scripts/testar-fluxo.js` — testa o fluxo dos exames (há uma asserção conhecida por actualizar para o caminho actual da imagem do Exame 27).
+- `node scripts/testar-epay.js` — testes locais da integração ePay sem chamadas externas.
+- `node scripts/testar-firebase.js` e workflows do Firebase — validação da configuração e dos emuladores.
+- `node scripts/build-netlify.js` — gera a pasta estática `dist/`.
 
-O build copia apenas os ficheiros necessários para executar a aplicação. O APK original, documentação interna, histórico e listas de tarefas não são publicados no site.
+## Documentação principal
 
-## Desenvolvimento e validação
+1. [Estado actual](docs/ESTADO-ATUAL.md) — fonte rápida do estado real.
+2. [Instruções para sessões](INSTRUCOES.md) e [Regras do projecto](REGRAS.md).
+3. [Pendências](PENDENTE.md) e [Histórico](HISTORICO.md).
+4. [Especificação técnica](docs/ESTRADA_Especificacao_Tecnica.md).
+5. [Firebase](docs/firebase/README.md) e [ePay](docs/epay/README.md).
 
-- Abrir `index.html` localmente para uma pré-visualização simples.
-- Executar `node scripts/validar-exames.js` para validar os dados dos exames.
-- Executar `node scripts/testar-fluxo.js` para testar o fluxo dos exames.
-- Executar `node scripts/build-netlify.js` para gerar a pasta de publicação `dist/`.
-
-## Fonte principal
-
-O repositório GitHub é a fonte principal do projecto. Consultar `INSTRUCOES.md`, `REGRAS.md`, `PENDENTE.md`, `data/exames/PENDENTE.md` e `HISTORICO.md` antes de alterar o projecto. Consultar também `docs/firebase/README.md` e `docs/epay/README.md` para a arquitectura e as limitações dos serviços.
+O GitHub é a fonte principal do projecto. A branch de trabalho é `feat/firebase-full-migration`; não integrar na `main`, publicar regras Firestore ou fazer deploy de produção sem autorização expressa.
 
 ## Segurança
 
-Não guardar chaves, tokens, passwords nem ficheiros `.env` no repositório. As credenciais Firebase Admin, a chave ePay e os segredos de autenticação devem existir apenas como variáveis secretas no ambiente de servidor apropriado. Nunca usar credenciais de produção para testes.
-
-O APK original está em `original/` apenas como referência de trabalho e fica excluído da publicação do site.
+Não guardar chaves, tokens, passwords, service accounts nem ficheiros `.env` no repositório. Segredos devem existir apenas no ambiente de servidor apropriado. Nunca usar credenciais live em Preview nem copiar secrets Preview para Production.
