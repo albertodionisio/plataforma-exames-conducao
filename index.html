@@ -3,15 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("splash-ativo");</script>
   <meta name="theme-color" content="#14284b">
   <title>Exames de condução</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon-192.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="splash.css">
   <link rel="stylesheet" href="styles-resultados.css">
   <link rel="stylesheet" href="public/assinaturas/planos.css">
 </head>
 <body>
+  <section id="splash-abertura" class="splash-abertura" role="img" aria-label="From BORJA — Technology and Innovation — ESTRADA-JB">
+    <img class="splash-marca" src="/icons/icon-512.png" alt="" width="512" height="512">
+    <div class="splash-assinatura" aria-hidden="true">
+      <span class="splash-from">from</span>
+      <p class="splash-borja">B O R J A</p>
+      <p class="splash-tagline">Technology &amp; Innovation</p>
+      <div class="splash-legal">
+        <span class="splash-produto">ESTRADA-JB</span>
+        <span class="splash-separador">|</span>
+        <span class="splash-direitos">© Todos Direitos Reservados</span>
+      </div>
+    </div>
+  </section>
+  <script>document.getElementById("splash-abertura").dataset.inicio = String(Date.now());</script>
   <header class="topo">
     <a class="marca" href="#/" aria-label="Início">
       <svg class="icone-nav icone-marca" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -142,5 +158,23 @@
   <script src="https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore-compat.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="app.js"></script>
+  <script>
+    (() => {
+      const splash = document.getElementById("splash-abertura");
+      if (!splash) {
+        document.documentElement.classList.remove("splash-ativo");
+        return;
+      }
+      const inicio = Number(splash.dataset.inicio) || Date.now();
+      const movimentoReduzido = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const duracao = movimentoReduzido ? 650 : 3400;
+      const espera = Math.max(0, duracao - (Date.now() - inicio));
+      window.setTimeout(() => {
+        splash.classList.add("a-sair");
+        document.documentElement.classList.remove("splash-ativo");
+        window.setTimeout(() => splash.remove(), 360);
+      }, espera);
+    })();
+  </script>
 </body>
 </html>
