@@ -7,7 +7,7 @@ Arquitectura funcional, aplicação, dados, segurança, assinaturas e pagamentos
 
 Identidade visual proposta: clássica, discreta, educativa e exclusiva; azul-marinho, marfim e verde discreto, sem efeitos futuristas ou excesso de animações.
 
-> Este documento é uma especificação de produção. Não é, por si só, código-fonte executável nem comprova que serviços externos estejam configurados.
+> **Estado de implementação:** este é o documento de especificação do produto, não um relatório de estado em tempo real. Para o que já está implementado/testado e o que falta, prevalece [docs/ESTADO-ATUAL.md](ESTADO-ATUAL.md), actualizado em 27/11/2026. A especificação descreve também requisitos de produto que ainda podem não estar implementados. Não interpretar um requisito definido como funcionalidade já entregue.
 
 ---
 
@@ -23,14 +23,14 @@ Uma especificação reduz ambiguidades, mas não substitui o repositório de có
 
 | Área | Estado | Nota |
 |---|---|---|
-| 50 exames × 25 perguntas | Definido | 1.250 posições; conteúdo precisa de ser produzido e validado. |
-| Modo estudo | Definido | Explicação após cada resposta; cronómetro continua. |
+| Catálogo de exames | Objectivo comercial: 50; implementação actual: 51 | 51 exames integrados na branch de validação; ver `docs/ESTADO-ATUAL.md`. |
+| Realização e revisão | Regra actual | Sem feedback durante a realização; resultado e explicações na revisão após submissão. |
 | Duração/pontuação | Regra do produto | 60 min; 0,8 valores por resposta certa; limiar interno 18/20, exigindo 23 certas. |
 | Modelo de receita | Definido | Cinco opções de acesso (secção 10): Free e quatro planos pagos. Substitui a proposta anterior de um único plano semanal. |
 | Identidade visual | Direcção definida | Exclusiva, clássica e discreta; nome/logótipo pendentes. |
-| Tecnologias | Recomendação | Stack proposta; aprovar antes da implementação. |
-| Categoria de carta | Pendente | Confirmar categoria e programa de estudo. |
-| Pagamentos e SMS | Pendente | Escolher fornecedores com cobertura e condições adequadas. |
+| Tecnologias | Implementação actual | Firebase Authentication/Firestore e endpoints backend Vercel na branch de migração; ver estado actual. |
+| SMS/OTP | Não adoptado | Autenticação telefónica actual não usa SMS/OTP nem comprova titularidade do número. |
+| Pagamentos | Implementado e testado em Sandbox | ePay individual, confirmação e activação comprovadas em Sandbox; produção ainda não activada. |
 | Renovação, cancelamento, atendimento | Pendente | Ver secção 19. |
 
 ## Índice
