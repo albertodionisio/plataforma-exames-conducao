@@ -251,6 +251,7 @@ async function testarSeloPlanoActivo() {
     "o botão do plano activo deve deixar de pedir uma nova adesão");
   assert.equal(cartaoActivo.querySelector("button").disabled, true,
     "não deve ser possível iniciar outro pagamento para o mesmo plano activo");
+  const outrosCartoes = raizTeste.querySelectorAll(".plano-cartao").filter((cartao) => cartao !== cartaoActivo);
   const botoesAlternativos = outrosCartoes.map((cartao) => cartao.querySelector("button"));
   assert.ok(botoesAlternativos.every((botao) => botao.textContent.startsWith("Mudar para ") || botao.textContent === "Aceder aos exames gratuitos"),
     "os restantes cartões devem indicar mudança de plano ou acesso gratuito, sem pedir adesão como se não houvesse subscrição");
@@ -277,7 +278,6 @@ async function testarSeloPlanoActivo() {
     "o botão Free deve continuar a permitir o acesso aos exames gratuitos");
   assert.equal(raizTeste.querySelector("#estrada-plano-4").checked, true,
     "aceder aos exames gratuitos não pode alterar o plano pago que está activo");
-  const outrosCartoes = raizTeste.querySelectorAll(".plano-cartao").filter((cartao) => cartao !== cartaoActivo);
   assert.ok(outrosCartoes.every((cartao) => !cartao.querySelector(".plano-selo-activo")),
     "o selo não pode aparecer nos planos que não pertencem à assinatura activa");
 }
