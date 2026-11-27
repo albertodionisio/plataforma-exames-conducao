@@ -112,10 +112,10 @@ const planos = window.APP.planos;
 const cartoes = raiz.querySelectorAll(".plano-cartao");
 assert.equal(cartoes.length, 5, "devem ser apresentados os cinco planos definidos em config.js");
 assert.equal(typeof window.renderizarPlanosEstrada, "function", "o componente deve expor a função de renderização");
-const codigoPlanos = fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8");
-assert.ok(codigoPlanos.includes("function obterChaveCheckout(codigo)"), "o checkout deve gerar/recuperar uma chave por plano");
-assert.ok(codigoPlanos.includes("window.sessionStorage.getItem(storageKey)"), "a chave deve sobreviver ao reload da página na mesma sessão");
-assert.ok(codigoPlanos.includes('"Idempotency-Key": chaveIdempotencia'), "o browser deve enviar a chave ao backend");
+const planosSourceForIdempotency = fs.readFileSync(path.join(__dirname, "../public/assinaturas/planos.js"), "utf8");
+assert.ok(planosSourceForIdempotency.includes("function obterChaveCheckout(codigo)"), "o checkout deve gerar/recuperar uma chave por plano");
+assert.ok(planosSourceForIdempotency.includes("window.sessionStorage.getItem(storageKey)"), "a chave deve sobreviver ao reload da página na mesma sessão");
+assert.ok(planosSourceForIdempotency.includes('"Idempotency-Key": chaveIdempotencia'), "o browser deve enviar a chave ao backend");
 
 assert.equal(cartoes[0].classList.contains("plano-escolhido"), true, "o plano Free deve iniciar seleccionado");
 
