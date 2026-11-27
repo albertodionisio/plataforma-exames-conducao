@@ -281,7 +281,7 @@ const vm = require("node:vm");
   // Recarregar também na rota de revisão.
   vm.runInContext(appSource,context);
   await navegar("#/rever");
-  assert.match(app.innerHTML,/Revisão do Exame 39/);
+  assert.match(app.innerHTML,/Revisão do exame 39/);
 
   // Confirma que a descrição da imagem é usada tanto no exame como na revisão.
   const descricaoImagem=context.window.EXAMES[1][0].imagem.descricao;
