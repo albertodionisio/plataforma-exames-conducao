@@ -8,12 +8,12 @@
 ## Interface (FE-)
 
 ## FE-001 — Auditoria de experiência móvel e acessibilidade
-- Estado: EM CURSO — ChatGPT-7 — 2026-11-27 11:03 UTC+02 — ficheiros: styles.css, docs/auditorias/interface-movel.md — último sinal: 2026-11-27 11:05 UTC+02 — reserva assumida com autorização expressa do dono; verificações estáticas concluídas, falta validação visual no navegador.
+- Estado: EM CURSO — ChatGPT-7 — 2026-11-27 11:03 UTC+02 — ficheiros: styles.css, docs/auditorias/interface-movel.md — último sinal: 2026-11-27 20:12 UTC — reserva assumida com autorização expressa do dono; verificações estáticas concluídas e correcção de scroll horizontal das tabelas aplicada; falta validação visual/interactiva em navegador real.
 - Pedido: melhorar a utilização da versão actual em telemóveis, sem alterar as regras de negócio nem o funcionamento dos exames.
 - Onde mexer: `styles.css`; criar um relatório curto de verificação em `docs/auditorias/interface-movel.md`, se forem encontrados pontos relevantes.
 - Pronto quando: interface verificada em larguras móveis comuns; navegação, botões, alternativas, imagens, tabela de planos e cabeçalho não provocam cortes ou deslocamento horizontal; foco de teclado é visível e os controlos têm áreas de toque adequadas; alterações testadas no navegador.
 - Cuidados: não alterar `app.js`, `index.html` ou `config.js`; não mudar identidade visual, textos comerciais, preços ou planos. Se a correcção exigir ficheiros partilhados, parar e pedir ao dono para criar/autorizar tarefa separada.
-- Parcial actualizado (2026-11-27): preservadas as melhorias móveis e de foco já publicadas; acrescentados alvos mínimos de 44 px para os controlos de entrar, sair e alternar entre entrar/criar conta. Relatório actualizado com a auditoria estática do viewport, menu, grelha de exames, cartões de planos, alternativas, leitor PDF e barra inferior. Commits: `87b3fce` (CSS) e `cc8a72e` (relatório). Falta validação visual/interactiva num navegador real às larguras 320, 360, 390 e 600 px, incluindo zoom/orientação, foco e ausência de scroll horizontal.
+- Parcial actualizado (2026-11-27): preservadas as melhorias móveis e de foco já publicadas; acrescentados alvos mínimos de 44 px para os controlos de entrar, sair e alternar entre entrar/criar conta. Relatório actualizado com a auditoria estática do viewport, menu, grelha de exames, cartões de planos, alternativas, leitor PDF e barra inferior. Commits: `87b3fce` (CSS), `cc8a72e` (relatório), `1cae84a` (scroll horizontal das tabelas) e `0acafcb` (auditoria). Falta validação visual/interactiva num navegador real às larguras 320, 360, 390 e 600 px, incluindo zoom/orientação, foco e ausência de scroll horizontal.
 
 
 
