@@ -82,13 +82,13 @@ Leia `INSTRUCOES.md` antes de reservar uma tarefa. Formato e protocolo estão l�
 
 - A migração Firebase substituiu as dependências Supabase do frontend activo; o projecto Supabase antigo foi preservado e não foi apagado nem alterado.
 - Firebase Authentication e perfil Firestore estão integrados. Google foi validado manualmente no Preview; email/password e recuperação têm cobertura automatizada no Auth Emulator. Telefone/password usa custom token, sem SMS/OTP e sem prova de titularidade do número.
-- As regras Firestore foram revistas contra o modelo e aprovadas no Emulator Suite. O cliente não escreve tentativas, subscrições ou pagamentos; as regras ainda não foram publicadas no Firebase real.
+- As regras Firestore foram revistas contra o modelo e aprovadas no Emulator Suite. O cliente não escreve tentativas, subscrições ou pagamentos; as regras ainda não foram publicadas no Firebase real. A colecção `exam_attempts` e as regras estão preparadas, mas ainda não existe endpoint Admin para sincronizar resultados; o estado da tentativa permanece local no browser, ficando o histórico multi-dispositivo para tarefa própria.
 - Backend ePay implementa checkout individual, UID beneficiário fixado no servidor, callback HMAC, consulta de estado e activação transaccional. A idempotência da criação foi reforçada com chave por UID/tentativa, referência determinística UUIDv8, retry da mesma transacção e recuperação de pedidos presos em criação após 2 minutos.
 - Testes: `Validar integração Firebase` run 45949604987 — SUCCESS (commit b3e72828); `Validar exames` run 45949323808 — SUCCESS (commit 38083921). O teste de imagem agora confirma caminho real, existência do ficheiro e renderização.
 - Preview Vercel READY: deployment `dpl_AH9K5qUVJf5bCQpSm4gLLQZwmVzy`, commit b3e72828; alias estável da branch mantido. Secrets Firebase Admin, telefone e ePay estão limitados ao Preview da branch; nenhum valor secreto foi consultado ou exposto.
 - App Check, FCM, Analytics, Remote Config, Crashlytics e Storage permanecem classificados como não activos/deferidos; Hosting e Cloud Functions não foram adoptados nesta arquitectura.
 - Limites antes de produção: confirmar permissões IAM mínimas da service account directamente no Firebase; publicar regras Firestore apenas com autorização; configurar ePay live apenas com aprovação; concluir auditoria de lançamento Android/Web.
-- Branch `feat/firebase-full-migration`: 663 commits à frente e 2 atrás da `main`. Os dois commits pendentes pertencem à DADOS-083 (Exames 31/34) e devem ser preservados/reconciliados antes de eventual merge. A `main` não foi alterada.
+- Branch `feat/firebase-full-migration`: 2 commits atrás da `main`. Os dois commits pendentes pertencem à DADOS-083 (Exames 31/34) e devem ser preservados/reconciliados antes de eventual merge. A `main` não foi alterada.
 - Não houve merge, publicação de regras Firestore, deploy de produção, cobrança real ou alteração do projecto Supabase.
 
 ## FE-013 — Preservar o estado do exame e o tempo restante após recarregar a página
