@@ -10,7 +10,7 @@ html.splash-ativo body > :not(#splash-abertura) {
   position: fixed;
   z-index: 9999;
   inset: 0;
-  display: grid;
+  display: none;
   min-width: 320px;
   min-height: 100svh;
   place-items: center;
@@ -24,6 +24,7 @@ html.splash-ativo body > :not(#splash-abertura) {
   visibility: visible;
   transition: opacity .35s ease, visibility .35s ease;
 }
+.splash-ativo .splash-abertura { display: grid; }
 .splash-marca {
   display: block;
   width: clamp(104px, 22vw, 154px);
