@@ -177,7 +177,121 @@ async function testarActivacaoDePagamentoJaPago() {
   }
 }
 
-testarActivacaoDePagamentoJaPago().then(() => {
+async function testarCheckoutIdempotente() {
+  const Module = require("node:module");
+  const createPath = require.resolve("../api/payments/create");
+  const documentos = new Map();
+  const chavesFornecedor = [];
+  let chamadasFornecedor = 0;
+  let falharPrimeiraChamada = true;
+
+  function referencia(coleccao, id) {
+    const path = coleccao + "/" + id;
+    return {
+      path,
+      update: async dados => documentos.set(path, { ...(documentos.get(path) || {}), ...dados })
+    };
+  }
+  const db = {
+    collection: nome => ({ doc: id => referencia(nome, id) }),
+    runTransaction: async callback => {
+      const escritas = [];
+      const tx = {
+        get: async ref => {
+          const valor = documentos.get(ref.path);
+          return { exists: valor !== undefined, data: () => valor && { ...valor } };
+        },
+        create: (ref, dados) => escritas.push({ tipo: "create", path: ref.path, dados }),
+        update: (ref, dados) => escritas.push({ tipo: "update", path: ref.path, dados })
+      };
+      const resultado = await callback(tx);
+      for (const escrita of escritas) {
+        if (escrita.tipo === "create" && documentos.has(escrita.path))
+          throw new Error("Documento já existe.");
+        documentos.set(escrita.path, escrita.tipo === "create"
+          ? { ...escrita.dados }
+          : { ...(documentos.get(escrita.path) || {}), ...escrita.dados });
+      }
+      return resultado;
+    }
+  };
+  const fakeLib = {
+    PLANS: {
+      weekly_basic: { name: "Semanal Básico", description: "Plano teste", amount: 50, days: 7, graceDays: 0, exams: 25 },
+      weekly_full: { name: "Semanal Completo", description: "Plano teste", amount: 80, days: 7, graceDays: 0, exams: 50 }
+    },
+    authenticatedUser: async () => ({ uid: "uid-checkout-teste" }),
+    checkoutTransactionId: lib.checkoutTransactionId,
+    getDb: () => db,
+    serverTimestamp: () => new Date(),
+    baseUrl: () => "https://plataforma-exames-conducao.vercel.app",
+    epayRequest: async (path, options) => {
+      chamadasFornecedor++;
+      chavesFornecedor.push(options.headers["Idempotency-Key"]);
+      if (falharPrimeiraChamada) {
+        falharPrimeiraChamada = false;
+        throw new Error("falha simulada depois da criação local");
+      }
+      return {
+        id: "provider-" + chamadasFornecedor,
+        payment_url: "https://checkout.epay.co.mz/p/" + chamadasFornecedor,
+        status: "pending"
+      };
+    },
+    json: (res, status, data) => { res.status(status).setHeader("Cache-Control", "no-store").json(data); },
+    safeError: error => error && error.status || 503
+  };
+  const loadOriginal = Module._load;
+  delete require.cache[createPath];
+  Module._load = function (request, parent, isMain) {
+    if (request === "../../lib/epay" && parent && parent.filename === createPath) return fakeLib;
+    return loadOriginal.call(this, request, parent, isMain);
+  };
+  let handler;
+  try { handler = require(createPath); }
+  finally { Module._load = loadOriginal; }
+
+  async function pedido(key, planCode) {
+    const response = {
+      code: 0, body: null,
+      status(value) { this.code = value; return this; },
+      setHeader() { return this; },
+      json(value) { this.body = value; return this; }
+    };
+    await handler({
+      method: "POST",
+      headers: { "idempotency-key": key, host: "plataforma-exames-conducao.vercel.app" },
+      body: { planCode }
+    }, response);
+    return response;
+  }
+
+  const chave = "123e4567-e89b-42d3-a456-426614174010";
+  const falha = await pedido(chave, "weekly_basic");
+  assert.equal(falha.code, 503, "a falha temporária do fornecedor deve ser devolvida sem perder a referência local");
+  const sucesso = await pedido(chave, "weekly_basic");
+  assert.equal(sucesso.code, 201, "repetir a mesma chave deve recuperar o checkout que falhou");
+  const idEsperado = lib.checkoutTransactionId("uid-checkout-teste", chave);
+  assert.equal(sucesso.body.transactionId, idEsperado, "a tentativa recuperada deve manter o mesmo ID");
+  assert.equal(chavesFornecedor.length, 2);
+  assert.equal(chavesFornecedor[0], idEsperado);
+  assert.equal(chavesFornecedor[1], idEsperado, "a ePay deve receber a mesma chave em cada tentativa");
+  assert.equal(documentos.size, 1, "a repetição não pode criar uma segunda transacção Firestore");
+
+  const repetido = await pedido(chave, "weekly_basic");
+  assert.equal(repetido.code, 200, "um checkout já criado deve devolver a mesma ligação");
+  assert.equal(repetido.body.transactionId, idEsperado);
+  assert.equal(chamadasFornecedor, 2, "a repetição de um checkout existente não deve chamar a ePay novamente");
+
+  const conflito = await pedido(chave, "weekly_full");
+  assert.equal(conflito.code, 409, "a mesma chave não pode ser reutilizada para outro plano");
+  const novo = await pedido("123e4567-e89b-42d3-a456-426614174011", "weekly_full");
+  assert.equal(novo.code, 201, "uma nova chave deve permitir uma nova tentativa independente");
+  assert.equal(documentos.size, 2);
+  console.log("APROVADO: checkout idempotente — retry após falha, referência ePay estável, resposta repetida e conflito de plano.");
+}
+
+testarActivacaoDePagamentoJaPago().then(testarCheckoutIdempotente).then(() => {
   console.log("APROVADO: pagamento já marcado paid activa a subscrição uma vez; callbacks repetidos são idempotentes.");
 }).catch(erro => {
   console.error(erro);
