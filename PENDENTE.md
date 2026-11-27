@@ -8,13 +8,14 @@
 ## Interface (FE-)
 
 
-## FE-010 — Ecrã de abertura (splash) estilo WhatsApp com assinatura "From BORJA"
-- Estado: LIVRE
-- Pedido: ao abrir a plataforma, mostrar um ecrã de abertura de 1,5–2 s: fundo liso, logótipo ESTRADA centrado e, no rodapé do ecrã, a assinatura pequena e discreta, como o "from Meta" do WhatsApp (referência: o ecrã de abertura do WhatsApp com "from Meta" no rodapé; a imagem foi removida do repositório a pedido do dono). Assinatura: linha pequena "from", abaixo "B O R J A" (com espaçamento entre letras), "Technology & Innovation" e, por último, "Todos Direitos Reservados" em letra ainda menor. Estilo escuro e tipografia simples, como descrito abaixo.
-- Estilo visual (seguir as imagens): ecrã inteiro, conteúdo repartido em duas zonas — logótipo no centro (um pouco acima do meio, ~45% da altura) e assinatura colada ao fundo, centrada, a ~24–32 px da borda inferior. Assinatura em duas linhas de hierarquia: "from" pequeno e leve em cinzento (como no WhatsApp); "B O R J A" em letra grossa (bold/extrabold), maiúsculas, com `letter-spacing` largo, cor cinzenta sobre fundo escuro `#1a1a1a` (ou verde da marca sobre fundo claro, como o "Meta" do WhatsApp); "Technology & Innovation" bem menor, bold, cinzento; "Todos Direitos Reservados" o mais pequeno de todos (≈10–11 px), mesmo cinzento. Fonte sem serifa, geométrica e simples (Poppins/Montserrat ou a fonte do sistema se não houver ficheiro local). Nada de caixas, linhas ou sombras.
-- Onde mexer: `index.html` (bloco do splash), `styles.css` (posição fixa no fundo com `bottom` + `env(safe-area-inset-bottom)`, tamanhos pequenos com `clamp()`), `app.js` (esconder com transição suave após carregar; mostrar só na 1.ª abertura da sessão).
-- Pronto quando: logótipo ao centro, assinatura colada ao fundo e legível em ecrãs de 360 px a desktop; não bloqueia a app nem os testes (`scripts/testar-fluxo.js`); respeita `prefers-reduced-motion`; sem imagens externas.
-- Cuidados: usar apenas o logótipo já existente em `icons/`; não alterar perguntas, pontuação, planos ou preços.
+## FE-010 — Ecrã de abertura (splash) com assinatura «From BORJA»
+- Estado: EM CURSO — ChatGPT-7 — 2026-11-27 — ficheiros: `index.html`, `splash.css`; integração funcional na branch de Preview, validação CI e visual ainda pendentes.
+- Pedido confirmado pelo dono: ao abrir o link da plataforma, mostrar primeiro a animação aprovada «From BORJA» e, no fim, revelar a aplicação normalmente. A demonstração isolada `preview-from-borja.html` é a referência visual; preservar a composição, tipografia, cores e movimentos aprovados.
+- Assinatura exacta:
+  `from` / `B O R J A` / `Technology & Innovation` / `ESTRADA-JB | © Todos Direitos Reservados`.
+- Implementação parcial (2026-11-27): criado `splash.css` com os movimentos e a composição da demonstração; `index.html` apresenta o splash sobre a aplicação e remove-o depois da animação. A duração aguarda o fim da revelação da linha legal; respeita `prefers-reduced-motion`. A aplicação continua a inicializar por baixo do splash. Não foi alterado `app.js`, a navegação, a autenticação, os exames, os planos ou os preços.
+- Pronto quando: CI relevante passar; Preview da branch estiver READY; confirmar no navegador móvel e desktop que o splash aparece na abertura, desaparece sem bloquear a aplicação e não reaparece ao navegar entre rotas; verificar também movimento reduzido.
+- Cuidados: não adicionar botão «Repetir animação» à aplicação real (esse controlo pertence apenas à página de demonstração); não alterar o design aprovado; sem merge para `main` ou deploy de produção.
 
 
 ## FE-001 — Auditoria de experiência móvel e acessibilidade
