@@ -12,12 +12,13 @@ Este documento é a fonte central do estado operacional. Registos históricos e 
 | Área | Estado actual | Evidência / limite |
 |---|---|---|
 | BE-002 — migração Firebase | **CONCLUÍDA na branch e PR #3** | Migração funcional, backend, testes, documentação e Preview estabilizados. Não significa lançamento em produção. |
-| Sincronização Git | Branch de migração preservada | `feat/firebase-full-migration` está 663 commits à frente e 2 atrás da `main`. Os 2 commits em falta pertencem à DADOS-083 (Exames 31/34); preservar e reconciliar antes de qualquer merge. |
+| Sincronização Git | Branch de migração preservada | `feat/firebase-full-migration` está 2 commits atrás da `main`. Os 2 commits em falta pertencem à DADOS-083 (Exames 31/34); preservar e reconciliar antes de qualquer merge. |
 | Autenticação Google | Validada manualmente no Preview | O proprietário confirmou login Google funcional depois de autorizar os domínios de Preview. |
 | Email/palavra-passe | Implementado e testado | Registo, login, recuperação e confirmação testados no Auth Emulator; não afirmar entrega real de todos os emails no Preview. |
 | Telefone/palavra-passe | Implementado e testado | Firebase custom token, scrypt, HMAC e limites anti-abuso. Não usa SMS/OTP e não comprova titularidade do número. |
 | Perfil Firestore | Implementado | Perfil mínimo em `users/{uid}`, limitado ao próprio UID. |
 | Regras Firestore | Revistas no repositório e aprovadas no Emulator Suite | Isolamento por UID, default-deny e escritas de tentativas/subscrições/pagamentos bloqueadas ao cliente. **Ainda não publicadas no projecto Firebase real.** |
+| Persistência de tentativas | Estrutura `exam_attempts` e regras preparadas | Ainda não existe endpoint Admin para sincronizar tentativas/resultados; o estado do exame permanece local no browser. Histórico multi-dispositivo requer tarefa própria. |
 | Migração Supabase | Concluída no frontend activo | `app.js`, `index.html` e `config.js` não contêm dependências Supabase. O projecto antigo não foi apagado nem alterado. Contas antigas eram de teste; não foi feita migração de contas. |
 | Backend ePay | Implementado e testado em Sandbox | Firebase ID token, catálogo de planos no servidor, UID beneficiário, checkout individual, callback HMAC e consulta de estado. |
 | Idempotência do checkout | Reforçada e testada automaticamente | Chave por tentativa/conta, referência determinística UUIDv8, reutilização da mesma chave na ePay e recuperação de pedidos falhados ou presos em criação há mais de 2 minutos. |
