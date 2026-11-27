@@ -824,7 +824,7 @@
     if (estado === null) restaurarUltimo();
     if (!estado || !estado.res) return inicio();
     var r = estado.res, aprovado = typeof r.aprovado === "boolean" ? r.aprovado : null;
-    var h = "<h1>Resultado do Exame " + r.n + "</h1><div class='card resultado-card'>" +
+    var h = "<h1>Resultado do exame " + r.n + "</h1><div class='card resultado-card'>" +
       (aprovado === null ? "" : semaforo(aprovado)) +
       "<div class='nota'>" + nota(r.nota) + " / 20 valores</div>" +
       (aprovado === null ? "" : "<h2 class='estado-final " + (aprovado ? "texto-aprovado" : "texto-reprovado") + "'>" +
@@ -839,7 +839,7 @@
   function rever() {
     if (estado === null) restaurarUltimo();
     if (!estado || !estado.res) return resultado();
-    var h = "<h1>Revisão do Exame " + estado.n + "</h1>" +
+    var h = "<h1>Revisão do exame " + estado.n + "</h1>" +
       "<p>Consulta as tuas respostas, a resposta correcta e a explicação de cada pergunta.</p>";
     estado.Q.forEach(function (q, i) {
       var sel = estado.res.respostas[i], acertou = sel === q.correta;
