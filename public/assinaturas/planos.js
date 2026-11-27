@@ -51,7 +51,17 @@
     var radio = grupo.querySelector("#estrada-plano-" + indice);
     var cartao = radio && radio.closest(".plano-cartao");
     var topo = cartao && cartao.querySelector(".plano-topo");
-    if (!topo || topo.querySelector(".plano-selo-activo")) return;
+    if (!radio || !cartao || !topo) return;
+
+    grupo.querySelectorAll("input").forEach(function (opcao) {
+      opcao.checked = opcao === radio;
+    });
+    grupo.querySelectorAll(".plano-cartao").forEach(function (item) {
+      item.classList.remove("plano-escolhido");
+    });
+    cartao.classList.add("plano-escolhido");
+
+    if (topo.querySelector(".plano-selo-activo")) return;
     var selo = elemento("span", "plano-selo-activo", estado);
     selo.setAttribute("aria-label", estado === "EM CARÊNCIA" ?
       "Este plano está dentro do período de carência" : "Este é o plano actualmente activo na tua conta");
