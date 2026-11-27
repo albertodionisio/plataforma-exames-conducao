@@ -2,7 +2,8 @@
 
 **Actualizado:** 27 de Novembro de 2026  
 **Branch de trabalho:** `feat/firebase-full-migration`  
-**Commit-base validado:** `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`  
+**Commit funcional validado:** `b3e72828c9e74c0b1102f671bac62b8b881224a7`  
+**BE-002:** CONCLUÍDA na branch; PR #3 aberta em draft, sem merge.  
 **Produção:** bloqueada até autorização expressa.
 
 Este plano substitui os estados e previsões antigas deste ficheiro. Os registos anteriores foram substituídos porque descreviam a migração como divergente, a autenticação Preview como não testada e o backend de pagamentos como inexistente. Essas descrições já não correspondem ao estado actual.
@@ -35,15 +36,14 @@ Este plano substitui os estados e previsões antigas deste ficheiro. Os registos
 - [x] Documentos partilhados reconciliados sem eliminar registos independentes.
 
 ### ETAPA 3 — Testes automáticos e estabilização do fluxo de exames
-**Estado: PARCIAL — existe uma falha conhecida por corrigir.**
+**Estado: CONCLUÍDA.**
 
 - [x] Sintaxe JavaScript e componente de assinaturas passaram no workflow de exames.
 - [x] Validação de integração Firebase passou.
-- [ ] Corrigir a asserção em `scripts/testar-fluxo.js:220`: o teste espera o caminho antigo `public/exames/exameN/exameN_1.jpg`, mas a primeira pergunta do Exame 27 usa `public/sinais/D79-sinal-pdf-600dpi.png`.
-- [ ] Confirmar que o teste valida a imagem actual e o comportamento de carregamento, em vez de simplesmente remover a asserção.
-- [ ] Reexecutar o workflow completo de exames, incluindo validador oficial, documentos e build Netlify.
+- [x] Corrigida a asserção: o teste lê o caminho declarado pela primeira pergunta, confirma a existência do ficheiro e confirma que a imagem é renderizada.
+- [x] Workflow completo de exames aprovado: run `45949323808` — SUCCESS, incluindo componente de assinaturas, fluxo E2E, validador oficial, documentos e build Netlify.
 
-Evidência actual: GitHub Actions run `45833068139` falhou no passo “Testar fluxo completo dos exames”; os passos posteriores foram skipped. O ficheiro de imagem apontado pelo Exame 27 existe no repositório.
+A falha antiga `45833068139` foi resolvida; não foi removida a verificação da imagem.
 
 ### ETAPA 4 — Validação funcional no Preview
 **Estado: CONCLUÍDA para os fluxos que o proprietário testou.**
@@ -57,13 +57,14 @@ Evidência actual: GitHub Actions run `45833068139` falhou no passo “Testar fl
 - [x] Não pedir para repetir os mesmos testes funcionais.
 
 ### ETAPA 5 — Revisão de segurança e configuração Firestore
-**Estado: PENDENTE.**
+**Estado: REVISÃO DO CÓDIGO CONCLUÍDA; publicação e IAM real ficam bloqueados para produção.**
 
-- [ ] Rever `firestore.rules` e `firestore.indexes.json` contra o modelo actual.
-- [ ] Confirmar isolamento por UID e que o cliente não pode escrever pagamentos, subscrições ou resultados finais.
-- [ ] Rever permissões da service account e secrets por ambiente.
-- [ ] Só publicar regras após revisão e autorização expressa.
-- [ ] Não copiar secrets Preview para Production.
+- [x] Revistas `firestore.rules` e `firestore.indexes.json` contra o modelo actual.
+- [x] Confirmado isolamento por UID, default-deny e bloqueio de escrita directa pelo cliente em tentativas, subscrições e pagamentos.
+- [x] Testes positivos/negativos no Firestore Emulator aprovados no run `45949604987`.
+- [x] Confirmado que os secrets Firebase Admin, telefone e ePay estão limitados ao Preview da branch; nenhum valor foi lido ou exposto.
+- [ ] Confirmar permissões mínimas da service account directamente no Firebase/IAM antes de produção; não é possível comprová-las apenas pela lista de variáveis do Vercel.
+- [ ] Publicar regras apenas após autorização expressa. Não copiar secrets Preview para Production.
 
 ### ETAPA 6 — Backend, assinaturas e pagamentos
 **Estado: IMPLEMENTAÇÃO E FLUXO SANDBOX COMPROVADOS; robustez adicional em revisão.**
@@ -76,13 +77,16 @@ Evidência actual: GitHub Actions run `45833068139` falhou no passo “Testar fl
 - [x] Callback HMAC, validação de referência/valor/moeda e consulta de estado implementados.
 - [x] Activação Firestore transaccional e idempotente coberta por testes.
 - [x] Proprietário comprovou o fluxo Sandbox completo, incluindo desbloqueio.
-- [ ] Avaliar chave de idempotência estável para pedidos repetidos de criação do checkout.
+- [x] Implementada chave de idempotência estável por UID e tentativa, persistida em sessionStorage; mesma referência é reutilizada na ePay e o cliente não pode reutilizar a chave para outro plano.
+- [x] Retries após falha reutilizam a transacção; estados `creating` sem actualização há mais de 2 minutos podem ser recuperados com a mesma chave.
+- [x] Teste automatizado simula falha inicial, retry, reutilização do checkout, conflito de plano e nova tentativa independente; run `45949604987` SUCCESS.
 - [ ] Preparar ambiente live apenas depois de aprovação comercial e autorização expressa. Não há cobrança real activa nesta fase.
 
 ### ETAPA 7 — Auditoria final e lançamento
-**Estado: BLOQUEADA — não iniciar publicação.**
+**Estado: FORA DO FECHO DA BE-002; bloqueada até autorização de lançamento.**
 
-- [ ] Concluir testes automáticos e resolver falhas.
+- [x] Testes automáticos da migração e do fluxo de exames aprovados na branch.
+- [ ] Auditoria adicional de lançamento, desempenho, acessibilidade e compatibilidade Android.
 - [ ] Auditoria integral de segurança, desempenho, acessibilidade e compatibilidade Android.
 - [ ] Preparar empacotamento e instalação Android de produção.
 - [ ] Rever privacidade, termos, suporte e requisitos operacionais.
@@ -93,9 +97,18 @@ Evidência actual: GitHub Actions run `45833068139` falhou no passo “Testar fl
 | Evidência | Resultado |
 |---|---|
 | Commit de sincronização | `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4` |
-| Validar integração Firebase — run `45833068199` | SUCCESS |
-| Validar exames — run `45833068139` | FAILURE na asserção da imagem do Exame 27 |
-| Preview Vercel — `dpl_ALFzFnbZbmMvmoZCmragfPcQRaQt` | READY |
+| Validar integração Firebase — run `45949604987` | SUCCESS no commit `b3e72828` |
+| Validar exames — run `45949323808` | SUCCESS no commit `38083921` |
+| Preview Vercel — `dpl_AH9K5qUVJf5bCQpSm4gLLQZwmVzy` | READY no commit `b3e72828` |
 | Teste manual de autenticação, planos, pagamento Sandbox e Exame 27 | Confirmado pelo proprietário |
 
 Para o estado global e as limitações, consultar [docs/ESTADO-ATUAL.md](ESTADO-ATUAL.md).
+
+
+## Fecho da BE-002 — 27 de Novembro de 2026
+
+A tarefa de migração foi concluída na branch `feat/firebase-full-migration`: frontend Firebase, autenticação, perfil Firestore, regras revistas e testadas em emulador, backend Admin, ePay Sandbox, idempotência de checkout, documentação e CI aprovados. A PR #3 continua aberta em draft, sem merge.
+
+A branch está 663 commits à frente e 2 atrás da `main`; os dois commits em falta são da DADOS-083 (Exames 31/34) e devem ser preservados/reconciliados antes de eventual integração. Não foi alterada a `main`.
+
+O fecho da BE-002 não declara a aplicação pronta para produção: regras Firestore não publicadas, permissões IAM da service account ainda por confirmar directamente no Firebase, serviços complementares opcionais não activos, ePay live não configurada e lançamento Android/Web ainda por autorizar.
