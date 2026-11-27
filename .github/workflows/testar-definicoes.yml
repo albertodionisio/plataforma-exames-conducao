@@ -6,6 +6,8 @@ on:
     paths:
       - 'index.html'
       - 'public/definicoes/**'
+      - 'public/ajuda/**'
+      - 'docs/GUIA-NOMENCLATURA.md'
       - 'scripts/testar-definicoes.js'
       - 'scripts/build-netlify.js'
       - '.github/workflows/testar-definicoes.yml'
@@ -13,6 +15,8 @@ on:
     paths:
       - 'index.html'
       - 'public/definicoes/**'
+      - 'public/ajuda/**'
+      - 'docs/GUIA-NOMENCLATURA.md'
       - 'scripts/testar-definicoes.js'
       - 'scripts/build-netlify.js'
       - '.github/workflows/testar-definicoes.yml'
