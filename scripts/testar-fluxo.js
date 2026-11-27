@@ -253,6 +253,8 @@ const vm = require("node:vm");
   }
   await new Promise(resolve=>setImmediate(resolve));
   assert.ok(app.innerHTML.includes("20,0 / 20 valores"));
+  assert.ok(app.innerHTML.includes("Certas: <b>25</b> · Erradas: <b>0</b> · Em branco: <b>0</b>"),
+    "O resultado deve apresentar a contagem exacta de certas, erradas e em branco");
   assert.match(app.innerHTML,/APROVADO/);
   assert.ok(app.innerHTML.includes("class='semaforo aprovado'"));
   assert.ok(app.innerHTML.includes("class='luz verde'"));
@@ -307,9 +309,16 @@ const vm = require("node:vm");
   }
   await concluirComAcertos(41,23);
   assert.ok(app.innerHTML.includes("18,4 / 20 valores"));
+  assert.ok(app.innerHTML.includes("Certas: <b>23</b> · Erradas: <b>2</b> · Em branco: <b>0</b>"),
+    "23 respostas certas devem produzir 18,4 valores e duas erradas");
+  await navegar("#/rever");
+  assert.ok(app.innerHTML.includes("resposta-errada") && app.innerHTML.includes("resposta-correcta"),
+    "A revisão deve distinguir visualmente a resposta seleccionada errada e a correcta");
   assert.match(app.innerHTML,/APROVADO/);
   await concluirComAcertos(42,22);
   assert.ok(app.innerHTML.includes("17,6 / 20 valores"));
+  assert.ok(app.innerHTML.includes("Certas: <b>22</b> · Erradas: <b>3</b> · Em branco: <b>0</b>"),
+    "22 respostas certas devem produzir 17,6 valores e três erradas");
   assert.match(app.innerHTML,/REPROVADO/);
   assert.ok(app.innerHTML.includes("class='semaforo reprovado'"));
   assert.ok(app.innerHTML.includes("class='luz vermelha'"));
