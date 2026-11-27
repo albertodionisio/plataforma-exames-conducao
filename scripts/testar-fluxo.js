@@ -311,10 +311,10 @@ const vm = require("node:vm");
   assert.ok(app.innerHTML.includes("18,4 / 20 valores"));
   assert.ok(app.innerHTML.includes("Certas: <b>23</b> · Erradas: <b>2</b> · Em branco: <b>0</b>"),
     "23 respostas certas devem produzir 18,4 valores e duas erradas");
+  assert.match(app.innerHTML,/APROVADO/);
   await navegar("#/rever");
   assert.ok(app.innerHTML.includes("resposta-errada") && app.innerHTML.includes("resposta-correcta"),
     "A revisão deve distinguir visualmente a resposta seleccionada errada e a correcta");
-  assert.match(app.innerHTML,/APROVADO/);
   await concluirComAcertos(42,22);
   assert.ok(app.innerHTML.includes("17,6 / 20 valores"));
   assert.ok(app.innerHTML.includes("Certas: <b>22</b> · Erradas: <b>3</b> · Em branco: <b>0</b>"),
