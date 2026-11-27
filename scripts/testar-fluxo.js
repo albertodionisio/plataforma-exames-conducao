@@ -217,7 +217,14 @@ const vm = require("node:vm");
   for(let n=26;n<=30;n++){
     await navegar("#/exame/"+n);
     assert.match(app.innerHTML,/Pergunta 1 de 25/,"Exame "+n+" deve abrir com 25 perguntas");
-    assert.ok(app.innerHTML.includes("public/exames/exame"+n+"/exame"+n+"_1.jpg"),"A imagem da primeira pergunta do Exame "+n+" deve ser apresentada");
+    const primeiraPergunta=context.window.EXAMES[n] && context.window.EXAMES[n][0];
+    const imagemInicial=primeiraPergunta && primeiraPergunta.imagem && primeiraPergunta.imagem.src;
+    assert.ok(typeof imagemInicial==="string" && imagemInicial.length>0,
+      "A primeira pergunta do Exame "+n+" deve declarar a imagem correspondente");
+    assert.ok(fs.existsSync(path.join(root,imagemInicial)),
+      "O ficheiro da imagem inicial do Exame "+n+" deve existir: "+imagemInicial);
+    assert.ok(app.innerHTML.includes("src='"+imagemInicial+"'"),
+      "A imagem real da primeira pergunta do Exame "+n+" deve ser apresentada: "+imagemInicial);
   }
   for(let n=31;n<=50;n++){
     await navegar("#/exame/"+n);
