@@ -266,7 +266,7 @@ async function testarSeloPlanoActivo() {
   botaoMudanca.click();
   assert.equal(confirmacoes.length, 1, "a mudança para outro plano deve pedir confirmação antes do checkout");
   assert.ok(confirmacoes[0].includes("Mensal Completo") && confirmacoes[0].includes("Semanal Básico") &&
-    confirmacoes[0].includes("150 MT") && confirmacoes[0].includes("30 dias") &&
+    confirmacoes[0].includes("50 MT") && confirmacoes[0].includes("7 dias") &&
     confirmacoes[0].includes("período que ainda resta"),
     "a confirmação deve explicar plano actual, destino, preço, duração e preservação do período pago");
   assert.equal(botaoMudanca.textContent, "Mudar para Semanal Básico",
