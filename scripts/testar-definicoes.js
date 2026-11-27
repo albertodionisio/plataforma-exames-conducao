@@ -116,6 +116,7 @@ assert.ok(guiaNomenclatura.includes("Designação oficial das avaliações: exam
 assert.ok(guiaNomenclatura.includes("Não usar «teste», «prova» ou «simulado» como nome da avaliação"), "O guia deve distinguir avaliações de testes técnicos");
 assert.match(html, /Algumas opções já funcionam neste dispositivo/);
 assert.ok(!html.includes("A preparar"), "Não devem ficar opções antigas sem destino");
+assert.match(ajuda, /<h1>Ajuda e suporte<\/h1>/, "A página de ajuda deve usar o nome oficial Ajuda e suporte");
 assert.match(ajuda, /src="ajuda\.js"/);
 assert.match(ajudaJs, /estrada\.tema/);
 assert.match(ajudaJs, /data-theme/);
