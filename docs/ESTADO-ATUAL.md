@@ -1,63 +1,69 @@
 # Estado actual do projecto ESTRADA-JB
 
-**Actualizado em:** 27 de Novembro de 2026  
+**Actualizado:** 27 de Novembro de 2026  
 **Branch de referência:** `feat/firebase-full-migration`  
-**Commit de referência:** `ba7df6f2c1141884e9fb7c4cf7a405aa908df4e4`  
+**Commit funcional validado:** `b3e72828c9e74c0b1102f671bac62b8b881224a7`  
 **Produção:** não publicada; `main` não foi alterada nesta fase.
 
-Este documento é o resumo operacional actual. Quando uma nota histórica ou anexo datado divergir daqui, prevalece o estado confirmado neste documento e nos ficheiros/código da branch indicada. Registos históricos não devem ser apagados: devem ser lidos como fotografias do estado na data em que foram escritos.
+Este documento é a fonte central do estado operacional. Registos históricos e anexos datados continuam preservados; quando divergirem, prevalece este documento e o código da branch indicada.
 
 ## Estado geral
 
 | Área | Estado actual | Evidência / limite |
 |---|---|---|
-| Sincronização Git | Concluída na branch Firebase | Commit de merge `ba7df6f`; a branch incorporou as alterações da `main`. |
-| Autenticação Google | Validada manualmente no Preview | O proprietário confirmou login funcional após autorizar os domínios Preview no Firebase Authentication. |
-| Autenticação por email/telefone | Implementação e testes automatizados presentes | Não confundir testes de emulador/código com validação completa de todos os fluxos reais no Preview. |
-| Firestore | Integração e regras testadas nos emuladores | As regras ainda não foram publicadas no projecto Firebase real. |
-| Catálogo de exames | 51 exames integrados nesta branch | 25 perguntas por exame; 3 exames gratuitos. Exames 31–51 permanecem temporariamente disponíveis para validação de conteúdo, não como política comercial final. |
-| Experiência de exame | Validada pelo proprietário no Preview | Cronómetro, imagens, navegação, correcção e resultado final foram testados; Exame 27 concluído em sessão de validação. |
-| Planos e acesso | GER-027 concluída e validada | Exames 1–3 gratuitos; Básico 1–25; Completo 1–50; Exame 51 bloqueado. Catálogo e rota directa validam UID, estado, datas e carência; testes específicos e validação manual do proprietário confirmados. Activos estáticos continuam acessíveis por URL directo. |
-| Criação de pagamento ePay | Código e testes automatizados aprovados | Checkout individual; plano/preço definidos no servidor; UID beneficiário fixado antes do checkout; referência gerada no servidor. |
-| Confirmação/activação ePay | Fluxo funcional Sandbox comprovado pelo proprietário | Pagamento, confirmação, activação da assinatura e acesso aos exames foram comprovados em Sandbox. Não significa cobrança real em produção. |
-| CI Firebase | Sucesso no commit de referência | GitHub Actions run `45833068199`; inclui sintaxe API, testes ePay/email, configuração Firebase e emuladores Auth/Firestore. |
-| CI exames | Falha conhecida no teste de fluxo | Run `45833068139`: falha em `scripts/testar-fluxo.js:220`, que espera uma imagem num caminho antigo do Exame 27; a pergunta actual usa `public/sinais/D79-sinal-pdf-600dpi.png`. O ficheiro existe. A asserção precisa de ser revista sem enfraquecer a validação visual. |
-| Preview Vercel | READY | Deployment `dpl_ALFzFnbZbmMvmoZCmragfPcQRaQt`, SHA igual ao commit de referência. |
-| Produção Android/Web | Não lançada | Não fazer merge para `main`, publicar regras Firestore ou activar credenciais ePay live sem autorização expressa. |
+| BE-002 — migração Firebase | **CONCLUÍDA na branch e PR #3** | Migração funcional, backend, testes, documentação e Preview estabilizados. Não significa lançamento em produção. |
+| Sincronização Git | Branch de migração preservada | `feat/firebase-full-migration` está 663 commits à frente e 2 atrás da `main`. Os 2 commits em falta pertencem à DADOS-083 (Exames 31/34); preservar e reconciliar antes de qualquer merge. |
+| Autenticação Google | Validada manualmente no Preview | O proprietário confirmou login Google funcional depois de autorizar os domínios de Preview. |
+| Email/palavra-passe | Implementado e testado | Registo, login, recuperação e confirmação testados no Auth Emulator; não afirmar entrega real de todos os emails no Preview. |
+| Telefone/palavra-passe | Implementado e testado | Firebase custom token, scrypt, HMAC e limites anti-abuso. Não usa SMS/OTP e não comprova titularidade do número. |
+| Perfil Firestore | Implementado | Perfil mínimo em `users/{uid}`, limitado ao próprio UID. |
+| Regras Firestore | Revistas no repositório e aprovadas no Emulator Suite | Isolamento por UID, default-deny e escritas de tentativas/subscrições/pagamentos bloqueadas ao cliente. **Ainda não publicadas no projecto Firebase real.** |
+| Migração Supabase | Concluída no frontend activo | `app.js`, `index.html` e `config.js` não contêm dependências Supabase. O projecto antigo não foi apagado nem alterado. Contas antigas eram de teste; não foi feita migração de contas. |
+| Backend ePay | Implementado e testado em Sandbox | Firebase ID token, catálogo de planos no servidor, UID beneficiário, checkout individual, callback HMAC e consulta de estado. |
+| Idempotência do checkout | Reforçada e testada automaticamente | Chave por tentativa/conta, referência determinística UUIDv8, reutilização da mesma chave na ePay e recuperação de pedidos falhados ou presos em criação há mais de 2 minutos. |
+| Assinaturas | Activação transaccional | Subscrição associada ao UID que iniciou o checkout; callbacks repetidos não prolongam duas vezes a validade. |
+| Catálogo de exames | 51 exames nesta branch | 25 perguntas por exame; 3 gratuitos. Exames 31–51 continuam temporariamente abertos para validação de conteúdo, não como política comercial final. |
+| Experiência de exame | Validada pelo proprietário no Preview | Imagens, navegação, cronómetro, avaliação e resultado foram confirmados; não pedir para repetir os testes já feitos. |
+| CI — exames | SUCCESS | Run `45949323808`, commit `38083921`; incluiu o teste de fluxo com a asserção de imagem corrigida. |
+| CI — Firebase | SUCCESS | Run `45949604987`, commit `b3e72828`; inclui testes ePay/idempotência, email, configuração, telefone e Auth/Firestore Emulator. |
+| Preview Vercel | READY | Deployment `dpl_AH9K5qUVJf5bCQpSm4gLLQZwmVzy`, commit `b3e72828`. |
+| Produção Web/Android | Não lançada | Não houve merge para `main`, publicação de regras Firestore ou activação de ePay live. |
 
-## Autenticação
+## Autenticação e dados
 
-O proprietário validou o início de sessão Google no Preview depois de adicionar o domínio de deployment e o alias estável da branch à lista de domínios autorizados do Firebase Authentication. Não voltar a pedir essa configuração como se ainda estivesse por fazer.
+Firebase Authentication é o fornecedor activo no frontend. Google foi validado manualmente no Preview. Email/password e recuperação estão implementados; os testes de emulador cobrem registo, verificação, recuperação e novo login. O método telefónico usa custom token, sem SMS/OTP; não apresentar o número como verificado.
 
-O código também inclui email/palavra-passe, recuperação de palavra-passe e autenticação telefónica por palavra-passe/custom token sem SMS/OTP. A existência dos testes de emulador não prova, por si só, que cada fluxo real de email/telefone foi testado no Preview. Não afirmar verificação de titularidade de números telefónicos.
-
-## Exames e experiência
-
-A configuração actual em `config.js` define 51 exames, 3 gratuitos, 25 perguntas por exame, 60 minutos, 0,8 valores por resposta certa e aprovação a partir de 18 valores. O modo de bypass de acesso pago está desligado (`modoTesteAcessoPago: false`; `examesAbertosTeste: []`). A disponibilidade temporária dos Exames 31–51 na versão de validação deve ser distinguida da política comercial final.
-
-O proprietário confirmou no Preview a apresentação de imagens, navegação, cronómetro, avaliação e resultado. A reprovação no Exame 27 durante a demonstração foi o resultado da tentativa e não foi reportada como defeito.
+O cliente só trabalha directamente com o perfil próprio. Tentativas, subscrições e pagamentos são operações de servidor através do Firebase Admin SDK. As regras negam por omissão e os testes verificam acesso próprio, isolamento entre utilizadores e bloqueio de escritas privilegiadas.
 
 ## Pagamentos e assinaturas
 
-O fluxo individual ePay foi testado em Sandbox pelo proprietário: selecção do plano, criação do checkout, processamento/confirmação, activação da assinatura e desbloqueio dos exames. O pagamento pode ser efectuado por meio pertencente a familiar/terceiro; a assinatura pertence sempre ao UID autenticado que iniciou o checkout.
+O proprietário comprovou anteriormente o fluxo ePay Sandbox: selecção do plano, checkout, confirmação, activação da assinatura e desbloqueio dos exames. A assinatura pertence ao UID autenticado que iniciou o checkout, mesmo quando o meio de pagamento pertence a familiar/terceiro.
 
-O código valida o Firebase ID token, escolhe plano/preço no servidor, gera UUID de referência, verifica valor/moeda e assinatura do callback, consulta o estado do pagamento e activa a subscrição em transacção Firestore com idempotência. O endpoint de estado permite ao utilizador consultar apenas a sua transacção.
+A criação de checkout exige uma chave de idempotência do cliente. O backend combina essa chave com o UID para derivar uma referência estável e envia a mesma referência à ePay. Retries após falha reutilizam a transacção; pedidos em estado `creating` sem actualização há mais de 2 minutos podem ser recuperados. O teste automatizado simula falha, retry, resposta repetida e conflito de plano. A alteração da idempotência ainda não foi submetida a um novo pagamento manual Sandbox.
 
-**Limites:** Sandbox não é produção. Não há autorização para trocar para chaves live, cobrar clientes reais ou declarar pagamentos comerciais activos. O webhook geral é opcional; o callback individual e a consulta de estado são o fluxo principal. Não utilizar o checkout fixo de produto do painel para testes.
+**Sandbox não é produção.** As variáveis `EPAY_SECRET_KEY`, `EPAY_WEBHOOK_SECRET`, `FIREBASE_SERVICE_ACCOUNT_JSON` e `PHONE_AUTH_PEPPER` estão configuradas como secrets apenas para Preview da branch `feat/firebase-full-migration`. A consulta de ambientes não mostrou variáveis de Production; os valores nunca foram lidos ou expostos.
 
-## Pendências e riscos conhecidos
+## Serviços complementares
 
-1. Corrigir a asserção desactualizada do Exame 27 em `scripts/testar-fluxo.js:220`, preservando teste real de carregamento e associação da imagem.
-2. Rever e actualizar documentação operacional e tarefas antigas que ainda descrevem autenticação, pagamento ou migração como não testados.
-3. Rever robustez/idempotência de pedidos de criação repetidos: o servidor gera nova referência por pedido; o frontend desactiva o botão durante o processamento, mas não há chave estável de idempotência entre tentativas.
-4. Rever as regras Firestore antes de qualquer publicação. Não publicar nesta fase.
-5. Completar auditoria global de segurança, compatibilidade móvel/Android, acessibilidade, desempenho e comportamento em produção.
-6. Preparar a activação live e lançamento apenas quando houver credenciais/aprovações e autorização expressa.
+- **Vercel Functions:** backend activo nesta arquitectura.
+- **Firebase Hosting / Cloud Functions:** não adoptados.
+- **Cloud Storage:** não adoptado; perguntas e imagens continuam estáticas no repositório/CDN.
+- **App Check, FCM, Analytics, Remote Config e Crashlytics:** avaliados, mas não activos nesta entrega.
+- Não declarar qualquer serviço como activo sem configuração, consentimento e testes específicos.
+
+## Limites antes de produção
+
+1. Publicar as regras Firestore apenas depois de autorização expressa.
+2. Confirmar directamente no Firebase/IAM que a service account tem apenas as permissões mínimas necessárias; o conector de ambiente permite confirmar a presença e o alvo dos secrets, mas não inspeccionar a política IAM sem aceder à credencial.
+3. Confirmar domínios definitivos e callback OAuth de produção.
+4. Configurar e validar credenciais ePay live apenas após aprovação comercial e autorização expressa.
+5. Fazer sincronização controlada dos 2 commits DADOS-083 antes de eventual merge; não perder trabalho concorrente.
+6. Completar auditorias de lançamento Android, acessibilidade, privacidade, suporte e recuperação.
 
 ## Regras de operação
 
-- GitHub é a fonte principal de verdade; trabalhar nesta branch até decisão explícita de integração.
-- Não alterar `main`, não fazer merge, não publicar regras Firestore e não fazer deploy de produção sem autorização.
-- Não apagar dados, contas, projectos ou recursos.
+- GitHub é a fonte principal de verdade; continuar o trabalho na branch Firebase até decisão explícita de integração.
+- PR #3 permanece aberta e em draft para revisão; não fazer merge para `main` sem autorização expressa.
+- Não publicar regras Firestore nem fazer deploy de produção sem autorização expressa.
+- Não apagar, pausar ou alterar o projecto Supabase antigo.
 - Nunca guardar segredos no repositório nem copiar secrets Preview para Production.
-- Ao actualizar o estado, actualizar também `README.md`, documentos específicos afectados, `PENDENTE.md` e `HISTORICO.md), sem apagar registos históricos nem sobrescrever tarefas reservadas por outras sessões.
