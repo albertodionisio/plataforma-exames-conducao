@@ -23,7 +23,7 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 | 11 | Sinalização e regras da via | A definição de berma é | C | imagens/exame21/exame21_11.jpg | Pendente | Quatro alternativas na fonte. |
 | 12 | Sinalização e regras da via | O significado deste sinal? | B | imagens/exame21/exame21_12.jpg | Pendente | Distrator criado para completar opção vazia. |
 | 13 | Comportamento, prevenção e segurança | Pode ter consequências num acidente o facto de não levar o cinto de segurança bem colocado? | C | imagens/exame21/exame21_13.jpg | Pendente | Quatro alternativas na fonte. |
-| 14 | Sinalização e regras da via | O que indica o sinal de informação? | A | imagens/exame21/exame21_14.jpg | Pendente | Distrator criado para completar opção vazia. |
+| 14 | Sinalização e regras da via | O que indica o sinal de informação? | A | `public/sinais/G11-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal G11 de área reservada para automóveis ligeiros, página 35 do PDF oficial; substitui a fotografia de baixa resolução. |
 | 15 | Sinalização e regras da via | Posso mudar de direcção para a direita nesta situação? | B | imagens/exame21/exame21_15.jpg | Pendente | Distrator criado para completar opção vazia. |
 | 16 | Sinalização e regras da via | Qual é a hierarquia entre as prescrições resultantes da sinalização? | C | imagens/exame21/exame21_16.jpg | Pendente | Quatro alternativas na fonte. |
 | 17 | Sinalização e regras da via | O significado deste sinal é: | A | imagens/exame21/exame21_17.jpg | Pendente | Quatro alternativas na fonte. |
@@ -44,3 +44,6 @@ A chave foi mantida conforme `resposta_correcta` da extracção do APK. Não foi
 - Imagens pendentes; o conteúdo usa `imagem: null`.
 - Não integrado no catálogo nem testado no navegador nesta tarefa.
 - Nenhuma regra de acesso, assinatura, cronómetro ou ficheiro de integração foi alterado.
+
+
+DADOS-079 (2026-11-22): a imagem G11 foi substituída pelo recorte vectorial do PDF oficial, página 35, a 600 DPI; corresponde ao sinal de área reservada para automóveis ligeiros.

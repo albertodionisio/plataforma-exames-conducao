@@ -19,7 +19,7 @@ Conteúdo adaptado das 25 perguntas do Exame 7 extraído do APK de referência (
 | Nº | Tema | Fonte principal | Resposta APK | Resposta ESTRADA | Imagem / nota |
 |---|---|---|---|---|---|
 | 1 | Equipamento de segurança | CE, art. 87.º, n.º 1 e n.º 5, al. a) (o Código não impõe airbag nem ABS; só refere o airbag para exigir que esteja desactivado quando uma criança com menos de 3 anos viaja à frente) | B | B | exame7_1.jpg. Chave do APK (B «Errado») mantida: o Código não impõe airbag nem ABS em todos os ligeiros. Confirmado no texto do Código do APK: não há qualquer referência a ABS e o airbag só aparece no art. 87.º. |
-| 2 | Sinais de informação | Regulamento de Sinais de Trânsito, G62 (variante amarela, sinalização temporária de informação) | B | D | sem-codigo-area-reservada-veiculos-emergencia.png (PDF de sinais, pág. 14, 600 ppp; DADOS-063). Variante amarela de G62 «Área reservada para veículos de emergência»; o ficheiro `G62-area-reservada-veiculos-emergencia.png` é a versão azul e não corresponde à imagem do APK. O original `exame7_2.jpg` (com marca de água) deixou de ser usado. |
+| 2 | Sinais de informação | Regulamento de Sinais de Trânsito, G62 (variante amarela, sinalização temporária de informação) | B | D | sem-codigo-area-reservada-veiculos-emergencia.png (PDF de sinais, pág. 14, recorte vectorial 600 DPI; DADOS-079). Variante amarela de G62 «Área reservada para veículos de emergência»; o ficheiro `G62-area-reservada-veiculos-emergencia.png` é a versão azul e não corresponde à imagem do APK. O original `exame7_2.jpg` (com marca de água) deixou de ser usado. |
 | 3 | Obstáculos na faixa de rodagem | CE, art. 22.º, n.º 2 | C | A | exame7_3.jpg. Pergunta repetida no APK (Exame 6, pergunta 9); enunciado diferenciado. |
 | 4 | Física da condução | Segurança geral — dinâmica do veículo | A | C | exame7_4.jpg. Chave do APK mantida |
 | 5 | Carga e descarga | CE, art. 56.º, n.º 1 (Transporte de carga) | A | B | exame7_5.jpg. Chave do APK mantida. O art. 56.º, n.º 1 fixa expressamente que a carga e a descarga se fazem pela retaguarda ou pelo lado da margem da faixa de rodagem junto da qual o veículo está parado ou estacionado. A referência anterior («art. 52.º») estava errada: o art. 52.º é «Contagem das distâncias». |
@@ -35,11 +35,11 @@ Conteúdo adaptado das 25 perguntas do Exame 7 extraído do APK de referência (
 | 15 | Piso molhado | CE, art. 32.º, n.º 1, al. h) (velocidade moderada em troços molhados ou com precárias condições de aderência) | C | B | exame7_15.jpg. Chave do APK mantida |
 | 16 | Transporte de crianças | CE, art. 87.º, n.º 5, al. a) e n.º 6 | B | C | exame7_16.jpg. Chave do APK mantida |
 | 17 | Filas de trânsito | CE, art. 18.º, n.º 2 | A | D | exame7_17.jpg. Chave do APK mantida |
-| 18 | Sinais de estacionamento | Regulamento de Sinais (informação) | C | A | sem-codigo-parque-estacionamento-limitado-60-min.png (PDF de sinais, pág. 14, 600 ppp; DADOS-063). Variante amarela de G8 «Parque de estacionamento limitado» (azul, pág. 35). Chave genérica «limitado» do APK mantida, enunciado especificado com os 60 minutos do sinal. |
+| 18 | Sinais de estacionamento | Regulamento de Sinais (informação) | C | A | sem-codigo-parque-estacionamento-limitado-60-min-600dpi.png (PDF de sinais, pág. 14, 600 ppp; DADOS-063). Variante amarela de G8 «Parque de estacionamento limitado» (azul, pág. 35). Chave genérica «limitado» do APK mantida, enunciado especificado com os 60 minutos do sinal. |
 | 19 | Limites de velocidade | CE, art. 33.º (quadro de velocidades) | C | C | exame7_19.jpg. Chave do APK mantida (confirmada contra a tabela do Código) |
 | 20 | Sinais de estacionamento | Regulamento de Sinais (informação) | B | B | sem-codigo-parque-estacionamento-veiculos-alta-tonelagem.png (ficheiro já existente; PDF de sinais, pág. 15, variante amarela de G61). Chave do APK mantida; legenda do PDF «de alta tonelagem». |
 | 21 | Drogas e condução | Segurança geral — drogas (enquadramento: CE, art. 81.º, n.º 2, proibição de conduzir sob influência de substâncias psicotrópicas) | B | D | exame7_21.jpg. Segurança geral — drogas |
-| 22 | Sinais de perigo | Regulamento de Sinais (A47) | B | A | A47-sinal-pdf.png. Sinal A47 (PDF) |
+| 22 | Sinais de perigo | Regulamento de Sinais (A47) | B | A | A47-sinal-pdf-600dpi.png. Sinal A47 (PDF) |
 | 23 | Sistema rodoviário | Segurança geral — sistema rodoviário | A | C | exame7_23.jpg. Pergunta de resposta «falsa» (A do APK) mantida |
 | 24 | Distância de segurança | CE, art. 20.º, n.º 1 (Distância entre veículos) | C | B | exame7_24.jpg. Chave do APK (C «Certo») mantida; pergunta Certo/Errado convertida em escolha com razão. 4.ª alternativa vazia no APK; distrator novo. A referência anterior («art. 36.º») estava errada: o art. 36.º é «Limites especiais de velocidade». |
 | 25 | Segurança passiva | Segurança geral | A | A | exame7_25.jpg. Chave do APK mantida; pergunta repetida no Exame 25 do APK |
@@ -61,3 +61,10 @@ Feito sobre o Exame 7 já concluído na DADOS-008, sem alterar alternativas, ín
 - Pergunta 12: a função exacta do INATRO no texto do Decreto n.º 47/2021 (só foram consultadas fontes secundárias) e a frase «as multas podem ser pagas em mais de um local» na explicação, que não tem base no Código consultado.
 - Pergunta 10: o art. 9.º do Regulamento de Sinais foi lido numa reprodução (codest.co.mz); falta conferir no texto oficial.
 - Perguntas 4, 6, 9 e 25 continuam apenas como «segurança geral»: não há artigo do Código que as sustente.
+
+
+## Actualização de qualidade visual (DADOS-079, 2026-11-22)
+
+As perguntas 2 (área reservada para veículos de emergência, painel amarelo com A e R, PDF p. 14), 18 (parque com duração limitada a 60 minutos, PDF p. 35) passaram a usar recortes vectoriais extraídos directamente do PDF oficial a 600 DPI. Correspondências conferidas visualmente; conteúdo e respostas mantidos.
+
+A pergunta 22 (A47 — um veículo de cada vez) passou a usar o recorte vectorial extraído directamente do PDF oficial, página 5, a 600 DPI. Recorte confirmado visualmente, sem a legenda adjacente; pergunta, alternativas, resposta e explicação preservadas.

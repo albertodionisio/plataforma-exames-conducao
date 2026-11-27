@@ -6,7 +6,7 @@ e para que cada sessão saiba **o que já foi feito, o que está em curso e o qu
 
 | Ficheiro | O que tem | Quando ler |
 |---|---|---|
-| `INSTRUCOES.md` (este) | Protocolo de trabalho entre sessões | Sempre, primeiro |
+| `INSTRUCOES.md` (este) | Protocolo de trabalho entre sessões | Sempre, primeiro |\n| `docs/ESTADO-ATUAL.md` | Estado consolidado do código, testes, Preview, validações e bloqueios | Sempre, logo depois deste ficheiro |
 | `PENDENTE.md` (raiz) e `data/exames/PENDENTE.md` | **O que falta** e **o que está em curso**, com ID | Sempre, antes de escolher trabalho |
 | `HISTORICO.md` | **O que já foi feito** (não é instrução) | Antes de criar uma tarefa nova, para ver se já existe |
 | `REGRAS.md` | Regras de negócio, decisões do dono (não reabrir) e regras do repositório | Antes de mexer em preços, planos, nota ou segredos |
@@ -78,7 +78,7 @@ Os ficheiros `PENDENTE.md` e `HISTORICO.md` são a regra, mas o `git log` é a p
 
 ## Protocolo (a regra anti-duplicação)
 
-1. **Atualizar.** Antes de qualquer coisa: `git pull --rebase`. Leia este ficheiro, todos os `PENDENTE.md` (`find . -name PENDENTE.md -not -path "*/node_modules/*"`) e o fim do `HISTORICO.md`.
+1. **Atualizar.** Antes de qualquer coisa: `git pull --rebase`. Leia este ficheiro, `docs/ESTADO-ATUAL.md`, todos os `PENDENTE.md` (`find . -name PENDENTE.md -not -path "*/node_modules/*"`) e o fim do `HISTORICO.md`.
 2. **Identificar-se.** Use um nome de sessão curto: ferramenta + número (`Claude-1`, `Codex-1`, `ChatGPT-1`). Use sempre o mesmo durante a sessão.
 3. **Reservar antes de trabalhar.** Escolha uma tarefa com `Estado: LIVRE`. Mude a linha para
    `Estado: EM CURSO — <sessão> — <data e hora> — ficheiros: <lista> — último sinal: <data e hora>`, faça commit (`claim: GER-001`) e `git push` **imediatamente, antes de mexer no código**.

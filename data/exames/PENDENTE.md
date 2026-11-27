@@ -5,6 +5,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 > **Todos os exames seguem `docs/GUIA-PERGUNTAS.md`:** perguntas em forma de situação, explicações sem artigos (só no mapa), alternativas equilibradas. Verificar com `node scripts/auditar-estilo.js N`.
 
+
 ## Referência comum para a criação dos exames
 
 - **Exame 1:** concluído e já implementado em `data/exames/exame1.js`. É o modelo de como transformar as perguntas do aplicativo original para o ESTRADA.
@@ -22,6 +23,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 - Nota (Claude-DADOS005, 2026-11-15, por ordem do dono): imagens dos Exames 9–14 e 17–24 associadas (`public/exames/exameN/`) e Exames 9–14 e 16–24 ligados em `index.html`; sinais de pouca qualidade a substituir pelos do PDF numa etapa seguinte. Estas tarefas mantêm as suas reservas, mas as imagens e a integração já estão feitas — não repetir.
 
+
 ## DADOS-001 — Exame 2 (grátis)
 - Estado: EM CURSO (integrado no site) — dados, mapa, imagens e integração concluídos; falta a revisão de duplicações com os Exames 3 e 4 — último sinal: 2026-11-13.
 - Pedido: extrair e analisar as 25 perguntas do Exame 2 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
@@ -29,6 +31,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 2 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta para a revisão após submissão; abre no ESTRADA com cronómetro de 60 minutos, sem feedback durante a realização, resultado final e revisão comentada; mapa completo; validação automática e teste no navegador sem erros.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Esta tarefa já está reservada: nenhuma outra sessão deve mexer nela sem autorização do dono.
 - Parcial: 25 perguntas adaptadas em `data/exames/exame2.js`; 25 imagens do APK publicadas em `public/exames/exame2/`; mapa completo em `docs/referencias-exames/exame2-mapeamento.md`. Corrigidas as interpretações do APK nas perguntas 13 (G14, parque para táxis), 17 (sinal de direcção) e 21 (gesto de redução de velocidade); formulação da 8 ajustada ao sinal E3. Perguntas 15 e 19 diferenciadas de sobreposições existentes. Respostas correctas distribuídas A=7/B=6/C=6/D=6; nenhuma é a única alternativa mais longa. CI passou no run 43513191604 (sintaxe, assinaturas, fluxo geral, validador oficial e build Netlify). Tag do Exame 2 integrada em `index.html` pela FE-009 (autorizada pelo dono em 2026-11-13); catálogo mostra o Exame 2 como «Grátis» e as 25 imagens carregam sem erros num navegador (Chromium headless). Falta só concluir a revisão de duplicações com os Exames 3 e 4 antes de fechar a tarefa.
+
 
 ### ACTUALIZAÇÃO OBRIGATÓRIA — decisão do dono (11/11/2026)
 **Esta decisão substitui qualquer instrução anterior ou implementação baseada no modelo antigo de correcção imediata.** A sessão que já está a trabalhar no DADOS-001 deve actualizar o seu plano e executar o Exame 2 segundo estas regras, sem esperar por uma nova tarefa:
@@ -40,6 +43,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Antes de continuar, reler a secção «Avaliação e revisão dos exames» em `REGRAS.md`. Se já tiver sido implementado feedback imediato, removê-lo/substituí-lo para cumprir integralmente esta decisão. Não manter o comportamento antigo por compatibilidade.
 - Actualizar o registo de progresso desta tarefa para indicar que esta instrução foi recebida e que o plano foi alinhado. Não alterar tarefas ou ficheiros reservados a outras sessões.
 
+
 ## DADOS-002 — Exame 3 (grátis)
 - Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 — ficheiros: data/exames/exame3.js, docs/referencias-exames/exame3-mapeamento.md, public/exames/exame3/ (imagens), data/exames/PENDENTE.md — último sinal: 2026-11-13 — transferência autorizada expressamente pelo dono nesta sessão.
 - Nota (Claude-DADOS005, 2026-11-14): por ordem do dono, `data/exames/exame3.js` foi ligado em `index.html` (validador 0 problemas; abre no navegador sem erros). Falta apenas o mapa `docs/referencias-exames/exame3-mapeamento.md` e a revisão de duplicados com os Exames 2 e 4.
@@ -48,14 +52,19 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 3 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame deve respeitar integralmente o fluxo definido em `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames 1 e 2. Não usar correcção imediata. Não alterar ficheiros partilhados que estejam reservados por outra tarefa.
 
+
 ## DADOS-006 — Exame 5
-- Estado: LIVRE
+- Estado: EM CURSO — ChatGPT-ESTRADA-SIGNALS1 — 2026-11-21 — ficheiros: docs/referencias-exames/exame5-mapeamento.md, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-21T18:30Z — integração confirmada; falta teste ponta a ponta específico no navegador. `scripts/testar-fluxo.js` não será alterado porque está reservado por outras tarefas activas.; continuação assumida directamente após autorização do dono — três imagens do Exame 5 actualizadas para recortes PDF a 600 DPI; extractor corrigido para converter coordenadas da pré-visualização; workflow de extracção alargada em execução (run 44948568082)
 - Nota (Claude-DADOS005, 2026-11-14): por ordem do dono, `data/exames/exame5.js` foi ligado em `index.html`; abre no navegador sem erros e as 11 imagens existem.
+- Parcial actualizado (2026-11-21): `index.html` já carrega `data/exames/exame5.js` antes de `app.js`; o registo genérico por `window.EXAMES` permite ao catálogo obter o exame. Confirmadas 25 perguntas e 11/11 imagens existentes (8 sinais PDF + 3 fotografias de cena). `Validar exames` run 44934353829 e `Validar definições` run 44934353814 — SUCCESS; Preview Vercel READY no commit `73589e2`. O mapa foi corrigido para reflectir a integração real. A análise de `scripts/testar-fluxo.js` revelou que o Exame 5 ainda não está incluído na lista de exames testados ponta a ponta; falta validar especificamente início, respostas, submissão, resultado e revisão no navegador. `index.html`/`app.js` não foram alterados, para preservar as reservas concorrentes.
+- Parcial (2026-11-21, ChatGPT-ESTRADA-SIGNALS1): confirmado que `index.html` carrega o Exame 5 antes de `app.js`; 25 perguntas e 11/11 imagens existem. CI `Validar exames` e `Validar definições` passou no commit `73589e2`; Preview Vercel READY. O teste `scripts/testar-fluxo.js` não inclui o Exame 5 no percurso de ponta a ponta. A tarefa foi libertada para outra sessão ou para retoma depois de validação específica no navegador; não foram alterados `index.html`/`app.js` por estarem reservados.
+
 - Parcial: (2026-11-14, Claude-DADOS006) FEITO e publicado: `data/exames/exame5.js` (25 perguntas, validador sem problemas), `docs/referencias-exames/exame5-mapeamento.md`, 8 sinais extraídos do PDF em `public/sinais/` (A54, D79, E12, E25, E52, G62, J12, M3) e 3 fotografias em `public/cenas/` (perguntas 8, 20 e 21). FALTA: registar o Exame 5 na aplicação e testá-lo no navegador (fluxo completo, imagens, resultado e revisão). Isso depende de `index.html`/`app.js`, reservados pela DADOS-001; só avançar quando a DADOS-001 estiver concluída ou o dono autorizar. Não refazer o conteúdo.
 - Pedido: extrair as 25 perguntas do Exame 5 do aplicativo original e modelá-las fielmente para o ESTRADA, seguindo a referência comum e o modelo do Exame 1.
 - Onde mexer: `data/exames/exame5.js` (novo) e `docs/referencias-exames/exame5-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 5 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 5 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
+
 
 
 
@@ -69,6 +78,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 - Progresso em 2026-11-14 por ChatGPT-ESTRADA-9: a extracção estruturada foi lida em `original/extraido/exame8.json`; não foi aberto nem descodificado o APK. Criados `data/exames/exame8.js` e `docs/referencias-exames/exame8-mapeamento.md`; copiadas as 25 imagens para `public/exames/exame8/`. Conteúdo auditado: 25 perguntas, quatro alternativas preenchidas, chave equilibrada A7/B6/C6/D6 e nenhuma correcta como única mais longa. A pergunta 17 foi reformulada para não duplicar a pergunta 5. A validação automática completa ainda não terminou: o workflow `43595306116` parou em `scripts/testar-fluxo.js` porque a configuração publicada tem `modoTesteAcessoPago=true`, enquanto o teste existente exige `false`; por isso o validador oficial e o build foram ignorados. Não alterar a configuração nesta tarefa. Teste no navegador pendente, pois o exame não deve ser ligado em `index.html` sem autorização do dono. Manter a tarefa EM CURSO até à validação no navegador e confirmação final.
 
+
 ## DADOS-010 — Exame 9
 - Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa publicados; imagens pendentes.
 - Conteúdo criado em `data/exames/exame9.js`: 25 perguntas, quatro alternativas preenchidas e explicações pedagógicas.
@@ -80,6 +90,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Commits: conteúdo `3c755910728ca92107b3b3f87b3826b1e8896197`; mapa `3b8c7dbbdef31b4c825289a6b1b88010ff8d48b5`.
 - Próximos passos: validação estrutural, resolver/adiar imagens conforme orientação e avançar para DADOS-011 (Exame 10).
 
+
 ## DADOS-011 — Exame 10
 - Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa publicados; imagens pendentes.
 - Conteúdo criado em `data/exames/exame10.js`: 25 perguntas, quatro alternativas preenchidas e explicações pedagógicas.
@@ -89,6 +100,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - As imagens ainda não foram copiadas nem associadas; serão tratadas numa etapa posterior.
 - O Exame 10 não foi ligado à aplicação. A sequência definida é concluir os Exames 9, 10, 11 e 12 antes de decidir a integração.
 - Commits: conteúdo `480e705d05ebe3a71666c9f2d94169ef21b6475b`; mapa `6b13c934fdcde164e2b853371c68637ea2d83980`.
+
 
 ## DADOS-012 — Exame 11
 - Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa publicados; imagens pendentes.
@@ -100,6 +112,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - O Exame 11 não foi ligado à aplicação. A sequência definida é concluir os Exames 9, 10, 11 e 12 antes de decidir a integração.
 - Commits: conteúdo `83c4c6da34d25a0d3bad264cbb0fdc66fd1b2009`; mapa `cbfff4503d73337f2814b88985c766052ab8b201`.
 
+
 ## DADOS-013 — Exame 12
 - Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa publicados; imagens pendentes.
 - Conteúdo criado em `data/exames/exame12.js`: 25 perguntas, quatro alternativas preenchidas e explicações pedagógicas.
@@ -110,6 +123,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - O Exame 12 não foi ligado à aplicação. A sequência autorizada pelo responsável passa a abranger os Exames 12 a 15, com integração adiada.
 - Commits: conteúdo `749824f8c8d19abb403fb72fa4d2a257e920ccc8`; mapa `83996e621ba1707bc6b36d651541fabfe73802fc`.
 
+
 ## DADOS-014 — Exame 13
 - Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa publicados; imagens pendentes.
 - Conteúdo criado em `data/exames/exame13.js`: 25 perguntas, quatro alternativas preenchidas e explicações pedagógicas.
@@ -119,6 +133,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - As imagens ainda não foram copiadas nem associadas; serão tratadas numa etapa posterior.
 - O Exame 13 não foi ligado à aplicação. A sequência autorizada pelo responsável abrange os Exames 12 a 15, com integração adiada.
 - Commits: conteúdo `95c9a55e9482da8460e960a83bfef5c476650c39`; mapa `78155d09a6ad6f93aa5e6d47811674a39094a683`.
+
 
 ## DADOS-015 — Exame 14
 - Estado: EM CURSO — ChatGPT-ESTRADA-9 — 2026-11-14 — conteúdo e mapa publicados; imagens pendentes.
@@ -131,6 +146,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - O Exame 14 não foi ligado à aplicação. A sequência autorizada abrange os Exames 12 a 15, com integração adiada.
 - Commits: conteúdo `bb7ad35d0d1ce246fe54d16ee57842bcfd7986b3`; mapa `100224ae0612afb730bc0527033f79a24acc2e91`.
 
+
 ## DADOS-017 — Exame 16
 - Estado: CONTEÚDO E IMAGENS PUBLICADOS — assumido por ChatGPT-ESTRADA-9 em 2026-11-14, com autorização expressa do dono nesta conversa; reserva anterior transferida — validação global e teste de navegador pendentes
 - **Fonte já extraída (2026-11-14):** NÃO abrir nem descodificar o APK. Ler `original/extraido/exame16.json` (enunciado, 4 alternativas, resposta do APK, ficheiro de imagem) e copiar as imagens de `original/extraido/imagens/exame16/` para `public/exames/exame16/`. 341 das 750 perguntas têm a 4.ª alternativa vazia (criar distrator novo) e algumas chaves do APK estão erradas: confirmar cada resposta e registar no mapa «resposta APK vs ESTRADA». Sinal desfocado ou pixelizado: extrair do PDF `original/referencia/sinais.pdf` (código no nome do ficheiro, em `public/sinais/`). Artigos: conferir em `original/referencia/codigodeestrada.pdf`. Modelo a copiar: Exame 4 (`data/exames/exame4.js`, `docs/referencias-exames/exame4-mapeamento.md`). Sem artigos nem valores de coimas nos textos.
@@ -139,6 +155,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 16 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 16 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 - Parcial: publicados `data/exames/exame16.js` (25 perguntas, 100 alternativas e 25 explicações) e `docs/referencias-exames/exame16-mapeamento.md`. As respostas seguem a chave do APK, sem revisão legal independente; imagens ainda não copiadas. Commits: conteúdo `7120df857a3b5ba53a2623778fc2599a54561d52`; mapa `9a890d8aef45569d32777229e138c8a4938ffa67`.
+
 
 ## DADOS-018 — Exame 17
 - Estado: CONTEÚDO E IMAGENS PUBLICADOS e LIGADO em index.html (GER-017, GER-018 e complemento de sinais, 2026-11-15) — falta só a revisão jurídica das respostas e o teste do fluxo completo no navegador (a aplicação exige agora início de sessão)
@@ -149,6 +166,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 17 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
 - Publicação parcial por ordem do dono (2026-11-14): `data/exames/exame17.js` e `docs/referencias-exames/exame17-mapeamento.md` publicados; 25 perguntas e quatro alternativas por pergunta. Imagens deliberadamente não incluídas (`imagem: null`), aguardando a outra sessão. Chave mantida conforme extracção do APK, sem revisão jurídica independente. Integração na aplicação e teste no navegador não realizados.
+
 ## DADOS-019 — Exame 18
 - Estado: CONTEÚDO, IMAGENS E INTEGRAÇÃO PUBLICADOS — validação final pendente (actualizado em 2026-11-15, Claude-DADOS005: 25 imagens associadas e `exame25.js` ligado em `index.html`; validador 0 problemas; as 25 imagens carregam no navegador).
 - **Fonte já extraída (2026-11-14):** NÃO abrir nem descodificar o APK. Ler `original/extraido/exame18.json` (enunciado, 4 alternativas, resposta do APK, ficheiro de imagem) e copiar as imagens de `original/extraido/imagens/exame18/` para `public/exames/exame18/`. 341 das 750 perguntas têm a 4.ª alternativa vazia (criar distrator novo) e algumas chaves do APK estão erradas: confirmar cada resposta e registar no mapa «resposta APK vs ESTRADA». Sinal desfocado ou pixelizado: extrair do PDF `original/referencia/sinais.pdf` (código no nome do ficheiro, em `public/sinais/`). Artigos: conferir em `original/referencia/codigodeestrada.pdf`. Modelo a copiar: Exame 4 (`data/exames/exame4.js`, `docs/referencias-exames/exame4-mapeamento.md`). Sem artigos nem valores de coimas nos textos.
@@ -158,6 +176,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 18 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
 - Publicação parcial por ordem do dono (2026-11-14): `data/exames/exame18.js` e `docs/referencias-exames/exame18-mapeamento.md` publicados; 25 perguntas e quatro alternativas por pergunta. Imagens deliberadamente não incluídas (`imagem: null`), aguardando a outra sessão. Chave mantida conforme extracção do APK, sem revisão jurídica independente. Integração na aplicação e teste no navegador não realizados.
+
 ## DADOS-020 — Exame 19
 - Estado: CONTEÚDO PUBLICADO — imagens e integração pendentes (actualizado em 2026-11-14).
 - **Fonte já extraída (2026-11-14):** NÃO abrir nem descodificar o APK. Ler `original/extraido/exame19.json` (enunciado, 4 alternativas, resposta do APK, ficheiro de imagem) e copiar as imagens de `original/extraido/imagens/exame19/` para `public/exames/exame19/`. 341 das 750 perguntas têm a 4.ª alternativa vazia (criar distrator novo) e algumas chaves do APK estão erradas: confirmar cada resposta e registar no mapa «resposta APK vs ESTRADA». Sinal desfocado ou pixelizado: extrair do PDF `original/referencia/sinais.pdf` (código no nome do ficheiro, em `public/sinais/`). Artigos: conferir em `original/referencia/codigodeestrada.pdf`. Modelo a copiar: Exame 4 (`data/exames/exame4.js`, `docs/referencias-exames/exame4-mapeamento.md`). Sem artigos nem valores de coimas nos textos.
@@ -167,6 +186,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 19 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
 - Publicação parcial por ordem do dono (2026-11-14): `data/exames/exame19.js` e `docs/referencias-exames/exame19-mapeamento.md` publicados; 25 perguntas e quatro alternativas por pergunta. Imagens deliberadamente não incluídas (`imagem: null`), aguardando a outra sessão. Chave mantida conforme extracção do APK, sem revisão jurídica independente. Integração na aplicação e teste no navegador não realizados.
+
 ## DADOS-021 — Exame 20
 - Estado: CONTEÚDO PUBLICADO — imagens e integração pendentes (actualizado em 2026-11-14).
 - **Fonte já extraída (2026-11-14):** NÃO abrir nem descodificar o APK. Ler `original/extraido/exame20.json` (enunciado, 4 alternativas, resposta do APK, ficheiro de imagem) e copiar as imagens de `original/extraido/imagens/exame20/` para `public/exames/exame20/`. 341 das 750 perguntas têm a 4.ª alternativa vazia (criar distrator novo) e algumas chaves do APK estão erradas: confirmar cada resposta e registar no mapa «resposta APK vs ESTRADA». Sinal desfocado ou pixelizado: extrair do PDF `original/referencia/sinais.pdf` (código no nome do ficheiro, em `public/sinais/`). Artigos: conferir em `original/referencia/codigodeestrada.pdf`. Modelo a copiar: Exame 4 (`data/exames/exame4.js`, `docs/referencias-exames/exame4-mapeamento.md`). Sem artigos nem valores de coimas nos textos.
@@ -176,6 +196,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 20 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
 - Publicação parcial por ordem do dono (2026-11-14): `data/exames/exame20.js` e `docs/referencias-exames/exame20-mapeamento.md` publicados; 25 perguntas e quatro alternativas por pergunta. Imagens deliberadamente não incluídas (`imagem: null`), aguardando a outra sessão. Chave mantida conforme extracção do APK, sem revisão jurídica independente. Integração na aplicação e teste no navegador não realizados.
+
 ## DADOS-022 — Exame 21
 - Estado: CONTEÚDO PUBLICADO — imagens e integração pendentes (actualizado em 2026-11-14).
 - **Fonte já extraída (2026-11-14):** NÃO abrir nem descodificar o APK. Ler `original/extraido/exame21.json` (enunciado, 4 alternativas, resposta do APK, ficheiro de imagem) e copiar as imagens de `original/extraido/imagens/exame21/` para `public/exames/exame21/`. 341 das 750 perguntas têm a 4.ª alternativa vazia (criar distrator novo) e algumas chaves do APK estão erradas: confirmar cada resposta e registar no mapa «resposta APK vs ESTRADA». Sinal desfocado ou pixelizado: extrair do PDF `original/referencia/sinais.pdf` (código no nome do ficheiro, em `public/sinais/`). Artigos: conferir em `original/referencia/codigodeestrada.pdf`. Modelo a copiar: Exame 4 (`data/exames/exame4.js`, `docs/referencias-exames/exame4-mapeamento.md`). Sem artigos nem valores de coimas nos textos.
@@ -185,6 +206,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 21 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
 - Publicação parcial por ordem do dono (2026-11-14): `data/exames/exame21.js` e `docs/referencias-exames/exame21-mapeamento.md` publicados; 25 perguntas e quatro alternativas por pergunta. Imagens deliberadamente não incluídas (`imagem: null`), aguardando a outra sessão. Chave mantida conforme extracção do APK, sem revisão jurídica independente. Integração na aplicação e teste no navegador não realizados.
+
 ## DADOS-023 — Exame 22
 - Estado: CONTEÚDO PUBLICADO — imagens e integração pendentes (actualizado em 2026-11-14)
 - Publicação: `data/exames/exame22.js` e `docs/referencias-exames/exame22-mapeamento.md` — 25 perguntas; quatro alternativas por pergunta; explicações incluídas. 11 perguntas tinham alternativa D vazia e receberam distratores. Imagens pendentes; não integrado nem testado no navegador. Chave mantida conforme extracção do APK, sem revisão jurídica independente.
@@ -196,6 +218,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 - Concluído: `data/exames/exame22.js` e `docs/referencias-exames/exame22-mapeamento.md` publicados. 25 perguntas, quatro alternativas e explicações. 11 perguntas tinham a quarta alternativa vazia e receberam distratores. Imagens pendentes; não integrado nem testado no navegador. Chave mantida conforme extracção do APK, sem revisão jurídica independente.
 
+
 ## DADOS-024 — Exame 23
 - Estado: CONTEÚDO PUBLICADO — imagens e integração pendentes (actualizado em 2026-11-14)
 - Publicação: `data/exames/exame23.js` e `docs/referencias-exames/exame23-mapeamento.md` — 25 perguntas; quatro alternativas por pergunta; explicações incluídas. 8 perguntas tinham alternativa D vazia e receberam distratores. Imagens pendentes; não integrado nem testado no navegador. Chave mantida conforme extracção do APK, sem revisão jurídica independente.
@@ -204,6 +227,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Onde mexer: `data/exames/exame23.js` (novo) e `docs/referencias-exames/exame23-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 23 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 23 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
+
 
 ## DADOS-025 — Exame 24
 - Estado: CONTEÚDO PUBLICADO — imagens e integração pendentes (actualizado em 2026-11-14)
@@ -214,6 +238,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 24 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 24 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
+
 ## DADOS-026 — Exame 25
 - Estado: CONTEÚDO PUBLICADO — imagens e integração pendentes (actualizado em 2026-11-14)
 - Publicação: `data/exames/exame25.js` e `docs/referencias-exames/exame25-mapeamento.md` — 25 perguntas; quatro alternativas por pergunta; explicações incluídas. 9 perguntas tinham alternativa D vazia e receberam distratores. Imagens pendentes; não integrado nem testado no navegador. Chave mantida conforme extracção do APK, sem revisão jurídica independente.
@@ -222,6 +247,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Onde mexer: `data/exames/exame25.js` (novo) e `docs/referencias-exames/exame25-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 25 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 25 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
+
 
 ## DADOS-027 — Exame 26
 - Estado: CONTEÚDO, IMAGENS E INTEGRAÇÃO PUBLICADOS — validação final pendente (actualizado em 2026-11-14)
@@ -232,6 +258,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 26 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 26 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
+
 ## DADOS-028 — Exame 27
 - Estado: CONTEÚDO, IMAGENS E INTEGRAÇÃO PUBLICADOS — validação final pendente (actualizado em 2026-11-14)
 - Publicação: `data/exames/exame27.js` e `docs/referencias-exames/exame27-mapeamento.md` — 25 perguntas, quatro alternativas e explicações. 14 perguntas tinham a alternativa D vazia na fonte e receberam distratores identificados no mapa. Imagens originais copiadas e associadas às 25 perguntas; integração no catálogo publicada; teste de fluxo automatizado aprovado; falta teste num navegador real e concluir a validação global, actualmente bloqueada pelas imagens ausentes do Exame 16. Chave preservada conforme extracção do APK, sem revisão jurídica independente.
@@ -240,6 +267,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Onde mexer: `data/exames/exame27.js` (novo) e `docs/referencias-exames/exame27-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 27 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 27 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
+
 
 ## DADOS-029 — Exame 28
 - Estado: CONTEÚDO, IMAGENS E INTEGRAÇÃO PUBLICADOS — validação final pendente (actualizado em 2026-11-14)
@@ -250,6 +278,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 28 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 28 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
+
 ## DADOS-030 — Exame 29
 - Estado: CONTEÚDO, IMAGENS E INTEGRAÇÃO PUBLICADOS — validação final pendente (actualizado em 2026-11-14)
 - Publicação: `data/exames/exame29.js` e `docs/referencias-exames/exame29-mapeamento.md` — 25 perguntas, quatro alternativas e explicações. 15 perguntas tinham a alternativa D vazia na fonte e receberam distratores identificados no mapa. Imagens originais copiadas e associadas às 25 perguntas; integração no catálogo publicada; teste de fluxo automatizado aprovado; falta teste num navegador real e concluir a validação global, actualmente bloqueada pelas imagens ausentes do Exame 16. Chave preservada conforme extracção do APK, sem revisão jurídica independente.
@@ -259,6 +288,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 29 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 29 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
 
+
 ## DADOS-031 — Exame 30
 - Estado: CONTEÚDO, IMAGENS E INTEGRAÇÃO PUBLICADOS — validação final pendente (actualizado em 2026-11-14)
 - Publicação: `data/exames/exame30.js` e `docs/referencias-exames/exame30-mapeamento.md` — 25 perguntas, quatro alternativas e explicações. 13 perguntas tinham a alternativa D vazia na fonte e receberam distratores identificados no mapa. Imagens originais copiadas e associadas às 25 perguntas; integração no catálogo publicada; teste de fluxo automatizado aprovado; falta teste num navegador real e concluir a validação global, actualmente bloqueada pelas imagens ausentes do Exame 16. Chave preservada conforme extracção do APK, sem revisão jurídica independente.
@@ -267,6 +297,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Onde mexer: `data/exames/exame30.js` (novo) e `docs/referencias-exames/exame30-mapeamento.md`. Para registar o exame na aplicação, avaliar primeiro os ficheiros partilhados e as reservas activas; não os alterar sem autorização e coordenação.
 - Pronto quando: as 25 perguntas correspondem às 25 do Exame 30 de origem, com adaptação leve e fiel; imagens correctas; quatro alternativas e resposta validada; explicação por pergunta; mapa completo; validação automática e teste no navegador sem erros. O exame respeita integralmente `REGRAS.md`: sem feedback durante a realização; submissão manual no fim das 25 perguntas ou automática aos 60 minutos; resultado com nota, certas, erradas, em branco e semáforo gráfico real; revisão pós-submissão com pergunta, imagem, resposta escolhida, resposta correcta e explicação, preservando a ordem apresentada.
 - Cuidados: não substituir por perguntas genéricas ou inventadas. Não repetir perguntas dos exames anteriores. Não usar correcção imediata. Não alterar ficheiros partilhados reservados por outra tarefa. Confirmar no APK que o Exame 30 existe e contém as 25 perguntas antes de iniciar; se a fonte não permitir confirmar, registar a limitação e consultar o dono. Trabalhar pela sequência dos exames e comparar com os exames anteriores já concluídos.
+
 
 ## Programa de conteúdo original — Exames 31 a 50
 
@@ -284,6 +315,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Validação: executar `node scripts/validar-exames.js`, conferir manualmente a rastreabilidade legal das 25 perguntas, verificar ausência de duplicações e testar abertura/revisão do exame. O validador automático não substitui a revisão jurídica e pedagógica.
 - Não reservar várias tarefas de uma vez. Cada sessão escolhe apenas uma tarefa LIVRE, lê `INSTRUCOES.md`, confirma a reserva remota e trabalha exclusivamente nos ficheiros atribuídos.
 
+
 ## DADOS-034 — Exame 33 (conteúdo original)
 - Estado: EM CURSO — ChatGPT-ESTRADA-3 — 2026-11-13 18:34 UTC+02 — ficheiros: data/exames/exame33.js, docs/referencias-exames/exame33-mapeamento.md — último sinal: 2026-11-13 18:34 UTC+02
 - Foco temático prioritário: Cruzamentos, entroncamentos e rotundas.
@@ -292,6 +324,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: existem 25 perguntas originais, cada uma com quatro alternativas, uma resposta correcta, explicação curta e referência normativa específica; não há duplicações com os exames 1–30 nem com os restantes 31–50; imagens/sinais têm correspondência comprovada; validador automático passa; revisão legal e pedagógica e teste funcional foram realizados.
 - Cuidados: não usar o APK como fonte de perguntas; não copiar perguntas de outros bancos; não inventar artigos, sinais, multas ou procedimentos; confirmar a versão vigente da legislação; registar no mapa qualquer dúvida ou lacuna e não marcar como validada sem prova. Cumprir integralmente o fluxo de avaliação de `REGRAS.md`.
 - Parcial: Exame 33 e mapa publicados no commit `277ea65906255a5411ba0a27d7edda0ae9e04c6f`. Existem 25 perguntas, quatro alternativas, explicações e referências legais; distribuição A=7/B=6/C=6/D=6. Revisão inicial confrontada com o PDF do Código da Estrada publicado pelo INATRO. Verificação estrutural remota passou; GitHub Actions run 43464027675 ainda estava em execução na última consulta. Teste de navegador e revisão profissional permanecem pendentes. A originalidade foi comparada com os exames publicados acessíveis, mas deve ser revista quando os exames 1–30 estiverem completos.
+
 
 
 
@@ -304,6 +337,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Originalidade: comparação com o Exame 1 e todos os Exames 31–51 publicados; as duas sobreposições detectadas foram corrigidas. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
 - Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. GitHub Actions run 43466155796 aprovado (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações publicadas.
 
+
 ## DADOS-038 — Exame 37 (conteúdo original)
 - Estado: LIVRE
 - Foco: paragem, estacionamento e imobilização.
@@ -313,6 +347,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Originalidade: comparação com o Exame 1 e todos os Exames 31–51 publicados; foram identificadas e reformuladas as antigas perguntas 9, 12, 15 e 21 por sobreposição com competências já testadas. A comparação com os Exames 2–30 fica para quando forem incorporados a partir do aplicativo original.
 - Falta: teste funcional no navegador pelo dono; comparação com os Exames 2–30 quando forem incorporados a partir do aplicativo original. GitHub Actions run 43466423355 aprovado (sintaxe JS, teste de assinaturas e validador oficial). A tarefa fica LIVRE para retomar os pontos pendentes sem refazer as alterações publicadas.
 
+
 ## DADOS-039 — Exame 38 (conteúdo original)
 - Estado: LIVRE
 - Foco temático prioritário: Passagem de peões e convivência com utilizadores vulneráveis.
@@ -321,6 +356,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: 25 perguntas originais com quatro alternativas, uma resposta correcta, explicação e referência normativa específica; validador oficial aprovado; revisão legal/pedagógica concluída; teste funcional no navegador confirmado pelo dono.
 - Cuidados: não inventar artigos, sinais, multas ou procedimentos; documentar as limitações da verificação da vigência; não alterar ficheiros partilhados reservados.
 - Parcial: ficheiro do exame e mapa publicados no commit `bf8f8b29db2b1e103a2476debea6a83ccedfbac5`. GitHub Actions aprovado no run 43449364995 (sintaxe JS, teste de assinaturas e validador oficial). A comparação com os Exames 31–51 identificou sobreposição de seis competências com o bloco de peões do Exame 44 (perguntas 1, 2, 6, 8, 9 e 25); o Exame 38 mantém-se como exame dedicado a peões e a substituição será feita no Exame 44, tarefa DADOS-045. A tarefa fica LIVRE para retomar depois dessa harmonização; teste funcional no navegador pelo dono continua pendente.
+
 
 ## DADOS-058 — Auditoria de duplicações nos Exames 40–50
 - Estado: LIVRE
@@ -343,6 +379,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 
 
 
+
 ## DADOS-065 — Reformular o Exame 38 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 38 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
@@ -350,6 +387,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Medir antes e depois: `node scripts/auditar-estilo.js 38`.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
 
 ## DADOS-066 — Reformular o Exame 39 (situações, sem artigos)
 - Estado: LIVRE
@@ -359,6 +397,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
+
 ## DADOS-067 — Reformular o Exame 40 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 40 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
@@ -366,6 +405,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Medir antes e depois: `node scripts/auditar-estilo.js 40`.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
 
 ## DADOS-068 — Reformular o Exame 41 (situações, sem artigos)
 - Estado: LIVRE
@@ -375,6 +415,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
+
 ## DADOS-069 — Reformular o Exame 42 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 42 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
@@ -382,6 +423,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Medir antes e depois: `node scripts/auditar-estilo.js 42`.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
 
 ## DADOS-070 — Reformular o Exame 43 (situações, sem artigos)
 - Estado: LIVRE
@@ -391,6 +433,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
+
 ## DADOS-071 — Reformular o Exame 44 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 44 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
@@ -398,6 +441,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Medir antes e depois: `node scripts/auditar-estilo.js 44`.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
 
 ## DADOS-072 — Reformular o Exame 45 (situações, sem artigos)
 - Estado: LIVRE
@@ -407,6 +451,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
+
 ## DADOS-073 — Reformular o Exame 46 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 46 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
@@ -414,6 +459,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Medir antes e depois: `node scripts/auditar-estilo.js 46`.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
 
 ## DADOS-074 — Reformular o Exame 47 (situações, sem artigos)
 - Estado: LIVRE
@@ -423,6 +469,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
+
 ## DADOS-075 — Reformular o Exame 48 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 48 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
@@ -430,6 +477,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Medir antes e depois: `node scripts/auditar-estilo.js 48`.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
 
 ## DADOS-076 — Reformular o Exame 49 (situações, sem artigos)
 - Estado: LIVRE
@@ -439,6 +487,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
+
 ## DADOS-077 — Reformular o Exame 50 (situações, sem artigos)
 - Estado: LIVRE
 - Pedido: reescrever as 25 perguntas e explicações do Exame 50 como o dono quer: **cada pergunta é uma situação do dia-a-dia**, nunca «Segundo o Código…» nem artigos; as explicações ensinam o que fazer e porquê, sem citar artigos; os artigos ficam só no mapa. Modelos: Exames 34 e 35 e Exames 1–30. Regras completas em `docs/GUIA-PERGUNTAS.md`.
@@ -446,6 +495,7 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Medir antes e depois: `node scripts/auditar-estilo.js 50`.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
+
 
 ## DADOS-078 — Reformular o Exame 51 (situações, sem artigos)
 - Estado: LIVRE
@@ -455,11 +505,53 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: o auditor não marca «rever» (artigos 0, «Segundo o Código» 0, certa+mais longa ≤ 6, posições equilibradas e não cíclicas), o validador passa, os temas e a ordem das perguntas se mantêm (ou o mapa é actualizado), e a tarefa é removida daqui com linha CONCLUÍDA no `HISTORICO.md`.
 - Cuidados: confirmar cada resposta no Código; sem multas; se houver outra tarefa reservada para este exame (DADOS-037 a 062), coordenar e não duplicar.
 
+
 ## DADOS-062 — Equilibrar extensão das alternativas do Exame 1
 - Estado: EM CURSO — ChatGPT-ESTRADA-6 — 2026-11-13 23:11 UTC+02 — ficheiros: data/exames/exame1.js, data/exames/PENDENTE.md — último sinal: 2026-11-13 23:12 UTC+02
 - Pedido: ajustar somente a formulação textual das alternativas do Exame 1 para eliminar a tendência de a resposta correcta ser a mais longa.
 - Limites obrigatórios: não alterar enunciados, resposta correcta, índice da resposta, sentido jurídico, conteúdo essencial, contexto, tema, dificuldade, explicações, imagens nem a ordem das perguntas. Não criar uma segunda resposta correcta. Reformular apenas palavras das alternativas, mantendo exactamente a mesma ideia de cada uma; alternativas podem ter comprimentos iguais. Não alterar a resposta correcta apenas para manipular o padrão.
 - Parcial: 17 alternativas foram reformuladas apenas na linguagem. Commit publicado e confirmado: `7714408f2d48e583131b3a3decb2a6049890ed85`. Verificação remota: 25 perguntas, quatro opções por pergunta; todos os índices correctos preservados; nenhum enunciado, explicação, imagem, tema, dificuldade, numeração ou outro campo foi alterado. Nenhuma resposta correcta é a única alternativa mais longa; nas perguntas 1, 11 e 23 há apenas empate no maior comprimento. O estado CI/status ainda não foi devolvido pelo GitHub; não declarar a tarefa concluída até essa verificação.
+
+
+## DADOS-079 — Auditoria de correspondência e qualidade dos sinais nos Exames 1–30
+- Estado: EM CURSO — ChatGPT-ESTRADA-SIGNALS1 — 2026-11-22 — ficheiros: data/exames/exame1.js a exame30.js (apenas imagens), docs/referencias-exames/, public/sinais/, docs/referencia-sinais.md, scripts/auditar-sinais-pdf.py, .github/workflows/auditar-sinais-pdf.yml, data/exames/PENDENTE.md, HISTORICO.md — último sinal: 2026-11-22T09:01+02:00 — substituições adicionais confirmadas em Exames 3, 9 e 15; seis recortes do PDF a 600 DPI revistos visualmente; auditoria completa dos restantes sinais dos Exames 1–30 ainda em curso; sem alterações a enunciados, alternativas, respostas ou explicações.
+- Pedido: verificar todas as perguntas dos Exames 1–30 que dependem da identificação de sinais de trânsito. Quando existir correspondência exacta no PDF oficial de Sinais de Trânsito, substituir a imagem antiga/baixa qualidade por um recorte de alta qualidade extraído directamente de `original/referencia/sinais.pdf`. Não substituir fotografias de situações rodoviárias, marcas no pavimento, esquemas ou placas complexas por um sinal isolado se isso alterar o contexto necessário à pergunta.
+- Trabalho anterior a preservar: GER-018 já substituiu 24 perguntas dos Exames 1–24 com 34 correspondências confirmadas; 43 imagens foram mantidas por não haver correspondência fiável. GER-016 substituiu 11 sinais nos Exames 25–30. Começar por auditar o que já existe, sem refazer imagens de boa qualidade.
+- Parcial (2026-11-21, ChatGPT-ESTRADA-SIGNALS1): 25 substituições confirmadas e publicadas. Exame 6: Q7 E50 (p.29), Q15 E12 (p.26), Q22 D79 (p.24). Exame 18: Q3 E37 (p.28), Q12 A51 (p.5), Q16 A1 (p.3). Exame 19: Q2 e Q20 A19 (p.4), Q17 E37 (p.28), Q18 A8 (p.3), Q23 E50 (p.29; divergência da chave registada). Exame 20: Q6 A37 (p.4), Q7 A18 (p.4), Q16 A19 (p.4). Exame 21: Q14 G11 (p.35). Exame 22: Q2 G62 (p.37). Exame 23: Q1 A1 (p.3). Exame 24: Q10 E51 (p.29), Q17 A19 (p.4), Q18 A46 (p.5). Exame 25: Q18 E19 (p.27). Exame 30: Q1 E5 (p.26, JPEG qualidade 96 no caminho legado exigido pelo teste), Q13 A19 (p.4), Q21 A48 (p.5), Q22 G26 (p.36). Os recortes vectoriais novos estão em `public/sinais/*-600dpi.png`; os mapas dos dez exames foram actualizados. A auditoria visual do PDF completo (69 páginas) foi gerada pelo workflow `Auditar PDF de sinais`, run 44939772077, artefacto `auditoria-pdf-sinais` (ID 14720074389). O CI `Validar exames` e `Validar definições` passou no commit 9f345920. Não foram alterados enunciados, alternativas, respostas ou explicações.
+- Divergência detectada: Exame 6, pergunta 20. O mapa antigo identificava M3, mas a imagem actual é um painel quadrado azul com seta branca para cima e seta vermelha para baixo; o M3 no PDF é circular, com setas vermelha/preta. Mantida a imagem até identificar o sinal exacto.
+- Candidatos encontrados em ficheiros com tarefas EM CURSO (não alterados): Exame 8, pergunta 3 (possível G13); Exame 9, pergunta 25 (possível G11); Exame 10, pergunta 1 (possível recorte `pdf-p51-x29-y189.png`); Exame 15, pergunta 2 (possível recorte `pdf-p55-x164-y18.png`). Coordenar com as sessões responsáveis antes de alterar.
+- O workflow `Auditar PDF de sinais` renderizou as 69 páginas e publicou folhas de contacto, `layout.json` e recortes vectoriais PNG a 600 DPI. Os recortes foram conferidos visualmente e as coordenadas refinadas para remover legendas/sinais adjacentes. A execução final consultada é o run 44939772077 (SUCCESS), artefacto ID 14720074389. O workflow foi serializado por `concurrency` para evitar conflitos de publicação.
+- Correspondências confirmadas fora das reservas activas foram integradas conforme a lista parcial acima. Candidatos preservados por dependerem de contexto ou não coincidirem exactamente com o PDF: Exame 6 Q20 (painel quadrado azul diverge do M3); Exame 18 Q9 (A9 com painel adicional «60 m»); Exame 19 Q21 (placa direccional com nomes de localidades) e Q17 foi substituído por E37; Exame 20 Q9 (D14 com painel «8 km») e Q23 (placa direccional composta N2/N4); Exame 21 Q2/Q17 (cenas/painel amarelo sem correspondência exacta); Exame 23 Q10 (sinal azul de peões sem correspondência identificada no PDF); Exame 24 Q1 (placa amarela de estacionamento de camiões, não equivalente ao painel azul G24); Exame 30 Q19 (sinal de descida com painel adicional «8 km»). Exame 19 Q23: a imagem é E50, mas o mapa de extracção indica B («Estacionamento proibido») e o JS marca A («Paragem e estacionamento proibidos»); divergência registada sem alterar a resposta.
+- Candidatos iniciais a verificar (não assumir correspondência sem comparação visual): Exame 2 — perguntas 2 (F13), 8 (E3), 9 (limite 120 km/h com painel), 13 (G14), 17 (placa verde de direcção), 20 (D27), 22 (D62) e 23 (E50); Exame 3 — perguntas 3 (E50), 6 (D63), 7 (sinal de localidade), 12 (D68), 13 (D14 com painel), 17 (F54), 21 (E5) e 25 (G27). Verificar também os restantes exames, 1–30.
+- Onde mexer: `data/exames/exame1.js` a `exame30.js` (apenas `imagem.src`/descrição quando a correspondência for confirmada), mapas `docs/referencias-exames/exame1-mapeamento.md` a `exame30-mapeamento.md`, `public/sinais/` e `docs/referencia-sinais.md`. Usar a cópia de trabalho local para ler/renderizar o PDF e gerar ficheiros binários; não redesenhar os sinais.
+- Pronto quando: cada pergunta com sinal isolado tiver correspondência verificada ou motivo documentado para manter a imagem actual; recortes do PDF com resolução suficiente (600 ppp ou vectorial quando possível), sem distorção, fundo/cores preservados; código, designação e página registados no mapa; todas as referências carregam; validador e CI passam; nenhuma pergunta, resposta ou explicação é alterada fora do estritamente necessário.
+- Cuidados: preservar fotografias de cenas, marcas rodoviárias, placas de direcção e esquemas quando forem essenciais ao enunciado. Não inventar correspondências. A autorização expressa do dono nesta conversa abrange apenas a auditoria e substituição das imagens de sinais dos Exames 1–30; preservar integralmente todas as restantes alterações e coordenar qualquer conflito com tarefas de conteúdo ainda EM CURSO.
+- Actualização (2026-11-21, continuação directa ChatGPT-ESTRADA-SIGNALS1): no Exame 5, perguntas 3 (D79), 9 (E12) e 12 (G62), substituídas as referências antigas pelos recortes vectoriais oficiais `*-sinal-pdf-600dpi.png`; comparação visual confirmou equivalência exacta. Actualizados `data/exames/exame5.js` e `docs/referencias-exames/exame5-mapeamento.md` (commits `9163729` e `bf3d53e`). Corrigido `scripts/auditar-sinais-pdf.py`: as coordenadas da lista `CROPS` são pixels da pré-visualização a 160 DPI e passam a ser convertidas com `render_crop`; os novos ficheiros são criados com sufixo `-600dpi.png`, sem sobrescrever originais. Workflow alterado para extrair também esta lista e preservar recortes gerados em concorrência. Run 44948568082 ainda em execução na última consulta. O workflow `Validar exames` no commit `f2ce87a` falhou antes do validador oficial, no teste E2E da primeira pergunta do Exame 27 (`scripts/testar-fluxo.js:220`); falha fora dos ficheiros desta intervenção, requer coordenação com a sessão responsável pelo Exame 27. Não declarar DADOS-079 concluída.
+
+- Correcção operacional (2026-11-21): a primeira execução alargada gerou os 49 recortes com sucesso, mas falhou na publicação porque o `find -exec` ficou mal escapado no YAML. Corrigido para um ciclo `for` simples e ampliado o `git add` para `*-600dpi.png`; nova execução do workflow `Auditar PDF de sinais`, run 44948692198, estava em execução. Não foram perdidos nem publicados ficheiros na tentativa falhada.
+
+
+- Actualização (2026-11-22, continuação directa ChatGPT-ESTRADA-SIGNALS1): o workflow `Auditar PDF de sinais` run 44948692198 terminou com SUCCESS e publicou os recortes a 600 DPI (commit automático `e91dc8c`). Foram conferidos visualmente e integrados no Exame 2 os recortes exactos F13 (Q2, p.31), E3 (Q8, p.26), sinal combinado de 120 km/h durante o dia (Q9, p.18), D27 (Q20, p.22), D62 (Q22, p.24) e E50 (Q23, p.29). Actualizados apenas `imagem.src` e o mapa de rastreabilidade; perguntas, opções, respostas e explicações permanecem inalteradas. Commits `8ee468b` (Exame 2) e `15ed132` (mapa). G13 (Q13) e a placa direccional composta (Q17) foram preservados: não há recorte de alta resolução confirmado para G13 na lista extraída e a placa direccional depende do contexto completo. Prosseguir a auditoria visual dos restantes sinais dos Exames 1–30, sem tocar em ficheiros reservados por outras tarefas.
+
+- Actualização DADOS-079 (2026-11-22): a extracção vectorial do PDF foi alargada e publicada a 600 DPI (workflow commit `dd0e64b`, além de `69c1260`). Foram substituídos/actualizados sinais isolados nos Exames 1 (G11, E1, E47), 2 (F13, E3, painel combinado 120 km/h diurno, G13, D27, D62, E50), 7 (painel amarelo de área reservada a veículos de emergência e parque de 60 min; o painel com losango 12 foi preservado por ser variante diferente) e 17 (G13, painel N4 de saída de auto-estrada, A50, painel de estacionamento para alta tonelagem, F50 e A9). No Exame 5 mantêm-se as três substituições anteriores D79/E12/G62. Os recortes foram comparados visualmente com o PDF; recortes com legendas/elementos adjacentes foram afinados antes de publicação. Foram mantidas fotografias, painéis compostos e variantes que não coincidem exactamente. Referências de todas as novas imagens verificadas contra a árvore Git: sem ficheiros em falta. Exames 1, 2, 5, 7 e 17 verificados; auditoria dos restantes Exames 1–30 continua EM CURSO. Não tocar nos exames reservados por outras sessões.
+
+- DADOS-079 — pendência de publicação (2026-11-22): foram acrescentados ao extractor os recortes A47 (Exame 7, PDF p. 5) e G63 (Exame 6, PDF p. 37). O workflow `Auditar PDF de sinais` run `44983205289` está a executar a extracção a 600 DPI; até confirmar os ficheiros no GitHub, as perguntas 22 do Exame 7 e 25 do Exame 6 mantêm as imagens anteriores, sem referências para ficheiros inexistentes. A47 foi afinado para excluir a legenda do PDF. Não tocar noutras tarefas.
+
+- DADOS-079 — actualização (2026-11-22): o workflow `Auditar PDF de sinais` run `44983205289` terminou com SUCCESS; os recortes A47 (p. 5) e G63 (p. 37) foram publicados e conferidos visualmente. Actualizadas as imagens das perguntas 22 do Exame 7 (A47) e 25 do Exame 6 (G63), e respectivos mapas. Autorização do dono nesta conversa alargou explicitamente o âmbito operacional para permitir concluir substituições de sinais também em ficheiros que estavam reservados por outras sessões, mantendo a intervenção limitada às imagens de sinais dos Exames 1–30. A auditoria dos restantes exames continua.
+
+- DADOS-079 — continuação (2026-11-22): após autorização expressa do dono para trabalhar também em ficheiros anteriormente reservados, foram actualizados sinais adicionais: Exame 3 Q3 (E50), Q6 (D63) e Q12 (D68), com recortes do PDF a 600 DPI; Exame 6 Q25 e Exame 26 Q19, Exame 27 Q25 e Exame 28 Q8 (G63); Exame 7 Q22 e Exame 19 Q4 (A47); Exame 21 Q14 (G11); Exame 15 Q23 (E36). Mapas dos Exames 6, 7, 15, 19, 21, 26, 27 e 28 actualizados; o mapa do Exame 3 ainda não existe e a sua criação permanece fora desta intervenção de imagens. Foram preservados sinais compostos, placas com destinos/valores adicionais e fotografias que são parte essencial da situação. CI: `Validar definições` SUCCESS; `Validar exames` continua a falhar antes do validador oficial em `scripts/testar-fluxo.js:220` por não apresentar a imagem da primeira pergunta do Exame 27; falha já observada antes destas alterações e fora do escopo de imagens aqui substituídas.
+
+
+- Revisão final adicional (2026-11-22): confirmados como já nítidos/extraídos do PDF e mantidos, sem nova substituição, Exame 16 Q8 (A7), Q23 (F13); Exame 13 Q10 (E33) e Q17; Exame 14 Q3 (A61) e Q12; Exame 21 Q7 (D16); Exame 22 Q8 (A14) e Q11 (A7); Exame 23 Q11 (A48); Exame 24 Q3 (A62), Q22 (J80) e Q24 (G88). Preservados por dependerem de contexto ou por não terem correspondência isolada exacta: Exame 16 Q3 (placa direccional composta), Q9 (sinal temporário amarelo não equivalente ao sinal permanente do PDF), Q11 (fotografia contextual com sinalização temporária) e Q20 (limitação física/altura em contexto); Exame 21 Q6 (painel composto com proibição e painel adicional), Q2/Q17 (imagens de contexto); Exame 23 Q10 (sinal azul de peões sem correspondência exacta); Exame 24 Q1 (painel amarelo específico de estacionamento de camiões). Estes casos não devem ser substituídos por sinais isolados apenas semelhantes.
+
+- DADOS-079 — refinamento visual (2026-11-22): Exame 8 Q3 (G13) e Exame 16 Q23 (F13) actualizados para recortes PDF oficiais a 600 DPI. No Exame 3, Q3 (E50) e Q6 (D63) permanecem actualizados; Q12 (D68) foi revertida para a fotografia original porque o recorte PDF disponível inclui legenda e corta parte do sinal. No Exame 15 Q23 (E36), a substituição foi revertida pela mesma razão: o recorte existente corta margens do sinal. Estes dois sinais ficam pendentes de nova extracção com coordenadas corrigidas; não apresentar recortes incompletos.
+
+- DADOS-079 — actualização adicional (2026-11-22): Exame 8 Q3 (G13) e Exame 16 Q23 (F13) substituídos por recortes oficiais a 600 DPI; Exame 30 Q1 (E5) passou a usar o recorte vectorial do PDF já disponível. No Exame 3 Q12 (D68) e Exame 15 Q23 (E36), os recortes de 600 DPI disponíveis foram considerados incompletos (legenda/margens cortadas) e as imagens originais foram mantidas. Pendências visuais que exigem novo recorte ou preservação contextual: Exame 3 Q7 (placa de fim de localidade com nome), Q13 (D14 + painel 8 km), Q25 (G27 em contexto); Exame 6 Q20 (painel de prioridade diferente do M3); Exame 7 Q20 (variante com losango 12); Exame 9 Q6 (sinal de cruzamento com trânsito nos dois sentidos, código/recorte ainda por confirmar); Exame 15 Q11 (D12) e Q12 (G86) sem recorte PDF exacto disponível; Exame 18 Q9 (A9 + painel 60 m); Exame 19 Q21 (placa direccional com destinos); Exame 20 Q9 (D14 + painel 8 km) e Q23 (placa composta); Exame 21 Q2/Q17 (imagens de contexto); Exame 23 Q10 (sinal azul de peões sem correspondência identificada); Exame 24 Q1 (painel amarelo de estacionamento de camiões); Exame 30 Q19 (D14 + painel 8 km). Não substituir estas imagens por sinais isolados semelhantes.
+- Actualização (2026-11-22, ChatGPT-ESTRADA-SIGNALS1): corrigidas as coordenadas de extracção dos recortes D12 (p. 21), D64 e D68 (p. 24), E36 (p. 28), G27 (p. 36) e G86 (p. 39) no `scripts/auditar-sinais-pdf.py`. Os seis PNG oficiais a 600 DPI foram publicados em `public/sinais/` e inspeccionados: cada sinal está completo, centrado e sem legenda ou sinal adjacente. Aplicados: Exame 3 Q12 (D68) e Q25 (G27); Exame 9 Q6 (D64); Exame 15 Q11 (D12), Q12 (G86) e Q23 (E36). Actualizados os mapas dos Exames 9 e 15. Apenas `imagem.src` e rastreabilidade foram alterados; enunciados, opções, respostas e explicações mantidos. O mapa do Exame 3 continua por criar por estar fora desta intervenção estrita de imagens.
+
+
+- DADOS-079 — correcção de estado (2026-11-22): a actualização posterior desta secção prevalece sobre a lista histórica de pendências imediatamente anterior. Os itens entretanto resolvidos são: Exame 3 Q12 (D68) e Q25 (G27); Exame 9 Q6 (D64); Exame 15 Q11 (D12), Q12 (G86) e Q23 (E36). Os seis recortes foram gerados e publicados a 600 DPI pelo workflow `Auditar PDF de sinais` run `44985471327` (SUCCESS), e as referências nos três ficheiros de exame apontam para os novos PNG. Criado `docs/referencias-exames/exame3-mapeamento.md` para rastreabilidade. Permanecem deliberadamente preservadas as placas compostas, os painéis adicionais e as fotografias de contexto sem correspondência exacta no PDF; não são falhas de substituição nem devem ser convertidas em sinais isolados.
+
 
 ## DADOS-080 — Sinais do PDF nas perguntas que precisam deles dos Exames 36, 37 e 39
 - Estado: EM CURSO — Claude-SINAIS-35-39 — 2026-11-22 09:08 UTC+02 — ficheiros: data/exames/exame36.js, exame37.js, exame39.js (só o campo `imagem`), docs/referencias-exames/exame36-mapeamento.md, exame37-mapeamento.md, exame39-mapeamento.md, public/sinais/ (ficheiros novos) — último sinal: 2026-11-22 09:08 UTC+02 — pedido pelo dono (22/11/2026)
@@ -468,10 +560,12 @@ Use `exame1.js` como modelo do formato e do nível de adaptação.
 - Pronto quando: as 14 perguntas têm `imagem` com o sinal do PDF, o validador passa, o mapa de cada exame regista a pergunta, o sinal (código, designação, página) e o ficheiro, e as imagens carregam no navegador.
 - Cuidados: não alterar enunciados, alternativas nem respostas; não mexer nas perguntas opcionais sem autorização do dono.
 
+
 ## DADOS-082 — Sinais do PDF nos Exames 40, 41 e 42
 - Estado: EM CURSO — Claude-SINAIS-40-42 — 2026-11-25 01:30 UTC — ficheiros: só o campo `imagem` em data/exames/exame40.js, exame41.js e exame42.js, docs/referencias-exames/exame40-mapeamento.md, exame41-mapeamento.md e exame42-mapeamento.md, public/sinais/ (ficheiros novos) — último sinal: 2026-11-25 01:30 UTC — pedido pelo dono (24/11/2026)
 - Pedido: dos Exames 39 a 44, dizer quais perguntas têm ou deviam ter um sinal de trânsito e não têm, e integrar o sinal extraído de `original/referencia/sinais.pdf`, sem legenda, como em DADOS-079 a DADOS-081.
 - Resultado da análise (150 perguntas lidas): o Exame 39 já está na DADOS-080 (reserva de outra sessão, sem movimento desde 22/11; não é tocado aqui); os Exames 43 (luzes do veículo) e 44 (passageiros, carga e animais) não precisam de sinal; precisam os Exames 40, 41 e 42, que não têm nenhuma imagem.
 - Pronto quando: as perguntas que precisam de sinal têm `imagem` com o sinal do PDF, o validador passa, o mapa de cada exame regista pergunta, sinal (código, designação, página) e ficheiro, e as imagens carregam no navegador.
 - Cuidados: não alterar enunciados, alternativas, respostas nem explicações; reutilizar ficheiros já existentes em `public/sinais/` em vez de criar cópias; quando o número do sinal do PDF não coincidir com o da pergunta, não inventar imagem e assinalar no mapa.
+
 

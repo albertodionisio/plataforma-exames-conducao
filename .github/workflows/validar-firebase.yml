@@ -1,0 +1,39 @@
+name: Validar integração Firebase
+on:
+  push:
+    branches: [main, "feat/firebase-full-migration"]
+  pull_request:
+    branches: [main]
+jobs:
+  firebase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Verificar sintaxe da API de pagamentos
+        run: |
+          node --check lib/epay.js
+          node --check lib/email-validation.js
+          node --check api/auth/email-check.js
+          node --check api/payments/create.js
+          node --check api/payments/callback.js
+          node --check api/payments/webhook.js
+          node --check api/payments/status.js
+      - name: Testar integração ePay (sem chamadas externas)
+        run: node scripts/testar-epay.js
+      - name: Testar validação de emails (sem chamadas externas)
+        run: node scripts/testar-email-validation.js
+      - name: Validar configuração e integração Firebase
+        run: node scripts/testar-firebase.js
+      - name: Instalar dependências temporárias do Emulator Suite
+        run: npm install --no-save --package-lock=false 'firebase@^12' '@firebase/rules-unit-testing@^5' firebase-tools
+      - name: Testar autenticação por telefone
+        run: node scripts/testar-auth-telefone.js
+      - name: Testar Authentication e Firestore nos emuladores isolados
+        run: npx firebase-tools emulators:exec --only auth,firestore --project demo-estrada --config firebase.emulator.json "node scripts/testar-auth-firebase.js && node scripts/testar-regras-firestore.js"

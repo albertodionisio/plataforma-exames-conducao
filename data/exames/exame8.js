@@ -51,7 +51,7 @@ window.EXAMES[8] = [
     "explicacao": "O sinal identifica uma área reservada à utilização de táxis. Não indica o início de uma faixa de circulação exclusiva nem um parque de estacionamento geral.",
     "imagem": {
       "descricao": "Sinal azul de informação relativo a uma área reservada para táxis.",
-      "src": "public/exames/exame8/exame8_3.jpg"
+      "src": "public/sinais/G13-sinal-pdf-600dpi.png"
     }
   },
   {

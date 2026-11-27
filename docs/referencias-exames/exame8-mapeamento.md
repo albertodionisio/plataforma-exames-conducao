@@ -41,7 +41,7 @@ Conteúdo adaptado das 25 perguntas recuperadas em `original/extraido/exame8.jso
 |---:|---|---|:---:|:---:|---|
 | 1 | Manobras perigosas na via pública | Art. 147, n.º 1, al. c) | C | A | exame8_1.jpg. Reformulada para atitude segura perante manobras exibicionistas; evita repetir a pergunta de classificação do Exame 5, pergunta 13. |
 | 2 | Definição de cruzamento | Anexo I — Glossário, definição de «Cruzamento» | C | C | exame8_2.jpg. Chave mantida. |
-| 3 | Área reservada para táxis | Regulamento de Sinais, quadro VII — G13 | A | A | exame8_3.jpg. Chave mantida; o sinal corresponde a área reservada para táxis, não a parque de estacionamento (G14). |
+| 3 | Área reservada para táxis | Regulamento de Sinais, quadro VII — G13 | A | A | G13-sinal-pdf-600dpi.png. Chave mantida; o sinal corresponde a área reservada para táxis, não a parque de estacionamento (G14). |
 | 4 | Controlo de tráfego adiante | Regulamento de Sinais, quadro II — A14 | B | B | exame8_4.jpg. Chave mantida. |
 | 5 | Cedência de passagem na rotunda | Art. 39, n.º 1, al. d) | A | D | exame8_5.jpg. Conteúdo correcto do APK reposicionado em D: quem entra na rotunda cede passagem a quem já circula nela. |
 | 6 | Limite de álcool no ar expirado e no sangue | Art. 81, n.º 3 | B | B | exame8_6.jpg. Chave confirmada; unidades mantidas conforme o texto do Código consultado. |
@@ -72,3 +72,6 @@ Conteúdo adaptado das 25 perguntas recuperadas em `original/extraido/exame8.jso
 - Na pergunta 8, a designação INATTER do APK foi actualizada para INATRO, nome da entidade actualmente responsável.
 - Na pergunta 18, a chave A do APK foi rejeitada: a imagem representa uma via de sentido único, não uma obrigação de seguir em frente.
 - Na pergunta 17, a chave B do APK foi mantida em conteúdo: a pergunta foi reformulada para avaliar quando a entrada da rotunda está livre e não exige paragem desnecessária.
+
+
+DADOS-079 (2026-11-22): a imagem da pergunta 3 (G13 — área reservada para táxis) foi substituída pela extracção vectorial do PDF oficial, página 35, a 600 DPI. Correspondência exacta confirmada; conteúdo da pergunta mantido.

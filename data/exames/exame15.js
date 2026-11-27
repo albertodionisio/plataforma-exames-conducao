@@ -188,7 +188,7 @@ window.EXAMES[15] = [
     "enunciado": "O que indica o sinal da imagem?",
     "imagem": {
       "descricao": "Sinal D12 (túnel), triângulo de bordo vermelho com a entrada de um túnel e dois veículos",
-      "src": "public/exames/exame15/exame15_11.jpg"
+      "src": "public/sinais/D12-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Visibilidade reduzida.",
@@ -206,7 +206,7 @@ window.EXAMES[15] = [
     "enunciado": "O que informa o sinal da imagem?",
     "imagem": {
       "descricao": "Sinal G86 (via de sentido único), rectângulo azul com seta em frente, numa rua",
-      "src": "public/exames/exame15/exame15_12.jpg"
+      "src": "public/sinais/G86-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Que o sentido é obrigatório em frente.",
@@ -404,7 +404,7 @@ window.EXAMES[15] = [
     "enunciado": "O que indica o sinal da imagem?",
     "imagem": {
       "descricao": "Sinal E36 (trânsito proibido a veículos que transportam substâncias perigosas)",
-      "src": "public/exames/exame15/exame15_23.jpg"
+      "src": "public/sinais/E36-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido a veículos que levam reboque.",

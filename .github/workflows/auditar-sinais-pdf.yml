@@ -1,0 +1,76 @@
+name: Auditar PDF de sinais
+
+on:
+  push:
+    branches:
+      - feat/firebase-full-migration
+    paths:
+      - scripts/auditar-sinais-pdf.py
+      - .github/workflows/auditar-sinais-pdf.yml
+      - original/referencia/sinais.pdf
+  workflow_dispatch:
+
+concurrency:
+  group: auditar-sinais-pdf-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  renderizar-pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+        with:
+          ref: feat/firebase-full-migration
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências de auditoria
+        run: python -m pip install --disable-pip-version-check PyMuPDF Pillow
+
+      - name: Renderizar páginas e extrair sinais confirmados
+        run: |
+          echo "DADOS-079: gerar e publicar os recortes exactos do PDF oficial a 600 DPI"
+          python scripts/auditar-sinais-pdf.py --dpi 160 --contact-dpi 100 --crop-dpi 600 --extract-crops --extract-dados079-crops --overwrite-crops --extract-vector-review
+
+      - name: Publicar recortes sem perder alterações concorrentes
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p /tmp/dados079-crops
+          for file in public/sinais/*-600dpi.png; do
+            if [ -f "$file" ]; then cp "$file" /tmp/dados079-crops/; fi
+          done
+          for attempt in 1 2 3; do
+            git fetch origin feat/firebase-full-migration
+            git reset --hard origin/feat/firebase-full-migration
+            cp /tmp/dados079-crops/*.png public/sinais/
+            git add public/sinais/*-600dpi.png public/exames/exame30/exame30_1.jpg
+            if git diff --cached --quiet; then
+              echo "Os recortes já estão actualizados no ramo."
+              exit 0
+            fi
+            git commit -m "DADOS-079: extrair sinais confirmados do PDF a 600 DPI"
+            if git push origin HEAD:feat/firebase-full-migration; then
+              exit 0
+            fi
+            echo "O ramo avançou durante o push; repetir sobre o HEAD mais recente (tentativa $attempt)."
+          done
+          echo "Não foi possível publicar os recortes após três tentativas."
+          exit 1
+
+      - name: Publicar material de revisão
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-pdf-sinais
+          path: artifacts/sinais-pdf/
+          if-no-files-found: error
+          retention-days: 7

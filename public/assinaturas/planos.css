@@ -14,6 +14,9 @@
 .plano-topo{display:flex;flex-direction:column;gap:4px}
 .plano-nome{margin:0;color:#14284b;font-size:1.3rem;line-height:1.25;font-weight:700}
 .plano-validade{display:inline-block;color:#6b7280;font:600 .84rem/1.4 Arial,sans-serif}
+.plano-selo-activo{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;margin-top:8px;padding:5px 9px;border:1px solid #3f6b4f;border-radius:999px;background:#e8f1ea;color:#28543a;font:800 .7rem/1.2 Arial,sans-serif;letter-spacing:.06em}
+.plano-selo-activo:before{content:"";width:7px;height:7px;border-radius:50%;background:#3f6b4f;flex:0 0 7px}
+.plano-cartao-activo{border-color:#3f6b4f}
 .plano-preco{display:block;margin:18px 0 2px;color:#17243a;font:800 1.9rem/1.1 Arial,sans-serif;letter-spacing:-.04em}
 .plano-periodicidade{display:block;min-height:38px;margin:5px 0 17px;color:#626a78;font:600 .9rem/1.4 Arial,sans-serif}
 .plano-beneficios-titulo{margin:0 0 10px;padding-top:14px;border-top:1px solid #e7e4dc;color:#343b46;font-size:.95rem;line-height:1.3}
@@ -30,3 +33,15 @@
 .assinaturas-nota{margin:18px 0 0;color:#737b86;text-align:center;font-size:.8rem}
 @media(max-width:620px){.assinaturas-pagina{padding:22px 12px 34px}.assinaturas-lista{grid-template-columns:1fr;gap:12px}.plano-cartao{padding:17px}.plano-cartao.plano-escolhido{padding:16px}.plano-cartao>input{top:18px;right:18px}.plano-preco{font-size:1.75rem}.plano-periodicidade{min-height:0}}
 @media(prefers-reduced-motion:reduce){.plano-cartao{transition:none}}
+
+/* A pulsação pertence apenas à bolinha do plano dentro da validade. */
+@media(prefers-reduced-motion:no-preference){
+  .plano-selo-activo[aria-label="Este é o plano actualmente activo na tua conta"]:before{
+    transform-origin:center;
+    animation:plano-selo-pulso 2.4s ease-in-out infinite;
+  }
+  @keyframes plano-selo-pulso{
+    0%,10%,25%,40%,55%,70%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(63,107,79,0)}
+    15%,45%,65%{transform:scale(1.45);box-shadow:0 0 0 3px rgba(63,107,79,.18)}
+  }
+}

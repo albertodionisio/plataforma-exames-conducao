@@ -50,8 +50,8 @@ Conteúdo adaptado das 25 perguntas do Exame 15 extraído do APK de referência,
 | 8 | Marcas rodoviárias | RST, marca R3, Quadro XVI, marcas diversas (pág. 64 do catálogo do APK) | C | C | Marca R3 pintada no pavimento |
 | 9 | Álcool e condução | Conhecimento geral sobre alcoolemia; não é regra expressa do Código | B | A | Aparelho de teste de alcoolemia |
 | 10 | Carga e descarga | CE, art. 56.º, n.º 1 | C | D | Viatura com bagageira aberta |
-| 11 | Sinais de perigo | RST, sinal D12, túnel (Quadro IV, pág. 21 do catálogo do APK) | B | B | Sinal D12 |
-| 12 | Sinais de indicação | RST, sinal G86, via de sentido único (pág. 39 do catálogo do APK) | A | C | Sinal G86 em foto de rua |
+| 11 | Sinais de perigo | RST, sinal D12, túnel (Quadro IV, pág. 21 do catálogo do APK) | B | B | Recorte oficial `public/sinais/D12-sinal-pdf-600dpi.png` (PDF, p. 21) |
+| 12 | Sinais de indicação | RST, sinal G86, via de sentido único (pág. 39 do catálogo do APK) | A | C | Recorte oficial `public/sinais/G86-sinal-pdf-600dpi.png` (PDF, p. 39) |
 | 13 | Ultrapassagem | CE, art. 43.º, n.º 6 | C | D | Estrada em subida |
 | 14 | Álcool e condução | Conhecimento geral sobre álcool e condução; não é transcrição de um artigo | B | A | Condutor a beber ao volante |
 | 15 | Segurança de passageiros | CE, art. 87.º, n.os 4–5 (crianças em sistema de retenção homologado) | C | B | Foto de viaturas, decorativa |
@@ -62,7 +62,7 @@ Conteúdo adaptado das 25 perguntas do Exame 15 extraído do APK de referência,
 | 20 | Inversão do sentido de marcha | CE, art. 47.º, n.º 2 (inversão proibida onde a visibilidade é reduzida) | B | C | Estrada com lomba |
 | 21 | Entidades e deveres | Decreto n.º 47/2021, de 5 de Julho (cria o INATRO, que sucedeu ao INATTER); CE, art. 147.º, n.º 1, alínea d) | B | A | Agentes de trânsito |
 | 22 | Estado do veículo | Conhecimento geral de manutenção; não é regra expressa do Código | B | D | Suspensão e amortecedor |
-| 23 | Sinais de proibição | RST, sinal E36 (pág. 28 do catálogo do APK) | A | B | Sinal E36 |
+| 23 | Sinais de proibição | RST, sinal E36 (pág. 28 do catálogo do APK) | A | B | Recorte oficial `public/sinais/E36-sinal-pdf-600dpi.png` (PDF, p. 28) |
 | 24 | Limites de velocidade | CE, art. 33.º, n.º 1 (limites de velocidade, automóveis ligeiros de passageiros e mistos) | C | C | Avenida urbana |
 | 25 | Sinais de obrigação | RST, sinal F37, via obrigatória para veículos de dimensões anormais (pág. 33 do catálogo do APK) | A | D | Painel de vias com o sinal F37 |
 
@@ -75,3 +75,6 @@ O ficheiro `data/exames/exame15.js` é recolhido pelo build estático, que copia
 - Dados: `data/exames/exame15.js`
 - Imagens: `public/exames/exame15/exame15_1.jpg` a `exame15_25.jpg`
 - Origem extraída: `original/extraido/exame15.json` e `original/extraido/imagens/exame15/`
+
+
+DADOS-079 (2026-11-22): os recortes D12 (Q11), G86 (Q12) e E36 (Q23) foram extraídos novamente do PDF oficial a 600 DPI, com o sinal completo e sem legendas; as três referências do JavaScript foram substituídas. As respostas e explicações permaneceram inalteradas.

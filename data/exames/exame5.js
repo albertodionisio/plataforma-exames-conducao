@@ -41,7 +41,7 @@ window.EXAMES[5] = [
   "enunciado": "Observe o sinal de perigo. O que indica?",
   "imagem": {
    "descricao": "Sinal D79 «Local de passagem de nível sem guarda com duas ou mais vias»",
-   "src": "public/sinais/D79-local-passagem-nivel-sem-guarda-duas-ou-mais-vias.png"
+   "src": "public/sinais/D79-sinal-pdf-600dpi.png"
   },
   "opcoes": [
    "Passagem de nível com guarda.",
@@ -137,7 +137,7 @@ window.EXAMES[5] = [
   "enunciado": "Observe o sinal. O que deve fazer o condutor?",
   "imagem": {
    "descricao": "Sinal E12 «Proibição de exceder a velocidade de...Km/h», com 80",
-   "src": "public/sinais/E12-proibicao-exceder-velocidade.png"
+   "src": "public/sinais/E12-sinal-pdf-600dpi.png"
   },
   "opcoes": [
    "Circular acima de 80 km/h.",
@@ -185,7 +185,7 @@ window.EXAMES[5] = [
   "enunciado": "Observe o sinal. O que indica?",
   "imagem": {
    "descricao": "Sinal G62 «Área reservada para veículos de emergência»",
-   "src": "public/sinais/G62-area-reservada-veiculos-emergencia.png"
+   "src": "public/sinais/G62-sinal-pdf-600dpi.png"
   },
   "opcoes": [
    "Área reservada para mini-autocarros.",

@@ -7,7 +7,7 @@ Arquitectura funcional, aplicação, dados, segurança, assinaturas e pagamentos
 
 Identidade visual proposta: clássica, discreta, educativa e exclusiva; azul-marinho, marfim e verde discreto, sem efeitos futuristas ou excesso de animações.
 
-> Este documento é uma especificação de produção. Não é, por si só, código-fonte executável nem comprova que serviços externos estejam configurados.
+> **Estado de implementação:** este é o documento de especificação do produto, não um relatório de estado em tempo real. Para o que já está implementado/testado e o que falta, prevalece [docs/ESTADO-ATUAL.md](ESTADO-ATUAL.md), actualizado em 27/11/2026. A especificação descreve também requisitos de produto que ainda podem não estar implementados. Não interpretar um requisito definido como funcionalidade já entregue.
 
 ---
 
@@ -23,14 +23,14 @@ Uma especificação reduz ambiguidades, mas não substitui o repositório de có
 
 | Área | Estado | Nota |
 |---|---|---|
-| 50 exames × 25 perguntas | Definido | 1.250 posições; conteúdo precisa de ser produzido e validado. |
-| Modo estudo | Definido | Explicação após cada resposta; cronómetro continua. |
+| Catálogo de exames | Objectivo comercial: 50; implementação actual: 51 | 51 exames integrados na branch de validação; ver `docs/ESTADO-ATUAL.md`. |
+| Realização e revisão | Regra actual | Sem feedback durante a realização; resultado e explicações na revisão após submissão. |
 | Duração/pontuação | Regra do produto | 60 min; 0,8 valores por resposta certa; limiar interno 18/20, exigindo 23 certas. |
 | Modelo de receita | Definido | Cinco opções de acesso (secção 10): Free e quatro planos pagos. Substitui a proposta anterior de um único plano semanal. |
 | Identidade visual | Direcção definida | Exclusiva, clássica e discreta; nome/logótipo pendentes. |
-| Tecnologias | Recomendação | Stack proposta; aprovar antes da implementação. |
-| Categoria de carta | Pendente | Confirmar categoria e programa de estudo. |
-| Pagamentos e SMS | Pendente | Escolher fornecedores com cobertura e condições adequadas. |
+| Tecnologias | Implementação actual | Firebase Authentication/Firestore e endpoints backend Vercel na branch de migração; ver estado actual. |
+| SMS/OTP | Não adoptado | Autenticação telefónica actual não usa SMS/OTP nem comprova titularidade do número. |
+| Pagamentos | Implementado e testado em Sandbox | ePay individual, confirmação e activação comprovadas em Sandbox; produção ainda não activada. |
 | Renovação, cancelamento, atendimento | Pendente | Ver secção 19. |
 
 ## Índice
@@ -110,7 +110,7 @@ O tempo, a pontuação e o limiar são regras internas de treino, não regras of
 
 ## 3. Arquitectura recomendada
 
-Frontend TypeScript em aplicação web/PWA, backend API modular, PostgreSQL e fornecedores externos para autenticação, SMS, email, pagamentos e anúncios. Para o primeiro lançamento, um backend modular único tende a ser mais simples e barato que microserviços.
+Frontend web/PWA, backend API modular e Firebase como plataforma principal de identidade e dados dinâmicos: Firebase Authentication, Cloud Firestore e serviços complementares seleccionados conforme necessidade. Conteúdos estáticos dos exames permanecem versionados e distribuídos por CDN/cache. Pagamentos e operações sensíveis dependem de backend confiável. Para o primeiro lançamento, um backend modular único tende a ser mais simples e barato que microserviços.
 
 ```
 [Browser / PWA]
@@ -124,7 +124,7 @@ Frontend TypeScript em aplicação web/PWA, backend API modular, PostgreSQL e fo
    | Subscriptions / Payments / Ads / Notifications / Admin / Audit
    |            |             |
    v            v             v
-[PostgreSQL] [SMS/Email] [Pagamento/Ads]
+[Cloud Firestore] [Email/FCM] [Pagamento/Ads]
    |
    v
 [Backups + logs + monitorização]
@@ -222,8 +222,8 @@ Proposta REST/JSON sob `/api/v1`. Documentar o contrato final com OpenAPI. Os en
 | Método/rota | Acesso | Finalidade |
 |---|---|---|
 | GET /me | Autenticado | Perfil e verificação. |
-| POST /auth/phone/start | Autenticado | Enviar código SMS. |
-| POST /auth/phone/confirm | Autenticado | Confirmar código. |
+| Firebase Auth — Email/Password | Público | Registo, login, verificação de email e recuperação de palavra-passe via SDK. |
+| Firebase Auth — Google | Público | Autenticação OAuth Google via SDK. |
 | GET /simulations | Público/autenticado | Catálogo e bloqueios. |
 | POST /attempts | Autenticado | Iniciar exame se autorizado. |
 | GET /attempts/{id} | Dono/admin | Estado e perguntas. |
@@ -262,16 +262,16 @@ O backend calcula o resultado a partir das respostas guardadas; nunca aceita a n
 
 ---
 
-## 7. Autenticação, SMS e permissões
+## 7. Autenticação e permissões
 
-- **Fornecedor seleccionado para a primeira fase:** Supabase Auth no projecto ESTRADA. O frontend usa o URL do projecto e a chave publishable, com sessão persistente e renovação automática.
-- Registo e login por email e palavra-passe estão implementados no frontend. A palavra-passe exige pelo menos 8 caracteres. O início de qualquer exame exige sessão autenticada; o catálogo continua público. O exame escolhido é preservado durante o redireccionamento e retomado depois do login.
-- O login Google está preparado no código, mas fica desactivado até configurar o fornecedor Google no Supabase e as credenciais OAuth no painel do fornecedor; nunca colocar o Client Secret no frontend.
-- As contas e credenciais são geridas pelo Supabase Auth. Tabelas de perfil, tentativas, resultados e assinaturas serão criadas em tarefas próprias, conforme os respectivos requisitos.
-- Recuperação de conta sem revelar se um email está registado.
-- Código SMS de utilização única, com expiração, limites de tentativas e limites por número/IP.
-- Administradores devem usar protecção adicional; SMS não deve ser o único factor administrativo.
-- Cookies seguros HttpOnly/Secure/SameSite quando aplicável; protecção CSRF se necessário.
+- **Fornecedor seleccionado para a primeira fase:** Firebase Authentication no projecto ESTRADA. A aplicação Web usa a configuração pública Firebase, persistência de sessão local e fornecedores Email/Password e Google.
+- Registo e login por email/palavra-passe, confirmação de email e recuperação de palavra-passe são tratados pelo Firebase Authentication. O início de qualquer exame exige utilizador autenticado; para contas Email/Password também exige email verificado. O catálogo continua público e o exame escolhido é preservado durante a autenticação.
+- O login Google usa Firebase Authentication com escolha explícita de conta. O domínio Vercel está preparado como authDomain através de proxy /__/auth; o funcionamento depende de validar o reverse proxy e actualizar os domínios/URIs autorizados no Firebase e Google Cloud.
+- O perfil mínimo fica em Cloud Firestore em users/{uid}. Subscrições, tentativas, resultados e pagamentos não podem ser escritos pelo cliente; dependem de backend confiável com Firebase Admin SDK.
+- Recuperação de conta por email. A resposta da interface deve evitar revelar se um endereço está registado.
+- **Não usar autenticação por SMS/OTP** nesta fase. O telefone, se recolhido, é apenas contacto.
+- Administradores devem usar protecção adicional; não confiar apenas no estado visual da interface.
+- A persistência de sessão é gerida pelo SDK Firebase. Operações sensíveis exigem verificação no backend e validação de tokens.
 - Autorização no backend em cada pedido; esconder botão no frontend não é segurança.
 
 | Papel | Permissões |
@@ -304,6 +304,11 @@ wrong       = answered_count - correct_count
 - Ao expirar, bloquear novas respostas e finalizar automaticamente.
 - A submissão deve ser transaccional e idempotente; repetir pedido não cria resultado duplicado.
 - Repetir um exame inicia uma nova tentativa, com novas respostas e acesso às explicações associadas.
+- Durante uma tentativa activa, o cliente guarda localmente um rascunho de continuidade (identificador do exame, pergunta actual, respostas seleccionadas e prazo absoluto), numa chave independente por número de exame. Ao recarregar ou reabrir a mesma rota no mesmo navegador, recupera apenas a tentativa daquele exame sem reiniciar o prazo.
+- O candidato pode alternar entre exames: cada tentativa fica guardada separadamente e não bloqueia nem substitui a tentativa de outro exame. Ao regressar, recupera pergunta, respostas e prazo original; o tempo continua a decorrer enquanto a página está fechada ou noutro exame.
+- Registos antigos guardados na chave global anterior são migrados para a chave do respectivo exame quando o número pode ser identificado. Um registo legado sem número legível é preservado e ignorado para não bloquear outros exames.
+- Se o prazo absoluto já tiver expirado quando a página for reaberta, a tentativa desse exame é finalizada automaticamente e as perguntas não respondidas contam como em branco. Submeter uma tentativa limpa apenas o estado desse exame.
+- O armazenamento local é apenas uma ajuda de continuidade da interface, não é fonte de verdade nem prova de tempo, respostas ou resultado. A implementação futura do backend deve validar e impor started_at/deadline_at no servidor e guardar respostas/resultados de forma autoritativa.
 - O sistema guarda o histórico das tentativas e os resultados, para o utilizador acompanhar a evolução e identificar o que precisa de estudar mais.
 
 | Certas | Nota | Resultado interno |
@@ -646,8 +651,8 @@ O calendário depende da equipa, revisão do conteúdo e fornecedores. Não é r
 | Categoria de carta | Determina conteúdo e dificuldade | Definir categoria e confirmar programa. |
 | Revisão legal | Perguntas erradas ensinam regras erradas | Revisor competente e referências verificadas. |
 | Nome/domínio | Marca e publicação | Escolher nome e verificar disponibilidade. |
-| Autenticação | Custo, segurança e exportação | Comparar fornecedores. |
-| SMS Moçambique | Cobertura e custo | Testar entrega, remetente e preço. |
+| Autenticação | Custo, segurança e exportação | Firebase Authentication seleccionado; validar exportação e migração de contas existentes. |
+| SMS Moçambique | Não aplicável à autenticação inicial | Não implementar SMS/OTP; telefone é apenas contacto. |
 | Pagamento (semanal e mensal) | Suporte local pode variar | Validar métodos do público-alvo. |
 | Publicidade | Receita e consentimento incertos | Escolher rede e rever políticas. |
 | Custos | Hospedagem, SMS e email têm custo | Orçamento e alertas de consumo. |

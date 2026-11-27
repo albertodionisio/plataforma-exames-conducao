@@ -7,8 +7,8 @@ window.EXAMES[23] = [
     "dificuldade": "média",
     "enunciado": "A que grupo pertence o sinal triangular?",
     "imagem": {
-      "descricao": "Imagem original da pergunta 1 do Exame 23",
-      "src": "public/exames/exame23/exame23_1.jpg"
+      "descricao": "Sinal A1 de trabalhos na estrada, extraído do PDF oficial a 600 DPI",
+      "src": "public/sinais/A1-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Sinais temporários de perigo.",

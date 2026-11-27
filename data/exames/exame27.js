@@ -7,8 +7,8 @@ window.EXAMES[27] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame27/exame27_1.jpg",
-      "descricao": "Imagem original da pergunta 1 do Exame 27"
+      "src": "public/sinais/D79-sinal-pdf-600dpi.png",
+      "descricao": "Sinal D79 de passagem de nível sem guarda com duas ou mais vias, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Local de passagem de nível sem guarda.",
@@ -133,8 +133,8 @@ window.EXAMES[27] = [
     "dificuldade": "média",
     "enunciado": "A velocidade controlada pelo sinal, é:",
     "imagem": {
-      "src": "public/exames/exame27/exame27_8.jpg",
-      "descricao": "Imagem original da pergunta 8 do Exame 27"
+      "src": "public/sinais/E12-sinal-pdf-600dpi.png",
+      "descricao": "Sinal E12 de proibição de exceder 80 km/h, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "A velocidade mínima.",
@@ -187,8 +187,8 @@ window.EXAMES[27] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/exames/exame27/exame27_11.jpg",
-      "descricao": "Imagem original da pergunta 11 do Exame 27"
+      "src": "public/sinais/E50-sinal-pdf-600dpi.png",
+      "descricao": "Sinal E50 de estacionamento proibido, extraído do PDF oficial a 600 DPI"
     },
     "opcoes": [
       "Estacionamento condicionado.",
@@ -439,7 +439,7 @@ window.EXAMES[27] = [
     "dificuldade": "média",
     "enunciado": "O que indica o sinal?",
     "imagem": {
-      "src": "public/sinais/G63-parque-estacionamento-veiculos-emergencia.png",
+      "src": "public/sinais/G63-sinal-pdf-600dpi.png",
       "descricao": "Imagem original da pergunta 25 do Exame 27"
     },
     "opcoes": [

@@ -5,19 +5,19 @@ window.EXAMES[2] = [
     "numero": 1,
     "tema": "Veículos prioritários",
     "dificuldade": "média",
-    "enunciado": "Um veículo prioritário circula em missão urgente de socorro. Em que condições pode o condutor deixar de cumprir algumas regras ou sinais de trânsito?",
+    "enunciado": "Uma ambulância devidamente sinalizada aproxima-se numa via congestionada que não é uma auto-estrada. Como devem proceder os condutores para lhe facilitar a passagem?",
     "imagem": {
       "descricao": "Veículo em missão prioritária, com sinalização luminosa",
       "src": "public/exames/exame2/exame2_1.jpg"
     },
     "opcoes": [
-      "Sempre que esteja em serviço, mesmo perante uma ordem de um agente regulador e sem adoptar precauções adicionais.",
-      "Quando a missão o exigir, sem desobedecer aos agentes nem pôr outros utentes em perigo.",
-      "Só quando o semáforo estiver verde e a via estiver completamente livre.",
-      "Nunca, porque os veículos prioritários devem cumprir todas as regras sem excepção."
+      "Encostar-se o mais possível à direita, deixando a passagem livre pelo lado esquerdo.",
+      "Deixar livre uma passagem à direita, chegando-se o mais possível à esquerda e, se necessário, usando a berma.",
+      "Manter-se na faixa de rodagem e reduzir a velocidade, sem alterar a posição do veículo.",
+      "Avançar para a faixa de sentido contrário, mesmo sem visibilidade, para abrir espaço."
     ],
     "correta": 1,
-    "explicacao": "Os veículos prioritários podem não observar certas regras quando a missão urgente o exigir, mas devem respeitar as ordens dos agentes e não colocar ninguém em perigo. Mesmo perante luz vermelha ou STOP, devem parar e só avançar depois de verificar que é seguro."
+    "explicacao": "Numa via congestionada, os condutores devem facilitar a passagem do veículo prioritário, deixando livre o lado direito da faixa destinada ao seu sentido e chegando-se o mais possível à esquerda. Se necessário, podem utilizar a berma; esta regra não se aplica nas auto-estradas."
   },
   {
     "numero": 2,
@@ -25,8 +25,8 @@ window.EXAMES[2] = [
     "dificuldade": "fácil",
     "enunciado": "Perante o sinal F13 da imagem, quais utentes são obrigados a utilizar a pista indicada?",
     "imagem": {
-      "descricao": "Sinal circular azul F13, com símbolos de peão e velocípede",
-      "src": "public/exames/exame2/exame2_2.jpg"
+      "descricao": "Sinal F13 de pista obrigatória para velocípedes e peões, extraído do PDF oficial (página 31)",
+      "src": "public/sinais/F13-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Todos os veículos automóveis e motociclos, sem distinção.",
@@ -133,8 +133,8 @@ window.EXAMES[2] = [
     "dificuldade": "fácil",
     "enunciado": "O que significa o sinal circular apresentado na imagem?",
     "imagem": {
-      "descricao": "Sinal E3, círculo branco com orla vermelha e símbolo de automóvel ligeiro",
-      "src": "public/exames/exame2/exame2_8.jpg"
+      "descricao": "Sinal E3 de trânsito proibido a automóveis ligeiros, extraído do PDF oficial (página 26)",
+      "src": "public/sinais/E3-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Trânsito proibido a automóveis ligeiros.",
@@ -151,8 +151,8 @@ window.EXAMES[2] = [
     "dificuldade": "média",
     "enunciado": "O sinal da imagem estabelece um limite de 120 km/h durante que período?",
     "imagem": {
-      "descricao": "Sinal de limite de 120 km/h acompanhado do painel adicional de aplicação diurna",
-      "src": "public/exames/exame2/exame2_9.jpg"
+      "descricao": "Sinal combinado de limite de 120 km/h durante o dia, extraído do PDF oficial (página 18)",
+      "src": "public/sinais/sem-codigo-limite-120-km-dia-600dpi.png"
     },
     "opcoes": [
       "Durante a noite.",
@@ -223,8 +223,8 @@ window.EXAMES[2] = [
     "dificuldade": "fácil",
     "enunciado": "O que indica o sinal de informação colocado junto à zona de estacionamento?",
     "imagem": {
-      "descricao": "Sinal de informação com símbolo de táxi e letra R, junto a estacionamento",
-      "src": "public/exames/exame2/exame2_13.jpg"
+      "descricao": "Sinal G13 de área reservada para táxis, extraído do PDF oficial (página 35)",
+      "src": "public/sinais/G13-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Área reservada exclusivamente à circulação de táxis.",
@@ -349,8 +349,8 @@ window.EXAMES[2] = [
     "dificuldade": "média",
     "enunciado": "O que adverte o sinal triangular apresentado na imagem?",
     "imagem": {
-      "descricao": "Sinal triangular D27 de cruzamento com estrada sem prioridade",
-      "src": "public/exames/exame2/exame2_20.jpg"
+      "descricao": "Sinal D27 de cruzamento com estrada sem prioridade, extraído do PDF oficial (página 22)",
+      "src": "public/sinais/D27-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "A aproximação de um cruzamento onde todas as vias têm prioridade igual.",
@@ -385,8 +385,8 @@ window.EXAMES[2] = [
     "dificuldade": "fácil",
     "enunciado": "O que indica o sinal triangular temporário colocado junto à estrada na imagem?",
     "imagem": {
-      "descricao": "Sinal temporário triangular A18/D62 de visibilidade reduzida",
-      "src": "public/exames/exame2/exame2_22.jpg"
+      "descricao": "Sinal D62 de visibilidade reduzida, extraído do PDF oficial (página 24)",
+      "src": "public/sinais/D62-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pavimento escorregadio.",
@@ -403,8 +403,8 @@ window.EXAMES[2] = [
     "dificuldade": "fácil",
     "enunciado": "Depois do sinal de estacionamento proibido apresentado na imagem, o condutor:",
     "imagem": {
-      "descricao": "Sinal E50 de estacionamento proibido",
-      "src": "public/exames/exame2/exame2_23.jpg"
+      "descricao": "Sinal E50 de estacionamento proibido, extraído do PDF oficial (página 29)",
+      "src": "public/sinais/E50-sinal-pdf-600dpi.png"
     },
     "opcoes": [
       "Pode parar, mas não pode estacionar.",

@@ -34,9 +34,9 @@
 |---|---|---|---|---|---|---|
 | A17 | Controlo policial por pirilampos | 4 | II — Sinais temporários, Perigo (título na pág. 3) | `public/sinais/A17-controlo-policial-por-pirilampos.svg` (existe também `.png` no mesmo nome) | 1 | CONFIRMADO COM NOTA (D4) |
 | D16 | Ponte móvel | 21 | IV — Sinais de perigo | `public/sinais/D16-ponte-movel.png` | 16 | CONFIRMADO |
-| E1 | Trânsito proibido | 26 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E1-transito-proibido.png` | 10 | CONFIRMADO |
-| E47 | Trânsito proibido a peões, animais e veículos não automóveis | 28 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E47-transito-proibido-peoes-animais-veiculos-nao-automoveis.png` | 21 | CONFIRMADO |
-| G11 | Área reservada para automóveis ligeiros | 35 | VII — Sinais de indicação, Sinais de informação | `public/sinais/G11-area-reservada-automoveis-ligeiros.png` | 4 | CONFIRMADO (D3 corrigido) |
+| E1 | Trânsito proibido | 26 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E1-sinal-pdf-600dpi.png` | 10 | CONFIRMADO |
+| E47 | Trânsito proibido a peões, animais e veículos não automóveis | 28 | V — Sinais de prescrição absoluta, Sinais de proibição | `public/sinais/E47-sinal-pdf-600dpi.png` | 21 | CONFIRMADO |
+| G11 | Área reservada para automóveis ligeiros | 35 | VII — Sinais de indicação, Sinais de informação | `public/sinais/G11-sinal-pdf-600dpi.png` | 4 | CONFIRMADO (D3 corrigido) |
 | H4 | Pré-advertência da direcção de saída | 41 | VIII — Sinais de simples indicação (título na pág. 40); a pág. 41 tem o subtítulo «Sinais de direcção» | `public/sinais/H4-pre-advertencia-direccao-de-saida.png` | 17 | CONFIRMADO COM NOTA (D5) |
 | N34 | Via com portagem a....m | 56 | XIII — Sinais combinados | `public/sinais/N34-via-com-portagem.png` | 25 | CORRIGIDO (D2) |
 | N21 | Paragem proibida a veículos que transportam substâncias perigosas | 55 (como **N21**) e 57 (como **N’5**) | XIII — Sinais combinados (pág. 55); «Sinais com painéis adicionais» (pág. 57) | `public/sinais/N21-paragem-proibida-substancias-perigosas.png` | 14 | CORRIGIDO (D1) |
@@ -128,3 +128,38 @@ Página onde começa cada quadro. Estes títulos foram lidos nas páginas reduzi
 - O conteúdo legal das designações não foi cruzado com `assets/codigodeestrada.pdf`.
 - Cores e proporções exactas das imagens: comparação visual, sem medição.
 - A distinção entre N’5 (com apóstrofo) e N5 (sem apóstrofo) baseia-se no que se vê impresso; convém o dono confirmar se o apóstrofo é intencional no documento oficial.
+
+
+## 7. Auditoria DADOS-079 — Exames 1–30 (2026-11-21)
+
+O PDF `original/referencia/sinais.pdf` foi renderizado integralmente em 69 páginas. O workflow `Auditar PDF de sinais` gera folhas de contacto, layout vectorial e recortes PNG a 600 DPI. Os recortes são extraídos directamente dos vectores do PDF, sem redesenho ou ampliação de fotografias. Foram conferidos visualmente e os mapas dos exames actualizados.
+
+**Substituições confirmadas nesta fase (25 perguntas):**
+
+| Exame | Pergunta(s) | Código(s) do sinal | Página(s) do PDF |
+|---:|---:|---|---|
+| 6 | 7, 15, 22 | E50, E12, D79 | 29, 26, 24 |
+| 18 | 3, 12, 16 | E37, A51, A1 | 28, 5, 3 |
+| 19 | 2, 17, 18, 20, 23 | A19, E37, A8, A19, E50 | 4, 28, 3, 4, 29 |
+| 20 | 6, 7, 16 | A37, A18, A19 | 4, 4, 4 |
+| 21 | 14 | G11 | 35 |
+| 22 | 2 | G62 | 37 |
+| 23 | 1 | A1 | 3 |
+| 24 | 10, 17, 18 | E51, A19, A46 | 29, 4, 5 |
+| 25 | 18 | E19 | 27 |
+| 30 | 1, 13, 21, 22 | E5, A19, A48, G26 | 26, 4, 5, 36 |
+
+Os recortes vectoriais de 600 DPI estão em `public/sinais/*-600dpi.png`. Para o Exame 30, Q1, o sinal E5 foi exportado em JPEG qualidade 96 para o caminho legado `public/exames/exame30/exame30_1.jpg`, exigido pelo teste de fluxo. Alguns sinais reutilizam ficheiros PDF já existentes e visualmente limpos (por exemplo, G11 e A48).
+
+**Divergências e imagens preservadas:**
+- Exame 19, Q23: imagem E50, mas a chave da extracção e a chave actual do JS divergem (mapa B, JS A). Não alterada a resposta; requer revisão de conteúdo.
+- Exame 6, Q20: painel quadrado azul não coincide com o sinal M3 circular do PDF; imagem mantida até confirmação.
+- Exames 18, Q9; 20, Q9; 30, Q19: painéis adicionais «60 m»/«8 km» são essenciais e não foram removidos.
+- Placas direccionais compostas, fotografias de cenas e sinais sem correspondência exacta foram preservados.
+
+Esta auditoria ainda não encerra todos os Exames 1–30. Os exames com reservas activas (1, 3 e 8–16) não foram alterados por DADOS-079; serão verificados quando as respectivas tarefas libertarem os ficheiros. O CI `Validar exames` e `Validar definições` passou no commit 9f345920.
+
+
+## DADOS-079 — qualidade visual (2026-11-22)
+
+As imagens das perguntas 4 (G11 — área reservada para automóveis ligeiros, PDF p. 35), 10 (E1 — trânsito proibido, PDF p. 26) e 21 (E47 — trânsito proibido a peões, animais e veículos não automóveis, PDF p. 28) foram substituídas por recortes directos do PDF oficial a 600 DPI. As imagens foram conferidas visualmente; os recortes foram afinados para manter apenas o sinal, sem legendas ou objectos adjacentes. Não houve alterações às perguntas, opções, respostas ou explicações.

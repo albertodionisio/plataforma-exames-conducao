@@ -2,7 +2,7 @@
 
 ## Origem e âmbito
 
-Conteúdo adaptado de `original/extraido/exame18.json`, com 25 perguntas na ordem da fonte. Nesta publicação, as imagens foram deliberadamente deixadas de fora, conforme orientação do responsável; serão associadas numa etapa posterior por outra sessão.
+Conteúdo adaptado de `original/extraido/exame18.json`, com 25 perguntas na ordem da fonte. As imagens foram associadas posteriormente; a presente auditoria actualiza a correspondência de sinais com o PDF oficial. Fotografias de cenas e sinais combinados com painéis adicionais são preservados quando o contexto visual é necessário.
 
 A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracção do APK. Não foi feita revisão jurídica independente nesta etapa, pelo que não se declara validação legal das respostas.
 
@@ -12,7 +12,7 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 |---:|---|---|:---:|---|---|---|
 | 1 | Sinalização e regras da via | Para praticar uma condução segura o condutor deve: | A | imagens/exame18/exame18_1.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 2 | Comportamento e segurança do condutor | Nesta situação, pode ultrapassar o veículo que circula à sua frente? | B | imagens/exame18/exame18_2.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
-| 3 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame18/exame18_3.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 3 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/E37-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal E37 de proibição de veículos de peso por eixo múltiplo superior a 10 t, página física 28; recorte vectorial extraído a 600 DPI. |
 | 4 | Sinalização e regras da via | O que indica a marca rodoviária? | C | imagens/exame18/exame18_4.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 5 | Circulação, velocidade e manobras | Conduzindo com chuva... | A | imagens/exame18/exame18_5.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 6 | Sinalização e regras da via | Nos veículos destinados ao transporte de passageiros ou mistos... | B | imagens/exame18/exame18_6.jpg | Pendente | Quatro alternativas existentes na fonte. |
@@ -21,11 +21,11 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 | 9 | Sinalização e regras da via | O que indica o sinal? | C | imagens/exame18/exame18_9.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 10 | Circulação, velocidade e manobras | Como deve pisar o pedal de travão, em caso de necessidade de travagem de emergência, com um veículo que tenha ABS? | A | imagens/exame18/exame18_10.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 11 | Circulação, velocidade e manobras | Como deve actuar o condutor quando tem que fazer uma curva? | C | imagens/exame18/exame18_11.jpg | Pendente | Quatro alternativas existentes na fonte. |
-| 12 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame18/exame18_12.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 12 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/A51-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A51 de ponte estreita, página física 5; recorte vectorial extraído a 600 DPI. |
 | 13 | Comportamento e segurança do condutor | Como pode ser definido o stress? | C | imagens/exame18/exame18_13.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 14 | Circulação, velocidade e manobras | Ao circular com a velocidade excessiva... | A | imagens/exame18/exame18_14.jpg | Pendente | Quatro alternativas existentes na fonte. |
 | 15 | Comportamento e segurança do condutor | O que deve fazer o condutor quando a intensidade do tráfego é grande? | B | imagens/exame18/exame18_15.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
-| 16 | Sinalização e regras da via | A que grupo pertence o sinal triangular? | C | imagens/exame18/exame18_16.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
+| 16 | Sinalização e regras da via | A que grupo pertence o sinal triangular? | C | `public/sinais/A1-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A1 de trabalhos na estrada, página 3 do PDF oficial; identifica os sinais temporários de perigo. |
 | 17 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame18/exame18_17.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 18 | Sinalização e regras da via | Perante um obstáculo imprevisto que o obriga a reduzir subitamente a velocidade, o condutor deve? | C | imagens/exame18/exame18_18.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
 | 19 | Prevenção e assistência em acidentes | Quais são os princípios gerais do socorrismo? | C | imagens/exame18/exame18_19.jpg | Pendente | Foi criado um distrator para completar a quarta opção. |
@@ -44,3 +44,10 @@ A chave de resposta foi mantida conforme o campo `resposta_correcta` da extracç
 - Imagens: pendentes; os dados usam `imagem: null` para não apresentar imagens inexistentes.
 - Integração no catálogo/aplicação e teste funcional no navegador: não realizados nesta tarefa.
 - Não foram alteradas regras de acesso, assinaturas, cronómetro ou ficheiros de integração.
+
+
+## Auditoria de qualidade dos sinais (DADOS-079, 2026-11-21)
+
+- Pergunta 3: a fotografia mostrava o sinal E37 (limite de peso por eixo múltiplo superior a 10 t); substituída pelo recorte vectorial E37 do PDF, página física 28, a 600 DPI.
+- Pergunta 9: fotografia preservada, porque o sinal A9 está combinado com um painel adicional «60 m» que não aparece junto do sinal no PDF; remover o painel faria perder a informação que distingue a resposta «paragem obrigatória a 60 metros».
+- Pergunta 12: fotografia do sinal de ponte estreita substituída pelo recorte vectorial A51 do PDF, página física 5, a 600 DPI.

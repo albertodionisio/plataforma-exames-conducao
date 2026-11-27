@@ -10,7 +10,7 @@ As 25 imagens originais foram copiadas para `public/exames/exame30/` e associada
 
 | Nº | Tema | Enunciado | Chave APK | Imagem original | Estado da imagem | Observação |
 |---:|---|---|:---:|---|---|---|
-| 1 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame30/exame30_1.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 1 | Sinalização e regras da via | O que indica o sinal? | A | `public/exames/exame30/exame30_1.jpg` | CONFIRMADO | Sinal E5, trânsito proibido a veículos automóveis e motociclos com carro, página 26 do PDF oficial; recorte do PDF convertido para JPEG de qualidade 96, mantendo o caminho exigido pelo teste E2E. |
 | 2 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame30/exame30_2.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 3 | Sinalização e regras da via | Ao mudar de direcção num cruzamento, como o deve sinalizar para os outros utentes da via? | B | imagens/exame30/exame30_3.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 4 | Sinalização e regras da via | Durante a noite, quando deve o condutor utilizar as luzes de cruzamento? | C | imagens/exame30/exame30_4.jpg | Copiada e associada | Alternativas da fonte preservadas. |
@@ -22,7 +22,7 @@ As 25 imagens originais foram copiadas para `public/exames/exame30/` e associada
 | 10 | Comportamento, prevenção e segurança | Se o condutor sofre de uma doença, o que deve fazer para reduzir o risco de ter um acidente? | A | imagens/exame30/exame30_10.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 11 | Comportamento, prevenção e segurança | O que deve fazer o condutor quando um velocípede segue no mesmo sentido de trânsito | A | imagens/exame30/exame30_11.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 12 | Comportamento, prevenção e segurança | Se tem a carta de condução da categoria B há menos de um ano e conduzir um automóvel ligeiro de passageiros, não pode exceder a velocidade de... | B | imagens/exame30/exame30_12.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 13 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame30/exame30_13.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 13 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/A19-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal A19 de congestionamento de tráfego, página 4 do PDF oficial, recorte vectorial a 600 DPI; substitui a fotografia de baixa resolução. |
 | 14 | Circulação e manobras | Onde é proibido realizar ultrapassagem? | C | imagens/exame30/exame30_14.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 15 | Circulação e manobras | Entende-se por cruzamento de veículos: | C | imagens/exame30/exame30_15.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 16 | Comportamento, prevenção e segurança | As ordens dos agentes reguladores de trânsito, prevalecem sobre os sinais luminosos: | C | imagens/exame30/exame30_16.jpg | Copiada e associada | Alternativas da fonte preservadas. |
@@ -30,8 +30,8 @@ As 25 imagens originais foram copiadas para `public/exames/exame30/` e associada
 | 18 | Circulação e manobras | É a via pública um espaço destinado ao trânsito de peões? | B | imagens/exame30/exame30_18.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 19 | Sinalização e regras da via | O que indica o sinal? | A | imagens/exame30/exame30_19.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
 | 20 | Circulação e manobras | Dentro das localidades, em vias com mais de uma via de transito no mesmo sentido, o condutor deve utilizar... | B | imagens/exame30/exame30_20.jpg | Copiada e associada | Alternativas da fonte preservadas. |
-| 21 | Sinalização e regras da via | O que indica o sinal triangular? | C | imagens/exame30/exame30_21.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
-| 22 | Sinalização e regras da via | O que indica o sinal? | B | imagens/exame30/exame30_22.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. Aviso de repetição na extracção. |
+| 21 | Sinalização e regras da via | O que indica o sinal triangular? | C | `public/sinais/A48-passagem-de-nivel.png` | CONFIRMADO | Sinal A48 de passagem de nível, página 5 do PDF oficial; substitui a fotografia de baixa resolução. |
+| 22 | Sinalização e regras da via | O que indica o sinal? | B | `public/sinais/G26-sinal-pdf-600dpi.png` | CONFIRMADO | Sinal G26 de área reservada para autocarros e autocarros médios, página 36 do PDF oficial, recorte vectorial a 600 DPI. |
 | 23 | Comportamento, prevenção e segurança | Quais são os princípios gerais do socorrismo? | A | imagens/exame30/exame30_23.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
 | 24 | Veículos, ocupantes e deveres do condutor | É permitido levar um bebé nos braços quando o veículo está em circulação? | A | imagens/exame30/exame30_24.jpg | Copiada e associada | Alternativas da fonte preservadas. |
 | 25 | Circulação e manobras | Utilizar o veículo para em via pública, demonstrar ou exibir manobra de arranque brusco, derrapagem ou travagem com deslizamento de pneus, constitui contravenção: | B | imagens/exame30/exame30_25.jpg | Copiada e associada | Alternativa D vazia na fonte; distrator acrescentado. |
@@ -46,3 +46,6 @@ As 25 imagens originais foram copiadas para `public/exames/exame30/` e associada
 ## Sinais de melhor qualidade (2026-11-15, Claude-DADOS005)
 
 Pergunta 2 (F54); a pergunta 1 (carro de frente) mantém a imagem do APK por não existir esse desenho no PDF: imagem do APK (~440 px, com contorno desfocado e ruído) substituída pelo sinal vectorial do `original/referencia/sinais.pdf`, desenhado a 600 ppp e guardado em `public/sinais/` com o código no nome. Desenho confirmado igual ao do APK.
+
+
+DADOS-079 (2026-11-22): a pergunta 1 passou a usar o recorte vectorial do sinal E5 directamente do PDF oficial, em substituição da fotografia de baixa resolução. Correspondência confirmada visualmente; conteúdo da pergunta mantido.
