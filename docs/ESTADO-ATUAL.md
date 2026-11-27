@@ -17,7 +17,7 @@ Este documento é o resumo operacional actual. Quando uma nota histórica ou ane
 | Firestore | Integração e regras testadas nos emuladores | As regras ainda não foram publicadas no projecto Firebase real. |
 | Catálogo de exames | 51 exames integrados nesta branch | 25 perguntas por exame; 3 exames gratuitos. Exames 31–51 permanecem temporariamente disponíveis para validação de conteúdo, não como política comercial final. |
 | Experiência de exame | Validada pelo proprietário no Preview | Cronómetro, imagens, navegação, correcção e resultado final foram testados; Exame 27 concluído em sessão de validação. |
-| Planos e acesso | Fluxo Free e desbloqueio semanal testados | Proprietário confirmou 3 exames no Free e desbloqueio após assinatura Sandbox. |
+| Planos e acesso | GER-027 concluída e validada | Exames 1–3 gratuitos; Básico 1–25; Completo 1–50; Exame 51 bloqueado. Catálogo e rota directa validam UID, estado, datas e carência; testes específicos e validação manual do proprietário confirmados. Activos estáticos continuam acessíveis por URL directo. |
 | Criação de pagamento ePay | Código e testes automatizados aprovados | Checkout individual; plano/preço definidos no servidor; UID beneficiário fixado antes do checkout; referência gerada no servidor. |
 | Confirmação/activação ePay | Fluxo funcional Sandbox comprovado pelo proprietário | Pagamento, confirmação, activação da assinatura e acesso aos exames foram comprovados em Sandbox. Não significa cobrança real em produção. |
 | CI Firebase | Sucesso no commit de referência | GitHub Actions run `45833068199`; inclui sintaxe API, testes ePay/email, configuração Firebase e emuladores Auth/Firestore. |
