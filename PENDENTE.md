@@ -16,17 +16,6 @@
 - Testes automatizados actualizados; aguarda-se confirmação do resultado CI no commit funcional.
 - Cuidados respeitados: sem alterações a preços, catálogo, regras de acesso, backend de pagamentos, `main` ou produção.
 
-## FE-010 — Ecrã de abertura (splash) com assinatura «From BORJA»
-- Estado: CONCLUÍDA — 2026-11-27 — implementação integrada na branch, CI relevante concluído com sucesso, Preview READY e validação visual confirmada pelo proprietário.
-- Pedido confirmado pelo dono: ao abrir o link da plataforma, mostrar primeiro a animação aprovada «From BORJA» e, no fim, revelar a aplicação normalmente.
-- Assinatura exacta: `from` / `B O R J A` / `Technology & Innovation` / `ESTRADA-JB | © Todos Direitos Reservados`.
-- Implementação: `splash.css` isola os estilos e preserva composição, cores, tipografia e movimentos aprovados; `index.html` apresenta o ecrã sobre a aplicação e remove-o após a animação. A aplicação inicializa por baixo do splash; `sessionStorage` limita a apresentação à primeira abertura da sessão do separador; respeita `prefers-reduced-motion`. Não foi alterado `app.js`, autenticação, navegação, exames, planos ou preços.
-- Validação do proprietário: confirmou visualmente o splash integrado na abertura real da plataforma e aprovou a animação, pedindo que fosse mantida exactamente como está.
-- CI: `Validar exames` run `45995490018` SUCCESS; `Validar definições` run `45995281493` SUCCESS; `Validar integração Firebase` run `45995490243` SUCCESS (job Firebase, incluindo ePay, validação de email, configuração Firebase, telefone e emuladores Auth/Firestore).
-- Preview Vercel: deployment READY no commit `9e6c09a237fb953b49f9b6ea8afa26c608b6893c`; commit documental subsequente `0a98c683c3b584e374e6b051aa9202f5f84b9da5` também apresenta estado Vercel SUCCESS. Deploy-preview Netlify SUCCESS.
-- Demonstração isolada `preview-from-borja.html` preservada como referência, com botão «Repetir animação» apenas nessa página; não adicionar esse botão à aplicação real.
-- Sem merge para `main` ou deploy de produção.
-
 ## FE-001 — Auditoria de experiência móvel e acessibilidade
 - Estado: EM CURSO — ChatGPT-7 — 2026-11-27 11:03 UTC+02 — ficheiros: styles.css, docs/auditorias/interface-movel.md — último sinal: 2026-11-27 11:05 UTC+02 — reserva assumida com autorização expressa do dono; verificações estáticas concluídas, falta validação visual no navegador.
 - Pedido: melhorar a utilização da versão actual em telemóveis, sem alterar as regras de negócio nem o funcionamento dos exames.
