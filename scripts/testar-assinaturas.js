@@ -272,6 +272,11 @@ async function testarSeloPlanoActivo() {
     "cancelar a confirmação deve manter a acção de mudança e não iniciar checkout");
   assert.equal(raizTeste.querySelector("#estrada-plano-4").checked, true,
     "cancelar a mudança não pode retirar a selecção do plano activo");
+  raizTeste.querySelector("#estrada-plano-0").closest(".plano-cartao").querySelector("button").click();
+  assert.equal(windowTeste.location.hash, "#/exames",
+    "o botão Free deve continuar a permitir o acesso aos exames gratuitos");
+  assert.equal(raizTeste.querySelector("#estrada-plano-4").checked, true,
+    "aceder aos exames gratuitos não pode alterar o plano pago que está activo");
   const outrosCartoes = raizTeste.querySelectorAll(".plano-cartao").filter((cartao) => cartao !== cartaoActivo);
   assert.ok(outrosCartoes.every((cartao) => !cartao.querySelector(".plano-selo-activo")),
     "o selo não pode aparecer nos planos que não pertencem à assinatura activa");
