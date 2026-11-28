@@ -1,6 +1,6 @@
 # Firebase — arquitectura e estado de activação do ESTRADA-JB
 
-**Actualizado:** 27 de Novembro de 2026  
+**Actualizado:** 28 de Novembro de 2026  
 **Project ID:** `plataforma-exames-conducao`  
 **Branch de trabalho:** `feat/firebase-full-migration`  
 **BE-002:** CONCLUÍDA na branch.  
@@ -24,6 +24,24 @@ Consultar [Estado actual do projecto](../ESTADO-ATUAL.md) para o resumo consolid
 | App Check / Analytics / Crashlytics | Não activos nesta entrega | Não declarar recolha ou enforcement activos. |
 
 ## Projecto e autenticação
+
+### Domínios autorizados — registo operacional
+
+Lista comunicada pelo proprietário e confirmada na consola Firebase em 28 de Novembro de 2026. **Preservar estes domínios; não os substituir automaticamente quando houver um novo deployment.**
+
+| Domínio | Tipo | Utilização |
+|---|---|---|
+| `plataforma-exames-conducao.firebaseapp.com` | Default | Domínio Firebase |
+| `plataforma-exames-conducao.web.app` | Default | Domínio Firebase |
+| `plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app` | Custom | Preview Vercel preferencial (alias estável autorizado) |
+| `plataforma-exames-conducao-r6givqbf2-jjb18.vercel.app` | Custom | Preview Vercel autorizado adicional |
+
+**Link preferencial para testes:** https://plataforma-exames-conducao-git-feat-firebase-full-3be547-jjb18.vercel.app
+
+**Regra obrigatória antes/depois de cada deployment:** abrir Firebase Console → Authentication → Settings → Authorized domains; confirmar que o link de Preview utilizado está nesta lista. Se um deployment gerar um hostname novo, não o distribuir nem o usar para validar Google login antes de o autorizar. Preferir o alias estável acima. Não remover os domínios existentes sem autorização do proprietário.
+
+Link directo para a configuração: https://console.firebase.google.com/project/plataforma-exames-conducao/authentication/settings
+
 
 - Project ID: `plataforma-exames-conducao`.
 - Firestore: base `(default)`, região documentada `africa-south1`.
