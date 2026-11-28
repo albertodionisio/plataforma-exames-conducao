@@ -74,3 +74,11 @@ A validação visual mostrou que a imagem estava bem posicionada, mas a coluna d
 - Não foram alterados app.js, a duração do exame, o cronómetro, a submissão, as respostas ou qualquer regra de avaliação.
 
 Este ajuste ainda depende de validação visual/interactiva no Preview em diferentes dimensões e com enunciados/opções curtos e longos. Não declarar a FE-001 concluída apenas com a verificação estática.
+
+
+### Refinamento final após nova captura — barra superior e alternativas
+- A ordem visual da zona direita do cabeçalho fica: nome do utilizador, «Sair» e, no extremo direito, «Terminar e submeter».
+- A coluna das alternativas recebe mais altura útil, reduzindo o espaço inferior reservado em excesso e os intervalos entre linhas; os quatro cartões devem ficar visíveis sempre que a altura real do ecrã o permitir.
+- Mantém-se o scroll interno da lista como salvaguarda para textos excepcionalmente longos ou ecrãs de baixa altura.
+- Ajuste exclusivo para exame em orientação horizontal; a apresentação vertical e a lógica/tempo do exame não são alterados.
+- A validação visual final continua pendente no Preview após o deployment.
