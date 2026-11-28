@@ -30,6 +30,16 @@ Foi acrescentado um conjunto de regras CSS para dispositivos/ecrãs em orientaç
 
 A versão Web não tenta bloquear nem rodar fisicamente o dispositivo. Responde à orientação comunicada pelo navegador e reorganiza a interface.
 
+### Organização da página de exame em orientação horizontal
+Foi implementada exclusivamente por CSS, sem alterar `app.js` ou o HTML gerado:
+- Em orientação horizontal com altura até 520 px e largura a partir de 560 px, o contentor do exame com imagem passa a uma grelha de duas colunas.
+- A imagem fica na coluna esquerda, com largura flexível, proporção preservada e limite de altura; não é cortada nem distorcida.
+- O enunciado e as alternativas ficam na coluna direita.
+- Estado do exame, progresso, navegação e acções finais mantêm a largura total abaixo/acima da grelha conforme a sequência do conteúdo.
+- O selector CSS só activa quando existe imagem na pergunta; perguntas sem imagem mantêm o fluxo normal.
+- Em orientação vertical, estas regras não se aplicam: a organização actual permanece intacta.
+- A disposição muda automaticamente ao rodar o dispositivo, sem recarregar e sem alterar respostas ou cronómetro.
+
 ## Preferência manual futura — APK
 O selector no cabeçalho com as opções Automático, Vertical e Horizontal fica fora do âmbito da FE-001 Web. É uma melhoria futura da versão APK e não foi implementado nesta tarefa.
 
@@ -46,4 +56,4 @@ O selector no cabeçalho com as opções Automático, Vertical e Horizontal fica
 ## Validação e limites
 Os testes automatizados do repositório e a construção Preview serão usados para detectar regressões gerais. As regras CSS podem ser verificadas estaticamente, mas isso não substitui uma inspecção visual num navegador real em cada largura/orientação. A validação final pelo proprietário deve confirmar 320, 360, 390 e 600 px, vertical e horizontal, incluindo Início, catálogo, pergunta com imagem, alternativas, cabeçalho/menu, conta, planos, PDFs, zoom, foco e ausência de scroll horizontal da página.
 
-A FE-001 só deve ser declarada concluída após o CI passar e a validação visual/interactiva no Preview ser confirmada.
+A FE-001 só deve ser declarada concluída após o CI passar e a validação visual/interactiva no Preview ser confirmada, incluindo uma pergunta com imagem em orientação horizontal para verificar imagem à esquerda e enunciado/alternativas à direita, e a mesma pergunta em vertical para confirmar que a disposição original permanece intacta.
