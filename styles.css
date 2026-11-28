@@ -469,6 +469,9 @@ body.documento-aberto main{
   .icone-barra{width:21px;height:21px}
 }
 
+/* Comportamento original: imagem acompanha o fluxo normal, sobretudo em orientação vertical. */
+.img{position:static}
+
 /* FE-001 — exame em orientação horizontal: imagem à esquerda, questão à direita */
 @media (orientation:landscape) and (max-height:520px) and (min-width:560px){
   #app:has(> .img){
