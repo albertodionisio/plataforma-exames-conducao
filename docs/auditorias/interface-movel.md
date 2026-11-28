@@ -62,3 +62,15 @@ O selector no cabeçalho com as opções Automático, Vertical e Horizontal fica
 Os testes automatizados do repositório e a construção Preview serão usados para detectar regressões gerais. As regras CSS podem ser verificadas estaticamente, mas isso não substitui uma inspecção visual num navegador real em cada largura/orientação. A validação final pelo proprietário deve confirmar 320, 360, 390 e 600 px, vertical e horizontal, incluindo Início, catálogo, pergunta com imagem, alternativas, cabeçalho/menu, conta, planos, PDFs, zoom, foco e ausência de scroll horizontal da página.
 
 A FE-001 só deve ser declarada concluída após o CI passar e a validação visual/interactiva no Preview ser confirmada, incluindo uma pergunta com imagem em orientação horizontal para verificar imagem à esquerda e enunciado/alternativas à direita, e a mesma pergunta em vertical para confirmar que a disposição original permanece intacta.
+
+
+### Ajuste após captura do proprietário — controlos do exame horizontal
+A validação visual mostrou que a imagem estava bem posicionada, mas a coluna direita não apresentava as quatro alternativas de forma suficientemente visível e o botão de submissão ocupava espaço útil na zona inferior. Foi acrescentado um refinamento CSS, mantendo a alteração limitada a styles.css e a este relatório:
+- O botão «Terminar e submeter» passa visualmente para a barra superior, antes da área do utilizador e do botão «Sair», com espaço reservado entre os controlos.
+- A coluna direita passa a distribuir as quatro alternativas em linhas flexíveis, com scroll interno apenas quando o texto de uma pergunta exceder a altura realmente disponível.
+- «Anterior» e «Próxima» ficam numa faixa própria e a contagem de respostas mantém-se numa linha discreta inferior.
+- A imagem continua ampla e fixa à esquerda; a página do exame não ganha scroll vertical em horizontal.
+- O reposicionamento do botão é limitado ao breakpoint horizontal largo/baixo. Em orientação vertical, o botão volta ao fluxo original com position: static.
+- Não foram alterados app.js, a duração do exame, o cronómetro, a submissão, as respostas ou qualquer regra de avaliação.
+
+Este ajuste ainda depende de validação visual/interactiva no Preview em diferentes dimensões e com enunciados/opções curtos e longos. Não declarar a FE-001 concluída apenas com a verificação estática.
