@@ -468,3 +468,53 @@ body.documento-aberto main{
   .item-barra{min-height:44px}
   .icone-barra{width:21px;height:21px}
 }
+
+/* FE-001 — exame em orientação horizontal: imagem à esquerda, questão à direita */
+@media (orientation:landscape) and (max-height:520px) and (min-width:560px){
+  #app:has(> .img){
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+    align-items:start;
+    column-gap:18px;
+    row-gap:10px;
+  }
+  #app:has(> .img) > .estado,
+  #app:has(> .img) > .progresso,
+  #app:has(> .img) > .navegacao-exame,
+  #app:has(> .img) > .rodape-exame{
+    grid-column:1 / -1;
+  }
+  #app:has(> .img) > h2{
+    grid-column:2;
+    grid-row:3;
+    min-width:0;
+    margin:0;
+  }
+  #app:has(> .img) > .img{
+    grid-column:1;
+    grid-row:3 / span 2;
+    align-self:start;
+    width:100%;
+    max-width:100%;
+    max-height:min(58vh,420px);
+    margin:0;
+    object-fit:contain;
+  }
+  #app:has(> .img) > .opcoes{
+    grid-column:2;
+    grid-row:4;
+    min-width:0;
+  }
+  #app:has(> .img) > .opcoes .op{
+    margin:6px 0;
+    padding:10px;
+  }
+  #app:has(> .img) > .navegacao-exame,
+  #app:has(> .img) > .rodape-exame{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+  }
+}
