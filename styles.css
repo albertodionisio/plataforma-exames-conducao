@@ -755,3 +755,31 @@ body.documento-aberto main{
     overflow:visible;
   }
 }
+
+/* FE-001 — acabamento após validação do utilizador: botão no extremo direito e alternativas sem corte */
+@media (orientation:landscape) and (max-height:520px) and (min-width:900px){
+  body:has(#app > .img) .conta-utilizador{
+    margin-left:auto;
+    margin-right:clamp(170px,14vw,215px);
+  }
+  body:has(#app > .img) #app > .rodape-exame .terminar{
+    right:10px;
+    left:auto;
+  }
+  body:has(#app > .img) main#app{
+    padding-bottom:18px;
+    row-gap:3px;
+    grid-template-rows:25px 5px minmax(48px,auto) minmax(0,1fr) 36px 20px;
+  }
+  body:has(#app > .img) #app > .opcoes{
+    min-height:0;
+    padding-bottom:4px;
+    gap:6px;
+    overflow-y:auto;
+  }
+  body:has(#app > .img) #app > .opcoes .op{
+    min-height:48px;
+    padding:7px 12px;
+    line-height:1.22;
+  }
+}
