@@ -94,6 +94,52 @@
       <p class="note">O Viduki apresenta uma API de incorporação por iframe para filmes e episódios, aceitando identificadores TMDB ou IMDb. O serviço declara agregar fontes externas e não alojar os ficheiros de vídeo. A página testa apenas a reprodução incorporada e a partilha do endereço do player; não disponibiliza um URL directo de download.</p>
     </section>
 
+    <section aria-labelledby="autoembed-heading" style="margin-top:34px">
+      <header>
+        <div class="eyebrow">Terceiro fornecedor de reprodução</div>
+        <h1 id="autoembed-heading">Teste do player AutoEmbed</h1>
+        <p class="intro">Terceiro player incorporado, utilizando o identificador IMDb tt0137523.</p>
+      </header>
+      <section class="player-shell" aria-label="Player AutoEmbed">
+        <div class="player">
+          <iframe src="https://autoembed.me/movie/imdb/tt0137523" title="Player AutoEmbed — IMDb tt0137523" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </section>
+      <div class="details">
+        <span class="id">Identificador IMDb: <strong>tt0137523</strong></span>
+        <a href="https://autoembed.me/movie/imdb/tt0137523" target="_blank" rel="noopener noreferrer">Abrir o endereço original</a>
+      </div>
+      <section class="actions" aria-label="Partilhar player AutoEmbed">
+        <button class="action" id="share-autoembed" type="button">↗ Partilhar link AutoEmbed</button>
+        <button class="action secondary" id="copy-autoembed" type="button">Copiar link AutoEmbed</button>
+      </section>
+      <p class="share-status" id="autoembed-status" role="status" aria-live="polite"></p>
+      <p class="note">A documentação do AutoEmbed indica suporte para filmes por IMDb ou TMDB através de iframe. O serviço declara que não aloja os ficheiros de vídeo; este teste verifica apenas o carregamento e a reprodução incorporada.</p>
+    </section>
+
+    <section aria-labelledby="bingeapi-heading" style="margin-top:34px">
+      <header>
+        <div class="eyebrow">Quarto fornecedor de reprodução</div>
+        <h1 id="bingeapi-heading">Teste do player BingeAPI</h1>
+        <p class="intro">Quarto player incorporado, utilizando o identificador IMDb tt0137523.</p>
+      </header>
+      <section class="player-shell" aria-label="Player BingeAPI">
+        <div class="player">
+          <iframe src="https://bingeapi.st/embed/movie/tt0137523" title="Player BingeAPI — IMDb tt0137523" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </section>
+      <div class="details">
+        <span class="id">Identificador IMDb: <strong>tt0137523</strong></span>
+        <a href="https://bingeapi.st/embed/movie/tt0137523" target="_blank" rel="noopener noreferrer">Abrir o endereço original</a>
+      </div>
+      <section class="actions" aria-label="Partilhar player BingeAPI">
+        <button class="action" id="share-bingeapi" type="button">↗ Partilhar link BingeAPI</button>
+        <button class="action secondary" id="copy-bingeapi" type="button">Copiar link BingeAPI</button>
+      </section>
+      <p class="share-status" id="bingeapi-status" role="status" aria-live="polite"></p>
+      <p class="note">A documentação do BingeAPI confirma suporte para IMDb e TMDB, filmes e episódios de séries através de iframe. O serviço agrega servidores externos; a disponibilidade do conteúdo depende desses fornecedores.</p>
+    </section>
+
   </main>
   <script>
     (() => {
@@ -137,6 +183,34 @@
           else status.textContent = "Não foi possível abrir a partilha. Usa «Copiar link do player».";
         }
       });
+
+      const setupShare = (buttonId, copyId, statusId, url, title) => {
+        const output = document.getElementById(statusId);
+        document.getElementById(buttonId).addEventListener("click", async () => {
+          try {
+            if (navigator.share) {
+              await navigator.share({ title, text: "Abrir este player:", url });
+              output.textContent = "Menu de partilha aberto. Escolhe a aplicação pretendida.";
+            } else {
+              await navigator.clipboard.writeText(url);
+              output.textContent = "Partilha nativa indisponível. Link copiado.";
+            }
+          } catch (error) {
+            if (error && error.name === "AbortError") output.textContent = "Partilha cancelada.";
+            else output.textContent = "Não foi possível abrir a partilha. Usa «Copiar link».";
+          }
+        });
+        document.getElementById(copyId).addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(url);
+            output.textContent = "Link copiado.";
+          } catch (_) {
+            output.textContent = "Não foi possível copiar automaticamente. Abre o endereço original.";
+          }
+        });
+      };
+      setupShare("share-autoembed", "copy-autoembed", "autoembed-status", "https://autoembed.me/movie/imdb/tt0137523", "Player AutoEmbed — tt0137523");
+      setupShare("share-bingeapi", "copy-bingeapi", "bingeapi-status", "https://bingeapi.st/embed/movie/tt0137523", "Player BingeAPI — tt0137523");
       document.getElementById("copy-player").addEventListener("click", async () => {
         try {
           await navigator.clipboard.writeText(playerUrl);
