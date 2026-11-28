@@ -34,9 +34,10 @@ A versão Web não tenta bloquear nem rodar fisicamente o dispositivo. Responde 
 Foi implementada exclusivamente por CSS, sem alterar `app.js` ou o HTML gerado:
 - Em orientação horizontal com altura até 520 px e largura a partir de 560 px, o contentor do exame com imagem passa a uma grelha de duas colunas.
 - A imagem fica na coluna esquerda, com largura flexível, proporção preservada e limite de altura; não é cortada nem distorcida.
-- A imagem usa `position: sticky` com deslocamento superior para permanecer visível no mesmo local enquanto a página do exame é deslocada.
+- A imagem ocupa a coluna esquerda com `object-fit: contain`, usando a altura disponível sem distorcer nem cortar o sinal.
+- A área principal do exame usa a altura dinâmica do viewport, entre o cabeçalho e a barra inferior, e bloqueia o scroll vertical da página em horizontal.
+- Enunciado, quatro alternativas, navegação e submissão ficam na coluna direita; as alternativas distribuem-se pelo espaço disponível e os controlos permanecem visíveis.
 - A regra base `.img{position:static}` preserva explicitamente o comportamento normal da imagem fora do breakpoint horizontal.
-- O enunciado e as alternativas ficam na coluna direita e continuam a deslocar-se normalmente com a página; a imagem não acompanha esse movimento.
 - Em orientação vertical, a imagem mantém `position: static`: acompanha o fluxo normal da página, tal como antes desta alteração, sem ficar fixa.
 - Estado do exame, progresso, navegação e acções finais mantêm a largura total abaixo/acima da grelha conforme a sequência do conteúdo.
 - O selector CSS só activa quando existe imagem na pergunta; perguntas sem imagem mantêm o fluxo normal.
@@ -54,7 +55,7 @@ O selector no cabeçalho com as opções Automático, Vertical e Horizontal fica
 - Tabelas com scroll próprio, sem impor largura mínima ao documento.
 - Cartões de planos com duas colunas em orientação horizontal de pouca altura.
 - CSS com chavetas equilibradas.
-- Regra de imagem fixa em scroll (`position: sticky`) aplicada apenas ao exame horizontal com imagem; comportamento vertical explicitamente reposto para `position: static`.
+- Layout horizontal com altura dinâmica do viewport, imagem ampla na coluna esquerda e enunciado/alternativas/controlos ajustados na coluna direita, sem scroll vertical da página; comportamento vertical explicitamente reposto para `position: static`.
 - Alterações restritas a `styles.css` e a este relatório.
 
 ## Validação e limites
