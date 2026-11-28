@@ -63,11 +63,66 @@
     <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
 
     <p class="note">Teste de partilha: o primeiro botão abre o menu nativo do Android para escolher uma aplicação, incluindo um gestor de downloads se este aceitar links de páginas. O link partilhado é o endereço do player, não um ficheiro de vídeo directo. O EmbedMovies documenta integração por iframe e não publica uma API de download; por isso, a partilha pode abrir a página no gestor, mas não garante que o 1DM consiga obter o vídeo. Esta página não tenta contornar protecções nem extrair streams de terceiros.</p>
+
+    <section aria-labelledby="viduki-heading" style="margin-top:34px">
+      <header>
+        <div class="eyebrow">Segundo fornecedor de reprodução</div>
+        <h1 id="viduki-heading">Teste do player Viduki</h1>
+        <p class="intro">Segundo player incorporado, separado do EmbedMovies, usando o mesmo identificador IMDb fornecido no endereço.</p>
+      </header>
+      <section class="player-shell" aria-label="Player Viduki">
+        <div class="player">
+          <iframe
+            src="https://www.viduki.net/1/movie/tt0137523"
+            title="Player Viduki — IMDb tt0137523"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </section>
+      <div class="details">
+        <span class="id">Identificador IMDb: <strong>tt0137523</strong></span>
+        <a href="https://www.viduki.net/1/movie/tt0137523" target="_blank" rel="noopener noreferrer">Abrir o endereço original</a>
+      </div>
+      <section class="actions" aria-label="Partilhar player Viduki">
+        <button class="action" id="share-viduki" type="button">↗ Partilhar link Viduki</button>
+        <button class="action secondary" id="copy-viduki" type="button">Copiar link Viduki</button>
+      </section>
+      <p class="share-status" id="viduki-status" role="status" aria-live="polite"></p>
+      <p class="note">O Viduki apresenta uma API de incorporação por iframe para filmes e episódios, aceitando identificadores TMDB ou IMDb. O serviço declara agregar fontes externas e não alojar os ficheiros de vídeo. A página testa apenas a reprodução incorporada e a partilha do endereço do player; não disponibiliza um URL directo de download.</p>
+    </section>
+
   </main>
   <script>
     (() => {
       const playerUrl = "https://myembed.biz/filme/tt0462499";
       const status = document.getElementById("share-status");
+      const vidukiUrl = "https://www.viduki.net/1/movie/tt0137523";
+      const vidukiStatus = document.getElementById("viduki-status");
+      document.getElementById("share-viduki").addEventListener("click", async () => {
+        try {
+          if (navigator.share) {
+            await navigator.share({ title: "Player Viduki — tt0137523", text: "Abrir este player:", url: vidukiUrl });
+            vidukiStatus.textContent = "Menu de partilha aberto. Escolhe a aplicação pretendida.";
+          } else {
+            await navigator.clipboard.writeText(vidukiUrl);
+            vidukiStatus.textContent = "Partilha nativa indisponível. Link copiado.";
+          }
+        } catch (error) {
+          if (error && error.name === "AbortError") vidukiStatus.textContent = "Partilha cancelada.";
+          else vidukiStatus.textContent = "Não foi possível abrir a partilha. Usa «Copiar link Viduki».";
+        }
+      });
+      document.getElementById("copy-viduki").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(vidukiUrl);
+          vidukiStatus.textContent = "Link Viduki copiado.";
+        } catch (_) {
+          vidukiStatus.textContent = "Não foi possível copiar automaticamente. Abre o endereço original.";
+        }
+      });
       document.getElementById("share-player").addEventListener("click", async () => {
         try {
           if (navigator.share) {
