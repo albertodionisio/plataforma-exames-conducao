@@ -742,3 +742,16 @@ body.documento-aberto main{
 @media (orientation:portrait){
   #app > .rodape-exame .terminar{position:static;inset:auto;box-shadow:none}
 }
+
+/* FE-001 — impedir que as alternativas encolham até ficarem ilegíveis */
+@media (orientation:landscape) and (max-height:520px) and (min-width:900px){
+  body:has(#app > .img) #app > .opcoes{
+    grid-auto-rows:minmax(42px,auto);
+    align-content:start;
+  }
+  body:has(#app > .img) #app > .opcoes .op{
+    min-height:42px;
+    flex:0 0 auto;
+    overflow:visible;
+  }
+}
