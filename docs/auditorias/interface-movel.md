@@ -36,7 +36,7 @@ Foi implementada exclusivamente por CSS, sem alterar `app.js` ou o HTML gerado:
 - A imagem fica na coluna esquerda, com largura flexível, proporção preservada e limite de altura; não é cortada nem distorcida.
 - A imagem ocupa a coluna esquerda com `object-fit: contain`, usando a altura disponível sem distorcer nem cortar o sinal.
 - A área principal do exame usa a altura dinâmica do viewport, entre o cabeçalho e a barra inferior, e bloqueia o scroll vertical da página em horizontal.
-- Enunciado, quatro alternativas, navegação e submissão ficam na coluna direita; as alternativas distribuem-se pelo espaço disponível e os controlos permanecem visíveis.
+- Enunciado, quatro alternativas, navegação e submissão ficam na coluna direita; as alternativas mantêm altura natural e texto integralmente legível, com scroll interno apenas na lista de alternativas quando o conteúdo ultrapassar a área disponível, sem sobreposição nem corte. Os controlos permanecem visíveis.
 - A regra base `.img{position:static}` preserva explicitamente o comportamento normal da imagem fora do breakpoint horizontal.
 - Em orientação vertical, a imagem mantém `position: static`: acompanha o fluxo normal da página, tal como antes desta alteração, sem ficar fixa.
 - Estado do exame, progresso, navegação e acções finais mantêm a largura total abaixo/acima da grelha conforme a sequência do conteúdo.
