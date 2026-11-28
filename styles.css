@@ -783,3 +783,16 @@ body.documento-aberto main{
     line-height:1.22;
   }
 }
+
+/* FE-001 — ocultar navegação inferior durante a realização do exame */
+body:has(#app > .estado) .barra-inferior{
+  display:none !important;
+}
+body:has(#app > .estado) main#app{
+  padding-bottom:18px;
+}
+@media (orientation:landscape) and (max-height:520px) and (min-width:560px){
+  body:has(#app > .estado) main#app{
+    padding-bottom:8px;
+  }
+}
