@@ -11,6 +11,7 @@ e para que cada sessão saiba **o que já foi feito, o que está em curso e o qu
 | `HISTORICO.md` | **O que já foi feito** (não é instrução) | Antes de criar uma tarefa nova, para ver se já existe |
 | `REGRAS.md` | Regras de negócio, decisões do dono (não reabrir) e regras do repositório | Antes de mexer em preços, planos, nota ou segredos |
 | `docs/GUIA-PERGUNTAS.md` | Como escrever perguntas, alternativas e explicações dos exames | Antes de criar ou rever qualquer exame |
+| `docs/firebase/README.md` | Projecto Firebase, domínios autorizados e link estável de Preview para autenticação | Antes e depois de cada deployment/Preview e ao testar Google login |
 
 ## Áreas e IDs
 
