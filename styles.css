@@ -595,3 +595,150 @@ body.documento-aberto main{
     white-space:nowrap;
   }
 }
+
+
+/* FE-001 — composição final do exame horizontal (ajuste após validação visual) */
+@media (orientation:landscape) and (max-height:520px) and (min-width:900px){
+  body:has(#app > .img){
+    height:100dvh;
+    min-height:0;
+    overflow:hidden;
+  }
+  body:has(#app > .img) .topo{
+    position:relative;
+    z-index:30;
+    min-height:54px;
+    flex:0 0 54px;
+    padding:5px 12px;
+    gap:8px;
+  }
+  body:has(#app > .img) .topo .nav-links{
+    flex:0 1 auto;
+    min-width:0;
+    gap:4px;
+  }
+  body:has(#app > .img) .topo .nav-links a{
+    min-height:40px;
+    padding:5px 8px;
+    white-space:nowrap;
+  }
+  body:has(#app > .img) .conta-utilizador{
+    flex:0 0 auto;
+    width:auto;
+    margin-left:auto;
+    gap:8px;
+    white-space:nowrap;
+  }
+  body:has(#app > .img) .conta-email{max-width:145px}
+  body:has(#app > .img) main#app{
+    flex:1 1 0;
+    height:auto;
+    min-height:0;
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:5px 12px calc(62px + env(safe-area-inset-bottom));
+    display:grid;
+    grid-template-columns:minmax(0, .98fr) minmax(0, 1.02fr);
+    grid-template-rows:25px 5px minmax(48px,auto) minmax(0,1fr) 40px 22px;
+    column-gap:14px;
+    row-gap:5px;
+    overflow:hidden;
+    align-items:stretch;
+  }
+  body:has(#app > .img) #app > .estado{grid-column:1 / -1;grid-row:1;align-items:center;margin:0}
+  body:has(#app > .img) #app > .progresso{grid-column:1 / -1;grid-row:2;margin:0;min-height:4px}
+  body:has(#app > .img) #app > h2{
+    grid-column:2;grid-row:3;
+    align-self:center;
+    min-width:0;
+    margin:0;
+    max-height:100%;
+    overflow:auto;
+    font-size:clamp(.9rem,2.1vh,1.18rem);
+    line-height:1.18;
+  }
+  body:has(#app > .img) #app > .img{
+    grid-column:1;grid-row:3 / 7;
+    position:sticky;
+    top:0;
+    width:100%;height:100%;
+    min-width:0;min-height:0;
+    max-width:100%;max-height:100%;
+    margin:0;
+    padding:6px;
+    object-fit:contain;
+    align-self:stretch;
+  }
+  body:has(#app > .img) #app > .opcoes{
+    grid-column:2;grid-row:4;
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    grid-auto-rows:minmax(0,1fr);
+    align-content:stretch;
+    align-items:stretch;
+    gap:5px;
+    min-width:0;min-height:0;
+    overflow-x:hidden;overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    padding:1px 3px 1px 0;
+  }
+  body:has(#app > .img) #app > .opcoes .op{
+    display:flex;
+    align-items:center;
+    flex:initial;
+    width:100%;height:auto;
+    min-width:0;min-height:0;
+    margin:0;
+    padding:6px 10px;
+    font-size:clamp(.78rem,1.75vh,.98rem);
+    line-height:1.18;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  body:has(#app > .img) #app > .navegacao-exame{
+    grid-column:2;grid-row:5;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    min-width:0;min-height:0;
+  }
+  body:has(#app > .img) #app > .navegacao-exame .btn{
+    min-height:36px;
+    padding:5px 12px;
+    white-space:nowrap;
+  }
+  body:has(#app > .img) #app > .rodape-exame{
+    grid-column:2;grid-row:6;
+    display:flex;
+    align-items:center;
+    min-width:0;min-height:0;
+    margin:0;
+    font-size:.72rem;
+    line-height:1;
+  }
+  body:has(#app > .img) #app > .rodape-exame .terminar{
+    position:fixed;
+    z-index:40;
+    top:6px;
+    right:clamp(190px,16vw,245px);
+    min-height:40px;
+    padding:5px 10px;
+    font-size:clamp(.72rem,1.5vh,.88rem);
+    white-space:nowrap;
+    box-shadow:0 1px 4px rgba(0,0,0,.2);
+  }
+  body:has(#app > .img) .barra-inferior{
+    min-height:54px;
+    padding:3px 8px calc(3px + env(safe-area-inset-bottom));
+  }
+  body:has(#app > .img) .item-barra{min-height:42px}
+  body:has(#app > .img) .icone-barra{width:20px;height:20px}
+}
+
+/* Em orientação vertical, o botão de submissão regressa ao fluxo original. */
+@media (orientation:portrait){
+  #app > .rodape-exame .terminar{position:static;inset:auto;box-shadow:none}
+}
