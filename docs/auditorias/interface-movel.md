@@ -82,3 +82,10 @@ Este ajuste ainda depende de validação visual/interactiva no Preview em difere
 - Mantém-se o scroll interno da lista como salvaguarda para textos excepcionalmente longos ou ecrãs de baixa altura.
 - Ajuste exclusivo para exame em orientação horizontal; a apresentação vertical e a lógica/tempo do exame não são alterados.
 - A validação visual final continua pendente no Preview após o deployment.
+
+
+### Barra inferior durante a realização do exame
+- A navegação inferior (Exames, Pendente, Código da Estrada e Sinais de Trânsito) fica oculta enquanto a vista activa contém o indicador `.estado` do exame.
+- O espaço libertado é devolvido à área principal; em horizontal, o conteúdo ganha altura útil para as alternativas. Em vertical, o fluxo original do exame mantém-se, sem a barra inferior a ocupar espaço.
+- Nas páginas de catálogo, início, planos, definições e resultado, a barra inferior permanece visível.
+- A alteração é apenas visual/CSS: não altera cronómetro, respostas, navegação entre perguntas, submissão nem avaliação.
