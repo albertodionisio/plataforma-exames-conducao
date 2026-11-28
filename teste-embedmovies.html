@@ -21,6 +21,11 @@
     .id { color: #c8d4e8; font-size: .9rem; }
     a { color: #9fc2ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 8px 0 18px; }
+    .action { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 9px; padding: 12px 16px; border: 1px solid #5875a5; border-radius: 12px; background: #203657; color: #fff; font: inherit; font-weight: 700; text-align: center; cursor: pointer; }
+    .action.secondary { background: #172235; border-color: #3a4b67; }
+    .action:focus-visible { outline: 3px solid #9fc2ff; outline-offset: 3px; }
+    .share-status { min-height: 1.4em; margin: 0 0 12px; color: #b9c9e2; font-size: .85rem; }
     .note { margin-top: 20px; padding: 14px 16px; border: 1px solid #34445f; border-radius: 12px; color: #aebbd0; font-size: .88rem; line-height: 1.55; }
     @media (max-width: 520px) { main { width: min(100% - 20px, 1040px); padding-top: 24px; } .player, iframe { min-height: 210px; } }
   </style>
@@ -51,7 +56,41 @@
       <a href="https://myembed.biz/filme/tt0462499" target="_blank" rel="noopener noreferrer">Abrir o endereço original</a>
     </div>
 
-    <p class="note">O vídeo e o funcionamento do player são fornecidos por um serviço externo. Esta página apenas incorpora o endereço; não aloja nem descarrega ficheiros de vídeo. A disponibilidade depende do serviço e dos fornecedores externos.</p>
+    <section class="actions" aria-label="Partilhar e testar download">
+      <button class="action" id="share-player" type="button">↗ Partilhar link do player</button>
+      <button class="action secondary" id="copy-player" type="button">Copiar link do player</button>
+    </section>
+    <p class="share-status" id="share-status" role="status" aria-live="polite"></p>
+
+    <p class="note">Teste de partilha: o primeiro botão abre o menu nativo do Android para escolher uma aplicação, incluindo um gestor de downloads se este aceitar links de páginas. O link partilhado é o endereço do player, não um ficheiro de vídeo directo. O EmbedMovies documenta integração por iframe e não publica uma API de download; por isso, a partilha pode abrir a página no gestor, mas não garante que o 1DM consiga obter o vídeo. Esta página não tenta contornar protecções nem extrair streams de terceiros.</p>
   </main>
+  <script>
+    (() => {
+      const playerUrl = "https://myembed.biz/filme/tt0462499";
+      const status = document.getElementById("share-status");
+      document.getElementById("share-player").addEventListener("click", async () => {
+        try {
+          if (navigator.share) {
+            await navigator.share({ title: "Player EmbedMovies — tt0462499", text: "Abrir este player:", url: playerUrl });
+            status.textContent = "Menu de partilha aberto. Escolhe a aplicação pretendida.";
+          } else {
+            await navigator.clipboard.writeText(playerUrl);
+            status.textContent = "Este navegador não disponibiliza partilha nativa. O link foi copiado.";
+          }
+        } catch (error) {
+          if (error && error.name === "AbortError") status.textContent = "Partilha cancelada.";
+          else status.textContent = "Não foi possível abrir a partilha. Usa «Copiar link do player».";
+        }
+      });
+      document.getElementById("copy-player").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(playerUrl);
+          status.textContent = "Link do player copiado.";
+        } catch (_) {
+          status.textContent = "Não foi possível copiar automaticamente. Abre o endereço original acima.";
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
